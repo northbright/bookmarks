@@ -11,4 +11,4 @@
 * [The Way to Go(Chinese Translation)](https://github.com/Unknwon/the-way-to-go_ZH_CN)
   * Chinese Translation of 《The Way to Go》
   * Author: Ivo Balbaert
-  * Editor & Translator: [Unknown](https://github.com/Unknwon)
+  * Editor & Translator: [Unknown(无闻)](https://github.com/Unknwon)
