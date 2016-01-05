@@ -1,4 +1,4 @@
-# 翻墙
+# Get Golang Resources Hosted on Golang.org
 
 * <https://gopm.io/>
   * Download Google's Golang Packages(Ex: [golang.org/x/net](http://golang.org/x/net])) which are blocked in China network.
