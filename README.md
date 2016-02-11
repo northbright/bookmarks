@@ -6,3 +6,4 @@ Bookmarks of development and more...
 * [Golang](dev/golang/README.md)
 * [Virtualization](dev/virtualization/README.md)
 * [User Experience](dev/ue/README.md)
+* [Algorithm](dev/algorithm/README.md)
