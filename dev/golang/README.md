@@ -9,6 +9,7 @@
 
 ## Category
 * [HTTP](./http/README.md)
+* [Captcha](captcha/README.md)
 
 ## Articles
 * [Articles](articles/README.md)
