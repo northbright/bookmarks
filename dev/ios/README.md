@@ -1,3 +1,3 @@
 # ios
 
-## [Swift](swift/README.md)
+* [Swift](swift/README.md)

@@ -1,7 +1,6 @@
 # Capthca
 
-## Articles
 * [Articles](articles/README.md)
 
-## Packages
-* <https://github.com/dchest/captcha>
+* Packages
+  * <https://github.com/dchest/captcha>
