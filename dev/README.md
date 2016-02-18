@@ -1,9 +1,9 @@
 # Development
 
-  * [Golang](dev/golang/README.md)
-  * [Virtualization](dev/virtualization/README.md)
-  * [User Experience](dev/ue/README.md)
-  * [Algorithm](dev/algorithm/README.md)
-  * [Captcha](dev/captcha/README.md)
-  * [Live Streaming](dev/live_streaming/README.md)
-  * [ios](dev/ios/README.md)
+  * [Golang](golang/README.md)
+  * [Virtualization](virtualization/README.md)
+  * [User Experience](ue/README.md)
+  * [Algorithm](algorithm/README.md)
+  * [Captcha](captcha/README.md)
+  * [Live Streaming](live_streaming/README.md)
+  * [ios](ios/README.md)
