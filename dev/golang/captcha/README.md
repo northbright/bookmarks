@@ -1,4 +1,4 @@
-# Capthca
+# Captcha
 
 * [Articles](articles/README.md)
 
