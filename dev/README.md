@@ -10,3 +10,4 @@
   * [Front-End Web Development](front-end_web_dev/README.md)
   * [Linux](linux/README.md)
   * [HTTP](http/README.md)
+  * [Regular Expression](regular_expression/README.md)
