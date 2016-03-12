@@ -18,3 +18,4 @@
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
+* [Tony Bai(Golang, Docker, WeChat...)](http://tonybai.com/articles/)
