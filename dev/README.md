@@ -16,6 +16,7 @@
 * [Unicode and UTF-8](unicode_utf8/README.md)
 * [Security](security/README.md)
 * [Github](github/README.md)
+* [Markdown](markdown/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
