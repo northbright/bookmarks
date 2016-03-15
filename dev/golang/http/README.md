@@ -10,3 +10,6 @@
       * [Serve homepage and static content from root](http://stackoverflow.com/questions/14086063/serve-homepage-and-static-content-from-root)
   * http.HandleFunc
       * [Wildcards in the pattern for http.HandleFunc](http://stackoverflow.com/questions/6564558/wildcards-in-the-pattern-for-http-handlefunc)
+
+* HTTPS
+  * [Golang - TLS with selfsigned certificate](http://stackoverflow.com/questions/22666163/golang-tls-with-selfsigned-certificate)
