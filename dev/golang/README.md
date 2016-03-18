@@ -12,7 +12,7 @@
 * [WeChat（微信开发）](wechat/README.md)
 
 #### Issues
-* [html/template: bad quotes in second <div> #12149](https://github.com/golang/go/issues/12149)
+* [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
 
 #### Articles
 * [七牛首席布道师：Go不是在颠覆，就是在逆袭](http://www.csdn.net/article/2014-07-21/2820743)
