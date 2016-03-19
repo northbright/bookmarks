@@ -10,6 +10,7 @@
 * [HTTP](http/README.md)
 * [Captcha](captcha/README.md)
 * [WeChat（微信开发）](wechat/README.md)
+* [Goroutine](goroutine/README.md)
 
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
