@@ -7,7 +7,7 @@
 * [Golang Sites in China(中国Golang资源网站)](china/sites/README.md)
 
 #### Category
-* [Installation](install/README.md)
+* [Installation](installation/README.md)
 * [HTTP](http/README.md)
 * [Captcha](captcha/README.md)
 * [WeChat（微信开发）](wechat/README.md)
