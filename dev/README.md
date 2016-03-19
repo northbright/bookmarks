@@ -15,6 +15,7 @@
 * [Regular Expression](regular_expression/README.md)
 * [Unicode and UTF-8](unicode_utf8/README.md)
 * [Security](security/README.md)
+* [Git](git/README.md)
 * [Github](github/README.md)
 * [Markdown](markdown/README.md)
 
