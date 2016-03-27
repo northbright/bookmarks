@@ -18,3 +18,4 @@
 * [Redis 常见的性能问题和解决方法](http://blog.nosqlfan.com/html/4077.html)
 * [浅谈REDIS数据库的键值设计](http://www.hoterran.info/redis_kv_design)
 * [Redis 集群的合纵与连横](http://www.cnblogs.com/mindwind/p/5100144.html?utm_source=itdadao&utm_medium=referral)
+* [Redis 的性能幻想与残酷现实](http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ==&mid=401738746&idx=1&sn=281af530d5abec981f3607d6e729914a&scene=21#wechat_redirect)
