@@ -14,6 +14,7 @@
 * [离职系列文章之redis cluster使用经验](http://yangzhe1991.org/blog/2015/04/redis-cluster/)
 * [全面剖析Redis Cluster原理和应用](http://blog.csdn.net/dc_726/article/details/48552531)
 * [Redis Cluster架构优化](http://blog.csdn.net/dc_726/article/details/48733265)
+* [Redis集群方案应该怎么做？](http://www.zhihu.com/question/21419897)
 
 #### Articles
 * [Storing hundreds of millions of simple key-value pairs in Redis](http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value)
