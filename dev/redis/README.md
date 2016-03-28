@@ -26,6 +26,7 @@
 #### Sentinel
 * [Sentinel-Redis高可用方案（二）：主从切换](http://www.cnblogs.com/Xrinehart/p/3502198.html)
 * [Redis Sentinel机制与用法（一）](https://segmentfault.com/a/1190000002680804)
+* [Redis Sentinel机制与用法（二）](https://segmentfault.com/a/1190000002685515)
 
 #### Articles
 * [Storing hundreds of millions of simple key-value pairs in Redis](http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value)
