@@ -20,6 +20,7 @@
 * [基于Twemproxy的Redis集群方案](http://www.cnblogs.com/haoxinyue/p/redis.html)
 * [Redis 代理服务Twemproxy](http://blog.csdn.net/hguisu/article/details/9174459/)
 * [高性能的Redis代理TwemProxy](http://blog.csdn.net/dc_726/article/details/43991815)
+* [Twemproxy, a Redis proxy from Twitter](http://antirez.com/news/44)
 
 #### Articles
 * [Storing hundreds of millions of simple key-value pairs in Redis](http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value)
