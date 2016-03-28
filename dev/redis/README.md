@@ -23,6 +23,9 @@
 * [Twemproxy, a Redis proxy from Twitter](http://antirez.com/news/44)
 * [twemproxy的参数解析和监控](http://blog.itpub.net/20625855/viewspace-1692022/)
 
+#### Sentinel
+* [Sentinel-Redis高可用方案（二）：主从切换](http://www.cnblogs.com/Xrinehart/p/3502198.html)
+
 #### Articles
 * [Storing hundreds of millions of simple key-value pairs in Redis](http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value)
 * [Redis 常见的性能问题和解决方法](http://blog.nosqlfan.com/html/4077.html)
