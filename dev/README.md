@@ -19,6 +19,7 @@
 * [Github](github/README.md)
 * [Markdown](markdown/README.md)
 * [Redis](redis/README.md)
+* [RabbitMQ](rabbitmq/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
