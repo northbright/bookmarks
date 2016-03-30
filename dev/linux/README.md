@@ -6,3 +6,4 @@
 * [Pipe](pipe/README.md)
 * [VIM](vim/README.md)
 * [systemd](systemd/README.md)
+* [command](command/README.md)
