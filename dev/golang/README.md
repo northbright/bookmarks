@@ -14,6 +14,7 @@
 * [Goroutine](goroutine/README.md)
 * [TCP/IP, Socket](tcp-ip/README.md)
 * [cgo](cgo/README.md)
+* [build](build/README.md)
 
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
