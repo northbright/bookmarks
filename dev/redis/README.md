@@ -22,6 +22,7 @@
 * [高性能的Redis代理TwemProxy](http://blog.csdn.net/dc_726/article/details/43991815)
 * [Twemproxy, a Redis proxy from Twitter](http://antirez.com/news/44)
 * [twemproxy的参数解析和监控](http://blog.itpub.net/20625855/viewspace-1692022/)
+* [about redis_auth #384](https://github.com/twitter/twemproxy/issues/384)
 
 #### Sentinel
 * [Sentinel-Redis高可用方案（二）：主从切换](http://www.cnblogs.com/Xrinehart/p/3502198.html)
