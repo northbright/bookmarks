@@ -5,7 +5,9 @@
 
 #### Books
 * [Redis 设计与实现（第一版）](http://origin.redisbook.com/)
-* [Redis实战](http://redisinaction.com/)
+* Redis in Action
+    * [Redis in Action](https://redislabs.com/ebook/redis-in-action)
+    * [Redis实战](http://redisinaction.com/)
 
 #### Partitioning
 * [Partitioning: how to split data among multiple Redis instances.](http://redis.io/topics/partitioning)
