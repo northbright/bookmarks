@@ -42,3 +42,4 @@
 
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
+* [赠送几本即将出版的《Redis 实战》(帖子有很多实际使用redis的实例)](https://www.v2ex.com/t/227659?p=2)
