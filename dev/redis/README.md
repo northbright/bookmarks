@@ -7,6 +7,7 @@
 * [Redis 设计与实现（第一版）](http://origin.redisbook.com/)
 * Redis in Action
     * ["Redis in Action" ebook hosted on redislabs.com](https://redislabs.com/ebook/redis-in-action)
+    * [cache-ria-ebook](https://github.com/northbright/cache-ria-ebook)
     * [《Redis实战》中文翻译支持网站](http://redisinaction.com/)
 
 #### Partitioning
