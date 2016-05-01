@@ -8,3 +8,6 @@
 * CPU
   * [CPU Benchmarks](http://www.cpubenchmark.net/cpu_list.php)
 
+* 评测
+  * [TechPowerup](http://www.techpowerup.com/reviews/)
+
