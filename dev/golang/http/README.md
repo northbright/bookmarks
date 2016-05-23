@@ -3,6 +3,7 @@
 #### HTTP Request
 * [How to set timeout for http.Get() requests in golang?](http://stackoverflow.com/questions/16895294/how-to-set-timeout-for-http-get-requests-in-golang)
 * [How to send a POST request in Golang?](http://stackoverflow.com/questions/24493116/how-to-send-a-post-request-in-golang)
+* [Make a URL-encoded POST request using http.NewRequest()](http://stackoverflow.com/questions/19253469/make-a-url-encoded-post-request-using-http-newrequest)
 
 #### HTTP Server
 * Multiple Domains 
