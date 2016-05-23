@@ -21,6 +21,8 @@
 * [Redis](redis/README.md)
 * [RabbitMQ](rabbitmq/README.md)
 * [Docker](docker/README.md)
+* [Crypto](crypto/README.md)
+
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
