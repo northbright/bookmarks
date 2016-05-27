@@ -19,6 +19,7 @@
 * [map](map/README.md)
 * [log](log/README.md)
 * [io](io/README.md)
+* [Cross Compilation](cross-compilation/README.md)
 
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
