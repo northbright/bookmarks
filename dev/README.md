@@ -22,7 +22,7 @@
 * [RabbitMQ](rabbitmq/README.md)
 * [Docker](docker/README.md)
 * [Crypto](crypto/README.md)
-
+* [Weixin(微信)](weixin/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
