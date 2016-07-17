@@ -10,3 +10,4 @@
 #### Markdown Libs
 * [showdown](https://github.com/showdownjs/showdown)
 * [marked](https://github.com/chjj/marked)
+* [Is there any good Markdown Javascript library or control?](http://stackoverflow.com/questions/134235/is-there-any-good-markdown-javascript-library-or-control)
