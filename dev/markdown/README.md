@@ -5,6 +5,8 @@
 
 #### Javascript Markdown Editor
 * [Editor.md](https://pandao.github.io/editor.md/)
+    * [社区 Markdown 编辑器改用 editor.md](http://golangtc.com/t/55476b16421aa93720000003)
+
 * [How to use PageDown Markdown editor?](http://stackoverflow.com/questions/13013315/how-to-use-pagedown-markdown-editor)
 
 #### Markdown Libs
