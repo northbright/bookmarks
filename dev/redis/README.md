@@ -19,6 +19,7 @@
 * [Redis Cluster架构优化](http://blog.csdn.net/dc_726/article/details/48733265)
 * [Redis集群方案应该怎么做？](http://www.zhihu.com/question/21419897)
 * [Redis Cluster](http://my.oschina.net/guol/blog/506193)
+* [Redis Cluster 迁移遇到的各种坑及解决方案](http://mp.weixin.qq.com/s?__biz=MzA4Nzg5Nzc5OA==&mid=208060133&idx=1&sn=482812afe37a9c3c1ba8e2a2b768325d&scene=5&srcid=1202ldoRbmPKLJLJERxoe98o#rd)
 
 #### Twemproxy
 * [基于Twemproxy的Redis集群方案](http://www.cnblogs.com/haoxinyue/p/redis.html)
