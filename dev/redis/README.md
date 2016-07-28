@@ -34,16 +34,19 @@
 * [Redis Sentinel机制与用法（一）](https://segmentfault.com/a/1190000002680804)
 * [Redis Sentinel机制与用法（二）](https://segmentfault.com/a/1190000002685515)
 
+#### Codis
+* [Codis作者黄东旭细说分布式Redis架构设计和踩过的那些坑们](http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=208733458&idx=1&sn=691bfde670fb2dd649685723f7358fea)
+* [codis，codis3.0和其他](http://yangzhe1991.org/blog/2015/12/codis3-0/)
+* [Codis集群搭建摘要](http://blog.jobbole.com/99246/)
+* [高效运维最佳实践（03）：Redis集群技术及Codis实践](http://www.infoq.com/cn/articles/effective-ops-part-03)
+
 #### Articles
 * [Storing hundreds of millions of simple key-value pairs in Redis](http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value)
 * [Redis 常见的性能问题和解决方法](http://blog.nosqlfan.com/html/4077.html)
 * [浅谈REDIS数据库的键值设计](http://www.hoterran.info/redis_kv_design)
 * [Redis 集群的合纵与连横](http://www.cnblogs.com/mindwind/p/5100144.html?utm_source=itdadao&utm_medium=referral)
 * [Redis 的性能幻想与残酷现实](http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ==&mid=401738746&idx=1&sn=281af530d5abec981f3607d6e729914a&scene=21#wechat_redirect)
-* [Codis作者黄东旭细说分布式Redis架构设计和踩过的那些坑们](http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=208733458&idx=1&sn=691bfde670fb2dd649685723f7358fea)
-* [codis，codis3.0和其他](http://yangzhe1991.org/blog/2015/12/codis3-0/)
 * [LINE Storage: Storing billions of rows in Sharded-Redis and HBase per Month](http://developers.linecorp.com/blog/?p=1420)
-* [高效运维最佳实践（03）：Redis集群技术及Codis实践](http://www.infoq.com/cn/articles/effective-ops-part-03)
 
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
