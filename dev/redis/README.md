@@ -43,6 +43,7 @@
 * [Codis作者黄东旭细说分布式Redis架构设计和踩过的那些坑们](http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=208733458&idx=1&sn=691bfde670fb2dd649685723f7358fea)
 * [codis，codis3.0和其他](http://yangzhe1991.org/blog/2015/12/codis3-0/)
 * [LINE Storage: Storing billions of rows in Sharded-Redis and HBase per Month](http://developers.linecorp.com/blog/?p=1420)
+* [高效运维最佳实践（03）：Redis集群技术及Codis实践](http://www.infoq.com/cn/articles/effective-ops-part-03)
 
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
