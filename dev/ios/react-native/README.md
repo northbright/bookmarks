@@ -6,3 +6,4 @@
 #### Articles
 * [深入浅出 React Native：使用 JavaScript 构建原生应用](https://zhuanlan.zhihu.com/p/19996445)
 * [React Native: Into a new world of rapid iOS development](http://www.ibm.com/developerworks/library/mo-bluemix-react-native-ios8/index.html)
+* [React Native 从入门到原理](http://www.jianshu.com/p/978c4bd3a759)
