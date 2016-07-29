@@ -49,6 +49,7 @@
 * [LINE Storage: Storing billions of rows in Sharded-Redis and HBase per Month](http://developers.linecorp.com/blog/?p=1420)
 * [为什么使用 Redis及其产品定位](http://www.infoq.com/cn/articles/tq-why-choose-redis)
 * [Redis内存使用优化与存储](http://www.infoq.com/cn/articles/tq-redis-memory-usage-optimization-storage)
+* [Redis复制与可扩展集群搭建](http://www.infoq.com/cn/articles/tq-redis-copy-build-scalable-cluster)
 
 
 #### Use Cases
