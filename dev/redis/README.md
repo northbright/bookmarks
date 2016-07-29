@@ -48,6 +48,8 @@
 * [Redis 的性能幻想与残酷现实](http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ==&mid=401738746&idx=1&sn=281af530d5abec981f3607d6e729914a&scene=21#wechat_redirect)
 * [LINE Storage: Storing billions of rows in Sharded-Redis and HBase per Month](http://developers.linecorp.com/blog/?p=1420)
 * [为什么使用 Redis及其产品定位](http://www.infoq.com/cn/articles/tq-why-choose-redis)
+* [Redis内存使用优化与存储](http://www.infoq.com/cn/articles/tq-redis-memory-usage-optimization-storage)
+
 
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
