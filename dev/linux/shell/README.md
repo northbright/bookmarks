@@ -6,3 +6,4 @@
 
 #### Articles
 * [Difference between sh and bash](http://stackoverflow.com/questions/5725296/difference-between-sh-and-bash)
+* [Linux下" >/dev/null 2>&1 "相关知识说明 ](http://blog.csdn.net/sunrier/article/details/7695839)
