@@ -7,6 +7,6 @@
 * [VIM](vim/README.md)
 * [systemd](systemd/README.md)
 * [command](command/README.md)
-* [bash](bash/README.md)
+* [Shell](shell/README.md)
 * [File-Permissions](file-permissions/README.md)
 * [Signal](signal/README.md)
