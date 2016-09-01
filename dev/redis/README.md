@@ -51,6 +51,7 @@
 * [Redis内存使用优化与存储](http://www.infoq.com/cn/articles/tq-redis-memory-usage-optimization-storage)
 * [Redis复制与可扩展集群搭建](http://www.infoq.com/cn/articles/tq-redis-copy-build-scalable-cluster)
 * [Redis strings vs Redis hashes to represent JSON: efficiency?](http://stackoverflow.com/questions/16375188/redis-strings-vs-redis-hashes-to-represent-json-efficiency)
+* [What is the difference between used_memory and used_memory_rss in Redis?](https://hashnode.com/post/what-is-the-difference-between-used_memory-and-used_memory_rss-in-redis-ciibz8fks01d5j3xty0sgi9dk)
 
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
