@@ -8,3 +8,4 @@
 #### Mac OS X
 * SSH
     * [Mac OS X 平台有哪些好用的 SSH 客户端？](https://www.zhihu.com/question/20541129)
+* [How can I copy on select in the OS X Terminal like PuTTY does?](http://superuser.com/questions/62609/how-can-i-copy-on-select-in-the-os-x-terminal-like-putty-does)
