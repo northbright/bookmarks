@@ -15,3 +15,4 @@
 
 * RESTful
   * [怎么做能提供RESTful的安全性？](http://www.oschina.net/question/1390076_230160)
+  * [撰写安全合格的REST API](https://zhuanlan.zhihu.com/p/20034107)
