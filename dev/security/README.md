@@ -1,5 +1,8 @@
 # Security
 
+* JSON
+  * [扯谈web安全之JSON](http://blog.csdn.net/hengyunabc/article/details/26305203)
+
 * JSONP
   * [JSONP 安全攻防技术](http://blog.knownsec.com/2015/03/jsonp_security_technic/)
   * [京东商城Jsonp 漏洞分析 （京东商城XSS漏洞）](http://blog.chacuo.net/304.html)
