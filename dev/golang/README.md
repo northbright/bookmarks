@@ -17,6 +17,7 @@
 * [build](build/README.md)
 * [string](string/README.md)
 * [map](map/README.md)
+* [slice](slice/README.md)
 * [log](log/README.md)
 * [io](io/README.md)
 * [Cross Compilation](cross-compilation/README.md)
