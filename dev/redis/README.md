@@ -53,6 +53,9 @@
 * [Redis strings vs Redis hashes to represent JSON: efficiency?](http://stackoverflow.com/questions/16375188/redis-strings-vs-redis-hashes-to-represent-json-efficiency)
 * [What is the difference between used_memory and used_memory_rss in Redis?](https://hashnode.com/post/what-is-the-difference-between-used_memory-and-used_memory_rss-in-redis-ciibz8fks01d5j3xty0sgi9dk)
 
+#### Lua Script
+* [Redis lua when to really use it?](http://stackoverflow.com/questions/30869919/redis-lua-when-to-really-use-it)
+
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
 * [赠送几本即将出版的《Redis 实战》(帖子有很多实际使用redis的实例)](https://www.v2ex.com/t/227659?p=2)
