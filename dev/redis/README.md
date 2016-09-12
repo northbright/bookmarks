@@ -57,6 +57,9 @@
 * [Redis lua when to really use it?](http://stackoverflow.com/questions/30869919/redis-lua-when-to-really-use-it)
 * [使用Redis的脚本功能实现Redis中数据简单查询](http://blog.csdn.net/kungstriving4/article/details/20219069)
 
+#### Indexes
+* [Secondary indexing with Redis](http://redis.io/topics/indexes)
+
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
 * [赠送几本即将出版的《Redis 实战》(帖子有很多实际使用redis的实例)](https://www.v2ex.com/t/227659?p=2)
