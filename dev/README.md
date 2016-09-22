@@ -21,6 +21,7 @@
 * [Redis](redis/README.md)
 * [RabbitMQ](rabbitmq/README.md)
 * [Docker](docker/README.md)
+* [Hash](hash/README.md)
 * [Crypto](crypto/README.md)
 * [Weixin(微信)](weixin/README.md)
 * [Microservices(微服务)](microservices/README.md)
