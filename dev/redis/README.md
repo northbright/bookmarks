@@ -52,6 +52,7 @@
 * [Redis复制与可扩展集群搭建](http://www.infoq.com/cn/articles/tq-redis-copy-build-scalable-cluster)
 * [Redis strings vs Redis hashes to represent JSON: efficiency?](http://stackoverflow.com/questions/16375188/redis-strings-vs-redis-hashes-to-represent-json-efficiency)
 * [What is the difference between used_memory and used_memory_rss in Redis?](https://hashnode.com/post/what-is-the-difference-between-used_memory-and-used_memory_rss-in-redis-ciibz8fks01d5j3xty0sgi9dk)
+* [SCAN vs KEYS performance in Redis](http://stackoverflow.com/questions/32603964/scan-vs-keys-performance-in-redis)
 
 #### Lua Script
 * [Redis lua when to really use it?](http://stackoverflow.com/questions/30869919/redis-lua-when-to-really-use-it)
