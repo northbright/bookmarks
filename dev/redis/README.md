@@ -65,3 +65,8 @@
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
 * [赠送几本即将出版的《Redis 实战》(帖子有很多实际使用redis的实例)](https://www.v2ex.com/t/227659?p=2)
+
+#### Errors / Debug
+* [Redis: “Can’t save in background: fork: Cannot allocate memory”](https://pydelion.com/2013/05/27/redis-cant-save-in-background-fork-cannot-allocate-memory/)
+* [RedisError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error. #584](https://github.com/antirez/redis/issues/584)
+
