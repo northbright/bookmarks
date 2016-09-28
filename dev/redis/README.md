@@ -42,18 +42,14 @@
 
 #### Articles
 * [Storing hundreds of millions of simple key-value pairs in Redis](http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value)
-* [Redis 常见的性能问题和解决方法](http://blog.nosqlfan.com/html/4077.html)
 * [浅谈REDIS数据库的键值设计](http://www.hoterran.info/redis_kv_design)
 * [Redis 集群的合纵与连横](http://www.cnblogs.com/mindwind/p/5100144.html?utm_source=itdadao&utm_medium=referral)
-* [Redis 的性能幻想与残酷现实](http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ==&mid=401738746&idx=1&sn=281af530d5abec981f3607d6e729914a&scene=21#wechat_redirect)
 * [LINE Storage: Storing billions of rows in Sharded-Redis and HBase per Month](http://developers.linecorp.com/blog/?p=1420)
 * [为什么使用 Redis及其产品定位](http://www.infoq.com/cn/articles/tq-why-choose-redis)
 * [Redis内存使用优化与存储](http://www.infoq.com/cn/articles/tq-redis-memory-usage-optimization-storage)
 * [Redis复制与可扩展集群搭建](http://www.infoq.com/cn/articles/tq-redis-copy-build-scalable-cluster)
 * [Redis strings vs Redis hashes to represent JSON: efficiency?](http://stackoverflow.com/questions/16375188/redis-strings-vs-redis-hashes-to-represent-json-efficiency)
 * [What is the difference between used_memory and used_memory_rss in Redis?](https://hashnode.com/post/what-is-the-difference-between-used_memory-and-used_memory_rss-in-redis-ciibz8fks01d5j3xty0sgi9dk)
-* [SCAN vs KEYS performance in Redis](http://stackoverflow.com/questions/32603964/scan-vs-keys-performance-in-redis)
-* [Redis Running Slowly? Here’s What You Can Do About it ](https://dzone.com/articles/redis-running-slowly-heres)
 
 #### Lua Script
 * [Redis lua when to really use it?](http://stackoverflow.com/questions/30869919/redis-lua-when-to-really-use-it)
@@ -78,3 +74,9 @@
 
 #### Performance
 * [StackExchange.Redis server.Keys(pattern:“IsVerySlow*”)](http://stackoverflow.com/questions/26438736/stackexchange-redis-server-keyspatternisveryslow)
+* [Redis 常见的性能问题和解决方法](http://blog.nosqlfan.com/html/4077.html)
+* [Redis 的性能幻想与残酷现实](http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ==&mid=401738746&idx=1&sn=281af530d5abec981f3607d6e729914a&scene=21#wechat_redirect)
+* [SCAN vs KEYS performance in Redis](http://stackoverflow.com/questions/32603964/scan-vs-keys-performance-in-redis)
+* [Redis Running Slowly? Here’s What You Can Do About it ](https://dzone.com/articles/redis-running-slowly-heres)
+
+
