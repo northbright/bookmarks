@@ -75,3 +75,6 @@
 * [RedisError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error. #584](https://github.com/antirez/redis/issues/584)
 * [redis持久化和常见故障](http://www.open-open.com/lib/view/open1450018149467.html)
 * [redis线上问题及解决方法](http://www.cnblogs.com/wlibo666/p/5235634.html)
+
+#### Performance
+* [StackExchange.Redis server.Keys(pattern:“IsVerySlow*”)](http://stackoverflow.com/questions/26438736/stackexchange-redis-server-keyspatternisveryslow)
