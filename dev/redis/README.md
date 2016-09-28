@@ -69,4 +69,5 @@
 #### Errors / Debug
 * [Redis: “Can’t save in background: fork: Cannot allocate memory”](https://pydelion.com/2013/05/27/redis-cant-save-in-background-fork-cannot-allocate-memory/)
 * [RedisError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error. #584](https://github.com/antirez/redis/issues/584)
+* [redis持久化和常见故障](http://www.open-open.com/lib/view/open1450018149467.html)
 
