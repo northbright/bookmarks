@@ -21,6 +21,7 @@
 * [string](string/README.md)
 * [map](map/README.md)
 * [slice](slice/README.md)
+* [function](function/README.md)
 * [log](log/README.md)
 * [io](io/README.md)
 * [Cross Compilation](cross-compilation/README.md)
