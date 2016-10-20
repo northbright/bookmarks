@@ -38,6 +38,7 @@
 * [七牛首席布道师：Go不是在颠覆，就是在逆袭](http://www.csdn.net/article/2014-07-21/2820743)
 * [Go 1.6中值得关注的几个变化](http://tonybai.com/2016/02/21/some-changes-in-go-1-6/)
 * [Go: Readonly Variable](https://segmentfault.com/a/1190000005071763)
+* [Golang In PingCAP](https://gocn.io/article/23)
 
 #### Blogs
 * [雨痕学堂](https://segmentfault.com/u/qyuhen)
