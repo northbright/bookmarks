@@ -32,6 +32,7 @@
 * [Web Framework](web-framework/README.md)
 * [Redis](redis/README.md)
 * [JSON and Go](json/README.md)
+* [Defer,Panic and Recover](defer-panic-recover/README.md)
 
 #### Blog
 * [](blog/README.md)
