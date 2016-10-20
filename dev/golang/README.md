@@ -43,3 +43,6 @@
 #### Blogs
 * [雨痕学堂](https://segmentfault.com/u/qyuhen)
 * [Dave Cheney](http://dave.cheney.net/)
+
+#### Code Quality Check
+* [Go Report Card](https://github.com/gojp/goreportcard)
