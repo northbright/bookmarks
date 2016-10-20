@@ -6,9 +6,6 @@
 * [Get Golang Resources Hosted on Golang.org(获取golang.org/x/下的packages，运行Playground...)](china/fanqiang/README.md)
 * [Golang Sites in China(中国Golang资源网站)](china/sites/README.md)
 
-#### Blogs
-* [blogs](blog/README.md)
-
 #### Category
 * [Installation](installation/README.md)
 * [HTTP](http/README.md)
@@ -34,9 +31,6 @@
 * [JSON and Go](json/README.md)
 * [Defer,Panic and Recover](defer-panic-recover/README.md)
 
-#### Blog
-* [](blog/README.md)
-
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
 
@@ -47,3 +41,4 @@
 
 #### Blogs
 * [雨痕学堂](https://segmentfault.com/u/qyuhen)
+* [Dave Cheney](http://dave.cheney.net/)
