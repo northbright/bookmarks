@@ -83,3 +83,5 @@
 #### Command
 * SORT
     * [Sorting](https://redislabs.com/ebook/redis-in-action/part-2-core-concepts-2/chapter-3-commands-in-redis/3-7-other-commands/3-7-1-sorting)
+* Sorted Set
+    * [Redis sorted set stores score as a floating point number](https://www.leaseweb.com/labs/2014/07/redis-sorted-set-stores-score-floating-point-number/)
