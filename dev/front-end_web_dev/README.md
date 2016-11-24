@@ -5,6 +5,7 @@
 * [CORS](cors/README.md)
 * [react](react/README.md)
 * [vue](vue/README.md)
+* [JQuery](jquery/README.md)
 * [JQuery Mobile](jquerymobile/README.md)
 
 #### Articles
