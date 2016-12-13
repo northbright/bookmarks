@@ -18,3 +18,7 @@
 * [宜家家具真的“宜家”吗？](http://www.okoer.com/report/ikea)
 * [宜家的家具甲醛超标么？](http://www.zhihu.com/question/21307878)
 * [终于知道在上海去哪里买家具最划算了！！！ ](http://www.douban.com/group/topic/89266297/?type=like)
+
+#### 家电
+* 空气净化器
+  * [紧跟张大妈脚步，神价格入手 SHARP 夏普 KI-CE60-W 高端净化器](http://post.smzdm.com/p/85118/)
