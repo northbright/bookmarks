@@ -22,3 +22,4 @@
 #### 家电
 * 空气净化器
   * [紧跟张大妈脚步，神价格入手 SHARP 夏普 KI-CE60-W 高端净化器](http://post.smzdm.com/p/85118/)
+  * [买新不买旧：日亚购入 SHARP 夏普 KI-FX75-W 空气净化器](http://post.smzdm.com/p/437576/)
