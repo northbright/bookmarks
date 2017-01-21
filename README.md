@@ -7,3 +7,4 @@ Bookmarks of development and more...
 * [Sports(运动)](sports/README.md)
 * [Life(生活小知识)](life/README.md)
 * [Camera(相机)](camera/README.md)
+* [Printer(打印机)](printer/README.md)
