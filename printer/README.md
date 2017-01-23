@@ -5,3 +5,4 @@
   * [多方式趣打印 佳能炫飞CP1200打印机试用](http://qicai.fengniao.com/533/5334133_all.html)
   * [嫌冲照片麻烦的看看佳能CP1200是怎么玩的](http://dc.pconline.com.cn/769/7698141.html)
   * [【求助】 CP910排版问题 大家有好的方法和推荐么？](https://www.douban.com/group/topic/51218833/)
+  * [iPhone手机怎么使用佳能CP1200打印机无线打印？](http://www.dullgeek.com/articles/800.html)
