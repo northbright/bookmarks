@@ -13,3 +13,6 @@
 
 * Keyboard
     * [Keyboard mappings using a PC keyboard on a Macintosh](https://support.microsoft.com/en-us/kb/970299)
+
+#### Data Recovery
+* [19 Free Data Recovery Software Tools](https://www.lifewire.com/free-data-recovery-software-tools-2622893)
