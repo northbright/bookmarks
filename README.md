@@ -9,3 +9,4 @@ Bookmarks of development and more...
 * [Camera(相机)](camera/README.md)
 * [Printer(打印机)](printer/README.md)
 * [Video File Format(视频文件格式)](video-file-format/README.md)
+* [索尼黑卡【RX10III】使用心得和图片交流区](http://forum.xitek.com/forum-viewthread-tid-1579918-extra-page%3D1-ordertype-2-t-1485777210.html)
