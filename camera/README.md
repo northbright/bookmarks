@@ -20,3 +20,4 @@
   * [买了个索尼DSC-RX10 II](http://forum.xitek.com/thread-1487540-1-1-2.html)
   * [入手RX10II肥卡2代，有满意也有不满，慢慢上片慢慢适应吧](http://forum.xitek.com/thread-1566228-1-1-2.html)
   * [一心二用 鱼与熊掌兼得【SONY DSC-RX10 II ~写意生活~】](http://forum.xitek.com/forum-viewthread-tid-1539875-ordertype-2-highlight-rx10-page-1.html)
+  * [索尼RX10随拍](http://forum.xitek.com/forum-viewthread-tid-1489085-ordertype-2-highlight-rx10-page-1.html)
