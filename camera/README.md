@@ -18,3 +18,4 @@
   * [rx100周边配件交流讨论贴](http://forum.xitek.com/forum-viewthread-tid-1054587-ordertype-2-highlight-RX100%2B%C5%E4%BC%FE-page-1.html)
 * RX10
   * [买了个索尼DSC-RX10 II](http://forum.xitek.com/thread-1487540-1-1-2.html)
+  * [入手RX10II肥卡2代，有满意也有不满，慢慢上片慢慢适应吧](http://forum.xitek.com/thread-1566228-1-1-2.html)
