@@ -9,3 +9,4 @@ Bookmarks of development and more...
 * [Camera(相机)](camera/README.md)
 * [Printer(打印机)](printer/README.md)
 * [Video File Format(视频文件格式)](video-file-format/README.md)
+* [Electrical Home Appliance(家电)](jiadian/README.md)
