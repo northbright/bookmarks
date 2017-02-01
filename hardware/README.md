@@ -13,3 +13,4 @@
 
 * 笔记本
   * [一步到位——联想拯救者开箱及配置升级](https://chiphell.com/forum.php?mod=viewthread&tid=1684446&extra=page%3D1%26filter%3Dtypeid%26typeid%3D724)
+  * [拯救者-15拆机教程（加内存加固态清灰必看](http://bbs.zol.com.cn/nbbbs/d160_283725.html)
