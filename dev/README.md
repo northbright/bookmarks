@@ -28,6 +28,7 @@
 * [LevelDB](leveldb/README.md)
 * [Wordpress](wordpress/README.md)
 * [Apache](apache/README.md)
+* [Cordova and Ionic](cordova-and-ionic/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
