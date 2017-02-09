@@ -29,6 +29,7 @@
 * [Wordpress](wordpress/README.md)
 * [Apache](apache/README.md)
 * [Cordova and Ionic](cordova-and-ionic/README.md)
+* [TypeScript](typescript/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
