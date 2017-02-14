@@ -9,5 +9,8 @@
 #### Log
 * [git log](http://www.cnblogs.com/gbyukg/archive/2011/12/12/2285419.html)
 
+#### Remote
+* [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+
 #### Books
 * [Git Book](https://git-scm.com/book/zh/v2)
