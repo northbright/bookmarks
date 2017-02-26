@@ -44,6 +44,7 @@
 
 #### Effective Go
 * [实效Go编程](https://go-zh.org/doc/effective_go.html)
+* [编写地道的Go代码](http://colobu.com/2017/02/07/write-idiomatic-golang-codes/)
 
 #### Blogs
 * [雨痕学堂](https://segmentfault.com/u/qyuhen)
