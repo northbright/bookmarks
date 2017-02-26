@@ -13,6 +13,7 @@
 * [微服务架构风格可以降低系统的复杂度吗？](http://www.zhihu.com/question/35980124)
 
 * [微服务的反模式和陷阱](http://colobu.com/2016/11/11/microservices-anti-patterns-and-pitfalls/)
+* [产品级微服务的八大原则](http://colobu.com/2016/10/16/microservices-in-production-notes/)
 
 #### Service Discovery
 * [服务发现：Zookeeper vs etcd vs Consul ](http://dockone.io/article/667)
