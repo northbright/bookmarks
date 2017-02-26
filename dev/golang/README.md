@@ -42,6 +42,9 @@
 * [谢孟军：The State of Go | ECUG Con 精粹系列](http://blog.qiniu.com/archives/8203)
 * [[译]Go 1.8 新特性](http://colobu.com/2016/11/05/golang-18-whats-coming/)
 
+#### Effective Go
+* [实效Go编程](https://go-zh.org/doc/effective_go.html)
+
 #### Blogs
 * [雨痕学堂](https://segmentfault.com/u/qyuhen)
 * [Dave Cheney](http://dave.cheney.net/)
