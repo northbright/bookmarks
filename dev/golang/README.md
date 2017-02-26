@@ -39,6 +39,7 @@
 * [Go 1.6中值得关注的几个变化](http://tonybai.com/2016/02/21/some-changes-in-go-1-6/)
 * [Go: Readonly Variable](https://segmentfault.com/a/1190000005071763)
 * [Golang In PingCAP](https://gocn.io/article/23)
+* [谢孟军：The State of Go | ECUG Con 精粹系列](http://blog.qiniu.com/archives/8203)
 
 #### Blogs
 * [雨痕学堂](https://segmentfault.com/u/qyuhen)
