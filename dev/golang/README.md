@@ -40,6 +40,7 @@
 * [Go: Readonly Variable](https://segmentfault.com/a/1190000005071763)
 * [Golang In PingCAP](https://gocn.io/article/23)
 * [谢孟军：The State of Go | ECUG Con 精粹系列](http://blog.qiniu.com/archives/8203)
+* [[译]Go 1.8 新特性](http://colobu.com/2016/11/05/golang-18-whats-coming/)
 
 #### Blogs
 * [雨痕学堂](https://segmentfault.com/u/qyuhen)
