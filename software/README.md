@@ -6,6 +6,11 @@
 * [为什么不能打开我的 Excel 文件？](https://support.office.com/zh-cn/article/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E6%89%93%E5%BC%80%E6%88%91%E7%9A%84-Excel-%E6%96%87%E4%BB%B6%EF%BC%9F-2daa6bd6-8db5-4521-9f37-7e23b3e4bdab?ui=zh-CN&rs=zh-CN&ad=CN)
 * [Office for iPad - "Word cannot open the document: user does not have access privileges"](http://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_imobile/office-for-ipad-word-cannot-open-the-document-user/4f48b09f-5d28-4e2a-8aea-5024fe3de819)
 
+#### Office
+* Excel
+  * Export to CSV
+    * [Convert xlsx to csv in linux command line](http://stackoverflow.com/questions/10557360/convert-xlsx-to-csv-in-linux-command-line)
+
 #### Mac OS X
 * SSH
     * [Mac OS X 平台有哪些好用的 SSH 客户端？](https://www.zhihu.com/question/20541129)
