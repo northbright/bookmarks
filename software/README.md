@@ -12,6 +12,7 @@
     * [Convert xlsx to csv in linux command line](http://stackoverflow.com/questions/10557360/convert-xlsx-to-csv-in-linux-command-line)
     * [convert CSV to XLS file on linux](http://unix.stackexchange.com/questions/158254/convert-csv-to-xls-file-on-linux)
     * [libxls](http://libxls.sourceforge.net/)
+    * <https://github.com/extrame/xls>
 
 #### Mac OS X
 * SSH
