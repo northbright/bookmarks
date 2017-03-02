@@ -1,4 +1,4 @@
 # Python
 
 #### easy_install
-* [Python 开发中easy_install的安装及使用](http://www.cnblogs.com/fendou-999/p/3519785.html)
+* [python - easy_install的安装和使用](http://www.cnblogs.com/huangjacky/archive/2012/03/28/2421866.html)
