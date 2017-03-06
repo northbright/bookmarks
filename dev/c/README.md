@@ -14,3 +14,6 @@
 
 #### String
 * [Determining sprintf buffer size - what's the standard?](http://stackoverflow.com/questions/3919995/determining-sprintf-buffer-size-whats-the-standard)
+
+#### Variadic Parameters
+* [C variadic wrapper](http://stackoverflow.com/questions/37947200/c-variadic-wrapper)
