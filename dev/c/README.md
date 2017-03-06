@@ -5,3 +5,6 @@
 
 #### stdout, stderr
 * [stdin、stdout、stderr 标准流本质上到底是什么？](https://www.zhihu.com/question/24030687)
+
+#### C Playground
+* [C99 Restrict Playground](https://www.tutorialspoint.com/compile_c99_online.php)
