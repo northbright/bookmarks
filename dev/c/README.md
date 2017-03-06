@@ -8,3 +8,6 @@
 
 #### C Playground
 * [C99 Restrict Playground](https://www.tutorialspoint.com/compile_c99_online.php)
+
+#### Bool
+* [Is bool a native C type?](http://stackoverflow.com/questions/1608318/is-bool-a-native-c-type)
