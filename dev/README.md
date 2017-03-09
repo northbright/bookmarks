@@ -34,6 +34,7 @@
 * [CSV](csv/README.md)
 * [Python](python/README.md)
 * [C](c/README.md)
+* [automake](automake/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
