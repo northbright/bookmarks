@@ -31,6 +31,10 @@
 * [Cordova and Ionic](cordova-and-ionic/README.md)
 * [TypeScript](typescript/README.md)
 * [Node.js](nodejs/README.md)
+* [CSV](csv/README.md)
+* [Python](python/README.md)
+* [C](c/README.md)
+* [automake](automake/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
