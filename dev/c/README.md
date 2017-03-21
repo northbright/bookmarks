@@ -17,3 +17,6 @@
 
 #### Variadic Parameters
 * [C variadic wrapper](http://stackoverflow.com/questions/37947200/c-variadic-wrapper)
+
+#### Parameter Parser
+* [getopt处理命令行参数（转）](http://www.cnblogs.com/yc_sunniwell/archive/2010/02/04/1663884.html)
