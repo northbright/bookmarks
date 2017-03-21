@@ -20,3 +20,4 @@
 
 #### Parameter Parser
 * [getopt处理命令行参数（转）](http://www.cnblogs.com/yc_sunniwell/archive/2010/02/04/1663884.html)
+* [Using the getopt function](https://www.gnu.org/software/libc/manual/html_node/Using-Getopt.html)
