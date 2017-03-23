@@ -25,3 +25,6 @@
 
 #### main() function
 * [What should main() return in C and C++?](http://stackoverflow.com/questions/204476/what-should-main-return-in-c-and-c)
+
+#### File
+* [C fopen vs open](http://stackoverflow.com/questions/1658476/c-fopen-vs-open)
