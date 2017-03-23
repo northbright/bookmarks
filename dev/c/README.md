@@ -22,3 +22,6 @@
 * [getopt处理命令行参数（转）](http://www.cnblogs.com/yc_sunniwell/archive/2010/02/04/1663884.html)
 * [Using the getopt function](https://www.gnu.org/software/libc/manual/html_node/Using-Getopt.html)
 * [Linux下getopt()函数的简单使用](http://www.cnblogs.com/qingergege/p/5914218.html)
+
+#### main() function
+* [What should main() return in C and C++?](http://stackoverflow.com/questions/204476/what-should-main-return-in-c-and-c)
