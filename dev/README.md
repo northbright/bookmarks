@@ -36,6 +36,7 @@
 * [C](c/README.md)
 * [automake](automake/README.md)
 * [GNU](gnu/README.md)
+* [CI](ci/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
