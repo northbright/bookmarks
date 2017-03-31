@@ -38,6 +38,7 @@
 * [GNU](gnu/README.md)
 * [CI](ci/README.md)
 * [PostgreSQL](postgresql/README.md)
+* [OAUTH](oauth/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
