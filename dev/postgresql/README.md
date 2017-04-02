@@ -6,7 +6,7 @@
 * [Is Postgres NoSQL Better Than MongoDB?](http://www.aptuz.com/blog/is-postgres-nosql-database-better-than-mongodb/)
 * [postgresql也很强大，为何在中国大陆，mysql成为主流，postgresql屈居二线呢？](https://www.zhihu.com/question/31955622)
 
-#### JSON
+#### JSON & JSONB
 * [【pgsql使用记录】json类型字段](https://my.oschina.net/lxrm/blog/210301)
 
 #### Sites
