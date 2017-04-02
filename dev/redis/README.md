@@ -10,6 +10,7 @@
     * [cache-ria-ebook](https://github.com/northbright/cache-ria-ebook)
     * [《Redis实战》中文翻译支持网站](http://redisinaction.com/)
 * [The Little Redis Book](http://openmymind.net/redis.pdf)
+* [各位能否推荐几本redis方面比较好的书籍？](https://www.zhihu.com/question/26885503)
 
 #### Partitioning
 * [Partitioning: how to split data among multiple Redis instances.](http://redis.io/topics/partitioning)
