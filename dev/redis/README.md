@@ -9,6 +9,7 @@
     * ["Redis in Action" ebook hosted on redislabs.com](https://redislabs.com/ebook/redis-in-action)
     * [cache-ria-ebook](https://github.com/northbright/cache-ria-ebook)
     * [《Redis实战》中文翻译支持网站](http://redisinaction.com/)
+* [The Little Redis Book](http://openmymind.net/redis.pdf)
 
 #### Partitioning
 * [Partitioning: how to split data among multiple Redis instances.](http://redis.io/topics/partitioning)
