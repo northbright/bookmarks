@@ -8,6 +8,7 @@
 
 #### JSON & JSONB
 * [【pgsql使用记录】json类型字段](https://my.oschina.net/lxrm/blog/210301)
+* [PostgreSQL 9.4 中使用 jsonb](https://segmentfault.com/a/1190000002911580)
 
 #### Sites
 * [德哥的Blog](https://github.com/digoal/blog)
