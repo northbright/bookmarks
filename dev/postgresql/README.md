@@ -11,5 +11,8 @@
 * [PostgreSQL 9.4 中使用 jsonb](https://segmentfault.com/a/1190000002911580)
 * [Explanation of JSONB introduced by PostgreSQL](http://stackoverflow.com/questions/22654170/explanation-of-jsonb-introduced-by-postgresql)
 
+#### Install
+* [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
+
 #### Sites
 * [德哥的Blog](https://github.com/digoal/blog)
