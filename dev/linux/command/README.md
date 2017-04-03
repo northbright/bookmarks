@@ -8,3 +8,6 @@
 
 #### sudo
 * [充分发挥 sudo 的作用](http://www.ibm.com/developerworks/cn/aix/library/au-sudo/index.html)
+
+#### Add and Delete User
+* [How To Add and Delete Users on a CentOS 7 Server](https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-a-centos-7-server)
