@@ -11,3 +11,4 @@
 
 #### Add and Delete User
 * [How To Add and Delete Users on a CentOS 7 Server](https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-a-centos-7-server)
+* [What's the difference between “adduser” and “useradd”?](https://superuser.com/questions/547966/whats-the-difference-between-adduser-and-useradd)
