@@ -2,3 +2,4 @@
 
 * [Using PostgreSQL with Golang](https://www.calhoun.io/using-postgresql-with-golang/)
 * [Connecting to a PostgreSQL database with Go's database/sql package](https://www.calhoun.io/connecting-to-a-postgresql-database-with-gos-database-sql-package/)
+* [Why we import SQL drivers as the blank identifier ( _ ) in Go](https://www.calhoun.io/why-we-import-packages-we-dont-actually-use-in-golang/)
