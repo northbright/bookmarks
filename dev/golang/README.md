@@ -32,6 +32,7 @@
 * [Defer,Panic and Recover](defer-panic-recover/README.md)
 * [XLSX](xlsx/README.md)
 * [Package Management](package-management/README.md)
+* [PostgreSQL](postgresql/README.md)
 
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
