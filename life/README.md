@@ -14,6 +14,9 @@
 #### 饮用水
 * [日常饮水用饮水机好，还是自来水烧开了喝好？请问下哪种饮水方式健康一些。](https://www.zhihu.com/question/20968081)
 
+#### 茶
+* [在这感冒频发的季节，你需要正确的喝茶](https://zhuanlan.zhihu.com/p/24940468)
+
 #### 家居
 * [卫生间防滑这么做，再也不用担心老人孩子会摔倒](https://zhuanlan.zhihu.com/p/21861489)
 * [宜家家具真的“宜家”吗？](http://www.okoer.com/report/ikea)
