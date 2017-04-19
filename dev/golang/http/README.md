@@ -16,3 +16,6 @@
 
 #### HTTPS
   * [Golang - TLS with selfsigned certificate](http://stackoverflow.com/questions/22666163/golang-tls-with-selfsigned-certificate)
+
+#### Restful
+* [Go, REST APIs, and Pointers](https://willnorris.com/2014/05/go-rest-apis-and-pointers)
