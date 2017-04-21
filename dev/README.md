@@ -39,6 +39,7 @@
 * [CI](ci/README.md)
 * [PostgreSQL](postgresql/README.md)
 * [OAUTH](oauth/README.md)
+* [JSON Web Token](jwt/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
