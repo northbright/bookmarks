@@ -6,3 +6,4 @@
 
 #### bcrypt
 * [使用BCrypt算法免除存储salt](https://my.oschina.net/foodon/blog/492885)
+* [密码哈希函数Bcrypt的最大密码长度限制](http://blog.csdn.net/chszs/article/details/60970765)
