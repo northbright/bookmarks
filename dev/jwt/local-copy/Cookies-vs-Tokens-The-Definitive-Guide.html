@@ -1,0 +1,6207 @@
+<!DOCTYPE html>
+<html class="header-dark">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="description" content="The cookie vs token debate favors token-based authentication. Learn the advantages and get answers to common concerns regarding token authentication.">
+
+    <!-- <meta property="fb:admins" content="YOUR_FB_USER_ID" /> -->
+<meta property="fb:app_id" content="534074790006350"/>
+
+  <meta property="og:title" content="Cookies vs Tokens: The Definitive Guide" />
+
+<meta property="og:site_name" content="Auth0 - Blog" />
+<meta property="og:url" content="https://auth0.com/blog/cookies-vs-tokens-definitive-guide/" />
+
+  
+    <meta property="og:image" content="https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png">
+  
+
+
+
+<meta property="og:description" content="The cookie vs token debate favors token-based authentication. Learn the advantages and get answers to common concerns regarding token aut..." />
+
+
+
+<meta property="og:type" content="article">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:site" content="@auth0">
+<meta name="twitter:creator" content="@auth0">
+
+  <meta name="twitter:title" content="Cookies vs Tokens: The Definitive Guide">
+
+
+
+  <meta name="twitter:url"  content="https://auth0.com/blog/cookies-vs-tokens-definitive-guide/">
+
+
+  <meta name="twitter:description" content="The cookie vs token debate favors token-based authentication. Learn the advantages and get answers to common concerns regarding token authentication.">
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png">
+
+
+
+<meta name="twitter:image:height" content="512">
+<meta name="twitter:image:width" content="1024">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+
+    
+      <title>Cookies vs Tokens: The Definitive Guide</title>
+
+      <!-- Swiftype for the posts -->
+      <meta class="swiftype" name="title" data-type="string" content="Cookies vs Tokens: The Definitive Guide"/>
+      <meta class="swiftype" name="type" data-type="enum" content="blog" />
+      <meta class="swiftype" name="popularity" data-type="integer" content="1"/>
+    
+
+    <link href="https://plus.google.com/+Auth0" rel="publisher" />
+    <link rel="manifest" href="/blog/manifest.json">
+    <script src="//use.typekit.net/tde2fii.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdn.auth0.com/w2/auth0-7.4.0.min.js"></script>
+    <script src="//cdn.auth0.com/js/lock/10.6.1/lock.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.2.0/react.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.2.0/react-dom.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.auth0.com/website/web-header/3.2.2/web-header.css" />
+    <script src="https://cdn.auth0.com/website/web-header/3.2.2/web-header.js"></script>
+    <script src="//npmcdn.com/auth0-contact-form@latest"></script>
+    <link rel="stylesheet" href="//npmcdn.com/auth0-contact-form@latest/dist/contact-form.css" />
+    <script src="//cdn.auth0.com/js/m/metrics-1.min.js"></script>
+    <script type="text/javascript">
+      !function(){
+        var metricsLib = window.metricsLib = window.metricsLib || [];
+        // A list of the methods in metrics.js to stub.
+        metricsLib.methods = [
+          'segment',
+          'track',
+          'setUserId',
+          'identify',
+          'alias',
+          'page',
+          'getData',
+          'ready',
+          'traits'
+        ];
+        metricsLib.factory = function(method){
+          return function(){
+            var args = Array.prototype.slice.call(arguments);
+            args.unshift(method);
+            metricsLib.push(args);
+            return metricsLib;
+          };
+        };
+        for (var i = 0; i < metricsLib.methods.length; i++) {
+          var key = metricsLib.methods[i];
+          metricsLib[key] = metricsLib.factory(key);
+        }
+        metricsLib.load = function(segmentKey, dwhEndpoint){
+          if(null != window.Auth0Metrics){
+            window.metricsLib = new Auth0Metrics(segmentKey, dwhEndpoint, 'blog');
+          }else{
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = ('https:' === document.location.protocol
+              ? 'https://' : 'http://')
+              + 'cdn.auth0.com/js/m/metrics-1.min.js';
+            script.onerror = function(){
+              console.error("No metrics");
+            }
+            script.onload = function(){
+              // Grab analytics and make it private
+              window.metricsLib = new Auth0Metrics(segmentKey, dwhEndpoint, 'blog');
+            }
+            var first = document.getElementsByTagName('script')[0];
+            first.parentNode.insertBefore(script, first);
+          }
+        };
+        var SEGMENT_KEY =  'aaB6w2BsRwUcGbRSUY7X22FPAa1NL3BL' ;
+        var DWH_ENDPOINT =  'https://dwh-tracking.it.auth0.com/dwh-metrics' ;
+        if (DWH_ENDPOINT) {
+          //- We should catch for an undefined DWH_ENDPOINT
+          metricsLib.load(SEGMENT_KEY, DWH_ENDPOINT);
+        } else {
+          console.error("DWH_ENDPOINT must be defined for tracking to work.")
+        }
+        }();
+    </script>
+
+    <script src="//cdn.auth0.com/js/ab/ab-1.min.js"></script>
+    <script src="//cdn.auth0.com/js/ab/ab-loader-1.min.js"></script>
+
+    
+
+    
+
+    
+      
+        <link rel="canonical" href="https://auth0.com/blog/cookies-vs-tokens-definitive-guide/" />
+      
+    
+
+    <!-- amphtml
+
+    
+      
+        <link rel="amphtml" href="https://auth0.com/blog/amp/cookies-vs-tokens-definitive-guide/" />
+      
+     -->
+
+
+    
+      
+      
+    
+
+    <link rel="shortcut icon" href="//cdn.auth0.com/styleguide/latest/lib/logos/img/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://auth0.com/blog/rss.xml">
+    <link type="application/opensearchdescription+xml" rel="search" href="https://auth0.com/blog/osd.xml"/>
+
+    <link rel="preload" href="https://cdn.auth0.com/styleguide/core/2.0.1/fonts/fakt/FaktPro-Normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://cdn.auth0.com/styleguide/core/2.0.1/core.min.css">
+    <link rel="stylesheet" href="https://cdn.auth0.com/styleguide/components/1.0.7/components.min.css">
+
+    <link rel="stylesheet" href="/blog/css/index.css" />
+    <link rel="stylesheet" href="/blog/css/vendor/selection-sharer.min.css" />
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+    <div id="header"></div>
+    <div class="container">
+  <div class="pn-popup" role="alert">
+      <div class="pn-popup-container">
+          <p>﻿⁠⁠⁠⁠Do you want to receive a desktop notification when new content is published?</p>
+          <div class="pn-buttons">
+              <button id="push-allow">YES</button>
+              <button id="push-block" >NO</button>
+          </div>
+          <div class="arrow"></div>
+      </div>
+  </div>
+</div>
+
+    <script>
+    (function () {
+      var config = {
+        auth0Domain: 'auth0.auth0.com',
+        auth0ClientID: 'zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI',
+        auth0CallbackURL: 'https://manage.auth0.com/callback',
+      };
+      var auth0js = new Auth0({
+        domain: config.auth0Domain,
+        clientID: config.auth0ClientID,
+        callbackURL: config.auth0CallbackURL,
+        responseType: 'token'
+      });
+      var lockOptions = {
+        auth: { redirectUrl: config.auth0CallbackURL },
+        theme: {
+          logo: '//cdn.auth0.com/styleguide/latest/lib/logos/img/badge.png'
+        },
+        rememberLastLogin: true,
+        integratedWindowsLogin: false,
+        socialButtonStyle: 'big',
+        languageDictionary: {
+          emailInputPlaceholder: 'Work email',
+          passwordInputPlaceholder: 'Your password',
+          signUpTerms: 'By signing up, you agree to our <a href="/terms" target="_new">terms of service</a> and <a href="/privacy" target="_new">privacy policy</a>'
+        }
+      };
+      var lock = window.lock = new Auth0Lock(
+        config.auth0ClientID,
+        config.auth0Domain,
+        lockOptions
+      );
+
+      lock.on('signup ready', function () {
+        metricsLib.track('open:signup', getBasicInfo());
+      });
+
+      lock.on('signin ready', function () {
+        metricsLib.track('open:signin', getBasicInfo());
+      });
+
+      window.login = function login() {
+        metricsLib.track('click:signin', getBasicInfo());
+        lock.show({ initialScreen: 'login' });
+      }
+
+      window.signup = function() {
+        metricsLib.track('click:signup', getBasicInfo());
+        lock.show({ initialScreen: 'signUp' });
+      }
+
+      // Header
+      var React = window.React;
+      var ReactDOM = window.ReactDOM;
+      var Auth0WebHeader = window.Auth0WebHeader.default;
+      var Auth0ContactForm = window.Auth0ContactForm.default;
+      var Header = React.createClass({
+        getInitialState: function () {
+          return {
+            logged: false
+          };
+        },
+
+        componentDidMount: function () {
+          var _this = this;
+          auth0js.getSSOData(false, function (err, data) {
+            var logged = data.sso;
+            _this.setState({ logged: logged });
+          });
+
+          var ContactForm = Auth0ContactForm.ContactForm;
+          var contactFormOptions = {
+            onModalOpen: function () {
+              metricsLib.track('open:talk-to-sales');
+            },
+            onFormSuccess: function (metricsData) {
+              metricsLib.track('register:lead:talk-to-sales-modal', metricsData);
+              metricsLib.track('sent:talk-to-sales', metricsData);
+            },
+            onFormFail: function (metricsData) {
+              metricsLib.track('fail:register:lead:talk-to-sales-modal', metricsData);
+              metricsLib.track('fail-sent:talk-to-sales', metricsData);
+            }
+          };
+          var contactForm = new ContactForm(contactFormOptions);
+          this.setState({
+            showContactForm: function () {
+              contactForm.show({includePhoneField: true });
+            }
+          });
+        },
+
+        render: function () {
+          var HeaderProps = {
+            logged: this.state.logged,
+            showContactForm: this.state.showContactForm
+          };
+          var Auth0WebHeaderProps = toAuth0WebHeaderProps(HeaderProps);
+
+          return React.createElement(Auth0WebHeader, Auth0WebHeaderProps);
+        }
+      });
+
+      function toAuth0WebHeaderProps(props) {
+        var Auth0WebHeaderProps = {
+          theme: 'dark',
+          talkToSalesButtonLink: null,
+          talkToSalesButtonOnClick: props.showContactForm,
+          loginButtonOnClick: window.login
+        };
+
+        if (props.logged) {
+          Auth0WebHeaderProps.signupButtonLink = 'https://manage.auth0.com';
+        } else {
+          Auth0WebHeaderProps.signupButtonOnClick = window.signup;
+        }
+
+        return Auth0WebHeaderProps;
+      }
+
+      ReactDOM.render(React.createElement(Header, null), document.getElementById('header'));
+    })();
+    </script>
+    <div id="pjax">
+
+      <!-- Facebook -->
+      <div id="fb-root"></div>
+      <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=534074790006350&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Twitter -->
+      <script type="text/javascript">
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+      </script>
+
+      <!-- Twitter Conversion -->
+      <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+      <!-- Twitter Conversion -->
+<script type="text/javascript">
+  twttr.conversion.trackPid('l4rua');
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4rua&p_id=Twitter" />
+  <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4rua&p_id=Twitter" />
+</noscript>
+
+<article itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+  <link itemprop="mainEntityOfPage" href="https://auth0.com/blog/cookies-vs-tokens-definitive-guide/" />
+  
+  
+
+
+
+
+<section class="banner banner-post" style="background: #08192D">
+    <div class="container banner-container">
+        <i class="icon-budicon-697 hide"></i>
+
+        <h2 class="banner-subtitle"><a href="/blog/" target="_blank">Blog</a></h2>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+<a href="/blog/cookies-vs-tokens-definitive-guide/"
+  style="
+
+ 
+
+"
+  class="entry-thumbnail">
+  <div class="holder" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+    <img
+    style="
+  
+ 
+  
+    
+  
+ 
+  
+ 
+  
+"
+    src="https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png"
+    alt="Cookies vs Tokens: The Definitive Guide">
+    <meta itemprop="url" content="https://cdn.auth0.com/blog/cookies-vs-tokens/cvt-logo.png">
+    <meta itemprop="width" content="128">
+    <meta itemprop="height" content="128">
+  </div>
+</a>
+
+
+        <h1 class="entry-title"><a href="/blog/cookies-vs-tokens-definitive-guide/" title="Published: May 31, 2016"><span itemprop="headline">Cookies vs Tokens: The Definitive Guide</span></a></h1>
+
+        
+        <div class="entry-content" itemprop="description">
+          <p>The cookie vs token debate favors token-based authentication. Learn the advantages and get answers to common concerns regarding token authentication.</p>
+
+        </div>
+        
+
+        <div class="post-info">
+          <div class="author">
+            <a href="https://twitter.com/kukicadnan"><img src="https://s.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=200" width="27" height="27"> <span class="name" itemprop="author">Ado Kukic</span></a>
+          </div>
+
+          <div class="date">
+            <time datetime="May 31, 2016" class="published updated">May 31, 2016</time>
+            <meta itemprop="datePublished" content='2016-05-31'/>
+          </div>
+
+          
+  
+
+
+
+  
+
+
+<div class="social-stats">
+  <a href="#" data-url="https://auth0.com/blog/2016/05/31/cookies-vs-tokens-definitive-guide/" data-type="twitter" data-txt="Cookies vs Tokens: The Definitive Guide" data-via="auth0" data-count="true" class="network">
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+
+    <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
+
+      c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
+
+      c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
+
+      c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
+
+      C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
+
+      C436.339,160.061,450.668,145.174,462,128.223z"/>
+
+    </svg>
+
+  </a>
+
+  <a href="#" data-url="https://auth0.com/blog/2016/05/31/cookies-vs-tokens-definitive-guide/" data-type="linkedin" data-txt="Cookies vs Tokens: The Definitive Guide" data-count="true" class="network">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+
+    <path id="linkedin-icon" d="M411.945,50h-312c-27.614,0-50,22.386-50,50v312c0,27.614,22.386,50,50,50h312
+
+      c27.614,0,50-22.386,50-50V100C461.945,72.386,439.56,50,411.945,50z M180.996,392.99h-56.537V210.336h56.537V392.99z
+
+       M152.457,186.417c-18.465,0-33.432-15.09-33.432-33.703c0-18.614,14.967-33.704,33.432-33.704c18.463,0,33.432,15.09,33.432,33.704
+
+      C185.889,171.327,170.92,186.417,152.457,186.417z M392.865,392.99h-56.262c0,0,0-69.582,0-95.881
+
+      c0-26.296-9.988-40.974-30.781-40.974c-22.629,0-34.453,15.289-34.453,40.974c0,28.133,0,95.881,0,95.881h-54.223V210.336h54.223
+
+      v24.599c0,0,16.309-30.171,55.041-30.171s66.455,23.648,66.455,72.572C392.865,326.262,392.865,392.99,392.865,392.99z"/>
+
+    </svg>
+  </a>
+
+  <a href="#" data-url="https://auth0.com/blog/2016/05/31/cookies-vs-tokens-definitive-guide/" data-type="facebook" data-txt="Cookies vs Tokens: The Definitive Guide" data-count="true" class="network">
+    <svg width="17" height="17" viewBox="0 0 412 412" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <g id="facebook-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+          <path d="M283.80119,412 L361.995375,412 C389.611494,412 412,389.612167 412,361.995375 L412,50.0046252 C412,22.3885058 389.612167,0 361.995375,0 L50.0046252,0 C22.3885058,0 0,22.3878333 0,50.0046252 L0,361.995375 C0,389.611494 22.3878333,412 50.0046252,412 L219.907783,412 L219.907783,254.137637 L166.482996,254.137637 L166.482996,192.266054 L219.907783,192.266054 L219.907783,146.637452 C219.907783,93.6867027 252.247398,64.8530656 299.484232,64.8530656 C322.110827,64.8530656 341.559134,66.5376524 347.225329,67.2916602 L347.225329,122.6301 L314.462578,122.644417 C288.775412,122.644417 283.80119,134.851707 283.80119,152.764958 L283.80119,192.266054 L345.068293,192.266054 L337.089173,254.137637 L283.80119,254.137637 L283.80119,412 Z" id="Rectangle-1" fill="#000000" sketch:type="MSShapeGroup"></path>
+      </g>
+    </svg>
+  </a>
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+  <div class="utility-bar">
+  <div class="container">
+    <div class="pull-left">
+      <a href="javascript:signup()" class="signup-button btn btn-success btn-md mf-listen">Use Auth0 for Free</a>
+    </div>
+
+    <div class="pull-right share-container">
+      <span class="share-label">Share this post</span>
+      
+  
+
+
+
+  
+
+
+<div class="social-stats">
+  <a href="#" data-url="https://auth0.com/blog/2016/05/31/cookies-vs-tokens-definitive-guide/" data-type="twitter" data-txt="Cookies vs Tokens: The Definitive Guide" data-via="auth0" data-count="true" class="network">
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+
+    <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
+
+      c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
+
+      c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
+
+      c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
+
+      C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
+
+      C436.339,160.061,450.668,145.174,462,128.223z"/>
+
+    </svg>
+
+  </a>
+
+  <a href="#" data-url="https://auth0.com/blog/2016/05/31/cookies-vs-tokens-definitive-guide/" data-type="linkedin" data-txt="Cookies vs Tokens: The Definitive Guide" data-count="true" class="network">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+
+    <path id="linkedin-icon" d="M411.945,50h-312c-27.614,0-50,22.386-50,50v312c0,27.614,22.386,50,50,50h312
+
+      c27.614,0,50-22.386,50-50V100C461.945,72.386,439.56,50,411.945,50z M180.996,392.99h-56.537V210.336h56.537V392.99z
+
+       M152.457,186.417c-18.465,0-33.432-15.09-33.432-33.703c0-18.614,14.967-33.704,33.432-33.704c18.463,0,33.432,15.09,33.432,33.704
+
+      C185.889,171.327,170.92,186.417,152.457,186.417z M392.865,392.99h-56.262c0,0,0-69.582,0-95.881
+
+      c0-26.296-9.988-40.974-30.781-40.974c-22.629,0-34.453,15.289-34.453,40.974c0,28.133,0,95.881,0,95.881h-54.223V210.336h54.223
+
+      v24.599c0,0,16.309-30.171,55.041-30.171s66.455,23.648,66.455,72.572C392.865,326.262,392.865,392.99,392.865,392.99z"/>
+
+    </svg>
+  </a>
+
+  <a href="#" data-url="https://auth0.com/blog/2016/05/31/cookies-vs-tokens-definitive-guide/" data-type="facebook" data-txt="Cookies vs Tokens: The Definitive Guide" data-count="true" class="network">
+    <svg width="17" height="17" viewBox="0 0 412 412" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <g id="facebook-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+          <path d="M283.80119,412 L361.995375,412 C389.611494,412 412,389.612167 412,361.995375 L412,50.0046252 C412,22.3885058 389.612167,0 361.995375,0 L50.0046252,0 C22.3885058,0 0,22.3878333 0,50.0046252 L0,361.995375 C0,389.611494 22.3878333,412 50.0046252,412 L219.907783,412 L219.907783,254.137637 L166.482996,254.137637 L166.482996,192.266054 L219.907783,192.266054 L219.907783,146.637452 C219.907783,93.6867027 252.247398,64.8530656 299.484232,64.8530656 C322.110827,64.8530656 341.559134,66.5376524 347.225329,67.2916602 L347.225329,122.6301 L314.462578,122.644417 C288.775412,122.644417 283.80119,134.851707 283.80119,152.764958 L283.80119,192.266054 L345.068293,192.266054 L337.089173,254.137637 L283.80119,254.137637 L283.80119,412 Z" id="Rectangle-1" fill="#000000" sketch:type="MSShapeGroup"></path>
+      </g>
+    </svg>
+  </a>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div id="container" class="container">
+    <div class="row sticky-container">
+      <section class="col-md-8 content-column">
+
+        <main class="blog-post blog-single">
+          <div class="inner">
+            <div class="entry-content js-entry-content" itemprop="articleBody">
+              <hr />
+
+<p><strong>TL;DR</strong> Tokens-based authentication is more relevant than ever. We examine the differences and similarities between cookie and token-based authentication, advantages of using tokens, and address common questions and concerns developers have regarding token-based auth. Finally, putting theory to practice, we'll build an application that uses token authentication and make it a progressive web app.</p>
+
+<p>We will be writing an Angular 2 app that uses JWT for authentication. Grab the <a href="https://github.com/auth0/auth0-angular2">Github repo</a> if you would like to follow along.</p>
+
+<hr />
+
+<p>Our <a href="https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/">last article</a> comparing cookie to token authentication was over two years ago. Since then, we've written extensively on how to integrate token authentication across many different languages and frameworks.</p>
+
+<p>The rise of single page applications (SPAs) and decoupling of the front-end from the back-end is in full force. Frameworks like <a href="https://angularjs.org/">Angular</a>, <a href="https://facebook.github.io/react/">React</a>, and <a href="https://vuejs.org/">Vue</a> allow developers to build bigger, better, and more performant single page applications than ever before. Token-based authentication goes hand in hand with these frameworks.</p>
+
+<blockquote class="tweet-quote">
+  <a href="https://twitter.com/intent/tweet?text=&quot;Token-based authentication goes hand in hand with SPA frameworks like Angular, React and Vue.&quot; via @auth0 http://auth0.com/blog/cookies-vs-tokens-definitive-guide/">
+    <p>"Token-based authentication goes hand in hand with SPA frameworks like Angular, React and Vue."</p>
+    <p class="tweet-link">TWEET THIS <img src="https://cdn.auth0.com/blog/resources/twitter.svg"></p>
+  </a>
+</blockquote>
+
+
+
+
+<script>
+    $(function() {
+        $('.tweet-quote').on('click', function() {
+            metricsLib.track('blog:share:twitter_quote');
+        });
+    });
+</script>
+
+
+<h2>Cookie vs Token Authentication - Recap</h2>
+
+<p>Before we dive further, let's quickly recap how these two authentication systems work. If you are already familiar with how cookie and token authentication works, feel free to skip this section, otherwise read on for an in-depth overview.</p>
+
+<p>This diagram is a great introduction and simplified overview of the difference between cookie and token approaches to authentication.</p>
+
+<p><img src="https://cdn.auth0.com/blog/cookies-vs-tokens/cookie-token-auth.png" alt="Cookie vs Token-Based Authentication" /></p>
+
+<h3>Cookie Based Authentication</h3>
+
+<p>Cookie based authentication has been the default, tried-and-true method for handling user authentication for a long time.</p>
+
+<p>Cookie based authentication is <strong>stateful</strong>. This means that an authentication record or session must be kept both server and client-side. The server needs to keep track of active sessions in a database, while on the front-end a cookie is created that holds a session identifier, thus the name cookie based authentication. Let's look at the flow of traditional cookie based authentication:</p>
+
+<ol>
+<li>User enters their login credentials</li>
+<li>Server verifies the credentials are correct and creates a session which is then stored in a database</li>
+<li>A cookie with the session ID is placed in the users browser</li>
+<li>On subsequent requests, the session ID is verified against the database and if valid the request processed</li>
+<li>Once a user logs out of the app, the session is destroyed both client and server side</li>
+</ol>
+
+
+<h3>Token-Based Authentication</h3>
+
+<p>Token-based authentication has gained prevalence over the last few years due to rise of single page applications, web APIs, and the Internet of Things (IoT). When we talk about authentication with tokens, we generally talk about authentication with <a href="https://jwt.io/introduction">JSON Web Tokens</a> (JWTs). While there are different ways to implement tokens, JWTs have become the de-facto standard. With this context in mind, the rest of the article will use tokens and JWTs interchangeably.</p>
+
+<p>Token-based authentication is <strong>stateless</strong>. The server does not keep a record of which users are logged in or which JWTs have been issued. Instead, every request to the server is accompanied by a token which the server uses to verify the authenticity of the request. The token is generally sent as an addition Authorization header in form of <code>Bearer {JWT}</code>, but can additionally be sent in the body of a POST request or even as a query parameter. Let's see how this flow works:</p>
+
+<ol>
+<li>User enters their login credentials</li>
+<li>Server verifies the credentials are correct and returns a signed token</li>
+<li>This token is stored client-side, most commonly in local storage - but can be stored in session storage or a cookie as well</li>
+<li>Subsequent requests to the server include this token as an additional Authorization header or through one of the other methods mentioned above</li>
+<li>The server decodes the JWT and if the token is valid processes the request</li>
+<li>Once a user logs out, the token is destroyed client-side, no interaction with the server is necessary</li>
+</ol>
+
+
+<h2>Advantages of Token-Based Authentication</h2>
+
+<p>Understanding <strong>how</strong> something works is only half the battle. Next, we'll cover the reasons <strong>why</strong> token authentication is preferable over the traditional cookie based approach.</p>
+
+<h3>Stateless, Scalable and Decoupled</h3>
+
+<p>Perhaps the biggest advantage to using tokens over cookies is the fact that token authentication is stateless. The back-end does not need to keep a record of tokens. Each token is self-contained, containing all the data required to check its validity as well as convey user information through claims.</p>
+
+<p>The server's only job then, becomes to sign tokens on a successful login request and verify that incoming tokens are valid. In fact, the server does not even need to sign tokens. Third party services such as Auth0 can handle the issuing of tokens and then the server only needs to verify the validity of the token.</p>
+
+<h3>Cross Domain and CORS</h3>
+
+<p>Cookies work well with singular domains and sub-domains, but when it comes to managing cookies across different domains, it can get hairy. In contrast, a token-based approach with CORS enabled makes it trivial to expose APIs to different services and domains. Since the JWT is required and checked with each and every call to the back-end, as long as there is a valid token, requests can be processed. There are a few caveats to this and we'll address those in the Common Questions and Concerns section below.</p>
+
+<h3>Store Data in the JWT</h3>
+
+<p>With a cookie based approach, you simply store the session id in a cookie. JWT's on the other hand allow you to store any type of metadata, as long as it's valid JSON. The <a href="https://tools.ietf.org/html/rfc7519">JWT spec</a> specifies different types of claims that can be included such as reserved, public and private. You can learn more about the specifics and the differences between the types of claims on the <a href="https://jwt.io/introduction/">jwt.io</a> website.</p>
+
+<p>In practice, what this means is that a JWT can contain any type of data. Depending on your use case you may choose to make the minimal amount of claims such as the user id and expiration of the token, or you may decide to include additional claims such as the users email address, who issued the token, scopes or permissions for the user, and more.</p>
+
+<h3>Performance</h3>
+
+<p>When using the cookie based authentication, the back-end has to do a lookup, whether that be a traditional SQL database or a NoSQL alternative, and the roundtrip is likely to take longer compared to decoding a token. Additionally, since you can store additional data inside the JWT, such as the users permission level, you can save yourself additional lookup calls to get and process the requested data.</p>
+
+<p>For example, say you had an API resource <code>/api/orders</code> that retrieves the latest orders placed via your app, but only users with the role of <strong>admin</strong> have access to view this data. In a cookie based approach, once the request is made, you'd have one call to the database to verify that the session is valid, another to get the user data and verify that the user has the role of <strong>admin</strong>, and finally a third call to get the data. On the other hand, with a JWT approach, you can store the user role in the JWT, so once the request is made and the JWT verified, you can make a single call to the database to retrieve the orders.</p>
+
+<h3>Mobile Ready</h3>
+
+<p>Modern APIs do not only interact with the browser. Written properly a single API can serve both the browser and native mobile platforms like iOS and Android. Native mobile platforms and cookies do not mix well. While possible, there are many limitations and considerations to using cookies with mobile platforms. Tokens on the other hand are much easier to implement on both iOS and Android. Tokens are also easier to implement for Internet of Things applications and services that do not have a concept of a cookie store.</p>
+
+<h2>Common Questions and Concerns</h2>
+
+<p>In this section, we'll take a look at some common questions and concerns that frequently arise when the topic of token authentication comes up. The key focus here will be security but we'll examine use cases concerning token size, storage and encryption.</p>
+
+<h3>JWT Size</h3>
+
+<p>The biggest disadvantage of token authentication is the size of JWTs. A session cookie is relatively tiny compared to even the smallest JWT. Depending on your use case, the size of the token could become problematic if you add many claims to it. Remember, each request to the server must include the JWT along with it.</p>
+
+<h3>Where to Store Tokens?</h3>
+
+<p>With token-based auth, you are given the choice of where to store the JWT. Commonly, the JWT is placed in the browsers local storage and this works well for most use cases. There are some issues with storing JWTs in local storage to be aware of. Unlike cookies, local storage is sandboxed to a specific domain and its data cannot be accessed by any other domain including sub-domains.</p>
+
+<p>You can store the token in a cookie instead, but the max size of a cookie is only 4kb so that may be problematic if you have many claims attached to the token. Additionally, you can store the token in session storage which is similar to local storage but is cleared as soon as the user closes the browser.</p>
+
+<h3>XSS and XSRF Protection</h3>
+
+<p>Protecting your users and servers is always a top priority. One of the most common concerns developers have when deciding on whether to use token-based authentication is the security implications. Two of the most common attack vectors facing websites are Cross Site Scripting (XSS) and Cross Site Request Forgery (XSRF or CSRF).</p>
+
+<p><a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS">Cross Site Scripting</a>) attacks occur when an outside entity is able to execute code within your website or app. The most common attack vector here is if your website allows inputs that are not properly sanitized. If an attacker can execute code on your domain, your JWT tokens are vulnerable. Our CTO has <a href="https://auth0.com/blog/2014/01/27/ten-things-you-should-know-about-tokens-and-cookies/#xss-xsrf">argued</a> in the past that XSS attacks are much easier to deal with compared to XSRF attacks because they are generally better understood. Many frameworks, including Angular, automatically sanitize inputs and prevent arbitrary code execution. If you are not using a framework that sanitizes input/output out-of-the-box, you can look at plugins like <a href="https://github.com/google/caja">caja</a> developed by Google to assist. Sanitizing inputs is a solved issue in many frameworks and languages and I would recommend using a framework or plugin vs building your own.</p>
+
+<p>Cross Site Request Forgery attacks are not an issue if you are using JWT with local storage. On the other hand, if your use case requires you to store the JWT in a cookie, you will need to protect against XSRF. XSRF are not as easily understood as XSS attacks. Explaining how XSRF attacks work can be time consuming, so instead, check out <a href="http://www.gnucitizen.org/blog/csrf-demystified/">this</a> really good guide that explains in-depth how XSRF attacks work. Luckily, preventing XSRF attacks is a fairly simple matter. To over-simplify, protecting against an XSRF attack, your server, upon establishing a session with a client will generate a unique token (note this is not a JWT). Then, anytime data is submitted to your server, a hidden input field will contain this token and the server will check to make sure the tokens match. Again, as our recommendation is to store the JWT in local storage, you probably will not have to worry about XSRF attacks.</p>
+
+<p>One of the best ways to protect your users and servers is to have a short expiration time for tokens. That way, even if a token is compromised, it will quickly become useless. Additionally, you may maintain a <a href="https://auth0.com/blog/2015/03/10/blacklist-json-web-token-api-keys/">blacklist</a> of compromised tokens and not allow those tokens access to the system. Finally, the nuclear approach would be to change the signing algorithm, which would invalidate all active tokens and require all of your users to login again. This approach is not easily recommended, but is available in the event of a severe breach.</p>
+
+<h3>Tokens Are Signed, Not Encrypted</h3>
+
+<p>A JSON Web Token is comprised of three parts: the header, payload, and signature. The format of a JWT is <code>header.payload.signature</code>. If we were to sign a JWT with the HMACSHA256 algorithm, the secret 'shhhh' and the payload of:</p>
+
+<pre><code>{
+  "sub": "1234567890",
+  "name": "Ado Kukic",
+  "admin": true
+}
+</code></pre>
+
+<p>The JWT generated would be:</p>
+
+<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkbyBLdWtpYyIsImFkbWluIjp0cnVlLCJpYXQiOjE0NjQyOTc4ODV9.Y47kJvnHzU9qeJIN48_bVna6O0EDFiMiQ9LpNVDFymM
+</code></pre>
+
+<p>The <strong>very</strong> important thing to note here, is that, this token is signed by the HMACSHA256 algorithm, and the header and payload are Base64URL encoded, it is <strong>not</strong> encrypted. If I go to <a href="https://jwt.io">jwt.io</a>, paste this token and select the HMACSHA256 algorithm, I could decode the token and read its contents. Therefore, it should go without saying that sensitive data, such as passwords, should never be stored in the payload.</p>
+
+<p>If you must store sensitive data in the payload or your use case calls for the JWT to be obscured, you can use JSON Web Encryption (JWE). JWE allows you to encrypt the contents of a JWT so that it is not readable by anyone but the server. <a href="http://jose.readthedocs.io/en/latest/">JOSE</a> provides a great framework and different options for JWE and has SDKs for many popular frameworks including <a href="https://github.com/cisco/node-jose">NodeJS</a> and <a href="https://bitbucket.org/connect2id/nimbus-jose-jwt/wiki/Home">Java</a>. Anyway, I encourage you to learn more about <a href="https://auth0.com/learn/angularjs-authentication/">AngularJS Authentication</a>.</p>
+
+<h2>Token-Based Authentication in Action with Auth0</h2>
+
+<p>Here at Auth0, we've written SDKs, guides, and quickstarts for working with JWTs for many languages and frameworks including <a href="https://github.com/auth0/express-jwt">NodeJS</a>, <a href="https://github.com/auth0/java-jwt">Java</a>, <a href="https://github.com/auth0/auth0-python">Python</a>, <a href="https://github.com/auth0/go-jwt-middleware">GoLang</a>, and <a href="https://auth0.com/docs">many more</a>. Our last "Cookies vs. Tokens" article used the AngularJS framework, so it's fitting to use Angular 2 for our code samples today.</p>
+
+<p>You can download the sample code from our <a href="https://github.com/auth0/auth0-angular2">GitHub repo</a>. Downloading the code samples is preferable as Angular 2 requires a lot of initial setup to get going. If you haven't already, <a href="javascript:signup()">sign up</a> for a free Auth0 account so you can do the implementation yourself and experiment with different features and options. Let's get started.</p>
+
+<h3>Setting Up the Back-end Server</h3>
+
+<p>We'll first setup our server. We'll build our server with NodeJS. The server will expose two APIs: <code>/ping</code> and <code>/secured/ping</code>. The first will be publicly available any anyone can access it, while the second requires you to be authenticated to call it. The implementation is below:</p>
+
+<pre><code>// Include the modules needed for our server.
+var http = require('http');
+var express = require('express');
+var cors = require('cors');
+var app = express();
+var jwt = require('express-jwt');
+
+// Set up our JWT authentication middleware
+// Be sure to replace the YOUR_AUTH0_CLIENT_SECRET and
+// YOUR_AUTHO_CLIENT_ID with your apps credentials which
+// can be found in your management dashboard at 
+// https://manage.auth0.com
+var authenticate = jwt({
+  secret: new Buffer('YOUR_AUTH0_CLIENT_SECRET', 'base64'),
+  audience: 'YOUR_AUTH0_CLIENT_ID'
+});
+
+app.use(cors());
+
+// Here we have a public route that anyone can access
+app.get('/ping', function(req, res) {
+  res.send(200, {text: "All good. You don't need to be authenticated to call this"});
+});
+
+// We include the authenticate middleware here that will check for
+// a JWT and validate it. If there is a token and it is valid the
+// rest of the code will execute.
+app.get('/secured/ping', authenticate, function(req, res) {
+  res.send(200, {text: "All good. You only get this message if you're authenticated"});
+})
+
+var port = process.env.PORT || 3001;
+
+// We launch our server on port 3001.
+http.createServer(app).listen(port, function (err) {
+  console.log('listening in http://localhost:' + port);
+});
+</code></pre>
+
+<p>This is a pretty standard Node/Express setup. The only unique thing we did was implement the <code>express-jwt</code> middleware which will validate a JWT. Since we are doing this integration with Auth0, we'll let Auth0 handle the process of generating and signing tokens. If we did not want to use Auth0, we could create and sign our own tokens with the the <code>jsonwebtoken</code> module. Let's see an example of how this can be accomplished.</p>
+
+<pre><code>// Import modules
+...
+var jwt = require('jsonwebtoken');
+
+var token = jwt.sign({ sub : "1234567890", name : "Ado Kukic", admin: true }, 'shhhh');
+
+app.get('/token', function(req, res){
+    res.send(token);
+});
+</code></pre>
+
+<p>If we were to write this code, launch the server, and navigate to <code>localhost:3001/token</code> we would see a signed token containing the three claims we made. The <code>jsonwebtoken</code> module can also be used to verify and decrypt the tokens. To learn more about it, check out its <a href="https://github.com/auth0/node-jsonwebtoken">repo</a>. As we won't be generating tokens on our server, we can remove this code.</p>
+
+<h3>Implementing the Front-end</h3>
+
+<p>Next, we'll implement our Angular 2 app. If you are following along from our <a href="https://github.com/auth0/auth0-angular2">GitHub repo</a>, you'll see two options for the front-end. One uses <a href="https://github.com/systemjs/systemjs">systemjs</a> while the other <a href="https://webpack.github.io/">Webpack</a> for loading and manging our modules. As the preferred way to write Angular 2 apps is with TypeScript, we'll build our sample app with TypeScript. For our demo, we'll be working out of the <strong>systemjs</strong> directory. Additionally, we'll be using the <code>angular2-jwt</code> <a href="https://github.com/auth0/angular2-jwt">library</a> which provides helper methods for making requests with the correct headers and also checking to see if a valid token exists.</p>
+
+<p>First things first. We need an entry point into our app and that is <code>index.html</code>.</p>
+
+<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;base href="/"&gt;
+    &lt;title&gt;Angular 2 Playground&lt;/title&gt;
+      &lt;meta charset="UTF-8"&gt;
+     &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;
+
+     &lt;!-- We'll include the Auth0 Lock widget to handle authentication --&gt;
+     &lt;script src="//cdn.auth0.com/js/lock-9.0.min.js"&gt;&lt;/script&gt;
+
+    &lt;script src="node_modules/es6-shim/es6-shim.min.js"&gt;&lt;/script&gt;
+    &lt;script src="node_modules/zone.js/dist/zone.js"&gt;&lt;/script&gt;
+    &lt;script src="node_modules/reflect-metadata/Reflect.js"&gt;&lt;/script&gt;
+    &lt;script src="node_modules/systemjs/dist/system.src.js"&gt;&lt;/script&gt;
+
+    &lt;script src="systemjs.config.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      System.import('app').catch(function(err){ console.error(err); });
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;app&gt;Loading...&lt;/app&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Next, we'll define the entry point of our Angular 2 application. This will be done in a file called <code>main.ts</code>.</p>
+
+<pre><code>import { bootstrap } from '@angular/platform-browser-dynamic';
+import {provide} from '@angular/core';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import {RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import {HTTP_PROVIDERS} from '@angular/http';
+// Here we load the angular2-jwt library
+import {AUTH_PROVIDERS} from 'angular2-jwt';
+
+import { App } from './app.component';
+
+bootstrap(App, [
+  HTTP_PROVIDERS,
+  ROUTER_PROVIDERS,
+  AUTH_PROVIDERS,
+  provide(LocationStrategy, { useClass: HashLocationStrategy })
+])
+</code></pre>
+
+<p>We'll build the <code>auth.service.ts</code> next. This service will provide methods for logging users in and out of our application. Be sure to replace the <code>YOUR_CLIENT_ID</code> and <code>YOUR_DOMAIN</code> with your apps settings from your Auth0 <a href="https://manage.auth0.com">management dashboard</a>.</p>
+
+<pre><code>import {Injectable, NgZone} from '@angular/core';
+import {Router} from '@angular/router-deprecated';
+import {AuthHttp, tokenNotExpired} from 'angular2-jwt';
+
+// Avoid name not found warnings
+declare var Auth0Lock: any;
+
+@Injectable()
+export class Auth {
+  // Replace YOUR_CLIENT_ID and YOUR_DOMAIN with your credentials
+  lock = new Auth0Lock('YOUR_CLIENT_ID', 'YOUR_DOMAIN');
+  refreshSubscription: any;
+  user: Object;
+  zoneImpl: NgZone;
+
+  constructor(private authHttp: AuthHttp, zone: NgZone, private router: Router) {
+    this.zoneImpl = zone;
+    this.user = JSON.parse(localStorage.getItem('profile'));
+  }
+
+  public authenticated() {
+    // Check if there's an unexpired JWT
+    return tokenNotExpired();
+  }
+
+  public login() {
+    // Show the Auth0 Lock widget
+    this.lock.show({}, (err, profile, token) =&gt; {
+      if (err) {
+        alert(err);
+        return;
+      }
+      // If authentication is successful, save the items
+      // in local storage
+      localStorage.setItem('profile', JSON.stringify(profile));
+      localStorage.setItem('id_token', token);
+      this.zoneImpl.run(() =&gt; this.user = profile);
+    });
+  }
+
+  public logout() {
+    localStorage.removeItem('profile');
+    localStorage.removeItem('id_token');
+    this.zoneImpl.run(() =&gt; this.user = null);
+    this.router.navigate(['Home']);
+  }
+}
+</code></pre>
+
+<p>Now that we have the foundation complete. We can start building our application. We'll build our root component in a file called <code>app.component.ts</code>.</p>
+
+<pre><code>import {Component} from '@angular/core';
+import {RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import {HTTP_PROVIDERS} from '@angular/http';
+import {AUTH_PROVIDERS} from 'angular2-jwt';
+
+import {Home} from './home.component';
+import {Ping} from './ping.component';
+import {Profile} from './profile.component';
+import {Auth} from './auth.service';
+
+@Component({
+  selector: 'app',
+  providers: [ Auth ],
+  directives: [ ROUTER_DIRECTIVES ],
+  templateUrl: 'src/app.template.html',
+  styles: [`.btn-margin { margin-top: 5px}`]
+})
+@RouteConfig([
+  { path: '/home',  name: 'Home',  component: Home, useAsDefault: true },
+  { path: '/ping',  name: 'Ping',  component: Ping },
+  { path: '/profile',  name: 'Profile',  component: Profile }
+])
+export class App {
+
+  constructor(private auth: Auth) {}
+
+}
+</code></pre>
+
+<p>You may notice from our directive metadata that we will be loading an external template called <code>app.template.html</code>. Angular 2 templates can be inlined or reference an external file and since our template is on the longer side, we'll place it in an external file.</p>
+
+<pre><code>&lt;nav class="navbar navbar-default"&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;a class="navbar-brand" href="#"&gt;Auth0 - Angular 2&lt;/a&gt;
+      &lt;button class="btn btn-primary btn-margin" [routerLink]=" ['Home'] "&gt;Home&lt;/button&gt;
+      &lt;button class="btn btn-primary btn-margin" [routerLink]=" ['Ping'] "&gt;Ping&lt;/button&gt;
+      &lt;button class="btn btn-primary btn-margin" [routerLink]=" ['Profile'] " *ngIf="auth.authenticated()"&gt;Profile&lt;/button&gt;
+      &lt;button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()"&gt;Log In&lt;/button&gt;
+      &lt;button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()"&gt;Log Out&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;main class="container"&gt;
+  &lt;router-outlet&gt;&lt;/router-outlet&gt;
+&lt;/main&gt;
+</code></pre>
+
+<p>From our <code>app.template.html</code> file, we see that we will end up having three routes: <strong>Home</strong>, <strong>Ping</strong> and <strong>Profile</strong>. Additionally, there are two more buttons, Log In and Log Out. The <code>*ngIf</code> directive conditionally displays some routes based on whether the user is authenticated or not. Let's build out the three routes.</p>
+
+<h4>Home Component</h4>
+
+<p>The home component is the default route loaded. It is publicaly accessible.</p>
+
+<pre><code>import {Component} from '@angular/core';
+
+@Component({
+  selector: 'home',
+  template: `
+    &lt;h1&gt;Welcome to auth0-angular2&lt;/h1&gt;
+    &lt;p&gt;
+      This repo shows you how to set up authentication in your Angular 2 apps with Auth0.
+      Get started by providing your Auth0 client ID and domain in the Auth0Lock widget in &lt;code&gt;auth/auth.service.ts&lt;/code&gt;.
+    &lt;/p&gt;
+  `
+})
+export class Home {
+  constructor() {}
+}
+</code></pre>
+
+<h4>Ping Component</h4>
+
+<p>The ping component interacts with our NodeJS server that we built earlier. The Node server will need to be running for you to access these routes.</p>
+
+<pre><code>import {Component} from '@angular/core';
+import {Http} from '@angular/http';
+
+import {AuthHttp} from 'angular2-jwt';
+import {Auth} from './auth.service';
+import 'rxjs/add/operator/map';
+
+@Component({
+  selector: 'ping',
+  template: `
+    &lt;h1&gt;Send a Ping to the Server&lt;/h1&gt;
+    &lt;p *ngIf="!auth.authenticated()"&gt;Log In to Get Access to a Secured Ping&lt;/p&gt;
+    &lt;button class="btn btn-primary" (click)="ping()"&gt;Ping&lt;/button&gt;
+    &lt;button class="btn btn-primary" (click)="securedPing()" *ngIf="auth.authenticated()"&gt;Secured Ping&lt;/button&gt;
+    &lt;h2&gt;&lt;/h2&gt;
+  `
+})
+export class Ping {
+  API_URL: string = 'http://localhost:3001';
+  message: string;
+
+  constructor(private http: Http, private authHttp: AuthHttp, private auth: Auth) {}
+
+  ping() {
+    this.http.get(`${this.API_URL}/ping`)
+      .map(res =&gt; res.json())
+      .subscribe(
+        data =&gt; this.message = data.text,
+        error =&gt; this.message = error._body
+      );
+  }
+
+  securedPing() {
+    this.authHttp.get(`${this.API_URL}/secured/ping`)
+      .map(res =&gt; res.json())
+      .subscribe(
+        data =&gt; this.message= data.text,
+        error =&gt; this.message = error._body
+      );
+  }
+}
+</code></pre>
+
+<h4>Profile Component</h4>
+
+<p>The profile component displays user data for the currently logged in user. This component can only be accessed by a logged in user.</p>
+
+<pre><code>import {Component} from '@angular/core';
+import {CanActivate} from '@angular/router-deprecated';
+import {tokenNotExpired} from 'angular2-jwt';
+import {Auth} from './auth.service';
+
+@Component({
+  selector: 'profile',
+  template: `
+    &lt;h1&gt;Profile&lt;/h1&gt;
+    &lt;img [src]="auth.user.picture"&gt;
+    &lt;h2&gt;&lt;/h2&gt;
+    &lt;span&gt;&lt;/span&gt;
+  `
+})
+
+@CanActivate(() =&gt; tokenNotExpired())
+
+export class Profile {
+  constructor(private auth: Auth) {}
+}
+</code></pre>
+
+<p>With the three components built, we are ready to launch our app. If you are using the provided GitHub repo, you can simply run <code>gulp play</code> and your code will be transpiled into JavaScript and the application will launch at <code>localhost:9000</code>. If you did not use the GitHub repo, you will need to transpile the typescript or change the systemjs configuration to load typescript files instead.</p>
+
+<p>Navigating to <code>localhost:9000</code> will load our the UI for app which will look like:</p>
+
+<p><img src="https://cdn.auth0.com/blog/cookies-vs-tokens/angular2-app.png" alt="Angular 2 App with JWT Auth" /></p>
+
+<p>You can navigate to the <strong>Ping</strong> tab and click the "Ping" button to make a call to your Node API and it will display the correct message. If you click on the <strong>Login</strong> button you will be prompted to login using the <a href="https://auth0.com/lock">Auth0 Lock</a> widget. Upon successfully authenticating, you will be able to view your Profile, Log out, and have the ability to call a <strong>Secured Ping</strong> from the Ping tab.</p>
+
+<h3>Progressive Web Apps</h3>
+
+<p>The last topic I want to cover before we close out this article is <a href="https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/?hl=en">Progressive Web Apps</a>. Progressive Web Apps allow your web based application to behave more like a native mobile iOS or Android app. Progressive Web Apps bring many advantages including increased performance, are "installable" on mobile devices, and can work offline.</p>
+
+<p>Angular 2, through its <a href="https://mobile.angular.io/">Mobile Toolkit</a>, makes it easy to transform your Angular 2 app into a Progressive Web App. There are many components that can make your app more progressive, the one we'll look at today is the <strong>webapp manifest</strong>. This manifest is simply a file, similar to <code>package.json</code> for example, where you define specifics for your application. When your website is accessed on a mobile device, this manifest can be read and based on the information inside certain actions taken like setting the app name or setting the orientation of the app. Let's look at an app manifest, which is titled <code>manifest.webapp</code> and see which options we can set:</p>
+
+<pre><code> {
+   "name": "Auth0 Angular 2 App",
+   "short_name": "A0 Angular 2 App",
+   "icons": [
+     {
+             "src": "/android-chrome-36x36.png",
+             "sizes": "36x36",
+             "type": "image/png",
+             "density": 0.75
+         },
+         {
+             "src": "/android-chrome-48x48.png",
+             "sizes": "48x48",
+             "type": "image/png",
+             "density": 1
+         },
+         {
+             "src": "/android-chrome-72x72.png",
+             "sizes": "72x72",
+             "type": "image/png",
+             "density": 1.5
+         },
+         {
+             "src": "/android-chrome-96x96.png",
+             "sizes": "96x96",
+             "type": "image/png",
+             "density": 2
+         },
+         {
+             "src": "/android-chrome-144x144.png",
+             "sizes": "144x144",
+             "type": "image/png",
+             "density": 3
+         },
+         {
+             "src": "/android-chrome-192x192.png",
+             "sizes": "192x192",
+             "type": "image/png",
+             "density": 4
+         }
+   ],
+   "theme_color": "#000000",
+   "background_color": "#e0e0e0",
+   "start_url": "/index.html",
+   "display": "standalone",
+   "orientation": "portrait"
+ }
+</code></pre>
+
+<h2>Conclusion</h2>
+
+<p>In today's article we compared the differences between cookie and token-based authentication. We highlighted the advantages and concerns of using tokens and also wrote a simple app to showcase how JWT works in practice. There are many reasons to use tokens and Auth0 is here to ensure that implementing token authentication is easy and secure. Finally, we introduced Progressive Web Apps to help make your web applications feel more native on mobile devices. <a href="javascript:signup()">Sign up</a> for a free account today and be up and running in minutes.</p>
+
+            </div>
+            
+          </div>
+        </main>
+        <div class="bottom-module">
+          
+
+<section class="custom-try-banner  ">
+  <div class="banner-wrapper">
+    <a href="https://auth0.com/" target="_blank" class="banner-logo"></a>
+    <p class="banner-text">
+      
+        Authentication that just works.<br> Any app. Any device. Hosted anywhere.
+      
+    </p>
+    
+      <a href="javascript:signup()" class="signup-button btn btn-success btn-md">Use Auth0 for Free</a>
+    
+  </div>
+</section>
+
+          <div class="try-banner" style="display:none;">
+              <a href="javascript:signup()" class="signup-button btn btn-success   btn-lg">Use Auth0 for Free</a>
+          </div>
+        </div>
+        <div id="disqus_thread"></div>
+      </section>
+      <aside class="col-md-4 sidebar-column" data-sticky-padding="90" itemscope="" itemtype="http://schema.org/WPSideBar">
+        <section id="newsletter-subs">
+  <form class="newsletter-subscriber hide">
+    <span data-close></span>
+    <h5 class="title">Subscribe to more awesome content!</h5>
+    <div class="fields">
+      <button type="submit" class="btn btn-lg btn-success">
+        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <span><input class="form-control" type="text" placeholder="your@email.com" /></span>
+    </div>
+  </form>
+</section>
+
+        <section class="popular-posts">
+  <h5 class="section-title">Related Posts</h5>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  <article class="popular-post">
+    <div class="image-container">
+      
+
+
+
+
+
+
+
+
+
+
+
+<a href="/blog/json-web-token-signing-algorithms-overview/"
+  style="
+
+  background: #222228;
+
+ 
+
+"
+  class="entry-thumbnail">
+  <div class="holder" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+    <img
+    style="
+  
+ 
+  
+    
+    max-width: 100%;
+    
+  
+ 
+  
+ 
+  
+"
+    src="https://cdn.auth0.com/blog/jwtalgos/logo.png"
+    alt="JSON Web Token (JWT) Signing Algorithms Overview">
+    <meta itemprop="url" content="https://cdn.auth0.com/blog/jwtalgos/logo.png">
+    <meta itemprop="width" content="128">
+    <meta itemprop="height" content="128">
+  </div>
+</a>
+
+    </div>
+    <div class="text-container">
+      <a href="/blog/json-web-token-signing-algorithms-overview/"><h2 class="popular-post-title h4">JSON Web Token (JWT) Signing Algorithms Overview</h2></a>
+      <span class="popular-post-author"><a href="#" rel="author">Sebastián Peyrott</a></span>
+    </div>
+  </article>
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <article class="popular-post">
+    <div class="image-container">
+      
+
+
+
+
+
+
+
+
+
+
+
+<a href="/blog/5-steps-to-add-modern-authentication-to-legacy-apps-using-jwts/"
+  style="
+
+  background: #000;
+
+ 
+
+"
+  class="entry-thumbnail">
+  <div class="holder" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+    <img
+    style="
+  
+ 
+  
+    
+    max-width: 170%;
+    
+  
+ 
+  
+ 
+  
+"
+    src="//cdn.auth0.com/blog/jwt/logo-400.png"
+    alt="5 Steps to Add Modern Authentication to Legacy Apps Using JWTs">
+    <meta itemprop="url" content="//cdn.auth0.com/blog/jwt/logo-400.png">
+    <meta itemprop="width" content="128">
+    <meta itemprop="height" content="128">
+  </div>
+</a>
+
+    </div>
+    <div class="text-container">
+      <a href="/blog/5-steps-to-add-modern-authentication-to-legacy-apps-using-jwts/"><h2 class="popular-post-title h4">5 Steps to Add Modern Authentication to Legacy Apps Using JWTs</h2></a>
+      <span class="popular-post-author"><a href="#" rel="author">Ryan Chenkie</a></span>
+    </div>
+  </article>
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <article class="popular-post">
+    <div class="image-container">
+      
+
+
+
+
+
+
+
+
+
+
+
+<a href="/blog/ten-things-you-should-know-about-tokens-and-cookies/"
+  style="
+
+ 
+
+"
+  class="entry-thumbnail">
+  <div class="holder" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+    <img
+    style="
+  
+ 
+  
+    
+  
+ 
+  
+ 
+  
+"
+    src="https://cldup.com/_DrZQjW90p.png"
+    alt="10 Things You Should Know about Tokens">
+    <meta itemprop="url" content="https://cldup.com/_DrZQjW90p.png">
+    <meta itemprop="width" content="128">
+    <meta itemprop="height" content="128">
+  </div>
+</a>
+
+    </div>
+    <div class="text-container">
+      <a href="/blog/ten-things-you-should-know-about-tokens-and-cookies/"><h2 class="popular-post-title h4">10 Things You Should Know about Tokens</h2></a>
+      <span class="popular-post-author"><a href="#" rel="author">Matias Woloski</a></span>
+    </div>
+  </article>
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+</section>
+
+<script type="text/javascript">
+$('.popular-post a').click(function(e) {
+  metricsLib.track('click:blog-related');
+})
+</script>
+
+        <section class="guest-author-widget">
+  <article>
+    <h2 class="guest-author-title">Join the Auth0<br> Guest Author Program</h2>
+    <button data-close class="close-btn">
+      <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Button - Close</title>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25999999">
+          <g transform="translate(-1230.000000, -1219.000000)" fill="#000000">
+            <g transform="translate(989.000000, 1204.000000)">
+                <path d="M248.5,30 C252.642136,30 256,26.6421356 256,22.5 C256,18.3578644 252.642136,15 248.5,15 C244.357864,15 241,18.3578644 241,22.5 C241,26.6421356 244.357864,30 248.5,30 Z M244.75,19.8214286 L245.821429,18.75 L248.5,21.4285714 L251.178571,18.75 L252.25,19.8214286 L249.571429,22.5 L252.25,25.1785714 L251.178571,26.25 L248.5,23.5714286 L245.821429,26.25 L244.75,25.1785714 L247.428571,22.5 L244.75,19.8214286 Z" id="Button---Clear"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <a class = "img-link" href ="https://auth0.com/guest-authors"><img class="guest-author-image" src="https://cdn.auth0.com/blog/guest-authors/pencil.png" alt="Auth0 Guest Author Program"></a>
+    <a class="guest-author-link" href="https://auth0.com/guest-authors" rel="external">
+      Learn More
+      <svg width="6px" height="9px" viewBox="0 0 6 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Learn More</title>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-1166.000000, -1345.000000)" fill="#0A86B1">
+            <g transform="translate(989.000000, 1204.000000)">
+              <g transform="translate(87.000000, 132.000000)">
+                  <polygon id="Path" points="90 9 95.5514274 13.4411825 90 17.8820874"></polygon>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </a>
+  </article>
+<script type="text/javascript">
+(function() {
+if (Math.random() >= .5) {
+        title = document.getElementsByClassName("guest-author-title")[0];
+        title.innerHTML = 'Join the Auth0<br> Ambassador Program'
+        img = document.getElementsByClassName("guest-author-image")[0];
+        img.src = 'https://auth0.com/pages/ambassador-program/assets/ambassador-spaceman-stand-up-1x.gif'
+        img.alt = 'Auth0 Ambassador Program'
+        imgLink = document.getElementsByClassName("img-link")[0];
+        imgLink.href = 'https://auth0.com/ambassador-program'
+	learnLink = document.getElementsByClassName("guest-author-link")[0];
+	learnLink.href = 'https://auth0.com/ambassador-program'
+}})();
+</script>
+</section>
+
+      </aside>
+    </div>
+    <div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
+      <div itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+        <meta itemprop='url' content='https://i.cloudup.com/BngR4GufYd-3000x3000.png'/>
+        <meta itemprop='width' content='100'/>
+        <meta itemprop='height' content='37'/>
+      </div>
+      <meta itemprop="name" content="Auth0">
+    </div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'auth0blog'; // required: replace example with your forum shortname
+
+        if(typeof DISQUS !== 'undefined') {
+            DISQUS.reset({
+              reload: true,
+              config: function () {
+                this.page.url = location.href;
+
+                this.callbacks.afterRender = [function() {
+                    // your code here
+                    $(document.body).trigger("sticky_kit:recalc");
+                }];
+              }
+            });
+        } else {
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        }
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!-- <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> -->
+  </div>
+</article>
+
+      
+<footer class="site-footer">
+  <div class="container">
+    <div class="logo"><img src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.png" width="30"></div>
+    <div class="footer-grid">
+      <div class="column">
+        <div class="item">
+          <h6>Product</h6>
+        </div>
+        <div class="item"><a href="https://auth0.com/pricing">Pricing</a></div>
+        <div class="item"><a href="https://auth0.com/why-auth0">Why Auth0</a></div>
+        <div class="item"><a href="https://auth0.com/how-it-works">How It Works</a></div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <h6>Company</h6>
+        </div>
+        <div class="item"><a href="https://auth0.com/about">About Us</a></div>
+        <div class="item"><a href="https://auth0.com/blog">Blog</a></div>
+        <div class="item"><a href="https://auth0.com/jobs">Jobs</a></div>
+        <div class="item"><a href="https://auth0.com/press">Press</a></div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <h6>Security</h6>
+        </div>
+        <div class="item"><a href="https://auth0.com/availability-trust">Availability &amp; Trust</a></div>
+        <div class="item"><a href="https://auth0.com/security">Security</a></div>
+        <div class="item"><a href="https://auth0.com/whitehat">White Hat</a></div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <h6>Learn</h6>
+        </div>
+        <div class="item"><a href="https://support.auth0.com">Help &amp; Support</a></div>
+        <div class="item"><a href="https://auth0.com/docs">Documentation</a></div>
+        <div class="item"><a href="https://auth0.com/opensource">Open Source</a></div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <h6>Extend</h6>
+        </div>
+        <div class="item"><a href="https://auth0.com/lock">Lock</a></div>
+        <div class="item"><a href="https://auth0.com/wordpress">WordPress</a></div>
+        <div class="item"><a href="https://auth0.com/docs/apiv2">API Explorer</a></div>
+      </div>
+      <div class="contact">
+        <div class="column">
+          <div class="item">
+            <h6>Contact</h6>
+          </div>
+          <div class="item item-text">10900 NE 8th St.<br>Suite 700<br>Bellevue, WA   98004</div>
+        </div>
+        <div class="column no-heading">
+          <div class="item"><a href="tel:+18882352699">+1 (888) 235-2699</a></div>
+          <div class="item"><a href="tel:+14253126521">+1 (425) 312-6521</a></div>
+          <div class="item"><a href="https://support.auth0.com">Support Center</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="colophon">
+      <div class="column">
+        <div class="social">
+          <div class="twitter">
+            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/follow_button.html?screen_name=auth0" class="twitter"></iframe>
+          </div>
+          <div class="facebook">
+            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fgetauth0&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;show_count=false&amp;share=false&amp;height=21&amp;appId=507756515938786" scrolling="no" frameborder="0" allowtransparency="true" class="facebook"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <ul class="list-inline text-right">
+          <li><a href="https://auth0.com/privacy">Privacy Policy</a></li>
+          <li><a href="https://auth0.com/terms">Terms of Service</a></li>
+          <li><span>© 2013-2016 Auth0 ® Inc. All Rights Reserved.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <script src="/blog/push-notification.js" type="text/javascript"></script>
+    <script src="/blog/js/vendor/js-cookie.js" type="text/javascript"></script>
+
+    
+
+    <!--- btn ontact us  --->
+    <script type="text/javascript">
+      var Auth0ContactForm = window.Auth0ContactForm.default;
+      var ContactForm = Auth0ContactForm.ContactForm;
+      var contactFormOptions = {
+        onModalOpen: function () {
+          metricsLib.track('open:talk-to-sales');
+        },
+        onFormSuccess: function (metricsData) {
+          metricsLib.track('register:lead:talk-to-sales-modal', metricsData);
+          metricsLib.track('sent:talk-to-sales', metricsData);
+        },
+        onFormFail: function (metricsData) {
+          metricsLib.track('fail:register:lead:talk-to-sales-modal', metricsData);
+          metricsLib.track('fail-sent:talk-to-sales', metricsData);
+        }
+      };
+      var contactForm = new ContactForm(contactFormOptions);
+
+
+      $('.contact-us').on('click', function() {
+        contactForm.show({includePhoneField: true });
+      });
+
+    </script>
+
+    <script type="text/javascript">
+    try {
+      window.abTestingLib.load({ fetchFn: function () { return $.get('https://ab.it.auth0.com/?application=website'); }});
+      window.abTestingLib.integration('auth0metrics').start({ metrics: window.metricsLib});
+      window.abTestingLib.start().then(enhanceAnalytics);
+
+      window.abTestingLib.onReady(function (ab) {
+        try {
+          window.abLoaded = true;
+          // Save experiments on the global scope
+          window.experiments = ab.getExperiments();
+          executeABExperiments();
+
+        } catch (e) {
+          console.error('Error running AB experiments.');
+          $('#pjax').css('visibility', 'visible');
+          window.abLoaded = true;
+        }
+      });
+
+      function enhanceAnalytics() {
+        var analytics = window.abTestingLib.analytics;
+
+        var originalSetCurrentVariantName = analytics.setCurrentVariantName.bind(analytics);
+        var originalGetCurrentVariantName = analytics.getCurrentVariantName.bind(analytics);
+
+        var enhancedSetCurrentVariantName = function (variantName, value) {
+          setCurrentVariantName(variantName, value);
+          originalSetCurrentVariantName(variantName, value);
+        };
+
+        var enhancedGetCurrentVariantName = function (variantName) {
+          var originalValue = originalGetCurrentVariantName(variantName);
+          var cookieValue = getCurrentVariantName(variantName);
+
+          if (originalValue != cookieValue) {
+            originalSetCurrentVariantName(variantName, cookieValue);
+          }
+
+          return cookieValue;
+        };
+
+        analytics.setCurrentVariantName = enhancedSetCurrentVariantName;
+        analytics.getCurrentVariantName = enhancedGetCurrentVariantName;
+        window.setVariant = enhancedSetCurrentVariantName;
+        window.getVariant = enhancedGetCurrentVariantName;
+      }
+
+      function setCurrentVariantName(variantName, value) {
+        var variants = loadCookieVariants();
+        variants[variantName] = value;
+        saveCookieVariants(variants);
+      }
+
+      function getCurrentVariantName(variantName) {
+        var variants = loadCookieVariants();
+        return variants[variantName];
+      }
+
+      function loadCookieVariants() {
+        return JSON.parse(Cookies.get('ajs_ab.traits') || '{}');
+      }
+
+      function saveCookieVariants(variants) {
+        return Cookies.set('ajs_ab.traits', JSON.stringify(variants), {
+          expires: 365,
+          path: '/'
+        });
+      }
+    } catch (e) {
+      console.error('Error initializing ABTesting lib. ABTesting will be disabled');
+      $('#pjax').css('visibility', 'visible');
+      window.abLoaded = true;
+    }
+    </script>
+    <script type="text/javascript">
+    function executeABExperiments () {
+      var path = window.location.pathname;
+      var experiments = window.experiments;
+
+      if(!window.abLoaded) {
+        return;
+      }
+
+      if(!experiments) {
+        // Restore content
+        $('#pjax').css('visibility', 'visible');
+        return;
+      }
+
+      try {
+        var experimentsForPath = experiments.runAllByPath(path);
+        var winningVariants = [];
+
+        experimentsForPath.experiments.forEach(function (e) {
+          winningVariants = winningVariants.concat(e.getCurrentVariant().getPropertiesByType('js'));
+        });
+
+        var variantContext = {};
+        variantContext.$ = $;
+
+        winningVariants.forEach(function(v) {
+          v.runInContext(variantContext);
+        });
+      } catch (e) {
+        console && console.error("Error running experiments for path:%s", path);
+      } finally {
+        // Restore content
+        $('#pjax').css('visibility', 'visible');
+      }
+    }
+    </script>
+
+    <script type="text/javascript">
+      // ab-watchdog, after 1500ms, show the site content no matter the state
+      // of the experiments
+      setTimeout(function () {
+        $('#pjax').css('visibility', 'visible');
+      }, 400);
+    </script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/elm.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/blog/js/vendor/nprogress.js"></script>
+    <script src="/blog/js/vendor/moment.min.js"></script>
+    <script src="/blog/js/vendor/jquery.csbuttons.min.js"></script>
+    <script async src="/blog/js/vendor/html2canvas.js"></script>
+    <script src="/blog/js/vendor/selection-sharer.min.js"></script>
+    <script src="/blog/js/vendor/jquery.sticky-kit.min.js"></script>
+    <script src="/blog/js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript">
+      var getBasicInfo = function () {
+        return {
+          path: window.location.pathname,
+          url: window.location.toString(),
+          title: document.title,
+          referrer: document.referrer,
+          category: 'Lock',
+          label: 'blog'
+        }
+      };
+
+      var getBlogImage = function(getDOM) {
+          var img = $('.banner .entry-thumbnail img').first();
+
+          if(img.length) {
+              convertToDataURLviaCanvas(img.attr('src'), function(dataURL) {
+                img.replaceWith('<img src="' + dataURL + '">');
+              });
+          }
+
+          setTimeout(function() {
+            var banner = $('.banner');
+            var dom = $('.banner .entry-thumbnail');
+
+            if(getDOM === 'banner') {
+              dom = banner;
+            } else {
+              banner.addClass('export-icon');
+            }
+
+            banner.addClass('export');
+
+            html2canvas(dom.get(0), {
+              onrendered: function(canvas) {
+                var img = canvas.toDataURL("image/png");
+
+                banner.removeClass('export');
+
+                window.location = img;
+              }
+            });
+          }, 20);
+
+          function convertToDataURLviaCanvas(url, callback, outputFormat){
+            var img = new Image();
+
+            img.crossOrigin = 'Anonymous';
+
+            img.onload = function(){
+                var canvas = document.createElement('CANVAS');
+                var ctx = canvas.getContext('2d');
+                var dataURL;
+
+                canvas.height = this.height;
+                canvas.width = this.width;
+                ctx.drawImage(this, 0, 0);
+                dataURL = canvas.toDataURL(outputFormat);
+                callback(dataURL);
+                canvas = null;
+            };
+
+            img.src = url;
+          }
+      };
+
+      var getBlogBanner = function() {
+          getBlogImage('banner');
+      };
+
+      $(function() {
+
+
+        function stickyElements() {
+
+          function stickElement($elem, options) {
+            $elem.stick_in_parent(Object.assign({},{
+              offset_top: parseInt($elem.attr("data-sticky-padding")) || 0
+            }, options ));
+          }
+
+          stickElement($('.sidebar-column'));
+          stickElement($('.utility-bar'));
+          stickElement($('.blog-navigation'), {parent: "body"});
+        }
+
+        function initBlogSubscriber() {
+          if(localStorage.isBlogSubscriber !== true) {
+            $('form.newsletter-subscriber').removeClass('hide');
+          }
+
+          function closeSticky($module, animation) {
+            $module.addClass('animated ' + animation );
+            $module.on('animationend webkitAnimationEnd oAnimationEnd', function () {
+              $module.remove()
+              $(document.body).trigger("sticky_kit:recalc");
+            });
+          }
+
+          $('form.newsletter-subscriber').on('click', '[data-close]', function() {
+            var $module = $(this).closest('form');
+
+            closeSticky($module, 'fadeOutUp');
+          });
+
+          $('.guest-author-widget').on('click', '[data-close]', function() {
+            var $module = $(this).closest('section');
+            closeSticky($module, 'fadeOutRight');
+          });
+
+          $('form.newsletter-subscriber').on('submit', function(e) {
+            var $module = $(this);
+            var o_content = $module.html();
+            var value = $module.find('input').val();
+
+            e.preventDefault();
+
+            if(isValidEmail(value)) {
+              onValid();
+            } else {
+              alert('Please enter a valid email');
+            }
+
+            function isValidEmail(val) {
+              if(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(val)) {
+                return true;
+              }
+
+              return false;
+            }
+
+            function onValid() {
+              $module.find('.fields').html('<p class="loading">Sending...</p>');
+
+              $.ajax({
+                type: "POST",
+                url: 'https://webtask.it.auth0.com/api/run/wt-martin-gon_to-0/auth0-blog-user?webtask_no_cache=1',
+                data: {
+                  email: value
+                },
+                success: onSuccess,
+                error: onFail
+              });
+            }
+
+            function onFail(response) {
+              $module.find('.fields').html('<p class="subscription-failed">There’s a problem subscribing to the list right now. Please try again later or <a href="https://support.auth0.com">contact support</a>.</p>');
+            }
+
+            function onSuccess(response) {
+              localStorage.setItem('isBlogSubscriber', true);
+
+              var blogRegData = getBasicInfo();
+              blogRegData.trackData = value;
+              blogRegData.email = value;
+              blogRegData.formId = '1052';
+              blogRegData.lpId = '1117';
+              blogRegData.Blog_Subs__c = true;
+              metricsLib.track('register:lead:blog-newsletter', blogRegData);
+
+              $module.find('.title').text('Thanks for subscribing');
+              $module.find('.fields').html('<p>You’ll be getting lots of awesome content!</p>');
+
+            }
+          });
+        }
+
+        function initialize() {
+          initBlogSubscriber();
+
+          $('pre code').each(function(i, block) {
+             hljs.highlightBlock(block);
+          });
+
+          $('.post-info time').each(function() {
+            var $current = $(this);
+            var dateString = new Date($current.text());
+            var diff = moment(dateString).diff(moment(new Date()), 'days');
+            var dateFormat;
+
+            dateFormat = moment(dateString).fromNow();
+
+            if(diff > -10) {
+              $current.text(dateFormat);
+            }
+
+            if (diff === 0) {
+              $current.text('Today');
+            }
+
+            $current.addClass('rendered');
+          });
+
+          // Social Buttons
+          $('.social-stats .network').cSButtons();
+
+          // Force content links to _blank if not explicitly set to _self
+          $('.entry-content a').each(function() {
+            var _$this = $(this);
+            var _target = _$this.attr('target');
+
+            if (_target !== '_self') {
+             _$this.attr('target', '_blank');
+            }
+          });
+
+          // Handle scroll pos
+          if($(window).data('navScroll')) {
+            $(window).scrollTop($(window).data('navScroll'));
+
+            $(window).data('navScroll', 0);
+          } else {
+            $(window).scrollTop(0);
+          }
+
+          stickyElements();
+        }
+
+        function setEvents() {
+          hljs.configure({
+            tabReplace: '  ', // 4 spaces
+            classPrefix: ''
+          });
+
+          NProgress.configure({ showSpinner: false, trickleSpeed: 600 });
+
+          metricsLib.page();
+
+          $('p').selectionSharer();
+
+          var selectionSharerFacebook = $('#selectionSharerPopover-inner .action.facebook')[0];
+          $(selectionSharerFacebook).on('click', function() {
+            metricsLib.track('blog:share:custom:facebook');
+          });
+
+          var selectionSharerTwitter = $('#selectionSharerPopover-inner .action.tweet')[0];
+          $(selectionSharerTwitter).on('click', function() {
+            metricsLib.track('blog:share:custom:twitter');
+          });
+
+          var selectionSharerEmail = $('#selectionSharerPopover-inner .action.email')[0];
+          $(selectionSharerEmail).on('click', function() {
+            metricsLib.track('blog:share:custom:email');
+          });
+
+          $(window).on('load', function() {
+            $(document.body).trigger("sticky_kit:recalc");
+          });
+
+
+          $('body').on('click', '.blog-navigation a', function() {
+            var tabs = $('.blog-navigation li');
+            var activeTab = $(this).parent();
+
+            $(window).data('navScroll', $(window).scrollTop());
+
+            tabs.removeClass('active');
+            activeTab.addClass('active');
+          });
+
+          initialize();
+        }
+
+        setEvents();
+      });
+    </script>
+
+
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'auth0blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:301495,hjsv:5};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</body>
+</html>
