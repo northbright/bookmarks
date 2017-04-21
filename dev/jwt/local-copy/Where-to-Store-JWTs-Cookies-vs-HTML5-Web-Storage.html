@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<link href="/wp-content/uploads/2016/03/favicon.png" type="image/png" rel="icon">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://stormpath.com/xmlrpc.php">
+ 
+<title>Where to Store JWTs - Cookies vs HTML5 Web Storage | Stormpath</title>
+ 
+<meta name="description" content="Learn the differences between JSON Web Tokens (JWT) vs OAuth 2.0 security and token storage in cookies vs localStorage or sessionStorage (via HTML5 web storage)."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Where to Store JWTs - Cookies vs HTML5 Web Storage | Stormpath"/>
+<meta property="og:description" content="Learn the differences between JSON Web Tokens (JWT) vs OAuth 2.0 security and token storage in cookies vs localStorage or sessionStorage (via HTML5 web storage)."/>
+<meta property="og:url" content="https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage"/>
+<meta property="og:site_name" content="Stormpath User Identity API"/>
+<meta property="article:section" content="General"/>
+<meta property="article:published_time" content="2016-01-08T00:00:00-07:00"/>
+<meta property="article:modified_time" content="2016-10-31T12:57:12-07:00"/>
+<meta property="og:updated_time" content="2016-10-31T12:57:12-07:00"/>
+<meta property="og:image" content="http://stormpath.com/wp-content/uploads/2016/05/Twitter-Card.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="Learn the differences between JSON Web Tokens (JWT) vs OAuth 2.0 security and token storage in cookies vs localStorage or sessionStorage (via HTML5 web storage)."/>
+<meta name="twitter:title" content="Where to Store JWTs - Cookies vs HTML5 Web Storage | Stormpath"/>
+<meta name="twitter:image" content="http://stormpath.com/wp-content/uploads/2016/05/stormpath-blue-logo-notext.jpg"/>
+<meta property="DC.date.issued" content="2016-01-08T00:00:00-07:00"/>
+ 
+<link rel='dns-prefetch' href='//s0.wp.com'/>
+<link rel='dns-prefetch' href='//s.w.org'/>
+<link rel="alternate" type="application/rss+xml" title="Stormpath User Identity API &raquo; Feed" href="https://stormpath.com/feed"/>
+<link rel="alternate" type="application/rss+xml" title="Stormpath User Identity API &raquo; Comments Feed" href="https://stormpath.com/comments/feed"/>
+<link rel="alternate" type="application/rss+xml" title="Stormpath User Identity API &raquo; Where to Store your JWTs &#8211; Cookies vs HTML5 Web Storage Comments Feed" href="https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage/feed"/>
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/stormpath.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important;}</style>
+<link rel='stylesheet' id='crayon-theme-stormpath-css' href='https://stormpath.com/wp-content/uploads/crayon-syntax-highlighter/themes/stormpath/stormpath.css?ver=_2.7.2_beta' type='text/css' media='all'/>
+<link rel='stylesheet' id='crayon-font-monaco-css' href='https://stormpath.com/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=_2.7.2_beta' type='text/css' media='all'/>
+<link rel='stylesheet' id='contact-form-7-css' href='https://stormpath.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.7' type='text/css' media='all'/>
+<link rel='stylesheet' id='stormpath-style-css' href='https://stormpath.com/wp-content/themes/stormpath/style.css?ver=4.7.3' type='text/css' media='all'/>
+<link rel='stylesheet' id='jetpack_css-css' href='https://stormpath.com/wp-content/plugins/jetpack/css/jetpack.css?ver=4.7.1' type='text/css' media='all'/>
+<script type='text/javascript' src='https://stormpath.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://stormpath.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/jetpack/modules/related-posts/related-posts.js?ver=20150408'></script>
+<link rel='https://api.w.org/' href='https://stormpath.com/wp-json/'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://stormpath.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://stormpath.com/wp-includes/wlwmanifest.xml"/>
+<link rel='shortlink' href='https://stormpath.com/?p=2089'/>
+<link rel="alternate" type="application/json+oembed" href="https://stormpath.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstormpath.com%2Fblog%2Fwhere-to-store-your-jwts-cookies-vs-html5-web-storage"/>
+<link rel="alternate" type="text/xml+oembed" href="https://stormpath.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstormpath.com%2Fblog%2Fwhere-to-store-your-jwts-cookies-vs-html5-web-storage&#038;format=xml"/>
+ 
+ 
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '986262161469311');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=986262161469311&ev=PageView&noscript=1"/></noscript>
+ 
+<script src="https://cdn.optimizely.com/js/225847041.js"></script>
+  <style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important;}</style>
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://stormpath.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="https://stormpath.com/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]--><noscript><style type="text/css">.wpb_animate_when_almost_visible{opacity:1;}</style></noscript>  
+<script>
+        /*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","stormpath.zendesk.com");
+        /*]]>*/
+    </script>
+ 
+</head>
+<body id="blog" class="post-template-default single single-post postid-2089 single-format-standard stretched wpb-js-composer js-comp-ver-4.11.2.1 vc_responsive">
+<!--[if lt IE 8]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please "browsehappy.com" upgrade your browser or "www.google.com/chromeframe/?redirect=true" activate Google Chrome Frame to improve your experience.</p>
+<![endif]-->
+<div id="wrapper" class="clearfix">
+<header class="main-navbar">
+<nav class="navbar navbar-default navbar-fixed-top" id="main-nav-menu">
+<div class="container main-navbar-container">
+<div class="navbar-header-container">
+<div class="navbar-header">
+<a href="https://stormpath.com" class="standard-logo main-nav-logo" data-dark-logo="/wp-content/uploads/2016/03/stormpath-logo.png"><img src="/wp-content/uploads/2016/03/stormpath-logo.png" alt="Stormpath Logo"></a>
+ 
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapsable" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<div class="collapse navbar-collapse" id="main-navbar-collapsable">
+<ul id="menu-menu-1" class="nav navbar-nav main-navbar__links"><li id="menu-item-263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-263"><a class="main-navbar__link" href="https://docs.stormpath.com/home/">Docs</a></li>
+<li id="menu-item-5139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5139"><a class="main-navbar__link" href="https://support.stormpath.com/">Support</a></li>
+<li id="menu-item-5143" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-5143"><a class="main-navbar__link" href="https://stormpath.com/blog">Blog</a></li>
+</ul> <ul id="menu-secondary-navigation" class="nav navbar-nav navbar-right"><li id="menu-item-6098" class="main-navbar__link menu-item menu-item-type-custom menu-item-object-custom menu-item-6098"><a href="https://api.stormpath.com/login">Login</a></li>
+</ul> </div>
+</div>
+</nav>
+</header>
+<div id="content" class="site-content">
+<div class="global-msg" style="background-image:url(https://stormpath.com/wp-content/uploads/2017/03/stormpath-blog-background.png)"><div class="container"><p><img src="/wp-content/uploads/2017/03/stormpath-hero-logos-2.png" alt="" width="1025" height="119" class="alignnone size-full wp-image-7869"/>Stormpath and Okta are joining forces! Learn more in our <a href="https://stormpath.com/blog/stormpaths-new-path">blogpost</a> and <a href="https://stormpath.com/oktaplusstormpath">Migration FAQ</a>.</p>
+</div></div>
+<section id="content">
+<div class="content-wrap nopadding">
+<div class="blog_header nopadding">
+<div class="container blog_header_rule nopadding">
+<h1 class="entry-title col-md-8 col-sm-12 col-xs-12 nopadding">Where to Store your JWTs &#8211; Cookies vs HTML5 Web Storage</h1>
+</div>  
+</div>  
+<div class="container clearfix nopadding">
+<main id="blog-content" class="site-main" role="main">
+<div class="col-md-8 col-sm-12 col-xs-12 nobottommargin nopadding clearfix">
+<article id="post-2089" class="post-2089 post type-post status-publish format-standard hentry category-general" role="article">
+<div class="post-meta">
+<div class="author_avatar">
+ 
+ 
+<img alt='' src='https://secure.gravatar.com/avatar/a24a864a635856c5c1aad4ad124a9a1e?s=96&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/a24a864a635856c5c1aad4ad124a9a1e?s=192&amp;d=mm&amp;r=g 2x' class='avatar avatar-96 photo' height='96' width='96'/> </div>  
+<p class="author-and-date"> by Tom Abbott <span class="dividers">|</span>
+January 8, 2016 <span class="dividers">|</span>
+</p>
+<ul class="post-categories">
+<li><a href="https://stormpath.com/blog/category/general" rel="category tag">General</a></li></ul> </div> 
+<div class="entry-content">
+<p><strong>Update 5/12/2016:</strong> Building a Java application? <a href="https://stormpath.com/blog/jjwt-how-it-works-why/">JJWT</a> is a Java library providing end-to-end JWT creation and verification, developed by our very own Les Hazlewood. Forever free and open-source (Apache License, Version 2.0), JJWT is simple to use and understand. It was designed with a builder-focused fluent interface hiding most of its complexity. We’d love to have you <a href="https://github.com/jwtk/jjwt">try it out</a>, and let us know what you think! (And, if you’re a Node developer, check out <a href="https://github.com/jwtk/njwt">NJWT</a>!)</p>
+<p>&nbsp;</p>
+<p>Stormpath has recently worked on <a href="https://stormpath.com/product/token-auth/">token authentication features using JSON Web Tokens (JWT)</a>, and we have had many conversations about the security of these tokens and where to store them.</p>
+<p>If you are curious about your options, this post is for you. We will cover the basics of JSON Web Tokens (JWT) vs. OAuth, token storage in cookies vs. HTML5 web storage (localStorage or sessionStorage), and basic security information about cross-site scripting (XSS) and cross-site request forgery (CSRF).</p>
+<p>Let’s get started…</p>
+<h2 id="json-web-tokens-jwt-a-crash-course">JSON Web Tokens (JWT): A Crash Course<a href="#json-web-tokens-jwt-a-crash-course" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>The most implemented solutions for API authentication and authorization are the OAuth 2.0 and JWT specifications, which are fairly dense. Cliff’s Notes Time! Here’s what you need to know about JWT vs OAuth:</p>
+<p><span id="more-2089"></span></p>
+<ul>
+<li>JWTs are a great authentication mechanism. They give you a structured and stateless way to declare <a href="https://stormpath.com/product/authorization/">a user and what they can access</a>. They can be cryptographically signed and encrypted to prevent tampering on the client side.</li>
+<li>JWTs are a great way to declare information about the token and authentication. You have a ton of freedom to decide what makes sense for your application because you are working with JSON.</li>
+<li>The concept behind scopes is powerful yet incredibly simple: you have the freedom to design your own access control language because, again, you are working with JSON.</li>
+</ul>
+<p>If you encounter a token in the wild, it looks like this:</p>
+<p></p> 
+<div id="crayon-58f7a4d294ec3277050364" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+"dBjftJeZ4CVP.mB92K27uhbUJU1p1r.wW1gFWFOEjXk…"
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294ec3277050364-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ec3277050364-2">2</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294ec3277050364-1"><span class="crayon-s">"dBjftJeZ4CVP.mB92K27uhbUJU1p1r.wW1gFWFOEjXk…"</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ec3277050364-2">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>This is a Base64 encoded string. If you break it apart you’ll actually find three separate sections:</p>
+<p></p> 
+<div id="crayon-58f7a4d294ed3254140614" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+.
+eyJpc3MiOiJodHRwOi8vZ2FsYXhpZXMuY29tIiwiZXhwIjoxMzAwODE5MzgwLCJzY29wZXMiOlsiZXhwbG9yZXIiLCJzb2xhci1oYXJ2ZXN0ZXIiXSwic3ViIjoic3RhbmxleUBhbmRyb21lZGEuY29tIn0
+.
+edK9cpfKKlGtT6BqaVy4bHnk5QUsbnbYCWjBEE7wcuY
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294ed3254140614-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ed3254140614-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294ed3254140614-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ed3254140614-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294ed3254140614-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ed3254140614-6">6</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294ed3254140614-1"><span class="crayon-i">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ed3254140614-2"><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-58f7a4d294ed3254140614-3"><span class="crayon-i">eyJpc3MiOiJodHRwOi8vZ2FsYXhpZXMuY29tIiwiZXhwIjoxMzAwODE5MzgwLCJzY29wZXMiOlsiZXhwbG9yZXIiLCJzb2xhci1oYXJ2ZXN0ZXIiXSwic3ViIjoic3RhbmxleUBhbmRyb21lZGEuY29tIn0</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ed3254140614-4"><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-58f7a4d294ed3254140614-5"><span class="crayon-i">edK9cpfKKlGtT6BqaVy4bHnk5QUsbnbYCWjBEE7wcuY</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ed3254140614-6">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>The first section is a header that describes the token. The second section is a payload which contains the juicy bits, and the third section is a signature hash that can be used to verify the integrity of the token (if you have the secret key that was used to sign it).</p>
+<p>When we magically decode the second section, the payload, we get this nice JSON object:</p>
+<p></p> 
+<div id="crayon-58f7a4d294ed8928350245" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+{
+  "iss": "http://galaxies.com",
+  "exp": 1300819380,
+  "scopes": ["explorer", "solar-harvester", "seller"],
+  "sub": "tom@andromeda.com"
+}
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294ed8928350245-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ed8928350245-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294ed8928350245-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ed8928350245-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294ed8928350245-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ed8928350245-6">6</div><div class="crayon-num" data-line="crayon-58f7a4d294ed8928350245-7">7</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294ed8928350245-1"><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ed8928350245-2"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"iss"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"http://galaxies.com"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-58f7a4d294ed8928350245-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"exp"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">1300819380</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ed8928350245-4"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"scopes"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-s">"explorer"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"solar-harvester"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"seller"</span><span class="crayon-sy">]</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-58f7a4d294ed8928350245-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"sub"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"<a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="73071c1e33121d17011c1e1617125d101c1e">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>"</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ed8928350245-6"><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-58f7a4d294ed8928350245-7">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>This is the payload of your token. It allows you to know the following:</p>
+<ul>
+<li>Who this person is (sub, short for subject)</li>
+<li>What this person can access with this token (scope)</li>
+<li>When the token expires (exp)</li>
+<li>Who issued the token (iss, short for issuer)</li>
+</ul>
+<p>These declarations are called ‘claims’ because the token creator claims a set of assertions that can be used to ‘know’ things about the subject. Because the token is signed with a secret key, you can verify its signature and implicitly trust what is claimed.</p>
+<p>Tokens are given to your users after they present some credentials, typically a username and password, but they can also provide API keys, or even tokens from another service. This is important because it is better to pass a token (that can expire, and have limited scope) to your API than a username and password. If the username and password are compromised in a man-in-the-middle attack, it is like giving an attacker keys to the castle.</p>
+<p>Stormpath’s <a href="http://docs.stormpath.com/guides/api-key-management/">API Key Authentication Feature</a> is an example of this. The idea is that you present your hard credentials once, and then get a token to use in place of the hard credentials.</p>
+<p>The JSON Web Token (JWT) specification is quickly gaining traction. Recommended highly by Stormpath, it provides structure and security, but with the flexibility to modify it for your application. Here is a longer article on it: <a href="https://stormpath.com/blog/jwt-the-right-way/">Use JWT the Right Way!</a></p>
+<h2 id="where-to-store-your-jwts">Where to Store Your JWTs<a href="#where-to-store-your-jwts" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>So now that you have a good understanding of what a JWT is, the next step is to figure out how to store these tokens. If you are building a web application, you have a couple of options:</p>
+<ul>
+<li>HTML5 Web Storage (localStorage or sessionStorage)</li>
+<li>Cookies</li>
+</ul>
+<p>To compare these two, let’s say we have a fictitious AngularJS or single page app (SPA) called <code>galaxies.com</code> with a login route (<code>/token</code>) to authenticate users to return a JWT. To access the other APIs endpoints that serve your SPA, the client needs to pass a valid JWT.</p>
+<p>The request that the single page app makes would resemble:</p>
+<p></p> 
+<div id="crayon-58f7a4d294ee0013419968" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+HTTP/1.1
+
+POST /token
+Host: galaxies.com
+Content-Type: application/x-www-form-urlencoded
+
+username=tom@galaxies.com&amp;password=andromedaisheadingstraightforusomg&amp;grant_type=password
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294ee0013419968-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ee0013419968-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294ee0013419968-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ee0013419968-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294ee0013419968-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ee0013419968-6">6</div><div class="crayon-num" data-line="crayon-58f7a4d294ee0013419968-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ee0013419968-8">8</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294ee0013419968-1"><span class="crayon-v">HTTP</span><span class="crayon-o">/</span><span class="crayon-cn">1.1</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ee0013419968-2">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294ee0013419968-3"><span class="crayon-v">POST</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-e">token</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ee0013419968-4"><span class="crayon-v">Host</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">galaxies</span><span class="crayon-sy">.</span><span class="crayon-e">com</span></div><div class="crayon-line" id="crayon-58f7a4d294ee0013419968-5"><span class="crayon-v">Content</span><span class="crayon-o">-</span><span class="crayon-v">Type</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">application</span><span class="crayon-o">/</span><span class="crayon-v">x</span><span class="crayon-o">-</span><span class="crayon-v">www</span><span class="crayon-o">-</span><span class="crayon-v">form</span><span class="crayon-o">-</span><span class="crayon-e">urlencoded</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ee0013419968-6">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294ee0013419968-7"><span class="crayon-v">username</span><span class="crayon-o">=</span><span class="crayon-v">tom</span><span class="crayon-sy">@</span><span class="crayon-v">galaxies</span><span class="crayon-sy">.</span><span class="crayon-v">com</span><span class="crayon-o">&amp;</span><span class="crayon-v">password</span><span class="crayon-o">=</span><span class="crayon-v">andromedaisheadingstraightforusomg</span><span class="crayon-o">&amp;</span><span class="crayon-v">grant_type</span><span class="crayon-o">=</span><span class="crayon-i">password</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ee0013419968-8">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>Your server’s response will vary based on whether you are using cookies or Web Storage. For comparison, let’s take a look at how you would do both.</p>
+<h3 id="jwt-localstorage-or-sessionstorage-web-storage">JWT localStorage or sessionStorage (Web Storage)<a href="#jwt-localstorage-or-sessionstorage-web-storage" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>Exchanging a username and password for a JWT to store it in browser storage (sessionStorage or localStorage) is rather simple. The response body would contain the JWT as an access token:</p>
+<p></p> 
+<div id="crayon-58f7a4d294ee5124445540" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+HTTP/1.1 200 OK
+
+  {
+  "access_token": "eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB",
+       "expires_in":3600
+   }
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294ee5124445540-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ee5124445540-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294ee5124445540-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ee5124445540-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294ee5124445540-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ee5124445540-6">6</div><div class="crayon-num" data-line="crayon-58f7a4d294ee5124445540-7">7</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294ee5124445540-1"><span class="crayon-v">HTTP</span><span class="crayon-o">/</span><span class="crayon-cn">1.1</span><span class="crayon-h"> </span><span class="crayon-cn">200</span><span class="crayon-h"> </span><span class="crayon-e">OK</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ee5124445540-2">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294ee5124445540-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ee5124445540-4"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"access_token"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-58f7a4d294ee5124445540-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-s">"expires_in"</span><span class="crayon-o">:</span><span class="crayon-cn">3600</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ee5124445540-6"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-58f7a4d294ee5124445540-7">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>On the client side, you would store the token in HTML5 Web Storage (assuming that we have a success callback):</p>
+<p></p> 
+<div id="crayon-58f7a4d294eea422605301" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+function tokenSuccess(err, response) {
+    if(err){
+        throw err;
+    }
+    $window.sessionStorage.accessToken = response.body.access_token;
+}
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294eea422605301-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eea422605301-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294eea422605301-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eea422605301-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294eea422605301-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eea422605301-6">6</div><div class="crayon-num" data-line="crayon-58f7a4d294eea422605301-7">7</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294eea422605301-1"><span class="crayon-t">function</span><span class="crayon-h"> </span><span class="crayon-e">tokenSuccess</span><span class="crayon-sy">(</span><span class="crayon-v">err</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">response</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eea422605301-2"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-v">err</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-58f7a4d294eea422605301-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">throw</span><span class="crayon-h"> </span><span class="crayon-v">err</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eea422605301-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-58f7a4d294eea422605301-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-v">window</span><span class="crayon-sy">.</span><span class="crayon-v">sessionStorage</span><span class="crayon-sy">.</span><span class="crayon-v">accessToken</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">response</span><span class="crayon-sy">.</span><span class="crayon-v">body</span><span class="crayon-sy">.</span><span class="crayon-v">access_token</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eea422605301-6"><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-58f7a4d294eea422605301-7">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>To pass the access token back to your protected APIs, you would use the HTTP Authorization Header and the <code>Bearer</code> scheme. The request that your SPA would make would resemble:</p>
+<p></p> 
+<div id="crayon-58f7a4d294eef430565435" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+HTTP/1.1
+
+GET /stars/pollux
+Host: galaxies.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294eef430565435-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eef430565435-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294eef430565435-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eef430565435-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294eef430565435-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eef430565435-6">6</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294eef430565435-1"><span class="crayon-v">HTTP</span><span class="crayon-o">/</span><span class="crayon-cn">1.1</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eef430565435-2">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294eef430565435-3"><span class="crayon-v">GET</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">stars</span><span class="crayon-o">/</span><span class="crayon-e">pollux</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eef430565435-4"><span class="crayon-v">Host</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">galaxies</span><span class="crayon-sy">.</span><span class="crayon-e">com</span></div><div class="crayon-line" id="crayon-58f7a4d294eef430565435-5"><span class="crayon-v">Authorization</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Bearer </span><span class="crayon-v">eyJhbGciOiJIUzI1NiIsI</span><span class="crayon-sy">.</span><span class="crayon-v">eyJpc3MiOiJodHRwczotcGxlL</span><span class="crayon-sy">.</span><span class="crayon-i">mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eef430565435-6">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<h3 id="jwt-cookie-storage">JWT Cookie Storage<a href="#jwt-cookie-storage" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>Exchanging a username and password for a JWT to store it in a cookie is simple as well. The response would use the <code>Set-Cookie</code> HTTP header:</p>
+<p></p> 
+<div id="crayon-58f7a4d294ef3217947571" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+HTTP/1.1 200 OK
+
+Set-Cookie: access_token=eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB; Secure; HttpOnly;
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294ef3217947571-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ef3217947571-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294ef3217947571-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ef3217947571-4">4</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294ef3217947571-1"><span class="crayon-v">HTTP</span><span class="crayon-o">/</span><span class="crayon-cn">1.1</span><span class="crayon-h"> </span><span class="crayon-cn">200</span><span class="crayon-h"> </span><span class="crayon-e">OK</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ef3217947571-2">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294ef3217947571-3"><span class="crayon-v">Set</span><span class="crayon-o">-</span><span class="crayon-v">Cookie</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">access_token</span><span class="crayon-o">=</span><span class="crayon-v">eyJhbGciOiJIUzI1NiIsI</span><span class="crayon-sy">.</span><span class="crayon-v">eyJpc3MiOiJodHRwczotcGxlL</span><span class="crayon-sy">.</span><span class="crayon-v">mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">Secure</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">HttpOnly</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ef3217947571-4">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>To pass the access token back to your protected APIs on the same domain, the browser would automatically include the cookie value. The request to your protected API would resemble:</p>
+<p></p> 
+<div id="crayon-58f7a4d294ef8809610259" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+GET /stars/pollux
+Host: galaxies.com
+
+Cookie: access_token=eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB;
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294ef8809610259-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ef8809610259-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294ef8809610259-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294ef8809610259-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294ef8809610259-5">5</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294ef8809610259-1"><span class="crayon-v">GET</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">stars</span><span class="crayon-o">/</span><span class="crayon-e">pollux</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ef8809610259-2"><span class="crayon-v">Host</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">galaxies</span><span class="crayon-sy">.</span><span class="crayon-e">com</span></div><div class="crayon-line" id="crayon-58f7a4d294ef8809610259-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294ef8809610259-4"><span class="crayon-v">Cookie</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">access_token</span><span class="crayon-o">=</span><span class="crayon-v">eyJhbGciOiJIUzI1NiIsI</span><span class="crayon-sy">.</span><span class="crayon-v">eyJpc3MiOiJodHRwczotcGxlL</span><span class="crayon-sy">.</span><span class="crayon-v">mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-58f7a4d294ef8809610259-5">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<h2 id="so-whats-the-difference">So, What’s the difference?<a href="#so-whats-the-difference" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>If you compare these approaches, both receive a JWT down to the browser. Both are stateless because all the information your API needs is in the JWT. Both are simple to pass back up to your protected APIs. The difference is in the medium.</p>
+<h3 id="jwt-sessionstorage-and-localstorage-security">JWT sessionStorage and localStorage Security<a href="#jwt-sessionstorage-and-localstorage-security" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>Web Storage (localStorage/sessionStorage) is accessible through JavaScript on the same domain. This means that any JavaScript running on your site will have access to web storage, and because of this can be vulnerable to cross-site scripting (XSS) attacks. XSS, in a nutshell, is a type of vulnerability where an attacker can inject JavaScript that will run on your page. Basic XSS attacks attempt to inject JavaScript through form inputs, where the attacker puts <code>&lt;script&gt;alert('You are Hacked');&lt;/script&gt;</code> into a form to see if it is run by the browser and can be viewed by other users.</p>
+<p>To prevent XSS, the common response is to escape and encode all untrusted data. But this is far from the full story. In 2015, modern web apps use JavaScript hosted on CDNs or outside infrastructure. Modern web apps include 3rd party JavaScript libraries for A/B testing, funnel/market analysis, and ads. We use package managers like Bower to import other peoples’ code into our apps.</p>
+<p>What if only one of the scripts you use is compromised? Malicious JavaScript can be embedded on the page, and Web Storage is compromised. These types of XSS attacks can get <strong>everyone’s</strong> Web Storage that visits your site, without their knowledge. This is probably why a <a href="https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Local_Storage">bunch</a> of <a href="https://blog.whitehatsec.com/web-storage-security/">organizations</a> advise not to store anything of value or trust any information in web storage. This includes session identifiers and tokens.</p>
+<p>As a storage mechanism, Web Storage does not enforce any secure standards during transfer. Whoever reads Web Storage and uses it must do their due diligence to ensure they always send the JWT over <code>HTTPS</code> and never <code>HTTP</code>.</p>
+<h3 id="jwt-cookie-storage-security">JWT Cookie Storage Security<a href="#jwt-cookie-storage-security" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>Cookies, when used with the <code>HttpOnly</code> cookie flag, are not accessible through JavaScript, and are immune to XSS. You can also set the <code>Secure</code> cookie flag to guarantee the cookie is only sent over HTTPS. This is one of the main reasons that cookies have been leveraged in the past to store tokens or session data. Modern developers are hesitant to use cookies because they traditionally required state to be stored on the server, thus breaking RESTful best practices. Cookies as a storage mechanism do not require state to be stored on the server if you are storing a JWT in the cookie. This is because the JWT encapsulates everything the server needs to serve the request.</p>
+<p>However, cookies are vulnerable to a different type of attack: cross-site request forgery (CSRF). A CSRF attack is a type of attack that occurs when a malicious web site, email, or blog causes a user’s web browser to perform an unwanted action on a trusted site on which the user is currently authenticated. This is an exploit of how the browser handles cookies. A cookie can only be sent to the domains in which it is allowed. By default, this is the domain that originally set the cookie. The cookie will be sent for a request regardless of whether you are on <code>galaxies.com</code> or <code>hahagonnahackyou.com</code>.</p>
+<p>CSRF works by attempting to lure you to <code>hahagonnahackyou.com</code>. That site will have either an <code>img</code> tag or JavaScript to emulate a form post to <code>galaxies.com</code> and attempt to hijack your session, if it is still valid, and modify your account.</p>
+<p>For example:</p>
+<p></p> 
+<div id="crayon-58f7a4d294eff926518750" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+&lt;body&gt;
+
+  &lt;!– CSRF with an img tag –&gt;
+
+  &lt;img href="http://galaxies.com/stars/pollux?transferTo=tom@stealingstars.com" /&gt;
+
+  &lt;!– or with a hidden form post –&gt;
+
+  &lt;script type="text/javascript"&gt;
+  $(document).ready(function() {
+    window.document.forms[0].submit();
+  });
+  &lt;/script&gt;
+
+  &lt;div style="display:none;"&gt;
+    &lt;form action="http://galaxies.com/stars/pollux" method="POST"&gt;
+      &lt;input name="transferTo" value="tom@stealingstars.com" /&gt;
+    &lt;form&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-6">6</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-8">8</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-10">10</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-12">12</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-14">14</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-16">16</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-18">18</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294eff926518750-20">20</div><div class="crayon-num" data-line="crayon-58f7a4d294eff926518750-21">21</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294eff926518750-1"><span class="crayon-o">&lt;</span><span class="crayon-v">body</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-2">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-o">!</span>–<span class="crayon-h"> </span><span class="crayon-e">CSRF </span><span class="crayon-e">with </span><span class="crayon-e">an </span><span class="crayon-e">img </span><span class="crayon-i">tag</span><span class="crayon-h"> </span>–<span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-4">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">img </span><span class="crayon-v">href</span><span class="crayon-o">=</span><span class="crayon-s">"http:<a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="fad5d59d9b969b82939f89d4999597d5898e9b8889d58a9596968f82c58e889b94899c9f88ae95c78e9597ba898e9f9b9693949d898e9b8889d4999597">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>"</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-6">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-7"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-o">!</span>–<span class="crayon-h"> </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-e">with</span><span class="crayon-h"> </span><span class="crayon-e">a</span><span class="crayon-h"> </span><span class="crayon-e">hidden</span><span class="crayon-h"> </span><span class="crayon-e">form</span><span class="crayon-h"> </span><span class="crayon-e">post</span><span class="crayon-h"> </span>–<span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-8">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-9"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-ta">&lt;script </span><span class="crayon-e ">type</span><span class="crayon-o">=</span><span class="crayon-s">"text/javascript"</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-10"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-sy">(</span><span class="crayon-r">document</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">ready</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">window</span><span class="crayon-sy">.</span><span class="crayon-v">document</span><span class="crayon-sy">.</span><span class="crayon-v">forms</span><span class="crayon-sy">[</span><span class="crayon-cn">0</span><span class="crayon-sy">]</span><span class="crayon-sy">.</span><span class="crayon-e">submit</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-12"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-13"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-ta">&lt;/script&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-14">&nbsp;</div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-15"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">div </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"display:none;"</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-16"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">form </span><span class="crayon-v">action</span><span class="crayon-o">=</span><span class="crayon-s">"http://galaxies.com/stars/pollux"</span><span class="crayon-h"> </span><span class="crayon-v">method</span><span class="crayon-o">=</span><span class="crayon-s">"POST"</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-17"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">input </span><span class="crayon-v">name</span><span class="crayon-o">=</span><span class="crayon-s">"transferTo"</span><span class="crayon-h"> </span><span class="crayon-v">value</span><span class="crayon-o">=</span><span class="crayon-s">"<a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="a2d6cdcfe2d1d6c7c3cecbccc5d1d6c3d0d18cc1cdcf">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>"</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-18"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-v">form</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-19"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">div</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294eff926518750-20"><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">body</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-58f7a4d294eff926518750-21">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>Both would send the cookie for <code>galaxies.com</code> and could potentially cause an unauthorized state change. CSRF can be prevented by using synchronized token patterns. This sounds complicated, but all modern web frameworks have <a href="https://docs.angularjs.org/api/ng/service/$http#cross-site-request-forgery-xsrf-protection">support</a> <a href="https://github.com/expressjs/csurf">for</a> <a href="http://spring.io/blog/2013/08/21/spring-security-3-2-0-rc1-highlights-csrf-protection/">this</a>.</p>
+<p>For example, AngularJS has a solution to validate that the cookie is accessible by only your domain. Straight from <a href="https://docs.angularjs.org/api/ng/service/$http">AngularJS docs</a>:</p>
+<blockquote><p>When performing XHR requests, the <code>$http</code> service reads a token from a cookie (by default, XSRF-TOKEN) and sets it as an HTTP header (<code>X-XSRF-TOKEN</code>). Since only JavaScript that runs on your domain can read the cookie, your server can be assured that the XHR came from JavaScript running on your domain.</p></blockquote>
+<p>You can make this CSRF protection stateless by including a <code>xsrfToken</code> JWT claim:</p>
+<p></p> 
+<div id="crayon-58f7a4d294f04047004540" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+{
+  "iss": "http://galaxies.com",
+  "exp": 1300819380,
+  "scopes": ["explorer", "solar-harvester", "seller"],
+  "sub": "tom@andromeda.com",
+  "xsrfToken": "d9b9714c-7ac0-42e0-8696-2dae95dbc33e"
+}
+</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-58f7a4d294f04047004540-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294f04047004540-2">2</div><div class="crayon-num" data-line="crayon-58f7a4d294f04047004540-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294f04047004540-4">4</div><div class="crayon-num" data-line="crayon-58f7a4d294f04047004540-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294f04047004540-6">6</div><div class="crayon-num" data-line="crayon-58f7a4d294f04047004540-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-58f7a4d294f04047004540-8">8</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-58f7a4d294f04047004540-1"><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294f04047004540-2"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"iss"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"http://galaxies.com"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-58f7a4d294f04047004540-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"exp"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">1300819380</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294f04047004540-4"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"scopes"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-s">"explorer"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"solar-harvester"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"seller"</span><span class="crayon-sy">]</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-58f7a4d294f04047004540-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"sub"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"<a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="a3d7cccee3c2cdc7d1cccec6c7c28dc0ccce">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294f04047004540-6"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"xsrfToken"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"d9b9714c-7ac0-42e0-8696-2dae95dbc33e"</span></div><div class="crayon-line" id="crayon-58f7a4d294f04047004540-7"><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="crayon-58f7a4d294f04047004540-8">&nbsp;</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+ 
+<p></p>
+<p>If you are using the <a href="https://github.com/stormpath/stormpath-sdk-angularjs">Stormpath SDK for AngularJS</a>, you get stateless CSRF protection with no development effort.</p>
+<p>Leveraging your web app framework’s CSRF protection makes cookies rock solid for storing a JWT. CSRF can also be partially prevented by checking the HTTP <code>Referer</code> and <code>Origin</code> header from your API. CSRF attacks will have <code>Referer</code> and <code>Origin</code> headers that are unrelated to your application.</p>
+<p>Even though they are more secure to store your JWT, cookies can cause some developer headaches, depending on if your applications require cross-domain access to work. Just be aware that cookies have additional properties (Domain/Path) that can be modified to allow you to specify where the cookie is allowed to be sent. Using AJAX, your server side can also notify browsers whether credentials (including Cookies) should be sent with requests with CORS.</p>
+<h3 id="conclusion">Conclusion<a href="#conclusion" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>JWTs are an awesome authentication mechanism. They give you a structured way to declare users and what they can access. They can be encrypted and signed for to prevent tampering on the client side, but the devil is in the details and where you store them. Stormpath recommends that you store your JWT in cookies for web applications, because of the additional security they provide, and the simplicity of protecting against CSRF with modern web frameworks. HTML5 Web Storage is vulnerable to XSS, has a larger attack surface area, and can impact all application users on a successful attack.</p>
+<p>Questions or comments? We would love to hear them! Let me know if you have any questions in the discussion below or at <a href="/cdn-cgi/l/email-protection#b7c3d8daf7c4c3d8c5dac7d6c3df99d4d8da"><span class="__cf_email__" data-cfemail="4a3e25270a393e2538273a2b3e2264292527">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a> / <a href="https://twitter.com/omgitstom">@omgitstom</a>.</p>
+<h4 id="like-what-you-see-to-keep-up-with-the-latest-releases">Like what you see? to keep up with the latest releases.<a href="#like-what-you-see-to-keep-up-with-the-latest-releases" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h4>
+<div class="clearfix"></div>
+</div> 
+</article> 
+</div>
+<div class="blog_sidebar col-md-3 col-md-offset-1 nopadding" data-spy="affix" data-offset-top="230" data-offset-bottom="600">
+<div id="search-5" class="widget widget_search"><form role="search" method="get" class="search-form form" action="https://stormpath.com/">
+<label for="form-search-input" class="sr-only">Search for</label>
+<div class="input-group">
+<input type="search" id="form-search-input" class="form-control" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+<span class="input-group-btn">
+<button type="submit" class="button button-green button-small search-button"><i class="stp-icons stp-icon-search"></i></button>
+</span>
+</div>
+<input type="hidden" name="post_type" value="post"/>
+</form>
+</div><div id="categories-5" class="widget widget_categories"><h3 class="widget-title">Explore the Topic</h1> <ul>
+<li class="cat-item cat-item-10"><a href="https://stormpath.com/blog/category/net">.NET</a>
+</li>
+<li class="cat-item cat-item-13"><a href="https://stormpath.com/blog/category/general">General</a>
+</li>
+<li class="cat-item cat-item-8"><a href="https://stormpath.com/blog/category/java">Java</a>
+</li>
+<li class="cat-item cat-item-74"><a href="https://stormpath.com/blog/category/javascript">Javascript</a>
+</li>
+<li class="cat-item cat-item-9"><a href="https://stormpath.com/blog/category/mobile">Mobile</a>
+</li>
+<li class="cat-item cat-item-7"><a href="https://stormpath.com/blog/category/node">Node</a>
+</li>
+<li class="cat-item cat-item-5"><a href="https://stormpath.com/blog/category/php">PHP</a>
+</li>
+<li class="cat-item cat-item-11"><a href="https://stormpath.com/blog/category/python">Python</a>
+</li>
+<li class="cat-item cat-item-12"><a href="https://stormpath.com/blog/category/rest-api">REST API</a>
+</li>
+</ul>
+</div>
+<div class="social-bar widget stormpath-social-counter-widget" data-action="fetch_social_share_count" data-instance="2">
+<h3 class="widget-title">Share a Post</h3>
+<a class="social-icon si-small si-borderless si-twitter share-button" target="_blank" href="https://twitter.com/share?text=Where+to+Store+your+JWTs+%26%238211%3B+Cookies+vs+HTML5+Web+Storage - &url=https%3A%2F%2Fstormpath.com%2Fblog%2Fwhere-to-store-your-jwts-cookies-vs-html5-web-storage&via=gostormpath">
+<i class="stp-icons stp-icon-twitter"><div class="social-icon-counter">0</div></i>
+<i class="stp-icons stp-icon-twitter"><div class="social-icon-counter">0</div></i>
+</a>
+<a class="social-icon si-small si-borderless si-facebook share-button" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fstormpath.com%2Fblog%2Fwhere-to-store-your-jwts-cookies-vs-html5-web-storage&title=Where%20to%20Store%20your%20JWTs%20%26%238211%3B%20Cookies%20vs%20HTML5%20Web%20Storage">
+<i class="stp-icons stp-icon-facebook"><div class="social-icon-counter">0</div></i>
+<i class="stp-icons stp-icon-facebook"><div class="social-icon-counter">0</div></i>
+</a>
+<a class="social-icon si-small si-borderless si-gplus share-button" target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fstormpath.com%2Fblog%2Fwhere-to-store-your-jwts-cookies-vs-html5-web-storage">
+<i class="stp-icons stp-icon-gplus"><div class="social-icon-counter">0</div></i>
+<i class="stp-icons stp-icon-gplus"><div class="social-icon-counter">0</div></i>
+</a>
+<a class="social-icon si-small si-borderless si-linkedin share-button" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fstormpath.com%2Fblog%2Fwhere-to-store-your-jwts-cookies-vs-html5-web-storage&title=Where%20to%20Store%20your%20JWTs%20%26%238211%3B%20Cookies%20vs%20HTML5%20Web%20Storage&source=https%3A%2F%2Fstormpath.com">
+<i class="stp-icons stp-icon-linkedin"><div class="social-icon-counter">0</div></i>
+<i class="stp-icons stp-icon-linkedin"><div class="social-icon-counter">0</div></i>
+</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+</section>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div> 
+<footer id="footer" class="dark">
+<div class="container">
+<div class="footer-widgets-wrap nopadding topmargin-sm bottommargin-sm clearfix">
+<div class="col-md-4">
+<div id="text-4" class="widget widget_text"> <div class="textwidget"><img src="/wp-content/uploads/2016/03/stormpath-logo.png" class="footer-logo"/>
+<p>Stormpath powers Identity infrastructure for thousands of web applications and services. Our intuitive API, deep SDKs and expert support give Developer Teams a complete Identity layer they can implement in minutes.</p></div>
+</div> </div>
+<div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-5">
+<div id="nav_menu-2" class="widget widget_links widget_nav_menu"><div class="menu-footer-menu-1-container"><ul id="menu-footer-menu-1" class="menu"><li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-26"><a href="https://stormpath.com/blog">Blog</a></li>
+</ul></div></div> </div>
+<div class="col-md-2 col-sm-4 col-xs-6">
+<div id="nav_menu-3" class="widget widget_links widget_nav_menu"><div class="menu-footer-menu-2-container"><ul id="menu-footer-menu-2" class="menu"><li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a href="https://support.stormpath.com/home">Support</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a href="http://status.stormpath.com/">Status Report</a></li>
+</ul></div></div> </div>
+<div class="col-md-3 col-sm-4 col-xs-12" id="info-social">
+<div id="text-3" class="widget widget_text"> <div class="textwidget"><div>
+<abbr title="Email Address"><strong>Support:</strong></abbr>
+<a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="2e5d5b5e5e415c5a6e5d5a415c435e4f5a46004d4143">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>
+</div>
+<div class="social-bar">
+<a href="https://github.com/stormpath" class="social-icon si-small si-borderless si-github"><i class="stp-icons stp-icon-github"></i><i class="stp-icons stp-icon-github"></i></a><a href="https://twitter.com/gostormpath" class="social-icon si-small si-borderless si-twitter"><i class="stp-icons stp-icon-twitter2"></i><i class="stp-icons stp-icon-twitter2"></i></a><a href="https://www.facebook.com/pages/Stormpath/259202314149649" class="social-icon si-small si-borderless si-facebook"><i class="stp-icons stp-icon-facebook2"></i><i class="stp-icons stp-icon-facebook2"></i></a><a href="https://plus.google.com/117311343501729372771" class="social-icon si-small si-borderless si-gplus"><i class="stp-icons stp-icon-google_plus"></i><i class="stp-icons stp-icon-google_plus"></i></a><a href="https://www.linkedin.com/company/stormpath" class="social-icon si-small si-borderless si-linkedin"><i class="stp-icons stp-icon-linkedin2"></i><i class="stp-icons stp-icon-linkedin2"></i></a>
+</div></div>
+</div> </div>
+</div>
+</div>
+<div id="copyrights">
+<div class="container clearfix">
+<div class="col-md-12">
+Copyright 2017 Stormpath   |   All Rights Reserved   |   <a href="/privacy-policy/">Privacy Policy</a>   |   <a href="/terms-of-service/">Terms of Service</a> </div>
+</div>
+</div>
+</footer>
+</div> 
+ 
+ 
+ 
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQZZFW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-NQZZFW');</script>
+ 
+ <link rel='stylesheet' id='crayon-css' href='https://stormpath.com/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all'/>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.7'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201716'></script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/themes/stormpath/vendor/js/script-global.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='https://stormpath.com/wp-includes/js/wp-embed.min.js?ver=4.7.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/stormpath.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var stormpath_social_object = {"ajaxurl":"https:\/\/stormpath.com\/wp-admin\/admin-ajax.php","post_id":"2089"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/stormpath-social-media-widgets/widgets/js/social-media-counter.js?ver=4.7.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"stormpath"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.7.3'></script>
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
