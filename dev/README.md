@@ -40,6 +40,7 @@
 * [PostgreSQL](postgresql/README.md)
 * [OAUTH](oauth/README.md)
 * [JSON Web Token](jwt/README.md)
+* [SMS](sms/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
