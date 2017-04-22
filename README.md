@@ -12,3 +12,4 @@ Bookmarks of development and more...
 * [Video File Format(视频文件格式)](video-file-format/README.md)
 * [Electrical Home Appliance(家电)](jiadian/README.md)
 * [WLAN](wlan/README.md)
+* [家电](jiadian/README.md)
