@@ -41,6 +41,7 @@
 * [OAUTH](oauth/README.md)
 * [JSON Web Token](jwt/README.md)
 * [SMS](sms/README.md)
+* [Site Reliability Engineering](sre/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
