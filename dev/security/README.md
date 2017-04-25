@@ -2,6 +2,7 @@
 
 * HTTP
   * [关于Web安全，99%的网站都忽略了这些](https://blog.wilddog.com/?p=290)
+  * [Security Considerations](https://docs.angularjs.org/api/ng/service/$http)
 
 * JSON
   * [扯谈web安全之JSON](http://blog.csdn.net/hengyunabc/article/details/26305203)
