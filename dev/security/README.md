@@ -5,6 +5,7 @@
 
 * JSON
   * [扯谈web安全之JSON](http://blog.csdn.net/hengyunabc/article/details/26305203)
+  * [Anatomy of a Subtle JSON Vulnerability](http://haacked.com/archive/2008/11/20/anatomy-of-a-subtle-json-vulnerability.aspx/)
 
 * JSONP
   * [JSONP 安全攻防技术](http://blog.knownsec.com/2015/03/jsonp_security_technic/)
