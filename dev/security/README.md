@@ -17,6 +17,7 @@
 
 * JWT(JSON Web Token)
   * [Critical vulnerabilities in JSON Web Token libraries](https://www.chosenplaintext.ca/2015/03/31/jwt-algorithm-confusion.html)
+  * [Where to Store your JWTs – Cookies vs HTML5 Web Storage](https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage)
 
 * RESTful
   * [怎么做能提供RESTful的安全性？](http://www.oschina.net/question/1390076_230160)
