@@ -39,7 +39,7 @@
 * [CI](ci/README.md)
 * [PostgreSQL](postgresql/README.md)
 * [OAUTH](oauth/README.md)
-* [JSON Web Token](jwt/README.md)
+* [JSON Web Token(JWT)](jwt/README.md)
 * [SMS](sms/README.md)
 * [Site Reliability Engineering](sre/README.md)
 
