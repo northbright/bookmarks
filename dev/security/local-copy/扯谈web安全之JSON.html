@@ -1,0 +1,1503 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+     
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>  
+
+    
+
+    <script type="text/javascript">
+        var protocol = window.location.protocol;
+        document.write('<script type="text/javascript" src="' + protocol + '//csdnimg.cn/pubfooter/js/repoAddr2.js?v=' + Math.random() + '"></' + 'script>');
+    </script>
+
+  
+ <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+
+    <title>扯谈web安全之JSON - hengyunabc的专栏
+        - 博客频道 - CSDN.NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="前言JSON（JavaScript Object Notation），可以说是事实的浏览器，服务器交换数据的标准了。目测其它的格式如XML，或者其它自定义的格式会越来越少。为什么JSON这么流行？和JavaScript无缝对接是一个原因。还有一个重要原因是可以比较轻松的实现跨域。如果是XML，或者其它专有格式，则很难实现跨域，要通过flash之类来实现。任何一种数据格式，如" />
+    <script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+      <script type="text/javascript" src="http://static.blog.csdn.net/scripts/jquery-version.js"></script>
+    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+        <!--new top-->
+               <link rel="stylesheet" href="http://c.csdnimg.cn/public/common/toolbar/css/index.css">        <!--new top-->
+    
+      <!-- ad begin -->
+         <script language="javascript" type="text/javascript" src="http://ads.csdn.net/js/tracking.js"></script>
+    <!-- ad end-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/dark1/css/style.css?v=1.1" />
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/hengyunabc/rss/list" />
+    <link rel="shortcut icon" href="http://c.csdnimg.cn/public/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+ 
+
+
+<script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+</script>
+
+
+</head>
+<body>
+
+
+    <!-- 广告位开始 -->
+        
+    <!-- 广告位结束 -->
+
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://c.csdnimg.cn/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/hengyunabc">hengyunabc的专栏</a></h2>
+            <h3>日落黄金台金黄落日 -- 横云断岭</h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        
+     
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>           
+                <li id="btnContents"><a href="http://blog.csdn.net/hengyunabc?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/hengyunabc?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/hengyunabc/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>                
+            
+
+            </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "hengyunabc";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/hengyunabc";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";  
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+                        <div class="ad_class">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+
+<a href="http://bss.csdn.net/m/product/python_creative/index
+ ">
+<font color=blue><strong>【活动】Python创意编程活动开始啦！！！</strong></font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/70546865">
+<font color=red>CSDN日报20170423 ——《私活，永远解救不了自己屌丝的人生！》
+</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp
+
+<a href="http://blog.csdn.net/turingbooks/article/details/70237883">
+<font color=blue><strong>程序员4月书讯：Angular来了！</strong>
+</font></a>
+</div>                        </div>
+                        
+
+
+
+  
+<link href="http://static.blog.csdn.net/css/comment1.css" type="text/css" rel="stylesheet" />
+<link href="http://static.blog.csdn.net/css/style1.css" type="text/css" rel="stylesheet" />
+<script language='JavaScript' type='text/javascript' src='http://download.csdn.net/js/jquery.cookie.js'></script>
+<script type="text/javascript" src="http://c.csdnimg.cn/rabbit/search-service/main.js"></script>
+<link rel="stylesheet" href="http://static.blog.csdn.net/public/res-min/markdown_views.css?v=1.0" />
+<link rel="stylesheet" href="http://static.blog.csdn.net/css/category.css?v=1.0" />
+<script type="text/javascript" src="http://static.blog.csdn.net/public/res/bower-libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/web-storage-cache.min.js"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/replace.min.js"></script>
+
+<link rel="stylesheet" href="http://static.blog.csdn.net/code/prettify.css" />
+<script type="text/javascript" src="http://static.blog.csdn.net/code/prettify.js"></script>
+
+
+  <script type="text/ecmascript">
+      window.quickReplyflag = true;
+           
+            var isBole = false;
+            
+      
+      var fasrc="http://my.csdn.net/my/favorite/miniadd?t=%e6%89%af%e8%b0%88web%e5%ae%89%e5%85%a8%e4%b9%8bJSON&u=http://blog.csdn.net/hengyunabc/article/details/26305203"
+
+    </script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Original"></span>
+
+
+    <h1>
+        <span class="link_title"><a href="/hengyunabc/article/details/26305203">
+        扯谈web安全之JSON            
+        </a></span>
+    </h1>
+</div>
+
+   
+
+        <div class="article_manage clearfix">
+        <div class="article_l">
+            <span class="link_categories">
+            标签：
+              <a href='http://www.csdn.net/tag/json' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">json</a><a href='http://www.csdn.net/tag/js' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">js</a><a href='http://www.csdn.net/tag/javascript' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">javascript</a><a href='http://www.csdn.net/tag/web' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">web</a><a href='http://www.csdn.net/tag/%e5%ae%89%e5%85%a8' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">安全</a>
+            </span>
+        </div>
+        <div class="article_r">
+            <span class="link_postdate">2014-05-29 21:03</span>
+            <span class="link_view" title="阅读次数">17008人阅读</span>
+            <span class="link_comments" title="评论次数"> <a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(2)</span>
+            <span class="link_collect tracking-ad" data-mod="popu_171"> <a href="javascript:void(0);" onclick="javascript:collectArticle('%e6%89%af%e8%b0%88web%e5%ae%89%e5%85%a8%e4%b9%8bJSON','26305203');return false;" title="收藏">收藏</a></span>
+             <span class="link_report"> <a href="#report" onclick="javascript:report(26305203,2);return false;" title="举报">举报</a></span>
+
+        </div>
+    </div>
+    <div class="embody"  style="display:none" id="embody">
+        <span class="embody_t">本文章已收录于：</span>
+        <div class="embody_c" id="lib" value="{&quot;err&quot;:0,&quot;msg&quot;:&quot;ok&quot;,&quot;data&quot;:[]}"></div>
+    </div>
+    <style type="text/css">        
+            .embody{
+                padding:10px 10px 10px;
+                margin:0 -20px;
+                border-bottom:solid 1px #ededed;                
+            }
+            .embody_b{
+                margin:0 ;
+                padding:10px 0;
+            }
+            .embody .embody_t,.embody .embody_c{
+                display: inline-block;
+                margin-right:10px;
+            }
+            .embody_t{
+                font-size: 12px;
+                color:#999;
+            }
+            .embody_c{
+                font-size: 12px;
+            }
+            .embody_c img,.embody_c em{
+                display: inline-block;
+                vertical-align: middle;               
+            }
+             .embody_c img{               
+                width:30px;
+                height:30px;
+            }
+            .embody_c em{
+                margin: 0 20px 0 10px;
+                color:#333;
+                font-style: normal;
+            }
+    </style>
+    <script  type="text/javascript">
+        $(function () {
+            try
+            {
+                var lib = eval("("+$("#lib").attr("value")+")");
+                var html = "";
+                if (lib.err == 0) {
+                    $.each(lib.data, function (i) {
+                        var obj = lib.data[i];
+                        //html += '<img src="' + obj.logo + '"/>' + obj.name + "&nbsp;&nbsp;";
+                        html += ' <a href="' + obj.url + '" target="_blank">';
+                        html += ' <img src="' + obj.logo + '">';
+                        html += ' <em><b>' + obj.name + '</b></em>';
+                        html += ' </a>';
+                    });
+                    if (html != "") {
+                        setTimeout(function () {
+                            $("#lib").html(html);                      
+                            $("#embody").show();
+                        }, 100);
+                    }
+                }      
+            } catch (err)
+            { }
+            
+        });
+    </script>
+      <div class="category clearfix">
+        <div class="category_l">
+           <img src="http://static.blog.csdn.net/images/category_icon.jpg">
+            <span>分类：</span>
+        </div>
+        <div class="category_r">
+                    <label  onclick="GetCategoryArticles('2283355','hengyunabc','top','26305203');">
+                        <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">javascript<em>（3）</em></span>
+                      <img class="arrow-down" src="http://static.blog.csdn.net/images/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="http://static.blog.csdn.net/images/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a  href="http://blog.csdn.net/hengyunabc/article/category/2283355"  target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_2283355">                            
+                            </ul>
+                        </div>
+                    </label>                    
+                    <label  onclick="GetCategoryArticles('1775981','hengyunabc','top','26305203');">
+                        <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">安全<em>（6）</em></span>
+                      <img class="arrow-down" src="http://static.blog.csdn.net/images/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="http://static.blog.csdn.net/images/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a  href="http://blog.csdn.net/hengyunabc/article/category/1775981"  target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_1775981">                            
+                            </ul>
+                        </div>
+                    </label>                    
+                    <label  onclick="GetCategoryArticles('2301493','hengyunabc','top','26305203');">
+                        <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">xss<em>（1）</em></span>
+                      <img class="arrow-down" src="http://static.blog.csdn.net/images/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="http://static.blog.csdn.net/images/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a  href="http://blog.csdn.net/hengyunabc/article/category/2301493"  target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_2301493">                            
+                            </ul>
+                        </div>
+                    </label>                    
+                    <label  onclick="GetCategoryArticles('2036453','hengyunabc','top','26305203');">
+                        <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">web<em>（1）</em></span>
+                      <img class="arrow-down" src="http://static.blog.csdn.net/images/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="http://static.blog.csdn.net/images/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a  href="http://blog.csdn.net/hengyunabc/article/category/2036453"  target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_2036453">                            
+                            </ul>
+                        </div>
+                    </label>                    
+        </div>
+    </div>
+    <script   type="text/javascript" src="http://static.blog.csdn.net/scripts/category.js"></script>  
+        <div   class="bog_copyright">         
+            <p  class="copyright_p" >版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
+        </div>
+
+  
+
+  
+  
+     
+
+<div id="article_content" class="article_content">
+
+<h2>前言</h2>
+<p><a target="_blank" target="_blank" href="http://www.json.org/">JSON</a>（JavaScript Object Notation），可以说是事实的浏览器，服务器交换数据的标准了。目测其它的&#26684;式如XML，或者其它自定义的&#26684;式会越来越少。<br>
+为什么JSON这么流行？<br>
+和JavaScript无缝对接是一个原因。<br>
+还有一个重要原因是可以比较轻松的实现跨域。如果是XML，或者其它专有&#26684;式，则很难实现跨域，要通过flash之类来实现。</p>
+<p><br>
+任何一种数据&#26684;式，如何解析处理不当，都会存在安全漏洞。下面扯谈下JSON相关的一些安全东东。<br>
+在介绍之前，先来提几个问题：<br>
+</p>
+<ul>
+<li>为什么XMLHttpRequest要遵守同源策略？</li><li>XMLHttpRequest 请求会不会带cookie?</li><li>&lt;script scr=&quot;...&quot;&gt; 的标签请求会不会带cookie？</li><li>向一个其它域名的网站提交一个form，会不会带cookie？</li><li>CORS请求能不能带cookie？</li></ul>
+<h2>JSON注入</h2>
+有的时候，可能是为了方便，有人会手动拼接下JSON，但是这种随手代码，却可能带来意想不到的安全隐患。<br>
+<strong>第一种方式，利用字符串拼接：</strong><br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_1_1559649" name="code" class="java">		String user = &quot;test01&quot;;
+		String password = &quot;12345&#39;, admin:&#39;true&quot;;
+		String json = &quot;{user:&#39;%s&#39;, password:&#39;%s&#39;}&quot;;
+		System.out.println(String.format(json, user, password));
+		//{user:&#39;test01&#39;, password:&#39;12345&#39;, admin:&#39;true&#39;}</pre><br>
+用户增加了管理员权限。<br>
+<strong>第二种，利用Parameter pollution， 类&#20284;http parameter pollution</strong><br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_2_4132377" name="code" class="java">		String string = &quot;{user:&#39;test01&#39;,password:&#39;hello&#39;, password:&#39;world&#39;}&quot;;
+		JSONObject parse = JSON.parseObject(string);
+		String password = parse.getString(&quot;password&quot;);
+		System.out.println(password);
+		//world</pre>当JSON数据key重复了会怎么处理？大部分JSON解析库都是后面的参数覆盖了前面的。
+<p></p>
+<p><br>
+<strong>下面的演示了修改别人密码的例子：</strong><br>
+</p>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_3_2910878" name="code" class="java">		//user%3Dtest01%26password%3D12345%27%2Cuser%3Dtest02&quot;
+		//user=test01&amp;password=12345&#39;,user=test02
+		HttpServletRequest request = null;
+		String user = request.getParameter(&quot;user&quot;);
+		//检查test01是否登陆
+		String password = request.getParameter(&quot;password&quot;);
+		String content = &quot;{user:&#39;&quot; + user + &quot;&#39;, password:&#39;&quot; + password + &quot;&#39;}&quot;;
+		 
+		User user = JSON.parseObject(content, User.class);
+		//{&quot;password&quot;:&quot;12345&quot;,&quot;user&quot;:&quot;test02&quot;}
+		updateDb(user);</pre><br>
+<strong>所以说，不要手动拼接JSON字符串</strong><br>
+<br>
+<p></p>
+<h2>浏览器端应该如何处理JSON数据？</h2>
+像eval这种方式，自然是不能采用的。
+<p></p>
+<p>现在的浏览器都提供了原生的方法 JSON.parse(str) 来转换为JS对象。<br>
+如果是IE8之前的浏览器，要使用这个库来解析：https://github.com/douglascrockford/JSON-js<br>
+参考：http://zh.wikipedia.org/wiki/JSON#.E5.AE.89.E5.85.A8.E6.80.A7.E5.95.8F.E9.A1.8C<br>
+JQuery里内置了JSON解析库</p>
+<p><br>
+</p>
+<h2>JSONP callback注入</h2>
+简单介绍jsonp的工作原理。<br>
+<h3>jsonp工作原理：</h3>
+用js在document上插入一个&lt;script&gt;标签，标签的src指向远程服务器的API地址。客户端和服务器约定一个回调函数的名字，然后服务器返回回调函数包裹着的数据，然后浏览器执行回调函数，取得数据。<br>
+比如jquery是这样子实现的：<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_4_1689379" name="code" class="javascript">var url = &#39;http://localhost:8080/testJsonp?callback=?&#39;;
+$.getJSON(url, function(data){
+    alert(data)
+});</pre>jquery自动把?转成了一个带时间戳特别的函数（防止缓存）：<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_5_4055930" name="code" class="html">  http://localhost:8080/testJsonp?callback=jQuery1102045087050669826567_1386230674292&amp;_=1386230674293</pre>相当于插入了这么一个&lt;script&gt;标签：<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_6_882584" name="code" class="html">&lt;script src=&quot;http://localhost:8080/testJsonp?callback=jQuery1102045087050669826567_1386230674292&amp;_=1386230674293&quot;&gt;&lt;/script&gt;</pre>服务器返回的数据是这样子的：<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_7_4469851" name="code" class="javascript">jQuery1102045087050669826567_1386230674292({&#39;name&#39;:&#39;abc&#39;, &#39;age&#39;:18})</pre>浏览器会执行直接执行这个JS函数。<br>
+<strong>所以，如果在callback函数的名字上做点手脚，可以执行任意的JS代码。所以说callback名字一定要严&#26684;过滤。</strong><br>
+当然，callback函数的名字通常是程序自己控制的，但是不能排除有其它被利用的可能。<br>
+那么callback函数的名字，如何过滤？<strong>应当只允许合法的JS函数命名</strong>，用正则来匹配应该是这样子的：<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_8_2168557" name="code" class="plain">^[0-9a-zA-Z_.]+$</pre>正则可能比较慢，可以写一个函数来判断：<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_9_4535107" name="code" class="java">	static boolean checkJSONPCallbackName(String name) {
+		try {
+			for (byte c : name.getBytes(&quot;US-ASCII&quot;)) {
+				if ((c &gt;= &#39;0&#39; &amp;&amp; c &lt;= &#39;9&#39;) || (c &gt;= &#39;a&#39; &amp;&amp; c &lt;= &#39;z&#39;) || (c &gt;= &#39;A&#39; &amp;&amp; c &lt;= &#39;Z&#39;) || c == &#39;_&#39;)
+				{
+					continue;
+				} else {
+					return false;
+				}
+			}
+			return true;
+		} catch (Throwable t) {
+			return false;
+		}
+	}</pre><br>
+实际上对callback函数名字进行严&#26684;检验还有其它的一个好处，就是防范了很多UTF-7编码攻击。
+<p></p>
+<p>因为UTF-7编码的头部都是带有特殊字符的，如&quot;&#43;/v8&quot;，&quot;&#43;/v9&quot;，这样就过滤掉非法编码的请求了。<br>
+</p>
+<p><br>
+</p>
+<p>update: 2016-3-22&nbsp;</p>
+<p>spring 4.1里有一个AbstractJsonpResponseBodyAdvice ，里面是用正则匹配来判断是否合法的jsonp函数名。</p>
+<p><pre name="code" class="java">public abstract class AbstractJsonpResponseBodyAdvice extends AbstractMappingJacksonResponseBodyAdvice {
+
+	/**
+	 * Pattern for validating jsonp callback parameter values.
+	 */
+	private static final Pattern CALLBACK_PARAM_PATTERN = Pattern.compile(&quot;[0-9A-Za-z_\\.]*&quot;);</pre><br>
+<br>
+</p>
+<h2>jsonp的请求的验证</h2>
+jsonp在使用的时候，还有容易犯的错误是没有验证用户的身份。<br>
+<strong>第一，操作是否是用户自己提交的，而不是别的网页用&lt;script&gt;标签，或者用&lt;form&gt;提交的</strong><br>
+所以要检查request的refer，或者验证token。这个实际是CSRF防护的范畴，但是很容易被忽略。<br>
+<strong>第二，要验证用户的权限。</strong><br>
+很多时候，可能只是验证了用户是否登录 。却没有仔细判断用户是否有权限。<br>
+比如通过JSONP请求修改了别的用户的数据。<br>
+所以说，一定要难证来源。判断refer，验证用户的身份。<br>
+到乌云上搜索，可以找到不少类&#20284;的漏洞，都是因为没有严&#26684;验证用户的权限。<a target="_blank" target="_blank" href="http://www.wooyun.org/searchbug.php?q=jsonp">http://www.wooyun.org/searchbug.php?q=jsonp</a><br>
+<br>
+<h2>JSON hijacking</h2>
+在JS里可以为对象定义一些setter函数，这样的话就存在了可以利用的漏洞。<br>
+比如在浏览器的JS Console里执行：<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_10_3346628" name="code" class="javascript">window.__defineSetter__(&#39;x&#39;, function() {
+alert(&#39;x is being assigned!&#39;);
+});
+window.x=1;</pre>会很神奇地弹出一个alert窗口，说明我们定义的setter函数起作用了。<br>
+结合这个，当利用&lt;script&gt;标签请求外部的一个JSON API时，如果返回的是数组型，就可以利用窃取数据。<br>
+比如有这样的一个API：<br>
+http://www.test.com/friends<br>
+返回的数据是JSON Array：<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_11_6585231" name="code" class="javascript">[{&#39;user&#39;:&#39;test01&#39;,&#39;age&#39;:18},{&#39;user&#39;:&#39;test02,&#39;age&#39;:19},{&#39;user&#39;:&#39;test03&#39;,&#39;age&#39;:20}]</pre>在攻击页面上插入以下的代码，就可以获取到用户的所有的朋友的信息。<br>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_12_2332089" name="code" class="html">&lt;script&gt;
+  Object.prototype.__defineSetter__(&#39;user&#39;,function(obj)
+      {alert(obj);
+    }
+  );
+&lt;/script&gt;
+&lt;script src=&quot;http://www.test.com/friends&quot;&gt;&lt;/script&gt;</pre>这个漏洞在前几年很流行，比如qq邮箱的一个漏洞：http://www.wooyun.org/bugs/wooyun-2010-046
+<p></p>
+<p>现在的浏览器都已经修复了，可以下载一个Firefox3.0版本来测试下。目前的浏览器在解析JSON Array字符串的时候，不再去触发setter函数了。但对于object.xxx 这样的设置，还是会触发。</p>
+<p></p>
+<h2>IE的utf-7编码解析问题</h2>
+这个漏洞也曾经很流行。利用的是老版的IE可以解析utf-7编码的字符串或者文件，绕过服务器的过滤。举个乌云上的例子：http://www.wooyun.org/bugs/wooyun-2011-01293
+<p></p>
+<p>有这样的一个jsonp调用接口：<br>
+http://jipiao.taobao.com/hotel/remote/livesearch.do?callback=%2B%2Fv8%20%2BADwAaAB0AG0APgA8AGIAbwBkAHkAPgA8AHMAYwByAGkAcAB0AD4AYQBsAGUAcgB0ACgAMQApADsAPAAvAHMAYwByAGkAcAB0AD4APAAvAGIAbwBkAHkAPgA8AC8AaAB0AG0APg<br>
+url decoder之后是：<br>
+http://jipiao.taobao.com/hotel/remote/livesearch.do?callback=&#43;/v8 &#43;ADwAaAB0AG0APgA8AGIAbwBkAHkAPgA8AHMAYwByAGkAcAB0AD4AYQBsAGUAcgB0ACgAMQApADsAPAAvAHMAYwByAGkAcAB0AD4APAAvAGIAbwBkAHkAPgA8AC8AaAB0AG0APg<br>
+因为jsonp调用是直接返回callback包装的数据，所以实际上，上面的请求直接返回的是：<br>
+&#43;/v8 &#43;ADwAaAB0AG0APgA8AGIAbwBkAHkAPgA8AHMAYwByAGkAcAB0AD4AYQBsAGUAcgB0ACgAMQApADsAPAAvAHMAYwByAGkAcAB0AD4APAAvAGIAbwBkAHkAPgA8AC8AaAB0AG0APg-(调用结果数据)<br>
+IE做了UTF-7解码之后数据是这样子的：<br>
+</p>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_13_1982642" name="code" class="html">&lt;htm&gt;&lt;body&gt;&lt;script&gt;alert(1);&lt;/script&gt;&lt;/body&gt;&lt;/htm&gt;(调用结果数据)</pre><br>
+于是，就执行了XSS。<br>
+另外用IFrame也是可以的。但是我在IE8上测试，url的后缀需要是html才会触发。<br>
+IE把没有声明返回Content-Type的请求当做了&quot;text/html&quot;类型的，然后解析就有问题了。<strong>只要服务器端显式设置了Content-Type为&quot;application/json&quot;，则IE不会识别编码，就不会触发漏洞。所以说服务器端的Content-Type一定要设置对。</strong>尽管设置之后调试有点麻烦，但是却大大提高了安全性。
+<p></p>
+<p>JSON&#26684;式设置为：&quot;application/json&quot;<br>
+JavaScript设置为：&quot;application/x-javascript&quot;<br>
+JavaScript还有一些设置为：&quot;text/javascript&quot;等，都是不规范的。<br>
+</p>
+<h2>其它的一些东东</h2>
+<h3>MongoDB注入</h3>
+<p>这个实际上就是JSON注入，简单的字符串拼接，可能会引发各种数据被修改的问题。</p>
+<h3>JSON解析库的问题</h3>
+<p>有些JSON库解析库支持循环引用，那么是否可以构造特别的数据，导致其解析失败？从而引起CPU使用过高，拒绝服务等问题？</p>
+<p>FastJSON的一个StackOverflowError Bug：</p>
+<p>https://github.com/alibaba/fastjson/issues/76<br>
+</p>
+<p>有些JSON库解析有问题：</p>
+<p>http://www.freebuf.com/articles/web/10672.html</p>
+<h3>JSON-P</h3>
+<p>有人提出一个<a target="_blank" target="_blank" href="http://www.json-p.org/">JSON-P</a>的规范，但是貌&#20284;目前都没有浏览器有支持这个的。<br>
+原理是对于JSONP请求，浏览器可以要求服务器返回的MIME是&quot;application/json-p&quot;，这样可以严&#26684;校验是否合法的JSON数据。<br>
+</p>
+<h3>CORS（Cross-Origin Resource Sharing）</h3>
+<p>为了解决跨域调用的安全性问题，目前实际上可用的方案是CORS：</p>
+<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS<br>
+http://www.w3.org/TR/cors/<br>
+</p>
+<p>原理是通过服务器端设置允许跨域调用，然后浏览器就允许XMLHttpRequest跨域调用了。</p>
+<p>CORS可以发起GET/POST请求，不像JSONP，只能发起GET请求。</p>
+<p><strong>默认情况下，CORS请求是不带cookie的。</strong></p>
+<p>我个人认为，这个方案也很蛋疼，一是需要服务器配置，二是协议复杂。浏览器如果不能确定是否能够跨域调用，还要先进行一个Preflight Request。。</p>
+<p><strong>实际上，即使服务器不允许CORS，XMLHttpRequest请求实际上是发送出去，并且返回数据的了，只是浏览器没有让JS环境拿到而已。</strong><br>
+</p>
+<p>另外，我认为有另外一种数据泄露的可能：黑客可能控制了某个路由，他不能随意抓包，但是他可以在回应头里插入一些特别的头部，比如：</p>
+<p></p>
+<pre code_snippet_id="369437" snippet_file_name="blog_20140529_14_1284531" name="code" class="plain">Access-Control-Allow-Credentials: true </pre>那么，这时XMLHttpRequest请求就是带cookie的了。
+<p></p>
+<h2>最初的问题</h2>
+<p>回到最初的问题：</p>
+<p></p>
+<ul>
+<li>为什么XMLHttpRequest要遵守同源策略？</li></ul>
+<div><span style="white-space:pre"></span>即使XMLHttpRequest是不带Cookie的，也是有可能造成数据泄露的。比如内部网站是根据IP限制访问的，如果XMLHttpRequest不遵守同源策略，那么攻击者可以在用户浏览网页的时候，发起请求，取得内部网站数据。</div>
+<ul>
+<li>XMLHttpRequest 请求会不会带cookie?</li></ul>
+<div><span style="white-space:pre"></span>同域情况下会，不同域情况下不会。如果服务器设置Access-Control-Allow-Credentials: true ，也是可以跨域带Cookie的。</div>
+<ul>
+<li>&lt;script scr=&quot;...&quot;&gt; 的标签请求会不会带cookie？</li></ul>
+<div><span style="white-space:pre"></span>会。</div>
+<ul>
+<li>向一个其它域名的网站提交一个form，会不会带cookie？</li></ul>
+<div><span style="white-space:pre"></span>会。</div>
+<h2>总结：</h2>
+<div>
+<ul>
+<li>禁止手动拼接JSON字符串，一律应当用JSON库输出。也不应使用自己实现的ObjectToJson等方法，因为可能有各种没有考虑到的地方。</li><li>jsonp请求的callback要严&#26684;过滤，只允许&quot;_&quot;，0到9，a-z, A-Z，即合法的javascript函数的命名。</li><li>jsonp请求也要判断合法性，比如用户是否登陆（这点很容易被忽略）。</li><li>设置好Content-Type（这点对于调试不方便，但是提高了安全性）。</li><li>以jsonp方式调用第三方的接口，实际相当于引入了第三方的JS代码，要慎重。</li></ul>
+</div>
+<p></p>
+<h2>参考：</h2>
+<p>http://www.json.org/</p>
+<p>http://www.slideshare.net/wurbanski/nosql-no-security<br>
+</p>
+<p>https://github.com/douglascrockford/JSON-js<br>
+</p>
+<p>http://toolswebtop.com/ &nbsp; &nbsp; &nbsp;在线编码转换，可以转换UTF-7 &nbsp; &nbsp;<br>
+</p>
+<p>http://www.thespanner.co.uk/2011/05/30/json-hijacking/<br>
+</p>
+<p>http://www.thespanner.co.uk/2009/11/23/bypassing-csp-for-fun-no-profit/<br>
+</p>
+<p>http://stackoverflow.com/questions/1830050/why-same-origin-policy-for-xmlhttprequest<br>
+</p>
+   
+</div>
+
+
+
+
+<!-- Baidu Button BEGIN -->
+
+
+
+
+<div class="bdsharebuttonbox tracking-ad" style="float: right;" data-mod="popu_172">
+<a href="#" class="bds_more" data-cmd="more" style="background-position:0 0 !important; background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=d754dcc0.png) !important"></a>
+<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"  style="background-position:0 -52px !important"></a>
+<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"style="background-position:0 -104px !important"></a>
+<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"style="background-position:0 -260px !important"></a>
+<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"style="background-position:0 -208px !important"></a>
+<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"style="background-position:0 -1612px !important" ></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<!-- Baidu Button END -->
+
+   <link rel="stylesheet" href="http://static.blog.csdn.net/css/blog_detail.css" />
+
+    
+<!--172.16.140.15-->
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<script type="text/javascript">
+    var fromjs = $("#fromjs");
+    if (fromjs.length > 0) {
+            $("#fromjs .markdown_views pre").addClass("prettyprint");
+            prettyPrint();
+
+            $('pre.prettyprint code').each(function () {
+                var lines = $(this).text().split('\n').length;
+                var $numbering = $('<ul/>').addClass('pre-numbering').hide();
+                $(this).addClass('has-numbering').parent().append($numbering);
+                for (i = 1; i <= lines; i++) {
+                    $numbering.append($('<li/>').text(i));
+                };
+                $numbering.fadeIn(1700);
+            });
+
+            $('.pre-numbering li').css("color", "#999");
+        }
+
+    
+
+</script>
+
+ 
+
+
+        <div id="digg" ArticleId="26305203" >
+            <dl id="btnDigg" class="digg digg_disable"  onclick="btndigga();">
+               
+                 <dt>顶</dt>
+                <dd>3</dd>
+            </dl>
+           
+              
+            <dl id="btnBury" class="digg digg_disable"  onclick="btnburya();">
+              
+                  <dt>踩</dt>
+                <dd>0</dd>               
+            </dl>
+            
+        </div>
+     <div class="tracking-ad" data-mod="popu_222"><a href="javascript:void(0);" >&nbsp;</a>   </div>
+    <div class="tracking-ad" data-mod="popu_223"> <a href="javascript:void(0);" >&nbsp;</a></div>
+    <script type="text/javascript">
+                function btndigga() {
+                    $(".tracking-ad[data-mod='popu_222'] a").click();
+                }
+                function btnburya() {
+                    $(".tracking-ad[data-mod='popu_223'] a").click();
+                }
+            </script>
+
+   <ul class="article_next_prev">
+                <li class="prev_article"><span  onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian']);location.href='/hengyunabc/article/details/26898657';">上一篇</span><a href="/hengyunabc/article/details/26898657" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">利用hsdis和JITWatch查看分析HotSpot JIT compiler生成的汇编代码</a></li>
+                <li class="next_article"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian']);location.href='/hengyunabc/article/details/27830183';">下一篇</span><a href="/hengyunabc/article/details/27830183" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">有意思的游戏：Google XSS Game</a></li>
+    </ul>
+
+    <div style="clear:both; height:10px;"></div>
+
+
+        <div class="similar_article"  style="display:none">
+                <h4>我的同类文章</h4>
+                <div class="similar_c"style="margin:20px 0px 0px 0px">
+                    <div class="similar_c_t">
+                                <label class="similar_cur">
+                                    <span  style="cursor:pointer"  onclick="GetCategoryArticles('2283355','hengyunabc','foot','26305203');">javascript<em>（3）</em></span>
+                                </label>
+                                <label class="">
+                                    <span  style="cursor:pointer"  onclick="GetCategoryArticles('1775981','hengyunabc','foot','26305203');">安全<em>（6）</em></span>
+                                </label>
+                                <label class="">
+                                    <span  style="cursor:pointer"  onclick="GetCategoryArticles('2301493','hengyunabc','foot','26305203');">xss<em>（1）</em></span>
+                                </label>
+                                <label class="">
+                                    <span  style="cursor:pointer"  onclick="GetCategoryArticles('2036453','hengyunabc','foot','26305203');">web<em>（1）</em></span>
+                                </label>
+                    </div>
+                   
+                    <div class="similar_wrap tracking-ad" data-mod="popu_141"  style="max-height:195px;">
+                        <a href="http://blog.csdn.net" style="display:none">http://blog.csdn.net</a>
+                        <ul class="similar_list fl">                          
+                        </ul>
+
+                        <ul class="similar_list fr">                           
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+    <script  type="text/javascript">
+        $(function () {
+            GetCategoryArticles('2283355', 'hengyunabc','foot','26305203');
+        });
+    </script>
+      
+</div>
+
+     <div>
+                <script type="text/javascript">
+                    /*博客内容页下方Banner1-960*90，创建于2016-12-13*/
+                    var cpro_id = "u2843955";
+                </script>
+                <script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script>
+    </div>
+
+<div id="suggest"></div>
+         <script  language="javascript" type='text/javascript'>     
+             $(function(){
+                 $.get("/hengyunabc/svc/GetSuggestContent/26305203",function(data){
+                     $("#suggest").html(data);
+                 });     
+             });             
+         </script>  
+
+
+<style>
+.blog-ass-articl dd {
+color: #369;
+width: 99%; /*修改行*/
+float: left;
+overflow: hidden;
+font: normal normal 12px/23px "SimSun";
+height: 23px;
+margin: 0;
+padding: 0 0 0 10px;
+margin-right: 30px;
+background: url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;
+}
+</style>
+
+ <link rel="stylesheet" href="http://static.blog.csdn.net/css/replace.css"/>
+<div id="relate" data-mod="popu_218"  class="tracking-ad">
+        <div class="relate_t">
+            <h3><span>参考知识库</span></h3>
+        </div>
+        <div class="relate_c">
+        </div>
+</div>
+ 
+
+<dl class="blog-ass-articl" id="res-relatived" > 
+    <div class="embody embody_b" id="libkeyparent"  style="display:none">
+            <span class="embody_t">更多资料请参考：</span>
+            <div class="embody_c" id="libkey"></div>
+    </div>
+
+
+     <dt><span>猜你在找</span></dt>    
+
+
+   
+
+
+    <div id="adCollege" style="width: 42%;float: left;"> 
+        <script src="http://csdnimg.cn/jobreco/job_reco.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+            csdn.position.showEdu({
+                sourceType: "blog",
+                searchType: "detail",
+                searchKey: "26305203",
+                username: "",
+                recordcount: "5",
+                containerId: "adCollege" //容器DIV的id。 
+            });
+            
+            setEduLoc();
+
+            function setEduLoc() {               
+                var edus = $("#adCollege div dd a");
+                if (edus.length == 0) {
+                    setTimeout(function () {
+                        setEduLoc();
+                    }, 500);
+                }
+                else {
+                    var eduLoc = "?ref=blog&loc=0";
+                    $.each(edus, function (index,item) {
+                        var href = $(this).attr("href") + eduLoc;
+                        $(this).attr("href", href);
+                    });
+                }
+            }
+
+        </script> 
+    </div>  
+
+    
+     <div id="res"  data-mod="popu_36"  class="tracking-ad" style="width: 42%;float: left;margin-right: 30px;"></div>
+   
+</dl>
+
+
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function () {
+            var searchtitletags = '扯谈web安全之JSON' + ',' + $("#tags").html();
+            searchService({
+                index: 'blog',
+                query: searchtitletags,
+                from: 5,
+                size: 5,
+                appendTo: '#res',
+                url: 'recommend',
+                his: 2,
+                client: "blog_cf_enhance",
+                tmpl: '<dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="#{ url }" title="#{ title }" strategy="#{ strategy }">#{ title }</a></dd>'
+            });
+        }, 500);
+    });    
+
+ </script>  
+
+
+    <div id="ad_cen">        
+                    <script type="text/javascript">
+                        /*博客内容页下方Banner-728*90，创建于2014-7-3*/
+                        var cpro_id = "u1607657";
+                    </script>
+                    <script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script>
+    </div>  
+
+
+<div class="comment_class">
+    <div id="comment_title" class="panel_head">
+        <span class="see_comment">查看评论</span><a name="comments"></a></div>
+    <div id="comment_list">
+    </div>
+    <div id="comment_bar">
+    </div>
+    <div id="comment_form">
+    </div>
+    <div class="announce">
+        * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+</div>
+
+<script type="text/javascript">
+    var fileName = '26305203';
+    var commentscount = 2;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+<div id="report_dialog">
+</div>
+
+<div id="d-top"  style="bottom:60px;">
+
+        <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="http://static.blog.csdn.net/images/blog-icon-reply.png" alt="快速回复">
+        </a>    
+    <a id="d-top-a" class="btn btn-top backtop"  style="display: none;" title="返回顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])" style="">         
+         <img src="http://static.blog.csdn.net/images/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#ad_frm_0").height("90px");
+        
+        setTimeout(function(){
+            $("#ad_frm_2").height("200px");
+        },1000);    
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+
+
+<div class="tag_list" style="display:none"></div>
+  <script  language="javascript" type='text/javascript'>     
+      $(function(){
+              setTimeout(function(){
+                  $.get("/hengyunabc/svc/GetTagContent",function(data){
+                      $(".tag_list").html(data).show();
+                  });     
+              });
+          },500);                       
+ </script> 
+
+
+<div id="pop_win" style="display:none ;position: absolute; z-index: 10000; border: 1px solid rgb(220, 220, 220); top: 222.5px; left: 630px; opacity: 1; background: none 0px 0px repeat scroll rgb(255, 255, 255);">
+    
+</div>
+<div id="popup_mask"></div>
+<style>
+    #popup_mask
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+        left: 0px;
+        top: 0px;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+        display: none;
+    }
+
+</style>
+
+
+
+
+<script type="text/javascript">
+    $(function(){        
+        
+        setTimeout(function(){
+            $(".comment_body:contains('回复')").each(function(index,item){
+                var u=$(this).text().split('：')[0].toString().replace("回复","")
+                var thisComment=$(this);
+                if(u)
+                {
+                    $.getJSON("https://passport.csdn.net/get/nick?callback=?", {users: u}, function(a) {
+                        if(a!=null&&a.data!=null&&a.data.length>0)
+                        {
+                            nick=a.data[0].n; 
+                            if(u!=nick)
+                            {
+                                thisComment.text(thisComment.text().replace(u,nick));  
+                            }
+                        }       
+                    });  
+                }
+            });         
+
+        },200);  
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },5000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },10000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },15000);
+        
+        setTimeout(function(){
+            $("a img[src='http://js.tongji.linezing.com/stats.gif']").parent().css({"position":"absolute","left":"50%"});
+        },300);
+    });
+
+    function loginbox(){
+        var $logpop=$("#pop_win");
+        $logpop.html('<iframe src="https://passport.csdn.net/account/loginbox?service=http://static.blog.csdn.net/callback.htm" frameborder="0" height="600" width="400" scrolling="no"></iframe>');
+
+        $('#popup_mask').css({
+            opacity: 0.5,
+            width: $( document ).width() + 'px',
+            height:  $( document ).height() + 'px'
+        });
+        $('#popup_mask').css("display","block");
+ 
+        $logpop.css( {
+            top: ($( window ).height() - $logpop.height())/ 2  + $( window 
+       ).scrollTop() + 'px',
+            left:($( window ).width() - $logpop.width())/ 2
+        } );
+ 
+        setTimeout( function () {
+            $logpop.show();
+            $logpop.css( {
+                opacity: 1
+            } );
+        }, 200 );
+ 
+        $('#popup_mask').unbind("click");
+        $('#popup_mask').bind("click", function(){
+            $('#popup_mask').hide();
+            var $clopop = $("#pop_win");
+            $("#common_ask_div_sc").css("display","none");
+            $clopop.css( {
+                opacity: 0
+            } );
+            setTimeout( function () {
+                $clopop.hide();
+            }, 350 );
+            return false;
+        });
+    }   
+
+</script>
+ <script language="javascript" type="text/javascript" src="http://ads.csdn.net/js/async_new.js"></script>      
+
+
+
+
+                        <div class="clear">
+                        </div>
+                    </div>                   
+                
+            </div>
+                   
+           <div id="side">
+               
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/hengyunabc" target="_blank">
+    <img src="http://avatar.csdn.net/9/8/7/1_hengyunabc.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/hengyunabc" class="user_name" target="_blank">hengyunabc</a></span>
+</div>
+<div class="interact">
+
+    <a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+
+ <a href="javascript:void(0);" class="letter"  title="[发私信]" onclick="window.open('http://msg.csdn.net/letters/model?receiver=hengyunabc','_blank','height=350,width=700');_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>  
+</div>
+<div id="blog_medal">
+                <div id="bms_box">
+                                            <a  target="_blank">
+                                                    <img src="http://c.csdnimg.cn/jifen/images/xunzhang/xunzhang/chizhiyiheng.png" onmouseover="m_over_m(this,4)" onmouseout="m_out_m()" alt="1" >
+                                            </a>
+               </div>
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>1271442次</span></li>
+    <li>积分：<span>10628</span> </li>    
+    <li >等级： <span style="position:relative;display:inline-block;z-index:1" >
+            <img src="http://c.csdnimg.cn/jifen/images/xunzhang/jianzhang/blog7.png" alt="" style="vertical-align: middle;" id="leveImg">
+            <div id="smallTittle" style=" position: absolute;  left: -24px;  top: 25px;  text-align: center;  width: 101px;  height: 32px;  background-color: #fff;  line-height: 32px;  border: 2px #DDDDDD solid;  box-shadow: 0px 2px 2px rgba (0,0,0,0.1);  display: none;   z-index: 999;">
+            <div style="left: 42%;  top: -8px;  position: absolute;  width: 0;  height: 0;  border-left: 10px solid transparent;  border-right: 10px solid transparent;  border-bottom: 8px solid #EAEAEA;"></div>
+            积分：10628 </div>
+        </span>  </li>
+    <li>排名：<span>第1312名</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>125篇</span></li>
+    <li>转载：<span>29篇</span></li>
+    <li>译文：<span>2篇</span></li>
+    <li>评论：<span>305条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="button" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {           
+            search();
+        });
+
+        $("#frmSearch").submit(function () {
+            search();
+            return false;
+        });
+
+        function search()
+        {
+            var url = "http://so.csdn.net/so/search/s.do?q=" + encodeURIComponent($("#inputSearch").val()) + "&u=" + username + "&t=blog";
+            window.location.href = url;
+        }   
+    });
+</script><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">    
+                 <li>
+                    <a href="/hengyunabc/article/category/834255" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Java</a><span>(65)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1057652" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">C++</a><span>(17)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1749641" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">spring</a><span>(8)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/6165141" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">spring-boot</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1760297" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">jvm</a><span>(5)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/832375" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Python</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/765059" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Linux</a><span>(8)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/744493" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Qt</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/639901" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">实践点滴</a><span>(12)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/739366" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">网络编程</a><span>(9)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/739367" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">算法</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/758127" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">虚拟机</a><span>(4)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/717066" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">读书笔记</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/739365" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">面试笔试相关</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/911559" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">MongoDB</a><span>(6)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/917723" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">代码</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1103787" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Go</a><span>(4)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1180963" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">mysql</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1187314" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">redis</a><span>(5)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1182314" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">cpu</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1190683" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">序列化</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1224033" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Unicode</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1445855" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">ActiveMQ</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1456889" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">资料</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1764879" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">tomcat</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1775981" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">安全</a><span>(7)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1866065" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">缓存</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1885671" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">zookeeper</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1911703" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">lua</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1915015" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">分布式</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/1919367" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">并行</a><span>(7)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2036445" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">rest</a><span>(0)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2036453" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">web</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2068883" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">memcached</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2211205" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">http</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2240537" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">push</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2254133" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">ios</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2265163" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">ruby</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2265165" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">日志收集</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2283355" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">javascript</a><span>(4)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2283445" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">ElasticSearch</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2301493" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">xss</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2358273" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Android</a><span>(4)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2658301" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">kafka</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2712905" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">HBase</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2897755" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">proxy</a><span>(0)</span>
+                </li>
+                 <li>
+                    <a href="/hengyunabc/article/category/2915535" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">devops</a><span>(1)</span>
+                </li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list">
+<!--归档统计-->
+<li><a href="/hengyunabc/article/month/2016/05">2016年05月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2016/04">2016年04月</a><span>(4)</span></li><li><a href="/hengyunabc/article/month/2015/11">2015年11月</a><span>(2)</span></li><li><a href="/hengyunabc/article/month/2015/08">2015年08月</a><span>(2)</span></li><li><a href="/hengyunabc/article/month/2015/07">2015年07月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2015/04">2015年04月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2015/03">2015年03月</a><span>(7)</span></li><li><a href="/hengyunabc/article/month/2015/02">2015年02月</a><span>(2)</span></li><li><a href="/hengyunabc/article/month/2014/11">2014年11月</a><span>(4)</span></li><li><a href="/hengyunabc/article/month/2014/10">2014年10月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2014/07">2014年07月</a><span>(3)</span></li><li><a href="/hengyunabc/article/month/2014/06">2014年06月</a><span>(7)</span></li><li><a href="/hengyunabc/article/month/2014/05">2014年05月</a><span>(12)</span></li><li><a href="/hengyunabc/article/month/2014/04">2014年04月</a><span>(3)</span></li><li><a href="/hengyunabc/article/month/2014/03">2014年03月</a><span>(3)</span></li><li><a href="/hengyunabc/article/month/2014/02">2014年02月</a><span>(6)</span></li><li><a href="/hengyunabc/article/month/2014/01">2014年01月</a><span>(3)</span></li><li><a href="/hengyunabc/article/month/2013/12">2013年12月</a><span>(3)</span></li><li><a href="/hengyunabc/article/month/2013/11">2013年11月</a><span>(8)</span></li><li><a href="/hengyunabc/article/month/2013/06">2013年06月</a><span>(3)</span></li><li><a href="/hengyunabc/article/month/2012/08">2012年08月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2012/07">2012年07月</a><span>(9)</span></li><li><a href="/hengyunabc/article/month/2012/06">2012年06月</a><span>(7)</span></li><li><a href="/hengyunabc/article/month/2012/05">2012年05月</a><span>(2)</span></li><li><a href="/hengyunabc/article/month/2012/04">2012年04月</a><span>(4)</span></li><li><a href="/hengyunabc/article/month/2012/03">2012年03月</a><span>(4)</span></li><li><a href="/hengyunabc/article/month/2012/02">2012年02月</a><span>(5)</span></li><li><a href="/hengyunabc/article/month/2012/01">2012年01月</a><span>(2)</span></li><li><a href="/hengyunabc/article/month/2011/10">2011年10月</a><span>(2)</span></li><li><a href="/hengyunabc/article/month/2011/07">2011年07月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2011/06">2011年06月</a><span>(4)</span></li><li><a href="/hengyunabc/article/month/2010/12">2010年12月</a><span>(5)</span></li><li><a href="/hengyunabc/article/month/2010/11">2010年11月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2010/10">2010年10月</a><span>(8)</span></li><li><a href="/hengyunabc/article/month/2010/09">2010年09月</a><span>(17)</span></li><li><a href="/hengyunabc/article/month/2010/08">2010年08月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2010/07">2010年07月</a><span>(4)</span></li><li><a href="/hengyunabc/article/month/2010/01">2010年01月</a><span>(1)</span></li><li><a href="/hengyunabc/article/month/2009/12">2009年12月</a><span>(2)</span></li>
+</div>
+</ul>
+</div>
+<div id="hotarticls" class="panel">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="/hengyunabc/article/details/19433779" title="利用redis + lua解决抢红包高并发的问题">利用redis + lua解决抢红包高并发的问题</a><span>(75811)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/50120001" title="spring boot应用启动原理分析">spring boot应用启动原理分析</a><span>(53465)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/41450003" title="zookeeper 大量连接断开重连原因排查">zookeeper 大量连接断开重连原因排查</a><span>(52299)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/19006911" title="zookeeper运维">zookeeper运维</a><span>(40905)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/19177877" title="抢红包的红包生成算法">抢红包的红包生成算法</a><span>(37118)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/34623957" title="移动App该如何保存用户密码">移动App该如何保存用户密码</a><span>(32756)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/22295749" title="为什么在Spring的配置里，最好不要配置xsd文件的版本号">为什么在Spring的配置里，最好不要配置xsd文件的版本号</a><span>(28451)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/7764509" title="Kryo简介及代码阅读笔记">Kryo简介及代码阅读笔记</a><span>(27409)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/7276376" title="MongoVUE 15天试用期解决办法">MongoVUE 15天试用期解决办法</a><span>(26448)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/6897540" title="BSON格式解释">BSON格式解释</a><span>(25223)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/hengyunabc/article/details/50120001" title="spring boot应用启动原理分析">spring boot应用启动原理分析</a><span>(26)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/19433779" title="利用redis + lua解决抢红包高并发的问题">利用redis + lua解决抢红包高并发的问题</a><span>(25)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/44244951" title="基于redis的分布式ID生成器">基于redis的分布式ID生成器</a><span>(20)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/7773250" title="详细解析boost中bind的实现">详细解析boost中bind的实现</a><span>(19)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/19177877" title="抢红包的红包生成算法">抢红包的红包生成算法</a><span>(15)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/34623957" title="移动App该如何保存用户密码">移动App该如何保存用户密码</a><span>(11)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/25435739" title="ZPush--基于netty4实现的苹果通知推送服务（APNs）Java客户端">ZPush--基于netty4实现的苹果通知推送服务（APNs）Java客户端</a><span>(11)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/41450003" title="zookeeper 大量连接断开重连原因排查">zookeeper 大量连接断开重连原因排查</a><span>(10)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/20735701" title="应对Memcached缓存失效，导致高并发查询DB的几种思路">应对Memcached缓存失效，导致高并发查询DB的几种思路</a><span>(9)</span>
+</li>
+<li>
+<a href="/hengyunabc/article/details/6897540" title="BSON格式解释">BSON格式解释</a><span>(9)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend">
+<ul>
+<li><a href="http://blog.csdn.net/broadview2006/article/details/70257477" target="_blank">* 探索通用可编程数据平面</a></li>
+<li><a href="http://blog.csdn.net/carson_ho/article/details/70267574" 
+target="_blank">* 这是一份很有诚意的 Protocol Buffer 语法详解</a></li>
+<li><a href="http://blog.csdn.net/blogdevteam/article/details/70305418"target="_blank">* CSDN日报20170420 ——《开发和产品之间的恩怨从何来?》</a></li>
+<li><a href="http://blog.csdn.net/guolin_blog/article/details/53939176" 
+target="_blank">* Android图片加载框架最全解析——从源码的角度理解Glide的执行流程</a></li>
+<li><a href="http://blog.csdn.net/mindfloating/article/details/70199199" 
+target="_blank">* 如果两个程序员差不多，选写作能力更好的那个</a></li>
+<li><a href="http://blog.csdn.net/wireless_com/article/details/70207298" 
+target="_blank">* 从构造函数看线程安全</a></li>
+
+</ul></ul>
+</div>
+
+
+<div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="/hengyunabc/article/details/49804577#comments">禁止JVM执行外部命令Runtime.exec -- 由Apache Commons Collections漏洞引发的思考</a>
+    <p style="margin:0px;"><a href="/zhncug" class="user_name">zhncug</a>:
+这个博客很涨姿势！
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/28126139#comments">Java的LockSupport.park()实现分析</a>
+    <p style="margin:0px;"><a href="/nmgrd" class="user_name">nmgrd</a>:
+赞一个，虽然看不懂C++代码，但大概还是有些了解LockSupport的原理了
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/19433779#comments">利用redis + lua解决抢红包高并发的问题</a>
+    <p style="margin:0px;"><a href="/yangxingmeng" class="user_name">yangxingmeng</a>:
+这种处理还是粗糙了点， redis和你update的过程都可能出问题， redis出问题不用多说可能...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/19433779#comments">利用redis + lua解决抢红包高并发的问题</a>
+    <p style="margin:0px;"><a href="/yangxingmeng" class="user_name">yangxingmeng</a>:
+@u010357667:有问题的， 作者用lua是有一个事务概念在里面， 抢红包和sadd都要成功(...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/19433779#comments">利用redis + lua解决抢红包高并发的问题</a>
+    <p style="margin:0px;"><a href="/yangxingmeng" class="user_name">yangxingmeng</a>:
+@u010357667:作者用lua，是因为这里面有一个事务的概念， 你第一次添加sadd成功， 但...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/19433779#comments">利用redis + lua解决抢红包高并发的问题</a>
+    <p style="margin:0px;"><a href="/u010357667" class="user_name">u010357667</a>:
+我想了个思路，不需要lua脚本。就是判断用户是否已经抢过红包的时候，使用redis的set，直接sa...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/19433779#comments">利用redis + lua解决抢红包高并发的问题</a>
+    <p style="margin:0px;"><a href="/u010357667" class="user_name">u010357667</a>:
+我想了个思路，不需要lua脚本。就是判断用户是否已经抢过红包的时候，使用redis的set，直接sa...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/19433779#comments">利用redis + lua解决抢红包高并发的问题</a>
+    <p style="margin:0px;"><a href="/u010357667" class="user_name">u010357667</a>:
+我想了个思路，不需要lua脚本。就是判断用户是否已经抢过红包的时候，使用redis的set，直接sa...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/19433779#comments">利用redis + lua解决抢红包高并发的问题</a>
+    <p style="margin:0px;"><a href="/u010357667" class="user_name">u010357667</a>:
+我想了个思路，不需要lua脚本。就是判断用户是否已经抢过红包的时候，使用redis的set，直接sa...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/hengyunabc/article/details/7276376#comments">MongoVUE 15天试用期解决办法</a>
+    <p style="margin:0px;"><a href="/kratos275" class="user_name">kratos275</a>:
+没有这个键值的怎么办？
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+
+
+                   <!-- 广告位开始 -->                    <!-- 广告位结束 -->
+                   <div class="J_adv" data-view="true" data-mod="ad_popu_190" data-mtp="63" data-order="40" data-con="ad_content_1260" style="width: 200px; height: 200px;">
+                         <div id="nav_show_top_stop" style="width: 200px;height: 200px;z-index:1000"><div id="cpro_u2734128"></div></div>
+                   </div>
+<script>
+
+    
+    setTimeout(function () {
+        var naviga_offsetTop = 0;
+        function naviga_stay_top() { var scrollTop = jQuery(document).scrollTop(); if (scrollTop > naviga_offsetTop) { jQuery("#nav_show_top_stop").css({ "position": "fixed" }); jQuery("#nav_show_top_stop").css({ "top": "0px" }); } else { jQuery("#nav_show_top_stop").css({ "position": "fixed" }); jQuery("#nav_show_top_stop").css({ "top": naviga_offsetTop - scrollTop + "px" }); } }
+        function onload_function() { naviga_offsetTop = jQuery("#nav_show_top_stop").position().top; jQuery(window).bind("scroll", naviga_stay_top); jQuery(window).bind("mousewheel", naviga_stay_top); jQuery(document).bind("scroll", naviga_stay_top); jQuery(document).bind("mousewheel", naviga_stay_top); } jQuery(document).ready(onload_function);
+               
+    }, 200);    
+</script>
+<script type="text/javascript">(window.cproArray = window.cproArray || []).push({ id: "u2734128" });  </script> 
+                    <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script> 
+
+           </div>   
+
+            <div class="clear">
+            </div>
+        </div>
+
+        
+
+<script type="text/javascript" src="http://c.csdnimg.cn/rabbit/cnick/cnick.js"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js"></script>
+
+
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=751489"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/JavaScript1.js"></script>
+
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<span class='tracking-ad' data-mod='popu_167'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a></span>"
+                    + "<span class='tracking-ad' data-mod='popu_170'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a></span>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+
+        $(".bar").show();
+    });
+</script>
+
+
+
+
+
+    </div>
+      <!--new top-->
+    
+
+    <script type="text/javascript" src="http://c.csdnimg.cn/pubfooter/js/tracking.js" charset="utf-8"></script>  
+
+    <script id="csdn-toolbar-id" btnId="header_notice_num" wrapId="note1" count="5" subCount="5" type="text/javascript" src="http://c.csdnimg.cn/public/common/toolbar/js/toolbar.js"></script>     <!--new top-->
+   
+    <link href="http://c.csdnimg.cn/comm_ask/css/ask_float_block.css" type="text/css" rel="stylesheet" />
+    <script language='JavaScript' type='text/javascript' src='http://c.csdnimg.cn/comm_ask/js/libs/wmd.js'></script>
+    <script language='JavaScript' type='text/javascript' src='http://c.csdnimg.cn/comm_ask/js/libs/showdown.js'></script>
+    <script language='JavaScript' type='text/javascript' src='http://c.csdnimg.cn/comm_ask/js/libs/prettify.js'></script>
+    <script language='JavaScript' type='text/javascript' src='http://c.csdnimg.cn/comm_ask/js/apps/ask_float_block.js'></script>
+   
+
+   
+
+  <div id="a52b5334d" style="width: 1px; height: 1px; display: none;">
+                    <script id="adJs52b5334"></script>
+                    <script>document.getElementById("adJs52b5334").src = "http://ads.csdn.net/js/opt/52b5334.js?t=" + Math.random();</script>
+   </div>
+
+    <link rel="stylesheet" href="http://static.blog.csdn.net/css/blog_code.css" />
+    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/saveToCode.js"></script>
+      <script type="text/javascript" src="//csdnimg.cn/rabbit/tracking-ad/main.js?75eacd8"></script>
+
+     <link rel="stylesheet" href="http://static.blog.csdn.net/css/fa.css" />
+
+    <div class="pop_CA_cover"  style="display:none"></div>
+    <div class="pop pop_CA"  style="display:none">
+          <div class="CA_header">
+            收藏助手
+            <span class="cancel_icon"  id="fapancle"  onclick="$('.pop_CA').hide();$('.pop_CA_cover').hide();"></span>
+          </div>
+          <iframe src="" id="fa" frameborder="0" width="100%" height="360"  scrolling="no" />
+    </div>
+</body>
+</html>   
+ 
