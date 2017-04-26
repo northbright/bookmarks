@@ -19,3 +19,6 @@
 
 #### Restful
 * [Go, REST APIs, and Pointers](https://willnorris.com/2014/05/go-rest-apis-and-pointers)
+
+#### Cookie
+* [6.1 Session and cookies](https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/06.1.html)
