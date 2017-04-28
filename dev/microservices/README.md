@@ -14,6 +14,7 @@
 
 * [微服务的反模式和陷阱](http://colobu.com/2016/11/11/microservices-anti-patterns-and-pitfalls/)
 * [产品级微服务的八大原则](http://colobu.com/2016/10/16/microservices-in-production-notes/)
+* [微服务（Microservices）架构？](https://www.zhihu.com/question/24013141)
 
 #### Service Discovery
 * [服务发现：Zookeeper vs etcd vs Consul ](http://dockone.io/article/667)
