@@ -25,3 +25,6 @@
 
 #### Rainbow Table
 * [什么是彩虹表？](https://www.zhihu.com/question/19790488)
+
+#### Encryption in Database
+* [如何大幅提高加密数据库的安全性](http://www.freebuf.com/articles/database/66440.html)
