@@ -5,6 +5,7 @@
 * [Go net/http 超时指导](http://www.oschina.net/translate/the-complete-guide-to-golang-net-http-timeouts)
 * [How to send a POST request in Golang?](http://stackoverflow.com/questions/24493116/how-to-send-a-post-request-in-golang)
 * [Make a URL-encoded POST request using http.NewRequest()](http://stackoverflow.com/questions/19253469/make-a-url-encoded-post-request-using-http-newrequest)
+* [Not getting Location header from Golang http request](http://stackoverflow.com/questions/38602740/not-getting-location-header-from-golang-http-request)
 
 #### HTTP Server
 * Multiple Domains 
