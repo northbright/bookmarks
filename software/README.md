@@ -34,3 +34,7 @@
 
 #### PDF
 * [Online JPG to PDF Converter](http://www.jpgtopdf.com/)
+
+#### Windows
+* Security
+  * [Customer Guidance for WannaCrypt attacks](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/)
