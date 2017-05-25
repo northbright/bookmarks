@@ -6,6 +6,7 @@
 * [How to send a POST request in Golang?](http://stackoverflow.com/questions/24493116/how-to-send-a-post-request-in-golang)
 * [Make a URL-encoded POST request using http.NewRequest()](http://stackoverflow.com/questions/19253469/make-a-url-encoded-post-request-using-http-newrequest)
 * [Not getting Location header from Golang http request](http://stackoverflow.com/questions/38602740/not-getting-location-header-from-golang-http-request)
+* [Golang Multipart File Upload Example](https://matt.aimonetti.net/posts/2013/07/01/golang-multipart-file-upload-example/)
 
 #### HTTP Server
 * Multiple Domains 
