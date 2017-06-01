@@ -1,3 +1,3 @@
-# Code Revew
+# Code style
 
 * [Go Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments)

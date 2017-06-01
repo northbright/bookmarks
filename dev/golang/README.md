@@ -35,7 +35,7 @@
 * [PostgreSQL](postgresql/README.md)
 * [Command-Line Arguments](cmd-line-args/README.md)
 * [Struct](struct/README.md)
-* [Code Review](code-review/README.md)
+* [Code Style](code-style/README.md)
 
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
