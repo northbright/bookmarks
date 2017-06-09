@@ -61,6 +61,7 @@
 * [Secondary indexing with Redis](http://redis.io/topics/indexes)
 * [Two ways of using Redis to build a NoSQL autocomplete search index](http://patshaughnessy.net/2011/11/29/two-ways-of-using-redis-to-build-a-nosql-autocomplete-search-index)
 * [Redis search for matching keys that equal a value](http://stackoverflow.com/questions/21474679/redis-search-for-matching-keys-that-equal-a-value)
+* [Searching in values of a redis db](https://stackoverflow.com/questions/17193176/searching-in-values-of-a-redis-db)
 
 #### Use Cases
 * [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
