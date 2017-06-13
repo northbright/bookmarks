@@ -6,3 +6,6 @@
 
 #### 无缝漫游
 * [多个无线 AP 怎么实现无缝漫游？](https://www.zhihu.com/question/19751226)
+
+#### 微信认证
+* [微信公众平台开发(110) 微信连Wi-Fi](http://www.cnblogs.com/txw1958/p/weixin-wifi.html)
