@@ -25,3 +25,5 @@
   * [UniFi Controller-API文档【User Session部分】](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=15577&extra=page%3D1)
   * <https://github.com/Ubiquiti-CN/auth>
   * [UBNT 中文知识库全新上线](http://bbs.ubnt.com.cn/knowledge.php)
+* H3C
+  * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
