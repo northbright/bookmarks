@@ -24,4 +24,4 @@
   * [总算搞定微信授权连接wifi了，附详细方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17679&extra=page%3D1)
   * [UniFi Controller-API文档【User Session部分】](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=15577&extra=page%3D1)
   * <https://github.com/Ubiquiti-CN/auth>
-
+  * [UBNT 中文知识库全新上线](http://bbs.ubnt.com.cn/knowledge.php)
