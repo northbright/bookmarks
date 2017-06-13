@@ -18,6 +18,7 @@
   * [UniFi Controller-API文档【User Session部分】](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=15577&extra=page%3D1)
   * <https://github.com/Ubiquiti-CN/auth>
   * [UBNT 中文知识库全新上线](http://bbs.ubnt.com.cn/knowledge.php)
+  * [UBNT AC 入手！ 但是感觉有些失败](https://www.chiphell.com/thread-1158729-1-1.html)
 * H3C
   * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
   * [爱快AP-H3和H3C小贝 wap712C 两个AP随便试试](https://www.chiphell.com/thread-1639244-1-1.html)
