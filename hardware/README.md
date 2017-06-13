@@ -16,15 +16,3 @@
     * [一步到位——联想拯救者开箱及配置升级](https://chiphell.com/forum.php?mod=viewthread&tid=1684446&extra=page%3D1%26filter%3Dtypeid%26typeid%3D724)
     * [拯救者-15拆机教程（加内存加固态清灰必看](http://bbs.zol.com.cn/nbbbs/d160_283725.html)
     * [联想拯救者Win10蓝屏0xc000000d的解决办法](http://jingyan.baidu.com/article/6b1823099ebf8aba58e1599c.html)
-
-#### 企业无线方案
-* TP-Link
-  * [慎重选择TP-LINK的AP、AC产品，下面是我的经历](http://tieba.baidu.com/p/3508791303)
-* UBNT
-  * [总算搞定微信授权连接wifi了，附详细方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17679&extra=page%3D1)
-  * [UniFi Controller-API文档【User Session部分】](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=15577&extra=page%3D1)
-  * <https://github.com/Ubiquiti-CN/auth>
-  * [UBNT 中文知识库全新上线](http://bbs.ubnt.com.cn/knowledge.php)
-* H3C
-  * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
-  * [爱快AP-H3和H3C小贝 wap712C 两个AP随便试试](https://www.chiphell.com/thread-1639244-1-1.html)
