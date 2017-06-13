@@ -22,5 +22,5 @@
   * [慎重选择TP-LINK的AP、AC产品，下面是我的经历](http://tieba.baidu.com/p/3508791303)
 * UBNT
   * [总算搞定微信授权连接wifi了，附详细方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17679&extra=page%3D1)
-
+  * <https://github.com/Ubiquiti-CN/auth>
 
