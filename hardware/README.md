@@ -18,4 +18,9 @@
     * [联想拯救者Win10蓝屏0xc000000d的解决办法](http://jingyan.baidu.com/article/6b1823099ebf8aba58e1599c.html)
 
 #### 企业无线方案
-* [慎重选择TP-LINK的AP、AC产品，下面是我的经历](http://tieba.baidu.com/p/3508791303)
+* TP-Link
+  * [慎重选择TP-LINK的AP、AC产品，下面是我的经历](http://tieba.baidu.com/p/3508791303)
+* UBNT
+  * [总算搞定微信授权连接wifi了，附详细方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17679&extra=page%3D1)
+
+
