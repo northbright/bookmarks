@@ -22,4 +22,6 @@
 * H3C
   * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
   * [爱快AP-H3和H3C小贝 wap712C 两个AP随便试试](https://www.chiphell.com/thread-1639244-1-1.html)
+* 华为
+  * [AC+AP方案选择，TP无缝漫游强过UBNT？胖AP如何实现802.11r？](http://koolshare.cn/thread-109233-1-4.html) [参考gzmino的发言](http://koolshare.cn/forum.php?mod=viewthread&tid=109233&page=1&authorid=17218)
 
