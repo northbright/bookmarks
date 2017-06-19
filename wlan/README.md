@@ -20,6 +20,7 @@
   * <https://github.com/Ubiquiti-CN/auth>
   * [UBNT 中文知识库全新上线](http://bbs.ubnt.com.cn/knowledge.php)
   * [UBNT AC 入手！ 但是感觉有些失败](https://www.chiphell.com/thread-1158729-1-1.html)
+  * [5万平 腾讯空间 联合创业圈，UniFi 企业网 完美打造！](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17568&extra=page%3D1)
 * H3C
   * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
   * [爱快AP-H3和H3C小贝 wap712C 两个AP随便试试](https://www.chiphell.com/thread-1639244-1-1.html)
