@@ -30,4 +30,6 @@
   * [Agile Controller-Campus V1 微信对接专题](http://support.huawei.com/enterprise/docinforeader.action?contentId=DOC1000082669&partNo=10142)
 
 ## 硬件(Hardware)
-* [H3C ER系列路由器常见问题处理指南-V1.03](http://www.h3c.com/cn/Service/Document_Center/Routers/Catalog/ER/ER5200/Maintenance/Maintenance_Manual/H3C_ER(V1.03)/)
+* H3C
+  * [H3C ER系列路由器常见问题处理指南-V1.03](http://www.h3c.com/cn/Service/Document_Center/Routers/Catalog/ER/ER5200/Maintenance/Maintenance_Manual/H3C_ER(V1.03)/)
+  * [H3C ER系列企业级路由器 用户手册-6W105](http://www.h3c.com/cn/Service/Document_Center/Routers/Catalog/ER/ER3100/Configure/User_Manual/H3C_ER_UM-6W105/201403/819372_30005_0.htm)
