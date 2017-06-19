@@ -11,5 +11,5 @@ Bookmarks of development and more...
 * [Printer(打印机)](printer/README.md)
 * [Video File Format(视频文件格式)](video-file-format/README.md)
 * [Electrical Home Appliance(家电)](jiadian/README.md)
-* [WLAN](wlan/README.md)
+* [Network(网络)](network/README.md)
 * [家电](jiadian/README.md)

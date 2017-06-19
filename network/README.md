@@ -1,5 +1,6 @@
-# WLAN
+# network
 
+## WLAN
 #### Channel
 * [List of WLAN channels](https://en.wikipedia.org/wiki/List_of_WLAN_channels)
 * [Change the Wi-Fi Channel Number to Avoid Interference](https://www.lifewire.com/wifi-channel-number-change-to-avoid-interference-818208)
@@ -28,3 +29,5 @@
   * [AC+AP方案选择，TP无缝漫游强过UBNT？胖AP如何实现802.11r？](http://koolshare.cn/thread-109233-1-4.html) [参考gzmino的发言](http://koolshare.cn/forum.php?mod=viewthread&tid=109233&page=1&authorid=17218)
   * [Agile Controller-Campus V1 微信对接专题](http://support.huawei.com/enterprise/docinforeader.action?contentId=DOC1000082669&partNo=10142)
 
+## 硬件(Hardware)
+* [H3C ER系列路由器常见问题处理指南-V1.03](http://www.h3c.com/cn/Service/Document_Center/Routers/Catalog/ER/ER5200/Maintenance/Maintenance_Manual/H3C_ER(V1.03)/)
