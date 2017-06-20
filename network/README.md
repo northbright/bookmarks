@@ -28,6 +28,7 @@
 * 华为
   * [AC+AP方案选择，TP无缝漫游强过UBNT？胖AP如何实现802.11r？](http://koolshare.cn/thread-109233-1-4.html) [参考gzmino的发言](http://koolshare.cn/forum.php?mod=viewthread&tid=109233&page=1&authorid=17218)
   * [Agile Controller-Campus V1 微信对接专题](http://support.huawei.com/enterprise/docinforeader.action?contentId=DOC1000082669&partNo=10142)
+  * [【Agile Controller-Campus总结】如果看完还不明白接入控制设备向Portal服务器发送URL参数的过程请过来掐死我](http://forum.huawei.com/enterprise/thread-354775.html)
 
 ## 硬件(Hardware)
 * H3C
