@@ -13,6 +13,7 @@
 #### 微信认证
 * [微信公众平台开发(110) 微信连Wi-Fi](http://www.cnblogs.com/txw1958/p/weixin-wifi.html)
 * [微信关注即可使用Wi-Fi是怎样实现的?](http://network.51cto.com/art/201406/442828.htm)
+* [微信关注即可使用 Wi-Fi，取消关注即断网的路由器是怎样实现的？](https://www.zhihu.com/question/23667625)
 
 #### 企业无线方案
 * TP-Link
