@@ -1,5 +1,8 @@
 # WLAN
 
+#### db and dbm
+* [WIFI的信号强度为什么是负数？如何计算出来的？](https://www.zhihu.com/question/22166789?sort=created)
+
 #### Channel
 * [List of WLAN channels](https://en.wikipedia.org/wiki/List_of_WLAN_channels)
 * [Change the Wi-Fi Channel Number to Avoid Interference](https://www.lifewire.com/wifi-channel-number-change-to-avoid-interference-818208)
