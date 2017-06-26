@@ -26,6 +26,8 @@
   * [UBNT AC 入手！ 但是感觉有些失败](https://www.chiphell.com/thread-1158729-1-1.html)
   * [5万平 腾讯空间 联合创业圈，UniFi 企业网 完美打造！](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17568&extra=page%3D1)
   * [当UniFi 控制器关闭后所有 SSID 广播中断的解决方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13316&highlight=unifi%2B%E5%85%B3%E9%97%AD)
+  * [Unifi之星问答总汇](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13515)
+
 * H3C
   * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
   * [爱快AP-H3和H3C小贝 wap712C 两个AP随便试试](https://www.chiphell.com/thread-1639244-1-1.html)
