@@ -28,6 +28,7 @@
   * [当UniFi 控制器关闭后所有 SSID 广播中断的解决方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13316&highlight=unifi%2B%E5%85%B3%E9%97%AD)
   * [Unifi之星问答总汇](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13515)
   * [What is the default username / password for UAPs and controller?](https://help.ubnt.com/hc/en-us/articles/204909374-UniFi-What-is-the-default-username-password-for-UAPs-and-controller-)
+  * [UniFi - Layer 3 methods for UAP adoption and management](https://help.ubnt.com/hc/en-us/articles/204909754-UniFi-Layer-3-methods-for-UAP-adoption-and-management)
 
 * H3C
   * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
