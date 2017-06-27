@@ -27,6 +27,7 @@
   * [5万平 腾讯空间 联合创业圈，UniFi 企业网 完美打造！](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17568&extra=page%3D1)
   * [当UniFi 控制器关闭后所有 SSID 广播中断的解决方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13316&highlight=unifi%2B%E5%85%B3%E9%97%AD)
   * [Unifi之星问答总汇](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13515)
+  * [What is the default username / password for UAPs and controller?](https://help.ubnt.com/hc/en-us/articles/204909374-UniFi-What-is-the-default-username-password-for-UAPs-and-controller-)
 
 * H3C
   * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
