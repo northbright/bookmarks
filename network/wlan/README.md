@@ -14,6 +14,7 @@
 * [微信公众平台开发(110) 微信连Wi-Fi](http://www.cnblogs.com/txw1958/p/weixin-wifi.html)
 * [微信关注即可使用Wi-Fi是怎样实现的?](http://network.51cto.com/art/201406/442828.htm)
 * [微信关注即可使用 Wi-Fi，取消关注即断网的路由器是怎样实现的？](https://www.zhihu.com/question/23667625)
+* [无线路由器微信连Wi-Fi（密码型设备）使用方法](http://service.tp-link.com.cn/detail_article_3304.html)
 
 #### 企业无线方案
 * TP-Link
