@@ -5,3 +5,5 @@
 * [H3C ER系列企业级路由器 用户手册-6W105](http://www.h3c.com/cn/Service/Document_Center/Routers/Catalog/ER/ER3100/Configure/User_Manual/H3C_ER_UM-6W105/201403/819372_30005_0.htm)
 * [H3C ER5200，两个wan口都在用，内网有一台主机需要固定通过wan2连通外网，具体设置标签在那个位置](http://ask.zol.com.cn/q/169207.html)
 
+#### 线材以及模块
+* [双口网络面板和模块有什么推荐的吗?](https://www.chiphell.com/thread-1043877-1-1.html)
