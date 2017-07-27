@@ -6,3 +6,6 @@
 
 #### Password Validation
 * [Regexp Java for password validation](https://stackoverflow.com/questions/3802192/regexp-java-for-password-validation)
+
+#### 预搜索
+* [Java正则表达式 预搜索（零宽断言）详解](http://blog.csdn.net/xiaokui_wingfly/article/details/51984087)
