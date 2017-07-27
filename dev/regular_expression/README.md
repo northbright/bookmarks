@@ -9,3 +9,4 @@
 
 #### 预搜索
 * [Java正则表达式 预搜索（零宽断言）详解](http://blog.csdn.net/xiaokui_wingfly/article/details/51984087)
+* [正则表达式正向预搜索的问题(见3楼答案)](http://bbs.csdn.net/topics/290075564)
