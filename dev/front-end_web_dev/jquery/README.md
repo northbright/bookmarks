@@ -5,3 +5,6 @@
 
 #### Selector
 * [jQuery 参考手册 - 选择器](http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp)
+
+#### AJAX
+* [jQuery ajax, how to send JSON instead of QueryString](https://stackoverflow.com/questions/12693947/jquery-ajax-how-to-send-json-instead-of-querystring)
