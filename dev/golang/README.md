@@ -18,6 +18,7 @@
 * [string](string/README.md)
 * [map](map/README.md)
 * [slice](slice/README.md)
+* [switch](switch/README.md)
 * [function](function/README.md)
 * [log](log/README.md)
 * [io](io/README.md)
