@@ -47,6 +47,7 @@
 * [ASCII](ascii/README.md)
 * [Nginx](nginx/README.md)
 * [Raspberry Pi](raspberry-pi/README.md)
+* [Flowchart](flowchart/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
