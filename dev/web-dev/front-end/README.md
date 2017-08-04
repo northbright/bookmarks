@@ -17,5 +17,10 @@
 * [移动webapp前端ui用哪个框架好？](https://www.zhihu.com/question/25754764)
 * [cordova+framework7有人来说说吗？](https://www.zhihu.com/question/29533705?sort=created)
 
+#### Password and Username
+* [为什么密码不支持中文？](https://www.zhihu.com/question/20715055)
+* [为什么很多产品的密码不能用中文？中文密码会有什么问题？](https://www.zhihu.com/question/20291884)
+* [为什么淘宝和京东会员注册的时候用户名一个汉字算两个字符，有什么考虑吗？](https://www.zhihu.com/question/22295828/answer/82576462)
+
 #### Sites
 * [前端外刊评论](https://zhuanlan.zhihu.com/FrontendMagazine)
