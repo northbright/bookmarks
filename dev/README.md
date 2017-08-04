@@ -47,6 +47,7 @@
 * [Nginx](nginx/README.md)
 * [Raspberry Pi](raspberry-pi/README.md)
 * [Flowchart and UML](flowchart-and-uml/README.md)
+* [Cross Platform Apps](cross-platform-apps/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
