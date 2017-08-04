@@ -5,3 +5,4 @@
 
 #### Password and Username
 * [为什么密码不支持中文？](https://www.zhihu.com/question/20715055)
+* [为什么很多产品的密码不能用中文？中文密码会有什么问题？](https://www.zhihu.com/question/20291884)
