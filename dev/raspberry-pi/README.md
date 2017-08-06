@@ -7,6 +7,7 @@
 #### Install Kodi on Raspberry Pi
 * [How to Install Kodi on the Raspberry Pi 3 running Raspbian](http://kamilslab.com/2017/02/08/how-to-install-kodi-on-the-raspberry-pi-3-running-raspbian/)
 * [Raspberry pi，一个好玩的派:第十季 看Kodi，用OpenELEC](http://blog.csdn.net/lincyang/article/details/42343575)
+* [OpenELEC FAQ](http://wiki.openelec.tv/index.php?title=OpenELEC_FAQ)
 
 #### Sites
 * [树莓派实验室](http://shumeipai.nxez.com/)
