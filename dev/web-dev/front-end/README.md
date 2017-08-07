@@ -5,7 +5,7 @@
 * [JSONP](jsonp/README.md)
 * [CORS](cors/README.md)
 * [react](react/README.md)
-* [vue](vue/README.md)
+* [Vue.js](vue.js/README.md)
 * [JQuery](jquery/README.md)
 * [JQuery Mobile](jquerymobile/README.md)
 * [rainyday.js](rainyday.js/README.md)

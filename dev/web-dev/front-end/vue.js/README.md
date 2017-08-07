@@ -1,4 +1,4 @@
-# vue
+# Vue.js
 
 #### Articles
 * [Vue.js：a (re)introduction](https://zhuanlan.zhihu.com/p/20302927)
