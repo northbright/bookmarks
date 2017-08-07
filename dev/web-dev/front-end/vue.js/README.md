@@ -9,3 +9,6 @@
 #### Using Vue.js with Go
 * [Using VueJS with a Go backend](https://stackoverflow.com/questions/38744766/using-vuejs-with-a-go-backend)
 * [Using Vue.js in Golang's HTML templates](https://stackoverflow.com/questions/38764610/using-vue-js-in-golangs-html-templates)
+
+#### Flash
+* [vue页面加载闪烁问题解决产生原因及解决方法](https://zhuanlan.zhihu.com/p/22477904)
