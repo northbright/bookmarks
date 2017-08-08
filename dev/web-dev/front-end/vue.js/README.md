@@ -16,3 +16,6 @@
 #### Flash
 * [vue页面加载闪烁问题解决产生原因及解决方法](https://zhuanlan.zhihu.com/p/22477904)
 * [vue.js 未加载页面时会闪{{ }} （花括号）](https://segmentfault.com/q/1010000004932459)
+
+#### Sites
+* <https://github.com/vuejs/awesome-vue>
