@@ -5,6 +5,7 @@
 * [Vue 和 React 的使用场景和深度有何不同？](https://www.zhihu.com/question/31585377)
 * [国内有哪些公司在用Vue.js，有什么心得?](http://www.zhihu.com/question/38213423?sort=created&page=1)
 * [浅谈Vue.js](https://segmentfault.com/a/1190000004704498)
+* [2016 我的心路历程：从 Vue 到 Webpack 到 iView](https://segmentfault.com/a/1190000008168184)
 
 #### Using Vue.js with Go
 * [Using VueJS with a Go backend](https://stackoverflow.com/questions/38744766/using-vuejs-with-a-go-backend)
