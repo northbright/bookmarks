@@ -38,6 +38,8 @@
 #### Windows
 * Security
   * [Customer Guidance for WannaCrypt attacks](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/)
+* Input Method
+  * [定制化Windows10搜索和输入法快捷键Ctrl+空格](http://www.jianshu.com/p/15efa7783398)
 
 #### Burn Images to SD Card / USB Drive
 * [etcher](https://etcher.io/)
