@@ -6,6 +6,7 @@
 * [CORS](cors/README.md)
 * [react](react/README.md)
 * [Vue.js](vue.js/README.md)
+* [axios](axios/README.md)
 * [JQuery](jquery/README.md)
 * [JQuery Mobile](jquerymobile/README.md)
 * [rainyday.js](rainyday.js/README.md)
