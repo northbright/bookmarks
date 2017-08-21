@@ -24,6 +24,7 @@
 * Sites
   * [iView](https://www.iviewui.com/)
   * [vux](https://vux.li/)
+  * [Vue Carbon](https://myronliu347.github.io/vue-carbon/#!/)
 
 #### Sites
 * <https://github.com/vuejs/awesome-vue>
