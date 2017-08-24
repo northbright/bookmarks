@@ -11,6 +11,7 @@
 * [手摸手，带你用vue撸后台 系列四(vueAdmin 一个极简的后台基础模板)](https://segmentfault.com/a/1190000010043013)
 * [手摸手，带你封装一个vue component](https://segmentfault.com/a/1190000009090836)
 * [新手向：Vue 2.0 的建议学习顺序](https://zhuanlan.zhihu.com/p/23134551)
+* [VueJs2.0建议学习路线](http://www.cnblogs.com/smartXiang/p/6051086.html)
 
 #### Using Vue.js with Go
 * [Using VueJS with a Go backend](https://stackoverflow.com/questions/38744766/using-vuejs-with-a-go-backend)
