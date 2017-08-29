@@ -6,6 +6,7 @@
 * [国内有哪些公司在用Vue.js，有什么心得?](http://www.zhihu.com/question/38213423?sort=created&page=1)
 * [浅谈Vue.js](https://segmentfault.com/a/1190000004704498)
 * [2016 我的心路历程：从 Vue 到 Webpack 到 iView](https://segmentfault.com/a/1190000008168184)
+* [手摸手，带你用vue撸后台 系列一(基础篇)](https://segmentfault.com/a/1190000009275424)
 * [手摸手，带你用vue撸后台 系列二(登录权限篇)](https://segmentfault.com/a/1190000009506097)
 * [手摸手，带你用vue撸后台 系列三(实战篇)](https://segmentfault.com/a/1190000009762198)
 * [手摸手，带你用vue撸后台 系列四(vueAdmin 一个极简的后台基础模板)](https://segmentfault.com/a/1190000010043013)
