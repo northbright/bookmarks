@@ -12,5 +12,5 @@
 * [Signal](signal/README.md)
 * [File System](filesystem/README.md)
 * [Memory](memory/README.md)
-* [yum](yum/README.md)
+* [centos](centos/README.md)
 * [Time](time/README.md)
