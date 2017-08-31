@@ -43,3 +43,6 @@
 
 #### Burn Images to SD Card / USB Drive
 * [etcher](https://etcher.io/)
+
+#### Imagick
+* [ImageMagick: scale JPEG image with a maximum file-size](https://stackoverflow.com/questions/6917219/imagemagick-scale-jpeg-image-with-a-maximum-file-size)
