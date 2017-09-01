@@ -6,3 +6,4 @@
 #### Security
 * [Is it possible to limit yum so that it lists or installs only security updates?](https://access.redhat.com/solutions/10021)
 * [Installing security updates only with CentOS yum](https://alvinalexander.com/linux-unix/centos-yum-installing-only-security-updates)
+* [Yum Command Check and Apply Only Security Updates](https://www.cyberciti.biz/faq/rhel-centos-yum-check-update-security-plugin/)
