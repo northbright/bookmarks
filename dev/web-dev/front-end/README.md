@@ -2,6 +2,7 @@
 
 #### Category
 * [Javascript](js/README.md)
+* [ECMAScript 6](es6/README.md)
 * [JSONP](jsonp/README.md)
 * [CORS](cors/README.md)
 * [react](react/README.md)
