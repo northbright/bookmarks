@@ -13,6 +13,7 @@
 * [手摸手，带你封装一个vue component](https://segmentfault.com/a/1190000009090836)
 * [新手向：Vue 2.0 的建议学习顺序](https://zhuanlan.zhihu.com/p/23134551)
 * [VueJs2.0建议学习路线](http://www.cnblogs.com/smartXiang/p/6051086.html)
+* [vuejs 单文件组件.vue 文件](http://www.cnblogs.com/SamWeb/p/6391373.html)
 
 #### Using Vue.js with Go
 * [Using VueJS with a Go backend](https://stackoverflow.com/questions/38744766/using-vuejs-with-a-go-backend)
@@ -27,6 +28,7 @@
   * [vue.js 未加载页面时会闪{{ }} （花括号）](https://segmentfault.com/q/1010000004932459)
 * v-for
   * [Console warning: component lists rendered with v-for should have explicit keys](https://stackoverflow.com/questions/42476942/console-warning-component-lists-rendered-with-v-for-should-have-explicit-keys)
+  * [vue里面的v-for列表循环](https://segmentfault.com/a/1190000010958154)
 
 #### UI
 * [vuejs ui库优劣势分析和选择？](https://www.zhihu.com/question/53842719)
