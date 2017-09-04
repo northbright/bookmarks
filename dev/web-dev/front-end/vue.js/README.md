@@ -21,9 +21,12 @@
 #### vue-router
 * [Vue.js——vue-router 60分钟快速入门](http://www.cnblogs.com/keepfool/p/5690366.html)
 
-#### Flash
-* [vue页面加载闪烁问题解决产生原因及解决方法](https://zhuanlan.zhihu.com/p/22477904)
-* [vue.js 未加载页面时会闪{{ }} （花括号）](https://segmentfault.com/q/1010000004932459)
+#### Problems
+* Flash
+  * [vue页面加载闪烁问题解决产生原因及解决方法](https://zhuanlan.zhihu.com/p/22477904)
+  * [vue.js 未加载页面时会闪{{ }} （花括号）](https://segmentfault.com/q/1010000004932459)
+* v-for
+  * [Console warning: component lists rendered with v-for should have explicit keys](https://stackoverflow.com/questions/42476942/console-warning-component-lists-rendered-with-v-for-should-have-explicit-keys)
 
 #### UI
 * [vuejs ui库优劣势分析和选择？](https://www.zhihu.com/question/53842719)
