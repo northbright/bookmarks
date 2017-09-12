@@ -1,0 +1,7451 @@
+<!DOCTYPE html><html class="header-dark"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Learn how to build a Vue.js app and how to easily get up and running with JWT authentication.">
+
+    <!-- <meta property="fb:admins" content="YOUR_FB_USER_ID" /> -->
+<meta property="fb:app_id" content="534074790006350">
+
+  <meta property="og:title" content="Build an App with Vue.js: From Authentication to Calling an API">
+
+<meta property="og:site_name" content="Auth0 - Blog">
+<meta property="og:url" content="https://auth0.com/blog/build-an-app-with-vuejs/">
+
+  
+    <meta property="og:image" content="https://cdn.auth0.com/blog/vuejs/vue-logo.png">
+  
+
+
+
+<meta property="og:description" content="Learn how to build a Vue.js app and how to easily get up and running with JWT authentication.">
+
+
+
+<meta property="og:type" content="article">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:site" content="@auth0">
+<meta name="twitter:creator" content="@auth0">
+
+  <meta name="twitter:title" content="Build an App with Vue.js: From Authentication to Calling an API">
+
+
+
+  <meta name="twitter:url" content="https://auth0.com/blog/build-an-app-with-vuejs/">
+
+
+  <meta name="twitter:description" content="Learn how to build a Vue.js app and how to easily get up and running with JWT authentication.">
+
+
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.auth0.com/blog/vuejs/vue-logo.png">
+
+
+
+<meta name="twitter:image:height" content="512">
+<meta name="twitter:image:width" content="1024">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+
+    
+      <title>Build an App with Vue.js: From Authentication to Calling an API</title>
+
+      <!-- Swiftype for the posts -->
+      <meta class="swiftype" name="title" data-type="string" content="Build an App with Vue.js: From Authentication to Calling an API">
+      <meta class="swiftype" name="type" data-type="enum" content="blog">
+      <meta class="swiftype" name="popularity" data-type="integer" content="1">
+    
+
+    <link href="https://plus.google.com/+Auth0" rel="publisher">
+    <link rel="manifest" href="/blog/manifest.json">
+    <script src="//use.typekit.net/tde2fii.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdn.auth0.com/w2/auth0-7.4.0.min.js"></script>
+    <script src="//cdn.auth0.com/js/lock/10.6.1/lock.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.2.0/react.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.2.0/react-dom.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.auth0.com/website/web-header/4.0.31/web-header.css">
+    <script src="https://cdn.auth0.com/website/web-header/4.0.31/web-header.js"></script>
+    <script src="//npmcdn.com/auth0-contact-form@2.0.3/cdn/contact-form.js"></script>
+    <link rel="stylesheet" href="//npmcdn.com/auth0-contact-form@2.0.3/cdn/contact-form.css">
+    <script src="//cdn.auth0.com/js/m/metrics-1.min.js"></script>
+    <script type="text/javascript">
+      !function(){
+        var metricsLib = window.metricsLib = window.metricsLib || [];
+        // A list of the methods in metrics.js to stub.
+        metricsLib.methods = [
+          'segment',
+          'track',
+          'setUserId',
+          'identify',
+          'alias',
+          'page',
+          'getData',
+          'ready',
+          'traits'
+        ];
+        metricsLib.factory = function(method){
+          return function(){
+            var args = Array.prototype.slice.call(arguments);
+            args.unshift(method);
+            metricsLib.push(args);
+            return metricsLib;
+          };
+        };
+        for (var i = 0; i < metricsLib.methods.length; i++) {
+          var key = metricsLib.methods[i];
+          metricsLib[key] = metricsLib.factory(key);
+        }
+        metricsLib.load = function(segmentKey, dwhEndpoint){
+          if(null != window.Auth0Metrics){
+            window.metricsLib = new Auth0Metrics(segmentKey, dwhEndpoint, 'blog');
+          }else{
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = ('https:' === document.location.protocol
+              ? 'https://' : 'http://')
+              + 'cdn.auth0.com/js/m/metrics-1.min.js';
+            script.onerror = function(){
+              console.error("No metrics");
+            }
+            script.onload = function(){
+              // Grab analytics and make it private
+              window.metricsLib = new Auth0Metrics(segmentKey, dwhEndpoint, 'blog');
+            }
+            var first = document.getElementsByTagName('script')[0];
+            first.parentNode.insertBefore(script, first);
+          }
+        };
+        var SEGMENT_KEY =  'aaB6w2BsRwUcGbRSUY7X22FPAa1NL3BL' ;
+        var DWH_ENDPOINT =  'https://dwh-tracking.it.auth0.com/dwh-metrics' ;
+        if (DWH_ENDPOINT) {
+          //- We should catch for an undefined DWH_ENDPOINT
+          metricsLib.load(SEGMENT_KEY, DWH_ENDPOINT);
+        } else {
+          console.error("DWH_ENDPOINT must be defined for tracking to work.")
+        }
+        }();
+    </script>
+
+    <script src="//cdn.auth0.com/js/ab/ab-1.min.js"></script>
+    <script src="//cdn.auth0.com/js/ab/ab-loader-1.min.js"></script>
+
+    
+
+    
+
+    
+      
+        <link rel="canonical" href="https://auth0.com/blog/build-an-app-with-vuejs/">
+      
+    
+
+    <!-- amphtml
+
+    
+      
+        <link rel="amphtml" href="https://auth0.com/blog/amp/build-an-app-with-vuejs/" />
+      
+     -->
+
+
+    
+      
+      
+    
+
+    <link rel="shortcut icon" href="https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://auth0.com/blog/rss.xml">
+    <link type="application/opensearchdescription+xml" rel="search" href="https://auth0.com/blog/osd.xml">
+
+    <link rel="preload" href="https://cdn.auth0.com/styleguide/core/2.0.4/fonts/fakt/FaktPro-Normal.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="https://cdn.auth0.com/styleguide/core/2.0.4/core.min.css">
+    <link rel="stylesheet" href="https://cdn.auth0.com/styleguide/components/1.0.8/components.min.css">
+
+    <link rel="stylesheet" href="/blog/css/index.css">
+    <link rel="stylesheet" href="/blog/css/vendor/selection-sharer.min.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+<style id="move-section">.new-homepage-page .customers{ padding-top: 0px;}.new-homepage-page .features-articles{ padding-top: 230px; }@media (min-width: 992px){.new-homepage-page .features-articles .article-container.map-bg:before{ top: -925px;}};@media (max-width: 991px){.new-homepage-page .features-articles{ padding-top: 230px;}};</style></head>
+
+
+<body itemscope="" itemtype="http://schema.org/WebPage">
+
+    <div id="header"></div>
+    <div class="container">
+  <div class="pn-popup" role="alert">
+      <div class="pn-popup-container">
+          <p>&#xFEFF;&#x2060;&#x2060;&#x2060;&#x2060;Do you want to receive a desktop notification when new content is published?</p>
+          <div class="pn-buttons">
+              <button id="push-allow">YES</button>
+              <button id="push-block">NO</button>
+          </div>
+          <div class="arrow"></div>
+      </div>
+  </div>
+</div>
+
+    <script>
+    (function () {
+      var config = {
+        auth0Domain: 'auth0.auth0.com',
+        auth0ClientID: 'zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI',
+        auth0CallbackURL: 'https://manage.auth0.com/callback',
+      };
+      var auth0js = new Auth0({
+        domain: config.auth0Domain,
+        clientID: config.auth0ClientID,
+        callbackURL: config.auth0CallbackURL,
+        responseType: 'token'
+      });
+      var lockOptions = {
+        auth: { redirectUrl: config.auth0CallbackURL },
+        theme: {
+          logo: 'https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/badge.png'
+        },
+        rememberLastLogin: true,
+        integratedWindowsLogin: false,
+        socialButtonStyle: 'big',
+        languageDictionary: {
+          emailInputPlaceholder: 'Work email',
+          passwordInputPlaceholder: 'Your password',
+          signUpTerms: 'By signing up, you agree to our <a href="/terms" target="_new">terms of service</a> and <a href="/privacy" target="_new">privacy policy</a>'
+        }
+      };
+      var lock = window.lock = new Auth0Lock(
+        config.auth0ClientID,
+        config.auth0Domain,
+        lockOptions
+      );
+
+      lock.on('signup ready', function () {
+        metricsLib.track('open:signup', getBasicInfo());
+      });
+
+      lock.on('signin ready', function () {
+        metricsLib.track('open:signin', getBasicInfo());
+      });
+
+      window.login = function login() {
+        metricsLib.track('click:signin', getBasicInfo());
+        lock.show({ initialScreen: 'login' });
+      }
+
+      window.signup = function() {
+        metricsLib.track('click:signup', getBasicInfo());
+        window.location.href = '/signup';
+      }
+
+      // Header
+      var React = window.React;
+      var ReactDOM = window.ReactDOM;
+      var Auth0WebHeader = window.Auth0WebHeader.default;
+      var Auth0ContactForm = window.Auth0ContactForm.default;
+      var Header = React.createClass({
+        getInitialState: function () {
+          return {
+            logged: false
+          };
+        },
+
+        componentDidMount: function () {
+          var _this = this;
+          auth0js.getSSOData(false, function (err, data) {
+            var logged = data.sso;
+            _this.setState({ logged: logged });
+          });
+
+          var contactFormOptions = {
+            onModalOpen: function () {
+              metricsLib.track('open:talk-to-sales');
+            },
+            onFormSuccess: function (metricsData) {
+              metricsLib.track('register:lead:talk-to-sales-modal', metricsData);
+              metricsLib.track('sent:talk-to-sales', metricsData);
+            },
+            onFormFail: function (metricsData) {
+              metricsLib.track('fail:register:lead:talk-to-sales-modal', metricsData);
+              metricsLib.track('fail-sent:talk-to-sales', metricsData);
+            }
+          };
+          var contactForm = new Auth0ContactForm(contactFormOptions);
+          this.setState({
+            showContactForm: function () {
+              contactForm.show({includePhoneField: true });
+            }
+          });
+        },
+
+        render: function () {
+          var HeaderProps = {
+            logged: this.state.logged,
+            showContactForm: this.state.showContactForm
+          };
+          var Auth0WebHeaderProps = toAuth0WebHeaderProps(HeaderProps);
+
+          return React.createElement(Auth0WebHeader, Auth0WebHeaderProps);
+        }
+      });
+
+      function toAuth0WebHeaderProps(props) {
+        var Auth0WebHeaderProps = {
+          theme: 'dark',
+          talkToSalesButtonLink: null,
+          talkToSalesButtonOnClick: props.showContactForm,
+          loginButtonOnClick: window.login
+        };
+
+        if (props.logged) {
+          Auth0WebHeaderProps.signupButtonLink = 'https://manage.auth0.com';
+        } else {
+          Auth0WebHeaderProps.signupButtonOnClick = window.signup;
+        }
+
+        return Auth0WebHeaderProps;
+      }
+
+      ReactDOM.render(React.createElement(Header, null), document.getElementById('header'));
+    })();
+    </script>
+    <div id="pjax">
+
+      <!-- Facebook -->
+      <div id="fb-root"></div>
+      <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=534074790006350&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Twitter -->
+      <script type="text/javascript">
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+      </script>
+
+      <!-- Twitter Conversion -->
+      <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+      <!-- Twitter Conversion -->
+<script type="text/javascript">
+  twttr.conversion.trackPid('l4rua');
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4rua&p_id=Twitter" />
+  <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4rua&p_id=Twitter" />
+</noscript>
+
+<article itemprop="mainEntity" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <link itemprop="mainEntityOfPage" href="https://auth0.com/blog/build-an-app-with-vuejs/">
+  
+  
+
+
+
+
+<section class="banner banner-post" style="background: #35495e">
+    <div class="container banner-container">
+        <i class="icon-budicon-697 hide"></i>
+
+        <h2 class="banner-subtitle"><a href="/blog/" target="_blank">Blog</a></h2>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+<a href="/blog/build-an-app-with-vuejs/" style="
+
+  background: #fff;
+
+ 
+
+" class="entry-thumbnail">
+  <div class="holder" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+    <img style="
+  
+ 
+  
+    
+    max-width: 80%;
+    
+  
+ 
+  
+ 
+  
+" src="https://cdn.auth0.com/blog/vuejs/vue-logo.png" alt="Build an App with Vue.js: From Authentication to Calling an API">
+    <meta itemprop="url" content="https://cdn.auth0.com/blog/vuejs/vue-logo.png">
+    <meta itemprop="width" content="128">
+    <meta itemprop="height" content="128">
+  </div>
+</a>
+
+
+        <h1 class="entry-title"><a href="/blog/build-an-app-with-vuejs/" title="Published: November 16, 2015"><span itemprop="headline">Build an App with Vue.js: From Authentication to Calling an API</span></a></h1>
+
+        
+        <div class="entry-content" itemprop="description">
+          <p>Learn how to build a Vue.js app and how to easily get up and running with JWT authentication.</p>
+
+        </div>
+        
+
+        <div class="post-info">
+          <div class="author">
+            <a href="https://twitter.com/ryanchenkie?lang=en"><img src="https://www.gravatar.com/avatar/7f4ec37467f2f7db6fffc7b4d2cc8dc2?size=200" width="27" height="27"> <span class="name" itemprop="author">Ryan Chenkie</span></a>
+          </div>
+
+          <div class="date">
+            <time datetime="November 16, 2015" class="published updated">November 16, 2015</time>
+            <meta itemprop="datePublished" content="2015-11-16">
+          </div>
+
+          
+  
+
+
+
+  
+
+
+<div class="social-stats">
+  <a href="#" data-url="https://auth0.com/blog/2015/11/13/build-an-app-with-vuejs/" data-type="twitter" data-txt="Build an App with Vue.js: From Authentication to Calling an API" data-via="auth0" data-count="true" class="network">
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" space="preserve">
+
+    <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
+
+      c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
+
+      c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
+
+      c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
+
+      C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
+
+      C436.339,160.061,450.668,145.174,462,128.223z"/>
+
+    </svg>
+
+  </a>
+
+  <a href="#" data-url="https://auth0.com/blog/2015/11/13/build-an-app-with-vuejs/" data-type="linkedin" data-txt="Build an App with Vue.js: From Authentication to Calling an API" data-count="true" class="network">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" space="preserve">
+
+    <path id="linkedin-icon" d="M411.945,50h-312c-27.614,0-50,22.386-50,50v312c0,27.614,22.386,50,50,50h312
+
+      c27.614,0,50-22.386,50-50V100C461.945,72.386,439.56,50,411.945,50z M180.996,392.99h-56.537V210.336h56.537V392.99z
+
+       M152.457,186.417c-18.465,0-33.432-15.09-33.432-33.703c0-18.614,14.967-33.704,33.432-33.704c18.463,0,33.432,15.09,33.432,33.704
+
+      C185.889,171.327,170.92,186.417,152.457,186.417z M392.865,392.99h-56.262c0,0,0-69.582,0-95.881
+
+      c0-26.296-9.988-40.974-30.781-40.974c-22.629,0-34.453,15.289-34.453,40.974c0,28.133,0,95.881,0,95.881h-54.223V210.336h54.223
+
+      v24.599c0,0,16.309-30.171,55.041-30.171s66.455,23.648,66.455,72.572C392.865,326.262,392.865,392.99,392.865,392.99z"/>
+
+    </svg>
+  </a>
+
+  <a href="#" data-url="https://auth0.com/blog/2015/11/13/build-an-app-with-vuejs/" data-type="facebook" data-txt="Build an App with Vue.js: From Authentication to Calling an API" data-count="true" class="network">
+    <svg width="17" height="17" viewBox="0 0 412 412" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <g id="facebook-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+          <path d="M283.80119,412 L361.995375,412 C389.611494,412 412,389.612167 412,361.995375 L412,50.0046252 C412,22.3885058 389.612167,0 361.995375,0 L50.0046252,0 C22.3885058,0 0,22.3878333 0,50.0046252 L0,361.995375 C0,389.611494 22.3878333,412 50.0046252,412 L219.907783,412 L219.907783,254.137637 L166.482996,254.137637 L166.482996,192.266054 L219.907783,192.266054 L219.907783,146.637452 C219.907783,93.6867027 252.247398,64.8530656 299.484232,64.8530656 C322.110827,64.8530656 341.559134,66.5376524 347.225329,67.2916602 L347.225329,122.6301 L314.462578,122.644417 C288.775412,122.644417 283.80119,134.851707 283.80119,152.764958 L283.80119,192.266054 L345.068293,192.266054 L337.089173,254.137637 L283.80119,254.137637 L283.80119,412 Z" id="Rectangle-1" fill="#000000" sketch:type="MSShapeGroup"/>
+      </g>
+    </svg>
+  </a>
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+  <div class="utility-bar">
+  <div class="container">
+    <div class="pull-left">
+      <a href="javascript:signup()" class="signup-button btn btn-success btn-md mf-listen">Use Auth0 for Free</a>
+    </div>
+
+    <div class="pull-right share-container">
+      <span class="share-label">Share this post</span>
+      
+  
+
+
+
+  
+
+
+<div class="social-stats">
+  <a href="#" data-url="https://auth0.com/blog/2015/11/13/build-an-app-with-vuejs/" data-type="twitter" data-txt="Build an App with Vue.js: From Authentication to Calling an API" data-via="auth0" data-count="true" class="network">
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" space="preserve">
+
+    <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
+
+      c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
+
+      c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
+
+      c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
+
+      C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
+
+      C436.339,160.061,450.668,145.174,462,128.223z"/>
+
+    </svg>
+
+  </a>
+
+  <a href="#" data-url="https://auth0.com/blog/2015/11/13/build-an-app-with-vuejs/" data-type="linkedin" data-txt="Build an App with Vue.js: From Authentication to Calling an API" data-count="true" class="network">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" space="preserve">
+
+    <path id="linkedin-icon" d="M411.945,50h-312c-27.614,0-50,22.386-50,50v312c0,27.614,22.386,50,50,50h312
+
+      c27.614,0,50-22.386,50-50V100C461.945,72.386,439.56,50,411.945,50z M180.996,392.99h-56.537V210.336h56.537V392.99z
+
+       M152.457,186.417c-18.465,0-33.432-15.09-33.432-33.703c0-18.614,14.967-33.704,33.432-33.704c18.463,0,33.432,15.09,33.432,33.704
+
+      C185.889,171.327,170.92,186.417,152.457,186.417z M392.865,392.99h-56.262c0,0,0-69.582,0-95.881
+
+      c0-26.296-9.988-40.974-30.781-40.974c-22.629,0-34.453,15.289-34.453,40.974c0,28.133,0,95.881,0,95.881h-54.223V210.336h54.223
+
+      v24.599c0,0,16.309-30.171,55.041-30.171s66.455,23.648,66.455,72.572C392.865,326.262,392.865,392.99,392.865,392.99z"/>
+
+    </svg>
+  </a>
+
+  <a href="#" data-url="https://auth0.com/blog/2015/11/13/build-an-app-with-vuejs/" data-type="facebook" data-txt="Build an App with Vue.js: From Authentication to Calling an API" data-count="true" class="network">
+    <svg width="17" height="17" viewBox="0 0 412 412" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <g id="facebook-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+          <path d="M283.80119,412 L361.995375,412 C389.611494,412 412,389.612167 412,361.995375 L412,50.0046252 C412,22.3885058 389.612167,0 361.995375,0 L50.0046252,0 C22.3885058,0 0,22.3878333 0,50.0046252 L0,361.995375 C0,389.611494 22.3878333,412 50.0046252,412 L219.907783,412 L219.907783,254.137637 L166.482996,254.137637 L166.482996,192.266054 L219.907783,192.266054 L219.907783,146.637452 C219.907783,93.6867027 252.247398,64.8530656 299.484232,64.8530656 C322.110827,64.8530656 341.559134,66.5376524 347.225329,67.2916602 L347.225329,122.6301 L314.462578,122.644417 C288.775412,122.644417 283.80119,134.851707 283.80119,152.764958 L283.80119,192.266054 L345.068293,192.266054 L337.089173,254.137637 L283.80119,254.137637 L283.80119,412 Z" id="Rectangle-1" fill="#000000" sketch:type="MSShapeGroup"/>
+      </g>
+    </svg>
+  </a>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div id="container" class="container">
+    <div class="row sticky-container">
+      <section class="col-md-8 content-column">
+
+        <main class="blog-post blog-single">
+          <div class="inner">
+            <div class="entry-content js-entry-content" itemprop="articleBody">
+              
+              <div class="alert alert-info alert-icon">
+  <i class="icon-budicon-500"></i>
+  <strong>We just added a new updated article that covers the same topic. You can find it here: <a href="https://auth0.com/blog/vuejs2-authentication-tutorial/">Vuejs 2 Authentication Tutorial</a>.</strong>
+</div>
+
+
+<hr>
+
+<p><strong>TL;DR:</strong> There are a ton of great JavaScript frameworks out there, and it can be a little overwhelming to keep up with them all. The learning curve for these frameworks can also be a bit steep. <a href="http://vuejs.org/">Vue.js</a> is a breath of fresh air in this regard. In this tutorial, we&apos;ll see how easy it is to get up and running with a Vue.js app and how we can easily add authentication to it. Check out the <a href="https://github.com/auth0/vue-jwt-authentication">repo</a> to get the code.</p>
+
+<hr>
+
+<p>We are lucky to have plenty of JavaScript frameworks to choose from these days but, at the same time, it can be quite fatiguing to keep up with all of them. Some have a steep learning curve and require a lot of time for developers and their teams to become comfortable with. Others might be easy to learn, but perhaps lack some features that are crucial to a project. In either case, the level of complexity associated with learning a new framework can often hinder adoption and leave developers and teams frustrated.</p>
+
+<p>If you&apos;re still choosing a framework for your Single Page App (SPA), or if you just want to learn a new technology, I believe <a href="http://vuejs.org/">Vue.js</a> is one of the best frameworks you can pick. I love Vue.js for its simplicity and elegance, and how I can be super productive with it without needing to spend tons of time learning. In my experience, Vue.js <strong>just works</strong> and gets out of my way when developing applications.</p>
+
+<p>Those are some anecdotal selling points, but let&apos;s cut to the hard facts: what exactly is Vue.js and how does it differ from other frameworks? If you&apos;re familiar with AngularJS 1.x, then Vue.js will probably look pretty familiar. In fact, Vue is heavily inspired by Angular. So what&apos;s the difference then? Essentially, Vue has a much simpler and cleaner API, is more flexible, and claims better performance.</p>
+
+<p>Vue.js is firstly a view layer for applications that allows for reactive data binding and composable view components, and many developers use it only for their view layers. However, when combined with other tools in the Vue ecosystem, such as <strong><a href="https://github.com/vuejs/vue-router">vue-router</a></strong>, <strong><a href="https://github.com/vuejs/vue-resource">vue-resource</a></strong>, and <strong><a href="https://github.com/vuejs/vue-loader">vue-loader</a></strong>, we get all the benefits of a great SPA framework while simplicity and developer experience are maintained.</p>
+
+<h2>What We&apos;ll Build: A Vue.js Authentication App</h2>
+
+<p>To demonstrate how easy it is to get up and running with a full SPA using Vue, we&apos;ll build a simple app that retrieves Chuck Norris quotes from a NodeJS backend. Vue can easily be mixed with other technologies, and you can use Vue for as much or as little of your app as you wish. To demonstrate Vue&apos;s full potential though, we&apos;ll build the whole front-end SPA with Vue components and follow Vue&apos;s pattern for large-scale applications. The front-end app will be totally decoupled from the back end, and we&apos;ll make HTTP requets to RESTful endpoints on our server.</p>
+
+<p>We&apos;ll also demonstrate how we can easily add authentication to our Vue.js app. We&apos;ll put <strong>Login</strong> and <strong>Signup</strong> components in place to show how we can retrieve and save a user&apos;s JWT, and then send it back to the server for accessing protected endpoints.</p>
+
+<p>Rather than listing out how Vue implements certain features and comparing them to other frameworks, we&apos;ll let the code speak for itself. Again, if you&apos;re familiar with Angular, it will be easy to reason about Vue&apos;s features and syntax.</p>
+
+<h2>Installation and Setup</h2>
+
+<p>Everything we need to start our component-based Vue.js app is on NPM. To get started, let&apos;s pull down what we need by creating our <code>package.json</code> file and specifying the packages we need. We can take full advantage of ES6 for our Vue components, and to make that happen, we&apos;ll use <a href="https://babeljs.io/">Babel</a>. We&apos;ll also bundle everything up with <a href="https://webpack.github.io/">Webpack</a> and use <strong>hot reloading</strong> to see changes to our modules happen immediately. If you wish, you can also use other build tools (like Browserify) instead of Webpack.</p>
+
+<pre><code class="js">// package.json
+
+...
+
+  &quot;devDependencies&quot;: {
+    &quot;babel-core&quot;: &quot;^6.1.2&quot;,
+    &quot;babel-loader&quot;: &quot;^6.1.0&quot;,
+    &quot;babel-plugin-transform-runtime&quot;: &quot;^6.1.2&quot;,
+    &quot;babel-preset-es2015&quot;: &quot;^6.1.2&quot;,
+    &quot;babel-runtime&quot;: &quot;^6.0.14&quot;,
+    &quot;css-loader&quot;: &quot;^0.21.0&quot;,
+    &quot;style-loader&quot;: &quot;^0.13.0&quot;,
+    &quot;vue-hot-reload-api&quot;: &quot;^1.2.1&quot;,
+    &quot;vue-html-loader&quot;: &quot;^1.0.0&quot;,
+    &quot;vue-loader&quot;: &quot;^7.0.1&quot;,
+    &quot;webpack&quot;: &quot;^1.12.3&quot;,
+    &quot;webpack-dev-server&quot;: &quot;^1.12.1&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;bootstrap&quot;: &quot;^3.3.5&quot;,
+    &quot;vue-resource&quot;: &quot;^0.1.17&quot;,
+    &quot;vue-router&quot;: &quot;^0.7.5&quot;,
+    &quot;vue&quot;: &quot;^1.0.7&quot;
+  }
+
+...
+</code></pre>
+
+<p>Once the rest of our <code>package.json</code> file is in place, we can install everything.</p>
+
+<pre><code class="bash">npm install
+</code></pre>
+
+<p>To make <strong>Webpack</strong> work, we need a configuration file for it. Let&apos;s put in a file called <code>webpack.config.js</code> and populate it.</p>
+
+<pre><code class="js">// webpack.config.js
+
+module.exports = {
+  // the main entry of our app
+  entry: [&apos;./src/index.js&apos;, &apos;./src/auth/index.js&apos;],
+  // output configuration
+  output: {
+    path: __dirname + &apos;/build/&apos;,
+    publicPath: &apos;build/&apos;,
+    filename: &apos;build.js&apos;
+  },
+
+  module: {
+    loaders: [
+      // process *.vue files using vue-loader
+      { test: /\.vue$/, loader: &apos;vue&apos; },
+      // process *.js files using babel-loader
+      // the exclude pattern is important so that we don&apos;t
+      // apply babel transform to all the dependencies!
+      { test: /\.js$/, loader: &apos;babel&apos;, exclude: /node_modules/ }
+    ]
+  },
+
+  babel: {
+    presets: [&apos;es2015&apos;],
+    plugins: [&apos;transform-runtime&apos;]
+  }
+}
+</code></pre>
+
+<p>In this config file, we&apos;re first specifying where our app&apos;s main entry point is and what the output path should be. The bundled JavaScript will be served as one file called <code>build.js</code>.</p>
+
+<p>In the <code>module.loaders</code> array, we&apos;re setting up processing for our Vue components. These components have an extension of <code>.vue</code> and are processed by <code>vue-loader</code>.</p>
+
+<p>That&apos;s all the configuration we need for now. Once we have our files in place, we just need to run <code>webpack-dev-server --inline --hot</code> to bundle and serve everything.</p>
+
+<h2>Setting Up the Back End</h2>
+
+<p>We&apos;re using our trusty <a href="https://github.com/auth0/nodejs-jwt-authentication-sample">nodejs-jwt-authentication-sample</a> to retrieve Chuck Norris quotes. Clone the repo wherever you like (here we&apos;re putting it in a <code>server</code> directory) and follow the readme for installation steps.</p>
+
+<h2>Setting Up the Vue Components</h2>
+
+<p>Let&apos;s get started with the actual components for our app. But first, what exactly is a Vue component and how does it work? Vue components allow us to specify a <strong>template</strong>, a <strong>script</strong>, and <strong>style</strong> rules all in one file. If you&apos;re familiar with React, this will likely be familiar. This move toward composition and splitting the app into small components is helpful for maintainence and reasoning about the app.</p>
+
+<p>To see how this works, let&apos;s start with the <code>Home</code> component.</p>
+
+<pre><code class="html">  &lt;!-- src/components/Home.vue --&gt;
+
+  &lt;template&gt;
+    &lt;div class=&quot;col-sm-6 col-sm-offset-3&quot;&gt;
+      &lt;h1&gt;Get a Free Chuck Norris Quote!&lt;/h1&gt;
+      &lt;button class=&quot;btn btn-primary&quot; v-on:click=&quot;getQuote()&quot;&gt;Get a Quote&lt;/button&gt;
+      &lt;div class=&quot;quote-area&quot; v-if=&quot;quote&quot;&gt;
+        &lt;h2&gt;&lt;blockquote&gt;{{ quote }}&lt;/blockquote&gt;&lt;/h2&gt;      
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;script&gt;
+  export default {
+    data() {
+      return {
+        quote: &apos;&apos;
+      }
+    },
+    methods: {
+      getQuote() {
+        this.$http
+          .get(&apos;http://localhost:3001/api/random-quote&apos;, (data) =&gt; {
+            this.quote = data;
+          })
+          .error((err) =&gt; console.log(err))
+      }
+    }
+  }
+  &lt;/script&gt;
+</code></pre>
+
+<p>The <strong>template</strong> is just some simple markup with a button that calls the method <code>getQuote</code>. We can notice some similarities to Angular in this code already. The template uses directives like <code>v-on:click</code> for click events, and <code>v-if</code> to conditionally show and hide the <code>quote-area</code> div. Vue also uses the double curly brace syntax for templating, which is how we take care of rendering the <code>quote</code> property.</p>
+
+<p>The <strong>script</strong> area exports an object that is converted into a <strong>component constructor function</strong> by Vue. It has on it a <code>data</code> method and a <code>methods</code> object where we can register custom methods. When we want to register a data property to be used in the template, we need to do so in the <code>data</code> method. If we were to leave out the <code>quote</code> property from the returned object, that property wouldn&apos;t be rendered in the template. The <code>getQuote</code> method makes an HTTP request to our back end and sets the returned data on the <code>quote</code> property.</p>
+
+<p>This gives us a good idea of what Vue components look like, but this won&apos;t work quite yet because we need to set up our app&apos;s main entry point, as well as a main <strong>App</strong> component. Here&apos;s how this component will render once everything is set up:</p>
+
+<p><img src="https://cdn.auth0.com/blog/vuejs/vuejs-1.png" alt="vue vuejs authentication quote"></p>
+
+<h2>Setting Up index.js and App.vue</h2>
+
+<p>The <code>index.js</code> file is the place where we set up our main imports and do other configuration like routing. Let&apos;s set up everything we&apos;ll need for the whole app right now.</p>
+
+<pre><code class="js">// src/index.js
+
+import Vue from &apos;vue&apos;
+import App from &apos;./components/App.vue&apos;
+import Home from &apos;./components/Home.vue&apos;
+import SecretQuote from &apos;./components/SecretQuote.vue&apos;
+import Signup from &apos;./components/Signup.vue&apos;
+import Login from &apos;./components/Login.vue&apos;
+import VueRouter from &apos;vue-router&apos;
+import VueResource from &apos;vue-resource&apos;
+Vue.use(VueResource)
+Vue.use(VueRouter)
+
+export var router = new VueRouter()
+
+// Set up routing and match routes to components
+router.map({
+  &apos;/home&apos;: {
+    component: Home
+  },
+  &apos;secretquote&apos;: {
+    component: SecretQuote
+  },
+  &apos;/login&apos;: {
+    component: Login
+  },
+  &apos;/signup&apos;: {
+    component: Signup
+  }
+})
+
+// Redirect to the home route if any routes are unmatched
+router.redirect({
+  &apos;*&apos;: &apos;/home&apos;
+})
+
+// Start the app on the #app div
+router.start(App, &apos;#app&apos;)
+</code></pre>
+
+<p>We&apos;re importing some components we&apos;ve yet to create, as well as <code>vue-router</code> and <code>vue-resource</code>. For the app to recognize <code>vue-router</code> and <code>vue-resource</code>, we just need to call <code>Vue.use</code> on them. We can set up our route definitions with the simple <code>map</code> method on our instance of <code>vue-router</code>. The reason we&apos;re exporting this instance is so we can get a reference to it in our other components.</p>
+
+<pre><code class="html">  &lt;!-- src/components/App.vue --&gt;
+
+  &lt;template&gt;
+    &lt;nav class=&quot;navbar navbar-default&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;home&apos;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;login&apos;&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;signup&apos;&quot;&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;secretquote&apos;&quot;&gt;Secret Quote&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;login&apos;&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;    
+    &lt;/nav&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+</code></pre>
+
+<p>To start out, our <code>App</code> component just needs a template. This top-level component has a <code>navbar</code> and exposes a <code>router-view</code> which is where our various routes will be rendered. Linking to routes is as simple as placing <code>v-link</code> on the anchor tags.</p>
+
+<p>Finally, we need to be sure to place a div with an id of <strong>app</strong> within <code>index.html</code>, as this is where the whole app will be exposed.</p>
+
+<pre><code class="html"> &lt;!-- index.html --&gt;
+
+ ...
+
+ &lt;body&gt;
+ &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;      
+   &lt;script src=&quot;build/build.js&quot;&gt;&lt;/script&gt;
+ &lt;/body&gt;
+
+ ...
+</code></pre>
+
+<h2>User Authentication - Login and Signup Components</h2>
+
+<p>To log users in, we&apos;ll need to make an HTTP request to our authentication endpoint and save the JWT that is returned in <code>localStorage</code>. We could place this logic right within our <strong>Login</strong> component, but we should really have a service to make it more reusable. Let&apos;s create a directory called <strong>auth</strong> and provide an <code>index.js</code> file there.</p>
+
+<pre><code class="js">// src/auth/index.js
+
+import {router} from &apos;../index&apos;
+
+// URL and endpoint constants
+const API_URL = &apos;http://localhost:3001/&apos;
+const LOGIN_URL = API_URL + &apos;sessions/create/&apos;
+const SIGNUP_URL = API_URL + &apos;users/&apos;
+
+export default {
+
+  // User object will let us check authentication status
+  user: {
+    authenticated: false
+  },
+
+  // Send a request to the login URL and save the returned JWT
+  login(context, creds, redirect) {
+    context.$http.post(LOGIN_URL, creds, (data) =&gt; {
+      localStorage.setItem(&apos;id_token&apos;, data.id_token)
+      localStorage.setItem(&apos;access_token&apos;, data.access_token)
+
+      this.user.authenticated = true
+
+      // Redirect to a specified route
+      if(redirect) {
+        router.go(redirect)        
+      }
+
+    }).error((err) =&gt; {
+      context.error = err
+    })
+  },
+
+  signup(context, creds, redirect) {
+    context.$http.post(SIGNUP_URL, creds, (data) =&gt; {
+      localStorage.setItem(&apos;id_token&apos;, data.id_token)
+      localStorage.setItem(&apos;access_token&apos;, data.access_token)
+
+      this.user.authenticated = true
+
+      if(redirect) {
+        router.go(redirect)        
+      }
+
+    }).error((err) =&gt; {
+      context.error = err
+    })
+  },
+
+  // To log out, we just need to remove the token
+  logout() {
+    localStorage.removeItem(&apos;id_token&apos;)
+    localStorage.removeItem(&apos;access_token&apos;)
+    this.user.authenticated = false
+  },
+
+  checkAuth() {
+    var jwt = localStorage.getItem(&apos;id_token&apos;)
+    if(jwt) {
+      this.user.authenticated = true
+    }
+    else {
+      this.user.authenticated = false      
+    }
+  },
+
+  // The object to be passed as a header for authenticated requests
+  getAuthHeader() {
+    return {
+      &apos;Authorization&apos;: &apos;Bearer &apos; + localStorage.getItem(&apos;access_token&apos;)
+    }
+  }
+}
+</code></pre>
+
+<p>Our <code>auth</code> service exposes methods for logging users in and out, signing them up, and checking their authentication status. Note that &quot;logging in&quot; is just a matter of saving the JWT that is returned by the server. These methods and properties will all be useful throughout the app. For example, we can use the <code>user.authenticated</code> property to conditionally show elements in the app.</p>
+
+<h2>Implementing the Login Component</h2>
+
+<p>The <strong>Login</strong> component will need some HTML for the user inputs and a method to call our <strong>auth</strong> service.</p>
+
+<pre><code class="html">  &lt;!-- src/components/Login.vue --&gt;
+
+  &lt;template&gt;
+    &lt;div class=&quot;col-sm-4 col-sm-offset-4&quot;&gt;
+      &lt;h2&gt;Log In&lt;/h2&gt;
+      &lt;p&gt;Log in to your account to get some great quotes.&lt;/p&gt;
+      &lt;div class=&quot;alert alert-danger&quot; v-if=&quot;error&quot;&gt;
+        &lt;p&gt;{{ error }}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input
+          type=&quot;text&quot;
+          class=&quot;form-control&quot;
+          placeholder=&quot;Enter your username&quot;
+          v-model=&quot;credentials.username&quot;
+        &gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input
+          type=&quot;password&quot;
+          class=&quot;form-control&quot;
+          placeholder=&quot;Enter your password&quot;
+          v-model=&quot;credentials.password&quot;
+        &gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;btn btn-primary&quot; @click=&quot;submit()&quot;&gt;Access&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;script&gt;
+  import auth from &apos;../auth&apos;
+  export default {
+    data() {
+      return {
+        // We need to initialize the component with any
+        // properties that will be used in it
+        credentials: {
+          username: &apos;&apos;,
+          password: &apos;&apos;
+        },
+        error: &apos;&apos;
+      }
+    },
+    methods: {
+      submit() {
+        var credentials = {
+          username: this.credentials.username,
+          password: this.credentials.password
+        }
+        // We need to pass the component&apos;s this context
+        // to properly make use of http in the auth service
+        auth.login(this, credentials, &apos;secretquote&apos;)
+      }
+    }
+
+  }
+  &lt;/script&gt;
+</code></pre>
+
+<p>HTTP calls made with <code>vue-resource</code> require a component&apos;s context, and since we&apos;re abstracting that logic to a service, we need to pass the <strong>Login</strong> component&apos;s <code>this</code> context to the service. The second argument is the object with the user&apos;s credentials, and the third is the route we want to redirect to upon successfully authenticating.</p>
+
+<p>Note that we&apos;re using <code>@click</code> on our submit button here. This is a shorthand alternative to <code>v-on:click</code>.</p>
+
+<p><img src="https://cdn.auth0.com/blog/vuejs/vuejs-2.png" alt="vue vuejs authentication login"></p>
+
+<p>The <strong>Signup</strong> component is nearly identical, except it will use the <code>signup</code> method from the <code>auth</code> service to send the user&apos;s credentials to a different endpoint.</p>
+
+<p><img src="https://cdn.auth0.com/blog/vuejs/vuejs-4.png" alt="vue vuejs authentication signup"></p>
+
+<h2>Implementing the Secret Quote Component</h2>
+
+<p>When a user successfully authenticates, they will be able to access the <strong>secret-quote</strong> route from the API. The <strong>SecretQuote</strong> component will look similar to the <strong>Home</strong> component, but we&apos;ll attach the user&apos;s JWT as an <code>Authorization</code> header when requests are sent.</p>
+
+<pre><code class="html">  &lt;!-- src/components/SecretQuote.vue --&gt;
+
+  &lt;template&gt;
+    &lt;div class=&quot;col-sm-6 col-sm-offset-3&quot;&gt;
+      &lt;h1&gt;Get a Secret Chuck Norris Quote!&lt;/h1&gt;
+      &lt;button class=&quot;btn btn-warning&quot; v-on:click=&quot;getQuote()&quot;&gt;Get a Quote&lt;/button&gt;
+      &lt;div class=&quot;quote-area&quot; v-if=&quot;quote&quot;&gt;
+        &lt;h2&gt;&lt;blockquote&gt;{{ quote }}&lt;/blockquote&gt;&lt;/h2&gt;      
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;script&gt;
+  import auth from &apos;../auth&apos;
+  export default {
+    data() {
+      return {
+        quote: &apos;&apos;
+      }
+    },
+    methods: {
+      getQuote() {
+        this.$http
+          .get(&apos;http://localhost:3001/api/protected/random-quote&apos;, (data) =&gt; {
+            this.quote = data;
+          }, {
+            // Attach the JWT header
+            headers: auth.getAuthHeader()
+          })
+          .error((err) =&gt; console.log(err))
+      }
+    },
+    route: {
+      // Check the users auth status before
+      // allowing navigation to the route
+      canActivate() {
+        return auth.user.authenticated
+      }
+    }
+  }
+  &lt;/script&gt;
+</code></pre>
+
+<p>The header is attached by providing an options object as the third argument to the HTTP request. To get the JWT header, we call the <code>getAuthHeader</code> method from the <code>auth</code> service.</p>
+
+<p>Since we don&apos;t want users to access this route if they are not authenticated, we can tap into <code>vue-router</code>&apos;s transition pipeline. Specifically, we use the <code>canActivate</code> hook and consult the <code>auth</code> service to check if the user is authenticated. If so, the route can be navigated to.</p>
+
+<p><img src="https://cdn.auth0.com/blog/vuejs/vuejs-3.png" alt="vue vuejs authentication secretquote"></p>
+
+<h2>Final Touches</h2>
+
+<p>We&apos;re nearly done, but there are a couple of improvements we can make before we finish out. It would be good to conditionally show and hide menu items based on the user&apos;s <code>auth</code> status. To do that, we&apos;ll use <code>v-if</code>.</p>
+
+<pre><code class="html">  &lt;!-- src/components/App.vue --&gt;
+
+  &lt;template&gt;
+    &lt;nav class=&quot;navbar navbar-default&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;home&apos;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;login&apos;&quot; v-if=&quot;!user.authenticated&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;signup&apos;&quot; v-if=&quot;!user.authenticated&quot;&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;secretquote&apos;&quot; v-if=&quot;user.authenticated&quot;&gt;Secret Quote&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a v-link=&quot;&apos;login&apos;&quot; v-if=&quot;user.authenticated&quot; @click=&quot;logout()&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;    
+    &lt;/nav&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;script&gt;
+  import auth from &apos;../auth&apos;
+  export default {
+    data() {
+      return {
+        user: auth.user
+      }
+    },
+    methods: {
+      logout() {
+        auth.logout()
+      }
+    }
+  }
+  &lt;/script&gt;
+</code></pre>
+
+<p>The <code>auth</code> service sets the user&apos;s authentication status when the <code>login</code> or <code>logout</code> methods are used, but if the page is refreshed or the app closed and reopened, that status will be lost. To get around that, let&apos;s call <code>checkLogin</code> when the app is first loaded.</p>
+
+<pre><code class="js">// src/index.js
+
+...
+
+import auth from &apos;./auth&apos;
+
+// Check the users auth status when the app starts
+auth.checkAuth()
+
+...
+</code></pre>
+
+<h3>Setting Global Headers</h3>
+
+<p>When we make a request to the protected <code>secret-quote</code> route, we pass an options object that has the <code>Authorization</code> header and user&apos;s JWT <code>access_token</code> on it. If, instead, we wanted to globally set the <code>Authorization</code> header and not worry about setting it on each HTTP request, we could set up a global header.</p>
+
+<pre><code class="js">// src/index.js
+
+...
+
+// Optional
+Vue.http.headers.common[&apos;Authorization&apos;] = auth.getAuthHeader();
+
+...
+</code></pre>
+
+<h2>Aside: Using Auth0 With Your Vue.js App</h2>
+
+<p>Auth0 issues <a href="http://jwt.io">JSON Web Tokens</a> on every login for your users. This means that you can have a solid <a href="https://auth0.com/docs/identityproviders">identity infrastructure</a>, including <a href="https://auth0.com/docs/sso/single-sign-on">single sign-on</a>, user management, support for social identity providers (Facebook, Github, Twitter, etc.), enterprise identity providers (Active Directory, LDAP, SAML, etc.) and your own database of users with just a few lines of code.</p>
+
+<p>We can easily set up authentication in our Vue.js apps by using the <strong><a href="https://auth0.com/lock">Lock Widget</a></strong>.</p>
+
+<blockquote class="tweet-quote">
+  <a href="https://twitter.com/intent/tweet?text=&quot;We can easily set up authentication in our Vue.js apps by using the Lock Widget&quot; via @auth0 http://auth0.com/blog/build-an-app-with-vuejs/">
+    <p>&quot;We can easily set up authentication in our Vue.js apps by using the Lock Widget&quot;</p>
+    <p class="tweet-link">TWEET THIS <img src="https://cdn.auth0.com/blog/resources/twitter.svg"></p>
+  </a>
+</blockquote>
+
+
+
+
+<script>
+    $(function() {
+        $('.tweet-quote').on('click', function() {
+            metricsLib.track('blog:share:twitter_quote');
+        });
+    });
+</script>
+
+
+<p><img src="https://cdn.auth0.com/blog/node-knockout/node-knockout-1.png" alt="auth0 lock vuejs"></p>
+
+<h3>Step 1: Include Auth0&apos;s Lock Widget</h3>
+
+<pre><code class="html">  &lt;!-- index.html --&gt;
+
+  ...
+
+  &lt;!-- Auth0 Lock script --&gt;
+  &lt;script src=&quot;//cdn.auth0.com/js/lock-7.11.1.min.js&quot;&gt;&lt;/script&gt;
+
+  ...
+</code></pre>
+
+<h3>Step 2: Instantiate Lock in index.js</h3>
+
+<pre><code class="js">// src/index.js
+
+...
+
+// Instantiate a Lock
+export var lock = new Auth0Lock(YOUR_CLIENT_ID, YOUR_CLIENT_DOMAIN)
+
+...
+</code></pre>
+
+<h3>Step 3: Call the Lock Widget from a Vue.js Component</h3>
+
+<pre><code class="html">  &lt;!-- src/components/Login.vue --&gt;
+
+  &lt;template&gt;
+    &lt;div class=&quot;col-sm-4 col-sm-offset-4&quot;&gt;
+      &lt;h2&gt;Log In&lt;/h2&gt;
+      &lt;p&gt;Log In with Auth0&apos;s Lock Widget.&lt;/p&gt;
+      &lt;button class=&quot;btn btn-primary&quot; @click=&quot;login()&quot;&gt;Log In&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;script&gt;
+  // Import the Lock instance
+  import {lock} from &apos;../index&apos;
+
+  export default {
+
+    methods: {
+
+      login() {
+
+        // Show the Lock Widget and save the user&apos;s JWT on a successful login
+        lock.show((err, profile, id_token) =&gt; {
+
+          localStorage.setItem(&apos;profile&apos;, JSON.stringify(profile))
+          localStorage.setItem(&apos;id_token&apos;, id_token)
+
+        })
+      },
+
+      logout() {
+
+        // Remove the profile and token from localStorage
+        localStorage.removeItem(&apos;profile&apos;)
+        localStorage.removeItem(&apos;id_token&apos;)
+
+      }
+    }
+
+  }
+
+  &lt;/script&gt;
+</code></pre>
+
+<p><strong>Important API Security Note:</strong> If you want to use Auth0 authentication to authorize <em>API requests</em>, note that you&apos;ll need to use <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">a different flow depending on your use case</a>. Auth0 <code>idToken</code> should only be used on the client-side. <a href="https://auth0.com/blog/why-should-use-accesstokens-to-secure-an-api/">Access tokens should be used to authorize APIs</a>. You can read more about <a href="https://auth0.com/docs/apis">making API calls with Auth0 here</a>.</p>
+
+<h2>Wrapping Up</h2>
+
+<p>We have many great choices for SPA frameworks these days, and this can easily cause analysis paralysis. Further, it can be fatiguing to keep up with the pace of new framework development and to learn their ins and outs.</p>
+
+<p>I find Vue.js to be a breath of fresh air in this regard. The library and ecosystem are feature-rich, but they get out of your way as you develop your apps. I&apos;ve found that the learning curve with Vue.js isn&apos;t as steep as it can be with other frameworks, and from my experience, it seems to always <strong>just work</strong>.</p>
+
+<p>As we saw in this tutorial, we can easily add authentication to our Vue.js apps. Also, Vue&apos;s HTTP library, <code>vue-resource</code>, makes it trivial to send requests with an <code>Authorization</code> header.</p>
+
+<p>I hope you&apos;ll consider Vue.js for your next project--it really is great to work with!</p>
+
+            </div>
+            
+          </div>
+        </main>
+        <div class="bottom-module">
+          
+
+<section class="custom-try-banner  ">
+  <div class="banner-wrapper">
+    <a href="https://auth0.com/" target="_blank" class="banner-logo"></a>
+    <p class="banner-text">
+      
+        Authentication that just works.<br> Any app. Any device. Hosted anywhere.
+      
+    </p>
+    
+      <a href="javascript:signup()" class="signup-button btn btn-success btn-md">Use Auth0 for Free</a>
+    
+  </div>
+</section>
+
+          <div class="try-banner" style="display:none;">
+              <a href="javascript:signup()" class="signup-button btn btn-success   btn-lg">Use Auth0 for Free</a>
+          </div>
+        </div>
+        <div id="disqus_thread"></div>
+      </section>
+      <aside class="col-md-4 sidebar-column" data-sticky-padding="90" itemscope="" itemtype="http://schema.org/WPSideBar">
+        <section id="newsletter-subs">
+  <form class="newsletter-subscriber hide">
+    <span data-close=""></span>
+    <h5 class="title">Subscribe to more awesome content!</h5>
+    <div class="fields">
+      <button type="submit" class="btn btn-lg btn-success">
+        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <span><input class="form-control" type="text" placeholder="your@email.com"></span>
+    </div>
+  </form>
+</section>
+
+        <section class="popular-posts">
+  <h5 class="section-title">Related Posts</h5>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <article class="popular-post">
+    <div class="image-container">
+      
+
+
+
+
+
+
+
+
+
+
+
+<a href="/blog/vuejs2-authentication-tutorial/" style="
+
+ 
+
+" class="entry-thumbnail">
+  <div class="holder" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+    <img style="
+  
+ 
+  
+    
+  
+ 
+  
+ 
+  
+" src="https://cdn2.auth0.com/blog/vuejs/logo.png" alt="Vuejs 2 Authentication Tutorial">
+    <meta itemprop="url" content="https://cdn2.auth0.com/blog/vuejs/logo.png">
+    <meta itemprop="width" content="128">
+    <meta itemprop="height" content="128">
+  </div>
+</a>
+
+    </div>
+    <div class="text-container">
+      <a href="/blog/vuejs2-authentication-tutorial/"><h2 class="popular-post-title h4">Vuejs 2 Authentication Tutorial</h2></a>
+      <span class="popular-post-author"><a href="#" rel="author">Prosper Otemuyiwa</a></span>
+    </div>
+  </article>
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  <article class="popular-post">
+    <div class="image-container">
+      
+
+
+
+
+
+
+
+
+
+
+
+<a href="/blog/reactjs-authentication-tutorial/" style="
+
+ 
+
+" class="entry-thumbnail">
+  <div class="holder" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+    <img style="
+  
+ 
+  
+    
+  
+ 
+  
+ 
+  
+" src="https://cdn.auth0.com/blog/blog/React-logo.png" alt="ReactJS Authentication Tutorial">
+    <meta itemprop="url" content="https://cdn.auth0.com/blog/blog/React-logo.png">
+    <meta itemprop="width" content="128">
+    <meta itemprop="height" content="128">
+  </div>
+</a>
+
+    </div>
+    <div class="text-container">
+      <a href="/blog/reactjs-authentication-tutorial/"><h2 class="popular-post-title h4">ReactJS Authentication Tutorial</h2></a>
+      <span class="popular-post-author"><a href="#" rel="author">Prosper Otemuyiwa</a></span>
+    </div>
+  </article>
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <article class="popular-post">
+    <div class="image-container">
+      
+
+
+
+
+
+
+
+
+
+
+
+<a href="/blog/angular-2-authentication/" style="
+
+ 
+
+" class="entry-thumbnail">
+  <div class="holder" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+    <img style="
+  
+ 
+  
+    
+  
+ 
+  
+ 
+  
+" src="https://cdn.auth0.com/blog/angular/logo3.png" alt="Angular 2 Authentication Tutorial">
+    <meta itemprop="url" content="https://cdn.auth0.com/blog/angular/logo3.png">
+    <meta itemprop="width" content="128">
+    <meta itemprop="height" content="128">
+  </div>
+</a>
+
+    </div>
+    <div class="text-container">
+      <a href="/blog/angular-2-authentication/"><h2 class="popular-post-title h4">Angular 2 Authentication Tutorial</h2></a>
+      <span class="popular-post-author"><a href="#" rel="author">Ado Kukic</a></span>
+    </div>
+  </article>
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+</section>
+
+<script type="text/javascript">
+$('.popular-post a').click(function(e) {
+  metricsLib.track('click:blog-related');
+})
+</script>
+
+        <section class="guest-author-widget">
+  <article>
+    <h2 class="guest-author-title">Join the Auth0<br> Guest Author Program</h2>
+    <button data-close="" class="close-btn">
+      <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+        <title>Button - Close</title>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25999999">
+          <g transform="translate(-1230.000000, -1219.000000)" fill="#000000">
+            <g transform="translate(989.000000, 1204.000000)">
+                <path d="M248.5,30 C252.642136,30 256,26.6421356 256,22.5 C256,18.3578644 252.642136,15 248.5,15 C244.357864,15 241,18.3578644 241,22.5 C241,26.6421356 244.357864,30 248.5,30 Z M244.75,19.8214286 L245.821429,18.75 L248.5,21.4285714 L251.178571,18.75 L252.25,19.8214286 L249.571429,22.5 L252.25,25.1785714 L251.178571,26.25 L248.5,23.5714286 L245.821429,26.25 L244.75,25.1785714 L247.428571,22.5 L244.75,19.8214286 Z" id="Button---Clear"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <a class="img-link" href="https://auth0.com/guest-authors"><img class="guest-author-image" src="https://cdn.auth0.com/blog/guest-authors/pencil.png" alt="Auth0 Guest Author Program"></a>
+    <a class="guest-author-link" href="https://auth0.com/guest-authors" rel="external">
+      Learn More
+      <svg width="6px" height="9px" viewBox="0 0 6 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+        <title>Learn More</title>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-1166.000000, -1345.000000)" fill="#0A86B1">
+            <g transform="translate(989.000000, 1204.000000)">
+              <g transform="translate(87.000000, 132.000000)">
+                  <polygon id="Path" points="90 9 95.5514274 13.4411825 90 17.8820874"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </a>
+  </article>
+<script type="text/javascript">
+(function() {
+if (Math.random() >= .5) {
+        title = document.getElementsByClassName("guest-author-title")[0];
+        title.innerHTML = 'Join the Auth0<br> Ambassador Program'
+        img = document.getElementsByClassName("guest-author-image")[0];
+        img.src = 'https://auth0.com/pages/ambassador-program/assets/ambassador-spaceman-stand-up-1x.gif'
+        img.alt = 'Auth0 Ambassador Program'
+        imgLink = document.getElementsByClassName("img-link")[0];
+        imgLink.href = 'https://auth0.com/ambassador-program'
+	learnLink = document.getElementsByClassName("guest-author-link")[0];
+	learnLink.href = 'https://auth0.com/ambassador-program'
+}})();
+</script>
+</section>
+
+      </aside>
+    </div>
+    <div itemprop="publisher" itemscope="itemscope" itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="https://i.cloudup.com/BngR4GufYd-3000x3000.png">
+        <meta itemprop="width" content="100">
+        <meta itemprop="height" content="37">
+      </div>
+      <meta itemprop="name" content="Auth0">
+    </div>
+
+    <script>
+
+        var disqus_shortname = 'auth0blog'; // required: replace example with your forum shortname
+
+        var disqus_config = function () {
+            this.page.url = location.href.split('?')[0];
+        };
+
+        (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+            var d = document, s = d.createElement('script');
+
+            s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
+</article>
+
+      
+<footer class="site-footer">
+  <div class="container">
+    <div class="logo"><img src="https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/badge.png" width="30"></div>
+    <div class="footer-grid">
+      <div class="column">
+        <div class="item">
+          <h6>Product</h6>
+        </div>
+        <div class="item"><a href="https://auth0.com/pricing">Pricing</a></div>
+        <div class="item"><a href="https://auth0.com/why-auth0">Why Auth0</a></div>
+        <div class="item"><a href="https://auth0.com/how-it-works">How It Works</a></div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <h6>Company</h6>
+        </div>
+        <div class="item"><a href="https://auth0.com/about">About Us</a></div>
+        <div class="item"><a href="https://auth0.com/blog">Blog</a></div>
+        <div class="item"><a href="https://auth0.com/jobs">Jobs</a></div>
+        <div class="item"><a href="https://auth0.com/press">Press</a></div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <h6>Security</h6>
+        </div>
+        <div class="item"><a href="https://auth0.com/availability-trust">Availability &amp; Trust</a></div>
+        <div class="item"><a href="https://auth0.com/security">Security</a></div>
+        <div class="item"><a href="https://auth0.com/whitehat">White Hat</a></div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <h6>Learn</h6>
+        </div>
+        <div class="item"><a href="https://support.auth0.com">Help &amp; Support</a></div>
+        <div class="item"><a href="https://auth0.com/docs">Documentation</a></div>
+        <div class="item"><a href="https://auth0.com/opensource">Open Source</a></div>
+      </div>
+      <div class="column">
+        <div class="item">
+          <h6>Extend</h6>
+        </div>
+        <div class="item"><a href="https://auth0.com/lock">Lock</a></div>
+        <div class="item"><a href="https://auth0.com/wordpress">WordPress</a></div>
+        <div class="item"><a href="https://auth0.com/docs/apiv2">API Explorer</a></div>
+      </div>
+      <div class="contact">
+        <div class="column">
+          <div class="item">
+            <h6>Contact</h6>
+          </div>
+          <div class="item item-text">10900 NE 8th St.<br>Suite 700<br>Bellevue, WA   98004</div>
+        </div>
+        <div class="column no-heading">
+          <div class="item"><a href="tel:+18882352699">+1 (888) 235-2699</a></div>
+          <div class="item"><a href="tel:+14253126521">+1 (425) 312-6521</a></div>
+          <div class="item"><a href="https://support.auth0.com">Support Center</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="colophon">
+      <div class="column">
+        <div class="social">
+          <div class="twitter">
+            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/follow_button.html?screen_name=auth0" class="twitter"></iframe>
+          </div>
+          <div class="facebook">
+            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fgetauth0&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;show_count=false&amp;share=false&amp;height=21&amp;appId=507756515938786" scrolling="no" frameborder="0" allowtransparency="true" class="facebook"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <ul class="list-inline text-right">
+          <li><a href="https://auth0.com/privacy">Privacy Policy</a></li>
+          <li><a href="https://auth0.com/terms">Terms of Service</a></li>
+          <li><span>&#xA9; 2013-2016 Auth0 &#xAE; Inc. All Rights Reserved.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <script src="/blog/push-notification.js" type="text/javascript"></script>
+    <script src="/blog/js/vendor/js-cookie.js" type="text/javascript"></script>
+
+    
+
+    <!--- btn ontact us  --->
+    <script type="text/javascript">
+      var Auth0ContactForm = window.Auth0ContactForm.default;
+      var contactFormOptions = {
+        onModalOpen: function () {
+          metricsLib.track('open:talk-to-sales');
+        },
+        onFormSuccess: function (metricsData) {
+          metricsLib.track('register:lead:talk-to-sales-modal', metricsData);
+          metricsLib.track('sent:talk-to-sales', metricsData);
+        },
+        onFormFail: function (metricsData) {
+          metricsLib.track('fail:register:lead:talk-to-sales-modal', metricsData);
+          metricsLib.track('fail-sent:talk-to-sales', metricsData);
+        }
+      };
+      var contactForm = new Auth0ContactForm(contactFormOptions);
+
+
+      $('.contact-us').on('click', function() {
+        contactForm.show({includePhoneField: true });
+      });
+
+    </script>
+
+    <script type="text/javascript">
+    try {
+      window.abTestingLib.load({ fetchFn: function () { return [{"name":"enterprise-addons-sections-to-two-columns","path":"^/pricing/?$","description":"Change Enterprise Addons sections to be two columns","application":"website","variants":[{"name":"original","description":"Original","settings":{"weight":0.5},"properties":{"___stub":""}},{"name":"change-two-columns","description":"Change sections to two columns","settings":{"weight":0.5},"properties":{"auth":{"args":["ctx"],"body":"var $ = ctx.$;var styleId = $('head').find('#enterprise-addon');var styles = '<style id=\"enterprise-addon\">' +                '@media (min-width: 992px){' +                  'html.pricing-page .enterprise-addon-container .addons-list { display: flex; flex-wrap: wrap; justify-content: space-between;}' +                  'html.pricing-page .enterprise-addon-container .addons-list .addon-component{ flex: 0 1 46%; border-bottom: 0; position: relative; }' +                  'html.pricing-page .enterprise-addon-container .addons-list .addon-component .row .addon-list { display: flex; justify-content: space-between; }' +                  'html.pricing-page .enterprise-addon-container .addons-list .addon-component .row .addon-footer { display: flex; justify-content: space-between; position: absolute; bottom: 2px;}' +                  'html.pricing-page .enterprise-addon-container .addons-list .addon-component .row .col-md-5 { width: 100%; padding: 0; position: static;}' +                  'html.pricing-page .enterprise-addon-container .addons-list .addon-component .row .col-md-7 { width: 100%; padding: 0; position: static;}' +                '};' +              '</style>';if (!styleId.length) {  $('head').append(styles);}","type":"js"}}}]},{"name":"move-logo-section","path":"^\\/","description":"move the logo section aboe the Risk-based / Enterprise-class availability sections","application":"website","variants":[{"name":"original","description":"Original","settings":{"weight":0.5},"properties":{"___stub":""}},{"name":"move-section","description":"move logo section","settings":{"weight":0.5},"properties":{"both":{"args":["ctx"],"body":"var $ = ctx.$;var styleId = $('head').find('#move-section');var styles = '<style id=\"move-section\">' +                '.new-homepage-page .customers{ padding-top: 0px;}' +                '.new-homepage-page .features-articles{ padding-top: 230px; }' +                '@media (min-width: 992px){' +                  '.new-homepage-page .features-articles .article-container.map-bg:before{ top: -925px;}' +                '};' +                '@media (max-width: 991px){' +                  '.new-homepage-page .features-articles{ padding-top: 230px;}' +                '};' +              '</style>';if (!styleId.length) {  $('head').append(styles);}if (!$('.features-articles .customers-list').length) {  $('.customers > .container').insertBefore('.features-articles > .container');  $('.features-articles').addClass('customers');}","type":"js"}}}]},{"name":"show-prices-when-priced-annually","path":"^/pricing/?$","description":"Show Monthly prices when Priced Annually","application":"website","variants":[{"name":"original","description":"Original","settings":{"weight":0.5},"properties":{"___stub":""}},{"name":"when-paid-annually","description":"Annual plan","settings":{"weight":0.5},"properties":{"___stub":""}}]}]; }});
+      window.abTestingLib.integration('auth0metrics').start({ metrics: window.metricsLib});
+      window.abTestingLib.start().then(enhanceAnalytics).then(function () {
+        try {
+          window.abLoaded = true;
+          // Save experiments on the global scope
+          window.experiments = window.abTestingLib.getExperiments();
+          executeABExperiments();
+
+        } catch (e) {
+          console.error('Error running AB experiments.');
+          $('#pjax').css('visibility', 'visible');
+          window.abLoaded = true;
+        }
+      });
+
+      function enhanceAnalytics() {
+        var analytics = window.abTestingLib.analytics;
+
+        var originalSetCurrentVariantName = analytics.setCurrentVariantName.bind(analytics);
+        var originalGetCurrentVariantName = analytics.getCurrentVariantName.bind(analytics);
+
+        var enhancedSetCurrentVariantName = function (variantName, value) {
+          setCurrentVariantName(variantName, value);
+          originalSetCurrentVariantName(variantName, value);
+        };
+
+        var enhancedGetCurrentVariantName = function (variantName) {
+          var originalValue = originalGetCurrentVariantName(variantName);
+          var cookieValue = getCurrentVariantName(variantName);
+
+          if (originalValue != cookieValue) {
+            originalSetCurrentVariantName(variantName, cookieValue);
+          }
+
+          return cookieValue;
+        };
+
+        analytics.setCurrentVariantName = enhancedSetCurrentVariantName;
+        analytics.getCurrentVariantName = enhancedGetCurrentVariantName;
+        window.setVariant = enhancedSetCurrentVariantName;
+        window.getVariant = enhancedGetCurrentVariantName;
+      }
+
+      function setCurrentVariantName(variantName, value) {
+        var variants = loadCookieVariants();
+        variants[variantName] = value;
+        saveCookieVariants(variants);
+      }
+
+      function getCurrentVariantName(variantName) {
+        var variants = loadCookieVariants();
+        return variants[variantName];
+      }
+
+      function loadCookieVariants() {
+        return JSON.parse(Cookies.get('ajs_ab.traits') || '{}');
+      }
+
+      function saveCookieVariants(variants) {
+        return Cookies.set('ajs_ab.traits', JSON.stringify(variants), {
+          expires: 365,
+          path: '/'
+        });
+      }
+    } catch (e) {
+      console.error('Error initializing ABTesting lib. ABTesting will be disabled');
+      $('#pjax').css('visibility', 'visible');
+      window.abLoaded = true;
+    }
+    </script>
+    <script type="text/javascript">
+    function executeABExperiments () {
+      var path = window.location.pathname;
+      var experiments = window.experiments;
+
+      if(!window.abLoaded) {
+        return;
+      }
+
+      if(!experiments) {
+        // Restore content
+        $('#pjax').css('visibility', 'visible');
+        return;
+      }
+
+      try {
+        var experimentsForPath = experiments.runAllByPath(path);
+        var winningVariants = [];
+
+        experimentsForPath.experiments.forEach(function (e) {
+          winningVariants = winningVariants.concat(e.getCurrentVariant().getPropertiesByType('js'));
+        });
+
+        var variantContext = {};
+        variantContext.$ = $;
+
+        winningVariants.forEach(function(v) {
+          v.runInContext(variantContext);
+        });
+      } catch (e) {
+        console && console.error("Error running experiments for path:%s", path);
+      } finally {
+        // Restore content
+        $('#pjax').css('visibility', 'visible');
+      }
+    }
+    </script>
+
+    <script type="text/javascript">
+      // ab-watchdog, after 1500ms, show the site content no matter the state
+      // of the experiments
+      setTimeout(function () {
+        $('#pjax').css('visibility', 'visible');
+      }, 400);
+    </script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/elm.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/blog/js/vendor/nprogress.js"></script>
+    <script src="/blog/js/vendor/moment.min.js"></script>
+    <script src="/blog/js/vendor/jquery.csbuttons.min.js"></script>
+    <script async src="/blog/js/vendor/html2canvas.js"></script>
+    <script src="/blog/js/vendor/selection-sharer.min.js"></script>
+    <script src="/blog/js/vendor/jquery.sticky-kit.min.js"></script>
+    <script src="/blog/js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript">
+      var getBasicInfo = function () {
+        return {
+          path: window.location.pathname,
+          url: window.location.toString(),
+          title: document.title,
+          referrer: document.referrer,
+          category: 'Lock',
+          label: 'blog'
+        }
+      };
+
+      var getBlogImage = function(getDOM) {
+          var img = $('.banner .entry-thumbnail img').first();
+
+          if(img.length) {
+              convertToDataURLviaCanvas(img.attr('src'), function(dataURL) {
+                img.replaceWith('<img src="' + dataURL + '">');
+              });
+          }
+
+          setTimeout(function() {
+            var banner = $('.banner');
+            var dom = $('.banner .entry-thumbnail');
+
+            if(getDOM === 'banner') {
+              dom = banner;
+            } else {
+              banner.addClass('export-icon');
+            }
+
+            banner.addClass('export');
+
+            html2canvas(dom.get(0), {
+              onrendered: function(canvas) {
+                var img = canvas.toDataURL("image/png");
+
+                banner.removeClass('export');
+
+                window.location = img;
+              }
+            });
+          }, 20);
+
+          function convertToDataURLviaCanvas(url, callback, outputFormat){
+            var img = new Image();
+
+            img.crossOrigin = 'Anonymous';
+
+            img.onload = function(){
+                var canvas = document.createElement('CANVAS');
+                var ctx = canvas.getContext('2d');
+                var dataURL;
+
+                canvas.height = this.height;
+                canvas.width = this.width;
+                ctx.drawImage(this, 0, 0);
+                dataURL = canvas.toDataURL(outputFormat);
+                callback(dataURL);
+                canvas = null;
+            };
+
+            img.src = url;
+          }
+      };
+
+      var getBlogBanner = function() {
+          getBlogImage('banner');
+      };
+
+      $(function() {
+
+
+        function stickyElements() {
+
+          function stickElement($elem, options) {
+            $elem.stick_in_parent(Object.assign({},{
+              offset_top: parseInt($elem.attr("data-sticky-padding")) || 0
+            }, options ));
+          }
+
+          stickElement($('.sidebar-column'));
+          stickElement($('.utility-bar'));
+          stickElement($('.blog-navigation'), {parent: "body"});
+        }
+
+        function initBlogSubscriber() {
+          if(localStorage.isBlogSubscriber !== true) {
+            $('form.newsletter-subscriber').removeClass('hide');
+          }
+
+          function closeSticky($module, animation) {
+            $module.addClass('animated ' + animation );
+            $module.on('animationend webkitAnimationEnd oAnimationEnd', function () {
+              $module.remove()
+              $(document.body).trigger("sticky_kit:recalc");
+            });
+          }
+
+          $('form.newsletter-subscriber').on('click', '[data-close]', function() {
+            var $module = $(this).closest('form');
+
+            closeSticky($module, 'fadeOutUp');
+          });
+
+          $('.guest-author-widget').on('click', '[data-close]', function() {
+            var $module = $(this).closest('section');
+            closeSticky($module, 'fadeOutRight');
+          });
+
+          $('form.newsletter-subscriber').on('submit', function(e) {
+            var $module = $(this);
+            var o_content = $module.html();
+            var value = $module.find('input').val();
+
+            e.preventDefault();
+
+            if(isValidEmail(value)) {
+              onValid();
+            } else {
+              alert('Please enter a valid email');
+            }
+
+            function isValidEmail(val) {
+              if(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(val)) {
+                return true;
+              }
+
+              return false;
+            }
+
+            function onValid() {
+              $module.find('.fields').html('<p class="loading">Sending...</p>');
+
+              $.ajax({
+                type: "POST",
+                url: 'https://webtask.it.auth0.com/api/run/wt-martin-gon_to-0/auth0-blog-user?webtask_no_cache=1',
+                data: {
+                  email: value
+                },
+                success: onSuccess,
+                error: onFail
+              });
+            }
+
+            function onFail(response) {
+              $module.find('.fields').html('<p class="subscription-failed">There’s a problem subscribing to the list right now. Please try again later or <a href="https://support.auth0.com">contact support</a>.</p>');
+            }
+
+            function onSuccess(response) {
+              localStorage.setItem('isBlogSubscriber', true);
+
+              var blogRegData = getBasicInfo();
+              blogRegData.trackData = value;
+              blogRegData.email = value;
+              blogRegData.formId = '1052';
+              blogRegData.lpId = '1117';
+              blogRegData.Blog_Subs__c = true;
+              metricsLib.track('register:lead:blog-newsletter', blogRegData);
+
+              $module.find('.title').text('Thanks for subscribing');
+              $module.find('.fields').html('<p>You’ll be getting lots of awesome content!</p>');
+
+            }
+          });
+        }
+
+        function initialize() {
+          initBlogSubscriber();
+
+          $('pre code').each(function(i, block) {
+             hljs.highlightBlock(block);
+          });
+
+          $('.post-info time').each(function() {
+            var $current = $(this);
+            var dateString = new Date($current.text());
+            var diff = moment(dateString).diff(moment(new Date()), 'days');
+            var dateFormat;
+
+            dateFormat = moment(dateString).fromNow();
+
+            if(diff > -10) {
+              $current.text(dateFormat);
+            }
+
+            if (diff === 0) {
+              $current.text('Today');
+            }
+
+            $current.addClass('rendered');
+          });
+
+          // Social Buttons
+          $('.social-stats .network').cSButtons();
+
+          // Force content links to _blank if not explicitly set to _self
+          $('.entry-content a').each(function() {
+            var _$this = $(this);
+            var _target = _$this.attr('target');
+
+            if (_target !== '_self') {
+             _$this.attr('target', '_blank');
+            }
+          });
+
+          // Handle scroll pos
+          if($(window).data('navScroll')) {
+            $(window).scrollTop($(window).data('navScroll'));
+
+            $(window).data('navScroll', 0);
+          } else {
+            $(window).scrollTop(0);
+          }
+
+          stickyElements();
+        }
+
+        function setEvents() {
+          hljs.configure({
+            tabReplace: '  ', // 4 spaces
+            classPrefix: ''
+          });
+
+          NProgress.configure({ showSpinner: false, trickleSpeed: 600 });
+
+          metricsLib.page();
+
+          $('p').selectionSharer();
+
+          var selectionSharerFacebook = $('#selectionSharerPopover-inner .action.facebook')[0];
+          $(selectionSharerFacebook).on('click', function() {
+            metricsLib.track('blog:share:custom:facebook');
+          });
+
+          var selectionSharerTwitter = $('#selectionSharerPopover-inner .action.tweet')[0];
+          $(selectionSharerTwitter).on('click', function() {
+            metricsLib.track('blog:share:custom:twitter');
+          });
+
+          var selectionSharerEmail = $('#selectionSharerPopover-inner .action.email')[0];
+          $(selectionSharerEmail).on('click', function() {
+            metricsLib.track('blog:share:custom:email');
+          });
+
+          $(window).on('load', function() {
+            $(document.body).trigger("sticky_kit:recalc");
+          });
+
+
+          $('body').on('click', '.blog-navigation a', function() {
+            var tabs = $('.blog-navigation li');
+            var activeTab = $(this).parent();
+
+            $(window).data('navScroll', $(window).scrollTop());
+
+            tabs.removeClass('active');
+            activeTab.addClass('active');
+          });
+
+          initialize();
+        }
+
+        setEvents();
+      });
+    </script>
+
+
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'auth0blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:301495,hjsv:5};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+
+</body></html>
