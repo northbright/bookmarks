@@ -3,6 +3,9 @@
 #### Install
 * [How To Install Nginx on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7)
 
+#### Articles
+* [CentOS7安装维护Nginx](https://github.com/jaywcjlove/handbook/blob/master/CentOS/CentOS7%E5%AE%89%E8%A3%85%E7%BB%B4%E6%8A%A4Nginx.md)
+
 #### Reverse Proxy
 * [Webserver for Go (golang) webservices: using NGINX or not?](https://stackoverflow.com/questions/17776584/webserver-for-go-golang-webservices-using-nginx-or-not)
 * [NGINX Reverse Proxy](https://www.nginx.com/resources/admin-guide/reverse-proxy/)
