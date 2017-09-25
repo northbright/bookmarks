@@ -5,6 +5,9 @@
 * [How To Install Nginx on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7)
 * [How To Compile Nginx from Source on a CentOS 6.4 x64 VPS](https://www.digitalocean.com/community/tutorials/how-to-compile-nginx-from-source-on-a-centos-6-4-x64-vps)
 
+#### HTTPS
+* [How To Secure Nginx with Let's Encrypt on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7)
+
 #### Articles
 * [CentOS7安装维护Nginx](https://github.com/jaywcjlove/handbook/blob/master/CentOS/CentOS7%E5%AE%89%E8%A3%85%E7%BB%B4%E6%8A%A4Nginx.md)
 * [Example to extract an HttpOnly cookie and pass it on to a RESTful api as an OAuth Bearer token](https://stackoverflow.com/questions/26128412/how-to-extract-some-value-from-cookie-in-nginx)
