@@ -5,6 +5,7 @@
 * [Security Considerations](https://docs.angularjs.org/api/ng/service/$http)
 * [既然 HttpOnly 可以防止 XSS 偷取 Cookie，为什么没有被广泛使用？](https://www.zhihu.com/question/22269501)
 * [如何通过 XSS 获取受 http-only 保护的 cookie ？](https://www.zhihu.com/question/22638210)
+* [How do HttpOnly cookies work with AJAX requests?](https://stackoverflow.com/questions/27972/how-do-httponly-cookies-work-with-ajax-requests)
 
 #### JSON
 * [扯谈web安全之JSON](http://blog.csdn.net/hengyunabc/article/details/26305203)
