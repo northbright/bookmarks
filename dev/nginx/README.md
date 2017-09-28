@@ -13,6 +13,7 @@
 * [Example to extract an HttpOnly cookie and pass it on to a RESTful api as an OAuth Bearer token](https://stackoverflow.com/questions/26128412/how-to-extract-some-value-from-cookie-in-nginx)
 * [使用 golang 还有必要使用 nginx 么？](https://segmentfault.com/q/1010000009325618?_ea=1908280)
 * [用Nginx反向代理部署go写的网站](https://segmentfault.com/q/1010000000437197)
+* [nginx服务器安装及配置文件详解](https://segmentfault.com/a/1190000002797601)
 
 #### Reverse Proxy
 * [Webserver for Go (golang) webservices: using NGINX or not?](https://stackoverflow.com/questions/17776584/webserver-for-go-golang-webservices-using-nginx-or-not)
