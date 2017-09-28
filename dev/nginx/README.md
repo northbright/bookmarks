@@ -1,5 +1,8 @@
 # Nginx
 
+#### Books
+* [Nginx开发从入门到精通](http://tengine.taobao.org/book/)
+
 #### Install
 * [Installing NGINX Open Source](https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/)
 * [How To Install Nginx on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7)
