@@ -29,3 +29,6 @@
 
 #### Configuration
 * [nginx 如何禁止 ip 直接访问](https://www.v2ex.com/t/239589)
+
+#### Problems
+* [centos7 中关于 nginx 的权限问题](https://www.v2ex.com/t/171804)
