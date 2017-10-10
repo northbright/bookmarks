@@ -48,3 +48,6 @@
 
 #### Imagick
 * [ImageMagick: scale JPEG image with a maximum file-size](https://stackoverflow.com/questions/6917219/imagemagick-scale-jpeg-image-with-a-maximum-file-size)
+
+#### Online Flowchart Tools
+* [Grapheditor](http://jgraph.github.io/mxgraph/javascript/examples/grapheditor/www/index.html)
