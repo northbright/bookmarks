@@ -9,3 +9,4 @@
 * [如何看待2017款本田CRV 刹车问题？刹车不线性甚至失灵？](https://www.zhihu.com/question/63570685)
 * [刹车失灵！本田新 CR-V 买发动机送刹车？分分钟把你扔路上！](http://bbs.pcauto.com.cn/topic-14933549.html)
 * [本田CR-V混动顶配，今天上午提的车！](http://club.autohome.com.cn/bbs/thread-c-314-66537402-1.html)
+* [长文起底全新CR-V“刹车门”事件：从技术角度看这口锅该谁背？](http://chejiahao.autohome.com.cn/info/2086989)

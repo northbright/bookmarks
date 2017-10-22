@@ -4,7 +4,7 @@
 * [Javascript](js/README.md)
 * [ECMAScript 6](es6/README.md)
 * [JSONP](jsonp/README.md)
-* [CORS](cors/README.md)
+* [Cross Domain Request](cross-domain-request/README.md)
 * [react](react/README.md)
 * [Vue.js](vue.js/README.md)
 * [axios](axios/README.md)
@@ -22,6 +22,7 @@
 * [为什么整个互联网行业都缺前端工程师？](https://zhuanlan.zhihu.com/p/20598089)
 * [移动webapp前端ui用哪个框架好？](https://www.zhihu.com/question/25754764)
 * [cordova+framework7有人来说说吗？](https://www.zhihu.com/question/29533705?sort=created)
+* [移动web开发问题和优化小结](https://segmentfault.com/a/1190000011338800)
 
 #### Password and Username
 * [为什么密码不支持中文？](https://www.zhihu.com/question/20715055)
