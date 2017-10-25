@@ -49,6 +49,7 @@
 * [Flowchart and UML](flowchart-and-uml/README.md)
 * [Cross Platform Apps](cross-platform-apps/README.md)
 * [BitTorrent](bittorrent/README.md)
+* [License](license/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
