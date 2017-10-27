@@ -14,6 +14,7 @@
 * [新手向：Vue 2.0 的建议学习顺序](https://zhuanlan.zhihu.com/p/23134551)
 * [VueJs2.0建议学习路线](http://www.cnblogs.com/smartXiang/p/6051086.html)
 * [vuejs 单文件组件.vue 文件](http://www.cnblogs.com/SamWeb/p/6391373.html)
+* [滴滴 webapp 5.0 Vue 2.0 重构经验分享](https://github.com/DDFE/DDFE-blog/issues/13)
 
 #### Using Vue.js with Go
 * [Using VueJS with a Go backend](https://stackoverflow.com/questions/38744766/using-vuejs-with-a-go-backend)
