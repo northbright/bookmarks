@@ -50,6 +50,7 @@
 * [Cross Platform Apps](cross-platform-apps/README.md)
 * [BitTorrent](bittorrent/README.md)
 * [License](license/README.md)
+* [ELK](elk/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
