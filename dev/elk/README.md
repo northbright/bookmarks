@@ -10,3 +10,4 @@
 #### ElasticSearch
 * [Elasticsearch使用备忘](http://www.cnblogs.com/cswuyg/p/5651620.html)
 * [How To Install and Configure Elasticsearch on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-centos-7)
+* [elasticsearch（lucene）可以代替NoSQL（mongodb）吗？](https://www.zhihu.com/question/25535889)
