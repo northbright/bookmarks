@@ -97,3 +97,6 @@
     * [Redis sorted set stores score as a floating point number](https://www.leaseweb.com/labs/2014/07/redis-sorted-set-stores-score-floating-point-number/)
     * [Strange float score precision with sorted sets #1499](https://github.com/antirez/redis/issues/1499)
     * [Redis: How to intersect a “normal” set with a sorted set?](http://stackoverflow.com/questions/10500695/redis-how-to-intersect-a-normal-set-with-a-sorted-set)
+
+#### Transaction and Optimistic Lock
+* [为何Redis用乐观锁，而MySQL数据库却没有？](https://www.zhihu.com/question/29397176)
