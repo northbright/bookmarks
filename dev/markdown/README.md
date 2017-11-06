@@ -2,6 +2,7 @@
 
 #### Online Markdown Editor
 * [stackedit.io](https://stackedit.io/)
+* [(GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor)
 
 #### Javascript Markdown Editor
 * [Editor.md](https://pandao.github.io/editor.md/)
