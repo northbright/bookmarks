@@ -52,6 +52,7 @@
 * [Golang In PingCAP](https://gocn.io/article/23)
 * [谢孟军：The State of Go | ECUG Con 精粹系列](http://blog.qiniu.com/archives/8203)
 * [[译]Go 1.8 新特性](http://colobu.com/2016/11/05/golang-18-whats-coming/)
+* [Go 1.9中值得关注的几个变化](http://tonybai.com/2017/07/14/some-changes-in-go-1-9/)
 * [源创会开源访谈：十年成长，Go语言的演化之路-by Tony Bai(白明)](http://tonybai.com/2017/10/24/go-evolution-for-ten-years-an-interview-by-osc/)
 * [Go语言：成长的十年](http://tonybai.com/2017/09/24/go-ten-years-and-climbing/)
 
