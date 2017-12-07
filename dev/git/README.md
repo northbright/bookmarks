@@ -16,5 +16,8 @@
 #### Local Git Server
 * [git服务器搭建（局域网）](http://www.open-open.com/lib/view/open1418007412433.html)
 
+#### Articles
+* [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+
 #### Books
 * [Git Book](https://git-scm.com/book/zh/v2)
