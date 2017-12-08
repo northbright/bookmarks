@@ -74,11 +74,6 @@
 * [Replication](http://redis.io/topics/replication)
 * [Diskless replication: a few design notes.](http://antirez.com/news/81)
 
-#### Redis Pool
-* [如何在 Go 语言中使用 Redis 连接池](http://geek.csdn.net/news/detail/56388)
-* [reids.Pool结构介绍](http://blog.csdn.net/xiaohu50/article/details/51606349)
-* [Go实践(参考：问题2: redis connection timeout)](http://blog.csdn.net/yunba_io/article/details/46429079)
-
 #### Errors / Problems
 * [Redis: “Can’t save in background: fork: Cannot allocate memory”](https://pydelion.com/2013/05/27/redis-cant-save-in-background-fork-cannot-allocate-memory/)
 * [RedisError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error. #584](https://github.com/antirez/redis/issues/584)
