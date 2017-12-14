@@ -16,3 +16,6 @@
 * [Closing issues using keywords](https://help.github.com/articles/closing-issues-using-keywords/)
 * [Github上git commit 提交注释的规范](https://segmentfault.com/q/1010000000395039)
 
+#### Github Issues
+* [Mastering Issues](https://guides.github.com/features/issues/)
+
