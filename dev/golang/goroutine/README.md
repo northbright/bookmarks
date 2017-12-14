@@ -5,6 +5,7 @@
 * [The Go scheduler](http://morsmachine.dk/go-scheduler)
 * [当一个goroutine被网络IO阻塞住后，它对应的线程会被阻塞吗?](https://www.zhihu.com/question/27207566)
 * [Golang blocking and non blocking](https://stackoverflow.com/questions/36112445/golang-blocking-and-non-blocking)
+* [Go by Example: Stateful Goroutines](https://gobyexample.com/stateful-goroutines)
 
 #### Limiting Concurrency
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
