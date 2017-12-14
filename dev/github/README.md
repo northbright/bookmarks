@@ -7,7 +7,7 @@
 #### Naming Convention
 * [Is there a naming convention for git repositories?](http://stackoverflow.com/questions/11947587/is-there-a-naming-convention-for-git-repositories)
 
-#### Issues
+#### Problems
 * [Pushing to Git returning Error Code 403 fatal: HTTP request failed](http://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed)
 * [Pushing from local repository to GitHub hosted remote](http://stackoverflow.com/questions/10573957/pushing-from-local-repository-to-github-hosted-remote)
 * [ssh: connect to host github.com port 22: Connection timed out](http://stackoverflow.com/questions/15589682/ssh-connect-to-host-github-com-port-22-connection-timed-out)
