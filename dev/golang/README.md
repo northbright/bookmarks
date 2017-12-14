@@ -41,6 +41,7 @@
 * [Regexp](regexp/README.md)
 * [Race Condition](race-condition/README.md)
 * [Golang Internal](internal/README.md)
+* [Grammar](grammar/README.md)
 
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
