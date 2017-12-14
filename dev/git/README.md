@@ -19,5 +19,8 @@
 #### Articles
 * [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 
+#### Commit
+* [Git 写出好的 commit message](https://ruby-china.org/topics/15737)
+
 #### Books
 * [Git Book](https://git-scm.com/book/zh/v2)
