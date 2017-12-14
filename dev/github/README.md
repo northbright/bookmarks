@@ -19,3 +19,6 @@
 #### Github Issues
 * [Mastering Issues](https://guides.github.com/features/issues/)
 
+#### Pull Request
+* [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
+
