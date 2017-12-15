@@ -6,6 +6,7 @@
 * [当一个goroutine被网络IO阻塞住后，它对应的线程会被阻塞吗?](https://www.zhihu.com/question/27207566)
 * [Golang blocking and non blocking](https://stackoverflow.com/questions/36112445/golang-blocking-and-non-blocking)
 * [Go by Example: Stateful Goroutines](https://gobyexample.com/stateful-goroutines)
+* [还有比GoLang Channel更好的方式代替Mutex吗？](https://www.zhihu.com/question/27256570)
 
 #### Limiting Concurrency
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
