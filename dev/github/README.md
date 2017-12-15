@@ -20,6 +20,7 @@
 * [Mastering Issues](https://guides.github.com/features/issues/)
 
 #### Pull Request
+* [Fork A Repo](https://help.github.com/articles/fork-a-repo/)
 * [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
 * [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
