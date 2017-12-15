@@ -11,7 +11,7 @@
 * [HTTP](http/README.md)
 * [Captcha](captcha/README.md)
 * [WeChat（微信开发）](wechat/README.md)
-* [Goroutine](goroutine/README.md)
+* [Concurrency](concurrency/README.md)
 * [TCP/IP, Socket](tcp-ip/README.md)
 * [cgo](cgo/README.md)
 * [build](build/README.md)
