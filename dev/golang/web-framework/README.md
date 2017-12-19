@@ -9,3 +9,4 @@
 
 #### [Go-Kit](https://github.com/go-kit/kit)
 * [Why I recommend to avoid using the go-kit library](https://gist.github.com/posener/330c2b08aaefdea6f900ff0543773b2e)
+* [reddit:Why I recommend to avoid using the go-kit library](https://www.reddit.com/r/golang/comments/5tesl9/why_i_recommend_to_avoid_using_the_gokit_library/)
