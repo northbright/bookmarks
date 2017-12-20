@@ -7,6 +7,7 @@
 
 #### Rune
 * [What is a rune?](https://stackoverflow.com/questions/19310700/what-is-a-rune)
+* [How to get the number of Characters in a String?](https://stackoverflow.com/questions/12668681/how-to-get-the-number-of-characters-in-a-string)
 
 #### Chinese Character
 * [golang的中文substr](http://golangtc.com/t/570afc04b09ecc66b90002cd)
