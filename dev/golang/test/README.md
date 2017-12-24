@@ -1,3 +1,4 @@
 # Test
 
 * [Go 的浏览器集成测试](http://golangtc.com/t/55700ef7b09ecc04d3000026)
+* [How to run golang tests sequentially?](https://stackoverflow.com/questions/31201858/how-to-run-golang-tests-sequentially)
