@@ -42,7 +42,6 @@
 * [JSON Web Token(JWT)](jwt/README.md)
 * [SMS](sms/README.md)
 * [Site Reliability Engineering](sre/README.md)
-* [RESTful](restful/README.md)
 * [ASCII](ascii/README.md)
 * [Nginx](nginx/README.md)
 * [Raspberry Pi](raspberry-pi/README.md)

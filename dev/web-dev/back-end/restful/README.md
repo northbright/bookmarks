@@ -8,6 +8,7 @@
 * [跟着 Github 学习 Restful HTTP API 设计](http://cizixs.com/2016/12/12/restful-api-design-guide)
 * [REST接口设计规范](http://wangwei.info/about-rest-api/)
 * [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+* [WEB开发中，使用JSON-RPC好，还是RESTful API好？](https://www.zhihu.com/question/28570307)
 
 #### Tools
 * [How to POST JSON data with Curl from Terminal/Commandline to Test Spring REST?](http://stackoverflow.com/questions/7172784/how-to-post-json-data-with-curl-from-terminal-commandline-to-test-spring-rest)
