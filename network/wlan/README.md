@@ -16,6 +16,9 @@
 * [微信关注即可使用 Wi-Fi，取消关注即断网的路由器是怎样实现的？](https://www.zhihu.com/question/23667625)
 * [无线路由器微信连Wi-Fi（密码型设备）使用方法](http://service.tp-link.com.cn/detail_article_3304.html)
 
+#### 无线环境分析
+* [用wifi分析仪协助分析你搭建的无线环境](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13814&extra=page%3D1%26filter%3Dtypeid%26typeid%3D102%26typeid%3D102)
+
 #### 企业无线方案
 * TP-Link
   * [慎重选择TP-LINK的AP、AC产品，下面是我的经历](http://tieba.baidu.com/p/3508791303)
