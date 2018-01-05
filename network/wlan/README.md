@@ -35,6 +35,7 @@
   * [What is the default username / password for UAPs and controller?](https://help.ubnt.com/hc/en-us/articles/204909374-UniFi-What-is-the-default-username-password-for-UAPs-and-controller-)
   * [UniFi - Layer 3 methods for UAP adoption and management](https://help.ubnt.com/hc/en-us/articles/204909754-UniFi-Layer-3-methods-for-UAP-adoption-and-management)
   * [经常发生上网慢，求解决](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=18934&extra=page%3D4)
+  * [AP PRO 启动5G后导致速度很卡.接受率也很低](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=19065&extra=page%3D5)
 
 * H3C
   * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
