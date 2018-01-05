@@ -18,6 +18,7 @@
 
 #### 无线环境分析
 * [用wifi分析仪协助分析你搭建的无线环境](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13814&extra=page%3D1%26filter%3Dtypeid%26typeid%3D102%26typeid%3D102)
+* [iOS下有哪些好用的WiFi分析APP？](https://www.zhihu.com/question/41404124)
 
 #### 企业无线方案
 * TP-Link
