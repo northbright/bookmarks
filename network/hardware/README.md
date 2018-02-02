@@ -7,3 +7,4 @@
 
 #### UBNT
 * [UniFi - How to Reset the UniFi Access Point to Factory Defaults](https://help.ubnt.com/hc/en-us/articles/205143490-UniFi-How-to-reset-the-UniFi-Access-Point-to-factory-defaults)
+* [请教一个关于ER-X绑定Vlan的问题](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=18192)
