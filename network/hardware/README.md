@@ -11,3 +11,4 @@
 * [EdgeMax-路由交换综合案例-EdgeRouter与EdgeSwitch互联及多vlan划分实例](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13575&extra=page%3D1%26filter%3Dtypeid%26typeid%3D124%26typeid%3D124)
 * [ER-X添加vlan后dhcp server失效](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=18032&highlight=vlan)
 * [帮忙看看这个拓扑的vlan和dhcp怎么设置](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=18324&highlight=vlan)
+* [UBNT的ERX](https://www.chiphell.com/thread-1693145-1-1.html)
