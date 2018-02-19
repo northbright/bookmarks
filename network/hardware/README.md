@@ -12,3 +12,4 @@
 * [ER-X添加vlan后dhcp server失效](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=18032&highlight=vlan)
 * [帮忙看看这个拓扑的vlan和dhcp怎么设置](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=18324&highlight=vlan)
 * [UBNT的ERX](https://www.chiphell.com/thread-1693145-1-1.html)
+* [ER-X需要接入电信的4k IPTV 求教配置](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&page=1&tid=17101)
