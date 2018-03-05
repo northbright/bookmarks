@@ -7,6 +7,7 @@
 * [Cross Domain Request](cross-domain-request/README.md)
 * [react](react/README.md)
 * [Vue.js](vue.js/README.md)
+* [ajax](ajax/README.md)
 * [axios](axios/README.md)
 * [JQuery](jquery/README.md)
 * [JQuery Mobile](jquerymobile/README.md)
