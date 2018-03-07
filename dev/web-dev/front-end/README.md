@@ -24,6 +24,7 @@
 * [移动webapp前端ui用哪个框架好？](https://www.zhihu.com/question/25754764)
 * [cordova+framework7有人来说说吗？](https://www.zhihu.com/question/29533705?sort=created)
 * [移动web开发问题和优化小结](https://segmentfault.com/a/1190000011338800)
+* [如何看待 Progressive Web Apps 的发展前景？](https://www.zhihu.com/question/46690207/answer/104851767)
 
 #### Password and Username
 * [为什么密码不支持中文？](https://www.zhihu.com/question/20715055)
