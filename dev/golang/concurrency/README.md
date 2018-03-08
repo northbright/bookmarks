@@ -8,6 +8,7 @@
 * [Golang blocking and non blocking](https://stackoverflow.com/questions/36112445/golang-blocking-and-non-blocking)
 * [Go by Example: Stateful Goroutines](https://gobyexample.com/stateful-goroutines)
 * [还有比GoLang Channel更好的方式代替Mutex吗？](https://www.zhihu.com/question/27256570)-[唐生的回答](https://www.zhihu.com/question/27256570/answer/35889022)包含了[sync.Cond](https://godoc.org/sync#Cond)的用法
+* [Golang号称高并发，但高并发时性能不高](https://zhuanlan.zhihu.com/p/21514693)
 
 #### Limiting Concurrency
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
