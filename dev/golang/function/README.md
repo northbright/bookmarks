@@ -9,3 +9,4 @@
 
 #### Receiver Type
 * [参数和返回值里面到底用指针还是value?](https://gocn.io/question/278)
+* [Receiver Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
