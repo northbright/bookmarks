@@ -25,3 +25,6 @@
 * [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
 * [Collaborating with issues and pull requests](https://help.github.com/categories/collaborating-with-issues-and-pull-requests/)
+
+#### Github Pages and Custom Domain
+* [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
