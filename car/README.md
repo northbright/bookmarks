@@ -13,3 +13,7 @@
 
 #### RAV4
 * [年终总“节”：RAV4内饰功能键解析整理！干货干货！](https://club.autohome.com.cn/bbs/thread-c-770-69691349-1.html)
+
+#### 开车技巧
+* [小白司机的侧方位停车技巧](https://zhuanlan.zhihu.com/p/27159772)
+* [资深驾驶员对新手有哪些建议？](https://www.zhihu.com/question/23880443)
