@@ -16,6 +16,7 @@
 * [What can you do with PostgreSQL and JSON?](http://clarkdave.net/2013/06/what-can-you-do-with-postgresql-and-json/)
 * [How to perform update operations on columns of type JSONB in Postgres 9.4](https://stackoverflow.com/questions/26703476/how-to-perform-update-operations-on-columns-of-type-jsonb-in-postgres-9-4)
 * [Check if a Postgres JSON array contains a string](https://stackoverflow.com/questions/19925641/check-if-a-postgres-json-array-contains-a-string)
+* [JSON by example](https://wiki.postgresql.org/images/7/7c/JSON-by-example_FOSDEM_2016.pdf)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
