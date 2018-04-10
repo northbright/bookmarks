@@ -12,6 +12,7 @@
 * [Explanation of JSONB introduced by PostgreSQL](http://stackoverflow.com/questions/22654170/explanation-of-jsonb-introduced-by-postgresql)
 * [postgresql----JSON类型和函数](http://www.cnblogs.com/alianbog/p/5658156.html)
 * [Postgresql json like query](https://stackoverflow.com/questions/42918348/postgresql-json-like-query)
+* [order by JSON data type postgres](https://stackoverflow.com/questions/25967778/order-by-json-data-type-postgres)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
