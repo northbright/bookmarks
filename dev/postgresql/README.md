@@ -24,5 +24,8 @@
 #### Environment Variables
 * [Environment Variables](https://www.postgresql.org/docs/10/static/libpq-envars.html)
 
+#### Golang
+* [Handling JSONB in Go Structs](http://coussej.github.io/2016/02/16/Handling-JSONB-in-Go-Structs/)
+
 #### Sites
 * [德哥的Blog](https://github.com/digoal/blog)
