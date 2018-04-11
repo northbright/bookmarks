@@ -42,6 +42,7 @@
   * [定制化Windows10搜索和输入法快捷键Ctrl+空格](http://www.jianshu.com/p/15efa7783398)
 * Issues
   * [windows7(X64)下文件夹无法删除](https://answers.microsoft.com/zh-hans/windows/forum/windows_7-files/windows7x64%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%B9/920e2d33-5ed2-4df2-a13b-97dca5176465?auth=1)
+  * [在 Windows 10 中，在安全模式下启动电脑](https://support.microsoft.com/zh-cn/help/12376/windows-10-start-your-pc-in-safe-mode)
 
 #### Burn Images to SD Card / USB Drive
 * [etcher](https://etcher.io/)
