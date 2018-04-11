@@ -21,5 +21,8 @@
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
 
+#### Environment Variables
+* [Environment Variables](https://www.postgresql.org/docs/10/static/libpq-envars.html)
+
 #### Sites
 * [德哥的Blog](https://github.com/digoal/blog)
