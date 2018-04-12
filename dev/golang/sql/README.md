@@ -5,4 +5,5 @@
 * [database/sql: Stmt的使用以及坑](https://studygolang.com/articles/1795)
 
 #### 3rd Party Drivers
+* [MySQL](mysql/README.md)
 * [PostgreSQL](postgresql/README.md)
