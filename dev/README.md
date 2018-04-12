@@ -50,6 +50,7 @@
 * [BitTorrent](bittorrent/README.md)
 * [License](license/README.md)
 * [ELK](elk/README.md)
+* [SQL](sql/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
