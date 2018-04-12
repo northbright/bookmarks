@@ -34,7 +34,6 @@
 * [Defer,Panic and Recover](defer-panic-recover/README.md)
 * [XLSX](xlsx/README.md)
 * [Package Management](package-management/README.md)
-* [PostgreSQL](postgresql/README.md)
 * [Command-Line Arguments](cmd-line-args/README.md)
 * [Struct](struct/README.md)
 * [Code Style](code-style/README.md)
