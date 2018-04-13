@@ -8,3 +8,4 @@
 #### JSON & JSONB
 * [JSONB support #348](https://github.com/lib/pq/issues/348)
 * [Storing Golang JSON into Postgresql](https://stackoverflow.com/questions/25758138/storing-golang-json-into-postgresql)
+* [Handling JSONB in Go Structs](http://coussej.github.io/2016/02/16/Handling-JSONB-in-Go-Structs/)
