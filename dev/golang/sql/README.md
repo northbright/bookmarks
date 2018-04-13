@@ -6,6 +6,7 @@
 
 #### Sites
 * [Go database/sql tutorial](http://go-database-sql.org/index.html)
+* [Illustrated guide to SQLX](http://jmoiron.github.io/sqlx/)
 
 #### 3rd Party Drivers
 * [MySQL](mysql/README.md)
