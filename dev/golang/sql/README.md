@@ -6,6 +6,7 @@
 * [Go database/sql tutorial](http://go-database-sql.org/index.html)
 * [Illustrated guide to SQLX](http://jmoiron.github.io/sqlx/)
 * [Built In Interfaces(sql.Scanner and driver.Valuer)](http://jmoiron.net/blog/built-in-interfaces)
+* [Golang ORMs](http://jmoiron.net/blog/golang-orms/)
 
 #### 3rd Party Drivers
 * [MySQL](mysql/README.md)
