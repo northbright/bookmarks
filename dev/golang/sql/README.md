@@ -7,6 +7,7 @@
 * [Illustrated guide to SQLX](http://jmoiron.github.io/sqlx/)
 * [Built In Interfaces(sql.Scanner and driver.Valuer)](http://jmoiron.net/blog/built-in-interfaces)
 * [Golang ORMs](http://jmoiron.net/blog/golang-orms/)
+* [Jmoiron SQLX Golang common interface](https://stackoverflow.com/questions/38994419/jmoiron-sqlx-golang-common-interface)
 
 #### 3rd Party Drivers
 * [MySQL](mysql/README.md)
