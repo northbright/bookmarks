@@ -29,6 +29,7 @@
 #### Authentication & Authorization
 * [Build an App with Vue.js: From Authentication to Calling an API](https://auth0.com/blog/build-an-app-with-vuejs/)
 * [Vue 后台管理控制用户权限的解决方案？](https://www.zhihu.com/question/58991978)
+* [Vue 权限管理解决方案(见3楼答案)](https://www.v2ex.com/t/410788#r_5029336)
 
 #### Problems
 * Flash
