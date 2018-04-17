@@ -26,8 +26,9 @@
 * [用addRoutes实现动态路由](http://refined-x.com/2017/09/01/%E7%94%A8addRoutes%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/)
 * [vue-router 快速入门](http://www.cnblogs.com/axl234/p/5899952.html)
 
-#### Authentication
+#### Authentication & Authorization
 * [Build an App with Vue.js: From Authentication to Calling an API](https://auth0.com/blog/build-an-app-with-vuejs/)
+* [Vue 后台管理控制用户权限的解决方案？](https://www.zhihu.com/question/58991978)
 
 #### Problems
 * Flash
