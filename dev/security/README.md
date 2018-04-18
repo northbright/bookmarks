@@ -6,6 +6,7 @@
 * [既然 HttpOnly 可以防止 XSS 偷取 Cookie，为什么没有被广泛使用？](https://www.zhihu.com/question/22269501)
 * [如何通过 XSS 获取受 http-only 保护的 cookie ？](https://www.zhihu.com/question/22638210)
 * [How do HttpOnly cookies work with AJAX requests?](https://stackoverflow.com/questions/27972/how-do-httponly-cookies-work-with-ajax-requests)
+* [Web 安全：前端攻击 XSS 深入解析](https://mp.weixin.qq.com/s?__biz=MzIwNjEwNTQ4Mw==&mid=2651579909&idx=1&sn=5d50eccae1f7bb766312bb36e75611ac&chksm=8cd9f8e1bbae71f762f1fef1c3360e19b818480ad468822e9789875cc0028211650e45bc7129&scene=21#wechat_redirect)
 
 #### JSON
 * [扯谈web安全之JSON](http://blog.csdn.net/hengyunabc/article/details/26305203)
