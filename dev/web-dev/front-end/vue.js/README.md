@@ -32,6 +32,7 @@
 * [Vue 后台管理控制用户权限的解决方案？(见顾轶灵的答案)](https://www.zhihu.com/question/58991978)
 * [Vue 权限管理解决方案(见3楼答案)](https://www.v2ex.com/t/410788#r_5029336)
 * [如何用 Vue 实现前端权限控制](https://blog.csdn.net/gitchat/article/details/78849246)
+* [【vue+axios】一个项目学会前端实现登录拦截](https://blog.csdn.net/qq673318522/article/details/55506650)
 
 #### Problems
 * Flash
