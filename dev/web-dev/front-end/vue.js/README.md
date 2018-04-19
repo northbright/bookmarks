@@ -26,6 +26,7 @@
 * [用addRoutes实现动态路由](http://refined-x.com/2017/09/01/%E7%94%A8addRoutes%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/)
 * [vue-router 快速入门](http://www.cnblogs.com/axl234/p/5899952.html)
 * [vuejs 实现前后端分离登录验证和页面自动跳转](https://www.yanshuo.me/p/68847)
+* [vuejs this.$router.push()无效](https://segmentfault.com/q/1010000009280582/a-1020000009284761)
 
 #### Authentication & Authorization
 * [Build an App with Vue.js: From Authentication to Calling an API](https://auth0.com/blog/build-an-app-with-vuejs/)
