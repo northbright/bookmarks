@@ -7,3 +7,4 @@
 
 #### Issues
 * [axios post get 方法都会先 发送 OPTIONS 我想把这个 OPTIONS 验证去掉](https://segmentfault.com/q/1010000012570210/a-1020000012570922)
+* [vue使用axios中 this 指向问题](https://blog.csdn.net/qq_27008807/article/details/78868634)
