@@ -48,6 +48,7 @@
   * [Gigabyte Windows 7 USB Installation Tool](http://www.gigabyte.cn/WebPage/-79/usb.html)
   * [Windows 7 USB 3.0 Creator Utility](https://downloadcenter.intel.com/download/25476/Windows-7-USB-3-0-Creator-Utility)
   * [Install Windows 7 on Computers with USB 3.0](https://www.intel.com/content/www/us/en/support/articles/000017241/mini-pcs.html)
+  * [Windows USB/DVD Download Tool](https://www.microsoft.com/en-us/download/windows-usb-dvd-download-tool)
 * Activation
   * [小马oem是如何做到windows激活的？](https://www.zhihu.com/question/25695388)
 
