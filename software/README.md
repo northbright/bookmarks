@@ -43,6 +43,8 @@
 * Issues
   * [windows7(X64)下文件夹无法删除](https://answers.microsoft.com/zh-hans/windows/forum/windows_7-files/windows7x64%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%B9/920e2d33-5ed2-4df2-a13b-97dca5176465?auth=1)
   * [在 Windows 10 中，在安全模式下启动电脑](https://support.microsoft.com/zh-cn/help/12376/windows-10-start-your-pc-in-safe-mode)
+* Installation
+  * [如何将USB 3.0驱动程序装入Windows服务器2008 R2SP1，以用于Dell R230、R330、T30、T130、T330](https://www.dell.com/support/article/cn/zh/cndhs1/sln300618/%E5%A6%82%E4%BD%95%E5%B0%86usb-30%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E8%A3%85%E5%85%A5windows%E6%9C%8D%E5%8A%A1%E5%99%A82008-r2sp1-%E4%BB%A5%E7%94%A8%E4%BA%8Edell-r230-r330-t30-t130-t330?lang=zh)
 
 #### Burn Images to SD Card / USB Drive
 * [etcher](https://etcher.io/)
