@@ -28,5 +28,8 @@
 #### Golang
 * [Handling JSONB in Go Structs](http://coussej.github.io/2016/02/16/Handling-JSONB-in-Go-Structs/)
 
+#### Basis
+* [Why is a new user allowed to create a table?](https://dba.stackexchange.com/questions/35316/why-is-a-new-user-allowed-to-create-a-table)
+
 #### Sites
 * [德哥的Blog](https://github.com/digoal/blog)
