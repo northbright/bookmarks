@@ -14,6 +14,7 @@
 * [Concurrency](concurrency/README.md)
 * [Performance](performance/README.md)
 * [TCP/IP, Socket](tcp-ip/README.md)
+* [Algorithm](algorithm/README.md)
 * [cgo](cgo/README.md)
 * [build](build/README.md)
 * [string](string/README.md)
