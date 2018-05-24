@@ -7,6 +7,7 @@
 #### Password Validation
 * [Regexp Java for password validation](https://stackoverflow.com/questions/3802192/regexp-java-for-password-validation)
 * [Regular expression to check if password is “8 characters including 1 uppercase letter, 1 special character, alphanumeric characters”](https://stackoverflow.com/questions/9477906/regular-expression-to-check-if-password-is-8-characters-including-1-uppercase-l)
+* [Password Strength Validation with Regular Expressions](https://www.zorched.net/2009/05/08/password-strength-validation-with-regular-expressions/)
 
 #### ID Card Number
 * [15位、18位身份证号码正则表达式](https://segmentfault.com/a/1190000014024798)
