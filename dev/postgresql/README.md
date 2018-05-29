@@ -32,6 +32,7 @@
 * [Why is a new user allowed to create a table?](https://dba.stackexchange.com/questions/35316/why-is-a-new-user-allowed-to-create-a-table)
 * [List tables in a PostgreSQL schema](https://stackoverflow.com/questions/15644152/list-tables-in-a-postgresql-schema)
 * [Show tables in PostgreSQL](https://stackoverflow.com/questions/769683/show-tables-in-postgresql)
+* [How do I automatically update a timestamp in PostgreSQL](https://stackoverflow.com/questions/9556474/how-do-i-automatically-update-a-timestamp-in-postgresql)
 
 #### Sites
 * [德哥的Blog](https://github.com/digoal/blog)
