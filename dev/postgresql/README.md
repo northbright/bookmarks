@@ -21,6 +21,8 @@
 * [JSON field constraints](https://blog.hagander.net/json-field-constraints-228/)
 * [JSONB type performance in PostgreSQL 9.4](https://blog.2ndquadrant.com/jsonb-type-performance-postgresql-9-4/) [local copy](local-copy/JSONB-type-performance-in-PostgreSQL-9.4.html)
 * [When To Avoid JSONB In A PostgreSQL Schema](https://heapanalytics.com/blog/engineering/when-to-avoid-jsonb-in-a-postgresql-schema) [local-copy](local-copy/When-To-Avoid-JSONB-In-A-PostgreSQL-Schema.html)
+* [EAV or JSON](https://blog.csdn.net/simongeek/article/details/51878758)
+* [PostgreSQL anti-patterns: Unnecessary json/hstore dynamic columns](https://blog.2ndquadrant.com/postgresql-anti-patterns-unnecessary-jsonhstore-dynamic-columns/) [local copy](local-copy/PostgreSQL-anti-patterns-Unnecessary-json-hstore-dynamic-columns.html)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
