@@ -19,6 +19,7 @@
 * [Check if a Postgres JSON array contains a string](https://stackoverflow.com/questions/19925641/check-if-a-postgres-json-array-contains-a-string)
 * [JSON by example](https://wiki.postgresql.org/images/7/7c/JSON-by-example_FOSDEM_2016.pdf)
 * [JSON field constraints](https://blog.hagander.net/json-field-constraints-228/)
+* [JSONB type performance in PostgreSQL 9.4](https://blog.2ndquadrant.com/jsonb-type-performance-postgresql-9-4/) [local copy](local-copy/JSONB-type-performance-in-PostgreSQL-9.4.html)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
