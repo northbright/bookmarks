@@ -23,6 +23,7 @@
 * [When To Avoid JSONB In A PostgreSQL Schema](https://heapanalytics.com/blog/engineering/when-to-avoid-jsonb-in-a-postgresql-schema) [local-copy](local-copy/When-To-Avoid-JSONB-In-A-PostgreSQL-Schema.html)
 * [EAV or JSON](https://blog.csdn.net/simongeek/article/details/51878758)
 * [PostgreSQL anti-patterns: Unnecessary json/hstore dynamic columns](https://blog.2ndquadrant.com/postgresql-anti-patterns-unnecessary-jsonhstore-dynamic-columns/) [local copy](local-copy/PostgreSQL-anti-patterns-Unnecessary-json-hstore-dynamic-columns.html)
+* [Replacing EAV with JSONB in PostgreSQL](http://coussej.github.io/2016/01/14/Replacing-EAV-with-JSONB-in-PostgreSQL/) [local copy](local-copy/Replacing-EAV-with-JSONB-in-PostgreSQL.html)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
