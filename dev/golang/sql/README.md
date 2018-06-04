@@ -9,6 +9,7 @@
 * [Golang ORMs](http://jmoiron.net/blog/golang-orms/)
 * [Jmoiron SQLX Golang common interface](https://stackoverflow.com/questions/38994419/jmoiron-sqlx-golang-common-interface)
 * [database/sql: permit tagged struct in Scanner #9347](https://github.com/golang/go/issues/9347)
+* [Working with a SQL Database in Go](https://flaviocopes.com/golang-sql-database/)
 
 #### 3rd Party Drivers
 * [MySQL](mysql/README.md)
