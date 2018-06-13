@@ -39,6 +39,7 @@
 * [List tables in a PostgreSQL schema](https://stackoverflow.com/questions/15644152/list-tables-in-a-postgresql-schema)
 * [Show tables in PostgreSQL](https://stackoverflow.com/questions/769683/show-tables-in-postgresql)
 * [How do I automatically update a timestamp in PostgreSQL](https://stackoverflow.com/questions/9556474/how-do-i-automatically-update-a-timestamp-in-postgresql)
+* [Why does PostgreSQL perform sequential scan on indexed column?](https://stackoverflow.com/questions/5203755/why-does-postgresql-perform-sequential-scan-on-indexed-column)
 
 #### Sites
 * [德哥的Blog](https://github.com/digoal/blog)
