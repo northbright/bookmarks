@@ -24,6 +24,7 @@
 * [EAV or JSON](https://blog.csdn.net/simongeek/article/details/51878758)
 * [PostgreSQL anti-patterns: Unnecessary json/hstore dynamic columns](https://blog.2ndquadrant.com/postgresql-anti-patterns-unnecessary-jsonhstore-dynamic-columns/) [local copy](local-copy/PostgreSQL-anti-patterns-Unnecessary-json-hstore-dynamic-columns.html)
 * [Replacing EAV with JSONB in PostgreSQL](http://coussej.github.io/2016/01/14/Replacing-EAV-with-JSONB-in-PostgreSQL/) [local copy](local-copy/Replacing-EAV-with-JSONB-in-PostgreSQL.html)
+* [Appending (pushing) and removing from a JSON array in PostgreSQL 9.5+](https://stackoverflow.com/questions/42233542/appending-pushing-and-removing-from-a-json-array-in-postgresql-9-5)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
@@ -40,6 +41,7 @@
 * [Show tables in PostgreSQL](https://stackoverflow.com/questions/769683/show-tables-in-postgresql)
 * [How do I automatically update a timestamp in PostgreSQL](https://stackoverflow.com/questions/9556474/how-do-i-automatically-update-a-timestamp-in-postgresql)
 * [Why does PostgreSQL perform sequential scan on indexed column?](https://stackoverflow.com/questions/5203755/why-does-postgresql-perform-sequential-scan-on-indexed-column)
+* [PostgreSQL COALESCE function syntax](http://www.postgresqltutorial.com/postgresql-coalesce/)
 
 #### Sites
 * [德哥的Blog](https://github.com/digoal/blog)
