@@ -25,6 +25,7 @@
 * [PostgreSQL anti-patterns: Unnecessary json/hstore dynamic columns](https://blog.2ndquadrant.com/postgresql-anti-patterns-unnecessary-jsonhstore-dynamic-columns/) [local copy](local-copy/PostgreSQL-anti-patterns-Unnecessary-json-hstore-dynamic-columns.html)
 * [Replacing EAV with JSONB in PostgreSQL](http://coussej.github.io/2016/01/14/Replacing-EAV-with-JSONB-in-PostgreSQL/) [local copy](local-copy/Replacing-EAV-with-JSONB-in-PostgreSQL.html)
 * [Appending (pushing) and removing from a JSON array in PostgreSQL 9.5+](https://stackoverflow.com/questions/42233542/appending-pushing-and-removing-from-a-json-array-in-postgresql-9-5)
+* [How to query for null values in json field type postgresql?](https://stackoverflow.com/questions/19422640/how-to-query-for-null-values-in-json-field-type-postgresql)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
