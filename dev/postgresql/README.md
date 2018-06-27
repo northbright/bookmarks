@@ -27,6 +27,7 @@
 * [Appending (pushing) and removing from a JSON array in PostgreSQL 9.5+](https://stackoverflow.com/questions/42233542/appending-pushing-and-removing-from-a-json-array-in-postgresql-9-5)
 * [How to query for null values in json field type postgresql?](https://stackoverflow.com/questions/19422640/how-to-query-for-null-values-in-json-field-type-postgresql)
 * [Null-safety with JSON and PostgreSQL](https://clarkdave.net/2015/03/navigating-null-safety-with-json-and-postgresql/) ([local copy](local-copy/Null-safety-with-JSON-and-PostgreSQL.html))
+* [Inserting JSONB data in PostgreSQL 9.6](https://blog.2ndquadrant.com/inserting-jsonb-data-in-postgresql-9-6/)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
