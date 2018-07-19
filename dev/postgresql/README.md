@@ -29,6 +29,7 @@
 * [Null-safety with JSON and PostgreSQL](https://clarkdave.net/2015/03/navigating-null-safety-with-json-and-postgresql/) ([local copy](local-copy/Null-safety-with-JSON-and-PostgreSQL.html))
 * [Inserting JSONB data in PostgreSQL 9.6](https://blog.2ndquadrant.com/inserting-jsonb-data-in-postgresql-9-6/)
 * [Unleash the Power of Storing JSON in Postgres](https://blog.codeship.com/unleash-the-power-of-storing-json-in-postgres/)
+* [Select query in row_to_json function](https://stackoverflow.com/questions/25564654/select-query-in-row-to-json-function)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
