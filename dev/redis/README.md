@@ -100,3 +100,6 @@
 
 #### Transaction and Optimistic Lock
 * [为何Redis用乐观锁，而MySQL数据库却没有？](https://www.zhihu.com/question/29397176)
+
+#### Querying
+* [Storing and Querying Objects in Redis](http://tylerstroud.com/2014/11/18/storing-and-querying-objects-in-redis/)
