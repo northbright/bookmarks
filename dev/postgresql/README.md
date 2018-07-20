@@ -30,6 +30,7 @@
 * [Inserting JSONB data in PostgreSQL 9.6](https://blog.2ndquadrant.com/inserting-jsonb-data-in-postgresql-9-6/)
 * [Unleash the Power of Storing JSON in Postgres](https://blog.codeship.com/unleash-the-power-of-storing-json-in-postgres/)
 * [Select query in row_to_json function](https://stackoverflow.com/questions/25564654/select-query-in-row-to-json-function)
+* [How to perform update operations on columns of type JSONB in Postgres 9.4](https://stackoverflow.com/questions/26703476/how-to-perform-update-operations-on-columns-of-type-jsonb-in-postgres-9-4/26704636#26704636)
 
 #### Install
 * [How To Install and Use PostgreSQL on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
