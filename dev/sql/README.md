@@ -17,3 +17,4 @@
 * [大家设计数据库时使用外键吗？](https://www.zhihu.com/question/19600081)
 * [数据库该不该用外键](https://blog.csdn.net/yangzhongwei1031/article/details/5459583)
 * [设计的时候，如果去掉外键关联，postgresql和mysql，哪个更有优势？](https://www.zhihu.com/question/34617822)
+* [How to implement a many-to-many relationship in PostgreSQL?](https://stackoverflow.com/questions/9789736/how-to-implement-a-many-to-many-relationship-in-postgresql)
