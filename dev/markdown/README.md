@@ -17,3 +17,6 @@
 
 #### Security
 * [Markdown's XSS Vulnerability (and how to mitigate it)](https://github.com/showdownjs/showdown/wiki/Markdown's-XSS-Vulnerability-(and-how-to-mitigate-it))
+
+#### Flowchart
+* [mermaid](https://mermaidjs.github.io/)
