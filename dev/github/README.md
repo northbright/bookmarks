@@ -28,3 +28,6 @@
 
 #### Github Pages and Custom Domain
 * [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
+
+#### SVG Rendering
+* [include an SVG (hosted on github) in MarkDown](https://stackoverflow.com/questions/13808020/include-an-svg-hosted-on-github-in-markdown)
