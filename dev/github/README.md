@@ -31,3 +31,4 @@
 
 #### SVG Rendering
 * [include an SVG (hosted on github) in MarkDown](https://stackoverflow.com/questions/13808020/include-an-svg-hosted-on-github-in-markdown)
+* [Linking to SVG files hosted on github](https://github.com/potherca-blog/StackOverflow/blob/master/question.13808020.include-an-svg-hosted-on-github-in-markdown/readme.md)
