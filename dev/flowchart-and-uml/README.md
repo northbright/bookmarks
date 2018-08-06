@@ -10,3 +10,6 @@
 #### Articles
 * [【UML 建模】UML入门 之 交互图 -- 时序图 协作图详解](http://blog.csdn.net/shulianghan/article/details/17927131)
 * [UML 序列图](http://www.uml.org.cn/oobject/200503082.htm)
+
+#### Graphviz
+* [Mac 上最好用的流程图软件是什么？](https://www.zhihu.com/question/19588698/answer/105561615)
