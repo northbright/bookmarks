@@ -13,3 +13,4 @@
 
 #### Graphviz
 * [Mac 上最好用的流程图软件是什么？](https://www.zhihu.com/question/19588698/answer/105561615)
+* [Flow charts in code: enter graphviz and the “dot” language](http://melp.nl/2013/08/flow-charts-in-code-enter-graphviz-and-the-dot-language/)
