@@ -2,6 +2,7 @@
 
 #### Articles
 * [Microservices - a definition of this new architectural term](https://martinfowler.com/articles/microservices.html)
+* [Microservices - a definition of this new architectural term(中文版)](https://mp.weixin.qq.com/s?__biz=MjM5MjEwNTEzOQ==&mid=401500724&idx=1&sn=4e42fa2ffcd5732ae044fe6a387a1cc3#rd)
 * 微服务实战
   * [微服务实战（一）：微服务架构的优势与不足](http://dockone.io/article/394)
   * [微服务实战（二）：使用API Gateway](http://dockone.io/article/482)
