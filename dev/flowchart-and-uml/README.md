@@ -16,4 +16,4 @@
 * [Flow charts in code: enter graphviz and the “dot” language](http://melp.nl/2013/08/flow-charts-in-code-enter-graphviz-and-the-dot-language/)
 * [graphviz dot语言学习笔记](https://www.jianshu.com/p/e44885a777f0)
 * [使用graphviz绘制流程图（2015版）](http://blog.jobbole.com/94472/)
-* [Draw a Neural Network through Graphviz](https://zhu45.org/posts/2017/May/25/draw-a-neural-network-through-graphviz/) ([local-copy](local-copy/Draw-a-Neural-Network-through-Graphviz.html)
+* [Draw a Neural Network through Graphviz](https://zhu45.org/posts/2017/May/25/draw-a-neural-network-through-graphviz/) ([local-copy](local-copy/Draw-a-Neural-Network-through-Graphviz.html))
