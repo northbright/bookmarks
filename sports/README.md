@@ -6,3 +6,4 @@
 ### 足球
 * 球鞋
   * [请推荐一款人工草地的足球鞋?](https://www.zhihu.com/question/31509049)
+  * [哪个系列的足球鞋适合宽脚的人穿？](https://www.zhihu.com/question/290374846)
