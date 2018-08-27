@@ -12,6 +12,7 @@
 * [Web Development](web-dev/README.md)
 * [Linux](linux/README.md)
 * [Windows](windows/README.md)
+* [Visual Studio](visual-studio/README.md)
 * [HTTP](http/README.md)
 * [Regular Expression](regular_expression/README.md)
 * [Unicode and UTF-8](unicode_utf8/README.md)
