@@ -7,6 +7,7 @@
 * [C# 带用户密码访问网络共享](https://www.cnblogs.com/eagle-chan/p/4246001.html)
 * [Enumerating Network Resources](https://docs.microsoft.com/zh-cn/windows/desktop/WNet/enumerating-network-resources)
 * [WNetAddConnection2A function](https://docs.microsoft.com/en-us/windows/desktop/api/winnetwk/nf-winnetwk-wnetaddconnection2a)
+* [Assigning a Drive to a Share](https://docs.microsoft.com/zh-cn/windows/desktop/WNet/assigning-a-drive-to-a-share)
 
 ### WINVER and _WIN32_WINNT
 * [Modifying WINVER and _WIN32_WINNT](https://msdn.microsoft.com/en-us/library/6sehtctf.aspx)
