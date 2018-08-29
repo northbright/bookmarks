@@ -16,3 +16,6 @@
 ## Visual Studio 2017
 * [Error C2760 in combaseapi.h with Windows SDK 8.1 and compiler flag /permissive-](https://developercommunity.visualstudio.com/content/problem/185399/error-c2760-in-combaseapih-with-windows-sdk-81-and.html)
 * [Change target platform version to Windows 7](https://social.msdn.microsoft.com/Forums/vstudio/en-US/08aaf316-f901-4385-82b2-537c2f6b2cde/change-target-platform-version-to-windows-7)
+
+## IPC
+* [IPC$ appears as shared folder](https://answers.microsoft.com/en-us/windows/forum/windows_vista-networking/ipc-appears-as-shared-folder/75f8aa9c-c5ed-4b1f-873d-bda13c28a9ec)
