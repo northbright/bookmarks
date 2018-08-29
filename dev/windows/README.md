@@ -19,3 +19,4 @@
 
 ## IPC
 * [IPC$ appears as shared folder](https://answers.microsoft.com/en-us/windows/forum/windows_vista-networking/ipc-appears-as-shared-folder/75f8aa9c-c5ed-4b1f-873d-bda13c28a9ec)
+* [Description of the IPC$ share](http://smallvoid.com/article/winnt-ipc-share.html)
