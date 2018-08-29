@@ -8,6 +8,7 @@
 * [Enumerating Network Resources](https://docs.microsoft.com/zh-cn/windows/desktop/WNet/enumerating-network-resources)
 * [WNetAddConnection2A function](https://docs.microsoft.com/en-us/windows/desktop/api/winnetwk/nf-winnetwk-wnetaddconnection2a)
 * [Assigning a Drive to a Share](https://docs.microsoft.com/zh-cn/windows/desktop/WNet/assigning-a-drive-to-a-share)
+* [关于WNetAddConnection2的问题](https://bbs.csdn.net/topics/390043336)
 
 ### WINVER and _WIN32_WINNT
 * [Modifying WINVER and _WIN32_WINNT](https://msdn.microsoft.com/en-us/library/6sehtctf.aspx)
