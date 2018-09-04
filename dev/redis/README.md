@@ -104,3 +104,6 @@
 
 #### Querying
 * [Storing and Querying Objects in Redis](http://tylerstroud.com/2014/11/18/storing-and-querying-objects-in-redis/)
+
+#### Stream
+* [挑战Kafka！Redis5.0重量级特性Stream尝鲜](https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=2653549949&idx=1&sn=7f6c4cf8642478574718ed0f8cf61409&chksm=813a64e5b64dedf357cef4e2894e33a75e3ae51575a4e3211c1da23008ef79173962e9a83c73&scene=38#wechat_redirect)
