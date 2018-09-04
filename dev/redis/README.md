@@ -91,13 +91,13 @@
 ## Security
 * [我是如何利用Redis黑进你的系统的](https://zhuanlan.zhihu.com/p/25790352)
 
-## Command
-* SORT
-    * [Sorting](https://redislabs.com/ebook/redis-in-action/part-2-core-concepts-2/chapter-3-commands-in-redis/3-7-other-commands/3-7-1-sorting)
-* Sorted Set
-    * [Redis sorted set stores score as a floating point number](https://www.leaseweb.com/labs/2014/07/redis-sorted-set-stores-score-floating-point-number/)
-    * [Strange float score precision with sorted sets #1499](https://github.com/antirez/redis/issues/1499)
-    * [Redis: How to intersect a “normal” set with a sorted set?](http://stackoverflow.com/questions/10500695/redis-how-to-intersect-a-normal-set-with-a-sorted-set)
+## SORT
+* [Sorting](https://redislabs.com/ebook/redis-in-action/part-2-core-concepts-2/chapter-3-commands-in-redis/3-7-other-commands/3-7-1-sorting)
+
+## Sorted Set
+* [Redis sorted set stores score as a floating point number](https://www.leaseweb.com/labs/2014/07/redis-sorted-set-stores-score-floating-point-number/)
+* [Strange float score precision with sorted sets #1499](https://github.com/antirez/redis/issues/1499)
+* [Redis: How to intersect a “normal” set with a sorted set?](http://stackoverflow.com/questions/10500695/redis-how-to-intersect-a-normal-set-with-a-sorted-set)
 
 ## Transaction and Optimistic Lock
 * [为何Redis用乐观锁，而MySQL数据库却没有？](https://www.zhihu.com/question/29397176)
