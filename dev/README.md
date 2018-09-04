@@ -55,6 +55,7 @@
 * [SQL](sql/README.md)
 * [NoSQL](nosql/README.md)
 * [Chrome/Puppeteer](chrome-puppeteer/README.md)
+* [Block Chain](block-chain/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
