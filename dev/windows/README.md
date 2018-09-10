@@ -28,3 +28,6 @@
 
 ## Powershell
 * [How to create a shortcut using PowerShell](https://stackoverflow.com/questions/9701840/how-to-create-a-shortcut-using-powershell)
+
+## CMD
+* [Net Use Command](https://www.lifewire.com/net-use-command-2618096)
