@@ -1,0 +1,2517 @@
+﻿<!DOCTYPE html><html class="js eventlistener no-ie8compat no-framed classlist adownload fileinput scriptasync scriptdefer csscalc mediaqueries displaytable display-table fileinputdirectory borderimage borderradius boxshadow boxsizing csscolumns csscolumns-width no-csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth no-csscolumns-breakbefore no-csscolumns-breakafter no-csscolumns-breakinside" style="" lang="en"><head>
+<base href="http://www.robvanderwoude.com/2kprintcontrol.php">
+
+<title>Command Line Printer Control</title>
+<meta name="description" content="Use Windows' native PrintUI.dll to install, configure and controle printers, setup printer drivers and printer ports, configure and control printer queues, and preform many other printing related tasks.">
+<meta name="keywords" content="print, printer, batch, batch file, script, scripts, command, command line, printer driver, printer port, printer queue, print queue, rundll, rundll32, printui, printui.dll, PrintUIEntry, printuientry">
+<meta name="robots" content="index,follow">
+<script type="text/javascript"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1">
+<script type="text/javascript" data-savepage-src="./scripts/noframes.min.js" src=""></script>
+<script type="text/javascript" data-savepage-src="./scripts/modernizr320custom1min.js" src=""></script>
+<script type="text/javascript" data-savepage-src="./scripts/cookies.min.js" src=""></script>
+<style data-savepage-href="./scripts/default.1.0.9.css" type="text/css">/*
+body:before
+{
+	content: "This is a preliminary page, for testing only. Links to scripts (sources and downloads) aren't available. Please navigate back to the root of www.robvanderwoude.com if you're looking for scripting related information.";
+	color: blue;
+	font-weight: bold;
+	font-size: 150%;
+}
+*/
+
+body
+{
+	background-image: none;
+	background-color: white;
+	color: rgb( 0, 0, 128) ;
+	font-size: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin: 80px 0 0 235px;
+	padding: 0;
+}
+
+a {
+	word-wrap: normal;
+}
+
+a:hover
+{
+	color: rgb( 255, 0, 0 );
+}
+
+a:link
+{
+	color: rgb( 0, 0, 255 );
+}
+
+a:visited
+{
+	color: rgb( 128, 0, 128 );
+}
+
+blockquote
+{
+	color: rgb(0, 0, 0);
+	margin-left: 5%;
+}
+
+/* Code style (green Courier) */
+code
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: rgb(0, 89, 0);
+}
+
+/* Output style (black Courier) */
+code.Output, .Output
+{
+	color: black;
+}
+
+code a:visited, .Code a:visited, a:visited.Code
+{
+	color: rgb(0, 89, 0);
+}
+
+code a:link, .Code a:link, a:link.Code
+{
+	color: rgb(0, 89, 0);
+}
+
+code.Output a:visited, .Output a:visited, a:visited.Output
+{
+	color: black;
+}
+
+code.Output a:link, .Output a:link, a:link.Output
+{
+	color: black;
+}
+
+/* Layout for Quote of the Day */
+div.Aphorism
+{
+	text-align: center;
+	background-color: rgb(246,250,255);
+	border: 2px solid darkblue;
+	margin: 15px 100px 15px 100px;
+	padding: 10px 20px 10px 20px;
+}
+
+/* Layout for lists of books */
+div.Book {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 10px 0 10px 0;
+	vertical-align: middle;
+}
+
+div.Book div.Cover {
+	clear: left;
+	float: left;
+	height: 180px;
+	left: 0;
+	margin: auto;
+	position: relative;
+	text-align: center;
+	width: 180px;
+}
+
+div.Book div.Cover a {
+	text-decoration: none;
+}
+
+div.Book div.Title {
+	clear: right;
+	float: left;
+	height: 180px;
+	margin: auto 0 auto 0;
+	max-height: 180px;
+	max-width: 100%;
+	position: relative;
+}
+
+div.Book img {
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.Center
+{
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.Right
+{
+	text-align: right;
+	display: block;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+div#Headroom
+{
+	display: none;
+}
+
+/* Definition Lists for Command Examples */
+dl.Examples dt
+{
+	padding-left: 20px;
+}
+dl.Examples dd
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: rgb(0, 89, 0);
+	padding: 0 0 20px 40px;
+}
+
+/* Definition Lists for Requirements */
+dl.Requirements dt
+{
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+dl.Requirements dd
+{
+	padding: 0 0 20px 40px;
+}
+
+/* Definition Lists for Command Syntaxes */
+dl.Syntax dt
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: #005900;
+	padding-left: 20px;
+}
+
+dl.Syntax dd
+{
+	padding: 0 0 20px 40px;
+}
+
+h1
+{
+	font-size: 18pt;
+	page-break-after: avoid;
+	text-indent: 10%;
+	margin: 25px;
+}
+
+h2
+{
+	font-size: 16pt;
+	font-style: italic;
+	page-break-after: avoid;
+	text-indent: 10%;
+	margin: 50px 20px 20px 20px;
+}
+
+h3
+{
+	font-size: 14pt;
+	page-break-after: avoid;
+	text-indent: 10%;
+	margin: 20px;
+}
+
+h4
+{
+	font-size: 12pt;
+	page-break-after: avoid;
+	font-weight: bold;
+	text-indent: 10%;
+	margin: 15px;
+}
+
+h5
+{
+	font-size: 12pt;
+	font-style: italic;
+	page-break-after: avoid;
+	font-weight: bold;
+	margin: 25px 0 15px 20px;
+}
+
+.Center h1, h1.Center, .Center h2, h2.Center, .Center h3, h3.Center, .Center h4, h4.Center, .Center h5, h5.Center
+{
+	margin-left: 0;
+	text-indent: 0;
+}
+
+hr.Foot
+{
+	clear: both;
+	height: 1px;
+	margin-left: 3%;
+	padding: 0;
+	width: 94%;
+}
+
+iframe#aStore
+{
+	border: none;
+	height: 2000px;
+	max-height: 100%;
+	max-width: 80%;
+	overflow: scroll;
+	width: 1000px;
+}
+
+img
+{
+	border-style: none;
+	border-width: 0;
+}
+
+li
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+li.Blank
+{
+	list-style-type: none;
+}
+
+li.Empty
+{
+	list-style-type: none;
+}
+
+li.Left
+{
+	position: relative;
+	margin-bottom: 0;
+	list-style-type: none;
+}
+
+li.Narrow {
+	display: none;
+}
+
+li.Right40
+{
+	position: relative;
+	left: 40%;
+	width: 60%;
+	top: -2em;
+	margin-bottom: -2em;
+	list-style-type: none;
+}
+
+li.Wide {
+	display: block;
+}
+
+pre
+{
+	page-break-inside: avoid;
+}
+
+pre.Code
+{
+	color: rgb(0, 89, 0);
+
+}
+
+pre.Output
+{
+	color: black;
+}
+
+/* Normal table layout */
+table
+{
+	page-break-inside: avoid;
+	font-size: inherit;
+}
+
+td
+{
+	padding: 5px;
+}
+
+th
+{
+	text-align: center;
+	padding: 5px;
+}
+
+td.Hide4SmallScreen, th.Hide4SmallScreen {
+	display: table-cell;
+	visibility: visible;
+}
+
+/* Alphabet links for long lists of sample scripts */
+table.Alphabet
+{
+	border-style: none;
+	border-collapse: collapse;
+}
+
+table.Alphabet td
+{
+	border-style: none solid none solid;
+	border-width: 1px;
+	border-color: gray;
+	text-align: center;
+}
+
+table.Alphabet td.Grey
+{
+	border-style: none solid none solid;
+	border-width: 1px;
+	border-color: gray;
+	text-align: center;
+	color: gray;
+}
+
+/* Layout for Books pages */
+table.Books
+{
+	border-style: none;
+}
+
+table.Books thead, table.Books .thead
+{
+	border-style: none;
+	background-color: #d0d0d0;
+	color: #005000;
+	text-align: center;
+	font-size: 120%;
+	page-break-after: avoid;
+	font-weight: bold;
+}
+
+table.Books thead th, table.Books .thead th
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+table.Books th.Header
+{
+	background-color: #d0d0d0;
+	color: #005000;
+	text-align: center;
+	font-size: 160%;
+	page-break-after: avoid;
+	font-weight: bold;
+}
+
+table.Books tbody, table.Books .tbody
+{
+	border-style: none;
+	background-color: #fffff0;
+}
+
+table.Books tbody td, table.Books tbody th, table.Books .tbody td, table.Books .tbody th
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d0d0d0;
+	border-collapse: collapse;
+}
+
+table.Books tbody td.Empty, table.Books .tbody td.Empty
+{
+	border-style: none;
+	background-color: #ffffff;
+}
+
+table.Books tbody td.Title, table.Books .tbody td.Title
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Layout for Batch Commands page */
+table.Commands tbody
+{
+	margin: 5px;
+}
+
+table.Commands thead
+{
+	background-color: #c8c8c8;
+	margin: 5px;
+}
+
+table.Commands tr
+{
+	vertical-align: middle;
+}
+
+table.Commands td.Code
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: #005900;
+	white-space: nowrap;
+	text-align: left;
+}
+
+table.Commands td.Output
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: black;
+	white-space: nowrap;
+	text-align: left;
+}
+
+table.Commands td.Code a, table.Commands td.Code a:link, table.Commands td.Code a:visited, table.Commands td.Output a, table.Commands td.Output a:link, table.Commands td.Output a:visited
+{
+	color: #005900;
+	white-space: nowrap;
+}
+
+/* Layout for lists of tools and downloads */
+table.Downloads
+{
+	border-style: none;
+}
+
+table.Downloads thead, table.Downloads .thead
+{
+	border-style: none;
+	background-color: #d0ffd0;
+	font-size: 120%;
+}
+
+table.Downloads thead th, table.Downloads .thead th
+{
+	border: 1px solid black;
+}
+
+table.Downloads th.Header
+{
+	font-size: 160%;
+}
+
+table.Downloads tbody, table.Downloads .tbody
+{
+	text-align: left;
+	background-color: rgb(255,255,208);
+	margin: 5px;
+}
+
+table.Downloads tbody td, table.Downloads tbody th, table.Downloads .tbody td, table.Downloads .tbody th
+{
+	border: 1px solid #d0d0d0;
+	border-collapse: collapse;
+}
+
+table.Downloads tr
+{
+	vertical-align: middle;
+}
+
+table.Downloads tr.Narrow {
+	display: none;
+	visibility: collapse;
+}
+
+table.Downloads tr.Wide {
+	display: table-row;
+	visibility: visible;
+}
+
+tbody tr td.Empty
+{
+	background-color: #ffffff;
+	border-style: none;
+}
+
+col#Product, col#Description, col#Function, col#Manufacturer
+{
+	text-align: left;
+}
+
+col#Download,col#Buy
+{
+	text-align: center;
+}
+
+/* Layout for lists of sample scripts */
+table.Examples tbody
+{
+	background-color: #f0f0f0;
+	margin: 5px;
+	text-align: left;
+}
+
+table.Examples tbody td, table.Examples tbody th
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d0d0d0;
+	border-collapse: collapse;
+}
+
+table.Examples tbody th.Left
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d0d0d0;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+table.Examples tbody td.Empty
+{
+	border-style: none;
+	background-color: #ffffff;
+	border-collapse: collapse;
+}
+
+table.Examples tbody td.NumValues
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d0d0d0;
+	border-collapse: collapse;
+	text-align: right;
+}
+
+table.Examples tbody td.StringValues
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d0d0d0;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+table.Examples thead, table.Examples td.thead, table.Examples th.thead
+{
+	border-style: none;
+	background-color: #a0a0ff;
+	font-size: 120%;
+}
+
+table.Examples thead th, table.Examples th.thead
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+table.Examples th.Header
+{
+	font-size: 160%;
+}
+
+table.Examples tr
+{
+	vertical-align: middle;
+}
+
+table.Examples tr.Top, table tr.Top
+{
+	vertical-align: top;
+}
+
+/* Style for Download Button on HTA pages */
+table.HTADownload
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d0d0d0;
+	background-color: #f0f0f0;
+}
+
+table.HTADownload td
+{
+	padding: 20px;
+	font-size: 12pt;
+}
+
+table.HTADownload th
+{
+	padding: 20px;
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: left;
+}
+
+table.Changes td, table.Changes th
+{
+	text-align: left;
+	vertical-align: top;
+	padding: 0 25px 10px 0;
+}
+
+table.Changes td ul
+{
+	margin-top: 0;
+}
+
+table.Issues td
+{
+	border: 1px solid silver;
+	vertical-align: top;
+}
+
+table.Issues th
+{
+	background-color: silver;
+	/*
+	border: 1px solid silver;
+	*/
+	text-align: left;
+}
+
+/* Layout for What's New page */
+table.LastModified
+{
+	border-style: none;
+}
+
+table.LastModified th
+{
+	background-color: rgb(240, 240, 255);
+	text-align: left;
+	padding: 5px 20px 5px 10px;
+}
+
+table.LastModified td
+{
+	padding: 5px 20px 5px 10px;
+}
+
+table.LastModified td.Even
+{
+	background-color: rgb(240, 240, 255);
+	padding: 5px 20px 5px 10px;
+}
+
+/* Tables for FOR/F page */
+table.Output
+{
+	border-style: none;
+	border-collapse: collapse;
+}
+
+table.Output td
+{
+	color: black;
+	padding: 0px;
+}
+
+table.Source
+{
+	border-style: none;
+	border-collapse: collapse;
+}
+
+table.Source td.Code
+{
+	page-break-inside: avoid;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004000;
+	background-color: #ffffd0;
+	font-family: Courier New, Courier, sans-serif;
+	color: #005900;
+	padding: 15px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+table.Source td.Output
+{
+	page-break-inside: avoid;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004000;
+	background-color: #ffffd0;
+	font-family: Courier New, Courier, sans-serif;
+	color: black;
+	padding: 15px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+/* Tables for VBScript Scripting Techniques "menu path tracking" */
+table.MenuTrack
+{
+	border-style: none;
+	border-collapse: collapse;
+}
+
+table.MenuTrack tr
+{
+	vertical-align: top;
+}
+
+table.MenuTrack td
+{
+	padding: 0 15px 0 0;
+	font-weight: bold;
+}
+
+/* Tables for command syntaxes */
+table.Syntax
+{
+	border-style: none;
+}
+
+table.Syntax tr
+{
+	vertical-align: top;
+}
+
+table.Syntax td.Code
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: #005900;
+	padding: 5px 15px 5px 0px;
+}
+
+table.Syntax td.CodeMagenta
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: magenta;
+	padding: 5px 15px 5px 0px;
+}
+
+table.Syntax td.CodeRed
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: red;
+	padding: 5px 15px 5px 0px;
+}
+
+/* Tables for news page */
+table.News tr
+{
+	vertical-align: top;
+	padding-bottom: 35px;
+}
+
+td.Center
+{
+	text-align: center;
+}
+
+td.Right
+{
+	text-align: right;
+}
+
+/* Style for notes */
+td.Hide4Mobile, th.Hide4Mobile {
+	display: table-cell;
+	visibility: visible;
+}
+
+td.Note
+{
+	vertical-align: top;
+	padding-left: 0;
+	padding-right: 5px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+tr.Show4Mobile {
+	display: none;
+	visibility: collapse;
+}
+
+.Black
+{
+	color: black;
+}
+
+.Blink
+{
+	text-decoration: blink;
+	animation: blink 1s steps(5, start) infinite;
+	-webkit-animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+	to {
+		visibility: hidden;
+	}
+}
+
+@-webkit-keyframes blink {
+	to {
+		visibility: hidden;
+	}
+}
+
+.Bodytext
+{
+	color: rgb( 0, 0, 128) ;
+	font-size: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.Bold
+{
+	font-weight: bold;
+}
+
+.Bottom
+{
+	vertical-align: bottom;
+}
+
+.Center
+{
+	text-align: center;
+}
+
+.Code
+{
+	font-family: Courier New, Courier, sans-serif;
+	color: rgb(0, 89, 0);
+}
+
+.Cyan
+{
+	color: cyan;
+}
+
+.Darkcyan
+{
+	color: darkcyan;
+}
+
+.Darkorange
+{
+	color: darkorange;
+}
+
+.DoPrintHiddenBlock
+{
+	display: none;
+}
+
+.Empty
+{
+	border-style: none;
+	background-color: #ffffff;
+}
+
+.Fullwidth
+{
+	width: 100%;
+}
+
+.Green
+{
+	color: green;
+}
+
+/* Highlighted text */
+.HighlightGrey
+{
+	background-color: #e0e0e0;
+}
+
+.HighlightYellow
+{
+	background-color: yellow;
+}
+
+.Indent
+{
+	text-indent: 2em;
+
+}
+
+.Italic
+{
+	font-style: italic;
+}
+
+.Left
+{
+	text-align: left;
+}
+
+.Magenta
+{
+	color: magenta;
+}
+
+.Middle
+{
+	vertical-align: middle;
+}
+
+.Nowrap
+{
+	white-space: nowrap;
+}
+
+.Orange
+{
+	color: orange;
+}
+
+.Red
+{
+	color: red;
+}
+
+.Right
+{
+	text-align: right;
+}
+
+.SmallText
+{
+	font-size: 80%;
+}
+
+.Strike
+{
+	text-decoration: line-through;
+}
+
+.Top
+{
+	vertical-align: top;
+}
+
+.Underline
+{
+	text-decoration: underline;
+}
+
+.White
+{
+	color: white;
+}
+
+.Yellow
+{
+	color: yellow;
+}
+
+/* Old-fashioned green/black terminal output style */
+.Terminal
+{
+	background-color: #002000;
+	color: #00a000;
+	font-size: 12pt;
+	font-family: Courier New, Courier, sans-serif;
+	padding: 5px;
+}
+
+/* Old-fashioned amber/black terminal output style */
+.Terminal.Amber
+{
+	background-color: #202000;
+	color: #ffa000;
+	font-size: 12pt;
+	font-family: Courier New, Courier, sans-serif;
+	padding: 5px;
+}
+
+/* Screen only */
+@media screen
+{
+	.DontDisplay
+	{
+		display: none;
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	td.Hide4SmallScreen, th.Hide4SmallScreen {
+		display: none;
+		visibility: collapse;
+	}	
+}
+
+/* Small screens (e.g. mobile devices) */
+@media screen and (max-width: 800px) {
+	body {
+		margin: 3px;
+	}
+
+	a {
+		padding: 6px 8px 6px 0;
+		display: inline-block;
+	}
+
+	div#Headroom {
+		display: block;
+		height: 61px;
+	}
+
+	dl.Examples dt, dl.Examples dd, dl.Requirements dt, dl.Requirements dd, dl.Syntax dt, dl.Syntax dd, dt, dd {
+		padding-left: 0;
+	}
+
+	iframe#aStore {
+		max-height: 500%;
+		max-width: 100%;
+		width: 800px;
+	}
+
+	li.Narrow {
+		display: block;
+	}
+
+	li.Wide {
+		display: none;
+	}
+
+	table.Commands td.Code, table.Commands td.Output, table.Source td.Code, table.Source td.Output {
+		white-space: normal;
+	}
+
+	table.Commands td.Code a, table.Commands td.Code a:link, table.Commands td.Code a:visited, table.Commands td.Output a, table.Commands td.Output a:link, table.Commands td.Output a:visited {
+		white-space: normal;
+	}
+
+	table.Downloads th.Header
+	{
+		font-size: 120%;
+	}
+
+	table.Downloads tr.Narrow {
+		display: table-row;
+		visibility: visible;
+	}
+	
+	table.Downloads tr.Wide {
+		display: none;
+		visibility: collapse;
+	}
+	
+	td.Hide4Mobile, th.Hide4Mobile {
+		display: none;
+		visibility: collapse;
+	}
+	
+	td.Note {
+		white-space: normal;
+	}
+
+	tr.Show4Mobile {
+		display: table-row;
+		visibility: visible;
+	}
+
+	.NoMobile {
+		display: none;
+	}
+	
+	.Nowrap {
+		white-space: normal;
+	}
+}
+
+/* Printing */
+@media print
+{
+	@page port {size: portrait;}
+	@page land {size: landscape;}
+
+	.Portrait
+	{
+		page: port;
+	}
+
+	.Landscape
+	{
+		page: land;
+	}
+
+	body:before
+	{
+		content: "";
+	}
+
+	body
+	{
+		background-color: white;
+		color: black;
+		font-size: 10pt;
+		font-family: Times New Roman, TimesNR, Times, serif;
+		margin: 0px 0px 0px 0px;
+		background-color: rgb(255, 255, 255);
+		background-image: none;
+	}
+
+	a, a:link, a:visited, a:hover
+	{
+		color: rgb(0, 0, 255);
+		text-decoration: underline;
+	}
+
+	a[href^="http://"]:after
+	{
+		color: rgb(0, 0, 255);
+		text-decoration: none;
+		content: " (" attr(href) ")";
+		font-size: 8pt;
+	}
+
+	a[href^="ftp://"]:after
+	{
+		color: rgb(0, 0, 255);
+		text-decoration: none;
+		content: " (" attr(href) ")";
+		font-size: 8pt;
+	}
+
+/*
+	a[href^="mailto:"]:after
+	{
+		color: rgb(0, 0, 255);
+		text-decoration: none;
+		content: " (" attr(href) ")";
+		font-size: 8pt;
+	}
+*/
+
+	a[href^="news:"]:after
+	{
+		color: rgb(0, 0, 255);
+		text-decoration: none;
+		content: " (" attr(href) ")";
+		font-size: 8pt;
+	}
+
+	table.Examples a:after
+	{
+		content: none;
+	}
+
+	noscript
+	{
+		display: none;
+		visibility: hidden;
+	}
+
+	pre code
+	{
+		page-break-inside: avoid;
+	}
+
+	table.Downloads, table.Examples
+	{
+		page: land;
+	}
+
+	table.LastModified
+	{
+		border-style: none;
+	}
+
+	table.LastModified th
+	{
+		background-color: white;
+		text-align: left;
+	}
+
+	table.LastModified td.Even
+	{
+		background-color: white;
+	}
+
+	p
+	{
+		orphans: 3;
+		page-break-inside: avoid;
+		widows: 3;
+	}
+
+	.Bodytext
+	{
+			color: black;
+			font-size: 10pt;
+			font-family: Times New Roman, TimesNR, Times, serif;
+	}
+
+	.DontPrint
+	{
+		display: none;
+		visibility: hidden;
+	}
+
+	#DontPrint
+	{
+		display: none;
+		visibility: hidden;
+	}
+
+	.DoPrintHiddenBlock
+	{
+		display: block;
+		visibility: visible;
+	}
+
+	/* Highlighted text */
+	.HighlightGrey
+	{
+		font-weight: bold;
+	}
+
+	.HighlightYellow
+	{
+		text-decoration: underline overline line-through;
+	}
+
+}
+</style>
+<style data-savepage-href="./scripts/menu.1.0.0.css" type="text/css">div#logocontainer {
+	background-color: #2e5492;
+	color: white;
+	float: left;
+	font-size: 150%;
+	height: 62px;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 998; 
+}
+
+div#logocontainer img {
+	float: left;
+	left: 220px;
+	position: absolute;
+	top: 0;
+	z-index: 999;
+}
+
+div#menucontainer {
+	background-color: #4c4c4c;
+	float: left;
+	height: 62px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top:  0;
+	width: 220px;
+	z-index: 9999;
+}
+
+div#titlecontainer {
+	display: none;
+}
+
+ul#menu li {
+	vertical-align: text-top;
+}
+
+ul#menu li a {
+	vertical-align: baseline;
+	word-wrap: normal;
+}
+
+/* **************************************************************************** */
+/* ****                                                                    **** */
+/* **** When JavaScript is enabled, menu will be replaced by SlickNav menu **** */
+/* ****                                                                    **** */
+/* **************************************************************************** */
+.js #menu {
+	display: none;
+}
+
+.js div#nojsmenuhead {
+	display: none;
+}
+
+.js li > a img.menuicon {
+	vertical-align: middle;
+}
+
+.js img.menuicon {
+	float: right;
+	height: 16px;
+	position: relative;
+	right: 0;
+	width: 16px;
+}
+
+.js .slicknav_menu {
+	display: block;
+}
+
+/* **************************************************************************** */
+/* ****                                                                    **** */
+/* **** When JavaScript is disabled, hovering over submenus will open them **** */
+/* ****                                                                    **** */
+/* **************************************************************************** */
+.no-js div#nojsmenuhead a {
+	color: white;
+	text-decoration: none;
+}
+
+.no-js ul#menu {
+	background-color: #4c4c4c;
+	color: white;
+	margin-top: 62px;
+	padding: 5px 15px 5px 15px;
+}
+
+.no-js ul#menu a {
+	color: white;
+	text-decoration: none;
+}
+
+.no-js ul#menu li {
+	list-style: none;
+}
+
+.no-js ul#menu li ul {
+	display: none;
+}
+
+.no-js div#nojsmenuhead {
+	display: block;
+}
+
+.no-js ul#menu li#menu_cursussen:hover > ul {
+	display: block;
+}
+
+.no-js ul#menu li#menu_visie:hover > ul {
+	display: block;
+}
+
+.no-js #menu li, .no-js #menu li > a {
+	width: 100%;
+}
+
+.no-js img.menuicon {
+	float: right;
+	height: 16px;
+	position: relative;
+	right: 10px;
+	width: 16px;
+}
+
+@media screen and (max-width: 800px) {
+	.no-js #menu > li, .no-js li.submenu {
+		display: block;
+		padding: 6px 8px 6px 0;
+	}
+
+	h1, h2, h3, h4 {
+		text-align: center;
+		text-indent: 0;
+	}
+
+	div.Aphorism {
+		margin: 5px;
+	}
+
+	div#logocontainer {
+		display: none;
+	}
+
+	div#menucontainer {
+		clear: both;
+		display: block;
+		float: none;
+		height: 62px;
+		left: 0;
+		top: 0;
+		width: 100%
+	}
+
+	div#titlecontainer {
+		clear: both;
+		display: block;
+		float: none;
+		/* margin-top: 68px; */
+	}
+
+	.js div#titlecontainer {
+		margin-top: 68px;
+	}
+
+	.no-js div#titlecontainer {
+		margin-top: 512px;
+	}
+}
+</style>
+<style data-savepage-href="./scripts/slicknav.css" type="text/css">/*!
+ * SlickNav Responsive Mobile Menu v1.0.3
+ * (c) 2015 Josh Cope
+ * licensed under MIT
+ */
+.slicknav_btn {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438em 0.625em 0.438em 0.625em;
+  line-height: 1.125em;
+  cursor: pointer; }
+  .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+    margin-top: 0.188em; }
+
+.slicknav_menu {
+  *zoom: 1; }
+  .slicknav_menu .slicknav_menutxt {
+    display: block;
+    line-height: 1.188em;
+    float: left; }
+  .slicknav_menu .slicknav_icon {
+    float: left;
+    margin: 0.188em 0 0 0.438em; }
+  .slicknav_menu .slicknav_no-text {
+    margin: 0; }
+  .slicknav_menu .slicknav_icon-bar {
+    display: block;
+    width: 1.125em;
+    height: 0.125em;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+  .slicknav_menu:before {
+    content: " ";
+    display: table; }
+  .slicknav_menu:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+.slicknav_nav {
+  clear: both; }
+  .slicknav_nav ul {
+    display: block; }
+  .slicknav_nav li {
+    display: block; }
+  .slicknav_nav .slicknav_arrow {
+    font-size: 0.8em;
+    margin: 0 0 0 0.4em; }
+  .slicknav_nav .slicknav_item {
+    cursor: pointer; }
+    .slicknav_nav .slicknav_item a {
+      display: inline; }
+  .slicknav_nav .slicknav_row {
+    display: block; }
+  .slicknav_nav a {
+    display: block; }
+  .slicknav_nav .slicknav_parent-link a {
+    display: inline; }
+
+.slicknav_brand {
+  float: left; }
+
+.slicknav_menu {
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #4c4c4c;
+  padding: 5px; }
+  .slicknav_menu * {
+    box-sizing: border-box; }
+  .slicknav_menu .slicknav_menutxt {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 3px #000; }
+  .slicknav_menu .slicknav_icon-bar {
+    background-color: #fff; }
+
+.slicknav_btn {
+  margin: 5px 5px 6px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #222; }
+
+.slicknav_nav {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em;
+  list-style: none;
+  overflow: hidden; }
+  .slicknav_nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 0 20px; }
+  .slicknav_nav .slicknav_row {
+    padding: 5px 10px;
+    margin: 2px 5px; }
+    .slicknav_nav .slicknav_row:hover {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      background: #ccc;
+      color: #fff; }
+  .slicknav_nav a {
+    padding: 5px 10px;
+    margin: 2px 5px;
+    text-decoration: none;
+    color: #fff; }
+    .slicknav_nav a:hover {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      background: #ccc;
+      color: #222; }
+  .slicknav_nav .slicknav_txtnode {
+    margin-left: 15px; }
+  .slicknav_nav .slicknav_item a {
+    padding: 0;
+    margin: 0; }
+  .slicknav_nav .slicknav_parent-link a {
+    padding: 0;
+    margin: 0; }
+
+.slicknav_brand {
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 7px 12px;
+  height: 44px; }
+</style>
+
+<link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgQAhIKEAPz+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEiEAAAICAAEgAgEAAgEgAgAAAgARACECAAAAACAAAgIAAAEAIAACAgAAAgEQACEBIAIAAgABIAASIQACAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+
+<script id="savepage-pageloader" type="application/javascript">
+savepage_PageLoader(5);
+"use strict";function savepage_PageLoader(maxframedepth){var resourceMimeType=new Array();var resourceBase64Data=new Array();var resourceBlobUrl=new Array();window.addEventListener("DOMContentLoaded",function(a){createBlobURLs();replaceReferences(0,document.documentElement)},false);function createBlobURLs(){var i,j,binaryString,blobData;var a=new Array();for(i=0;i<resourceMimeType.length;i++){if(typeof resourceMimeType[i]!="undefined"){binaryString=atob(resourceBase64Data[i]);resourceBase64Data[i]="";a.length=0;for(j=0;j<binaryString.length;j++){a[j]=binaryString.charCodeAt(j)}blobData=new Blob([new Uint8Array(a)],{type:resourceMimeType[i]});resourceMimeType[i]="";resourceBlobUrl[i]=window.URL.createObjectURL(blobData)}}}function replaceReferences(a,b){var i,regex1,regex2,csstext,blobData;regex1=/url\(\s*((?:"[^"]+")|(?:'[^']+')|(?:[^\s)]+))\s*\)/gi;regex2=/data:[^;]*;resource=(\d+);base64,/i;if(b.hasAttribute("style")){csstext=b.style.cssText;b.style.cssText=csstext.replace(regex1,replaceCSSRef)}if(b.localName=="style"){csstext=b.textContent;b.textContent=csstext.replace(regex1,replaceCSSRef)}else if(b.localName=="link"&&(b.rel.toLowerCase()=="icon"||b.rel.toLowerCase()=="shortcut icon")){if(b.href!="")b.href=b.href.replace(regex2,replaceRef)}else if(b.localName=="body"){if(b.background!="")b.background=b.background.replace(regex2,replaceRef)}else if(b.localName=="img"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="input"&&b.type.toLowerCase()=="image"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="audio"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.load()}}else if(b.localName=="video"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.load()}if(b.poster!="")b.poster=b.poster.replace(regex2,replaceRef)}else if(b.localName=="source"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.parentElement.load()}}else if(b.localName=="track"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="object"){if(b.data!="")b.data=b.data.replace(regex2,replaceRef)}else if(b.localName=="embed"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}if(b.localName=="iframe"||b.localName=="frame"){if(a<maxframedepth){if(b.hasAttribute("data-savepage-sameorigin")){blobData=new Blob([decodeURIComponent(b.src.substr(29))],{type:"text/html;charset=utf-8"});b.onload=function(){try{if(b.contentDocument.documentElement!=null){replaceReferences(a+1,b.contentDocument.documentElement)}}catch(e){}};b.src=window.URL.createObjectURL(blobData)}}}else{for(i=0;i<b.childNodes.length;i++){if(b.childNodes[i]!=null){if(b.childNodes[i].nodeType==1)replaceReferences(a,b.childNodes[i])}}}}function replaceCSSRef(a,b,c,d){var e=new Array();e=b.match(/data:[^;]*;resource=(\d+);base64,/i);if(e!=null)return"url("+resourceBlobUrl[+e[1]]+")";else return a}function replaceRef(a,b,c,d){return resourceBlobUrl[+b]}
+resourceMimeType[5] = "image/png"; resourceBase64Data[5] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZCggmp85KfAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAABZSURBVHja7ZI5DsAgDARtlIf754togMQHmLSsBDSeMcUyAAoin1enCZwjGBFvbgcOJbuwK8nApiQLK8kJ/JKcwl3CGD0IC2GE21WSkMqz2jB3zhr6/YMrIKp/BJaUwkvJdgAAAABJRU5ErkJggg==";
+resourceMimeType[6] = "image/png"; resourceBase64Data[6] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZChcuZE/M0AAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAADCSURBVHjapZNBCsIwEEWnotB4DtdaPZReSMUuPIqKuBaXWgviNcxm/AOJlCGpJf3wmilJfjJhhpiZFAtQghpYxxPsQKHXN3/GYM//JeZGG8jmS4fNXmdv4g1iJ/v5kCQlyiRnIrpSWJkbOTI/H+KzoriY2rWUG9QIJpSmSgwsglFiCnaQePJPYvDusf8lBsceBgd5gwLBLfENZr5QyoRC2jQr0bjy7KoTyHUzmZab6JNzDnSjR1p2Cx7g47iDNZjq9V92AOMGpGTc9wAAAABJRU5ErkJggg==";
+resourceMimeType[7] = "image/png"; resourceBase64Data[7] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZChADbtEGYgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAAEcSURBVHjajZNNagJBEIUr4m/Mwr07V2YTxBvEEwSvkI0n8AJZuUk2yaBCrqAnUBGXbkIIKCoi3iCYRRI07atQDW3RjfPgY5juV2+qa2bIGEOKKuiAJfgVFqANKtrv3lyCV3NeHJ7TAVw8iVFsNbYhNkA/+RGUQRJkpPUnsHc8bRtQVcUPEpoGdXAHUrLWUN4KyZlcFcXcctaaspZX3ihJRDU6VQ+gN7p21j7lWlDeGslrCmkH7sGFDK2v9n/OBdxK6zzED8/+f8AiUPwNEhKwCnhmCZxjSH6lwRpsQCngGdj2fNqCK2Ea8NxwB2+g60n/A1/CwbMfgXf7JfKExya+RiBr1M/EIZ0YxS+2WAdYeCYRmPNrEmbgmc+s/Uc4dP3CKu3kZgAAAABJRU5ErkJggg==";
+resourceMimeType[8] = "image/png"; resourceBase64Data[8] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZCRcJwwPH4gAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAAD6SURBVHjandJPSsNAFMfxF5seI2pr8AYteoaQG7jsOZIgVbxCoeIplF6gdOsBBFdixI0LNy6S9DvkBYY4U4kPPkzgJb/5F2maRtQ5HlCixjvuEVvv/HIkbaXY4gUzjHGJV+yQiK905k/MkTpmmWv/zLWCwCxbZ37GBpVjngzHWLhWYPYcITyw1ynefCuodc+V+CvED0b9hjnED0RyuE5Quhom4AlXfwSY/qPvFmLrFlz7v8A3Jq5+95BoSKYHFuq15fhq2rpD4AsQ/WCtp13puMIpCg257Yd4f1GHLuTGDhkSYIcsu5ChAXbItQkJZXgVOubmEv8TYIfIHtrX5HusRbPwAAAAAElFTkSuQmCC";
+resourceMimeType[9] = "image/png"; resourceBase64Data[9] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wgHEhIxtJNw1QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAAE2SURBVHjapdOxLwRBFMfxGecuNBSiEJ2IXKj0WgqCqyROcTlBIvHnXUc0lDaX4BJUVAgOuYpmfF/8JpmsrOJuk0/m3d7sm5m3b30IwQ1yDeV+V9DECboIGo/RQPlPBtuBzKODV7xhLfxeNnbxgktUk2dc+vAT9nGLZd0PGldxjQN8Yi5NUNHKu6jhNFkhJPGZEtkibQzHBM3Q31W3BFbEHdTgcYcFxV5livEiOoq3UI9FtAJNaJtfGCk4whh6iqdUM+fDYI3g7QjvmNTWvjFacIRx9BRP4zk2UoYlTb7HTMFqdv9Bsc2/iDVo9PkWtuNrLKvD9rD5Tx+cqw8OkaGUdmJVVbU/b7CSS7COKxzhEbP5VnZqz7Zeq30LG0pg3fmh+1n6cD6BU3tah7W0o6CxpTOXcvPdD6rZQTcOgjraAAAAAElFTkSuQmCC";
+resourceMimeType[10] = "image/png"; resourceBase64Data[10] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wgHEjUbte0LZgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAAA2SURBVHjaY/z//z8DJYCJIt3DwwAWJDZyaDISwcfqAkYS+RgG/CeRz8BIaToYDYPBkBIpNgAAc7gVGXrkCq0AAAAASUVORK5CYII=";
+resourceMimeType[11] = "image/png"; resourceBase64Data[11] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZChkq/aElRwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAADASURBVHjazdPdCgFBFMDxGV8XLkiR18ANy1P6SOJN1L6HR/CZGxTJ+E97aCyjtImpX2d3zsxpZ06rjTEqyUgl2u0pkPas1chJfCpQwQBzHCX2UUYVIyxxwAJD2XMvMEURbWTQQUnmQ+TRRBYBCjKvtFyikeTZ+Tr7fnKeX+W0W+DhbDJuLfLl9Fe68LsCY6xxUVEbu05ugo2c27axFy+wxQwNFbXRtnOF3ZvcPrpKuoCaxLgW6p5cYKP+y5/po3EF7BlhODVzb/MAAAAASUVORK5CYII=";
+resourceMimeType[12] = "image/png"; resourceBase64Data[12] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZChspVp4WfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAACpSURBVHja7dNBCoJQEMbxUbpBgpvyCEHboAjqWBXlSepgtcpAqBZd4PU3ZmGvefYWLRv4ic6b96mg4pwTT4oNrrhjqz2xpPJZK8wxxghTrCVURmpz52HreoBb6AmS5uBnIonovcp6hfamr72ugKj6B/wgoNexdsFMz6vglPF1PdDHEhXOWCDTtbd5K+CAndEvsY8JyHHUDZkqtZfH/I01JihwUoX2an/4CUnIDO+jitN+AAAAAElFTkSuQmCC";
+resourceMimeType[13] = "image/png"; resourceBase64Data[13] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZChQCfbrz8AAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAABLSURBVHjaY/j//z8DFJ/6Tzw4AdPHCCKgAMRgZCAOwNUyEakBJ6DYABYsTqOvC7AZwMiACExcbNqFAXo44GKPemHQeuEkCRYfhzEALZdME5FwoNwAAAAASUVORK5CYII=";
+resourceMimeType[14] = "image/png"; resourceBase64Data[14] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZCi0Z+Vu3pgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAABOSURBVHjaY/z//z8DJYAFSpNrCiMLMgdqECMBTf+R1DIwoUkQC+BqkQ0gZDMDNrXDwAXYYoEYg+CxwILFVGKicRCFwTBwAbZYIMYlcDUA4ukaIRme7jEAAAAASUVORK5CYII=";
+resourceMimeType[15] = "image/png"; resourceBase64Data[15] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZCi8LONSkbAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAAD8SURBVHjapZNNCsJADIVTQbAeRWiVulDv4pHERbFFFx5FRTyEoiAixSuo3YwJvEAc/KkY+KCZJi/pJCXnHHkkzIw5MCXYM1Om48dbp8nM3XcT8dAXkOQNAq7MCJ2oyfOYucFfq4gKaOUz0zJdqakfMQXOpiqQmMo2+ZWA0Ma9iHUI3+TQNlUkRU5OuG39zqoCPeTsAmmHiOr0bAG9Nuf5ZY3+NBE44bmLysGHeH0/gH8UgSWc4Q+FNXZBWE+HJYkqjDExY4z1UEdZYM7vBCT5grPMbmKI9XRQT82oxPrMxFReMQ3/ZwpNJ58s02RfQJE7yWVJmDvYooPYj38AWd2bi2isa70AAAAASUVORK5CYII=";
+resourceMimeType[16] = "image/png"; resourceBase64Data[16] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZCgsao4xlOAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAADJSURBVHja1dM9DgFBGMbxXdE5g8ZRSEgofWR9JK7AVVwFFQcQhVDRoEEjaFbJ6z9MMbt2s5usxpP8inln5t2ZSdYWEStJUol2/7KBgwckJrW2ZjZooIl7jI+6en37PVKPKJ/MUMJRwnNAEXM99jRQ2SKPZcDmBQrYG7WvBipXlDEyakNUcPOttdIBd8wgiwF2ujZGTs954zvBGQ5WeKKHvnEFNXcJu8IadZwiHrGKjb/BBF3cJTouOpiaDVr6yHHzQEPtteXvf6YXtBy6gTnHFa0AAAAASUVORK5CYII=";
+resourceMimeType[17] = "image/png"; resourceBase64Data[17] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3wcZCjAsUIQfmQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAAD7SURBVHjazVI7jsJADH0TIi5Dxa9ErOg5AZfhCiA4ATfYM9AiSuiWzwWAigRi8yY7QUMSstoOS1acec8e+3mAj7ZY0bZexQnzB6qoGYMkjYGhO145LCR2f1vNJscJjrGgb/8jQYvetPFNMCC2Jyfwc0yh7d/khigapI4gacIiMNiSva4bLP+c/ZpgztnV9yjBrFowQTdSjG3LV8UpX4BFz+R0HKeV5fnzqBtKXduvFvDcOA6e33+NMCnjFm6yalOwjQrmIrgIcGY85fp+su1UrTHkqg4k9pwunewh3RRfxHb5NZYVeRJSwehlWGaFl8hWxZP12xfsBfsYewA6iZ9kT2vsKwAAAABJRU5ErkJggg==";
+}
+</script>
+<meta name="savepage-url" content="http://www.robvanderwoude.com/2kprintcontrol.php">
+<meta name="savepage-title" content="Command Line Printer Control">
+<meta name="savepage-date" content="Mon Sep 10 2018 13:20:05 GMT+0800 (CST)">
+<meta name="savepage-state" content="Standard Items; Used page loader; Retained cross-origin frames; Removed unsaved URLs; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+<meta name="savepage-version" content="12.1">
+<meta name="savepage-comments" content="">
+</head>
+<body>
+
+<!-- ChangeDetection.com id="77m2rsxs9c" -->
+
+<!-- ChangeDetection.com detection="off" -->
+
+<div id="logocontainer">
+
+<img data-savepage-src="./pictures/logo650x62.jpg" src="data:image/jpeg;base64,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" alt="Rob van der Woude's Scripting Pages" width="650" height="62">
+
+</div>
+
+<div id="menucontainer" class="DontPrint"><div class="slicknav_menu"><a href="#" aria-haspopup="true" tabindex="0" class="slicknav_btn slicknav_open" style="outline: currentcolor none medium;"><span class="slicknav_menutxt">Menu</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav" style="display: block;" aria-hidden="false" role="menu">
+	<li><a href="./" role="menuitem" tabindex="0">Home <img class="menuicon" data-savepage-src="./pictures/menu/homewhite16x16.png" src="data:image/png;resource=5;base64," alt=""></a></li>
+	<li><a href="./news.php" role="menuitem" tabindex="0">News <img class="menuicon" data-savepage-src="./pictures/menu/informationwhite16x16.png" src="data:image/png;resource=6;base64," alt=""></a></li>
+	<li><a href="./faq.php" role="menuitem" tabindex="0">FAQ <img class="menuicon" data-savepage-src="./pictures/menu/questionmarkwhite16x16.png" src="data:image/png;resource=7;base64," alt=""></a></li>
+	<li><a href="./search.php" role="menuitem" tabindex="0">Search <img class="menuicon" data-savepage-src="./pictures/menu/magnifyingglasswhite16x16.png" src="data:image/png;resource=8;base64," alt=""></a></li>
+	<li class="submenu slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Scripting Languages <img class="menuicon" data-savepage-src="./pictures/menu/globewhite16x16.png" src="data:image/png;resource=9;base64," alt="">
+		<span class="slicknav_arrow">►</span></a><ul role="menu" class="slicknav_hidden" style="display: none;" aria-hidden="true">
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Batch Files
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="batchstart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="battech.php" role="menuitem" tabindex="0">Batch Techniques</a></li>
+					<li><a href="batchhowto.php" role="menuitem" tabindex="0">Batch HowTos</a></li>
+					<li><a href="batchcommands.php" role="menuitem" tabindex="0">Commands</a></li>
+					<li><a href="commandlineswitches.php" role="menuitem" tabindex="0">Command Line Switches</a></li>
+					<li><a href="shutdown.php" role="menuitem" tabindex="0">Shutdown Commands</a></li>
+					<li><a href="shorts.php" role="menuitem" tabindex="0">Short Command Line Tips</a></li>
+					<li><a href="ntadmincommands.php" role="menuitem" tabindex="0">Admin One-Liners</a></li>
+					<li><a href="batexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="battech.php#Examples" role="menuitem" tabindex="0">Samples Collections</a></li>
+					<li><a href="batchtools.php" role="menuitem" tabindex="0">Tools</a></li>
+					<li><a href="batlinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="books.php" role="menuitem" tabindex="0">Books</a></li>
+					<li><a href="challenges.php" role="menuitem" tabindex="0">Challenges</a></li>
+				</ul>
+			</li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">C#
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="csharpstart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="csharpexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Development Software
+						<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+							<li><a href="https://www.visualstudio.com/" role="menuitem" tabindex="0">Visual Studio</a></li>
+							<li><a href="https://www.visualstudio.com/vs/community/" role="menuitem" tabindex="0">Visual Studio Community Edition</a></li>
+							<li><a href="https://code.visualstudio.com/" role="menuitem" tabindex="0">Visual Studio Code</a></li>
+						</ul></li>
+					<li><a href="bookscs.php" role="menuitem" tabindex="0">Books</a></li>
+				</ul></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">KiXtart
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="kixtartstart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="kixtartexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="kixtartlinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="kixtarttools.php" role="menuitem" tabindex="0">Tools</a></li>
+					<li><a href="books.php" role="menuitem" tabindex="0">Books</a></li>
+				</ul></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Perl
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="perlstart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="perlexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="perllinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="perltools.php" role="menuitem" tabindex="0">Tools</a></li>
+				</ul></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">PowerShell
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="powershellstart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="powershellexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="powershelllinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="powershelltools.php" role="menuitem" tabindex="0">Tools</a></li>
+				</ul></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Regular Expressions
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="regexpstart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="regexpexp.php" role="menuitem" tabindex="0">Expressions</a></li>
+					<li><a href="regexpexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="regexplinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="regexptools.php" role="menuitem" tabindex="0">Tools</a></li>
+					<li><a href="books.php" role="menuitem" tabindex="0">Books</a></li>
+				</ul></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Rexx
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="rexxstart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="rexxexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="lsrexxutil.php" role="menuitem" tabindex="0">OS/2 LAN Server</a></li>
+					<li><a href="rexxlinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="rexxtools.php" role="menuitem" tabindex="0">Tools</a></li>
+					<li><a href="books.php" role="menuitem" tabindex="0">Books</a></li>
+				</ul></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">VBScript &amp; WSH
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="wshstart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="vbstech.php" role="menuitem" tabindex="0">VBScript Techniques</a></li>
+					<li><a href="wshexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="htaexamples.php" role="menuitem" tabindex="0">HTA &amp; WSC Examples</a></li>
+					<li><a href="wshlinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="wshtools.php" role="menuitem" tabindex="0">Tools</a></li>
+					<li><a href="books.php" role="menuitem" tabindex="0">Books</a></li>
+					<li><a href="challenges.php#VBScript" role="menuitem" tabindex="0">Challenges</a></li>
+				</ul></li>
+		</ul></li>
+	<li class="submenu slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Technologies <img class="menuicon" data-savepage-src="./pictures/menu/gridwhite16x16.png" src="data:image/png;resource=10;base64," alt="">
+		<span class="slicknav_arrow">►</span></a><ul role="menu" class="slicknav_hidden" style="display: none;" aria-hidden="true">
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">WMI
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="wmistart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="wmiexamples.php" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="wmilinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="wmitools.php" role="menuitem" tabindex="0">Tools</a></li>
+					<li><a href="books.php" role="menuitem" tabindex="0">Books</a></li>
+				</ul></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">ADSI
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="adsistart.php" role="menuitem" tabindex="0">Getting Started</a></li>
+					<li><a href="https://gallery.technet.microsoft.com/ScriptCenter/site/search/?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=activedirectory&f%5B0%5D.Text=Active%20Directory" onclick="window.open(this.href); return false;" role="menuitem" tabindex="0">Examples</a></li>
+					<li><a href="adsilinks.php" role="menuitem" tabindex="0">Links</a></li>
+					<li><a href="adsitools.php" role="menuitem" tabindex="0">Tools</a></li>
+					<li><a href="books.php" role="menuitem" tabindex="0">Books</a></li>
+				</ul></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Silent Installs
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="unattended.php" role="menuitem" tabindex="0">General</a></li>
+					<li><a href="msiexec.php" role="menuitem" tabindex="0">Windows Installer</a></li>
+					<li><a href="unattendedapps.php" role="menuitem" tabindex="0">Specific Software</a></li>
+					<li><a href="softwarerequirements.php" role="menuitem" tabindex="0">Software Requirements</a></li>
+					<li><a href="hardwarerequirements.php" role="menuitem" tabindex="0">Hardware Requirements</a></li>
+				</ul></li>
+		</ul></li>
+	<li><a href="./books.php" role="menuitem" tabindex="0">Books <img class="menuicon" data-savepage-src="./pictures/menu/bookwhite16x16.png" src="data:image/png;resource=11;base64," alt=""></a></li>
+	<li class="submenu slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;"><a href="#" tabindex="0">Scripting Tools <img class="menuicon" data-savepage-src="./pictures/menu/paperclipwhite16x16.png" src="data:image/png;resource=12;base64," alt=""></a>
+				<span class="slicknav_arrow">►</span></a><ul role="menu" class="slicknav_hidden" style="display: none;" aria-hidden="true">
+					<li><a href="batchtools.php" role="menuitem" tabindex="0">Batch Utilities</a></li>
+					<li><a href="scriptcompilers.php" role="menuitem" tabindex="0">Compilers</a></li>
+					<li><a href="scripteditors.php" role="menuitem" tabindex="0">Editors</a></li>
+					<li><a href="codegen.php" role="menuitem" tabindex="0">Code Generators</a></li>
+					<li><a href="regexptools.php" role="menuitem" tabindex="0">Regular Expressions</a></li>
+					<li><a href="automationtools.php" role="menuitem" tabindex="0">Automation Tools</a></li>
+					<li><a href="vbsaddons.php" role="menuitem" tabindex="0">VBScript Add-Ons</a></li>
+					<li><a href="printtools.php" role="menuitem" tabindex="0">Printing Tools</a></li>
+					<li><a href="inventorytools.php" role="menuitem" tabindex="0">Inventory Tools</a></li>
+					<li><a href="shellextensions.php" role="menuitem" tabindex="0">Shell Extensions</a></li>
+					<li><a href="fileviewers.php" role="menuitem" tabindex="0">File Viewers</a></li>
+					<li><a href="backuptools.php" role="menuitem" tabindex="0">Backup</a></li>
+					<li><a href="securitytools.php" role="menuitem" tabindex="0">Security</a></li>
+					<li><a href="themakingof.php" role="menuitem" tabindex="0">The making Of...</a></li>
+				</ul></li>
+	<li class="submenu slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;"><a href="#" tabindex="0">Miscellaneous</a>
+				<span class="slicknav_arrow">►</span></a><ul role="menu" class="slicknav_hidden" style="display: none;" aria-hidden="true">
+					<li><a href="tweaks.php" role="menuitem" tabindex="0">Tweaks</a></li>
+			<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;">Hardware
+				<span class="slicknav_arrow">►</span></a><ul role="menu" aria-hidden="true" class="slicknav_hidden" style="display: none;">
+					<li><a href="hardware_energylogger.php" role="menuitem" tabindex="0">VoltCraft Energy Logger 3500 Configuration</a></li>
+					<li><a href="hardware_fastcfcardreader.php" role="menuitem" tabindex="0">A Fast Compact Flash Card Reader</a></li>
+				</ul></li>
+					<li><a href="speedtest.php" role="menuitem" tabindex="0">Link Speed Test</a></li>
+					<li><a href="webpub.php" role="menuitem" tabindex="0">Web Stuff</a></li>
+					<li><a href="convert.php" role="menuitem" tabindex="0">Conversions <img class="menuicon" data-savepage-src="./pictures/menu/calculatorwhite16x16.png" src="data:image/png;resource=13;base64," alt=""></a></li>
+					<li><a href="http://www.robvanderwoude.net/" role="menuitem" tabindex="0">My Photo Galleries <img class="menuicon" data-savepage-src="./pictures/menu/moviewhite16x16.png" src="data:image/png;resource=14;base64," alt=""></a></li>
+				</ul></li>
+	<li class="submenu slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="0" class="slicknav_item slicknav_row" style="outline: currentcolor none medium;"><a href="#" tabindex="0">About This Site <img class="menuicon" data-savepage-src="./pictures/menu/informationwhite16x16.png" src="data:image/png;resource=6;base64," alt=""></a>
+				<span class="slicknav_arrow">►</span></a><ul role="menu" class="slicknav_hidden" style="display: none;" aria-hidden="true">
+					<li><a href="disclaimer.php" role="menuitem" tabindex="0">Disclaimer</a></li>
+					<li><a href="news.php" role="menuitem" tabindex="0">News</a></li>
+					<li><a href="faq.php" role="menuitem" tabindex="0">FAQ <img class="menuicon" data-savepage-src="./pictures/menu/questionmarkwhite16x16.png" src="data:image/png;resource=7;base64," alt=""></a></li>
+					<li><a href="search.php" role="menuitem" tabindex="0">Search <img class="menuicon" data-savepage-src="./pictures/menu/magnifyingglasswhite16x16.png" src="data:image/png;resource=8;base64," alt=""></a></li>
+					<li><a href="whatsnew.php" role="menuitem" tabindex="0">What's New</a></li>
+					<li><a href="objective.php" role="menuitem" tabindex="0">Objective <img class="menuicon" data-savepage-src="./pictures/menu/targetwhite16x16.png" src="data:image/png;resource=15;base64," alt=""></a></li>
+					<li><a href="sitepolicy.php#Privacy" role="menuitem" tabindex="0">Privacy Policy</a></li>
+					<li><a href="sitepolicy.php" role="menuitem" tabindex="0">Site Policy</a></li>
+					<li><a href="credits.php" role="menuitem" tabindex="0">Credits</a></li>
+					<li><a href="themakingof.php" role="menuitem" tabindex="0">The Making Of...</a></li>
+					<li><a href="contact.php" role="menuitem" tabindex="0">Contact <img class="menuicon" data-savepage-src="./pictures/menu/mailwhite16x16.png" src="data:image/png;resource=16;base64," alt=""></a></li>
+					<li><a href="failedmail.php" role="menuitem" tabindex="0">Failed Mail</a></li>
+					<li><a href="donate.php" role="menuitem" tabindex="0">Donate <img class="menuicon" data-savepage-src="./pictures/menu/sunyellow16x16.png" src="data:image/png;resource=17;base64," alt=""></a></li>
+				</ul></li>
+	<li class="slicknav_txtnode"> </li>
+</ul></div>
+
+<div id="nojsmenuhead">
+<a class="slicknav_btn slicknav_open" tabindex="0" href="#" style="outline: currentcolor none medium;">
+<span class="slicknav_menutxt">Menu</span>
+<span class="slicknav_icon">
+<span class="slicknav_icon-bar"></span>
+<span class="slicknav_icon-bar"></span>
+<span class="slicknav_icon-bar"></span>
+</span>
+</a>
+</div>
+
+<ul id="menu">
+	<li><a href="./">Home <img class="menuicon" data-savepage-src="./pictures/menu/homewhite16x16.png" src="data:image/png;resource=5;base64," alt=""></a></li>
+	<li><a href="./news.php">News <img class="menuicon" data-savepage-src="./pictures/menu/informationwhite16x16.png" src="data:image/png;resource=6;base64," alt=""></a></li>
+	<li><a href="./faq.php">FAQ <img class="menuicon" data-savepage-src="./pictures/menu/questionmarkwhite16x16.png" src="data:image/png;resource=7;base64," alt=""></a></li>
+	<li><a href="./search.php">Search <img class="menuicon" data-savepage-src="./pictures/menu/magnifyingglasswhite16x16.png" src="data:image/png;resource=8;base64," alt=""></a></li>
+	<li class="submenu" id="menu_languages">Scripting Languages <img class="menuicon" data-savepage-src="./pictures/menu/globewhite16x16.png" src="data:image/png;resource=9;base64," alt="">
+		<ul>
+			<li id="menu_batchfiles">Batch Files
+				<ul>
+					<li><a href="batchstart.php">Getting Started</a></li>
+					<li><a href="battech.php">Batch Techniques</a></li>
+					<li><a href="batchhowto.php">Batch HowTos</a></li>
+					<li><a href="batchcommands.php">Commands</a></li>
+					<li><a href="commandlineswitches.php">Command Line Switches</a></li>
+					<li><a href="shutdown.php">Shutdown Commands</a></li>
+					<li><a href="shorts.php">Short Command Line Tips</a></li>
+					<li><a href="ntadmincommands.php">Admin One-Liners</a></li>
+					<li><a href="batexamples.php">Examples</a></li>
+					<li><a href="battech.php#Examples">Samples Collections</a></li>
+					<li><a href="batchtools.php">Tools</a></li>
+					<li><a href="batlinks.php">Links</a></li>
+					<li><a href="books.php">Books</a></li>
+					<li><a href="challenges.php">Challenges</a></li>
+				</ul>
+			</li>
+			<li id="menu_csharp">C#
+				<ul>
+					<li><a href="csharpstart.php">Getting Started</a></li>
+					<li><a href="csharpexamples.php">Examples</a></li>
+					<li id="menu_visualstudio">Development Software
+						<ul>
+							<li><a href="https://www.visualstudio.com/">Visual Studio</a></li>
+							<li><a href="https://www.visualstudio.com/vs/community/">Visual Studio Community Edition</a></li>
+							<li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+						</ul></li>
+					<li><a href="bookscs.php">Books</a></li>
+				</ul></li>
+			<li id="menu_kixtart">KiXtart
+				<ul>
+					<li><a href="kixtartstart.php">Getting Started</a></li>
+					<li><a href="kixtartexamples.php">Examples</a></li>
+					<li><a href="kixtartlinks.php">Links</a></li>
+					<li><a href="kixtarttools.php">Tools</a></li>
+					<li><a href="books.php">Books</a></li>
+				</ul></li>
+			<li id="menu_perl">Perl
+				<ul>
+					<li><a href="perlstart.php">Getting Started</a></li>
+					<li><a href="perlexamples.php">Examples</a></li>
+					<li><a href="perllinks.php">Links</a></li>
+					<li><a href="perltools.php">Tools</a></li>
+				</ul></li>
+			<li id="menu_powershell">PowerShell
+				<ul>
+					<li><a href="powershellstart.php">Getting Started</a></li>
+					<li><a href="powershellexamples.php">Examples</a></li>
+					<li><a href="powershelllinks.php">Links</a></li>
+					<li><a href="powershelltools.php">Tools</a></li>
+				</ul></li>
+			<li id="menu_regexp">Regular Expressions
+				<ul>
+					<li><a href="regexpstart.php">Getting Started</a></li>
+					<li><a href="regexpexp.php">Expressions</a></li>
+					<li><a href="regexpexamples.php">Examples</a></li>
+					<li><a href="regexplinks.php">Links</a></li>
+					<li><a href="regexptools.php">Tools</a></li>
+					<li><a href="books.php">Books</a></li>
+				</ul></li>
+			<li id="menu_rexx">Rexx
+				<ul>
+					<li><a href="rexxstart.php">Getting Started</a></li>
+					<li><a href="rexxexamples.php">Examples</a></li>
+					<li><a href="lsrexxutil.php">OS/2 LAN Server</a></li>
+					<li><a href="rexxlinks.php">Links</a></li>
+					<li><a href="rexxtools.php">Tools</a></li>
+					<li><a href="books.php">Books</a></li>
+				</ul></li>
+			<li id="menu_vbscript">VBScript &amp; WSH
+				<ul>
+					<li><a href="wshstart.php">Getting Started</a></li>
+					<li><a href="vbstech.php">VBScript Techniques</a></li>
+					<li><a href="wshexamples.php">Examples</a></li>
+					<li><a href="htaexamples.php">HTA &amp; WSC Examples</a></li>
+					<li><a href="wshlinks.php">Links</a></li>
+					<li><a href="wshtools.php">Tools</a></li>
+					<li><a href="books.php">Books</a></li>
+					<li><a href="challenges.php#VBScript">Challenges</a></li>
+				</ul></li>
+		</ul></li>
+	<li class="submenu" id="menu_technologies">Technologies <img class="menuicon" data-savepage-src="./pictures/menu/gridwhite16x16.png" src="data:image/png;resource=10;base64," alt="">
+		<ul>
+			<li id="menu_wmi">WMI
+				<ul>
+					<li><a href="wmistart.php">Getting Started</a></li>
+					<li><a href="wmiexamples.php">Examples</a></li>
+					<li><a href="wmilinks.php">Links</a></li>
+					<li><a href="wmitools.php">Tools</a></li>
+					<li><a href="books.php">Books</a></li>
+				</ul></li>
+			<li id="menu_adsi">ADSI
+				<ul>
+					<li><a href="adsistart.php">Getting Started</a></li>
+					<li><a href="https://gallery.technet.microsoft.com/ScriptCenter/site/search/?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=activedirectory&f%5B0%5D.Text=Active%20Directory" onclick="window.open(this.href); return false;">Examples</a></li>
+					<li><a href="adsilinks.php">Links</a></li>
+					<li><a href="adsitools.php">Tools</a></li>
+					<li><a href="books.php">Books</a></li>
+				</ul></li>
+			<li id="menu_silentinstalls">Silent Installs
+				<ul>
+					<li><a href="unattended.php">General</a></li>
+					<li><a href="msiexec.php">Windows Installer</a></li>
+					<li><a href="unattendedapps.php">Specific Software</a></li>
+					<li><a href="softwarerequirements.php">Software Requirements</a></li>
+					<li><a href="hardwarerequirements.php">Hardware Requirements</a></li>
+				</ul></li>
+		</ul></li>
+	<li><a href="./books.php">Books <img class="menuicon" data-savepage-src="./pictures/menu/bookwhite16x16.png" src="data:image/png;resource=11;base64," alt=""></a></li>
+	<li class="submenu" id="menu_tools"><a href="#">Scripting Tools <img class="menuicon" data-savepage-src="./pictures/menu/paperclipwhite16x16.png" src="data:image/png;resource=12;base64," alt=""></a>
+				<ul>
+					<li><a href="batchtools.php">Batch Utilities</a></li>
+					<li><a href="scriptcompilers.php">Compilers</a></li>
+					<li><a href="scripteditors.php">Editors</a></li>
+					<li><a href="codegen.php">Code Generators</a></li>
+					<li><a href="regexptools.php">Regular Expressions</a></li>
+					<li><a href="automationtools.php">Automation Tools</a></li>
+					<li><a href="vbsaddons.php">VBScript Add-Ons</a></li>
+					<li><a href="printtools.php">Printing Tools</a></li>
+					<li><a href="inventorytools.php">Inventory Tools</a></li>
+					<li><a href="shellextensions.php">Shell Extensions</a></li>
+					<li><a href="fileviewers.php">File Viewers</a></li>
+					<li><a href="backuptools.php">Backup</a></li>
+					<li><a href="securitytools.php">Security</a></li>
+					<li><a href="themakingof.php">The making Of...</a></li>
+				</ul></li>
+	<li class="submenu" id="menu_miscellaneous"><a href="#">Miscellaneous</a>
+				<ul>
+					<li><a href="tweaks.php">Tweaks</a></li>
+			<li id="menu_hardware">Hardware
+				<ul>
+					<li><a href="hardware_energylogger.php">VoltCraft Energy Logger 3500 Configuration</a></li>
+					<li><a href="hardware_fastcfcardreader.php">A Fast Compact Flash Card Reader</a></li>
+				</ul></li>
+					<li><a href="speedtest.php">Link Speed Test</a></li>
+					<li><a href="webpub.php">Web Stuff</a></li>
+					<li><a href="convert.php">Conversions <img class="menuicon" data-savepage-src="./pictures/menu/calculatorwhite16x16.png" src="data:image/png;resource=13;base64," alt=""></a></li>
+					<li><a href="http://www.robvanderwoude.net/">My Photo Galleries <img class="menuicon" data-savepage-src="./pictures/menu/moviewhite16x16.png" src="data:image/png;resource=14;base64," alt=""></a></li>
+				</ul></li>
+	<li class="submenu" id="menu_about"><a href="#">About This Site <img class="menuicon" data-savepage-src="./pictures/menu/informationwhite16x16.png" src="data:image/png;resource=6;base64," alt=""></a>
+				<ul>
+					<li><a href="disclaimer.php">Disclaimer</a></li>
+					<li><a href="news.php">News</a></li>
+					<li><a href="faq.php">FAQ <img class="menuicon" data-savepage-src="./pictures/menu/questionmarkwhite16x16.png" src="data:image/png;resource=7;base64," alt=""></a></li>
+					<li><a href="search.php">Search <img class="menuicon" data-savepage-src="./pictures/menu/magnifyingglasswhite16x16.png" src="data:image/png;resource=8;base64," alt=""></a></li>
+					<li><a href="whatsnew.php">What's New</a></li>
+					<li><a href="objective.php">Objective <img class="menuicon" data-savepage-src="./pictures/menu/targetwhite16x16.png" src="data:image/png;resource=15;base64," alt=""></a></li>
+					<li><a href="sitepolicy.php#Privacy">Privacy Policy</a></li>
+					<li><a href="sitepolicy.php">Site Policy</a></li>
+					<li><a href="credits.php">Credits</a></li>
+					<li><a href="themakingof.php">The Making Of...</a></li>
+					<li><a href="contact.php">Contact <img class="menuicon" data-savepage-src="./pictures/menu/mailwhite16x16.png" src="data:image/png;resource=16;base64," alt=""></a></li>
+					<li><a href="failedmail.php">Failed Mail</a></li>
+					<li><a href="donate.php">Donate <img class="menuicon" data-savepage-src="./pictures/menu/sunyellow16x16.png" src="data:image/png;resource=17;base64," alt=""></a></li>
+				</ul></li>
+	<li> </li>
+</ul>
+
+</div>
+
+<div id="Headroom"></div>
+
+<!-- ChangeDetection.com detection="on" -->
+
+<h1>Command Line Printer Control</h1>
+
+<p>As of Windows 2000, many, but not all, printer settings can be configured from Windows's command line using PRINTUI.DLL and RUNDLL32.EXE.</p>
+
+<p>The list of functions on this page was first generated using the following command in Windows 2000 (Professional), with later additions from Windows 7:</p>
+
+<pre class="Code">RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /?</pre>
+
+<p><input id="button_highlight" class="Button" style="width: 18em;" value="Highlight Windows 7 Features" onclick="toggleHighlightsWin7();" type="button"></p>
+
+<table>
+<tbody><tr class="Show4Mobile">
+	<td class="Hide4Mobile"> </td>
+	<td class="Note" colspan="2">Notes:</td>
+</tr>
+<tr>
+	<td class="Note Hide4Mobile">Notes:</td>
+	<td class="Note">(1)</td>
+	<td>I <em>certainly did <strong>not</strong></em> test each of these switches myself!<br>
+		To be honest, I usually prefer to use the (VBScript) <a href="batchcommands.php#PRNCFG">printer management scripts</a> that come with Windows 2000 and later (look for <code>%windir%\System32\*prn*.vbs</code>).</td>
+</tr>
+<tr>
+	<td class="Hide4Mobile"> </td>
+	<td class="Note">(2)</td>
+	<td>In Windows 7, <code>PRINTUI.EXE</code> can be used as shorthand for <code>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry</code></td>
+</tr>
+</tbody></table>
+
+<p>More information is available at Microsoft's <a href="http://technet.microsoft.com/en-us/default.aspx">TechNet</a> under <a href="http://support.microsoft.com/kb/q189105/">Q189105</a>.</p>
+
+<p>Download Microsoft's <a href="http://download.microsoft.com/download/8/2/c/82cffcfa-56f6-4fc3-bfa5-80cd84793871/PrintUIUsersGuide.doc">PrintUI.DLL User's Guide and Reference</a> for more detailed, task oriented explanations of command line options.</p>
+
+<p> </p>
+
+<h2>Usage:</h2>
+
+<pre class="Code">RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry [ <em>options</em> ] [ @<em>commandfile</em> ]</pre>
+
+<table class="Syntax">
+<tbody>
+<tr>
+	<td class="Code">/a[<em>file</em>]</td>
+	<td colspan="2">binary file name</td>
+</tr>
+<tr>
+	<td class="Code">/b[<em>name</em>]</td>
+	<td colspan="2">base printer name</td>
+</tr>
+<tr>
+	<td class="Code">/c[<em>name</em>]</td>
+	<td colspan="2">UNC machine name if the action is on a remote machine</td>
+</tr>
+<tr>
+	<td class="Code">/dl</td>
+	<td colspan="2">delete local printer</td>
+</tr>
+<tr>
+	<td class="Code">/dn</td>
+	<td colspan="2">delete network printer connection</td>
+</tr>
+<tr>
+	<td class="Code">/dd</td>
+	<td colspan="2">delete printer driver</td>
+</tr>
+<tr>
+	<td class="Code">/e</td>
+	<td colspan="2">display printing preferences</td>
+</tr>
+<tr>
+	<td class="Code">/f[<em>file</em>]</td>
+	<td colspan="2">either inf file or output file</td>
+</tr>
+<tr class="Win7">
+	<td class="Code">/F[<em>file</em>]</td>
+	<td colspan="2">location of an INF file that the INF file specified with <code>/f</code> may depend on</td>
+</tr>
+<tr>
+	<td class="Code">/ga</td>
+	<td colspan="2">add per machine printer connections</td>
+</tr>
+<tr>
+	<td class="Code">/ge</td>
+	<td colspan="2">enum per machine printer connections</td>
+</tr>
+<tr>
+	<td class="Code">/gd</td>
+	<td colspan="2">delete per machine printer connections</td>
+</tr>
+<tr>
+	<td class="Code">/h[<em>arch</em>]</td>
+	<td colspan="2">driver architecture, one of the following:</td>
+</tr>
+<tr>
+	<td> </td>
+	<td>Windows 2000:</td>
+	<td><code>Alpha | Intel | Mips | PowerPC</code></td>
+</tr>
+<tr>
+	<td> </td>
+	<td>Windows 7:</td>
+	<td><code>x86 | x64 | Itanium</code></td>
+</tr>
+<tr>
+	<td class="Code">/ia</td>
+	<td colspan="2">install printer driver using inf file</td>
+</tr>
+<tr>
+	<td class="Code">/id</td>
+	<td colspan="2">install printer driver using add printer driver wizard</td>
+</tr>
+<tr>
+	<td class="Code">/if</td>
+	<td colspan="2">install printer using inf file</td>
+</tr>
+<tr>
+	<td class="Code">/ii</td>
+	<td colspan="2">install printer using add printer wizard with an inf file</td>
+</tr>
+<tr>
+	<td class="Code">/il</td>
+	<td colspan="2">install printer using add printer wizard</td>
+</tr>
+<tr>
+	<td class="Code">/in</td>
+	<td colspan="2">add network printer connection</td>
+</tr>
+<tr class="Win7">
+	<td class="Code">/ip</td>
+	<td colspan="2">install printer using network printer installation wizard</td>
+</tr>
+<tr>
+	<td class="Code">/j[<em>provider</em>]</td>
+	<td colspan="2">print provider name</td>
+</tr>
+<tr>
+	<td class="Code">/k</td>
+	<td colspan="2">print test page to specified printer, cannot be combined with command when installing a printer</td>
+</tr>
+<tr>
+	<td class="Code">/l[<em>path</em>]</td>
+	<td colspan="2">printer driver source path</td>
+</tr>
+<tr>
+	<td class="Code">/m[<em>model</em>]</td>
+	<td colspan="2">printer driver model name</td>
+</tr>
+<tr>
+	<td class="Code">/n[<em>name</em>]</td>
+	<td colspan="2">printer name</td>
+</tr>
+<tr>
+	<td class="Code">/o</td>
+	<td colspan="2">display printer queue view</td>
+</tr>
+<tr>
+	<td class="Code">/p</td>
+	<td colspan="2">display printer properties</td>
+</tr>
+<tr>
+	<td class="Code">/q</td>
+	<td colspan="2">quiet mode, do not display error messages</td>
+</tr>
+<tr>
+	<td class="Code">/r[<em>port</em>]</td>
+	<td colspan="2">port name</td>
+</tr>
+<tr>
+	<td class="Code">/s</td>
+	<td colspan="2">display server properties</td>
+</tr>
+<tr>
+	<td class="Code">/Ss</td>
+	<td colspan="2">Store printer settings into a file</td>
+</tr>
+<tr>
+	<td class="Code">/Sr</td>
+	<td colspan="2">Restore printer settings from a file</td>
+</tr>
+<tr>
+	<td> </td>
+	<td colspan="2">Store or restore printer settings option flags that must be placed at the end of command:</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">2</td>
+	<td>PRINTER_INFO_2</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">7</td>
+	<td>PRINTER_INFO_7</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">c</td>
+	<td>Color Profile</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">d</td>
+	<td>PrinterData</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">s</td>
+	<td>Security descriptor</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">g</td>
+	<td>Global DevMode</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">m</td>
+	<td>Minimal settings</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">u</td>
+	<td>User DevMode</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">r</td>
+	<td>Resolve name conflicts</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">f</td>
+	<td>Force name</td>
+</tr>
+<tr>
+	<td> </td>
+	<td class="Code">p</td>
+	<td>Resolve port</td>
+</tr>
+<tr class="Win7">
+	<td> </td>
+	<td class="Code">i</td>
+	<td>Driver name conflict</td>
+</tr>
+<tr>
+	<td class="Code">/u</td>
+	<td colspan="2">use the existing printer driver if it's already installed</td>
+</tr>
+<tr>
+	<td class="Code">/t[<em>#</em>]</td>
+	<td colspan="2">zero based index page to start on</td>
+</tr>
+<tr>
+	<td class="Code">/v[<em>version</em>]</td>
+	<td colspan="2">driver version, one of the following:<br>
+	<code>Windows 95 or 98 | Windows NT 3.1 | Windows NT 3.5 or 3.51 | Windows NT 3.51 | Windows NT 4.0 | Windows NT 4.0 or 2000 | Windows 2000</code></td>
+</tr>
+<tr>
+	<td class="Code">/w</td>
+	<td colspan="2">prompt the user for a driver if specified driver is not found in the inf</td>
+</tr>
+<tr>
+	<td class="Code">/y</td>
+	<td colspan="2">set printer as the default</td>
+</tr>
+<tr>
+	<td class="Code">/Xg</td>
+	<td colspan="2">get printer settings</td>
+</tr>
+<tr>
+	<td class="Code">/Xs</td>
+	<td colspan="2">set printer settings</td>
+</tr>
+<tr>
+	<td class="Code">/z</td>
+	<td colspan="2">do not auto share this printer</td>
+</tr>
+<tr>
+	<td class="Code">/Y</td>
+	<td colspan="2">do not auto generate a printer name</td>
+</tr>
+<tr class="Win7">
+	<td class="Code">/K</td>
+	<td colspan="2">changes the meaning of /h to accept 2,3,4 for x86 or x64 or Itanium and /v to accept 3 for "Type 3 - User Mode"</td>
+</tr>
+<tr class="Win7">
+	<td class="Code">/Z</td>
+	<td colspan="2">share this printer, can only be used with the /if option</td>
+</tr>
+<tr>
+	<td class="Code">/?</td>
+	<td colspan="2">help this message</td>
+</tr>
+<tr>
+	<td class="Code">@<em>file</em></td>
+	<td colspan="2">command line argument file</td>
+</tr>
+<tr class="Win7">
+	<td class="Code">/Mw[<em>message</em>]</td>
+	<td colspan="2">show a warning message before committing the command</td>
+</tr>
+<tr class="Win7">
+	<td class="Code">/Mq[<em>message</em>]</td>
+	<td colspan="2">show a confirmation message before committing the command</td>
+</tr>
+<tr class="Win7">
+	<td class="Code">/W[<em>flags</em>]</td>
+	<td colspan="2">specifies flags and switches for the wizards (for APW &amp; APDW)</td>
+</tr>
+<tr class="Win7">
+	<td> </td>
+	<td class="Code">r</td>
+	<td>make the wizards to be restart-able from the last page</td>
+</tr>
+<tr class="Win7">
+	<td class="Code">/G[<em>flags</em>]</td>
+	<td colspan="2">specifies global flags and switches</td>
+</tr>
+<tr class="Win7">
+	<td> </td>
+	<td class="Code">w</td>
+	<td>suppress setup driver warnings UI (super quiet mode)</td>
+</tr>
+</tbody>
+</table>
+
+<p> </p>
+
+<h2>Examples:</h2>
+
+<dl class="Examples">
+	<dt>Run server's printer ports properties:</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /s /t1 /n\\<em>machine</em></dd>
+	<dt>Run server's printer drivers properties:</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /s /t2 /n\\<em>machine</em></dd>
+	<dt>Run printer properties</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /p /n\\<em>machine</em>\<em>printer</em></dd>
+	<dt>Run add printer wizard localy</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /il</dd>
+	<dt>Run add printer wizard on \\machine</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /il /c\\<em>machine</em></dd>
+	<dt>Run queue view</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /o /n\\<em>machine</em>\<em>printer</em></dd>
+	<dt>Run inf install</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /if /b "Test Printer" /f %windir%\inf\ntprint.inf /r "lpt1:" /m "AGFA-AccuSet v52.3"</dd>
+	<dt>Run add printer wizard using inf</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /ii /f %windir%\inf\ntprint.inf</dd>
+	<dt>Add per machine printer connection</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /ga /c\\<em>machine</em> /n\\<em>machine</em>\<em>printer</em> /j"LanMan Print Services"</dd>
+	<dt>Delete per machine printer connection</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /gd /c\\<em>machine</em> /n\\<em>machine</em>\<em>printer</em></dd>
+	<dt>Enumerate per machine printer connections</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /ge /c\\<em>machine</em></dd>
+	<dt>Add printer driver using inf (Windows 2000)</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /ia /c\\<em>machine</em> /m "AGFA-AccuSet v52.3" /h "Intel" /v "Windows 2000" /f %windir%\inf\ntprint.inf</dd>
+	<dt>Add printer driver using inf (Windows 7</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /ia /K /c\\<em>machine</em> /m "AGFA-AccuSet v52.3" /h "x86" /v 3 /f %windir%\inf\ntprint.inf</dd>
+	<dt>Remove printer driver (Windows 2000)</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /dd /c\\<em>machine</em> /m "AGFA-AccuSet v52.3" /h "Intel" /v "Windows 2000"</dd>
+	<dt>Remove printer driver (Windows 7)</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /dd /c\\<em>machine</em> /m "AGFA-AccuSet v52.3" /h "x86" /v "Type 3 - User Mode"</dd>
+	<dt>Set printer as default</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /y /n "<em>printer</em>"</dd>
+	<dt>Set printer comment</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Xs /n "<em>printer</em>" comment "My Cool Printer"</dd>
+	<dt>Set printer port</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Xs /n "<em>printer</em>" PortName "<em>port:</em>"</dd>
+	<dt>Get printer settings</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Xg /n "<em>printer</em>"</dd>
+	<dt>Get printer settings saving results in a file</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /f "results.txt" /Xg /n "<em>printer</em>"</dd>
+	<dt>Set printer settings command usage</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Xs /n "<em>printer</em>" ?</dd>
+	<dt>Store all printer settings into a file</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Ss /n "<em>printer</em>" /a "file.dat"</dd>
+	<dt>Restore all printer settings from a file</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUI /Sr /n "<em>printer</em>" /a "file.dat"</dd>
+	<dt>Store printer information on level 2 into a file</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Ss /n "<em>printer</em>" /a "file.dat" 2</dd>
+	<dt>Restore  from a file printer security descriptor</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Sr /n "<em>printer</em>" /a "file.dat" s</dd>
+	<dt>Restore  from a file printer global devmode and printer data</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Sr /n "<em>printer</em>" /a "file.dat" g d</dd>
+	<dt>Restore  from a file minimum settings and resolve port name</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Sr /n "<em>printer</em>" /a "file.dat" m p</dd>
+	<dt>Enable Client Side Rendering for a printer (Windows 7)</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Xs /n "<em>printer</em>" ClientSideRender enabled</dd>
+	<dt>Disable Client Side Rendering for a printer (Windows 7)</dt>
+		<dd>RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Xs /n "<em>printer</em>" ClientSideRender disabled</dd>
+</dl>
+
+<p> </p>
+
+<h3>More to explore:</h3>
+
+<p>Microsoft Knowledge Base articles: <a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;314486&Product=winxp">How to add printers with no user interaction in Windows XP</a> and <a href="http://support.microsoft.com/kb/189105/">How to add printers with no user interaction in Windows</a> (2000/2003).</p>
+
+<p>How to <a href="printfiles.php">print files from the command line</a> (or batch files).</p>
+
+<p> </p>
+
+<p>A tip from Denis St-Pierre:</p>
+
+<blockquote>
+<p>One of the gotchas was that RUNDLL32.exe and PRINTUI.exe always return Errorlevel=0 regardless of errors.<br>
+I needed a reliable means to test for the existence of a printer and this is the result:</p>
+
+<pre class="Code">REM NOTE: RUNDLL32.exe and PRINTUI.exe always return Errorlevel=0
+REM The trick: Try to get the printer settings into a file
+REM If No file is created = The Printer does not exist
+SET PrinterName=FIT FP-32L Raster
+SET TESTfile=%TEMP%\PrtExist.txt
+
+REM Delete %TESTfile% to avoid false positives
+DEL %TESTfile% /F /Q
+
+REM Try to get the printer settings into a file
+RUNDLL32.EXE PRINTUI.DLL,PrintUIEntry /Xg /n "%PrinterName%" /f "%TESTfile%" /q
+
+IF EXIST "%TESTfile%" (
+	ECHO %PrinterName% printer exists
+) ELSE (
+	ECHO %PrinterName% printer does NOT exists
+)
+
+PAUSE</pre>
+</blockquote>
+
+<p>Thanks Denis</p>
+
+<p> </p>
+
+<p>More <a href="rundll.php">RUNDLL</a> and <a href="rundll.php">RUNDLL32</a> commands can be found on my <a href="rundll.php">RUNDLL page</a>.</p>
+
+<p>An overview of <a href="http://support.microsoft.com/kb/q102966/">Registry Entries for Printing</a> by Microsoft.</p>
+
+<p> </p>
+
+<h3>If RUNDLL32 just won't do the job:</h3>
+
+<p>Sometimes we need to do just alittle more than RUNDLL32 is capable of, like installing a TCP/IP printer port.<br>
+In that case, consider buying yourself a copy of the <a href="resourcekits.php">Windows 2000 Server/Windows Server 2003 Resource Kit</a> and use PRNADMIN.DLL and the accompanying sample scripts written in <a href="wsh.php">VBScript</a>.</p>
+
+<p>My own <a href="./files/addipprn_nt.txt">AddIPPrn.<strong>bat</strong></a> uses these VBScripts to install a printer, its driver and a TCP/IP printer port on a remote computer.</p>
+
+<p> </p>
+
+<h3>If all you need is to backup/restore, clone or migrate existing printers:</h3>
+
+<p>Often the printer configurations of existing computers need to be cloned to other computers, or restored after reinstalling Windows.<br>
+In those cases, a backup/export and restore/import with Microsoft's <a href="http://www.microsoft.com/WindowsServer2003/techinfo/overview/printmigrator3.1.mspx">PrintMig 3.1</a> may be the best (and easiest) solution.<br>
+Though earlier versions of PrintMig were GUI only, version 3.1 can also be run without user interaction from the command line or in a batch file:</p>
+
+<pre class="Output">Microsoft (R) Windows (TM) Printer Migrator 3.1
+Copyright (C) 1997-2002 Microsoft Corp. All rights reserved
+
+usage: PRINTMIG [options] [server]
+       [-?] Display this message
+       [-b] Backup - followed by CAB file name
+       [-r] Restore - followed by CAB file name
+       [-l] Attempt to convert LPR Ports to SPM
+       [-i] Suppress warning popups.  Info still written to log file.
+
+If server is not specified then the local machine is implied.
+
+Example command line to restore an existing config to a server:
+  printmig -r d:\print\ps1.cab \\prt-srvr1
+
+Example command line to backup a server to the specified file:
+  printmig -b "\\filesrv\store\print server 2.cab" \\prt-srvr2</pre>
+
+<p>PrintMig can be used for Windows (Server) 2000, XP and Server 2003.<br>
+For Windows 7 and Windows Server 2008, use the Printer Backup Recovery Migration tool (PRINTBRM) instead.<br>
+PRINTBRM is a great (native) command line tool to backup/restore and migrate printers.</p>
+
+<p>Its command line couldn't be any simpler.<br>
+To backup:</p>
+
+<pre class="Code">%windir%\System32\Spool\Tools\PrintBRM.exe -s \\<em>sourcecomputername</em> -b -f <em>filename</em>.printerExport</pre>
+
+<p>And to restore:</p>
+
+<pre class="Code">%windir%\System32\Spool\Tools\PrintBRM.exe -s \\<em>destinationcomputername</em> -r -f <em>filename</em>.printerExport</pre>
+
+<p>For more help:</p>
+
+<pre class="Code">%windir%\System32\Spool\Tools\PrintBRM.exe /?</pre>
+
+
+
+<h3>Export printer drivers:</h3>
+
+<p>With Microsoft's PrintMig tool you can create backups of your complete set of printers, ports, drivers, print processors and print monitors.<br>
+Unfortunately there is no way to selectively backup nor restore, so you may want to backup a clean test system with just the printers and components you need to migrate.</p>
+
+<p>If you need to migrate a single printer, use my <a href="batexamples.php?fc=E#ExpPrnDr">ExpPrnDr.bat</a> (Export Printer Driver) instead.<br>
+It uses Microsoft's <a href="devcon.php" class="Code">DEVCON.EXE</a> to list all files belonging to a specific printer driver, and <code>PRINTUI.DLL</code> to install that printer driver on any computer.</p>
+
+<h2 id="Related">Related Stuff</h2>
+
+<ul>
+	<li><a href="printfiles.php">Print files</a><br>
+		Print files using their registered print commands</li>
+	<li><a href="commandlineswitches.php">Command Line Switches</a><br>
+		Print (or open, convert, etc.) files using third party viewers/editors and their command line switches</li>
+	<li><a href="printtools.php">Printing Tools</a></li>
+	<li>Microsoft's <a href="http://technet.microsoft.com/en-us/library/cc771846%28v=ws.10%29.aspx">Print Command Reference</a></li>
+</ul>
+
+<!-- ChangeDetection.com detection="off" -->
+
+<script type="text/javascript" data-savepage-src="./scripts/jquery-2.1.3.min.js" src=""></script>
+<script type="text/javascript" data-savepage-src="./scripts/jquery.slicknav-1.0.4.custom-1.0.0.min.js" src=""></script>
+<script type="text/javascript"></script>
+<!-- ChangeDetection.com detection="off" -->
+
+<div class="DontPrint">
+
+<div style="height: 30px"></div>
+
+<hr class="Foot">
+
+<table style="width: 93%; margin: 0 auto 0 auto; padding: 0 20px 0 10px">
+<tbody><tr style="vertical-align: baseline">
+	<td class="Center" style="width: 50%"><form action="http://www.ChangeDetection.com/detect.html" method="get" style="display: inline" onsubmit="window.open('http://www.ChangeDetection.com/detect.html'); return false;"><input name="enter" value=" Monitor Changes " type="submit"></form></td>
+	<td class="Right" style="width: 50%; font-size: 75%;">page last uploaded: 2018-04-16, 00:42</td>
+</tr>
+</tbody></table>
+
+</div>
+
+<!-- ChangeDetection.com detection="off" -->
+
+<script type="text/javascript"></script>
+
+
+</body></html>

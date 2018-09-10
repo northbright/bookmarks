@@ -24,3 +24,4 @@
 
 ## Printer
 * [How does “net use” work in windows 7 for printer connection?](https://serverfault.com/questions/339135/how-does-net-use-work-in-windows-7-for-printer-connection)
+* [Command Line Printer Control](http://www.robvanderwoude.com/2kprintcontrol.php) [local copy](local-copy/Command-Line-Printer-Control.html)
