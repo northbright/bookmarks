@@ -9,7 +9,6 @@
 * [WNetAddConnection2A function](https://docs.microsoft.com/en-us/windows/desktop/api/winnetwk/nf-winnetwk-wnetaddconnection2a)
 * [Assigning a Drive to a Share](https://docs.microsoft.com/zh-cn/windows/desktop/WNet/assigning-a-drive-to-a-share)
 * [关于WNetAddConnection2的问题](https://bbs.csdn.net/topics/390043336)
-* [How does “net use” work in windows 7 for printer connection?](https://serverfault.com/questions/339135/how-does-net-use-work-in-windows-7-for-printer-connection)
 
 ### WINVER and _WIN32_WINNT
 * [Modifying WINVER and _WIN32_WINNT](https://msdn.microsoft.com/en-us/library/6sehtctf.aspx)
@@ -22,3 +21,6 @@
 ## IPC
 * [IPC$ appears as shared folder](https://answers.microsoft.com/en-us/windows/forum/windows_vista-networking/ipc-appears-as-shared-folder/75f8aa9c-c5ed-4b1f-873d-bda13c28a9ec)
 * [Description of the IPC$ share](http://smallvoid.com/article/winnt-ipc-share.html)
+
+## Printer
+* [How does “net use” work in windows 7 for printer connection?](https://serverfault.com/questions/339135/how-does-net-use-work-in-windows-7-for-printer-connection)
