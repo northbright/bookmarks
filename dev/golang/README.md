@@ -36,6 +36,7 @@
 * [XLSX](xlsx/README.md)
 * [Package Management](package-management/README.md)
 * [Command-Line Arguments](cmd-line-args/README.md)
+* [Executing Commands](exec-cmd/README.md)
 * [Struct](struct/README.md)
 * [Code Style](code-style/README.md)
 * [Reverse-Proxy](reverse-proxy/README.md)
