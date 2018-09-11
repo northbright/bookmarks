@@ -10,3 +10,4 @@
 * [哪个系列的足球鞋适合宽脚的人穿？](https://www.zhihu.com/question/290374846)
 * [李宁铁系列袋鼠皮TF足球鞋](http://www.enjoyz.com/pingce/picture/2018/18777.html)
 * [这些TF战靴值得“屠龙脚”EZer考虑](http://www.enjoyz.com/pingce/daogou/2018/19639.html)
+* [本土真旗舰 李宁铁系列袋鼠皮TF足球鞋赏析](http://www.ouou.cn/test/2018/8859.html)
