@@ -15,3 +15,4 @@
 
 #### UTF-8 and Unicode
 * [How to convert xml encoding UTF-16 to UTF-8 in golang](https://stackoverflow.com/questions/34890522/how-to-convert-xml-encoding-utf-16-to-utf-8-in-golang)
+* [UTF-16 and Go](https://github.com/tumregels/Network-Programming-with-Go/blob/master/encoding/utf-16_and_go.md)
