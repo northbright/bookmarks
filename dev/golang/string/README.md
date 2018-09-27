@@ -12,3 +12,6 @@
 #### Chinese Character
 * [golang的中文substr](http://golangtc.com/t/570afc04b09ecc66b90002cd)
 * [golang - 如何判断字符是不是中文？](https://segmentfault.com/q/1010000000595663)
+
+#### UTF-8 and Unicode
+* [How to convert xml encoding UTF-16 to UTF-8 in golang](https://stackoverflow.com/questions/34890522/how-to-convert-xml-encoding-utf-16-to-utf-8-in-golang)
