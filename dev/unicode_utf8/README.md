@@ -11,4 +11,4 @@
 * [Unicode General_Category Values](http://www.unicode.org/reports/tr44/#GC_Values_Table)
 
 #### Online Converters
-* [odePage – Online Encoders and Decoders](http://codepage-encoding.online-domain-tools.com/)
+* [CodePage – Online Encoders and Decoders](http://codepage-encoding.online-domain-tools.com/)
