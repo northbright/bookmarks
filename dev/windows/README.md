@@ -33,3 +33,4 @@
 * [Net Use Command](https://www.lifewire.com/net-use-command-2618096)
 * [Net.exe use Error: A command was used with conflicting switches](https://www.daniweb.com/hardware-and-software/microsoft-windows/threads/460187/net-exe-use-error-a-command-was-used-with-conflicting-switches)
 * [Net.exe use 'Error: A command was used with conflicting switches.' while using /savecred](https://stackoverflow.com/questions/17996846/net-exe-use-error-a-command-was-used-with-conflicting-switches-while-using)
+* [Redirection](https://ss64.com/nt/syntax-redirection.html)
