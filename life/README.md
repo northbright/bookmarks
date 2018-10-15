@@ -37,4 +37,4 @@
 
 #### 骨维力
 * [Schiff MoveFree和Blackmore骨维力哪个更好？](https://www.zhihu.com/question/278726830)
-* [Schiff Move Free维骨力这个牌子的保健效果怎么样，是要给中老年人群服用的。](https://www.zhihu.com/question/46399868）
+* [Schiff Move Free维骨力这个牌子的保健效果怎么样，是要给中老年人群服用的。](https://www.zhihu.com/question/46399868)
