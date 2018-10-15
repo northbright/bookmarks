@@ -22,3 +22,6 @@
 * [mermaid](https://mermaidjs.github.io/)
 * [mermaid online live editor](https://mermaidjs.github.io/mermaid-live-editor/)
 * [Linking to SVG files hosted on github](https://github.com/potherca-blog/StackOverflow/blob/master/question.13808020.include-an-svg-hosted-on-github-in-markdown/readme.md)
+
+#### Slides
+* [remark](https://github.com/gnab/remark)
