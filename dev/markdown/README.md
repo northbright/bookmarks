@@ -25,3 +25,4 @@
 
 #### Slides
 * [remark](https://github.com/gnab/remark)
+  * [wiki](https://github.com/gnab/remark/wiki)
