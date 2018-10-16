@@ -15,3 +15,4 @@ Bookmarks of development and more...
 * [家电](jiadian/README.md)
 * [Car(汽车)](car/README.md)
 * [Phone(手机及配件)](phone/README.md)
+* [Plants(植物)](plants/README.md)
