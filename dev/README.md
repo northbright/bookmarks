@@ -47,6 +47,7 @@
 * [ASCII](ascii/README.md)
 * [Nginx](nginx/README.md)
 * [Raspberry Pi](raspberry-pi/README.md)
+* [Chart](chart/README.md)
 * [Flowchart and UML](flowchart-and-uml/README.md)
 * [Cross Platform Apps](cross-platform-apps/README.md)
 * [BitTorrent](bittorrent/README.md)
