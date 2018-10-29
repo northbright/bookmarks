@@ -41,3 +41,4 @@
 * [了解管道](https://docs.microsoft.com/zh-cn/powershell/scripting/getting-started/fundamental/understanding-the-powershell-pipeline?view=powershell-5.1)
 * [PowerShell: Running Executables](https://social.technet.microsoft.com/wiki/contents/articles/7703.powershell-running-executables.aspx)
 * [Redirection of standard and error output appending to the same log-file](https://stackoverflow.com/questions/8925323/redirection-of-standard-and-error-output-appending-to-the-same-log-file)
+* [Displaying Unicode in Powershell](https://stackoverflow.com/questions/49476326/displaying-unicode-in-powershell)
