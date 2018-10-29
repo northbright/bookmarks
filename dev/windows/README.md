@@ -35,6 +35,7 @@
 * [Net.exe use 'Error: A command was used with conflicting switches.' while using /savecred](https://stackoverflow.com/questions/17996846/net-exe-use-error-a-command-was-used-with-conflicting-switches-while-using)
 * [Redirection](https://ss64.com/nt/syntax-redirection.html)
 * [How do I run two commands in one line in Windows CMD?](https://stackoverflow.com/questions/8055371/how-do-i-run-two-commands-in-one-line-in-windows-cmd)
+* [How to make Unicode charset in cmd.exe by default?](https://stackoverflow.com/questions/14109024/how-to-make-unicode-charset-in-cmd-exe-by-default)
 
 ## Powershell
 * [了解管道](https://docs.microsoft.com/zh-cn/powershell/scripting/getting-started/fundamental/understanding-the-powershell-pipeline?view=powershell-5.1)
