@@ -48,6 +48,7 @@
 * [Math](math/README.md)
 * [SQL](sql/README.md)
 * [Runtime](runtime/README.md)
+* [Graceful Restart](graceful-restart/README.md)
 
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
