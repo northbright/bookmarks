@@ -23,3 +23,6 @@
 
 ## SD Card
 * [Using SD Formatter Tool to restore full capacity on SDHC/SDXC cards](https://kb.sandisk.com/app/answers/detail/a_id/14827/~/using-sd-formatter-tool-to-restore-full-capacity-on-sdhc%2Fsdxc-cards)
+
+## SSD
+* [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
