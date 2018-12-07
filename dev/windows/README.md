@@ -42,3 +42,6 @@
 * [PowerShell: Running Executables](https://social.technet.microsoft.com/wiki/contents/articles/7703.powershell-running-executables.aspx)
 * [Redirection of standard and error output appending to the same log-file](https://stackoverflow.com/questions/8925323/redirection-of-standard-and-error-output-appending-to-the-same-log-file)
 * [Displaying Unicode in Powershell](https://stackoverflow.com/questions/49476326/displaying-unicode-in-powershell)
+
+## Backup and Restore
+* [Win 10 Image Restore from Network Location](https://answers.microsoft.com/en-us/windows/forum/windows_10-update-winpc/win-10-image-restore-from-network-location/2c6710e4-120a-416c-bc74-898bba23b71c)
