@@ -48,6 +48,7 @@
   * [Windows 7 USB 3.0 Creator Utility](https://downloadcenter.intel.com/download/25476/Windows-7-USB-3-0-Creator-Utility)
   * [Install Windows 7 on Computers with USB 3.0](https://www.intel.com/content/www/us/en/support/articles/000017241/mini-pcs.html)
   * [Windows USB/DVD Download Tool](https://www.microsoft.com/en-us/download/windows-usb-dvd-download-tool)
+  * [UEFI/GPT-based hard drive partitions](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)
 * Activation
   * [小马oem是如何做到windows激活的？](https://www.zhihu.com/question/25695388)
 
