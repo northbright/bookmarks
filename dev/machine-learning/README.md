@@ -6,3 +6,4 @@
 * [学习人工智能的路线？](https://www.zhihu.com/question/55686277)
 * [如何自学人工智能？](https://www.zhihu.com/question/21277368/answer/277626779)
 * [如何评价德国计算机神经网络科学家发表的这篇可以让电脑模仿任何画家的风格作画的论文？](https://www.zhihu.com/question/35216546)
+* [Prisma 背后的算法是怎样炼成的？它有什么其他应用价值？](https://www.zhihu.com/question/57533171)
