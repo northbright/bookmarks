@@ -57,6 +57,7 @@
 * [NoSQL](nosql/README.md)
 * [Chrome/Puppeteer](chrome-puppeteer/README.md)
 * [Block Chain](block-chain/README.md)
+* [Machine Learning(机器学习)](machine-learning/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
