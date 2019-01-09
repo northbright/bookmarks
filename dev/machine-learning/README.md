@@ -5,3 +5,4 @@
 * [怎样用深度学习取悦你的女朋友（附代码和视频链接）](https://zhuanlan.zhihu.com/p/31404314)
 * [学习人工智能的路线？](https://www.zhihu.com/question/55686277)
 * [如何自学人工智能？](https://www.zhihu.com/question/21277368/answer/277626779)
+* [如何评价德国计算机神经网络科学家发表的这篇可以让电脑模仿任何画家的风格作画的论文？](https://www.zhihu.com/question/35216546)
