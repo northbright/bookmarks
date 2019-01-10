@@ -35,3 +35,6 @@
 
 #### Github Pages
 * [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
+
+#### Citation
+* [How do you cite a Github repository?](https://academia.stackexchange.com/questions/14010/how-do-you-cite-a-github-repository)
