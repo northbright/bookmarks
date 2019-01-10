@@ -11,3 +11,4 @@
 * [Prisma 背后的算法是怎样炼成的？它有什么其他应用价值？](https://www.zhihu.com/question/57533171)
 * <https://github.com/jcjohnson/neural-style>
 * [Fast Style Transfer in TensorFlow](https://github.com/lengstrom/fast-style-transfer)
+* [Implementation of Neural Style Transfer from the paper A Neural Algorithm of Artistic Style in Keras 2.0+](https://github.com/titu1994/Neural-Style-Transfer)
