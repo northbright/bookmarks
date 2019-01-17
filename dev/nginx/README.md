@@ -7,6 +7,7 @@
 * [Installing NGINX Open Source](https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/)
 * [How To Install Nginx on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7)
 * [How To Compile Nginx from Source on a CentOS 6.4 x64 VPS](https://www.digitalocean.com/community/tutorials/how-to-compile-nginx-from-source-on-a-centos-6-4-x64-vps)
+* [nginx ./configure can't find openssl](https://unix.stackexchange.com/questions/23799/nginx-configure-cant-find-openssl)
 
 #### HTTPS
 * [How To Secure Nginx with Let's Encrypt on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7)
