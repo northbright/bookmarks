@@ -45,6 +45,7 @@
 * [SMS](sms/README.md)
 * [Site Reliability Engineering](sre/README.md)
 * [ASCII](ascii/README.md)
+* [OpenSSL](openssl/README.md)
 * [Nginx](nginx/README.md)
 * [Raspberry Pi](raspberry-pi/README.md)
 * [Chart](chart/README.md)
