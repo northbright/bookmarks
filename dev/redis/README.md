@@ -14,6 +14,7 @@
 
 ## Install
 * [How to Install Redis Server on CentOS 7](https://linoxide.com/storage/install-redis-server-centos-7/)
+* [CentOs 7: Systemd & PID File #3716](https://github.com/antirez/redis/issues/3716)
 
 ## Partitioning
 * [Partitioning: how to split data among multiple Redis instances.](http://redis.io/topics/partitioning)
