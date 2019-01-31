@@ -12,6 +12,9 @@
 * [The Little Redis Book](http://openmymind.net/redis.pdf)
 * [各位能否推荐几本redis方面比较好的书籍？](https://www.zhihu.com/question/26885503)
 
+## Install
+* [How to Install Redis Server on CentOS 7](https://linoxide.com/storage/install-redis-server-centos-7/)
+
 ## Partitioning
 * [Partitioning: how to split data among multiple Redis instances.](http://redis.io/topics/partitioning)
 
