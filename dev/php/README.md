@@ -8,3 +8,5 @@
 * [How to Install PHP 7 in CentOS 7](https://www.tecmint.com/install-php-7-in-centos-7/)
 * [Unix 系统下的 Nginx 1.4.x](http://php.net/manual/zh/install.unix.nginx.php)
 * [Compiling PHP 7 on CentOS](https://shaunfreeman.name/blog/compiling-php-7-on-centos)
+* [编译PHP5.6](https://blog.phpgao.com/compile_php.html)
+* [What are PHP extensions and libraries WP needs and/or uses?](https://wordpress.stackexchange.com/questions/42098/what-are-php-extensions-and-libraries-wp-needs-and-or-uses)
