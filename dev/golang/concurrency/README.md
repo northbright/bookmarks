@@ -16,3 +16,4 @@
 
 #### Channel
 * [throw: all goroutines are asleep - deadlock](https://stackoverflow.com/questions/12398359/throw-all-goroutines-are-asleep-deadlock)
+* [Part 22: Channels](https://golangbot.com/channels/)
