@@ -1,5 +1,8 @@
 # 硬件(Hardware)
 
+#### 基本知识
+* [DHCP一般是放在路由上还是核心交换上？](http://bbs.51cto.com/viewthread.php?tid=916731&extra=&page=1)
+
 #### H3C
 * [H3C ER系列路由器常见问题处理指南-V1.03](http://www.h3c.com/cn/Service/Document_Center/Routers/Catalog/ER/ER5200/Maintenance/Maintenance_Manual/H3C_ER(V1.03)/)
 * [H3C ER系列企业级路由器 用户手册-6W105](http://www.h3c.com/cn/Service/Document_Center/Routers/Catalog/ER/ER3100/Configure/User_Manual/H3C_ER_UM-6W105/201403/819372_30005_0.htm)
