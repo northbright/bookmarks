@@ -18,3 +18,4 @@
 
 #### 设计
 * [局域网核心层、汇聚层、接入层交换机选择（尽量选择h3c设备)](https://zhidao.baidu.com/question/1766639018515118700.html)
+* [我们公司网络是用路由器代替核心交换机，请问大家这样行不行？](http://bbs.51cto.com/viewthread.php?tid=1559961&extra=&page=1)
