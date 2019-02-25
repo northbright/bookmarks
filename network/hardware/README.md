@@ -6,6 +6,7 @@
 * [H3C ER5200，两个wan口都在用，内网有一台主机需要固定通过wan2连通外网，具体设置标签在那个位置](http://ask.zol.com.cn/q/169207.html)
 * [H3C中小企业网络解决方案实战篇（精）](https://wenku.baidu.com/view/bc8fa30f814d2b160b4e767f5acfa1c7aa0082a9.html)
 * [H3C华三S7506E系列交换机万兆IRF堆叠虚拟化](https://www.tracert.cn/h3c-s7506-irf.html)
+* [H3C华三S5120-EI交换机IRF堆叠配置](https://www.tracert.cn/h3c-s5120-ei-irf.html#)
 
 #### UBNT
 * [UniFi - How to Reset the UniFi Access Point to Factory Defaults](https://help.ubnt.com/hc/en-us/articles/205143490-UniFi-How-to-reset-the-UniFi-Access-Point-to-factory-defaults)
