@@ -26,6 +26,10 @@
 * Keyboard
     * [Keyboard mappings using a PC keyboard on a Macintosh](https://support.microsoft.com/en-us/kb/970299)
 
+## iOS
+* MDM
+    * [用MDM远程管理iPhone和iPad](https://www.jianshu.com/p/a9d2891cbb9c)
+
 ## Data Recovery
 * [19 Free Data Recovery Software Tools](https://www.lifewire.com/free-data-recovery-software-tools-2622893)
 
