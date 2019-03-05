@@ -63,6 +63,7 @@
 * [Block Chain](block-chain/README.md)
 * [Machine Learning(机器学习)](machine-learning/README.md)
 * [Barcode and QR Code](barcode-qrcode/README.md)
+* [.NET Core](dot-net-core/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
