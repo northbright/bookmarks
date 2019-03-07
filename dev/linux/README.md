@@ -15,3 +15,4 @@
 * [CentOS](centos/README.md)
 * [Time](time/README.md)
 * [make](make/README.md)
+* [sudo](sudo/README.md)
