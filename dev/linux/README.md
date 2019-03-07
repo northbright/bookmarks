@@ -1,7 +1,7 @@
 # Linux
 
 #### Category
-
+* [Basics](basics/README.md)
 * [Debug](debug/README.md)
 * [Pipe](pipe/README.md)
 * [VIM](vim/README.md)
