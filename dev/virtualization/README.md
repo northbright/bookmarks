@@ -23,3 +23,5 @@
 * Virtual Machines to Physical Machines(V2P)
   * [Add a Native-Boot Virtual Hard Disk to the Boot Menu](https://technet.microsoft.com/en-us/library/dd799299(v=ws.10).aspx)
 
+## VirtualBox
+* [How to resize a VirtualBox vmdk file](https://stackoverflow.com/questions/11659005/how-to-resize-a-virtualbox-vmdk-file)
