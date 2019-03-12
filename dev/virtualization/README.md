@@ -25,3 +25,4 @@
 
 ## VirtualBox
 * [How to resize a VirtualBox vmdk file](https://stackoverflow.com/questions/11659005/how-to-resize-a-virtualbox-vmdk-file)
+* [Resize VDI Guest OS not visible in gparted](https://forums.virtualbox.org/viewtopic.php?t=41344)
