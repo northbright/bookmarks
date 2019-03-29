@@ -11,3 +11,6 @@
 * [编译PHP5.6](https://blog.phpgao.com/compile_php.html)
 * [What are PHP extensions and libraries WP needs and/or uses?](https://wordpress.stackexchange.com/questions/42098/what-are-php-extensions-and-libraries-wp-needs-and-or-uses)
 * [Recompile PHP with OpenSSL on CentOS](https://stackoverflow.com/questions/45697976/recompile-php-with-openssl-on-centos)
+
+## MySQL Drivers
+* [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
