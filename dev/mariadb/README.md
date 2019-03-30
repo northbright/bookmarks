@@ -7,3 +7,6 @@
 
 ## Data Dir
 * [MariaDB 更改默认数据存放目录](https://blog.51cto.com/lddyw/1684364)
+
+## Storage Engines
+* [When to use MyISAM and InnoDB?](https://stackoverflow.com/questions/15678406/when-to-use-myisam-and-innodb)
