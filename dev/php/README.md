@@ -13,6 +13,7 @@
 * [Recompile PHP with OpenSSL on CentOS](https://stackoverflow.com/questions/45697976/recompile-php-with-openssl-on-centos)
 * [CentOS下PHP7的编译安装及MySQL的支持和一些常见问题的解决办法](https://www.jb51.net/article/76557.htm)
 * [为什么要关闭 fileinfo? fileinfo 有什么隐患吗?](https://www.v2ex.com/t/193309)
+* [Bug #48809 	"virtual memory exhausted: Cannot allocate memory" with libmagic/apprentice.c](https://bugs.php.net/bug.php?id=48809)
 
 ## MySQL Drivers
 * [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
