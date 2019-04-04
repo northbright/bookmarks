@@ -12,6 +12,7 @@
 * [What are PHP extensions and libraries WP needs and/or uses?](https://wordpress.stackexchange.com/questions/42098/what-are-php-extensions-and-libraries-wp-needs-and-or-uses)
 * [Recompile PHP with OpenSSL on CentOS](https://stackoverflow.com/questions/45697976/recompile-php-with-openssl-on-centos)
 * [CentOS下PHP7的编译安装及MySQL的支持和一些常见问题的解决办法](https://www.jb51.net/article/76557.htm)
+* [为什么要关闭 fileinfo? fileinfo 有什么隐患吗?](https://www.v2ex.com/t/193309)
 
 ## MySQL Drivers
 * [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
