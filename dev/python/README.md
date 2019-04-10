@@ -10,3 +10,4 @@
 ## PycURL
 * [PycURL Installation](http://pycurl.io/docs/latest/install.html#git-checkout)
 * [pycurl gives you a fail since src/docstrings.c isn't generated](https://github.com/pycurl/pycurl/issues/198)
+* [easy_install - pyCurl install issue](https://stackoverflow.com/questions/47358923/easy-install-pycurl-install-issue)
