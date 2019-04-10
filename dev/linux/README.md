@@ -15,5 +15,6 @@
 * [CentOS](centos/README.md)
 * [Time](time/README.md)
 * [make](make/README.md)
+* [gcc](gcc/README.md)
 * [sudo](sudo/README.md)
 * [pkg-config](pkg-config/README.md)
