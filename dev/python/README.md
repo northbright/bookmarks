@@ -12,3 +12,6 @@
 * [pycurl gives you a fail since src/docstrings.c isn't generated](https://github.com/pycurl/pycurl/issues/198)
 * [easy_install - pyCurl install issue](https://stackoverflow.com/questions/47358923/easy-install-pycurl-install-issue)
 * [编译安装curl后，使用yum报错 pycurl.so: undefined symbol: CRYPTO_num_locks](https://xvcat.com/post/1429)
+
+## Installation
+* [fatal error: Python.h: No such file or directory](https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory)
