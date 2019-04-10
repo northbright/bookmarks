@@ -51,6 +51,7 @@
 * [SSH](ssh/README.md)
 * [Nginx](nginx/README.md)
 * [PHP](php/README.md)
+* [libpng](libpng/README.md)
 * [Raspberry Pi](raspberry-pi/README.md)
 * [Chart](chart/README.md)
 * [Flowchart and UML](flowchart-and-uml/README.md)
