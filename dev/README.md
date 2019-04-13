@@ -52,6 +52,7 @@
 * [Nginx](nginx/README.md)
 * [PHP](php/README.md)
 * [libpng](libpng/README.md)
+* [ImageMagick](imagemagick/README.md)
 * [Raspberry Pi](raspberry-pi/README.md)
 * [Chart](chart/README.md)
 * [Flowchart and UML](flowchart-and-uml/README.md)
