@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html><html prefix="og: http://ogp.me/ns#" itemscope="" itemtype="https://schema.org/WebPage" lang="en"><head>
+    <base href="https://rodaine.com/2015/04/async-split-io-reader-in-golang/">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asynchronously Split an io.Reader in Go (golang) « Rodaine</title>
+<meta name="keywords" itemprop="keywords" content="go, golang, io, stream, async, concurrent, parallel">
+<meta name="author" itemprop="author" content="Chris Roche">
+<meta name="description" itemprop="description" content="Or the many ways to skin a cat — er — stream">
+
+<meta property="fb:admins" content="2057767">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@rodaine">
+<meta name="twitter:title" property="og:title" content="Asynchronously Split an io.Reader in Go (golang) « Rodaine">
+<meta name="twitter:url" property="og:url" content="https://rodaine.com/2015/04/async-split-io-reader-in-golang/">
+<meta name="twitter:image" property="og:image" content="">
+<meta name="twitter:description" property="og:description" content="Or the many ways to skin a cat — er — stream">
+
+<link rel="alternate" href="https://feeds.feedburner.com/rodaine" type="application/atom+xml" title="Atom Feed « Rodaine">
+<link rel="canonical" href="https://rodaine.com/2015/04/async-split-io-reader-in-golang/">
+<link rel="preconnect" href="https://rodaine.disqus.com">
+
+<script type="text/javascript" async="" data-savepage-src="https://www.google-analytics.com/plugins/ua/linkid.js" src=""></script><script></script>
+<script data-savepage-src="https://www.google-analytics.com/analytics.js" src="" async="" defer=""></script>
+
+<style type="text/css">article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:none}a:active,a:hover{outline:0}h1{font-size:2em;margin:0.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}pre,code,abbr,acronym{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace}body,.logo,.menu,article header h3{font-weight:300}b,strong,body>footer a,article .fig figcaption::before{font-weight:700}body,article .summary,article .summary:visited{color:#1D1D1D}a,.fluff-strike,body>footer a,.pagination .current,.pagination .bookend .current,.pagination .ellipsis a{color:#536895}a:hover,body>footer a:hover,body>footer a:focus,article .disqus-link,.pagination li a:hover,.pagination li a:focus{color:#2f3a53}.logo{color:rgba(0,0,0,0.15)}::selection,body>footer,article .disqus-link:hover,article .disqus-link:focus,.pagination li a{color:#fcfcfc}body,body>footer a,.pagination .current,.pagination .bookend .current,.pagination .ellipsis a{background:#fcfcfc}main,body>header,body>footer{margin:0 1em}@media (min-width: 481px){main,body>header,body>footer{margin:0 5%}}@media (min-width: 686px){main,body>header,body>footer{width:61.8%;margin:0 14.590% 0 auto}}@media (max-width: 480px){body>header,body>footer{margin:0}}article p,article aside,article .fig figcaption,article .summary,article .summary:visited{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}article p code,article aside code,article figcaption code{-webkit-hyphens:manual;-moz-hyphens:manual;-ms-hyphens:manual;hyphens:manual}html{line-height:1.5;font-size:100%}@media (min-width: 1100px){html{font-size:112.5%}}@media (min-width: 1300px){html{font-size:125%}}::selection{background:#536895}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";text-rendering:optimizeLegibility;font-smooth:always;-webkit-font-smoothing:subpixel-antialiased}h1,h2,h3,h4,h5,h6{line-height:1.25}a:focus h1,a:focus h2,a:focus h3,a:focus h4,a:focus h5,a:focus h6{background:rgba(83,104,149,0.25)}a{-webkit-tap-highlight-color:rgba(83,104,149,0.25)}a:focus{background:rgba(83,104,149,0.25)}header a{text-decoration:none}blockquote{position:relative;top:0;left:0;margin-left:2em;margin-right:2em;color:rgba(83,104,149,0.85)}blockquote cite{display:block;text-align:right}blockquote cite:before{content:"–"}blockquote:before,blockquote:after{font-size:4em;position:absolute;opacity:.5}blockquote:before{content:"“";top:-.2em;left:-.75em}blockquote:after{content:"”";bottom:-.5em;right:-.75em}.gist{font-size:0.75em;line-height:1.5}code{font-size:.85em;display:block;white-space:pre;overflow-x:scroll;background:rgba(83,104,149,0.075);margin-left:1em;margin-right:1em;padding:.5em 1em}h1 code,h2 code,h3 code,h4 code,h5 code,h6 code,p code,li code,aside code,figcaption code{display:inline;padding:0 .25em;margin:inherit;white-space:inherit}strike,strike span,del,del span{color:rgba(29,29,29,0.25)}aside,figcaption{font-size:0.75em;font-style:italic;line-height:1.5;margin:1em auto;background:rgba(0,0,0,0.05);padding:0.5em}*{box-sizing:border-box}body{position:relative;top:0;left:0}main{max-width:720px}body>header{transform:scale(-1);height:2.25em;max-width:720px;position:relative;line-height:1;overflow-y:hidden;zoom:1}.logo,.menu{display:block;font-size:2.5em;text-transform:lowercase;margin:0;padding:0;line-height:1}.menu{float:right}.logo{float:left}body>footer{max-width:720px;padding:0.5em 1em;background:#536895}body>footer a{text-decoration:none;display:block;text-align:center;margin:0.5em 0;padding:0.25em 0;box-shadow:1px 1px 1px rgba(0,0,0,0.25)}body>footer a:hover,body>footer a:focus{background-color:rgba(252,252,252,0.75)}body>footer p{margin:0;padding:0}.social{display:flex;justify-content:center;align-content:flex-start;align-items:flex-start;margin:0.5em 0}.social svg{fill:currentColor;width:1.5em;height:1.5em;display:block;margin:0 auto;position:relative}.social .twitter{transform:scale(1.3);top:1px;left:1px}.social .rss{transform:scale(0.8);left:1px}.social a{padding:0.25em 0;margin:0;min-width:2em;height:2em;margin:0 0.25em}article{counter-reset:figure;position:relative;top:0;left:0}article header h3{font-style:italic;margin-top:0}article header .meta{color:#5d5d5d;margin-bottom:0}article header .meta+a h2{margin-top:0}article header h2{margin-bottom:0;text-transform:uppercase;margin-bottom:0}article p{clear:both}@media (min-width: 900px){article aside,article .fig figcaption{width:30%;float:left;height:0;padding:0;margin:0;position:relative;top:0;left:-33%;color:#5d5d5d}}article .summary,article .summary:visited{display:block;text-decoration:none;min-height:6em;max-height:9em;overflow:hidden;position:relative;top:0;left:0}article .summary:before,article .summary:visited:before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(to bottom, rgba(252,252,252,0) 0%, #fcfcfc 85%)}article img{margin-left:auto;margin-right:auto;max-width:100%;display:block;padding:.25em;background:white;border:1px solid rgba(83,104,149,0.1)}article img.raw{border:0;background:none}article .fig{margin:1em 0;text-align:center}article .fig figure{counter-increment:figure;text-align:center;display:inline-block;max-width:100%;text-align:left}article .fig figcaption{margin:0}article .fig figcaption::before{content:"Fig " counter(figure) ". "}article .disqus-link{background:rgba(83,104,149,0.25);text-decoration:none;text-align:center;display:block;margin:0}article .disqus-link:hover,article .disqus-link:focus{background:#536895}.pagination{margin:0.5em -1rem}.pagination:after{display:block;content:' ';clear:both}.pagination ul{margin:0;padding:0;text-align:center}.pagination li{display:none;list-style-type:none}.pagination li a{width:2em;height:2em;display:block;background:#536895;text-decoration:none;padding:0.25em 0.5em;margin:0.25em 0}.pagination li a:hover,.pagination li a:focus{background:rgba(83,104,149,0.25)}.pagination .bookend a,.pagination .direction a{background:#536895}.pagination .current,.pagination .bookend .current,.pagination .ellipsis a{pointer-events:none;cursor:default}.pagination .direction{display:block;width:100%}.pagination .next:after{content:' ↣'}.pagination .prev:before{content:'↢ '}.pagination .next,.pagination .prev{width:45%}.pagination .prev{float:left;margin-right:0.25em;text-align:left}.pagination .next{float:right;text-align:right;margin-left:0.25em}.pagination .ellipsis{display:none}@media (min-width: 481px){.pagination{margin:0.5em 0}.pagination .next,.pagination .prev{width:auto}.pagination li{display:inline-block}}@media (min-width: 800px){.pagination .ellipsis{display:inline-block}}.post-nav{font-size:1.25em;line-height:1.25}.post-nav .next:before,.post-nav .prev:before{display:block;text-align:center;margin-bottom:.5em}.post-nav .next:after{content:''}.post-nav .next:before{content:'↣'}.post-nav .prev:before{content:'↢'}.post-nav .next,.post-nav .prev{height:auto;width:47.5%;text-align:left;-moz-hyphens:auto;hyphens:auto;text-transform:uppercase;padding:.75em;overflow-x:hidden}@media (min-width: 481px){.post-nav .next,.post-nav .prev{width:47.5%}}.archive ol{list-style-type:none;padding-left:0}.archive li{padding-left:3.25em;text-indent:-3.25em}.archive time{color:#5d5d5d;z-index:-1;display:inline-block;position:relative;left:3.25em;min-width:3.25em}
+</style>
+
+
+    <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgAzMzP/MzMz/6G+mgChvpoAMzMz/zMzM/+hvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAMzMz/zMzM/+hvpoAob6aADMzM/8zMzP/ob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aADMzM/8zMzP/ob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgAzMzP/MzMz/6G+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAMzMz/zMzM/+hvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aADMzM/8zMzP/zMzM/6G+mgAzMzP/MzMz/6G+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgAzMzP/MzMz/zMzM/+ZmZn/MzMz/zMzM/+hvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAMzMz/5mZmf9mZmb/MzMz/zMzM/+hvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoAob6aAKG+mgChvpoA//8AAP//AAD//wAA//8AAPmfAAD5nwAA+f8AAPn/AAD5/wAA+J8AAPgfAAD4PwAA//8AAP//AAD//wAA//8AAA==">
+    <script id="savepage-pageloader" type="application/javascript">
+      savepage_PageLoader(5);
+      "use strict";function savepage_PageLoader(maxframedepth){var resourceMimeType=new Array();var resourceBase64Data=new Array();var resourceBlobUrl=new Array();window.addEventListener("DOMContentLoaded",function(a){createBlobURLs();replaceReferences(0,document.documentElement)},false);function createBlobURLs(){var i,j,binaryString,blobData;var a=new Array();for(i=0;i<resourceMimeType.length;i++){if(typeof resourceMimeType[i]!="undefined"){binaryString=atob(resourceBase64Data[i]);resourceBase64Data[i]="";a.length=0;for(j=0;j<binaryString.length;j++){a[j]=binaryString.charCodeAt(j)}blobData=new Blob([new Uint8Array(a)],{type:resourceMimeType[i]});resourceMimeType[i]="";resourceBlobUrl[i]=window.URL.createObjectURL(blobData)}}}function replaceReferences(a,b){var i,regex1,regex2,csstext,blobData;regex1=/url\(\s*((?:"[^"]+")|(?:'[^']+')|(?:[^\s)]+))\s*\)/gi;regex2=/data:[^;]*;resource=(\d+);base64,/i;if(b.hasAttribute("style")){csstext=b.style.cssText;b.style.cssText=csstext.replace(regex1,replaceCSSRef)}if(b.localName=="style"){csstext=b.textContent;b.textContent=csstext.replace(regex1,replaceCSSRef)}else if(b.localName=="link"&&(b.rel.toLowerCase()=="icon"||b.rel.toLowerCase()=="shortcut icon")){if(b.href!="")b.href=b.href.replace(regex2,replaceRef)}else if(b.localName=="body"){if(b.background!="")b.background=b.background.replace(regex2,replaceRef)}else if(b.localName=="img"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="input"&&b.type.toLowerCase()=="image"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="audio"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.load()}}else if(b.localName=="video"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.load()}if(b.poster!="")b.poster=b.poster.replace(regex2,replaceRef)}else if(b.localName=="source"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.parentElement.load()}}else if(b.localName=="track"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="object"){if(b.data!="")b.data=b.data.replace(regex2,replaceRef)}else if(b.localName=="embed"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}if(b.localName=="iframe"||b.localName=="frame"){if(a<maxframedepth){if(b.hasAttribute("data-savepage-sameorigin")){blobData=new Blob([decodeURIComponent(b.src.substr(29))],{type:"text/html;charset=utf-8"});b.onload=function(){try{if(b.contentDocument.documentElement!=null){replaceReferences(a+1,b.contentDocument.documentElement)}}catch(e){}};b.src=window.URL.createObjectURL(blobData)}}}else{for(i=0;i<b.childNodes.length;i++){if(b.childNodes[i]!=null){if(b.childNodes[i].nodeType==1)replaceReferences(a,b.childNodes[i])}}}}function replaceCSSRef(a,b,c,d){var e=new Array();e=b.match(/data:[^;]*;resource=(\d+);base64,/i);if(e!=null)return"url("+resourceBlobUrl[+e[1]]+")";else return a}function replaceRef(a,b,c,d){return resourceBlobUrl[+b]}
+      }
+    </script>
+    <meta name="savepage-url" content="https://rodaine.com/2015/04/async-split-io-reader-in-golang/">
+    <meta name="savepage-title" content="Asynchronously Split an io.Reader in Go (golang) « Rodaine">
+    <meta name="savepage-date" content="Fri May 03 2019 16:22:43 GMT+0800 (中国标准时间)">
+    <meta name="savepage-state" content="Standard Items; Used page loader; Retained cross-origin frames; Removed unsaved URLs; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+    <meta name="savepage-version" content="14.0">
+    <meta name="savepage-comments" content=""></head>
+<body>
+
+<header role="banner">
+	<a href="/"><h1 class="logo">Rodaine</h1></a>
+	<a href="#nav" class="menu">menu</a>
+</header>
+
+<main role="main">
+
+<article role="article" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+<header>
+<p class="meta">
+	<time datetime="2015-04-25T00:00:00+00:00" itemprop="datePublished" pubdate="">25 Apr 2015</time> · <a href="/2015/04/async-split-io-reader-in-golang/#disqus_thread" data-disqus-identifier="/2015/04/async-split-io-reader-in-golang/" itemprop="discussionUrl">Comments</a>
+</p>
+
+<a href="/2015/04/async-split-io-reader-in-golang/" itemprop="url">
+	<h2 itemprop="headline">Asynchronously Split an io.Reader in Go (golang)</h2>
+</a>
+<h3 itemprop="alternativeHeadline">Or the many ways to skin a cat — er — stream</h3>
+
+</header>
+
+<section itemprop="articleBody">
+<p>I have fallen in love with the flexibility of <a href="https://golang.org/pkg/io/#Reader"><code>io.Reader</code></a> and <a href="https://golang.org/pkg/io/#Writer"><code>io.Writer</code></a> when dealing with any stream of data in Go. And while I am more or less smitten at this point, the reader interface challenged me with something you might think simple: splitting it in two.</p>
+<p>I’m not even certain “split” is the right word. I would like to receive an <code>io.Reader</code> and read over it multiple times, possibly in parallel. But because readers don’t necessarily expose the <code>Seek</code> method to reset them, I need a way to duplicate it. Or would that be clone it? Fork?!</p>
+<h3 id="the-situation">The Situation</h3>
+<p>Suppose you have a web service that allows a user to upload a file. The service will store the file on “the cloud”, but first it needs a bit of processing. All you have to work with is the <code>io.Reader</code> from the incoming request.</p>
+<h3 id="the-solutions">The Solutions</h3>
+<p>There is not one way to go about solving this problem, of course. Depending on the types of files, throughput of the service and the kinds of processing required, some options are more practical than others. Below, I lay out five different methods of varying complexity and flexibility. I imagine there are many more, but these are a good starting point.</p>
+<h4 id="solution-1-the-simple-codebytesreadercode">Solution #1: The Simple <code>bytes.Reader</code></h4>
+<p>If the source reader doesn’t have a <code>Seek</code> method, then why not make one? You can pump the input into a <a href="https://golang.org/pkg/bytes/#NewReader"><code>bytes.Reader</code></a> and rewind it as many times as you like:</p>
+<div class="gist-wrapper" data-id="a4236a51b1a3b66d1e08" data-user="rodaine" data-file="bytesreader.go">
+	<p>View this <a href="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08#file-bytesreader-go">Gist</a> on GitHub.</p>
+</div>
+<p>If the data is small enough, this might be the most convenient option; you could forgo the <code>bytes.Reader</code> altogether and work off the byte slice instead. But suppose the file is large, such as a video or RAW photo. These behemoths will chew through memory, especially if the service is high-traffic. Not to mention, you cannot perform these actions in parallel.</p>
+<p><strong>Pro’s</strong>: Probably the simplest solution.<br>
+<strong>Con’s</strong>: Synchronous and not prudent if you expect many or large files.</p>
+<h4 id="solution-2-the-reliable-file-system">Solution #2: The Reliable File System</h4>
+<p>OK, then how about you drop the data into a file on disk (a’la <a href="https://golang.org/pkg/io/ioutil/#TempFile"><code>ioutil.TempFile</code></a>) and skip the penalties of storing it in RAM?</p>
+<div class="gist-wrapper" data-id="a4236a51b1a3b66d1e08" data-user="rodaine" data-file="file.go">
+	<p>View this <a href="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08#file-file-go">Gist</a> on GitHub.</p>
+</div>
+<p>If the final destination is on the service’s file system, then this is probably your best choice (albeit with a real file), but let’s assume it will end up on the cloud. Again, if the files are large, the IO costs here could be noticeable and unnecessary. You run the risk of bugs or crashes orphaning files on the machine, and I also wouldn’t recommend this if the data is sensitive in any way.</p>
+<p><strong>Pro’s</strong>: Keeps the whole file out of RAM.<br>
+<strong>Con’s</strong>: Still synchronous, potential for lots of IO, disk space, and orphaned data.</p>
+<h4 id="solution-3-the-duct-tape-codeiomultireadercode">Solution #3: The Duct-Tape <code>io.MultiReader</code></h4>
+<p>In some cases, the metadata you need exists in the first handful of bytes of the file. Identifying a file as a JPEG, for instance, only requires checking that the first two bytes are <code>0xFF 0xD8</code>. This can be handled synchronously using a <a href="https://golang.org/pkg/io/#MultiReader"><code>io.MultiReader</code></a>, which glues together a set of readers as if they were one. Here’s our JPEG example:</p>
+<aside>It is not categorically true that a file beginning with those two bytes is a valid JPEG, but for the most part it's enough. If you're curious, the exiv2 team has documented the <a href="http://dev.exiv2.org/projects/exiv2/wiki/The_Metadata_in_JPEG_files">metadata structure of the JPEG format</a>.</aside>
+<div class="gist-wrapper" data-id="a4236a51b1a3b66d1e08" data-user="rodaine" data-file="multireader.go">
+	<p>View this <a href="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08#file-multireader-go">Gist</a> on GitHub.</p>
+</div>
+<p>This is a great technique if you intend to gate the upload to only JPEG files. With only two bytes, you can cancel the transfer without entirely reading it into memory or writing it to disk. As you might expect, this method falters in situations where you need to read in more than a little bit of the file to gather the data, such as calculating a word count across it. Having this process blocking the upload may not be ideal for intensive tasks. And finally, most 3rd-party (and the majority of the standard library) packages entirely consume a reader, preventing you from using an <code>io.MultiReader</code> in this way.</p>
+<p>Another solution would be to use <a href="https://golang.org/pkg/bufio/#Reader.Peek"><code>bufio.Reader.Peek</code></a>. It essentially performs the same operation but you can eschew the MultiReader. That, and it gives you access to some other useful methods on the reader.</p>
+<p><strong>Pro’s</strong>: Quick and dirty reads off the top of a file, can act as a gate.<br>
+<strong>Con’s</strong>: Doesn’t work for unknown-length reads, processing the whole file, intensive tasks, or with most 3rd-party packages.</p>
+<h4 id="solution-4-the-single-split-codeioteereadercode-and-codeiopipecode">Solution #4: The Single-Split <code>io.TeeReader</code> and <code>io.Pipe</code></h4>
+<p>Back to our scenario of a large video file, let’s change the story a bit. Your users will upload the video in a single format, but you want your service to be able to display those videos in a couple of different formats. You have a 3rd-party transcoder that can take in an <code>io.Reader</code> of (say) MP4 encoded data and return another reader of WebM data. The service will upload the original MP4 and WebM versions to the cloud. The previous solutions must perform these steps synchronously and with overhead; now, you want to do them in parallel.</p>
+<p>Take a look at <a href="https://golang.org/pkg/io/#TeeReader"><code>io.TeeReader</code></a>, which has the following signature: <code>func TeeReader(r Reader, w Writer) Reader</code>. The docs say “TeeReader returns a Reader that writes to w what it reads from r.” This is <em>exactly</em> what you want! Now how do you get the data written into <em>w</em> to be readable? This is where <a href="https://golang.org/pkg/io/#Pipe"><code>io.Pipe</code></a> comes into play, yielding a connected <code>io.PipeReader</code> and <code>io.PipeWriter</code> (i.e., writes to the latter are immediately available in the former). Let’s see it in action:</p>
+<div class="gist-wrapper" data-id="a4236a51b1a3b66d1e08" data-user="rodaine" data-file="teereader.go">
+	<p>View this <a href="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08#file-teereader-go">Gist</a> on GitHub.</p>
+</div>
+<p>As the uploader consumes <code>tr</code>, the transcoder receives and processes the same bytes before sending it off to storage. All without a buffer and in parallel! Be aware of the use of goroutines for both pathways, though. <code>io.Pipe</code> blocks until something writes <em>and</em> reads from it. Attempting this on the same thread will give you a <code>fatal error: all goroutines are asleep - deadlock!</code> panic. Another point of caution: when using pipes, you will need to explicitly trigger an EOF by closing the <code>io.PipeWriter</code> at the appropriate time. In this case, you would close it after the TeeReader has been exhausted.</p>
+<p>This method also employs channels to communicate “doneness”. If you expect a value back from these processes, you could replace the <code>chan bool</code> for a more appropriate type.</p>
+<p><strong>Pro’s</strong>: Completely independent, parallelized streams of the same data!<br>
+<strong>Con’s</strong>: Requires the added complexity of goroutines and channels to work.</p>
+<h4 id="solution-5-the-multi-split-codeiomultiwritercode-and-codeiocopycode">Solution #5: The Multi-Split <code>io.MultiWriter</code> and <code>io.Copy</code></h4>
+<p>The <code>io.TeeReader</code> solution works great when only one other consumer of the stream exists. As the service parallelizes more tasks (e.g., more transcoding), teeing off of tees becomes gross. Enter the <a href="https://golang.org/pkg/io/#MultiWriter"><code>io.MultiWriter</code></a>: “a writer that duplicates its writes to all provided writers.” This method utilizes pipes like in the previous solution to propagate the data, but instead of a TeeReader, you can use <a href="https://golang.org/pkg/io/#Copy"><code>io.Copy</code></a> to split the data across all the pipes:</p>
+<div class="gist-wrapper" data-id="a4236a51b1a3b66d1e08" data-user="rodaine" data-file="multiwriter.go">
+	<p>View this <a href="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08#file-multiwriter-go">Gist</a> on GitHub.</p>
+</div>
+<p>This is more or less analogous with the previous method, but noticeably cleaner when the stream needs multiple clones. Because of the pipes, you’ll again require goroutines and synchronizing channels to avoid the deadlock. We defer closing all the pipes until the copy is complete.</p>
+<p><strong>Pro’s</strong>: Can make as many forks of the original reader as desired.<br>
+<strong>Con’s</strong>: Even more use of goroutines and channels to coordinate.</p>
+<h3 id="what-about-channels">What About Channels?</h3>
+<p>Channels are one of the most unique and powerful concurrency tools Go has to offer. Serving as a bridge between goroutines, they combine communication and synchronization in one. You can allocate a channel with or without a buffer, allowing for <a href="https://golang.org/doc/effective_go.html#channels">many creative ways to share data</a>. So why did I not provide a solution that leverages them for more than sync?</p>
+<p>Looking through the top-level packages of the standard library, channels rarely appear in function signatures:</p>
+<ul>
+<li><code>time</code>: useful for a <a href="https://gobyexample.com/timeouts"><code>select</code> with timeout</a></li>
+<li><code>reflect</code>: … ’cause reflection</li>
+<li><code>fmt</code>: for formatting it as a pointer</li>
+<li><code>builtin</code>: exposes the <code>close</code> function</li>
+</ul>
+<p>The implementation of <a href="https://golang.org/src/io/pipe.go"><code>io.Pipe</code></a> forgoes a channel in favor of <code>sync.Mutex</code> to move data safely between the reader and writer. My suspicion is that channels are just not as performant, and presumably mutexes prevail for this reason.</p>
+<p>When developing a reusable package, I’d avoid channels in my public API to be consistent with the standard library but maybe use them internally for synchronization. If the complexity is low enough, replacing them with mutexes may even be ideal. That said, within an application, channels are wonderful abstractions, easier to grok than locks and more flexible.</p>
+<h3 id="wrapping-up">Wrapping Up</h3>
+<p>I’ve only broached a handful of ways to go about processing the data coming from an <code>io.Reader</code>, and without a doubt there are plenty more. Go’s implicit interface model plus the standard library’s heavy use of them permits many creative ways of gluing together various components without having to worry about the source of the data. I hope some of the exploration I’ve done here will prove as useful for you as it did for me!</p>
+<h3 id="errata-updated-2017-05-22">Errata (Updated: 2017-05-22)</h3>
+<p>Jamie Talbot kindly pointed out in the comments that <a href="https://disqus.com/home/discussion/rodaine/asynchronously_split_an_ioreader_in_go_golang_rodaine_51/#comment-3170239653">solutions #4 and #5 would panic if one of the concurrent goroutines produced an error</a>. That’s certainly not the intended effect here, especially considering the primary focus is on tee-ing an <code>io.Reader</code>. I’ve since removed the error handling from those examples and will perhaps write up an article at a later date regarding handling errors from concurrent tasks. Thanks again, Jamie!</p>
+
+</section>
+
+<section id="disqus_thread">
+  
+</section>
+
+</article>
+
+
+<nav class="pagination post-nav">
+	<ul>
+		<li class="direction"><a rel="next" class="next" href="/2013/10/develop-locally-with-wordpress/">Develop Locally with WordPress</a></li>
+		<li class="direction"><a rel="prev" class="prev" href="/2017/05/x-files-intro/">The X-Files: Exploring the Golang Standard Library Sub-Repositories</a></li>
+	</ul>
+</nav>
+
+
+</main>
+
+<footer>
+	<nav role="navigation" id="nav">
+		<a href="/">Home</a>
+		<a href="/chris-roche/">About</a>
+		<a href="/archive/">Archive</a>
+		<a href="http://talks.rodaine.com/">Talks</a>
+		<div class="social">
+			<a href="https://twitter.com/rodaine" rel="me" aria-label="Twitter - @rodaine"><svg viewBox="0 0 405 405" class="twitter" role="img" aria-label="Twitter - @rodaine">
+<path d="M340.7,115.2c-10.1,4.5-20.9,7.5-32.2,8.8c11.6-6.9,20.5-17.9,24.7-31c-10.8,6.4-22.8,11.1-35.6,13.6
+  c-10.2-10.9-24.8-17.7-40.9-17.7c-31,0-56.1,25.1-56.1,56.1c0,4.4,0.5,8.7,1.5,12.8c-46.6-2.3-87.9-24.7-115.6-58.6
+  c-4.8,8.3-7.6,17.9-7.6,28.2c0,19.5,9.9,36.6,25,46.7c-9.2-0.3-17.8-2.8-25.4-7c0,0.2,0,0.5,0,0.7c0,27.2,19.3,49.8,45,55
+  c-4.7,1.3-9.7,2-14.8,2c-3.6,0-7.1-0.4-10.6-1c7.1,22.3,27.9,38.5,52.4,39c-19.2,15-43.4,24-69.7,24c-4.5,0-9-0.3-13.4-0.8
+  c24.8,15.9,54.3,25.2,86,25.2c103.2,0,159.6-85.5,159.6-159.6c0-2.4-0.1-4.9-0.2-7.3C323.7,136.4,333.2,126.5,340.7,115.2z"></path>
+</svg>
+</a>
+			<a href="https://github.com/rodaine" rel="me" aria-label="GitHub - @rodaine"><svg viewBox="-8 0 417 400" class="github" aria-label="GitHub - @rodaine">
+<path d="M200,4.9C89.6,4.9,0,94.5,0,204.9c0,88.3,57.7,163.2,136.2,190.2c9.8,1.2,13.5-4.9,13.5-9.8c0-4.9,0-17.2,0-34.4
+	c-55.2,12.3-67.5-27-67.5-27c-8.6-23.3-22.1-29.4-22.1-29.4c-18.4-12.3,1.2-12.3,1.2-12.3C81,283.4,92,303.1,92,303.1
+	c18.4,30.7,46.6,22.1,57.7,17.2c1.2-13.5,7.4-22.1,12.3-27c-44.2-4.9-90.8-22.1-90.8-99.4c0-22.1,7.4-39.3,20.9-54
+	c-1.2-3.7-8.6-24.5,2.5-51.5c0,0,17.2-4.9,55.2,20.9c16-4.9,33.1-6.1,50.3-6.1s34.4,2.5,50.3,6.1c38-25.8,55.2-20.9,55.2-20.9
+	c11,27,3.7,47.9,2.5,52.8c12.3,13.5,20.9,31.9,20.9,54c0,77.3-46.6,93.3-90.8,98.2c7.4,6.1,13.5,18.4,13.5,36.8c0,27,0,47.9,0,55.2
+	c0,4.9,3.7,11,13.5,9.8c79.8-27,136.2-101.8,136.2-190.2C400,94.5,310.4,4.9,200,4.9z"></path>
+</svg>
+</a>
+			<a href="https://feeds.feedburner.com/rodaine" aria-label="RSS/Atom Feed - rodaine.com"><svg viewBox="0 0 1000 1000" class="rss" aria-label="RSS/Atom Feed - rodaine.com">
+<path d="M0,866c0-36.7,13-68,39-94s57.3-39,94-39s68,13,94,39s39,57.3,39,94c0,37.3-13,68.8-39,94.5S169.7,999,133,999s-68-13-94-39
+  S0,902.7,0,866z M0,531V340c119.3,0,229.7,29.5,331,88.5S512.5,567.7,571.5,669S660,880.7,660,1000H468c0-129.3-45.7-239.7-137-331
+  C239,577,128.7,531,0,531z M0,192V0c135.3,0,264.7,26.5,388,79.5S617.7,203.7,707,293s160.5,195.7,213.5,319s79.5,252.7,79.5,388
+  H808c0-109.3-21.3-214-64-314S643.8,500,571.5,428s-158.3-129.3-258-172S109.3,192,0,192z"></path>
+</svg>
+</a>
+		</div>
+	</nav>
+</footer>
+<script></script>
+<script async="" defer="" data-savepage-src="/s.js" src=""></script>
+
+
+
+<script async="" data-savepage-src="https://rodaine.disqus.com/count.js" src="" id="dsq-count-scr"></script><script async="" data-savepage-src="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08.json?file=bytesreader.go&callback=gist0" src=""></script><script async="" data-savepage-src="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08.json?file=file.go&callback=gist1" src=""></script><script async="" data-savepage-src="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08.json?file=multireader.go&callback=gist2" src=""></script><script async="" data-savepage-src="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08.json?file=teereader.go&callback=gist3" src=""></script><script async="" data-savepage-src="https://gist.github.com/rodaine/a4236a51b1a3b66d1e08.json?file=multiwriter.go&callback=gist4" src=""></script><script async="" data-savepage-src="https://rodaine.disqus.com/embed.js" src="" data-timestamp="Fri May 03 2019 16:22:19 GMT+0800 (中国标准时间)"></script></body></html>
