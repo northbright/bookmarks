@@ -8,6 +8,7 @@
 * [H3C华三S7506E系列交换机万兆IRF堆叠虚拟化](https://www.tracert.cn/h3c-s7506-irf.html)
 * [H3C华三S5120-EI交换机IRF堆叠配置](https://www.tracert.cn/h3c-s5120-ei-irf.html#)
 * [h3c三层交换机连接路由器问题](https://itbbs.pconline.com.cn/network/15283478.html)
+* [我们公司网络是用路由器代替核心交换机，请问大家这样行不行？](http://bbs.51cto.com/thread-1559961-1.html)
 
 #### UBNT
 * [UniFi - How to Reset the UniFi Access Point to Factory Defaults](https://help.ubnt.com/hc/en-us/articles/205143490-UniFi-How-to-reset-the-UniFi-Access-Point-to-factory-defaults)
