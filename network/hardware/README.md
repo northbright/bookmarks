@@ -10,6 +10,7 @@
 * [h3c三层交换机连接路由器问题](https://itbbs.pconline.com.cn/network/15283478.html)
 * [我们公司网络是用路由器代替核心交换机，请问大家这样行不行？](http://bbs.51cto.com/thread-1559961-1.html)
 * [H3C S5560S-EI,S5130S,S5110V2,S3100V3-EI配置指导](http://www.h3c.com/cn/d_201710/1038061_30005_0.htm)
+* [H3C系列之三层交换机dhcp功能的开启](https://www.cnblogs.com/5201351/p/4365462.html)
 
 #### UBNT
 * [UniFi - How to Reset the UniFi Access Point to Factory Defaults](https://help.ubnt.com/hc/en-us/articles/205143490-UniFi-How-to-reset-the-UniFi-Access-Point-to-factory-defaults)
