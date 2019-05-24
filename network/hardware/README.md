@@ -21,6 +21,7 @@
 * [UBNT的ERX](https://www.chiphell.com/thread-1693145-1-1.html)
 * [ER-X需要接入电信的4k IPTV 求教配置](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&page=1&tid=17101)
 * [Ubnt EdgeRouter 4 评测](https://www.chiphell.com/article-19840-1.html)
+* [关于UNIFI SSID划分VLAN求解](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=14893)
 
 #### 设计
 * [局域网核心层、汇聚层、接入层交换机选择（尽量选择h3c设备)](https://zhidao.baidu.com/question/1766639018515118700.html)
