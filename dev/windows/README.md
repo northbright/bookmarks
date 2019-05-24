@@ -48,3 +48,6 @@
 
 ## Dism
 * [Dism++](http://www.chuyu.me/zh-Hans/index.html)
+
+## Group Policy
+* [How to enable gpedit.msc (Group Policy) on Windows 10 Home devices](https://www.ghacks.net/2019/01/07/how-to-enable-gpedit-msc-group-policy-on-windows-10-home-devices/)
