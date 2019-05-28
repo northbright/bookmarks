@@ -54,3 +54,4 @@
 
 ## Remote Desktop
 * [Remote desktop connection error after updating Windows 2018/05/08 - CredSSP updates for CVE-2018-0886](https://superuser.com/questions/1321418/remote-desktop-connection-error-after-updating-windows-2018-05-08-credssp-upda)
+* [Remote Desktop Authentication Error Has Occurred. The function requested is not supported. CredSSP WorkaroundRemote Desktop Authentication Error Has Occurred. The function requested is not supported. CredSSP Workaround](http://blog.fmsinc.com/remote-desktop-authentication-error-function-requested-is-not-supported-credssp/)
