@@ -51,3 +51,6 @@
 
 ## Group Policy
 * [How to enable gpedit.msc (Group Policy) on Windows 10 Home devices](https://www.ghacks.net/2019/01/07/how-to-enable-gpedit-msc-group-policy-on-windows-10-home-devices/)
+
+## Remote Desktop
+* [Remote desktop connection error after updating Windows 2018/05/08 - CredSSP updates for CVE-2018-0886](https://superuser.com/questions/1321418/remote-desktop-connection-error-after-updating-windows-2018-05-08-credssp-upda)
