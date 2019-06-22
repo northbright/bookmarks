@@ -15,6 +15,7 @@
 * [为什么要关闭 fileinfo? fileinfo 有什么隐患吗?](https://www.v2ex.com/t/193309)
 * [Bug #48809 	"virtual memory exhausted: Cannot allocate memory" with libmagic/apprentice.c](https://bugs.php.net/bug.php?id=48809)
 * [CentOS: Enabling GD Support in PHP Installation](https://stackoverflow.com/questions/9024946/centos-enabling-gd-support-in-php-installation)
+* [ImageMagick vs GD - which is faster, less resource intensive and produces better images?](https://stackoverflow.com/questions/8319203/imagemagick-vs-gd-which-is-faster-less-resource-intensive-and-produces-better)
 
 ## MySQL Drivers
 * [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
