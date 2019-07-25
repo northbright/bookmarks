@@ -51,6 +51,7 @@
 * [SSH](ssh/README.md)
 * [Nginx](nginx/README.md)
 * [PHP](php/README.md)
+* [bzip2](bzip2/README.md)
 * [libpng](libpng/README.md)
 * [ImageMagick](imagemagick/README.md)
 * [Raspberry Pi](raspberry-pi/README.md)
