@@ -17,6 +17,7 @@
 * [CentOS: Enabling GD Support in PHP Installation](https://stackoverflow.com/questions/9024946/centos-enabling-gd-support-in-php-installation)
 * [ImageMagick vs GD - which is faster, less resource intensive and produces better images?](https://stackoverflow.com/questions/8319203/imagemagick-vs-gd-which-is-faster-less-resource-intensive-and-produces-better)
 * [ImageTragick](https://imagetragick.com/)
+* [Getting warnings while “make test” PHP on Mac OS X (MySQL PDO->prepare()) ](https://serverfault.com/questions/605515/getting-warnings-while-make-test-php-on-mac-os-x-mysql-pdo-prepare#)
 
 ## MySQL Drivers
 * [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
