@@ -21,6 +21,7 @@
 * [php-fpm as service on Centos 7](https://stackoverflow.com/questions/36032972/php-fpm-as-service-on-centos-7)
 * [How to install PHP 7.1, 7.2 and 5.6 as PHP-FPM & FastCGI for ISPConfig 3 on Debian 9](https://www.howtoforge.com/tutorial/how-to-install-php-7-on-debian/)
 * [php.ini is nonexistent Loaded Configuration File (none)](https://stackoverflow.com/questions/10711698/php-ini-is-nonexistent-loaded-configuration-file-none)
+* [php-fpm.conf配置文件中文说明详解及重要参数说明(nginx 通过 unixsock 与 php-fpm 通信)](https://www.cnblogs.com/cjjjj/p/9837802.html)
 
 ## MySQL Drivers
 * [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
