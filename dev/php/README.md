@@ -4,6 +4,7 @@
 * [What is the difference between fastcgi and fpm?](https://stackoverflow.com/questions/4526242/what-is-the-difference-between-fastcgi-and-fpm)
 * [What are the differences from running PHP-FPM over an Unix Socket vs a TCP/IP Socket?](https://stackoverflow.com/questions/42704763/what-are-the-differences-from-running-php-fpm-over-an-unix-socket-vs-a-tcp-ip-so)
 * [What's the difference between Unix socket and TCP/IP socket?](https://serverfault.com/questions/124517/whats-the-difference-between-unix-socket-and-tcp-ip-socket)
+* [Unix domain socket和IP(tcp/ip) socket的区别](https://www.jianshu.com/p/aefe19723667)
 
 ## Installation
 * [How To Install Linux, Nginx, MySQL, PHP (LEMP) stack On CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-centos-7)
