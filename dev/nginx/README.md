@@ -38,3 +38,4 @@
 
 ## WordPress
 * [Nginx - wordpress in a subdirectory, what data should be passed?](https://stackoverflow.com/questions/6154879/nginx-wordpress-in-a-subdirectory-what-data-should-be-passed)
+* [Nginx](https://wordpress.org/support/article/nginx/)
