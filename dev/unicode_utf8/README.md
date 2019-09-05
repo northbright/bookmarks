@@ -13,3 +13,4 @@
 
 #### Online Converters
 * [CodePage – Online Encoders and Decoders](http://codepage-encoding.online-domain-tools.com/)
+* [onlineutf8tools](https://onlineutf8tools.com/convert-utf16-to-utf8)
