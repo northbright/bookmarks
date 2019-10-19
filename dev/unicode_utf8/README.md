@@ -10,6 +10,7 @@
 #### Unicode
 * [Unicode General_Category Values](http://www.unicode.org/reports/tr44/#GC_Values_Table)
 * [Byte Order Mark (BOM) FAQ](http://www.unicode.org/faq/utf_bom.html#bom1)
+* [What's the difference between UTF-8 and UTF-8 without BOM?](https://stackoverflow.com/questions/2223882/whats-the-difference-between-utf-8-and-utf-8-without-bom)
 
 #### Online Converters
 * [CodePage – Online Encoders and Decoders](http://codepage-encoding.online-domain-tools.com/)
