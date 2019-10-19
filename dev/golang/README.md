@@ -53,6 +53,7 @@
 * [Backend Development](backend/README.md)
 * [Unicode](unicode/README.md)
 * [Go Module](module/README.md)
+* [Comparison](comparison/README.md)
 
 #### Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
