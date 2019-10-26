@@ -21,3 +21,6 @@
 
 ## Catch Return Values of Goroutines
 * [Catching return values from goroutines](https://stackoverflow.com/questions/20945069/catching-return-values-from-goroutines)
+
+## Map
+* [Golang map len() reports > 0 when map is empty](https://stackoverflow.com/questions/33872157/golang-map-len-reports-0-when-map-is-empty)
