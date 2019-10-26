@@ -24,3 +24,4 @@
 
 ## Map
 * [Golang map len() reports > 0 when map is empty](https://stackoverflow.com/questions/33872157/golang-map-len-reports-0-when-map-is-empty)
+* [How safe are Golang maps for concurrent Read/Write operations?](https://stackoverflow.com/questions/36167200/how-safe-are-golang-maps-for-concurrent-read-write-operations)
