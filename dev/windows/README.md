@@ -62,3 +62,4 @@
 
 ## Printer
 * [Win 10 keeps changing my printer static IP port to WSD, already turned off windows printer management ](https://answers.microsoft.com/en-us/windows/forum/all/win-10-keeps-changing-my-printer-static-ip-port-to/6e630a01-1460-498e-a92c-0ae97be8d655)
+* [How do I add a standard TCP/IP printer port from a command line?](https://superuser.com/questions/61659/how-do-i-add-a-standard-tcp-ip-printer-port-from-a-command-line/235405)
