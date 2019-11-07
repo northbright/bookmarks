@@ -59,3 +59,6 @@
 
 ## Shared Folder
 * [10秒钟教你去掉win7/2008关闭共享后左下角的小锁 ...](https://bbs.51cto.com/thread-893647-1.htmlhttps://bbs.51cto.com/thread-893647-1.html)
+
+## Printer
+* [Win 10 keeps changing my printer static IP port to WSD, already turned off windows printer management ](https://answers.microsoft.com/en-us/windows/forum/all/win-10-keeps-changing-my-printer-static-ip-port-to/6e630a01-1460-498e-a92c-0ae97be8d655)
