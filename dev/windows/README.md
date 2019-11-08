@@ -66,6 +66,7 @@
 * [Printer Install Script - prndrvr.vbs, prnport.vbs, and prnmngr.vbs just comes up with "useage" - how do I properly execute?](https://social.technet.microsoft.com/Forums/windows/en-US/aabb9a4a-6e02-49b3-8af5-aeb7c43f1ed3/printer-install-script-prndrvrvbs-prnportvbs-and-prnmngrvbs-just-comes-up-with)
 * [Prndrvr.vbs](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754632(v=ws.11))
 * [Print Server vs. Direct IP Printing](https://www.printerlogic.com/blog/print-server-vs-direct-ip-printing/)
+* [Printer Drivers Installation and Troubleshooting Guide](https://dennisspan.com/printer-drivers-installation-and-troubleshooting-guide/)
 
 ## Error Code
 * [COM Error Codes](https://docs.microsoft.com/en-us/windows/win32/com/com-error-codes)
