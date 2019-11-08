@@ -65,3 +65,6 @@
 * [How do I add a standard TCP/IP printer port from a command line?](https://superuser.com/questions/61659/how-do-i-add-a-standard-tcp-ip-printer-port-from-a-command-line/235405)
 * [Printer Install Script - prndrvr.vbs, prnport.vbs, and prnmngr.vbs just comes up with "useage" - how do I properly execute?](https://social.technet.microsoft.com/Forums/windows/en-US/aabb9a4a-6e02-49b3-8af5-aeb7c43f1ed3/printer-install-script-prndrvrvbs-prnportvbs-and-prnmngrvbs-just-comes-up-with)
 * [Print Server vs. Direct IP Printing](https://www.printerlogic.com/blog/print-server-vs-direct-ip-printing/)
+
+## Error Code
+* [COM Error Codes](https://docs.microsoft.com/en-us/windows/win32/com/com-error-codes)
