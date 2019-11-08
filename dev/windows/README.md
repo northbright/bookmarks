@@ -67,6 +67,7 @@
 * [Prndrvr.vbs](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754632(v=ws.11))
 * [Print Server vs. Direct IP Printing](https://www.printerlogic.com/blog/print-server-vs-direct-ip-printing/)
 * [Printer Drivers Installation and Troubleshooting Guide](https://dennisspan.com/printer-drivers-installation-and-troubleshooting-guide/)
+* [How to Install Printer Driver and Add a Network Printer from the Command Line](https://community.spiceworks.com/how_to/71708-how-to-install-printer-driver-and-add-a-network-printer-from-the-command-line)
 
 ## Error Code
 * [COM Error Codes](https://docs.microsoft.com/en-us/windows/win32/com/com-error-codes)
