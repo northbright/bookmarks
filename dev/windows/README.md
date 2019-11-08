@@ -73,3 +73,4 @@
 
 ## WMI
 * [Remote WMI Access denied Error - 0x80070005](https://social.technet.microsoft.com/Forums/en-US/71b1bfe0-2587-47de-942a-4386b85bb1bf/remote-wmi-access-denied-error-0x80070005)
+* [WMI Troubleshooting](https://docs.microsoft.com/zh-cn/windows/win32/wmisdk/wmi-troubleshooting)
