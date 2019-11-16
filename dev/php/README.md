@@ -38,3 +38,4 @@
 
 ## Security
 * [New security test: CVE-2019-11043 PHP-FPM & NGINX RCE](https://blog.detectify.com/2019/10/31/cve-2019-11043-nginx-php-fpm-exploit/)
+* [PHP-FPM/Nginx Vulnerability – CVE-2019-11043](https://www.liquidweb.com/kb/php-fpm-nginx-vulnerability-cve-2019-11043/)
