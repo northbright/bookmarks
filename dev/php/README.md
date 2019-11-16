@@ -35,3 +35,6 @@
 * [WordPress mysqli and PDO](https://wordpress.stackexchange.com/questions/84680/wordpress-mysqli-and-pdo)
 * [MySQL in WordPress 3.9](https://make.wordpress.org/core/2014/04/07/mysql-in-wordpress-3-9/)
 * [php5.3新特性 之 mysql native driver(mysqlnd)](https://blog.csdn.net/dragon8299/article/details/6273295)
+
+## Security
+* [New security test: CVE-2019-11043 PHP-FPM & NGINX RCE](https://blog.detectify.com/2019/10/31/cve-2019-11043-nginx-php-fpm-exploit/)
