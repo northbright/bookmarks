@@ -2,6 +2,7 @@
 
 ## Articles
 * [QR Code Tutorial: Introduction](https://www.thonky.com/qr-code-tutorial/introduction)
+* [Hello World!](https://zhuanlan.zhihu.com/p/21463650)
 
 ## Libraries
 * Java
