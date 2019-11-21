@@ -1,5 +1,8 @@
 # Barcode / QR Code
 
+## Articles
+* [QR Code Tutorial: Introduction](https://www.thonky.com/qr-code-tutorial/introduction)
+
 ## Libraries
 * Java
   * <https://github.com/zxing/zxing>
