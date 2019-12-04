@@ -73,3 +73,4 @@
 ## Vuex
 * [看完这一篇文章你就会搞懂Vuex](https://zhuanlan.zhihu.com/p/86470071)
 * [vue--vuex详解](https://zhuanlan.zhihu.com/p/94390645)
+* [VueJS中学习使用Vuex详解](https://segmentfault.com/a/1190000015782272)
