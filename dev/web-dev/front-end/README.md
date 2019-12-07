@@ -1,8 +1,7 @@
 # Front-End Web Development
 
 #### Category
-* [Javascript](js/README.md)
-* [ECMAScript 6](es6/README.md)
+* [ECMAScript](es/README.md)
 * [UI](ui/README.md)
 * [JSONP](jsonp/README.md)
 * [Cross Domain Request](cross-domain-request/README.md)
