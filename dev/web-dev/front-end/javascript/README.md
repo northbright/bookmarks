@@ -3,6 +3,7 @@
 ## Books
 * [ECMAScript 6 入门](http://es6.ruanyifeng.com/)
 * [JavaScript 教程](https://wangdoc.com/javascript/index.html)
+* [JavaScript-Garden](http://bonsaiden.github.io/JavaScript-Garden/zh/)
 
 ## Articles
 * [30分钟掌握ES6/ES2015核心内容（上）](https://segmentfault.com/a/1190000004365693)
