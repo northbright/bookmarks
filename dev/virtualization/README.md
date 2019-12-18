@@ -28,5 +28,5 @@
 * [Resize VDI Guest OS not visible in gparted](https://forums.virtualbox.org/viewtopic.php?t=41344)
 * [modifyvm --resize doesn't work with snapshots](https://www.virtualbox.org/ticket/9103)
 * Issues
-  * [CentOS7.6 can't be installed in VirtualBox](https://forums.centos.org/viewtopic.php?f=47&t=71475&sid=a9610acee2302a64287510499b1a3955&start=10)
+  * [CentOS7.6 can't be installed in VirtualBox](https://forums.centos.org/viewtopic.php?f=47&t=71475)
   * [kernel panic not syncing fatal exception when trying to start CentOS 7](https://forums.virtualbox.org/viewtopic.php?f=3&t=93990)
