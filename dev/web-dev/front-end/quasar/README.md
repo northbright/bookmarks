@@ -2,6 +2,7 @@
 
 ## Articles
 * [如何评价Quasar Framework?](https://www.zhihu.com/question/54913702)
+* [Best GUI framework for VueJS? I guess that would be Quasar](https://forum.vuejs.org/t/best-gui-framework-for-vuejs-i-guess-that-would-be-quasar/2349/16)
 
 ## Basis
 * [Quasar CLI入门教程](https://zhuanlan.zhihu.com/p/34977695)

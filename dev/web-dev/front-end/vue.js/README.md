@@ -69,6 +69,7 @@
 
 ## Frameworks
 * [10个用于构建移动应用的Vue.js UI框架](https://my.oschina.net/JasonZhang/blog/1810757)
+* [Best GUI framework for VueJS? I guess that would be Quasar](https://forum.vuejs.org/t/best-gui-framework-for-vuejs-i-guess-that-would-be-quasar/2349)
 
 ## Vuex
 * [看完这一篇文章你就会搞懂Vuex](https://zhuanlan.zhihu.com/p/86470071)
