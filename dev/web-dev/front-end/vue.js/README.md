@@ -24,6 +24,7 @@
 * [vim-vue](https://github.com/posva/vim-vue)
 * [visual studio code 配置vue开发环境](https://segmentfault.com/a/1190000014785115)
 * [用VS Code开发Vue应用](https://www.jianshu.com/p/70d9c04b8bac)
+* [使用ESLint+Prettier来统一前端代码风格](https://segmentfault.com/a/1190000015315545)
 
 ## vue-router
 * [Vue.js——vue-router 60分钟快速入门](http://www.cnblogs.com/keepfool/p/5690366.html)
