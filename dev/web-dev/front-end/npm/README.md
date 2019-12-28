@@ -9,4 +9,3 @@
 
 ## Scripts
 * [npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)
-* [npm中script脚本的使用](https://www.jianshu.com/p/628d84425e4a)
