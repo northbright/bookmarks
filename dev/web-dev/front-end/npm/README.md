@@ -9,3 +9,6 @@
 
 ## Scripts
 * [npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)
+
+## Scope
+* [What is the meaning of the “at” (@) prefix on npm packages?](https://stackoverflow.com/questions/36667258/what-is-the-meaning-of-the-at-prefix-on-npm-packages)
