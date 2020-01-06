@@ -68,3 +68,6 @@
 
 ## Mac OS
 * [如何安装 macOS](https://support.apple.com/zh-cn/HT204904)
+
+## VirtualBox
+* [VirtualBox Network Settings: Complete Guide](https://www.nakivo.com/blog/virtualbox-network-setting-guide/)
