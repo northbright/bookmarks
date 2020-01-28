@@ -17,3 +17,6 @@
 * [支持HTTP-FLV方式直播的开源模块nginx-http-flv-module](https://segmentfault.com/a/1190000016043297)
 * [使用nginx-http-flv-module搭建简易直播环境（视频）](https://www.bilibili.com/video/av82154190?p=1)
 * [高性能流媒体服务器nginx-http-live-module](https://blog.csdn.net/winshining/article/details/93606585)
+
+## 企业资质
+* [在线教育平台都应该申请什么资质许可证？](https://zhuanlan.zhihu.com/p/38019511)
