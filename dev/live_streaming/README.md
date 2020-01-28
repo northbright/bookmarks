@@ -11,3 +11,6 @@
 
 ## flv.js
 * [使用flv.js做直播](https://github.com/gwuhaolin/blog/issues/3)
+
+## HTTP-FLV
+* [nginx-http-flv-module](https://github.com/winshining/nginx-http-flv-module)
