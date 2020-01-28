@@ -14,3 +14,4 @@
 
 ## HTTP-FLV
 * [nginx-http-flv-module](https://github.com/winshining/nginx-http-flv-module)
+* [支持HTTP-FLV方式直播的开源模块nginx-http-flv-module](https://segmentfault.com/a/1190000016043297)
