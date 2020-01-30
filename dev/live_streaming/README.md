@@ -22,6 +22,7 @@
 
 ## [SRS](https://github.com/ossrs/srs)
 * [v3_CN_Home](https://github.com/ossrs/srs/wiki/v3_CN_Home)
+* [srs流媒体服务器运维(2)--rtmp集群之edge边缘服务器](https://blog.csdn.net/qq_31337793/article/details/81136163)
 
 ## 企业资质
 * [在线教育平台都应该申请什么资质许可证？](https://zhuanlan.zhihu.com/p/38019511)
