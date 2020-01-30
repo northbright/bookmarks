@@ -22,6 +22,7 @@
 
 ## [SRS](https://github.com/ossrs/srs)
 * [v3_CN_Home](https://github.com/ossrs/srs/wiki/v3_CN_Home)
+* [URL Specification](https://github.com/ossrs/srs/wiki/v3_CN_RtmpUrlVhost)
 * [srs流媒体服务器运维(1)--压力测试](https://blog.csdn.net/qq_31337793/article/details/81135807)
 * [srs流媒体服务器运维(2)--rtmp集群之edge边缘服务器](https://blog.csdn.net/qq_31337793/article/details/81136163)
 * [srs流媒体服务器运维(3)--Http CallBack之防盗链](https://blog.csdn.net/qq_31337793/article/details/81136363)
