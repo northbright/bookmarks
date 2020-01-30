@@ -14,12 +14,12 @@
 
 ## HTTP-FLV
 * [nginx-http-flv-module](https://github.com/winshining/nginx-http-flv-module)
-* [支持HTTP-FLV方式直播的开源模块nginx-http-flv-module](https://segmentfault.com/a/1190000016043297)
-* [使用nginx-http-flv-module搭建简易直播环境（视频）](https://www.bilibili.com/video/av82154190?p=1)
-* [高性能流媒体服务器nginx-http-live-module](https://blog.csdn.net/winshining/article/details/93606585)
-* [基于nginx-rtmp-module模块实现的HTTP-FLV直播模块nginx-http-flv-module（一）](https://blog.csdn.net/winshining/article/details/74910586)
-* [基于nginx-rtmp-module模块实现的HTTP-FLV直播模块nginx-http-flv-module（二）](https://blog.csdn.net/winshining/article/details/79492099)
-* [基于nginx-rtmp-module模块实现的HTTP-FLV直播模块nginx-http-flv-module（三）](https://blog.csdn.net/winshining/article/details/81512775)
+  * [支持HTTP-FLV方式直播的开源模块nginx-http-flv-module](https://segmentfault.com/a/1190000016043297)
+  * [使用nginx-http-flv-module搭建简易直播环境（视频）](https://www.bilibili.com/video/av82154190?p=1)
+  * [高性能流媒体服务器nginx-http-live-module](https://blog.csdn.net/winshining/article/details/93606585)
+  * [基于nginx-rtmp-module模块实现的HTTP-FLV直播模块nginx-http-flv-module（一）](https://blog.csdn.net/winshining/article/details/74910586)
+  * [基于nginx-rtmp-module模块实现的HTTP-FLV直播模块nginx-http-flv-module（二）](https://blog.csdn.net/winshining/article/details/79492099)
+  * [基于nginx-rtmp-module模块实现的HTTP-FLV直播模块nginx-http-flv-module（三）](https://blog.csdn.net/winshining/article/details/81512775)
 
 ## 企业资质
 * [在线教育平台都应该申请什么资质许可证？](https://zhuanlan.zhihu.com/p/38019511)
