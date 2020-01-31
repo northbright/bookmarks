@@ -28,6 +28,7 @@
 * [srs流媒体服务器运维(2)--rtmp集群之edge边缘服务器](https://blog.csdn.net/qq_31337793/article/details/81136163)
 * [srs流媒体服务器运维(3)--Http CallBack之防盗链](https://blog.csdn.net/qq_31337793/article/details/81136363)
 * [APPLICATION: OBS publish stream failed, SRS error for no stream name #796](https://github.com/ossrs/srs/issues/796)
+* [来到阿里云后，SRS大神杨成立说：“终于可以不用装大神了”](https://www.jianshu.com/p/0893561dc697)
 
 ## 企业资质
 * [在线教育平台都应该申请什么资质许可证？](https://zhuanlan.zhihu.com/p/38019511)
