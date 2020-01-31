@@ -72,6 +72,7 @@
 * [源创会开源访谈：十年成长，Go语言的演化之路-by Tony Bai(白明)](http://tonybai.com/2017/10/24/go-evolution-for-ten-years-an-interview-by-osc/)
 * [Go语言：成长的十年](http://tonybai.com/2017/09/24/go-ten-years-and-climbing/)
 * [Go实践(包含问题2: redis connection timeout,问题3: high memory usage_](http://blog.csdn.net/yunba_io/article/details/46429079)
+* [Go 开发关键技术指南 | 为什么你要选择 GO？（内含超全知识大图）](https://developer.aliyun.com/article/739836)
 * [Go 开发关键技术指南 | 敢问路在何方？(内含超全知识大图）](https://yq.aliyun.com/articles/742169)
 
 #### Effective Go
