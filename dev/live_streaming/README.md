@@ -35,3 +35,4 @@
 
 ## 带宽
 * [视频码率,帧率和分辨率和带宽](https://www.jianshu.com/p/9d2b3099f5cc)
+* [阿里云的CDN产品到底用流量计费划算还是用带宽计费划算](https://www.cnblogs.com/itfat/p/12157648.html)
