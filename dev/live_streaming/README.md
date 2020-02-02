@@ -32,3 +32,6 @@
 
 ## 企业资质
 * [在线教育平台都应该申请什么资质许可证？](https://zhuanlan.zhihu.com/p/38019511)
+
+## 带宽
+* [视频码率,帧率和分辨率和带宽](https://www.jianshu.com/p/9d2b3099f5cc)
