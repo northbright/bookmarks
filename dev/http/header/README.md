@@ -6,6 +6,7 @@
 * [理解HTTP之Content-Type](https://segmentfault.com/a/1190000003002851)
 * [Reducing MIME type security risks](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)
 * [X-Content-Type-Options](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Content-Type-Options)
+* [一文带你了解 HTTP 黑科技](https://mp.weixin.qq.com/s/lNLlolE5F6FiFlHj40CPIg)
 
 #### Etag and If-None-Match
 * [Etag与HTTP缓存机制](http://blog.csdn.net/kikikind/article/details/6266101)
