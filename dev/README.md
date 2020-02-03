@@ -69,6 +69,7 @@
 * [Barcode and QR Code](barcode-qrcode/README.md)
 * [.NET Core](dot-net-core/README.md)
 * [WebRTC](webrtc/README.md)
+* [Video and Audio](video-and-audio/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
