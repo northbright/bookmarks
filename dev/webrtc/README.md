@@ -12,6 +12,7 @@
 * [tutorabc李炼-WebRTC媒体服务-TMS的演进](https://myslide.cn/slides/9148)
 * [WebRTC、标准测试、大前端技术、实时网络质量……RTC2018帮你“划重点”！](http://www.sohu.com/a/252856160_115128)
 * [WebRTC 学习资料整理一](https://www.jianshu.com/p/37007fe05215)
+* [取代 FlashP2P，H5P2P 将成为 WebP2P 主流](https://segmentfault.com/a/1190000015195994)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
