@@ -8,6 +8,7 @@
 * [WebRTC 开发实践：如何实现 SFU 服务器](https://blog.51cto.com/ticktick/2406583)
 * [WebRTC 开发实践：从一对一通话到多人会议](https://blog.51cto.com/ticktick/2348008)
 * [WebRTC RTCPeerConnection. One to rule them all, or one per stream? ](https://bloggeek.me/webrtc-rtcpeerconnection-one-per-stream/)
+* [拓课云陈勇冀：WebRTC改变在线教育的未来](http://m.sohu.com/a/255214139_99975535)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
