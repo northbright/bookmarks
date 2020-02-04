@@ -16,6 +16,7 @@
 * [NAT穿越下的STUN,TURN和ICE](https://segmentfault.com/a/1190000019978285)
 * [WebRTC网关服务器搭建：开源技术 vs 自行研发](https://my.oschina.net/u/3747019/blog/1861856)
 * [即构自研WebRTC网关服务器架构实践](https://blog.csdn.net/zego_0616/article/details/81181214)
+* [即构黄开宁：学习WebRTC最好的时机是现在](https://blog.csdn.net/weixin_34352449/article/details/87957539)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
