@@ -19,6 +19,7 @@
 * [即构黄开宁：学习WebRTC最好的时机是现在](https://blog.csdn.net/weixin_34352449/article/details/87957539)
 * [WebRTC直播课堂实践：实时互动是核心](https://zhuanlan.zhihu.com/p/88314721)
 * [聊一聊 WebRTC](https://zhuanlan.zhihu.com/p/85668891)
+* [网页端实时音视频技术WebRTC：看起来很美，但离生产应用还有多少坑要填？](https://zhuanlan.zhihu.com/p/32318186)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
