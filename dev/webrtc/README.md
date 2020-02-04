@@ -11,6 +11,7 @@
 * [拓课云陈勇冀：WebRTC改变在线教育的未来](http://m.sohu.com/a/255214139_99975535)
 * [tutorabc李炼-WebRTC媒体服务-TMS的演进](https://myslide.cn/slides/9148)
 * [WebRTC、标准测试、大前端技术、实时网络质量……RTC2018帮你“划重点”！](http://www.sohu.com/a/252856160_115128)
+* [WebRTC 学习资料整理一](https://www.jianshu.com/p/37007fe05215)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
