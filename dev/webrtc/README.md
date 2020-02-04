@@ -14,6 +14,7 @@
 * [WebRTC 学习资料整理一](https://www.jianshu.com/p/37007fe05215)
 * [取代 FlashP2P，H5P2P 将成为 WebP2P 主流](https://segmentfault.com/a/1190000015195994)
 * [NAT穿越下的STUN,TURN和ICE](https://segmentfault.com/a/1190000019978285)
+* [WebRTC网关服务器搭建：开源技术 vs 自行研发](https://my.oschina.net/u/3747019/blog/1861856)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
