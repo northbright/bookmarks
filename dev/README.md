@@ -70,6 +70,7 @@
 * [.NET Core](dot-net-core/README.md)
 * [WebRTC](webrtc/README.md)
 * [Video and Audio](video-and-audio/README.md)
+* [Socket.io](socket-io/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
