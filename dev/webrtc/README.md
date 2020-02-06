@@ -25,6 +25,7 @@
   * [使用WebRTC构建实时通信——概述及环境搭建（一）](https://zhuanlan.zhihu.com/p/33136828)
   * [使用WebRTC构建实时通信——从摄像头获取视频流（二）](https://zhuanlan.zhihu.com/p/33138361)
   * [使用WebRTC构建实时通信——RTCPeerConnection传输视频流（三）](https://zhuanlan.zhihu.com/p/33158209)
+  * [使用WebRTC构建实时通信——RTCDataChannel交换数据（四）](https://zhuanlan.zhihu.com/p/33158759)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
