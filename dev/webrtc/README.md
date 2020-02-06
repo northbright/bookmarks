@@ -23,6 +23,7 @@
 * [了不起的WebRTC：生态日趋完善，或将实时音视频技术白菜化](https://zhuanlan.zhihu.com/p/37663846)
 * [WebRTC技术交流专栏](https://zhuanlan.zhihu.com/webrtc)
   * [使用WebRTC构建实时通信——概述及环境搭建（一）](https://zhuanlan.zhihu.com/p/33136828)
+  * [使用WebRTC构建实时通信——从摄像头获取视频流（二）](https://zhuanlan.zhihu.com/p/33138361)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
