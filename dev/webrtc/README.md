@@ -32,6 +32,7 @@
   * [使用WebRTC构建实时通信——总结（八）](https://zhuanlan.zhihu.com/p/33161295)
 * WebRTC入门与提高
   * [WebRTC入门与提高1：WebRTC基础入门](https://zhuanlan.zhihu.com/p/93107411)
+  * [WebRTC入门与提高2：WebRTC开发环境](https://zhuanlan.zhihu.com/p/93112675)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
