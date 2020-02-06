@@ -29,6 +29,7 @@
   * [使用WebRTC构建实时通信——搭建信令服务交换消息（五）](https://zhuanlan.zhihu.com/p/33159399)
   * [使用WebRTC构建实时通信——对等连接和信令整合（六）](https://zhuanlan.zhihu.com/p/33160771)
   * [使用WebRTC构建实时通信——data channel共享照片（七）](https://zhuanlan.zhihu.com/p/33161216)
+  * [使用WebRTC构建实时通信——总结（八）](https://zhuanlan.zhihu.com/p/33161295)
 
 ## Demo
 * [RTCStartupDemo](https://github.com/Jhuster/RTCStartupDemo)
