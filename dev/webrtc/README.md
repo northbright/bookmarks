@@ -47,3 +47,4 @@
 * [webrtc笔记(1): 基于coturn项目的stun/turn服务器搭建](https://www.cnblogs.com/yjmyzz/p/how-to-install-coturn-on-ubuntu.html)
 * [Turnserver服务器搭建](https://yq.aliyun.com/articles/670085)
 * [webRTC中的coturn服务安装及常见问题](https://blog.csdn.net/qq_35432904/article/details/103808345)
+* [coturn(turn)服务器搭建注意事项](https://www.jianshu.com/p/9f98042ac0f6)
