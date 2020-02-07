@@ -11,3 +11,4 @@
 * [腾讯课堂](https://ke.qq.com/)
   * [如何在腾讯课堂内授课？](https://zhuanlan.zhihu.com/p/84655856)
   * [如何看待腾讯课堂App？](https://www.zhihu.com/question/360704358/answer/939583515)
+  * [腾讯课堂清退邢帅教育，又一次“潭州事件”？](https://www.sohu.com/a/123292097_548226)
