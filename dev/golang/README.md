@@ -77,6 +77,7 @@
 * [Go 开发关键技术指南 | Go 面向失败编程 (内含超全知识大图）](https://yq.aliyun.com/articles/740696)
 * [Go 开发关键技术指南 | 敢问路在何方？(内含超全知识大图）](https://yq.aliyun.com/articles/742169)
 * [Express作者TJ告别Node.js奔向Go](https://blog.csdn.net/bamboolsu/article/details/48439903)
+* [如何看待 TJ 宣布退出 Node.js 开发，转向 Go？](https://www.zhihu.com/question/24373004)
 
 #### Effective Go
 * [实效Go编程](https://go-zh.org/doc/effective_go.html)
