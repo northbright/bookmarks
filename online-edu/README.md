@@ -10,3 +10,4 @@
 ## 平台
 * [腾讯课堂](https://ke.qq.com/)
   * [如何在腾讯课堂内授课？](https://zhuanlan.zhihu.com/p/84655856)
+  * [如何看待腾讯课堂App？](https://www.zhihu.com/question/360704358/answer/939583515)
