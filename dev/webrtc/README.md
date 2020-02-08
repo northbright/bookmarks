@@ -52,3 +52,4 @@
 * [Trickle ICE cannot work on chrome 77 under window 10 #1227](https://github.com/webrtc/samples/issues/1227)
 * [trickle-ice]
   * <https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/>
+* [NAT, STUN, TURN, and ICE](https://www.thirdlane.com/blog/nat-stun-turn-and-ice)
