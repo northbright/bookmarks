@@ -37,8 +37,6 @@
   * [WebRTC入门与提高4：音视频采集和播放](https://zhuanlan.zhihu.com/p/93122564)
 * [WebRTC in the real world: STUN, TURN and signaling](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
 * [Getting Started with WebRTC](https://www.html5rocks.com/en/tutorials/webrtc/basics/)
-* [webrtc的DEMO环境搭建](https://blog.csdn.net/yunjinwang/article/details/78330315)
-* [5分钟快速打造WebRTC视频聊天](https://www.cnblogs.com/yubaolee/p/webrtc.html)
 
 ## Demo
 * [WebRTC samples](https://webrtc.github.io/samples/)
@@ -48,6 +46,9 @@
   * [SkyRTC-client](https://github.com/LingyuCoder/SkyRTC-client)
 * [AppRTC](https://appr.tc/)
 * [简单搭建simplewebrtc环境](https://blog.csdn.net/csj6346/article/details/81455663)
+* [webrtc的DEMO环境搭建](https://blog.csdn.net/yunjinwang/article/details/78330315)
+* [5分钟快速打造WebRTC视频聊天](https://www.cnblogs.com/yubaolee/p/webrtc.html)
+
 
 ## TURN, STUN, ICE
 * [webrtc笔记(1): 基于coturn项目的stun/turn服务器搭建](https://www.cnblogs.com/yjmyzz/p/how-to-install-coturn-on-ubuntu.html)
