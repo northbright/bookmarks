@@ -47,6 +47,7 @@
   * [SkyRTC](https://github.com/LingyuCoder/SkyRTC)
   * [SkyRTC-client](https://github.com/LingyuCoder/SkyRTC-client)
 * [AppRTC](https://appr.tc/)
+* [简单搭建simplewebrtc环境](https://blog.csdn.net/csj6346/article/details/81455663)
 
 ## TURN, STUN, ICE
 * [webrtc笔记(1): 基于coturn项目的stun/turn服务器搭建](https://www.cnblogs.com/yjmyzz/p/how-to-install-coturn-on-ubuntu.html)
