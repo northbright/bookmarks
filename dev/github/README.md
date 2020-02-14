@@ -36,6 +36,7 @@
 ## Github Pages
 * [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
 * [Can I create more than one repository for github pages?](https://stackoverflow.com/questions/15563685/can-i-create-more-than-one-repository-for-github-pages)
+* [About GitHub Pages](https://help.github.com/en/github/working-with-github-pages/about-github-pages)
 
 ## Citation
 * [How do you cite a Github repository?](https://academia.stackexchange.com/questions/14010/how-do-you-cite-a-github-repository)
