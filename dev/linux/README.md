@@ -18,3 +18,4 @@
 * [gcc](gcc/README.md)
 * [sudo](sudo/README.md)
 * [pkg-config](pkg-config/README.md)
+* [linker](linker/README.md)
