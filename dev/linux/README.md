@@ -19,3 +19,4 @@
 * [sudo](sudo/README.md)
 * [pkg-config](pkg-config/README.md)
 * [linker](linker/README.md)
+* [find](find/README.md)
