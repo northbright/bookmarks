@@ -9,6 +9,7 @@
 * [How To Compile Nginx from Source on a CentOS 6.4 x64 VPS](https://www.digitalocean.com/community/tutorials/how-to-compile-nginx-from-source-on-a-centos-6-4-x64-vps)
 * [nginx ./configure can't find openssl](https://unix.stackexchange.com/questions/23799/nginx-configure-cant-find-openssl)
 * [烂泥：nginx、php-fpm、mysql用户权限解析](http://blog.51cto.com/ilanni/1561097)
+* [Compile nginx with existing pcre?](https://stackoverflow.com/questions/11824772/compile-nginx-with-existing-pcre)
 
 ## HTTPS
 * [How To Secure Nginx with Let's Encrypt on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7)
