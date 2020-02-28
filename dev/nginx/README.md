@@ -34,6 +34,7 @@
 * [nginx 如何禁止 ip 直接访问](https://www.v2ex.com/t/239589)
 * [Optimal value for Nginx worker_connections](https://serverfault.com/questions/787919/optimal-value-for-nginx-worker-connections)
 * [Connection processing methods](http://nginx.org/en/docs/events.html)
+* [Centos设置Nginx反向代理绑定多个SSL(https)证书详解](https://blog.csdn.net/aerchi/article/details/84975644)
 
 ## Problems
 * [centos7 中关于 nginx 的权限问题](https://www.v2ex.com/t/171804)
