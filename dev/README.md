@@ -46,7 +46,7 @@
 * [SMS](sms/README.md)
 * [Site Reliability Engineering](sre/README.md)
 * [ASCII](ascii/README.md)
-* [SSL Certificate](ssl-certificate/README.md)
+* [SSL / TLS](ssl-tls/README.md)
 * [OpenSSL](openssl/README.md)
 * [SSH](ssh/README.md)
 * [Nginx](nginx/README.md)
