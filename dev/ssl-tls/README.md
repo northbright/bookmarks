@@ -9,3 +9,4 @@
 
 ## TLS 1.3
 * [An Overview of TLS 1.3 – Faster and More Secure](https://kinsta.com/blog/tls-1-3/)
+* [OpenSSL 1.1.1发布 正式支持TLS1.3](https://blog.51cto.com/13954109/2174110)
