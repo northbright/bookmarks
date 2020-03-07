@@ -71,3 +71,6 @@
 
 ## VirtualBox
 * [VirtualBox Network Settings: Complete Guide](https://www.nakivo.com/blog/virtualbox-network-setting-guide/)
+
+## FFmpeg
+* [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
