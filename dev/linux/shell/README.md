@@ -9,3 +9,6 @@
 * [Linux下" >/dev/null 2>&1 "相关知识说明 ](http://blog.csdn.net/sunrier/article/details/7695839)
 * [BASH: launch background process and check when it ends](http://unix.stackexchange.com/questions/76717/bash-launch-background-process-and-check-when-it-ends)
 * [sudo echo “something” >> /etc/privilegedFile doesn't work](https://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work)
+
+## Color
+* [How do I output coloured text to a Linux terminal?](https://stackoverflow.com/questions/2616906/how-do-i-output-coloured-text-to-a-linux-terminal)
