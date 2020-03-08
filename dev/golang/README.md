@@ -1,12 +1,12 @@
 # Golang 
 
-#### [Books](books/README.md)
+## [Books](books/README.md)
 
-#### China Resources
+## China Resources
 * [Get Golang Resources Hosted on Golang.org(获取golang.org/x/下的packages，运行Playground...)](china/fanqiang/README.md)
 * [Golang Sites in China(中国Golang资源网站)](china/sites/README.md)
 
-#### Category
+## Category
 * [Installation](installation/README.md)
 * [HTTP](http/README.md)
 * [Captcha](captcha/README.md)
@@ -58,10 +58,10 @@
 * [network](network/README.md)
 * [Socket.io](socket-io/README.md)
 
-#### Issues
+## Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
 
-#### Articles
+## Articles
 * [七牛首席布道师：Go不是在颠覆，就是在逆袭](http://www.csdn.net/article/2014-07-21/2820743)
 * [Go 1.6中值得关注的几个变化](http://tonybai.com/2016/02/21/some-changes-in-go-1-6/)
 * [Go: Readonly Variable](https://segmentfault.com/a/1190000005071763)
@@ -79,14 +79,14 @@
 * [Express作者TJ告别Node.js奔向Go](https://blog.csdn.net/bamboolsu/article/details/48439903)
 * [如何看待 TJ 宣布退出 Node.js 开发，转向 Go？](https://www.zhihu.com/question/24373004)
 
-#### Effective Go
+## Effective Go
 * [实效Go编程](https://go-zh.org/doc/effective_go.html)
 * [编写地道的Go代码](http://colobu.com/2017/02/07/write-idiomatic-golang-codes/)
 
-#### Blogs
+## Blogs
 * [雨痕学堂](https://segmentfault.com/u/qyuhen)
 * [Dave Cheney](http://dave.cheney.net/)
 * [Tony Bai](http://tonybai.com/articles/)
 
-#### Code Quality Check
+## Code Quality Check
 * [Go Report Card](https://github.com/gojp/goreportcard)
