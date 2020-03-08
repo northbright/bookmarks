@@ -6,6 +6,7 @@
 * <https://github.com/Neilpang/acme.sh>
 * [申请Let's Encrypt通配符HTTPS证书](https://my.oschina.net/kimver/blog/1634575)
 * [快速配置 HTTPS](https://blog.mynook.info/post/fast-way-to-configure-a-https-site)
+* [How To Read The SSL Certificate Info From the CLI](https://ma.ttias.be/how-to-read-ssl-certificate-info-from-the-cli/)
 
 ## TLS 1.3
 * [An Overview of TLS 1.3 – Faster and More Secure](https://kinsta.com/blog/tls-1-3/)
