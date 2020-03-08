@@ -12,3 +12,4 @@
 
 ## Color
 * [How do I output coloured text to a Linux terminal?](https://stackoverflow.com/questions/2616906/how-do-i-output-coloured-text-to-a-linux-terminal)
+* [How to change the color of your Linux terminal](https://opensource.com/article/19/9/linux-terminal-colors)
