@@ -11,9 +11,6 @@
 * [烂泥：nginx、php-fpm、mysql用户权限解析](http://blog.51cto.com/ilanni/1561097)
 * [Compile nginx with existing pcre?](https://stackoverflow.com/questions/11824772/compile-nginx-with-existing-pcre)
 
-## HTTPS
-* [How To Secure Nginx with Let's Encrypt on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7)
-
 ## Articles
 * [CentOS7安装维护Nginx](https://github.com/jaywcjlove/handbook/blob/master/CentOS/CentOS7%E5%AE%89%E8%A3%85%E7%BB%B4%E6%8A%A4Nginx.md)
 * [Example to extract an HttpOnly cookie and pass it on to a RESTful api as an OAuth Bearer token](https://stackoverflow.com/questions/26128412/how-to-extract-some-value-from-cookie-in-nginx)
@@ -36,6 +33,7 @@
 * [Connection processing methods](http://nginx.org/en/docs/events.html)
 
 ## SSL
+* [How To Secure Nginx with Let's Encrypt on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7)
 * [Centos设置Nginx反向代理绑定多个SSL(https)证书详解](https://blog.csdn.net/aerchi/article/details/84975644)
 * [Nginx开启SSL支持HTTPS访问(自签名方法)](https://my.oschina.net/u/2306127/blog/1929900)
 
