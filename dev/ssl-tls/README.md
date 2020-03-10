@@ -8,6 +8,7 @@
 * [快速配置 HTTPS](https://blog.mynook.info/post/fast-way-to-configure-a-https-site)
 * [How To Read The SSL Certificate Info From the CLI](https://ma.ttias.be/how-to-read-ssl-certificate-info-from-the-cli/)
 * [How to create a self-signed certificate with OpenSSL](https://stackoverflow.com/questions/10175812/how-to-create-a-self-signed-certificate-with-openssl)
+* [How do I display the contents of a SSL certificate?](https://support.qacafe.com/knowledge-base/how-do-i-display-the-contents-of-a-ssl-certificate/)
 
 ## TLS 1.3
 * [An Overview of TLS 1.3 – Faster and More Secure](https://kinsta.com/blog/tls-1-3/)
