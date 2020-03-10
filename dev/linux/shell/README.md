@@ -13,3 +13,6 @@
 ## Color
 * [How do I output coloured text to a Linux terminal?](https://stackoverflow.com/questions/2616906/how-do-i-output-coloured-text-to-a-linux-terminal)
 * [How to change the color of your Linux terminal](https://opensource.com/article/19/9/linux-terminal-colors)
+
+## Variables
+* [Assigning default values to shell variables with a single command in bash](https://stackoverflow.com/questions/2013547/assigning-default-values-to-shell-variables-with-a-single-command-in-bash)
