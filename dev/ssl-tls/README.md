@@ -7,6 +7,7 @@
 * [申请Let's Encrypt通配符HTTPS证书](https://my.oschina.net/kimver/blog/1634575)
 * [快速配置 HTTPS](https://blog.mynook.info/post/fast-way-to-configure-a-https-site)
 * [How To Read The SSL Certificate Info From the CLI](https://ma.ttias.be/how-to-read-ssl-certificate-info-from-the-cli/)
+* [How to create a self-signed certificate with OpenSSL](https://stackoverflow.com/questions/10175812/how-to-create-a-self-signed-certificate-with-openssl)
 
 ## TLS 1.3
 * [An Overview of TLS 1.3 – Faster and More Secure](https://kinsta.com/blog/tls-1-3/)
