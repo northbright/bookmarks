@@ -14,3 +14,4 @@
 
 ## Diffie-Hellman 
 * [ssl Diffie-Hellman弱密码问题](https://www.cnblogs.com/liuroy/p/7375241.html)
+* [为什么Wireshark无法解开使用Diffie-Hellman加密的SSL数据](https://xts.so/network/why-wireshark-cannot-decrypt-ssl-content-that-encrypt-with-diffie-hellman-algorithm.html)
