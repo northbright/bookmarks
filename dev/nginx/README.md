@@ -37,6 +37,7 @@
 * [Centos设置Nginx反向代理绑定多个SSL(https)证书详解](https://blog.csdn.net/aerchi/article/details/84975644)
 * [Nginx开启SSL支持HTTPS访问(自签名方法)](https://my.oschina.net/u/2306127/blog/1929900)
 * [How do you score A+ with 100 on all categories on SSL Labs test with Let's Encrypt and Nginx?](https://stackoverflow.com/questions/41930060/how-do-you-score-a-with-100-on-all-categories-on-ssl-labs-test-with-lets-encry)
+* [How To Create a Self-Signed SSL Certificate for Nginx in Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04)
 
 ## Problems
 * [centos7 中关于 nginx 的权限问题](https://www.v2ex.com/t/171804)
