@@ -47,3 +47,6 @@
 * [Nginx - wordpress in a subdirectory, what data should be passed?](https://stackoverflow.com/questions/6154879/nginx-wordpress-in-a-subdirectory-what-data-should-be-passed)
 * [Nginx](https://wordpress.org/support/article/nginx/)
 * [WordPress](https://www.nginx.com/resources/wiki/start/topics/recipes/wordpress/)
+
+## Permissions
+* [Docker Nginx worker process runs as non-root user but still can access a file owned by root](https://stackoverflow.com/questions/52884111/docker-nginx-worker-process-runs-as-non-root-user-but-still-can-access-a-file-ow)
