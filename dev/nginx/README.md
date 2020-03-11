@@ -32,7 +32,7 @@
 * [Optimal value for Nginx worker_connections](https://serverfault.com/questions/787919/optimal-value-for-nginx-worker-connections)
 * [Connection processing methods](http://nginx.org/en/docs/events.html)
 
-## SSL
+## SSL / TLS
 * [How To Secure Nginx with Let's Encrypt on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7)
 * [Centos设置Nginx反向代理绑定多个SSL(https)证书详解](https://blog.csdn.net/aerchi/article/details/84975644)
 * [Nginx开启SSL支持HTTPS访问(自签名方法)](https://my.oschina.net/u/2306127/blog/1929900)
