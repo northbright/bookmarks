@@ -21,3 +21,4 @@
 
 ## Test
 * [SSL Labs](https://www.ssllabs.com/)
+* [SSL Server Rating Guide](https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide)
