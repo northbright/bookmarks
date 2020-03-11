@@ -40,6 +40,7 @@
 * [How To Create a Self-Signed SSL Certificate for Nginx in Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04)
 * [Supported Cipher Suites by Protocol](https://developers.cloudflare.com/ssl/ssl-tls/cipher-suites/)
 * [Nginx开启TLSv1.3和HTTP/2](https://www.acgist.com/article/541.html)
+* [Perfect SSL Labs score with nginx and TLS 1.3?](https://serverfault.com/questions/981397/perfect-ssl-labs-score-with-nginx-and-tls-1-3)
 
 ## Problems
 * [centos7 中关于 nginx 的权限问题](https://www.v2ex.com/t/171804)
