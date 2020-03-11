@@ -50,3 +50,4 @@
 
 ## Permissions
 * [Docker Nginx worker process runs as non-root user but still can access a file owned by root](https://stackoverflow.com/questions/52884111/docker-nginx-worker-process-runs-as-non-root-user-but-still-can-access-a-file-ow)
+* [why do nginx process run with user nobody](https://serverfault.com/questions/534497/why-do-nginx-process-run-with-user-nobody)1
