@@ -1,7 +1,6 @@
 # ios
 
 ## Category
-* [Swift](swift/README.md)
 * [React-Native](react-native/README.md)
 * [Push Notification](push-notification/README.md)
 * [Enterprise](enterprise/README.md)
