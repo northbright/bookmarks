@@ -16,3 +16,6 @@
 
 ## Variables
 * [Assigning default values to shell variables with a single command in bash](https://stackoverflow.com/questions/2013547/assigning-default-values-to-shell-variables-with-a-single-command-in-bash)
+
+## Pipe
+* [What's the difference between `curl | sh` and `sh -c “$(curl)”`?](https://unix.stackexchange.com/questions/339237/whats-the-difference-between-curl-sh-and-sh-c-curl)
