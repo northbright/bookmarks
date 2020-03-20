@@ -6,6 +6,7 @@
 * [为什么不能打开我的 Excel 文件？](https://support.office.com/zh-cn/article/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E6%89%93%E5%BC%80%E6%88%91%E7%9A%84-Excel-%E6%96%87%E4%BB%B6%EF%BC%9F-2daa6bd6-8db5-4521-9f37-7e23b3e4bdab?ui=zh-CN&rs=zh-CN&ad=CN)
 * [Office for iPad - "Word cannot open the document: user does not have access privileges"](http://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_imobile/office-for-ipad-word-cannot-open-the-document-user/4f48b09f-5d28-4e2a-8aea-5024fe3de819)
 * [世纪互联发票管理系统](http://fapiao.cloud.21vianet.com/EmailAcount/LoginView)
+* [由世纪互联运营的 Office 365 的 POP 和 IMAP 访问设置](https://support.office.com/zh-cn/article/%E7%94%B1%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E8%BF%90%E8%90%A5%E7%9A%84-Office-365-%E7%9A%84-POP-%E5%92%8C-IMAP-%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE-ca51235d-afc5-4d7d-843c-3616a37d5771)
 
 ## Office
 * Excel
