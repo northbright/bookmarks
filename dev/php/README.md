@@ -28,6 +28,7 @@
 * [linux7下centos6.8版本完全编译php7.17与nginx --后续，配置nginx.conf与php-fpm.conf,www.conf](https://blog.csdn.net/youcijibi/article/details/76546640)
 * [PHP-php-fpm配置优化](https://www.cnblogs.com/cocoliu/p/8566193.html)
 * [PHP FastCGI Example](https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/)
+* [Function Reference](https://www.php.net/manual/en/funcref.php)
 
 ## MySQL Drivers
 * [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
