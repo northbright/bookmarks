@@ -29,6 +29,7 @@
 * [PHP-php-fpm配置优化](https://www.cnblogs.com/cocoliu/p/8566193.html)
 * [PHP FastCGI Example](https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/)
 * [Function Reference](https://www.php.net/manual/en/funcref.php)
+* [Recompile PHP with OpenSSL on CentOS](https://stackoverflow.com/questions/45697976/recompile-php-with-openssl-on-centos)
 
 ## MySQL Drivers
 * [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
