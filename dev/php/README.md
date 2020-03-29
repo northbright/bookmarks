@@ -30,9 +30,12 @@
 * [PHP FastCGI Example](https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/)
 * [Function Reference](https://www.php.net/manual/en/funcref.php)
 * [Recompile PHP with OpenSSL on CentOS](https://stackoverflow.com/questions/45697976/recompile-php-with-openssl-on-centos)
-* [checking whether to build with LIBXML support](https://bugs.php.net/bug.php?id=79135)
-* [--with-openssl no longer accepts a directory](https://bugs.php.net/bug.php?id=79401)
-* [Migration to pkg-config](https://www.php.net/manual/en/migration74.other-changes.php#migration74.other-changes.pkg-config)
+
+
+## Compile PHP Source(PHP 7.4.x and later)
+  * [checking whether to build with LIBXML support](https://bugs.php.net/bug.php?id=79135)
+  * [--with-openssl no longer accepts a directory](https://bugs.php.net/bug.php?id=79401)
+  * [Migration to pkg-config](https://www.php.net/manual/en/migration74.other-changes.php#migration74.other-changes.pkg-config)
 
 ## MySQL Drivers
 * [What is the difference between MySQL, MySQLi and PDO? [closed]](https://stackoverflow.com/questions/2190737/what-is-the-difference-between-mysql-mysqli-and-pdo)
