@@ -30,3 +30,4 @@
   * [Privilege separation #2440](https://github.com/acmesh-official/acme.sh/issues/2440#issuecomment-536139894)
   * [不能自动续期，请教该如何处理 #2062](https://github.com/acmesh-official/acme.sh/issues/2062#issuecomment-457890843)
   * [Permission denied problem in standalone mode #2622](https://github.com/acmesh-official/acme.sh/issues/2622)
+  * [Can't run with sudo or as root #2124](https://github.com/acmesh-official/acme.sh/issues/2124)
