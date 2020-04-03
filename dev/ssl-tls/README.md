@@ -32,3 +32,4 @@
   * [Permission denied problem in standalone mode #2622](https://github.com/acmesh-official/acme.sh/issues/2622)
   * [Can't run with sudo or as root #2124](https://github.com/acmesh-official/acme.sh/issues/2124)
   * [权限与目录问题 #750](https://github.com/acmesh-official/acme.sh/issues/750)
+  * [通过(--standalone)方式安装证书 - 【续签】 #2449](https://github.com/acmesh-official/acme.sh/issues/2449)
