@@ -26,3 +26,6 @@
 
 ## Let's Encrypt
 * [使用 acme.sh 给 Nginx 安装 Let’ s Encrypt 提供的免费 SSL 证书](https://ruby-china.org/topics/31983)
+* `sudo` restriction
+  * [Privilege separation #2440](https://github.com/acmesh-official/acme.sh/issues/2440#issuecomment-536139894)
+  * [不能自动续期，请教该如何处理 #2062](https://github.com/acmesh-official/acme.sh/issues/2062#issuecomment-457890843)
