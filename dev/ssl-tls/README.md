@@ -24,7 +24,7 @@
 * [SSL Labs](https://www.ssllabs.com/)
 * [SSL Server Rating Guide](https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide)
 
-## Let's Encrypt
+## acme.sh
 * [使用 acme.sh 给 Nginx 安装 Let’ s Encrypt 提供的免费 SSL 证书](https://ruby-china.org/topics/31983)
 * `sudo` restriction
   * [Privilege separation #2440](https://github.com/acmesh-official/acme.sh/issues/2440#issuecomment-536139894)
