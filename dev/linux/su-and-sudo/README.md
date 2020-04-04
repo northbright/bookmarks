@@ -8,3 +8,4 @@
 * [Non-privileged, non-root, user to start or restart webserver server such as nginx without root or sudo](https://stackoverflow.com/questions/21830644/non-privileged-non-root-user-to-start-or-restart-webserver-server-such-as-ngin)
 
 ## su
+* [Why do we use su - and not just su?](https://unix.stackexchange.com/questions/7013/why-do-we-use-su-and-not-just-su)
