@@ -16,7 +16,7 @@
 * [Time](time/README.md)
 * [make](make/README.md)
 * [gcc](gcc/README.md)
-* [sudo](sudo/README.md)
+* [su and sudo](su-and-sudo/README.md)
 * [pkg-config](pkg-config/README.md)
 * [linker](linker/README.md)
 * [find](find/README.md)
