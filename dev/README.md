@@ -76,6 +76,7 @@
 * [Apple Developer](apple-developer/README.md)
 * [font](font/README.md)
 * [CDN](cdn/README.md)
+* [wget](wget/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
