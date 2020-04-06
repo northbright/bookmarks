@@ -39,6 +39,9 @@
   * [Schiff MoveFree和Blackmore骨维力哪个更好？](https://www.zhihu.com/question/278726830)
   * [Schiff Move Free维骨力这个牌子的保健效果怎么样，是要给中老年人群服用的。](https://www.zhihu.com/question/46399868)
 
+* 饮食
+  * [中科院等团队研究证实七分饱可延缓衰老 逆转超过1/2衰老细胞](https://www.sohu.com/a/385608566_100191015)
+
 ## 厨艺
 * [怎么炒一盘好的番茄炒蛋？](https://www.zhihu.com/question/28685187/answer/41906650)
 
