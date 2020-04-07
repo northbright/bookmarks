@@ -77,6 +77,7 @@
 * [font](font/README.md)
 * [CDN](cdn/README.md)
 * [wget](wget/README.md)
+* [curl](curl/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
