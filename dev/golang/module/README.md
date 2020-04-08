@@ -6,3 +6,4 @@
 * [Go module 再回顾](https://colobu.com/2019/09/23/review-go-module-again/)
 * [五分钟学会使用 go modules（含在家办公使用技巧）](https://gocn.vip/topics/9820)
 * [干货满满的 Go Modules 和 goproxy.cn](https://gocn.vip/topics/9484)
+* [Go Modules 终极入门](https://gocn.vip/topics/9904)
