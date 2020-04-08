@@ -19,3 +19,6 @@
 
 ## Pipe
 * [What's the difference between `curl | sh` and `sh -c “$(curl)”`?](https://unix.stackexchange.com/questions/339237/whats-the-difference-between-curl-sh-and-sh-c-curl)
+
+## Login and Non-login
+* [linux中的login shell和non-login shell重点解析](https://blog.csdn.net/lws123253/article/details/89315218)
