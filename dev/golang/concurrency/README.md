@@ -20,6 +20,7 @@
 * [Golang channels tutorial](http://guzalexander.com/2013/12/06/golang-channels-tutorial.html)
 * [Go by Example: Closing Channels](https://gobyexample.com/closing-channels)
 * [Go by Example: Channel Directions](https://gobyexample.com/channel-directions)
+* [What's the point of one-way channels in Go?](https://stackoverflow.com/questions/13596186/whats-the-point-of-one-way-channels-in-go)
 
 ## Catch Return Values of Goroutines
 * [Catching return values from goroutines](https://stackoverflow.com/questions/20945069/catching-return-values-from-goroutines)
