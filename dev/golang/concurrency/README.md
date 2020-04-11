@@ -18,6 +18,7 @@
 * [throw: all goroutines are asleep - deadlock](https://stackoverflow.com/questions/12398359/throw-all-goroutines-are-asleep-deadlock)
 * [Part 22: Channels](https://golangbot.com/channels/)
 * [Golang channels tutorial](http://guzalexander.com/2013/12/06/golang-channels-tutorial.html)
+* [Go by Example: Closing Channels](https://gobyexample.com/closing-channels)
 
 ## Catch Return Values of Goroutines
 * [Catching return values from goroutines](https://stackoverflow.com/questions/20945069/catching-return-values-from-goroutines)
