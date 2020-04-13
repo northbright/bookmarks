@@ -75,3 +75,6 @@
 
 ## FFmpeg
 * [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
+
+## iMovie
+* [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
