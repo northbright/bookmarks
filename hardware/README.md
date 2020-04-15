@@ -30,3 +30,4 @@
 ## Dock & Dongle
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
 * [千万别买绿联的转接头（九合一）特别是 16 寸 MBP](https://v2ex.com/t/626049)
+* [绿联 hub 导致 USB 配件已经停用 设备无法充电](https://v2ex.com/t/628178)
