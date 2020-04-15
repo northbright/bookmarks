@@ -45,6 +45,9 @@
 * 电子血压计
   * [欧姆龙电子血压计哪款好?](https://www.zhihu.com/question/21257211)
 
+* 颈椎
+  * [有没有推荐的颈椎按摩器，最近脖子后颈椎疼死了](https://v2ex.com/t/662588)
+
 ## 厨艺
 * [怎么炒一盘好的番茄炒蛋？](https://www.zhihu.com/question/28685187/answer/41906650)
 
