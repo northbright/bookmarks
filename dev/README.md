@@ -73,7 +73,7 @@
 * [Video and Audio](video-and-audio/README.md)
 * [Socket.io](socket-io/README.md)
 * [macOS](macos/README.md)
-* [Apple Developer](apple-developer/README.md)
+* [App Store](app-store/README.md)
 * [font](font/README.md)
 * [CDN](cdn/README.md)
 * [wget](wget/README.md)
