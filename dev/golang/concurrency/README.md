@@ -10,6 +10,7 @@
 * [还有比GoLang Channel更好的方式代替Mutex吗？](https://www.zhihu.com/question/27256570)-[唐生的回答](https://www.zhihu.com/question/27256570/answer/35889022)包含了[sync.Cond](https://godoc.org/sync#Cond)的用法
 * [Golang 互斥锁内部实现](https://zhuanlan.zhihu.com/p/27608263)
 * [Is there some elegant way to pause & resume any other goroutine in golang?](https://stackoverflow.com/questions/16101409/is-there-some-elegant-way-to-pause-resume-any-other-goroutine-in-golang/16102304#16102304)
+* [Closures in go routines have incorrect scope unless the variables are copied](https://stackoverflow.com/questions/24196200/closures-in-go-routines-have-incorrect-scope-unless-the-variables-are-copied)
 
 ## Limiting Concurrency
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
