@@ -2,6 +2,7 @@
 
 ## Memory Allocation
 * [Difference between malloc and calloc?](http://stackoverflow.com/questions/1538420/difference-between-malloc-and-calloc)
+* [[译] Ｃ程序员该知道的内存知识 (1)](https://v2ex.com/t/668069#reply2)
 
 ## stdout, stderr
 * [stdin、stdout、stderr 标准流本质上到底是什么？](https://www.zhihu.com/question/24030687)
