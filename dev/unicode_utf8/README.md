@@ -6,6 +6,7 @@
 * [速解UTF-8中文字符，方法和原理](http://jsfox.cn/blog/others/quick-translate-chinese-utf8-by-unicode.html)
 * [UTF-8编码占几个字节? ](http://blog.csdn.net/bluetjs/article/details/52936943)
 * [在UTF-8中，一个汉字为什么需要三个字节？](http://www.cnblogs.com/web21/p/6092414.html)
+* [UTF-8：一些好像没什么用的冷知识](https://mp.weixin.qq.com/s/G5CbBdVNjwWCRYoZHQ8KHQ)
 
 ## Unicode
 * [Unicode General_Category Values](http://www.unicode.org/reports/tr44/#GC_Values_Table)
