@@ -11,6 +11,7 @@
 * [大蒜养花原来这么好用？捣碎后，就变成驱虫大神！](https://xw.qq.com/cmsid/20190909A06VSF00)
 * [家里的植物长虫子怎么办？教你自制“杀虫水”，轻轻一喷去无踪！](https://baijiahao.baidu.com/s?id=1608476495222318176)
 * [花盆里小黑飞不断？学会3个“绝招”，1次统统消灭，效果看得见](https://www.sohu.com/a/390982129_120652432)
+* [与小黑飞的战争](http://www.tahua.net/forum.php?mod=viewthread&tid=363886)
 
 ## 百科
 * [中文百科](http://m.zwbk.org/)
