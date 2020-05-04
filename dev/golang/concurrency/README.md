@@ -12,6 +12,7 @@
 * [Is there some elegant way to pause & resume any other goroutine in golang?](https://stackoverflow.com/questions/16101409/is-there-some-elegant-way-to-pause-resume-any-other-goroutine-in-golang/16102304#16102304)
 * [Closures in go routines have incorrect scope unless the variables are copied](https://stackoverflow.com/questions/24196200/closures-in-go-routines-have-incorrect-scope-unless-the-variables-are-copied)
 * [Using goroutines on loop iterator variables](https://github.com/golang/go/wiki/CommonMistakes#using-goroutines-on-loop-iterator-variables)
+* [goroutine hangs at runtime.Gosched() #12553](https://github.com/golang/go/issues/12553)
 
 ## Limiting Concurrency
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
