@@ -59,3 +59,4 @@
 
 ## 饭店
 * [【记忆】上海西餐老字号的历史，有你记忆中的味道吗~](https://mp.weixin.qq.com/s/M0SvDT6VmmYpxoQwK7vJWg)
+* [【记忆】上海老字号中餐馆往事，哪个是你最怀念的味道?](https://mp.weixin.qq.com/s/Kk3agTBYhwV872Shy1ESqA)
