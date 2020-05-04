@@ -14,6 +14,8 @@
 * [Using goroutines on loop iterator variables](https://github.com/golang/go/wiki/CommonMistakes#using-goroutines-on-loop-iterator-variables)
 * [goroutine hangs at runtime.Gosched() #12553](https://github.com/golang/go/issues/12553)
 * [Performance without the event loop](https://dave.cheney.net/2015/08/08/performance-without-the-event-loop)
+* [Go: pausing a goroutine](https://stackoverflow.com/questions/31730244/go-pausing-a-goroutine)
+* [Understanding goroutines](https://stackoverflow.com/questions/10095751/understanding-goroutines)
 
 ## Limiting Concurrency
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
