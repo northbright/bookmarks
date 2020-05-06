@@ -70,6 +70,9 @@
 ## Mac OS
 * [如何安装 macOS](https://support.apple.com/zh-cn/HT204904)
 
+## iOS
+* [如何禁止 iOS 安装描述文件？访问限制里找不到这个设置…](https://www.v2ex.com/t/288436)
+
 ## VirtualBox
 * [VirtualBox Network Settings: Complete Guide](https://www.nakivo.com/blog/virtualbox-network-setting-guide/)
 
