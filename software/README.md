@@ -33,6 +33,9 @@
     * [用MDM远程管理iPhone和iPad](https://www.jianshu.com/p/a9d2891cbb9c)
 * [如何禁止 iOS 安装描述文件？访问限制里找不到这个设置…](https://www.v2ex.com/t/288436)
 
+## iPad OS
+* [iPad版，怎么把图片批量做成PDF文件？](https://www.zhihu.com/question/380949981)
+
 ## Data Recovery
 * [19 Free Data Recovery Software Tools](https://www.lifewire.com/free-data-recovery-software-tools-2622893)
 
