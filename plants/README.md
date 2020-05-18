@@ -12,6 +12,7 @@
 * [家里的植物长虫子怎么办？教你自制“杀虫水”，轻轻一喷去无踪！](https://baijiahao.baidu.com/s?id=1608476495222318176)
 * [花盆里小黑飞不断？学会3个“绝招”，1次统统消灭，效果看得见](https://www.sohu.com/a/390982129_120652432)
 * [与小黑飞的战争](http://www.tahua.net/forum.php?mod=viewthread&tid=363886)
+* [我家今年已经没有小黑飞了！](http://www.tahua.net/thread-366850-1-1.html)
 
 ## 百科
 * [中文百科](http://m.zwbk.org/)
