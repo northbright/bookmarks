@@ -36,3 +36,4 @@
 * [买了 3 个月的 16 寸 macbook 一个接口不能充电传输数据，系统频繁崩溃重启，售后说要换主板](https://v2ex.com/t/661654)
 * [How to find cause of high kernel_task cpu usage?](https://apple.stackexchange.com/questions/363337/how-to-find-cause-of-high-kernel-task-cpu-usage/363933#363933)
 * [Mac过热降频的罪魁祸首，竟是插到了左边的Type-C口](https://zhuanlan.zhihu.com/p/136761922)
+* [MBP vs iMac ，不考虑移动性，是否 iMac 27 比 MacBook Pro 16 更强？](https://www.v2ex.com/t/647761)
