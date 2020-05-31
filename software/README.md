@@ -32,6 +32,7 @@
 * MDM
     * [用MDM远程管理iPhone和iPad](https://www.jianshu.com/p/a9d2891cbb9c)
 * [如何禁止 iOS 安装描述文件？访问限制里找不到这个设置…](https://www.v2ex.com/t/288436)
+* [iOS 平台有哪些优秀的拼图应用？各自的使用体验如何？](https://www.zhihu.com/question/20939600/answer/16665161)
 
 ## iPad OS
 * [iPad版，怎么把图片批量做成PDF文件？](https://www.zhihu.com/question/380949981)
