@@ -76,3 +76,6 @@
 ## WMI
 * [Remote WMI Access denied Error - 0x80070005](https://social.technet.microsoft.com/Forums/en-US/71b1bfe0-2587-47de-942a-4386b85bb1bf/remote-wmi-access-denied-error-0x80070005)
 * [WMI Troubleshooting](https://docs.microsoft.com/zh-cn/windows/win32/wmisdk/wmi-troubleshooting)
+
+## Issues
+* [win10 Initpki.dll加载失败](https://answers.microsoft.com/zh-hans/windows/forum/all/win10/912bc3bc-9879-44da-8942-128fba9ffb94)
