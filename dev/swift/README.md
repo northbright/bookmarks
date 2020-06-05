@@ -8,3 +8,7 @@
 
 ## WebSocket
 * [State of Swift WebSockets](https://blog.rocketinsights.com/state-of-swift-websockets/)
+
+## SwiftUI
+* Courses
+  * [2020 Stanford iOS开发 C193P 中英字幕 - Course Logistics and Introduction to SwiftUI](https://www.bilibili.com/video/BV1nT4y1u7SB/)
