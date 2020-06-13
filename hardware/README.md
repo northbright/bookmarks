@@ -37,3 +37,6 @@
 * [How to find cause of high kernel_task cpu usage?](https://apple.stackexchange.com/questions/363337/how-to-find-cause-of-high-kernel-task-cpu-usage/363933#363933)
 * [Mac过热降频的罪魁祸首，竟是插到了左边的Type-C口](https://zhuanlan.zhihu.com/p/136761922)
 * [MBP vs iMac ，不考虑移动性，是否 iMac 27 比 MacBook Pro 16 更强？](https://www.v2ex.com/t/647761)
+
+## 光猫
+* [上海电信更换光猫的相关问题](https://v2ex.com/t/681033)
