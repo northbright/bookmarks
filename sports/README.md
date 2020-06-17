@@ -11,3 +11,4 @@
 * [李宁铁系列袋鼠皮TF足球鞋](http://www.enjoyz.com/pingce/picture/2018/18777.html)
 * [这些TF战靴值得“屠龙脚”EZer考虑](http://www.enjoyz.com/pingce/daogou/2018/19639.html)
 * [本土真旗舰 李宁铁系列袋鼠皮TF足球鞋赏析](http://www.ouou.cn/test/2018/8859.html)
+* [耐克发布Fresh React Gato IC Colourway小场地室内五人制足球鞋](https://baijiahao.baidu.com/s?id=1661148591393897595)
