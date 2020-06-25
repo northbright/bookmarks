@@ -13,3 +13,4 @@
 * [本土真旗舰 李宁铁系列袋鼠皮TF足球鞋赏析](http://www.ouou.cn/test/2018/8859.html)
 * [耐克发布Fresh React Gato IC Colourway小场地室内五人制足球鞋](https://baijiahao.baidu.com/s?id=1661148591393897595)
 * [新配色耐克Premier II Sala小场足球鞋曝光](https://www.dongqiudi.com/news/1376026.html)
+* [【足球鞋测评】Gato强势回归！一款能代替tf的ic！能踢球也能压马路，一鞋多用的完美诠释！来看看这双鞋到底怎么样吧！](https://www.bilibili.com/video/BV1oZ4y1p7gS)
