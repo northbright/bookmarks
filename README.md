@@ -19,3 +19,4 @@ Bookmarks of development and more...
 * [在线教育](online-edu/README.md)
 * [Arts（艺术）](arts/README.md)
 * [Websites](websites/README.md)
+* [Music](music/README.md)
