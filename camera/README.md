@@ -1,6 +1,6 @@
 # 相机
 
-#### 理光
+## 理光
 * GR
   * [APS-C搭载‧RICOH GR 全新的开始](http://www.5i01.cn/newsdetail.php?id=13473)
   * [理光GR和RX100 m3 如何选择？](https://www.zhihu.com/question/27144340)
@@ -10,7 +10,7 @@
   * [裤兜大底大光圈便携机的升级—GRII—更新高感彩照原片/充电宝充电](http://forum.xitek.com/thread-1493283-1-1-2.html)
   * [微幅进化 魅力依旧‧RICOH GR II](http://www.5i01.cn/newsdetail.php?id=17407)
 
-#### SONY
+## SONY
 * RX100M3
   * [如何评价 RX100M3?](https://www.zhihu.com/question/23805036)
   * [Sony RX100 专用防滑胶垫开箱](https://www.chiphell.com/thread-537528-1-1.html)
