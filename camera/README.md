@@ -25,4 +25,4 @@
   * [索尼黑卡【RX10III】使用心得和图片交流区](http://forum.xitek.com/forum-viewthread-tid-1579918-extra-page%3D1-ordertype-2-t-1485777210.html)
 
 ## M43
-* [我的M43旅程 -- DG15 + 12-100](http://forum.xitek.com/forum.php?mod=viewthread&tid=1356170&page=30&ordertype=2#pid80875104)
+* [我的M43旅程 -- DG15 + 12-100](http://forum.xitek.com/forum.php?mod=viewthread&tid=1356170&ordertype=2)
