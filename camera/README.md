@@ -26,3 +26,4 @@
 
 ## M43
 * [我的M43旅程 -- DG15 + 12-100](http://forum.xitek.com/forum.php?mod=viewthread&tid=1356170&ordertype=2)
+* [奥林巴斯75mm F1.8 （43/M43定焦镜）](http://forum.xitek.com/forum-viewthread-tid-1298892-extra-page%3D1-ordertype-2-t-1593668755.html)
