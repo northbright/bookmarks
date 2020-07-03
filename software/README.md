@@ -7,6 +7,7 @@
 * [Office for iPad - "Word cannot open the document: user does not have access privileges"](http://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_imobile/office-for-ipad-word-cannot-open-the-document-user/4f48b09f-5d28-4e2a-8aea-5024fe3de819)
 * [世纪互联发票管理系统](http://fapiao.cloud.21vianet.com/EmailAcount/LoginView)
 * [由世纪互联运营的 Office 365 的 POP 和 IMAP 访问设置](https://support.office.com/zh-cn/article/%E7%94%B1%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E8%BF%90%E8%90%A5%E7%9A%84-Office-365-%E7%9A%84-POP-%E5%92%8C-IMAP-%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE-ca51235d-afc5-4d7d-843c-3616a37d5771)
+* ["很抱歉，您的组织中的另一个帐户已登录此计算机"](https://docs.microsoft.com/zh-cn/office/troubleshoot/office-suite-issues/another-account-already-signed-in)
 
 ## Office
 * Excel
