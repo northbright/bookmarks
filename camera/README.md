@@ -40,3 +40,4 @@
 * [关于新到手的XE3遇到的一些问题](http://forum.xitek.com/forum-viewthread-tid-1713238-extra-page%3D1-ordertype-2-t-1594011549.html)
 * [想来个12-40，求推荐个靠谱的淘宝店](http://forum.xitek.com/forum-viewthread-tid-1720930-extra--ordertype-2-t-1594011547.html)
 * [请问各位买镜头有没有好一点的淘宝店介绍](http://forum.xitek.com/forum-viewthread-tid-1782925-extra-page%3D1-ordertype-2-t-1594011547.html)
+* [被奥林巴斯东众电子旗舰店给坑了](http://forum.xitek.com/forum-viewthread-tid-1618937-extra--ordertype-2-t-1594013021.html)
