@@ -35,3 +35,6 @@
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
 * [请问肯高，卡色，nisi三种uv到底哪种比较好？](http://forum.xitek.com/thread-1177284-1-1-2.html)
 * [75mm f1.8的抗眩光怎么样?似乎不太理想?](http://forum.xitek.com/forum-viewthread-tid-1792583-ordertype-2-highlight-75.html)
+
+## 淘宝店
+* [关于新到手的XE3遇到的一些问题](http://forum.xitek.com/forum-viewthread-tid-1713238-extra-page%3D1-ordertype-2-t-1594011549.html)
