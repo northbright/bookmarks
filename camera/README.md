@@ -44,3 +44,4 @@
 
 ## 摄影技术
 * [一直没搞清，曝光补偿和ISO有什么区别](https://forum.xitek.com/forum-viewthread-tid-717223-extra-page%3D1-ordertype-2-t-1594102929.html)
+* [求教曝光补偿和ISO的关系](http://forum.xitek.com/thread-1301850-1-1-2.html)
