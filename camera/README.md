@@ -32,6 +32,7 @@
 * [【Lens】咖啡都涼了。Olympus M.ZD 75mm f/1.8 開箱文](http://forum.xitek.com/forum-viewthread-tid-1584463-ordertype-2-highlight-75.html)
 * [松徕12mm f1.4已入手，42.5mm f1.2还会远吗](http://forum.xitek.com/forum-viewthread-tid-1659851-extra--ordertype-2-t-1594279803.html)
 * [松下G85泡泡对焦演示](https://v.youku.com/v_show/id_XMjcwNjgzNDM0MA==.html)
+* [松下G85俱乐部](https://forum.xitek.com/thread-1629957-1-1-2.html)
 
 ## UV镜
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
