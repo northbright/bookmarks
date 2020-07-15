@@ -34,6 +34,7 @@
 * [松下G85泡泡对焦演示](https://v.youku.com/v_show/id_XMjcwNjgzNDM0MA==.html)
 * [松下G85俱乐部](https://forum.xitek.com/thread-1629957-1-1-2.html)
 * [G85的泡泡对焦，拍运动主体非常有效果](https://forum.xitek.com/forum-viewthread-tid-1671618-ordertype-2-highlight-g85.html)
+* [奥林巴斯 E-M1 Mark II C-AF 连续对焦+高速连拍演示1](https://v.youku.com/v_show/id_XMjIxMjE0NDk4OA==.html)
 
 ## UV镜
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
