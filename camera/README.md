@@ -37,6 +37,7 @@
 * [奥林巴斯 E-M1 Mark II C-AF 连续对焦+高速连拍演示1](https://v.youku.com/v_show/id_XMjIxMjE0NDk4OA==.html)
 * [E-M1 MarkII 追焦测试和设置经验](https://forum.xitek.com/thread-1667169-1-1-2.html)
 * [M43的第一个镜头就是个镜皇？松徕42mmF1.2 OIS使用感受](http://cnc.xitek.com/forum-viewthread-tid-1662316-extra-page%3D1-ordertype-2-t-1594883418.html)
+* [有了em1 1240，是否需要ep3 20饼](https://forum.xitek.com/forum.php?mod=viewthread&tid=1599188&page=1&ordertype=2#pid67735853)
 
 ## UV镜
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
