@@ -39,6 +39,7 @@
 * [M43的第一个镜头就是个镜皇？松徕42mmF1.2 OIS使用感受](http://cnc.xitek.com/forum-viewthread-tid-1662316-extra-page%3D1-ordertype-2-t-1594883418.html)
 * [有了em1 1240，是否需要ep3 20饼](https://forum.xitek.com/forum.php?mod=viewthread&tid=1599188&page=1&ordertype=2#pid67735853)
 * [新人购机，请问松下gh4和g85，哪个更值得买？](https://forum.xitek.com/forum-viewthread-tid-1737167-extra--ordertype-2-t-1595050844.html)
+* [请问，G85和GX9怎么选呢？](https://forum.xitek.com/thread-1793727-1-1-2.html)
 
 ## UV镜
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
