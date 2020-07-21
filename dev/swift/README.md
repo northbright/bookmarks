@@ -11,4 +11,4 @@
 
 ## SwiftUI
 * Courses
-  * [2020 Stanford iOS开发 C193P 中英字幕 - Course Logistics and Introduction to SwiftUI](https://www.bilibili.com/video/BV1nT4y1u7SB/)
+  * [2020 斯坦福（Stanford）Swift 语言教程 SwiftUI 开发 苹果公司 iOS编程 CS193p](https://www.bilibili.com/video/BV1EV411C77B)
