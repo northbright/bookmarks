@@ -17,7 +17,7 @@
 * [Go: pausing a goroutine](https://stackoverflow.com/questions/31730244/go-pausing-a-goroutine)
 * [Understanding goroutines](https://stackoverflow.com/questions/10095751/understanding-goroutines)
 * [golang methods that will yield goroutines](https://stackoverflow.com/questions/21102078/golang-methods-that-will-yield-goroutines)
-* [Go: 关于锁的1234](https://studygolang.com/articles/30028)
+* [Go: 关于锁的1234](https://segmentfault.com/a/1190000023373610)
 
 ## Limiting Concurrency
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
