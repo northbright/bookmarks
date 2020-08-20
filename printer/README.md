@@ -9,6 +9,7 @@
   * [iPhone手机怎么使用佳能CP1200打印机无线打印？](http://www.dullgeek.com/articles/800.html)
   * [佳能CP1200打印机 色带连接操作](http://www.iqiyi.com/w_19ruipn2jt.html)
   * [佳能cp1200照片打印机色带断了怎么办？](http://v.ifeng.com/video_6202713.shtml)
+  * [【手帐干货】佳能CP1200打印照片的边距设置方法](https://www.bilibili.com/video/av9891861/)
 
 ## Epson
 * [墨仓式打印机/一体机如何完成新机初始化安装](http://www.epson.com.cn/apps/tech_support/faq/QA-content.aspx?ColumnId=1733&ArticleId=39779&pg=&view=&columnid2=31598)
