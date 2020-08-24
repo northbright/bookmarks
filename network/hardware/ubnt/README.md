@@ -20,3 +20,4 @@
   * [iphone手机连接unifi wifi断线连接不上的问题](https://bbs.ui.com.cn/t/iphone-unifi-wifi/44553)
   * [苹果的I PAD 两部手机都连接不上lite的2.4G的网络](https://bbs.ui.com.cn/t/i-pad-lite-2-4g/49313)
 * [UAP-AC-PRO经常断流上不了网](https://bbs.ui.com.cn/t/uap-ac-pro/46626)
+* [网速慢，wifi会断开。求助！](https://bbs.ui.com.cn/t/wifi/46936)
