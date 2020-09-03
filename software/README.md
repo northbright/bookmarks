@@ -90,3 +90,6 @@
 
 ## aria2
 * [Exception caught while loading DHT routing table](https://github.com/aria2/aria2/issues/1253)
+
+## Shadowsocks
+* [Shadowsocks Wiki](https://github.com/shadowsocks/shadowsocks/wiki)
