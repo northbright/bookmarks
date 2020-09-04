@@ -79,6 +79,7 @@
 * [wget](wget/README.md)
 * [curl](curl/README.md)
 * [TCP/IP](tcp-ip/README.md)
+* [socks](socks/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
