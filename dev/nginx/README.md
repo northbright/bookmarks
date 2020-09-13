@@ -27,6 +27,7 @@
 * [nginx 代理转发，让生产和测试环境React、Vue项目轻松访问API，前端路由不再404](https://segmentfault.com/a/1190000008879679)
 * [Nginx 反向代理为什么可以提高网站性能？](https://www.zhihu.com/question/19761434)
 * [这个 proxy_redirect 是做什么的？](https://www.v2ex.com/t/305416)
+* [Use nginx upstream group with multiple ports](https://serverfault.com/questions/823234/use-nginx-upstream-group-with-multiple-ports)
 
 ## Configuration
 * [nginx 如何禁止 ip 直接访问](https://www.v2ex.com/t/239589)
