@@ -6,3 +6,4 @@
 * [Security Policy](security-policy/README.md)
 * [Shell](shell/README.md)
 * [Display](display/README.md)
+* [App](app/README.md)
