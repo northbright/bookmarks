@@ -68,3 +68,6 @@
 
 ## 青草膏
 * [真假泰国卧佛牌青草药膏，玉菩药堂与和泰中之间的纠葛](https://zhuanlan.zhihu.com/p/35660738)
+
+## 梳子
+* [如何挑梳子？](https://www.zhihu.com/question/20763540)
