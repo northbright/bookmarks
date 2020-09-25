@@ -12,6 +12,7 @@
 ## WebSocket
 * [State of Swift WebSockets](https://blog.rocketinsights.com/state-of-swift-websockets/)
 * [IOS Websocket (一) Starscream实现Websocket通讯](https://www.jianshu.com/p/7879bd578db7)
+* [Swift WebSocket 重连问题，并判断网络情况](https://www.jianshu.com/p/90a775d9c07a)
 
 ## Network
 * [如何在 Swift 中使用 Alamofire 进行网络编程](https://segmentfault.com/a/1190000004184754)
