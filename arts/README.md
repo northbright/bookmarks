@@ -11,3 +11,4 @@
 
 ## Online Photo Editors
 * [稿定设计](https://ps.gaoding.com/)
+* [Photopea](https://www.photopea.com/)
