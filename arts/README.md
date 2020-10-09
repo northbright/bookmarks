@@ -9,3 +9,5 @@
 * Sites
   * [vectr](https://vectr.com)
 
+## Online Photo Editors
+* [稿定设计](https://ps.gaoding.com/)
