@@ -80,6 +80,7 @@
 
 ## FFmpeg
 * [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
+* [Useful FFmpeg Commands for Working with Audio and Video Files](https://www.labnol.org/internet/useful-ffmpeg-commands/28490/)
 
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
