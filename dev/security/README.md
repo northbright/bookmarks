@@ -34,6 +34,7 @@
 * [如何大幅提高加密数据库的安全性](http://www.freebuf.com/articles/database/66440.html)
 * [Is it generally a bad idea to encrypt database fields?](https://security.stackexchange.com/questions/16939/is-it-generally-a-bad-idea-to-encrypt-database-fields)
 * [微服务中采用开源 NoSQL 的一般怎么监权？](https://v2ex.com/t/731600)
+* <https://www.vaultproject.io/>
 
 ## DNS
 * [《DNS攻击防范科普系列5》--聊一聊DNS劫持那些事](https://zhuanlan.zhihu.com/p/84665787)
