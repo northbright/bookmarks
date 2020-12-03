@@ -81,6 +81,7 @@
 * [curl](curl/README.md)
 * [TCP/IP](tcp-ip/README.md)
 * [socks](socks/README.md)
+* [Vault](vault/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
