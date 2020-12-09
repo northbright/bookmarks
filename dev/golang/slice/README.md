@@ -5,3 +5,4 @@
 * [How to delete an element from a Slice in Golang](https://stackoverflow.com/questions/37334119/how-to-delete-an-element-from-a-slice-in-golang)
 * [Remove elements in slice](https://stackoverflow.com/questions/28699485/remove-elements-in-slice)
 * [Filtering without allocating](https://github.com/golang/go/wiki/SliceTricks#filtering-without-allocating)
+* [Copy an array or slice in Go (Golang)](https://golangbyexample.com/copy-an-array-or-slice-golang/)
