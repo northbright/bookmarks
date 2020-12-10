@@ -27,3 +27,6 @@
 
 ## App Bundle
 * [How to find the path to a file in your bundle](https://www.hackingwithswift.com/example-code/system/how-to-find-the-path-to-a-file-in-your-bundle)
+
+## Async
+* [Getting started with async/await in Swift](https://www.enekoalonso.com/2020/12/06/getting-started-with-async-await-in-swift.html)
