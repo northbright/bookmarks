@@ -52,6 +52,7 @@
 
 * 幽门螺旋杆菌
   * [谣言:大蒜能彻底杀死幽门螺旋杆菌](https://zhuanlan.zhihu.com/p/107143822)
+  * [幽门螺旋杆菌可以真正的治愈吗？ - 山月不知心底事的回答（鲜榨卷心菜汁，西兰花）](https://www.zhihu.com/question/33282310/answer/950399570)
 
 ## 厨艺
 * [怎么炒一盘好的番茄炒蛋？](https://www.zhihu.com/question/28685187/answer/41906650)
