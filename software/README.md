@@ -29,6 +29,11 @@
 * Keyboard
     * [Keyboard mappings using a PC keyboard on a Macintosh](https://support.microsoft.com/en-us/kb/970299)
 
+## Apple ID
+* [Apple ID 被盗取、支付宝被盗刷，谁应为免密支付担责？如何有效避免此类问题发生
+？](https://www.zhihu.com/question/298321122/answer/511277148)
+
+
 ## iOS
 * MDM
     * [用MDM远程管理iPhone和iPad](https://www.jianshu.com/p/a9d2891cbb9c)
