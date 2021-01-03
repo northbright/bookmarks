@@ -22,4 +22,4 @@ Bookmarks of development and more...
 * [Music](music/README.md)
 * [Study（学习）](study/README.md)
 * [Health（健康）](health/README.md)
-* [Animation（动画）](animation/README.md)
+* [Anime（动画）](anime/README.md)
