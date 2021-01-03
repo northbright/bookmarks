@@ -106,3 +106,10 @@
 
 ## Shotcut
 * [Shotcut视频编辑器入门教程-非常简洁实用-快速入门](https://www.bilibili.com/video/av74164910/)
+
+## Youtube Downloader
+* [youtube-dl](https://github.com/ytdl-org/youtube-dl/)
+* [you-get](https://github.com/soimort/you-get)
+* [Annie](https://github.com/iawia002/annie)
+* Articles
+  * [you-get、youtube-dl 最近 B 站部分视频下载不了，很困惑](https://www.v2ex.com/t/428150)
