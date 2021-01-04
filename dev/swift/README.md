@@ -31,3 +31,6 @@
 
 ## Async
 * [Getting started with async/await in Swift](https://www.enekoalonso.com/2020/12/06/getting-started-with-async-await-in-swift.html)
+
+## C
+* [How to call C code from Swift](https://theswiftdev.com/how-to-call-c-code-from-swift/)
