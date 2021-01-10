@@ -39,3 +39,4 @@
 * [How to call C code from Swift](https://theswiftdev.com/how-to-call-c-code-from-swift/)
 * [How to wrap a C library in Swift](https://www.hackingwithswift.com/articles/87/how-to-wrap-a-c-library-in-swift)
 * [Swift 与 C 混编的正确姿势](https://xiaozhuanlan.com/topic/9635847012)
+* [Converting from const char* to Swift string](https://stackoverflow.com/questions/33018494/converting-from-const-char-to-swift-string)
