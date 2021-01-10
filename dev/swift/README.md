@@ -10,6 +10,9 @@
 * [SwiftUI 两周内入门到精通？](https://v2ex.com/t/693573)
 * [都说swift取代oc，为何五年了依然是oc为主？](https://www.zhihu.com/question/327318736)
 
+## Development Environment
+* [How to develop in Swift without Xcode IDE](https://stackoverflow.com/questions/29779063/how-to-develop-in-swift-without-xcode-ide)
+
 ## WebSocket
 * [State of Swift WebSockets](https://blog.rocketinsights.com/state-of-swift-websockets/)
 * [IOS Websocket (一) Starscream实现Websocket通讯](https://www.jianshu.com/p/7879bd578db7)
