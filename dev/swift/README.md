@@ -37,3 +37,4 @@
 
 ## C
 * [How to call C code from Swift](https://theswiftdev.com/how-to-call-c-code-from-swift/)
+* [How to wrap a C library in Swift](https://www.hackingwithswift.com/articles/87/how-to-wrap-a-c-library-in-swift)
