@@ -41,3 +41,6 @@
 * [Swift 与 C 混编的正确姿势](https://xiaozhuanlan.com/topic/9635847012)
 * [Converting from const char* to Swift string](https://stackoverflow.com/questions/33018494/converting-from-const-char-to-swift-string)
 * [Convert Swift string to C char array](https://developer.apple.com/forums/thread/18399)
+
+## Golang
+* [Writing Apps in Go and Swift](https://youngdynasty.net/posts/writing-mac-apps-in-go/)
