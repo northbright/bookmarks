@@ -113,3 +113,6 @@
 * [Annie](https://github.com/iawia002/annie)
 * Articles
   * [you-get、youtube-dl 最近 B 站部分视频下载不了，很困惑](https://www.v2ex.com/t/428150)
+
+## 秒杀
+* [GitHub 热榜：开发者开源「抢茅台脚本」，火了！](https://zhuanlan.zhihu.com/p/340442685)
