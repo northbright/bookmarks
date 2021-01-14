@@ -57,6 +57,8 @@
 ## Windows
 * Security
   * [Customer Guidance for WannaCrypt attacks](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/)
+  * [Use Cipher.exe to overwrite deleted data in Windows Server 2003](https://docs.microsoft.com/en-us/troubleshoot/windows-server/windows-security/use-cipher-to-overwrite-deleted-data)
+  * [Cipher.exe 安全工具，用于加密文件系统](https://support.microsoft.com/zh-cn/help/298009/cipher-exe-security-tool-for-the-encrypting-file-system)
 * Input Method
   * [定制化Windows10搜索和输入法快捷键Ctrl+空格](http://www.jianshu.com/p/15efa7783398)
 * Issues
