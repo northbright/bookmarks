@@ -18,3 +18,6 @@
 
 ## Conversion
 * [How do I convert a string into an integer in JavaScript?](https://stackoverflow.com/questions/1133770/how-do-i-convert-a-string-into-an-integer-in-javascript)
+
+## Online Playground
+* <https://playcode.io/>
