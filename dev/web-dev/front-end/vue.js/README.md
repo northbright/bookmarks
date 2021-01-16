@@ -81,3 +81,6 @@
 
 ## Keyboard Input and Events
 * [VUE全局监听键盘事件](https://blog.csdn.net/caidingnu/article/details/88822669)
+
+## Basics
+* [深入响应式原理](https://cn.vuejs.org/v2/guide/reactivity.html#%E5%AF%B9%E4%BA%8E%E6%95%B0%E7%BB%84)
