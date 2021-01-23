@@ -91,6 +91,7 @@
 * [Redis 的性能幻想与残酷现实](http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ==&mid=401738746&idx=1&sn=281af530d5abec981f3607d6e729914a&scene=21#wechat_redirect)
 * [SCAN vs KEYS performance in Redis](http://stackoverflow.com/questions/32603964/scan-vs-keys-performance-in-redis)
 * [Redis Running Slowly? Here’s What You Can Do About it ](https://dzone.com/articles/redis-running-slowly-heres)
+* [Redis为什么变慢了？Redis性能问题排查详述](https://mp.weixin.qq.com/s/gYQn9tdFK9tHJDoMWcU4cQ)
 
 ## Security
 * [我是如何利用Redis黑进你的系统的](https://zhuanlan.zhihu.com/p/25790352)
