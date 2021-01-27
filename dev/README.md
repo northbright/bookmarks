@@ -83,6 +83,7 @@
 * [TCP/IP](tcp-ip/README.md)
 * [socks](socks/README.md)
 * [Vault](vault/README.md)
+* [微信小商店](minishop/README.md)
 
 #### Blogs
 * [bindog](http://bindog.github.io/archive/)
