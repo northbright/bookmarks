@@ -41,3 +41,6 @@
 
 ## Citation
 * [How do you cite a Github repository?](https://academia.stackexchange.com/questions/14010/how-do-you-cite-a-github-repository)
+
+## Github Actions
+* [GitHub Actions for Go Projects](https://tutorialedge.net/golang/github-actions-for-go-projects/)
