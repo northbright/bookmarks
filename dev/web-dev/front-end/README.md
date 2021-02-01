@@ -29,6 +29,7 @@
 * [cordova+framework7有人来说说吗？](https://www.zhihu.com/question/29533705?sort=created)
 * [移动web开发问题和优化小结](https://segmentfault.com/a/1190000011338800)
 * [如何看待 Progressive Web Apps 的发展前景？](https://www.zhihu.com/question/46690207/answer/104851767)
+* [v 站连续打卡 1000 天，发帖纪念一下，最近用 Go+Mithril.js 做了个小工具，希望 v 友能分享一下自己做小项目用的技术栈、开发环境](https://v2ex.com/t/750181)
 
 ## Password and Username
 * [为什么密码不支持中文？](https://www.zhihu.com/question/20715055)
