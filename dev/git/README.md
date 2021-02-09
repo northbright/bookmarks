@@ -21,6 +21,7 @@
 
 ## Commit
 * [Git 写出好的 commit message](https://ruby-china.org/topics/15737)
+* [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 
 ## Books
 * [Git Book](https://git-scm.com/book/zh/v2)
