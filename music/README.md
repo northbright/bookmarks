@@ -6,3 +6,4 @@
 
 ## Have a Nice Day!
 * [【LIVE】#Have a Nice Day!#（#ハバナイ#）ダンスウィズバビロン 2-0-1-8-](https://www.bilibili.com/video/BV1tV411f7fN)
+* [Virgin Babylon Records on bandcamp.com](https://virginbabylonrecords.bandcamp.com/music)
