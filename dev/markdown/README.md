@@ -26,3 +26,9 @@
 ## Slides
 * [remark](https://github.com/gnab/remark)
   * [wiki](https://github.com/gnab/remark/wiki)
+
+## Editors
+* [typora](https://www.typora.io/)
+  * [五分钟快速上手神器Typora](https://zhuanlan.zhihu.com/p/337437173)
+  * [Typora，世界上最漂亮的写作App](https://zhuanlan.zhihu.com/p/40810821)
+  * [Typora 完全使用详解](https://sspai.com/post/54912)
