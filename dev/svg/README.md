@@ -7,6 +7,7 @@
 ## Demo
 * [SVG can do THAT?!](http://slides.com/sdrasner/svg-can-do-that)
 * [Vue Weather Notifier](https://github.com/sdras/vue-weather-notifier)
+* [GSAP + SVG by Sarah Drasner](http://slides.com/sdrasner/gsap-svg)
 
 ## Optimize
 * [SVGOMG](https://jakearchibald.github.io/svgomg/)
