@@ -6,3 +6,4 @@
 
 ## Optimize
 * [SVGOMG](https://jakearchibald.github.io/svgomg/)
+* [High Performance SVGs](https://css-tricks.com/high-performance-svgs/)
