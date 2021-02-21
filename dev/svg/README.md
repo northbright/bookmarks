@@ -11,3 +11,6 @@
 ## Optimize
 * [SVGOMG](https://jakearchibald.github.io/svgomg/)
 * [High Performance SVGs](https://css-tricks.com/high-performance-svgs/)
+
+## Sites
+* [Awesome SVG](https://github.com/willianjusten/awesome-svg)
