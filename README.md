@@ -23,4 +23,5 @@ Bookmarks of development and more...
 * [Study（学习）](study/README.md)
 * [Health（健康）](health/README.md)
 * [Anime（动画）](anime/README.md)
+* [Comic（漫画）](comic/README.md)
 * [房产](house/README.md)
