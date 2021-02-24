@@ -3,6 +3,7 @@
 ## Articles
 * [SVG 基础](https://www.jianshu.com/p/57cbf47b732c)
 * [SVG入门—如何手写SVG](https://juejin.cn/post/6844903589807128590)
+* [10 个非常有用的 SVG 动画的 JavaScript 库](https://www.jianshu.com/p/20bfeda0ba3b)
 
 ## Demo
 * [SVG can do THAT?!](http://slides.com/sdrasner/svg-can-do-that)
