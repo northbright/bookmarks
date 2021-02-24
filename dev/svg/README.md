@@ -22,3 +22,4 @@
 * [flaticon](https://www.flaticon.com/)
 * [iconfont](https://www.iconfont.cn/)
 * [Iconfinder](https://www.iconfinder.com)
+* [icons8](https://icons8.com)
