@@ -17,3 +17,7 @@
 
 ## Sites
 * [Awesome SVG](https://github.com/willianjusten/awesome-svg)
+
+## Online Icons and Fonts
+* [flaticon](https://www.flaticon.com/)
+
