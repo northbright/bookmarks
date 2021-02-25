@@ -8,6 +8,7 @@
 ## Articles
 * [30分钟掌握ES6/ES2015核心内容（上）](https://segmentfault.com/a/1190000004365693)
 * [30分钟掌握ES6/ES2015核心内容（下）](https://segmentfault.com/a/1190000004368132)
+* [熟悉ES6，这些内容起码得懂个七八十吧](https://mp.weixin.qq.com/s/KHXhWX9KO6S5Ri86VCy5gw)
 
 ## Array
 * [How to extend an existing JavaScript array with another array, without creating a new array?](https://stackoverflow.com/questions/1374126/how-to-extend-an-existing-javascript-array-with-another-array-without-creating)
