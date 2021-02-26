@@ -40,3 +40,4 @@
 
 ## Sites
 * [前端外刊评论](https://zhuanlan.zhihu.com/FrontendMagazine)
+* [被删前端博客](https://github.com/godbasin/godbasin.github.io)
