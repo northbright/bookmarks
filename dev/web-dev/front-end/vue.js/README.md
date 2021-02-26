@@ -16,6 +16,9 @@
 * [vuejs 单文件组件.vue 文件](http://www.cnblogs.com/SamWeb/p/6391373.html)
 * [滴滴 webapp 5.0 Vue 2.0 重构经验分享](https://github.com/DDFE/DDFE-blog/issues/13)
 
+## Books
+* [深入理解Vue.js实战（作者：被删）](http://www.godbasin.com/vue-ebook/)
+
 ## Using Vue.js with Go
 * [Using VueJS with a Go backend](https://stackoverflow.com/questions/38744766/using-vuejs-with-a-go-backend)
 * [Using Vue.js in Golang's HTML templates](https://stackoverflow.com/questions/38764610/using-vue-js-in-golangs-html-templates)
