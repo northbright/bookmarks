@@ -8,3 +8,6 @@
 * [【LIVE】#Have a Nice Day!#（#ハバナイ#）ダンスウィズバビロン 2-0-1-8-](https://www.bilibili.com/video/BV1tV411f7fN)
 * [Virgin Babylon Records on bandcamp.com](https://virginbabylonrecords.bandcamp.com/music)
 * [【合集】Have a Nice Day! ハバナイ | MUSIC VIDEO](https://www.bilibili.com/video/BV1JJ411J7UC)
+
+## Anime Music(动漫音乐)
+* [起名费劲吧](https://tieba.baidu.com/f?kw=%E8%B5%B7%E5%90%8D%E8%B4%B9%E5%8A%B2)
