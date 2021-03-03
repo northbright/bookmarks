@@ -6,3 +6,4 @@
 * [10 Things You Should Know about Tokens](https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/)
 * [JSON Web Tokens vs. Session Cookies: In Practice](https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies)
 * [八幅漫画理解使用JSON Web Token设计单点登录系统](http://blog.leapoahead.com/2015/09/07/user-authentication-with-jwt/)
+* [JWT 可以实现 stateless authentication，但是 refresh token 不是无状态的，那 JWT 的意义是什么？](https://v2ex.com/t/757713#reply46)
