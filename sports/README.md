@@ -21,6 +21,7 @@
 ## 跑鞋
 * Articles
   * [请求推荐一款跑鞋，亚瑟士和美津浓哪个会比较好?](https://www.zhihu.com/question/392861934)
+  * [亚瑟士、新百伦还有美津浓跑鞋中哪些适合入门者？](https://www.zhihu.com/question/21387085/answer/1680799183)
 * 美津浓
   * [2021年美津浓跑鞋推荐，美津浓跑鞋怎么样，全系列矩阵选购指南（一月更新）](https://zhuanlan.zhihu.com/p/267167747)
 * 亚瑟士
