@@ -17,3 +17,9 @@
 * [【足球鞋测评】Gato强势回归！一款能代替tf的ic！能踢球也能压马路，一鞋多用的完美诠释！来看看这双鞋到底怎么样吧！](https://www.bilibili.com/video/BV1oZ4y1p7gS)
 * [修复Flyknit Air Max 耐克飞线跑鞋，织物鞋开胶的正确修补方法，绿豹510树脂胶粘合修鞋](https://www.bilibili.com/video/av92347321)
 * [耐克飞线织物鞋开胶修补，跑步鞋运动鞋泡水脱胶后，用绿豹510粘合的标准流程](https://www.bilibili.com/video/BV1gt4y1m74r)
+
+## 跑鞋
+* 美津浓
+  * [2021年美津浓跑鞋推荐，美津浓跑鞋怎么样，全系列矩阵选购指南（一月更新）](https://zhuanlan.zhihu.com/p/267167747)
+* 亚瑟士
+  * [2021年亚瑟士跑鞋怎么选，亚瑟士跑步鞋推荐，ASICS跑鞋全系列矩阵选购指南](https://zhuanlan.zhihu.com/p/268143681)
