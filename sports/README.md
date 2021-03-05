@@ -19,6 +19,8 @@
 * [耐克飞线织物鞋开胶修补，跑步鞋运动鞋泡水脱胶后，用绿豹510粘合的标准流程](https://www.bilibili.com/video/BV1gt4y1m74r)
 
 ## 跑鞋
+* Articles
+  * [请求推荐一款跑鞋，亚瑟士和美津浓哪个会比较好?](https://www.zhihu.com/question/392861934)
 * 美津浓
   * [2021年美津浓跑鞋推荐，美津浓跑鞋怎么样，全系列矩阵选购指南（一月更新）](https://zhuanlan.zhihu.com/p/267167747)
 * 亚瑟士
