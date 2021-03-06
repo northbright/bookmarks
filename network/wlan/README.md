@@ -2,6 +2,7 @@
 
 ## db and dbm
 * [WIFI的信号强度为什么是负数？如何计算出来的？](https://www.zhihu.com/question/22166789?sort=created)
+* [这个毫不起眼的发明，撑起了通信大厦的基石](https://zhuanlan.zhihu.com/p/53381281)
 
 ## Channel
 * [List of WLAN channels](https://en.wikipedia.org/wiki/List_of_WLAN_channels)
