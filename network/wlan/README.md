@@ -39,6 +39,7 @@
   * [AP PRO 启动5G后导致速度很卡.接受率也很低](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=19065&extra=page%3D5)
   * [UBNT Unifi NanoHD & AC In-Wall](https://www.chiphell.com/article-20602-1.html)
   * [UniFi - 无线限速的设置](https://help.ui.com.cn/hc/zh-cn/articles/115000150702-UniFi-%E6%97%A0%E7%BA%BF%E9%99%90%E9%80%9F%E7%9A%84%E8%AE%BE%E7%BD%AE)
+  * [UniFi - 如何向 UniFi 控制器中添加新设备](https://help.ui.com.cn/articles/360000227321/)
 
 * H3C
   * [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
