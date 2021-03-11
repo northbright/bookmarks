@@ -119,3 +119,6 @@
 
 ## 秒杀
 * [GitHub 热榜：开发者开源「抢茅台脚本」，火了！](https://zhuanlan.zhihu.com/p/340442685)
+
+## 企业微信
+* [企业微信部门群群主问题](https://developers.weixin.qq.com/community/develop/doc/000a2642a98ff89b35fa3f4055b000)
