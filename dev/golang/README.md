@@ -63,6 +63,7 @@
 * [WebSocket](websocket/README.md)
 * [OS](os/README.md)
 * [Progress Bar](progress-bar/README.md)
+* [iOS](iOS/README.md)
 
 ## Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
