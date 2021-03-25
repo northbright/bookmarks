@@ -8,3 +8,4 @@
 
 ## 小程序微信支付
 * [开发前必读](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_10)
+* [WechatPay-API-v3](https://wechatpay-api.gitbook.io/wechatpay-api-v3/)
