@@ -45,6 +45,9 @@
 ## iPad OS
 * [iPad版，怎么把图片批量做成PDF文件？](https://www.zhihu.com/question/380949981)
 
+## 隔空投送
+* [在 Mac 上使用“隔空投送”](https://support.apple.com/zh-cn/HT203106)
+
 ## Data Recovery
 * [19 Free Data Recovery Software Tools](https://www.lifewire.com/free-data-recovery-software-tools-2622893)
 
