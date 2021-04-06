@@ -34,6 +34,7 @@
 * [Is it OK to leave a channel open?](https://stackoverflow.com/questions/8593645/is-it-ok-to-leave-a-channel-open)
 * [How to Gracefully Close Channels](https://go101.org/article/channel-closing.html)
 * [Check if a channel is closed without blocking the current goroutine](https://go101.org/article/channel-use-cases.html#check-closed-status)
+* [Passing a slice into a channel](https://stackoverflow.com/questions/24703943/passing-a-slice-into-a-channel)
 
 ## Catch Return Values of Goroutines
 * [Catching return values from goroutines](https://stackoverflow.com/questions/20945069/catching-return-values-from-goroutines)
