@@ -96,6 +96,7 @@
 * [FFmpeg Seeking](https://trac.ffmpeg.org/wiki/Seeking)
 * [Video seeking and cutting sections - 2020](https://www.bogotobogo.com/FFMpeg/ffmpeg_seeking_ss_option_cutting_section_video_image.php)
 * [How do I convert a video to GIF using ffmpeg, with reasonable quality?](https://superuser.com/questions/556029/how-do-i-convert-a-video-to-gif-using-ffmpeg-with-reasonable-quality)
+* [High quality GIF with FFmpeg](http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html)
 
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
