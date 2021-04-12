@@ -13,6 +13,7 @@
 * [File System](filesystem/README.md)
 * [Memory](memory/README.md)
 * [CentOS](centos/README.md)
+* [Ubuntu](ubuntu/README.md)
 * [Time](time/README.md)
 * [make](make/README.md)
 * [gcc](gcc/README.md)
