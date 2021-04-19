@@ -27,6 +27,7 @@
 
 ## SSD
 * [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
+* [这些硬盘不要买！2021那些不推荐的固态硬盘](https://zhuanlan.zhihu.com/p/166162142)
 
 
 ## Mac
