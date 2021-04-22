@@ -14,6 +14,7 @@
 * [H3C系列之三层交换机dhcp功能的开启](https://www.cnblogs.com/5201351/p/4365462.html)
 * [局域网核心层、汇聚层、接入层交换机选择（尽量选择h3c设备)](https://zhidao.baidu.com/question/1766639018515118700.html)
 * [我们公司网络是用路由器代替核心交换机，请问大家这样行不行？](http://bbs.51cto.com/viewthread.php?tid=1559961&extra=&page=1)
+* [交换机万兆光口能不能插千兆光转电模块，当千兆电口用？](https://zhiliao.h3c.com/questions/dispcont/92711)
 
 ## Design
 * [H3C中小企业网络解决方案实战篇（精）](https://wenku.baidu.com/view/bc8fa30f814d2b160b4e767f5acfa1c7aa0082a9.html)
