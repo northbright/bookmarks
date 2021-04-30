@@ -6,3 +6,6 @@
 
 ## File
 * [How to check if a file exists in Go?](https://stackoverflow.com/questions/12518876/how-to-check-if-a-file-exists-in-go)
+
+## Signal
+* [Go进阶13:signal处理和优雅退出守护进程](https://mojotv.cn/2019/01/17/golang-signal-restart-deamom)
