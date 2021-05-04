@@ -7,3 +7,4 @@
 * [Slice as a key in map](https://stackoverflow.com/questions/20297503/slice-as-a-key-in-map)
 * [delete map key in go?](https://stackoverflow.com/questions/1736014/delete-mapkey-in-go)
 * [How to copy a map?](https://stackoverflow.com/questions/23057785/how-to-copy-a-map)
+* [Slice as a key in map](https://stackoverflow.com/questions/20297503/slice-as-a-key-in-map)
