@@ -15,3 +15,6 @@
 ## SMB
 * [Connect iPhone to Windows PC via SMB file sharing](https://www.iosappweekly.com/connect-iphone-windows-pc-smb-file-sharing-fileexplorer/)
 * [Share files between computer and iPhone](https://www.iosappweekly.com/share-files-between-computer-iphone-smb/)
+
+## Audio
+* [What the difference between method `stop` and `pause` in AVAudio menber](https://stackoverflow.com/questions/28957443/what-the-difference-between-method-stop-and-pause-in-avaudio-menber)
