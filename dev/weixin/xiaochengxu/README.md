@@ -12,3 +12,6 @@
 * [搞懂微信支付 v3 接口规则-【附Java源码】](https://developers.weixin.qq.com/community/develop/article/doc/000cca8440c6a0dca61a3efb053c13)
 * [什么是API证书？如何获取API证书？](https://kf.qq.com/faq/161222NneAJf161222U7fARv.html)
 * [API接口概览](https://pay.weixin.qq.com/wiki/doc/apiv3/index.shtml)
+
+## UnionID
+* [微信开放平台和公众平台的区别？](https://www.zhihu.com/question/21074751/answer/1419900591)
