@@ -17,3 +17,4 @@
 * [微信开放平台和公众平台的区别？](https://www.zhihu.com/question/21074751/answer/1419900591)
 * [小程序登录、用户信息相关接口调整说明](https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801)
 * [微信小程序获取openID及unionID](https://developers.weixin.qq.com/community/develop/article/doc/00082a04b94c00a9f3eb879ba5ac13)
+* [从getUserInfo接口更换为getUserProfile接口后服务端怎么获取unionid](https://developers.weixin.qq.com/community/develop/doc/000ae602670bb0b1dafb576f95ac00?highLine=unionID)
