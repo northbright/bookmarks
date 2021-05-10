@@ -15,3 +15,4 @@
 
 ## UnionID
 * [微信开放平台和公众平台的区别？](https://www.zhihu.com/question/21074751/answer/1419900591)
+* [小程序登录、用户信息相关接口调整说明](https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801)
