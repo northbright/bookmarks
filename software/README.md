@@ -30,6 +30,9 @@
 * Keyboard
     * [Keyboard mappings using a PC keyboard on a Macintosh](https://support.microsoft.com/en-us/kb/970299)
 
+* Remote Desktop
+  * [Microsoft Remote Desktop now available outside the App Store](https://community.spiceworks.com/topic/2123651-microsoft-remote-desktop-now-available-outside-the-app-store)
+
 ## Apple ID
 * [Apple ID 被盗取、支付宝被盗刷，谁应为免密支付担责？如何有效避免此类问题发生
 ？](https://www.zhihu.com/question/298321122/answer/511277148)
