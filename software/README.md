@@ -17,6 +17,8 @@
     * [convert CSV to XLS file on linux](http://unix.stackexchange.com/questions/158254/convert-csv-to-xls-file-on-linux)
     * [libxls](http://libxls.sourceforge.net/)
     * <https://github.com/extrame/xls>
+  * Convert Execl to HTML table
+    * [Tables Generator](https://www.tablesgenerator.com/html_tables)
 
 ## CSV
 * <https://github.com/wireservice/csvkit>
