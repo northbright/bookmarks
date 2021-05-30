@@ -25,10 +25,10 @@
 ## SD Card
 * [Using SD Formatter Tool to restore full capacity on SDHC/SDXC cards](https://kb.sandisk.com/app/answers/detail/a_id/14827/~/using-sd-formatter-tool-to-restore-full-capacity-on-sdhc%2Fsdxc-cards)
 
-## SSD
+## HDD & SSD
 * [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
 * [这些硬盘不要买！2021那些不推荐的固态硬盘](https://zhuanlan.zhihu.com/p/166162142)
-
+* [这些硬盘不要买！2021那些不推荐的机械硬盘](https://zhuanlan.zhihu.com/p/320796902)
 
 ## Mac
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
