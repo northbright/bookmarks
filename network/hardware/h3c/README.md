@@ -17,6 +17,7 @@
 * [交换机万兆光口能不能插千兆光转电模块，当千兆电口用？](https://zhiliao.h3c.com/questions/dispcont/92711)
 * [H3C S2610的交换机第9 、10端口是端口是光电复用的吗？现在要么只用电口，要么只用光口](https://zhiliao.h3c.com/questions/dispcont/44677)
 * [同样千兆口，用光口还是电口好呢？](https://bbs.51cto.com/thread-1468927-1.html)
+* [H3C三层交换机上联防火墙的端口用trunk还是access](https://bbs.51cto.com/thread-1566579-1-1.html)
 
 ## Design
 * [H3C中小企业网络解决方案实战篇（精）](https://wenku.baidu.com/view/bc8fa30f814d2b160b4e767f5acfa1c7aa0082a9.html)
