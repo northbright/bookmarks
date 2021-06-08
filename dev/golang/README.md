@@ -67,6 +67,7 @@
 * [iOS](iOS/README.md)
 * [BitTorrent](bt/README.md)
 * [Remote Desktop](remote-desktop/README.md)
+* [GUI](gui/README.md)
 
 ## Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
