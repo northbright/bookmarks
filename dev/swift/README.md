@@ -43,6 +43,7 @@
 * [Convert Swift string to C char array](https://developer.apple.com/forums/thread/18399)
 * [Running Go Code on iOS and Android](https://rogchap.com/2020/09/14/running-go-code-on-ios-and-android/)
 * [Best way to call a Swift function from C?](https://forums.swift.org/t/best-way-to-call-a-swift-function-from-c/9829)
+* [苹果系统开发中的混合编程(2):Swift和C的相互调用](https://www.cnblogs.com/larlf/archive/2016/08/27/5812835.html)
 
 ## Golang
 * [Writing Apps in Go and Swift](https://youngdynasty.net/posts/writing-mac-apps-in-go/)
