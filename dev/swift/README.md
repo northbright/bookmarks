@@ -42,6 +42,7 @@
 * [Converting from const char* to Swift string](https://stackoverflow.com/questions/33018494/converting-from-const-char-to-swift-string)
 * [Convert Swift string to C char array](https://developer.apple.com/forums/thread/18399)
 * [Running Go Code on iOS and Android](https://rogchap.com/2020/09/14/running-go-code-on-ios-and-android/)
+* [Best way to call a Swift function from C?](https://forums.swift.org/t/best-way-to-call-a-swift-function-from-c/9829)
 
 ## Golang
 * [Writing Apps in Go and Swift](https://youngdynasty.net/posts/writing-mac-apps-in-go/)
