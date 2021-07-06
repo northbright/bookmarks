@@ -45,6 +45,7 @@
 * [Best way to call a Swift function from C?](https://forums.swift.org/t/best-way-to-call-a-swift-function-from-c/9829)
 * [苹果系统开发中的混合编程(2):Swift和C的相互调用](https://www.cnblogs.com/larlf/archive/2016/08/27/5812835.html)
 * [Swift callbacks](http://www.perry.cz/clanky/swift.html)
+* [How to cast self to UnsafeMutablePointer<Void> type in swift](https://stackoverflow.com/questions/33294620/how-to-cast-self-to-unsafemutablepointervoid-type-in-swift)
 * <https://github.com/ingconti/CallingSwiftFromC>
 
 ## Golang
