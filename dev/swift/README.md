@@ -47,6 +47,7 @@
 * [Swift callbacks](http://www.perry.cz/clanky/swift.html)
 * [How to cast self to UnsafeMutablePointer<Void> type in swift](https://stackoverflow.com/questions/33294620/how-to-cast-self-to-unsafemutablepointervoid-type-in-swift)
 * <https://github.com/ingconti/CallingSwiftFromC>
+* [How to use instance method as callback for function which takes only func or literal closure](https://stackoverflow.com/questions/33260808/how-to-use-instance-method-as-callback-for-function-which-takes-only-func-or-lit/33262376#33262376)
 
 ## Golang
 * [Writing Apps in Go and Swift](https://youngdynasty.net/posts/writing-mac-apps-in-go/)
