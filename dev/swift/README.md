@@ -57,3 +57,6 @@
 * [What does you do, when you need a desktop version of your existing SPA web app?](https://dev.to/koddr/what-does-you-do-when-you-need-a-desktop-version-of-your-existing-spa-web-app-46op)
 * [Making macOS Universal Apps in Swift with Universal Golang Static Libraries](https://rud.is/b/2021/04/24/making-macos-universal-apps-with-universal-golang-static-libraries/)
 * [Calling Swift from Go](https://dev.to/gerwert/calling-swift-from-go-5dbk)
+
+## Pointers
+* [Swift Pointers Overview: Unsafe, Buffer, Raw and Managed Pointers](https://www.vadimbulavin.com/swift-pointers-overview-unsafe-buffer-raw-and-managed-pointers/)
