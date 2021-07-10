@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<base href="http://www.perry.cz/clanky/swift.html">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Swift</title>
+<meta name="generator" content="C++2HTML by Jasper Bedaux">
+<!-- To generate your own colored code visit http://www.bedaux.net/cpp2html/ -->
+<style type="text/css">.comment { color: rgb(153, 153, 153); font-style: italic; }
+.pre { color: rgb(0, 0, 153); }
+.string { color: rgb(0, 153, 0); }
+.char { color: rgb(0, 153, 0); }
+.float { color: rgb(153, 102, 0); }
+.int { color: rgb(153, 153, 0); }
+.bool { color: rgb(0, 0, 0); font-weight: bold; }
+.type { color: rgb(255, 102, 51); }
+.flow { color: rgb(255, 0, 0); }
+.keyword { color: rgb(153, 0, 0); }
+.operator { color: rgb(102, 51, 0); font-weight: bold; }
+.operator { color: rgb(102, 51, 0); font-weight: bold; }
+</style>
+
+<link rel="icon" href="">
+<style id="savepage-cssvariables">
+  :root {
+  }
+</style>
+<script id="savepage-shadowloader" type="application/javascript">
+  "use strict"
+  window.addEventListener("DOMContentLoaded",
+  function(event)
+  {
+    savepage_ShadowLoader(5);
+  },false);
+  function savepage_ShadowLoader(c){createShadowDOMs(0,document.documentElement);function createShadowDOMs(a,b){var i;if(b.localName=="iframe"||b.localName=="frame"){if(a<c){try{if(b.contentDocument.documentElement!=null){createShadowDOMs(a+1,b.contentDocument.documentElement)}}catch(e){}}}else{if(b.children.length>=1&&b.children[0].localName=="template"&&b.children[0].hasAttribute("data-savepage-shadowroot")){b.attachShadow({mode:"open"}).appendChild(b.children[0].content);b.removeChild(b.children[0]);for(i=0;i<b.shadowRoot.children.length;i++)if(b.shadowRoot.children[i]!=null)createShadowDOMs(a,b.shadowRoot.children[i])}for(i=0;i<b.children.length;i++)if(b.children[i]!=null)createShadowDOMs(a,b.children[i])}}}
+</script>
+<meta name="savepage-url" content="http://www.perry.cz/clanky/swift.html">
+<meta name="savepage-title" content="Swift">
+<meta name="savepage-from" content="http://www.perry.cz/clanky/swift.html">
+<meta name="savepage-date" content="Sat Jul 10 2021 17:47:42 GMT+0800 (中国标准时间)">
+<meta name="savepage-state" content="Standard Items; Retained cross-origin frames; Merged CSS images; Removed unsaved URLs; Sent referer headers with origin and path; Lazy load steps = 0.2s; Max frame depth = 5; Max resource size = 50MB; Max resource time = 30s;">
+<meta name="savepage-version" content="18.0">
+<meta name="savepage-comments" content="">
+  </head>
+<body>
+<h1>Swift callbacks</h1>
+
+In some cases, we need to call C/C++ code from Swift and even Swift from C/C++. Code in Swift is only compatible with C, so you cannot 
+call C++ from it. You must use bridge and C-API to call C++ methods.
+
+<h2>Calling C++ from Swift</h2>
+
+This is very similar to calling C++ from DLL
+
+<hr>
+<strong>1</strong>) We create C++ class in a file <strong>CppClass.h</strong>:
+<pre><span class="comment">// Declaration + Implementation: CppClass.h
+</span><span class="pre">#ifndef CppClass_h
+#define CppClass_h
+</span><span class="keyword">
+class</span> CppClass<span class="operator">{</span><span class="keyword">
+public</span><span class="operator">:</span>
+	CppClass<span class="operator">() {}</span><span class="type">
+	
+	void</span> HelloWorld<span class="operator">() {</span> printf<span class="operator">(</span><span class="string">"Hello World"</span><span class="operator">); }
+
+}</span><span class="pre">
+#endif //CppClass_h</span></pre>
+
+<hr>
+
+<strong>2</strong>) Now, to expose C API for external use <strong>CApi.h</strong>. We cannot use forward declaration with class for 
+return types, so we create “<em>typedef struct</em>” and named it “<em>CCppClass</em>” (C for C API prefix - better readibility).
+<pre><span class="comment">// Declaration: CApi.h
+</span><span class="pre">
+#ifndef CApi_h
+#define CApi_h
+</span><span class="keyword">
+typedef struct</span> CppClass CCppClass<span class="operator">;</span><span class="pre">
+
+#ifdef __cplusplus
+</span><span class="keyword">extern</span><span class="string"> "C"</span><span class="operator"> {</span><span class="pre">
+#endif
+</span>    CCppClass<span class="operator"> *</span> CreateCppClass<span class="operator">();</span><span class="type">
+	void</span> ReleaseCppClass<span class="operator">(</span>CCppClass<span class="operator"> *</span> c<span class="operator">);</span><span class="type">
+	void</span> CallHelloWorld<span class="operator">(</span>CCppClass<span class="operator"> *</span> c<span class="operator">);</span><span class="pre">
+	
+#ifdef __cplusplus
+</span><span class="operator">}</span><span class="pre">
+#endif
+#endif // CApi_h</span></pre>
+
+<hr>
+
+<strong>3</strong>) In the next step, we create actuall API implementation in <strong>CApi.c</strong>:
+
+<pre><span class="comment">// Implementation: CApi.cpp
+</span><span class="pre">#include "./CApi.h"
+
+#include "./CppClass.h"
+</span>
+CCppClass<span class="operator"> *</span> CreateCppClass<span class="operator">(){</span><span class="flow">
+	return</span><span class="keyword"> new</span> CppClass<span class="operator">();
+}</span><span class="type">
+
+void</span> ReleaseCppClass<span class="operator">(</span>CCppClass<span class="operator"> *</span> c<span class="operator">){</span><span class="keyword">
+	delete</span> c<span class="operator">;
+}</span><span class="type">
+
+void</span> CallHelloWorld<span class="operator">(</span>CCppClass<span class="operator"> *</span> c<span class="operator">){</span>
+	c<span class="operator">-&gt;</span>HelloWorld<span class="operator">();
+}</span></pre>
+
+<hr>
+<strong>4</strong>) In Swift, we cannot directly include C code, we must create "a bridge". This is a simple file, that contains included files 
+and is auto-loaded by Swift compiler. However, we have to add this file to compiler settings.
+
+<p><a href="http://www.learnswiftonline.com/getting-started/adding-swift-bridging-header/">How to create a Swift Bridging Header Manually</a></p>
+<ol>
+<li>Add a new file to Xcode (File &gt; New &gt; File), then select “<em>Source</em>” and click “<em>Header File</em>“.</li>
+<li>Name your file “XXX-Bridging-Header.h”.</li>
+<li>Create the file.</li>
+<li>Navigate to your project build settings and find the “Swift Compiler – Code Generation” section.  You may find it faster to type in “Swift Compiler” into the search box to narrow down the results.  <strong>Note:</strong> If you don’t have a “Swift Compiler – Code Generation” section, this means you probably don’t have any Swift classes added to your project yet.  Add a Swift file, then try again.</li>
+<li>Next to “Objective-C Bridging Header” you will need to add the name/path of your header file.  If your file resides in your project’s root folder simply put the name of the header file there.  Examples:  “ProjectName/ProjectName-Bridging-Header.h” or simply “ProjectName-Bridging-Header.h”.</li>
+<li>Open up your newly created bridging header and add includes for C++ or imports for Objective-C.  Any class listed in this file will be able to be accessed from your swift classes.</li>
+</ol>
+<p> </p>
+<hr>
+
+<strong>5</strong>) Now, we can finally use our C++ class from Swift
+
+<pre>var myCppClass:OpaquePointer? = nil;
+
+myCppClass = CreateCppClass();
+CallHelloWorld(myCppClass);
+ReleaseCppClass(myCppClass);
+</pre>
+
+<hr>
+
+Source:
+<ul>
+<li>http://stackoverflow.com/questions/33260808/how-to-use-instance-method-as-callback-for-function-which-takes-only-func-or-lit/33262376#33262376</li>
+<li>http://stackoverflow.com/questions/1061005/calling-objective-c-method-from-c-method/1061576#1061576</li>
+<li>http://www.learnswiftonline.com/getting-started/adding-swift-bridging-header/</li>
+</ul>
+<br>
+<br>
+
+<h2>Calling Swift from C/C++</h2>
+
+Calling Swift from C/C++ is a bit complicated. It can be divided into two parts - calling simple method or calling class member method. 
+The first type is quite easy, because Swift methods are directly mapable to C function pointers.<br> 
+Both approaches are combined with the first part of this tutorial - C methods have to be made visible to Swift via bridge. 
+So I asume that is is already done, so I skip this in this samples.
+
+<br>
+<br>
+
+<strong>C code</strong>:
+<pre><span class="type">void</span> CallSwiftFromC<span class="operator">(</span><span class="type">void</span><span class="operator">(*</span>f<span class="operator">)()){</span>
+	f<span class="operator">();
+}</span></pre>
+
+<strong>Swift code</strong>:
+<pre>func TestMethod(){
+    //Some Swift code
+}
+
+class SwiftClass{
+	func SomeFunc(){
+		CallSwiftFromC(TestMethod);
+	}
+}
+</pre>
+
+<hr>
+
+Now, the second type of callback is more complicated. We want to call Swift class member method from C/C++. 
+Is is not directly possible, so we have to pass pointer to Swift class along. We have created Callbacks struct, that holds
+pointer to callback method and clas pointer. This is because we want to store callback in “<em>std::function<void()></void()></em>” and we dont
+want to modify some underlying code. For example, “<em>std::function<void()></void()></em>” can be in some other class and we dont have source code
+for it and without modifying the class, it wont be possible to call the Swift method. We have used lambda function to wrap
+modified callback and each time the actuall “<em>std::function</em>” is called, our lambda is called first and loads data from Callbacks struct.
+
+
+<pre><span class="comment">//In file CApi.cpp
+</span><span class="keyword">typedef struct</span> Callbacks<span class="operator">
+{</span><span class="type">
+    void</span><span class="operator"> *</span> classPtr<span class="operator">;</span><span class="type">
+    void</span><span class="operator">(*</span>callback<span class="operator">)(</span><span class="type">void</span><span class="operator"> *);
+           
+}</span>Callbacks<span class="operator">;</span><span class="comment">
+
+//can be inited in some method. Must also be released somewhere. Or can be used with shared_ptr
+</span><span class="keyword">static</span> Callbacks<span class="operator"> *</span> callbacks<span class="operator"> =</span><span class="keyword"> new</span> Callbacks<span class="operator">();</span><span class="type"> 
+
+
+void</span> CallSwiftMemberFromC<span class="operator">(</span><span class="type">void</span><span class="operator"> *</span> classPtr<span class="operator">,</span><span class="type"> void</span><span class="operator">(*</span>callback<span class="operator">)(</span><span class="type">void</span><span class="operator"> *))
+{</span>
+    callbacks<span class="operator">-&gt;</span>classPtr<span class="operator"> =</span> classPtr<span class="operator">;</span>
+    callbacks<span class="operator">-&gt;</span>callback<span class="operator"> =</span> callback<span class="operator">;</span>
+    
+    std<span class="operator">::</span>function<span class="operator">&lt;</span><span class="type">void</span><span class="operator">()&gt;</span> actaulCallback<span class="operator"> = [&amp;](){</span>
+        callbacks<span class="operator">-&gt;</span>callback<span class="operator">(</span>callbacks<span class="operator">-&gt;</span>classPtr<span class="operator">);
+    };</span>
+    actaulCallback<span class="operator">();
+}</span></pre>
+
+In Swift, we have to obtain pointer to class. We use a helper function “<em>bridge</em>” to get it.
+We can use closure passed to CallSwiftMemberFromC to "shorten" code a bit. The closure conforms to “<em>void(*callback)(void *)</em>”.
+
+<pre>
+func bridge<t :="" anyobject="">(_ obj : T) -&gt; UnsafeMutableRawPointer {
+    return UnsafeMutableRawPointer(Unmanaged.passUnretained(obj).toOpaque())
+}
+
+func bridge<t :="" anyobject="">(_ ptr : UnsafeMutableRawPointer) -&gt; T? {
+    return Unmanaged<t>.fromOpaque(ptr).takeUnretainedValue()
+}
+
+class SwiftClass{
+
+	func SomeFunc(){
+		CallSwiftMemberFromC(bridge(self), {(observer) -&gt; Void in
+			// Extract pointer to `self` from void pointer:
+			let mySelf = Unmanaged<swiftclass>.fromOpaque(observer!).takeUnretainedValue()
+			// Call instance method:
+			mySelf.TestMethod();
+		});
+	}
+	
+	func TestMethod(){
+	
+	}
+}
+
+	
+</swiftclass></t></t></t></pre>
+
+Source:
+<ul>
+<li>http://stackoverflow.com/questions/33294620/how-to-cast-self-to-unsafemutablepointervoid-type-in-swift</li>
+<li>http://stackoverflow.com/questions/33260808/how-to-use-instance-method-as-callback-for-function-which-takes-only-func-or-lit/33262376#33262376</li>
+</ul>
+<br>
+
+
+
+<a href="http://www.perry.cz/clanky/"><i>Martin Prantl 2017</i></a>
+
+
+</body></html>
