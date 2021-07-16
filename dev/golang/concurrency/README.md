@@ -39,6 +39,7 @@
 * [Passing a slice into a channel](https://stackoverflow.com/questions/24703943/passing-a-slice-into-a-channel)
 * [Length and capacity of a channel in Go](https://golangbyexample.com/length-and-capacity-channel-golang/)
 * [Why does Go panic on writing to a closed channel?](https://stackoverflow.com/questions/34897843/why-does-go-panic-on-writing-to-a-closed-channel)
+* [Is it OK to leave a channel open?](https://stackoverflow.com/questions/8593645/is-it-ok-to-leave-a-channel-open)
 
 ## Catch Return Values of Goroutines
 * [Catching return values from goroutines](https://stackoverflow.com/questions/20945069/catching-return-values-from-goroutines)
