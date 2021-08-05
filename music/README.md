@@ -11,3 +11,6 @@
 
 ## Anime Music(动漫音乐)
 * [起名费劲吧](https://tieba.baidu.com/f?kw=%E8%B5%B7%E5%90%8D%E8%B4%B9%E5%8A%B2)
+
+## Disco
+* [70后 80后 90后 荷东的士高迪斯科 怀旧金曲 欧美金曲 舞曲合集 你听过几首？](https://www.bilibili.com/video/BV1QE411w7sa)
