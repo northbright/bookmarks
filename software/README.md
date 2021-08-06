@@ -19,6 +19,8 @@
     * <https://github.com/extrame/xls>
   * Convert Execl to HTML table
     * [Tables Generator](https://www.tablesgenerator.com/html_tables)
+* Office 365
+  * [为什么office已经激活word却显示未经授权产品](https://answers.microsoft.com/zh-hans/msoffice/forum/all/%E4%B8%BA%E4%BB%80%E4%B9%88office%E5%B7%B2/668d5e5a-7ea6-4adc-afba-b1bdb717665e?ivk_sa=1024320u)
 
 ## CSV
 * <https://github.com/wireservice/csvkit>
