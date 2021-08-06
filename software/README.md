@@ -21,6 +21,7 @@
     * [Tables Generator](https://www.tablesgenerator.com/html_tables)
 * Office 365
   * [为什么office已经激活word却显示未经授权产品](https://answers.microsoft.com/zh-hans/msoffice/forum/all/%E4%B8%BA%E4%BB%80%E4%B9%88office%E5%B7%B2/668d5e5a-7ea6-4adc-afba-b1bdb717665e?ivk_sa=1024320u)
+  * [Deactivate an installation of Office](https://support.microsoft.com/en-us/office/deactivate-an-installation-of-office-767e3560-96ed-4b1c-806d-2fe01c529b1b#ID0EABAAA=Microsoft_365)
 
 ## CSV
 * <https://github.com/wireservice/csvkit>
