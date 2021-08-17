@@ -86,6 +86,7 @@
 * [微信小商店](minishop/README.md)
 * [SVG](svg/README.md)
 * [Electron](electron/README.md)
+* [Hugo](hugo/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
