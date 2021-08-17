@@ -41,3 +41,6 @@
 
 ## Self Check
 * [have i been pwned?](https://haveibeenpwned.com/)
+
+## WordPress
+* [Your login attempt has been blocked because the password you are using exists on lists of passwords leaked in data breaches](https://www.wordfence.com/help/blocking/troubleshooting/#leaked-password)
