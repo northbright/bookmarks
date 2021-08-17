@@ -38,3 +38,6 @@
 
 ## DNS
 * [《DNS攻击防范科普系列5》--聊一聊DNS劫持那些事](https://zhuanlan.zhihu.com/p/84665787)
+
+## Self Check
+* [have i been pwned?](https://haveibeenpwned.com/)
