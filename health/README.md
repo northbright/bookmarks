@@ -25,3 +25,6 @@
 ## 辅酶 Q10
 * [辅酶Q10](https://www.zhihu.com/topic/20321179/intro)
 * [市场上各类型辅酶Q10的效果和区别？](https://www.zhihu.com/question/290748950)
+
+## AED
+* [美敦力菲康 Cr Plus 全自动除颤仪(AED)](http://www.physio-control.cn/index.php?id=54)
