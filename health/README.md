@@ -27,5 +27,6 @@
 * [市场上各类型辅酶Q10的效果和区别？](https://www.zhihu.com/question/290748950)
 
 ## AED
-* [美敦力菲康 Cr Plus 全自动除颤仪(AED)](http://www.physio-control.cn/index.php?id=54)
+* [美敦力菲康 LIFEPAK Cr Plus 全自动除颤仪(AED)](http://www.physio-control.cn/index.php?id=54)
 * [自动体外除颤仪（AED）该如何正确使用？](https://www.zhihu.com/question/445473889/answer/1773937285)
+* [自动体外除颤仪（AED）该如何正确使用？（示例：菲康 LIFEPAK Cr Plus Lifepak）](https://www.zhihu.com/question/445473889/answer/1758392716)
