@@ -28,3 +28,4 @@
 
 ## AED
 * [美敦力菲康 Cr Plus 全自动除颤仪(AED)](http://www.physio-control.cn/index.php?id=54)
+* [自动体外除颤仪（AED）该如何正确使用？](https://www.zhihu.com/question/445473889/answer/1773937285)
