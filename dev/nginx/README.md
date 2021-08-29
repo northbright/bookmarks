@@ -49,6 +49,7 @@
 ## Problems
 * [centos7 中关于 nginx 的权限问题](https://www.v2ex.com/t/171804)
 * [Nginx proxy_pass not working in selinux](https://stackoverflow.com/questions/27435655/nginx-proxy-pass-not-working-in-selinux)
+* [nginx 499 错误的解决方法](https://zhuanlan.zhihu.com/p/78763954)
 
 ## WordPress
 * [Nginx - wordpress in a subdirectory, what data should be passed?](https://stackoverflow.com/questions/6154879/nginx-wordpress-in-a-subdirectory-what-data-should-be-passed)
