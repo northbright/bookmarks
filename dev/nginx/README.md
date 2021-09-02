@@ -62,4 +62,5 @@
 * [why do nginx process run with user nobody](https://serverfault.com/questions/534497/why-do-nginx-process-run-with-user-nobody)1
 
 ## Limit
+* [nginx篇10-限速三剑客之limit_req](https://zhuanlan.zhihu.com/p/389727662)
 * [nginx篇12-限速三剑客之limit_rate](https://zhuanlan.zhihu.com/p/389728216)
