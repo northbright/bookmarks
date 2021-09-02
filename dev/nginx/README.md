@@ -63,4 +63,5 @@
 
 ## Limit
 * [nginx篇10-限速三剑客之limit_req](https://zhuanlan.zhihu.com/p/389727662)
+* [nginx篇11-限速三剑客之limit_conn](https://zhuanlan.zhihu.com/p/389727940)
 * [nginx篇12-限速三剑客之limit_rate](https://zhuanlan.zhihu.com/p/389728216)
