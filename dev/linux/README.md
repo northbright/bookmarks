@@ -22,3 +22,4 @@
 * [linker](linker/README.md)
 * [find](find/README.md)
 * [network](network/README.md)
+* [Performance](performance/README.md)
