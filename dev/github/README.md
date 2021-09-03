@@ -44,3 +44,6 @@
 
 ## Github Actions
 * [GitHub Actions for Go Projects](https://tutorialedge.net/golang/github-actions-for-go-projects/)
+
+## Private Repo
+* [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
