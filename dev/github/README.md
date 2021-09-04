@@ -22,7 +22,7 @@
 ## Fork Repo and Pull Request
 * [Fork A Repo](https://help.github.com/articles/fork-a-repo/)
 * [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
-* [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+* [Syncing a fork](https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
 * [Collaborating with issues and pull requests](https://help.github.com/categories/collaborating-with-issues-and-pull-requests/)
 
