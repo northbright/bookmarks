@@ -2,3 +2,6 @@
 
 ## 贴膜
 * [智能手机（如 iPhone）到底要不要贴膜？应该贴哪种膜？](https://www.zhihu.com/question/20338403)
+
+## iPhone
+* [iphone13全系全亮度pwm调光频率480Hz，是否比12更伤眼？](https://www.zhihu.com/question/488721648)
