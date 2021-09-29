@@ -21,6 +21,7 @@
 ### 屏幕
 * [笔记本屏幕导致视力下降?这下终于找到病根儿了](http://notebook.pconline.com.cn/1156/11560011.html)
 * [BLUR BUSTERS Motion Tests](https://www.testufo.com/blurtrail)
+* [PWM Ranking - The Best Displays for the Eyes](https://www.notebookcheck.net/PWM-Ranking-Notebooks-Smartphones-and-Tablets-with-PWM.163979.0.html)
 
 ## SD Card
 * [Using SD Formatter Tool to restore full capacity on SDHC/SDXC cards](https://kb.sandisk.com/app/answers/detail/a_id/14827/~/using-sd-formatter-tool-to-restore-full-capacity-on-sdhc%2Fsdxc-cards)
