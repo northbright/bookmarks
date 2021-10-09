@@ -33,6 +33,7 @@
 * [nginx 如何禁止 ip 直接访问](https://www.v2ex.com/t/239589)
 * [Optimal value for Nginx worker_connections](https://serverfault.com/questions/787919/optimal-value-for-nginx-worker-connections)
 * [Connection processing methods](http://nginx.org/en/docs/events.html)
+* [nginx missing sites-available directory](https://stackoverflow.com/questions/17413526/nginx-missing-sites-available-directory)
 
 ## SSL / TLS
 * [How To Secure Nginx with Let's Encrypt on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7)
