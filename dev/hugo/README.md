@@ -12,3 +12,6 @@
 
 ## Pages
 * [How to use template parameters in page content in hugo](https://stackoverflow.com/questions/42023687/how-to-use-template-parameters-in-page-content-in-hugo)
+
+## Shortcodes
+* [Hugo的shortcode(支持视频等)和主题修改Li.027](https://zhuanlan.zhihu.com/p/396330042)
