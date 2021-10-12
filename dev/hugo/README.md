@@ -2,6 +2,7 @@
 
 ## Articles
 * [如何用hugo 搭建博客](https://zhuanlan.zhihu.com/p/126298572)
+* [搭建个人blog](https://vinurs.me/posts/1a329bf3-fbb7-4006-9714-d3b072826376/)
 
 ## Deploy
 * [Deploying a simple static website using Nginx and Hugo](https://pvera.net/posts/create-site-nginx-hugo/)
