@@ -45,6 +45,7 @@
 
 ## Github Actions
 * [GitHub Actions for Go Projects](https://tutorialedge.net/golang/github-actions-for-go-projects/)
+* [使用GitHub Actions实现前端自动化打包、部署](https://www.jianshu.com/p/e9d7ec90483c)
 
 ## Private Repo
 * [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
