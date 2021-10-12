@@ -62,6 +62,7 @@
 ## Permissions
 * [Docker Nginx worker process runs as non-root user but still can access a file owned by root](https://stackoverflow.com/questions/52884111/docker-nginx-worker-process-runs-as-non-root-user-but-still-can-access-a-file-ow)
 * [why do nginx process run with user nobody](https://serverfault.com/questions/534497/why-do-nginx-process-run-with-user-nobody)1
+* [What is the www-data user?](https://askubuntu.com/questions/873839/what-is-the-www-data-user)
 
 ## Limit
 * [nginx篇10-限速三剑客之limit_req](https://zhuanlan.zhihu.com/p/389727662)
