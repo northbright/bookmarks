@@ -7,6 +7,7 @@
 ## Deploy
 * [Deploying a simple static website using Nginx and Hugo](https://pvera.net/posts/create-site-nginx-hugo/)
 * [Hugo静态网站常用管理方式Li.026](https://zhuanlan.zhihu.com/p/395973602)
+* [使用 Hugo 搭建个人网站（博客、个人主页）并发布到 Github 上](https://zhuanlan.zhihu.com/p/417259374)
 
 ## Themes
 * [Hugo Clarity](https://github.com/chipzoller/hugo-clarity)
