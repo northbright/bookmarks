@@ -49,6 +49,7 @@
 * [How to deploy using Github action?](https://www.digitalocean.com/community/questions/how-to-deploy-using-github-action)
 * [Deploying to a server via SSH and Rsync in a Github Action](https://zellwk.com/blog/github-actions-deploy/) [local copy](local-copy/Deploying_to_a_server_via_SSH_and_Rsync_in_a_Github_Action.html)
 * [How to clone public submodule in "Github Actions"](https://stackoverflow.com/questions/59271919/how-to-clone-public-submodule-in-github-actions)
+* [Scheduled events](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#scheduled-events)
 
 ## Private Repo
 * [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
