@@ -15,6 +15,9 @@
 ## 饮用水
 * [日常饮水用饮水机好，还是自来水烧开了喝好？请问下哪种饮水方式健康一些。](https://www.zhihu.com/question/20968081)
 
+## 饮料
+* [崂山白花蛇草水有多难喝？](https://www.zhihu.com/question/21751319)
+
 ## 茶
 * [在这感冒频发的季节，你需要正确的喝茶](https://zhuanlan.zhihu.com/p/24940468)
 * [常喝绿茶真的有那么多神奇的功效吗？](https://zhuanlan.zhihu.com/p/113673829)
