@@ -26,6 +26,7 @@
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
 * [Collaborating with issues and pull requests](https://help.github.com/categories/collaborating-with-issues-and-pull-requests/)
 * [Configuring a remote for a fork](https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-for-a-fork)
+* [Forking a repo on GitHub but allowing new issues on the fork](https://softwareengineering.stackexchange.com/questions/179468/forking-a-repo-on-github-but-allowing-new-issues-on-the-fork)
 
 ## Github Pages and Custom Domain
 * [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
