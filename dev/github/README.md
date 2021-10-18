@@ -53,6 +53,7 @@
 * [Scheduled events](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#scheduled-events)
 * [Run your GitHub Actions workflow on a schedule](https://jasonet.co/posts/scheduled-actions/)
 * [Automated deployment using github actions ssh and shell script](https://ayeshalshukri.co.uk/category/guides/automated-deployment-using-github-actions-ssh-and-shell-script/)
+* [GitHub Actions: How to run SSH commands (without third-party actions)](https://blog.benoitblanchon.fr/github-action-run-ssh-commands/)
 
 ## Private Repo
 * [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
