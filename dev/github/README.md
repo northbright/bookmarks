@@ -52,6 +52,7 @@
 * [How to clone public submodule in "Github Actions"](https://stackoverflow.com/questions/59271919/how-to-clone-public-submodule-in-github-actions)
 * [Scheduled events](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#scheduled-events)
 * [Run your GitHub Actions workflow on a schedule](https://jasonet.co/posts/scheduled-actions/)
+* [Automated deployment using github actions ssh and shell script](https://ayeshalshukri.co.uk/category/guides/automated-deployment-using-github-actions-ssh-and-shell-script/)
 
 ## Private Repo
 * [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
