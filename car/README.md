@@ -13,6 +13,7 @@
 
 ## RAV4
 * [年终总“节”：RAV4内饰功能键解析整理！干货干货！](https://club.autohome.com.cn/bbs/thread-c-770-69691349-1.html)
+* [RAV4荣放智能钥匙电池更换教程【附图文说明】](https://club.autohome.com.cn/bbs/thread/abc5d44cac03e692/59400097-1.html)
 
 ## 驾驶
 * [小白司机的侧方位停车技巧](https://zhuanlan.zhihu.com/p/27159772)
