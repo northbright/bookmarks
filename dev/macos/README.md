@@ -8,3 +8,6 @@
 * [Display](display/README.md)
 * [App](app/README.md)
 * [Time Machine](time-machine/README.md)
+
+* Install
+  * [在不受支持的 Mac 上安装 macOS Big Sur 11 正式版](https://sysin.org/blog/install-macos-11-on-unsupported-mac/)
