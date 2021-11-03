@@ -92,6 +92,8 @@
 * [如何看待 TJ 宣布退出 Node.js 开发，转向 Go？](https://www.zhihu.com/question/24373004)
 * [关于 Go1.14，你一定想知道的性能提升与新特性](https://gocn.vip/topics/9611)
 * [2020 腾讯社招Golang后端面试经验分享](https://studygolang.com/articles/28081)
+* [Go 语言生态发展之路](https://mp.weixin.qq.com/s/ussTB7RBL4MREJlB_K-4JA)
+
 
 ## Effective Go
 * [实效Go编程](https://go-zh.org/doc/effective_go.html)
