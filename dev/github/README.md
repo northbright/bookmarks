@@ -55,6 +55,7 @@
 * [Automated deployment using github actions ssh and shell script](https://ayeshalshukri.co.uk/category/guides/automated-deployment-using-github-actions-ssh-and-shell-script/)
 * [GitHub Actions: How to run SSH commands (without third-party actions)](https://blog.benoitblanchon.fr/github-action-run-ssh-commands/)
 * [Manual workflow triggers in Github Actions](https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions)
+* [如何给 GitHub Actions 添加自己的超大资源 Runner 主机](https://my.oschina.net/u/4148359/blog/4777980)
 
 ## Private Repo
 * [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
