@@ -5,6 +5,7 @@
 
 ## Tag
 * [Download a specific tag with Git](http://stackoverflow.com/questions/791959/download-a-specific-tag-with-git)
+* [How to git clone a specific tag](https://stackoverflow.com/questions/20280726/how-to-git-clone-a-specific-tag)
 
 ## Log
 * [git log](http://www.cnblogs.com/gbyukg/archive/2011/12/12/2285419.html)
