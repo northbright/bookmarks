@@ -13,3 +13,6 @@
 
 ## SysLog
 * [How to Enable SSH Log and List Failed Login in Linux](https://linoxide.com/enable-sshd-logging/)
+
+## ssh-keyscan
+* [linux的ssh-keyscan命令有啥用?](https://www.zhihu.com/question/344870145)
