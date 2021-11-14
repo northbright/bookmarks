@@ -3,9 +3,10 @@
 ## 痛风
 * [扒一扒“澳洲痛风灵”西芹籽 痛风及高尿酸血症专题系列之五](https://www.sohu.com/a/167284469_387820)
 
-## 骨维力
+## 骨骼
 * [Schiff MoveFree和Blackmore骨维力哪个更好？](https://www.zhihu.com/question/278726830)
 * [Schiff Move Free维骨力这个牌子的保健效果怎么样，是要给中老年人群服用的。](https://www.zhihu.com/question/46399868)
+* [move free真的能够缓解关节疼痛吗？](https://www.zhihu.com/question/343312571/answer/810893053)
 
 ## 饮食
 * [中科院等团队研究证实七分饱可延缓衰老 逆转超过1/2衰老细胞](https://www.sohu.com/a/385608566_100191015)
