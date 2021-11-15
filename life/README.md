@@ -64,3 +64,4 @@
 
 ## 宠物鸟
 * [怎么挑选给鹦鹉的笼子？](https://www.zhihu.com/question/367451398)
+* [有什么适合文鸟的鸟笼？](https://www.zhihu.com/question/390765418)
