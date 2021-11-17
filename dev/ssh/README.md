@@ -17,3 +17,6 @@
 ## ssh-keyscan
 * [linux的ssh-keyscan命令有啥用?](https://www.zhihu.com/question/344870145)
 * [how to avoid ssh asking permission?](https://unix.stackexchange.com/questions/33271/how-to-avoid-ssh-asking-permission)
+
+## Bastion
+* [Setting Up an SSH Bastion Host](https://goteleport.com/blog/ssh-bastion-host)
