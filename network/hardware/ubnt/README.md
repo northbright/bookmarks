@@ -24,3 +24,4 @@
 * [网速慢，wifi会断开。求助！](https://bbs.ui.com.cn/t/wifi/46936)
 * [UniFi - 如何通过调试指标来排除 Wi-Fi 故障？](https://help.ui.com.cn/articles/115000200682/)
 * [UniFi - 高密度场景 WiFi 部署指南](https://help.ui.com.cn/articles/360000220301/)
+* [UniFi - 如何借助工具分析当前无线环境？](https://help.ui.com.cn/articles/115000003422/)
