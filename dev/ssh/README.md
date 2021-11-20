@@ -7,6 +7,7 @@
 * [How To Configure SSH Key-Based Authentication on a Linux Server](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
 * [Creating an SSH Key Pair and Configuring Public Key Authentication on a Server](https://www.linode.com/docs/guides/use-public-key-authentication-with-ssh/)
 * [How to pass the password to su/sudo/ssh without overriding the TTY?](https://stackoverflow.com/questions/233217/how-to-pass-the-password-to-su-sudo-ssh-without-overriding-the-tty)
+* [How to disable strict host key checking in ssh?](https://askubuntu.com/questions/87449/how-to-disable-strict-host-key-checking-in-ssh)
 
 ## Keys
 * [Can I remove newlines in a public key?](https://crypto.stackexchange.com/questions/19043/can-i-remove-newlines-in-a-public-key)
