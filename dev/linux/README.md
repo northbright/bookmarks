@@ -23,3 +23,4 @@
 * [find](find/README.md)
 * [network](network/README.md)
 * [Performance](performance/README.md)
+* [Rsync](rsync/README.md)
