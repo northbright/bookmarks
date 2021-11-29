@@ -23,3 +23,6 @@
 ## Bastion
 * [Setting Up an SSH Bastion Host](https://goteleport.com/blog/ssh-bastion-host)
 * [Is it possible to specify a different ssh port when using rsync?](https://stackoverflow.com/questions/4549945/is-it-possible-to-specify-a-different-ssh-port-when-using-rsync)
+
+## known_hosts
+* [How to add an ip range to known_hosts?](https://unix.stackexchange.com/questions/94448/how-to-add-an-ip-range-to-known-hosts)
