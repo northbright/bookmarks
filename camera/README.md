@@ -60,3 +60,4 @@
 
 ## 拍立得
 * [2021年买哪款拍立得相机？拍立得相机推荐与入坑指南（2021.11）](https://zhuanlan.zhihu.com/p/205175800)
+* [【拍立得intax mini90】使用教程](https://zhuanlan.zhihu.com/p/145779246)
