@@ -10,6 +10,9 @@
 * [How to disable strict host key checking in ssh?](https://askubuntu.com/questions/87449/how-to-disable-strict-host-key-checking-in-ssh)
 * [How to automatically accept the remote key when rsyncing?](https://stackoverflow.com/questions/18123554/how-to-automatically-accept-the-remote-key-when-rsyncing)
 
+## Config
+* [ssh_config](https://man.openbsd.org/ssh_config)
+
 ## Keys
 * [Can I remove newlines in a public key?](https://crypto.stackexchange.com/questions/19043/can-i-remove-newlines-in-a-public-key)
 
