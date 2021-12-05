@@ -30,3 +30,6 @@
 ## known_hosts
 * [How to add an ip range to known_hosts?](https://unix.stackexchange.com/questions/94448/how-to-add-an-ip-range-to-known-hosts)
 * [What is the difference between authorized_keys and known_hosts file for SSH?](https://security.stackexchange.com/questions/20706/what-is-the-difference-between-authorized-keys-and-known-hosts-file-for-ssh)
+
+## Installation
+* [安装 OpenSSH](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse)
