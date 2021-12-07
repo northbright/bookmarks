@@ -11,3 +11,6 @@
 
 ## Git
 * [How To Install Git on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04)
+
+## Samba
+* [How can I connect to a Samba server using its hostname instead of the IP?](https://askubuntu.com/questions/243461/how-can-i-connect-to-a-samba-server-using-its-hostname-instead-of-the-ip)
