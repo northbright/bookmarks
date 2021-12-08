@@ -11,3 +11,5 @@
 * [win10开机桌面不显示，黑屏但是有鼠标？](https://www.zhihu.com/question/53280292)
 * [windows10系统最近遇到的一些问题的解决方案](https://www.jianshu.com/p/4719850e237b)
 
+## ISO
+* [Windows 10 business 和 consumer 中的专业版有什么不同？](https://www.zhihu.com/question/379426445)
