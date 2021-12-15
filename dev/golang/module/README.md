@@ -8,3 +8,4 @@
 * [干货满满的 Go Modules 和 goproxy.cn](https://gocn.vip/topics/9484)
 * [Go Modules 终极入门](https://gocn.vip/topics/9904)
 * [谈谈gomod/goproxy/gosumdb](https://zhuanlan.zhihu.com/p/111722890)
+* [Go语言重新开始，Go Modules的前世今生与基本使用](https://mp.weixin.qq.com/s/0FU8YrPhb2ezc5Is7wVpNQ)
