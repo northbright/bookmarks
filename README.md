@@ -26,3 +26,4 @@ Bookmarks of development and more...
 * [Anime（动画）](anime/README.md)
 * [Comic（漫画）](comic/README.md)
 * [房产](house/README.md)
+* [Cloud(云)](cloud/README.md)
