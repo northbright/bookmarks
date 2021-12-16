@@ -13,7 +13,6 @@ Bookmarks of development and more...
 * [Video File Format(视频文件格式)](video-file-format/README.md)
 * [Electrical Home Appliance(家电)](jiadian/README.md)
 * [Network(网络)](network/README.md)
-* [家电](jiadian/README.md)
 * [Car(汽车)](car/README.md)
 * [Phone(手机及配件)](phone/README.md)
 * [Plants(植物)](plants/README.md)
