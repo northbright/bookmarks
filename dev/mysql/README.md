@@ -8,3 +8,6 @@
 
 ## 数据一致性
 * [如何保证MySQL和Redis的数据一致性？10张图带你搞定！](https://mp.weixin.qq.com/s/tIrbRLNQNtV4Ne79jeNNzA)
+
+## Security（安全）
+* [MySQL Network Security](https://serversforhackers.com/c/mysql-network-security)
