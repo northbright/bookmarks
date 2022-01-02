@@ -12,6 +12,9 @@
 * [Pushing from local repository to GitHub hosted remote](http://stackoverflow.com/questions/10573957/pushing-from-local-repository-to-github-hosted-remote)
 * [ssh: connect to host github.com port 22: Connection timed out](http://stackoverflow.com/questions/15589682/ssh-connect-to-host-github-com-port-22-connection-timed-out)
 
+## Visit Github in China
+* [修改 Hosts 解决 Github 访问失败马克](https://zhuanlan.zhihu.com/p/107334179)
+
 ## Commit
 * [Closing issues using keywords](https://help.github.com/articles/closing-issues-using-keywords/)
 * [Github上git commit 提交注释的规范](https://segmentfault.com/q/1010000000395039)
