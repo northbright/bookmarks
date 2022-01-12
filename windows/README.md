@@ -13,3 +13,6 @@
 
 ## ISO
 * [Windows 10 business 和 consumer 中的专业版有什么不同？](https://www.zhihu.com/question/379426445)
+
+## Network
+* [Unidentified Network, Static IP, LAN Ok](https://www.windows10forums.com/threads/unidentified-network-static-ip-lan-ok.13846/)
