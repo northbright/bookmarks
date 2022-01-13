@@ -36,3 +36,6 @@
 
 ## Configuration
 * [Why should I use core.autocrlf=true in Git?](https://stackoverflow.com/questions/2825428/why-should-i-use-core-autocrlf-true-in-git)
+
+## Problems
+* [What to do when git branch has diverged?](https://poanchen.github.io/blog/2020/09/19/what-to-do-when-git-branch-has-diverged)
