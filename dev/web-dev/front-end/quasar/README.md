@@ -7,5 +7,4 @@
 ## Basis
 * [Quasar CLI入门教程](https://zhuanlan.zhihu.com/p/34977695)
 * [Quasar CLI 框架 Vuex 入门教程](https://zhuanlan.zhihu.com/p/35064497)
-
-
+* [Q-Dialog: Set custom size (width, height)?](https://forum.quasar-framework.org/topic/3670/q-dialog-set-custom-size-width-height)
