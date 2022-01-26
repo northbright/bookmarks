@@ -10,6 +10,21 @@
 * [Ubnt EdgeRouter 4 评测](https://www.chiphell.com/article-19840-1.html)
 
 ## UAP
+* [总算搞定微信授权连接wifi了，附详细方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17679&extra=page%3D1)
+* [UniFi Controller-API文档【User Session部分】](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=15577&extra=page%3D1)
+* <https://github.com/Ubiquiti-CN/auth>
+* [UBNT 中文知识库全新上线](http://bbs.ubnt.com.cn/knowledge.php)
+* [UBNT AC 入手！ 但是感觉有些失败](https://www.chiphell.com/thread-1158729-1-1.html)
+* [5万平 腾讯空间 联合创业圈，UniFi 企业网 完美打造！](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=17568&extra=page%3D1)
+* [当UniFi 控制器关闭后所有 SSID 广播中断的解决方案](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13316&highlight=unifi%2B%E5%85%B3%E9%97%AD)
+* [Unifi之星问答总汇](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=13515)
+* [What is the default username / password for UAPs and controller?](https://help.ubnt.com/hc/en-us/articles/204909374-UniFi-What-is-the-default-username-password-for-UAPs-and-controller-)
+* [UniFi - Layer 3 methods for UAP adoption and management](https://help.ubnt.com/hc/en-us/articles/204909754-UniFi-Layer-3-methods-for-UAP-adoption-and-management)
+* [经常发生上网慢，求解决](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=18934&extra=page%3D4)
+* [AP PRO 启动5G后导致速度很卡.接受率也很低](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=19065&extra=page%3D5)
+* [UBNT Unifi NanoHD & AC In-Wall](https://www.chiphell.com/article-20602-1.html)
+* [UniFi - 无线限速的设置](https://help.ui.com.cn/hc/zh-cn/articles/115000150702-UniFi-%E6%97%A0%E7%BA%BF%E9%99%90%E9%80%9F%E7%9A%84%E8%AE%BE%E7%BD%AE)
+* [UniFi - 如何向 UniFi 控制器中添加新设备](https://help.ui.com.cn/articles/360000227321/)
 * [UniFi - How to Reset the UniFi Access Point to Factory Defaults](https://help.ubnt.com/hc/en-us/articles/205143490-UniFi-How-to-reset-the-UniFi-Access-Point-to-factory-defaults)
 * [关于UNIFI SSID划分VLAN求解](http://bbs.ubnt.com.cn/forum.php?mod=viewthread&tid=14893)
 * iOS Device Connection Issues

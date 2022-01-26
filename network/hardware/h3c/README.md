@@ -21,3 +21,7 @@
 
 ## Design
 * [H3C中小企业网络解决方案实战篇（精）](https://wenku.baidu.com/view/bc8fa30f814d2b160b4e767f5acfa1c7aa0082a9.html)
+
+## AP and AC
+* [为中小企业WiFi而生 华三小贝无线评测](http://net.it168.com/a2016/1130/3050/000003050277_all.shtml)
+* [爱快AP-H3和H3C小贝 wap712C 两个AP随便试试](https://www.chiphell.com/thread-1639244-1-1.html)
