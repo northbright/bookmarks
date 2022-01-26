@@ -10,3 +10,6 @@
 
 ## DHCP
 * [DHCP一般是放在路由上还是核心交换上？](http://bbs.51cto.com/viewthread.php?tid=916731&extra=&page=1)
+
+## DNS
+* [公共DNS哪家强？](https://www.zhihu.com/question/32229915/answer/276159987)
