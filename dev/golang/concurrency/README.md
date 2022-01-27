@@ -40,6 +40,7 @@
 * [Length and capacity of a channel in Go](https://golangbyexample.com/length-and-capacity-channel-golang/)
 * [Why does Go panic on writing to a closed channel?](https://stackoverflow.com/questions/34897843/why-does-go-panic-on-writing-to-a-closed-channel)
 * [Is it OK to leave a channel open?](https://stackoverflow.com/questions/8593645/is-it-ok-to-leave-a-channel-open)
+* [关于Go并发编程，你不得不知的“左膀右臂”——并发与通道！](https://mp.weixin.qq.com/s/BvIPDCKuCbe7Xd9oI6BvjQ)
 
 ## Catch Return Values of Goroutines
 * [Catching return values from goroutines](https://stackoverflow.com/questions/20945069/catching-return-values-from-goroutines)
