@@ -7,3 +7,4 @@
 
 ## Aliyun
 * [挂载数据盘](https://help.aliyun.com/document_detail/25446.html)
+* [分区格式化数据盘（Linux）](https://help.aliyun.com/document_detail/25426.htm)
