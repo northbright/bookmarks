@@ -38,6 +38,7 @@
 
 ## DNS
 * [《DNS攻击防范科普系列5》--聊一聊DNS劫持那些事](https://zhuanlan.zhihu.com/p/84665787)
+* [【学习笔记】一篇文章理解DNSlog的妙用](https://mp.weixin.qq.com/s/MFKs80OcUdtUKmBO6WBcQA)
 
 ## Self Check
 * [have i been pwned?](https://haveibeenpwned.com/)
