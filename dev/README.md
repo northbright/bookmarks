@@ -90,7 +90,7 @@
 * [acme.sh](acme-sh/README.md)
 * [GoAccess](goaccess/README.md)
 * [Pandoc](pandoc/README.md)
-* [TexLive](texlive/README.md)
+* [TeX Live](texlive/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
