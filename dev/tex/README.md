@@ -1,6 +1,6 @@
-# Tex Live
+# Tex
 
-## Offical Site
+## Offical Sites
 * [TeX Live](https://www.tug.org/texlive/)
 
 ## Security
