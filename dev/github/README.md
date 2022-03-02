@@ -61,6 +61,7 @@
 * [如何给 GitHub Actions 添加自己的超大资源 Runner 主机](https://my.oschina.net/u/4148359/blog/4777980)
 * [Github Actions, how to share a calculated value between job steps?](https://stackoverflow.com/questions/57819539/github-actions-how-to-share-a-calculated-value-between-job-steps)
 * [Github actions share workspace/artifacts between jobs?](https://stackoverflow.com/questions/57498605/github-actions-share-workspace-artifacts-between-jobs)
+* [Storing workflow data as artifacts](https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts)
 
 ## Private Repo
 * [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
