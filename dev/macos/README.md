@@ -1,6 +1,7 @@
 # macOS
 
 ## Categories
+* [Command](command/README.md)
 * [Keyboard](keyboard/README.md)
 * [Command Line Tools](command-line-tools/README.md)
 * [Security Policy](security-policy/README.md)
