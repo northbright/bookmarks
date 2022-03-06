@@ -147,3 +147,6 @@
 ## 网盘
 * [腾讯微云到底怎样？能不能长期用？](https://www.zhihu.com/question/277511299)
 * [百度云和微云哪个好用？](https://www.zhihu.com/question/52365066)
+
+## Pandoc
+* [如何将markdown转化为pdf](https://www.jianshu.com/p/dd24b262314d)
