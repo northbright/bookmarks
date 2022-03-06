@@ -151,3 +151,4 @@
 ## Pandoc
 * [如何将markdown转化为pdf](https://www.jianshu.com/p/dd24b262314d)
 * [Converting Markdown to Beautiful PDF with Pandoc](https://jdhao.github.io/2019/05/30/markdown2pdf_pandoc/)
+* [pandoc 安装与使用](https://zhuanlan.zhihu.com/p/258912543)
