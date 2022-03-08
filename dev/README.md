@@ -89,7 +89,6 @@
 * [Hugo](hugo/README.md)
 * [acme.sh](acme-sh/README.md)
 * [GoAccess](goaccess/README.md)
-* [Pandoc](pandoc/README.md)
 * [TeX](tex/README.md)
 
 ## Blogs
