@@ -57,3 +57,4 @@
 
 ## Thunderbolt
 * [国内首款搭载雷电4传输协议的Zikko即刻Thunderbolt 4数据线评测](https://zhuanlan.zhihu.com/p/352376665)
+* [USB4 / Type-C / 雷电接口，三者到底有什么关系？](https://zhuanlan.zhihu.com/p/377780130)
