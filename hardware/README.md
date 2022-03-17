@@ -54,3 +54,6 @@
 
 ## USB
 * [当Type-C接口成为标配，但传输速度依然停滞不前！这是什么原因？](https://zhuanlan.zhihu.com/p/69608024)
+
+## Thunderbolt
+* [国内首款搭载雷电4传输协议的Zikko即刻Thunderbolt 4数据线评测](https://zhuanlan.zhihu.com/p/352376665)
