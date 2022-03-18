@@ -34,6 +34,8 @@
 * [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
 * [这些硬盘不要买！2021那些不推荐的固态硬盘](https://zhuanlan.zhihu.com/p/166162142)
 * [这些硬盘不要买！2021那些不推荐的机械硬盘](https://zhuanlan.zhihu.com/p/320796902)
+* [什么！NVMe不支持TRIM？你不会搞错了吧...](https://zhuanlan.zhihu.com/p/113871374)
+* [高性能Type-C移动硬盘挑选指南](https://zhuanlan.zhihu.com/p/58257546)
 
 ## Mac
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
