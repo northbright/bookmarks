@@ -38,6 +38,7 @@
 * [高性能Type-C移动硬盘挑选指南](https://zhuanlan.zhihu.com/p/58257546)
 * [元谷存储巴士C260金属移动硬盘盒 薄厚兼容有内涵](https://post.smzdm.com/p/apz0vlw2/)
 * [USB3.1 gen2 Type-c 硬盘盒 ASM235CM JMS580 VL716 测试](https://tieba.baidu.com/p/6446387461)
+* [2019年为什么极少见到配备SATA接口固态硬盘的笔记本了？](https://www.zhihu.com/question/319773970)
 
 ## Mac
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
