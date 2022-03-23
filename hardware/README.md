@@ -63,6 +63,7 @@
 
 ## Mini 主机
 * [戴尔微型工作站 t3240清灰顺便晒一晒](https://www.chiphell.com/thread-2327702-1-1.html)
+* [可能是目前最好玩的小机机](https://www.chiphell.com/forum.php?mod=viewthread&tid=2352814)
 
 ## USB
 * [当Type-C接口成为标配，但传输速度依然停滞不前！这是什么原因？](https://zhuanlan.zhihu.com/p/69608024)
