@@ -64,6 +64,8 @@
 * [Storing workflow data as artifacts](https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts)
 * [New GitHub actions run in empty folders](https://stackoverflow.com/questions/57509118/new-github-actions-run-in-empty-folders)
 * [How do I set an env var with a bash expression in GitHub Actions?](https://stackoverflow.com/questions/57968497/how-do-i-set-an-env-var-with-a-bash-expression-in-github-actions)
+* macOS and iOS
+  * [Building swift packages with github actions](https://rhonabwy.com/2020/05/09/continuous-integration-with-github-actions-for-macos-and-ios-projects/)
 
 ## Private Repo
 * [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
