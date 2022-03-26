@@ -1,5 +1,8 @@
 # 运动
 
+## 锻炼
+* [宅家也能炼成完美身材？ 王励勤Jiao你居家锻炼](https://mp.weixin.qq.com/s/IfE3S0Yo3V-McNa241KaFQ)
+
 ## 深蹲
 * [如何完成标准的深蹲？](https://www.zhihu.com/question/20768038/answer/16112428)
 
