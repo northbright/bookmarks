@@ -33,10 +33,12 @@
 ## SD Card
 * [Using SD Formatter Tool to restore full capacity on SDHC/SDXC cards](https://kb.sandisk.com/app/answers/detail/a_id/14827/~/using-sd-formatter-tool-to-restore-full-capacity-on-sdhc%2Fsdxc-cards)
 
-## HDD & SSD
+## HDD
+* [这些硬盘不要买！2021那些不推荐的机械硬盘](https://zhuanlan.zhihu.com/p/320796902)
+
+## SSD
 * [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
 * [这些硬盘不要买！2021那些不推荐的固态硬盘](https://zhuanlan.zhihu.com/p/166162142)
-* [这些硬盘不要买！2021那些不推荐的机械硬盘](https://zhuanlan.zhihu.com/p/320796902)
 * [什么！NVMe不支持TRIM？你不会搞错了吧...](https://zhuanlan.zhihu.com/p/113871374)
 * [高性能Type-C移动硬盘挑选指南](https://zhuanlan.zhihu.com/p/58257546)
 * [元谷存储巴士C260金属移动硬盘盒 薄厚兼容有内涵](https://post.smzdm.com/p/apz0vlw2/)
