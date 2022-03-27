@@ -35,6 +35,7 @@
 
 ## HDD
 * [这些硬盘不要买！2021那些不推荐的机械硬盘](https://zhuanlan.zhihu.com/p/320796902)
+* [希捷酷鹰、酷狼有什么大区别？哪个适合用在NAS上？](https://www.zhihu.com/question/63730234)
 
 ## SSD
 * [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
