@@ -69,7 +69,7 @@
 * [Remote Desktop](remote-desktop/README.md)
 * [GUI](gui/README.md)
 * [Unsafe](unsafe/README.md)
-* [Generic](generic/README.md)
+* [Generics](generics/README.md)
 
 ## Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
