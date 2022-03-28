@@ -75,3 +75,7 @@
 ## Thunderbolt
 * [国内首款搭载雷电4传输协议的Zikko即刻Thunderbolt 4数据线评测](https://zhuanlan.zhihu.com/p/352376665)
 * [USB4 / Type-C / 雷电接口，三者到底有什么关系？](https://zhuanlan.zhihu.com/p/377780130)
+
+## NAS
+* [群晖为什么不卖操作系统？](https://www.zhihu.com/question/68392753/answer/1602212479)
+* [搭建家庭 NAS 服务器有什么好方案？](https://www.zhihu.com/question/21359049/answer/622344230)
