@@ -12,6 +12,7 @@
 
 ## Hash
 *  [How can zero byte files generate a hash value?](https://superuser.com/questions/557925/how-can-zero-byte-files-generate-a-hash-value)
+* ["SHA-256" vs "any 256 bits of SHA-512", which is more secure?](https://crypto.stackexchange.com/questions/3153/sha-256-vs-any-256-bits-of-sha-512-which-is-more-secure)
 
 ## RSA
 * [关于RSA的一些趣事](https://mp.weixin.qq.com/s/LM8WH59JqbasxzwztN1Lsg)
