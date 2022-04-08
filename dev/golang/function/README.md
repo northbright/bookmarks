@@ -11,3 +11,7 @@
 ## Receiver Type
 * [参数和返回值里面到底用指针还是value?](https://gocn.io/question/278)
 * [Receiver Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
+
+## Return Values
+* [Why should return parameters be named?](https://stackoverflow.com/questions/15089726/why-should-return-parameters-be-named)
+* [Golang 语言该用命名返回值吗？](https://cloud.tencent.com/developer/article/1921658)
