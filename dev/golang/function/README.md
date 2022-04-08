@@ -15,3 +15,4 @@
 ## Return Values
 * [Why should return parameters be named?](https://stackoverflow.com/questions/15089726/why-should-return-parameters-be-named)
 * [Golang 语言该用命名返回值吗？](https://cloud.tencent.com/developer/article/1921658)
+* [Using named return variables to capture panics in Go](https://www.calhoun.io/using-named-return-variables-to-capture-panics-in-go/)
