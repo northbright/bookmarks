@@ -37,3 +37,6 @@
 * 服务商
   * [合恩](http://www.hegrace.cn/)
 * [美敦力菲康 LIFEPAK Cr Plus 全自动除颤仪(AED)](http://www.physio-control.cn/index.php?id=54)
+
+## 明目
+* [居家抗疫如何护眼？来练健身气功·明目功！](https://mp.weixin.qq.com/s/WWvIHVhHtMQTle6anDpiiA)
