@@ -40,3 +40,6 @@
 
 ## 明目
 * [居家抗疫如何护眼？来练健身气功·明目功！](https://mp.weixin.qq.com/s/WWvIHVhHtMQTle6anDpiiA)
+
+## 胆结石
+* [男人患胆结石是什么原因？主要是这6个原因](https://zhuanlan.zhihu.com/p/376725062)
