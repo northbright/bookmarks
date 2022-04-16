@@ -43,3 +43,4 @@
 
 ## 胆结石
 * [男人患胆结石是什么原因？主要是这6个原因](https://zhuanlan.zhihu.com/p/376725062)
+* [胆结石吃什么食物最好？](https://zhuanlan.zhihu.com/p/335477135)
