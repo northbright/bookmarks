@@ -8,6 +8,7 @@
 
 ## Category
 * [Installation](installation/README.md)
+* [Editor](editor/README.md)
 * [Builtin](builtin/README.md)
 * [HTTP](http/README.md)
 * [Captcha](captcha/README.md)
