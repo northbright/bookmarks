@@ -7,3 +7,4 @@
 * [Go1.18之泛型初体验](https://zhuanlan.zhihu.com/p/482777136)
 * [An Introduction To Generics](https://go.dev/blog/intro-generics)
 * [切换到Go 1.18后的第一件事：将interface{}全部替换为any](https://tonybai.com/2021/12/18/replace-empty-interface-with-any-first-after-switching-to-go-1-18/)
+* [Go 1.18中值得关注的几个变化](https://tonybai.com/2022/04/20/some-changes-in-go-1-18/)
