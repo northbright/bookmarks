@@ -11,6 +11,7 @@
 ## 食用油
 * [各位家里食用油怎么选？开贴探讨一下](http://forum.xitek.com/forum-viewthread-tid-1072347-extra-page%3D1-ordertype-2-t-1481254278.html)
 * [食用油，鲁花的为什么比金龙鱼和福临门贵很多呢？](http://forum.xitek.com/thread-1421696-1-1-2.html)
+* [富含多不饱和脂肪酸的植物油真的是健康油脂吗？](https://zhuanlan.zhihu.com/p/167967281)
 
 ## 饮用水
 * [日常饮水用饮水机好，还是自来水烧开了喝好？请问下哪种饮水方式健康一些。](https://www.zhihu.com/question/20968081)
