@@ -15,6 +15,7 @@
 * [油炸食物为何有害健康？煎炸用油的最佳选择](https://zhuanlan.zhihu.com/p/335989397)
 * [炒菜油炸到底用什么油最合适?](https://www.zhihu.com/question/325454560)
 * [炒菜或油炸，选什么油更合适？你只需把握一条原则](https://zhuanlan.zhihu.com/p/258630002)
+* [什么油用来做油炸食物最健康？](https://www.zhihu.com/question/454246107/answer/1869150900)
 
 ## 饮用水
 * [日常饮水用饮水机好，还是自来水烧开了喝好？请问下哪种饮水方式健康一些。](https://www.zhihu.com/question/20968081)
