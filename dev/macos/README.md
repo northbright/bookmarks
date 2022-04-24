@@ -11,6 +11,7 @@
 * [Time Machine](time-machine/README.md)
 * [Serial](serial/README.md)
 * [Font](font/README.md)
+* [Power Management](pm/README.md)
 
 * Install
   * [在不受支持的 Mac 上安装 macOS Big Sur 11 正式版](https://sysin.org/blog/install-macos-11-on-unsupported-mac/)
