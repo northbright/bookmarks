@@ -13,6 +13,7 @@
 * [食用油，鲁花的为什么比金龙鱼和福临门贵很多呢？](http://forum.xitek.com/thread-1421696-1-1-2.html)
 * [富含多不饱和脂肪酸的植物油真的是健康油脂吗？](https://zhuanlan.zhihu.com/p/167967281)
 * [油炸食物为何有害健康？煎炸用油的最佳选择](https://zhuanlan.zhihu.com/p/335989397)
+* [炒菜油炸到底用什么油最合适?](https://www.zhihu.com/question/325454560)
 
 ## 饮用水
 * [日常饮水用饮水机好，还是自来水烧开了喝好？请问下哪种饮水方式健康一些。](https://www.zhihu.com/question/20968081)
