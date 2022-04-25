@@ -17,3 +17,6 @@
 
 ## Sting & The Police
 * [Sting&The Police乐队演唱会补完计划](https://www.bilibili.com/video/BV1ib411V7GF)
+
+## 午前音乐公园
+* [专访bigjoe：因创建午前音乐公园考研北大 | 诞生于互联网时代早期的日本音乐杂志](https://www.sohu.com/a/224356212_823167)
