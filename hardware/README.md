@@ -59,6 +59,7 @@
 * [如何重置 Mac 的 SMC](https://support.apple.com/zh-cn/HT201295)
 * [重置 Mac 上的 NVRAM 或 PRAM](https://support.apple.com/zh-cn/HT204063)
 * [macOS 卡顿或无法启动怎么办？教你重置Mac苹果SMC、NVRAM、PRAM](https://zhuanlan.zhihu.com/p/357399617)
+* [Error code -36 MacBook Air M1 with Big Sur](https://discussions.apple.com/thread/252723334)
 
 ## 光猫
 * [上海电信更换光猫的相关问题](https://v2ex.com/t/681033)
