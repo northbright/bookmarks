@@ -19,3 +19,6 @@
 
 ## iPhone
 * [iPhone复制大文件时提示 连到系统上的设备没有发挥作用 之后就断开复制了？](https://www.zhihu.com/question/263814773)
+
+## HEVC
+* [Windows 11看视频还要钱？教你免费安装HEVC视频扩展](https://www.cnbeta.com/articles/tech/1265127.htm)
