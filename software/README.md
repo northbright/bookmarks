@@ -161,3 +161,6 @@
 * [让pandoc输出pdf时支持中文](https://www.cnblogs.com/liuyangnuts/archive/2013/04/23/3038354.html)
 * [如何在1小时内快速入手LaTeX？](https://www.zhihu.com/question/268569440)
 * [Log4j does not affect TeX Live or MiKTeX](https://tug.org/texlive/cve-log4j.html)
+
+## 微信（WeChat）
+* [微信群不见了，怎么找回？（附全网高效方法）](https://zhuanlan.zhihu.com/p/66220044)
