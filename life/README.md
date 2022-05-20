@@ -70,3 +70,6 @@
 ## 宠物鸟
 * [怎么挑选给鹦鹉的笼子？](https://www.zhihu.com/question/367451398)
 * [有什么适合文鸟的鸟笼？](https://www.zhihu.com/question/390765418)
+
+## 牛排
+* [大希地牛排是合成牛排吗？](https://www.zhihu.com/question/359927756/answer/1892715532)
