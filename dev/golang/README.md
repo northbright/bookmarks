@@ -72,6 +72,7 @@
 * [Unsafe](unsafe/README.md)
 * [Generics](generics/README.md)
 * [Video and Audio](video-and-audio/README.md)
+* [Time](time/README.md)
 
 ## Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
