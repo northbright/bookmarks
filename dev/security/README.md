@@ -45,3 +45,6 @@
 
 ## WordPress
 * [Your login attempt has been blocked because the password you are using exists on lists of passwords leaked in data breaches](https://www.wordfence.com/help/blocking/troubleshooting/#leaked-password)
+
+## HTTPS
+* [基于HTTPS的用户注册页面是否应该将密码明文发送给后端？](https://www.zhihu.com/question/428006826)
