@@ -17,3 +17,6 @@
 
 ## RSA
 * [关于RSA的一些趣事](https://mp.weixin.qq.com/s/LM8WH59JqbasxzwztN1Lsg)
+
+## Articles
+* [不止中本聪，区块链“鼻祖”其实是位深藏功与名的神秘华人](https://www.cnbeta.com/articles/tech/1279225.htm)
