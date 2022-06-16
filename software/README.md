@@ -42,6 +42,9 @@
 * Microsoft Mac Downloads
   * [Microsoft Mac Downloads](https://macadmins.software/)
 
+* Rar
+  * [教你如何在Mac系统下解压rar,zip等各种格式文件](https://zhuanlan.zhihu.com/p/103473716)
+
 ## Apple ID
 * [Apple ID 被盗取、支付宝被盗刷，谁应为免密支付担责？如何有效避免此类问题发生
 ？](https://www.zhihu.com/question/298321122/answer/511277148)
