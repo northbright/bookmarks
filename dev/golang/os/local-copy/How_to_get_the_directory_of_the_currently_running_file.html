@@ -1,0 +1,1054 @@
+﻿<!DOCTYPE html><html class="js-focus-visible" data-js-focus-visible="" lang="en"><head>
+<base href="https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg">
+    <meta charset="utf-8">
+    <title>How to get the directory of the currently running file? - DEV Community</title>
+      <meta name="last-updated" content="2022-06-22 10:36:51 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1655894211">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-234447d422f93d00c9abfc6368bb33b75346373cab028a12b1c5efafb6ba6ff0.css" media="all" id="main-minimal-stylesheet">
+<link rel="stylesheet" href="https://dev.to/assets/views-016976fa68498a70a61fbd1e35d75e2ef473b571c77df80b357bc6e1613b2eb2.css" media="all" id="main-views-stylesheet">
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c81bee491f9e66cc25f880e128c98be350c6e495ebdf58227bc5543e0e16067c.css" media="all" id="main-crayons-stylesheet">
+
+      <script async="" data-savepage-src="//www.google-analytics.com/analytics.js"></script><script data-savepage-src="https://dev.to/assets/base-714a348a8204baf3d4e83e82e33b0ed9c3a9908ec807b9c36505e0afd33c96b6.js" defer="defer"></script>
+        <script data-savepage-src="https://dev.to/packs/js/runtime~base-9e57874d10b8b5fb528d.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/base-d1fca17a10a84c253f2f.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/runtime~Search-eff7a98ced584b771be9.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/0-95fb0cef644d8e105bc9.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/2-9613274770103eeb4674.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/Search-e493d13bcab89c348084.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/runtime~runtimeBanner-36b2242c6d82fd5c462b.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/1-5b42471a58e8e5ce23b2.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/runtimeBanner-ee037cf56cfefb54c470.chunk.js" defer="defer"></script>
+      
+    <link rel="canonical" href="https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg">
+    <meta name="description" content="The Golang programming language makes it easy to build simple, reliable, and efficient software.    Y... Tagged with go.">
+    <meta name="keywords" content="go, software, coding, development, engineering, inclusive, community">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg">
+    <meta property="og:title" content="How to get the directory of the currently running file?">
+    <meta property="og:description" content="The Golang programming language makes it easy to build simple, reliable, and efficient software.    Y...">
+    <meta property="og:site_name" content="DEV Community">
+    <meta name="twitter:site" content="@thepracticaldev">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="How to get the directory of the currently running file?">
+    <meta name="twitter:description" content="The Golang programming language makes it easy to build simple, reliable, and efficient software.    Y...">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:widgets:new-embed-design" content="on">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+      <meta property="og:image" content="https://res.cloudinary.com/practicaldev/image/fetch/s--UgCtn9dr--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/u97jcovwe413ljrjba6y.jpg">
+      <meta name="twitter:image:src" content="https://res.cloudinary.com/practicaldev/image/fetch/s--UgCtn9dr--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/u97jcovwe413ljrjba6y.jpg">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" data-savepage-href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEX///+Pj4/T09RfYGEhIiN6env9/f0NDg8JCgsLDA1SU1P5+vr09PRvcHEXGBlDREWio6Pb29zDw8QQERIoKSru7u6GhofOzs6YmJk7PDyqq6u4uLgvMDBrbGxKS0zY2NidnZ1QTcqSAAABJUlEQVQ4y+WTy3aDMAxEh9gYGRNIzSvk/f9fmZEg57Rsum9ngYW4WCNhUP0i/BEgUiKRcZRo0pQ91BVtWVDOMz1YWHRMlS3vbYU/gEq5k/4C07G/Yuykkm7EpVcgpARk758apXSXArgTKIFSFLjW7org/BcjahCXcKaLE1JtwEmkTjgSOAsV4/DE7KOf8fTRAJZrPoD6p5vmIY8GL7b5A5inqSMhE62ulx0AtUVAX1632QEhBQW0/GExIzuAXdxsiCc05wZF3HvYTOoIwhh0GNXWpvveJmssI+2MywbM5XTgTAjkklr0M2QCud1KmC7tJzqqTU47TFKtQAhpfA2xL1JQaeV4yyGbX7S1o5Ze97XQWT4O9RDXAyMmOx9ruB2WbcX/+HHeM18gHt6c/4EAAAAASUVORK5CYII=">
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link data-savepage-href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" href="" rel="icon" sizes="192x192">
+      <link data-savepage-href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" href="data:image/png;base64,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" rel="icon" sizes="128x128">
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community">
+
+      <meta property="forem:name" content="DEV Community">
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <meta property="forem:domain" content="dev.to">
+  <script charset="utf-8" data-savepage-src="https://dev.to/packs/js/146-9ed49f83a15980129143.chunk.js"></script><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="Ra601kZV8fOHG6T0_Rh6nqGYhzjYAgY8qcXxHrGLbS6MUAK4Q32O6Lt8yXd-67CeBINTShJamlvojFYZ04e3kw"><script charset="utf-8" data-savepage-src="https://dev.to/packs/js/141-5627b88f6d54b48e5dcb.chunk.js"></script>
+<style id="savepage-cssvariables">
+  :root {
+    --savepage-url-7: url(data:image/png;base64,);
+    --savepage-url-17: url(data:image/png;base64,);
+  }
+</style>
+<script id="savepage-shadowloader" type="application/javascript">
+  "use strict"
+  window.addEventListener("DOMContentLoaded",
+  function(event)
+  {
+    savepage_ShadowLoader(5);
+  },false);
+  function savepage_ShadowLoader(c){createShadowDOMs(0,document.documentElement);function createShadowDOMs(a,b){var i;if(b.localName=="iframe"||b.localName=="frame"){if(a<c){try{if(b.contentDocument.documentElement!=null){createShadowDOMs(a+1,b.contentDocument.documentElement)}}catch(e){}}}else{if(b.children.length>=1&&b.children[0].localName=="template"&&b.children[0].hasAttribute("data-savepage-shadowroot")){b.attachShadow({mode:"open"}).appendChild(b.children[0].content);b.removeChild(b.children[0]);for(i=0;i<b.shadowRoot.children.length;i++)if(b.shadowRoot.children[i]!=null)createShadowDOMs(a,b.shadowRoot.children[i])}for(i=0;i<b.children.length;i++)if(b.children[i]!=null)createShadowDOMs(a,b.children[i])}}}
+</script>
+<meta name="savepage-url" content="https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg">
+<meta name="savepage-title" content="How to get the directory of the currently running file? - DEV Community">
+<meta name="savepage-from" content="https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg">
+<meta name="savepage-date" content="Thu Jun 23 2022 14:23:08 GMT+0800 (中国标准时间)">
+<meta name="savepage-state" content="Standard Items; Retained cross-origin frames; Merged CSS images; Removed unsaved URLs; Sent referer headers with origin and path; Lazy load steps = 0.2s; Max frame depth = 5; Max resource size = 50MB; Max resource time = 30s;">
+<meta name="savepage-version" content="18.0">
+<meta name="savepage-comments" content="">
+  </head>
+      <body class="sans-serif-article-body default-header" data-user-status="logged-out" data-community-name="DEV Community" data-locale="en" data-honeybadger-key="a45862f6" data-deployed-at="2022-06-21T21:05:52Z" data-latest-commit-id="9245e3b2bebd0e69101402813f6bca3ca8a6af9c" data-ga-tracking="UA-71991109-1" data-loaded="true" data-runtime="Browser-macOS">
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-234447d422f93d00c9abfc6368bb33b75346373cab028a12b1c5efafb6ba6ff0.css" media="all" id="secondary-minimal-stylesheet">
+<link rel="stylesheet" href="https://dev.to/assets/views-016976fa68498a70a61fbd1e35d75e2ef473b571c77df80b357bc6e1613b2eb2.css" media="all" id="secondary-views-stylesheet">
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c81bee491f9e66cc25f880e128c98be350c6e495ebdf58227bc5543e0e16067c.css" media="all" id="secondary-crayons-stylesheet">
+
+        <div id="body-styles">
+          <style>:root { --accent-brand-lighter-rgb: 80, 99, 301; --accent-brand-rgb: 59, 73, 223; --accent-brand-darker-rgb: 47, 58, 178; }
+</style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ac47azd4ku1o5j1gqs8e5i2zzf2js7aj" class="crayons-icon"><title id="ac47azd4ku1o5j1gqs8e5i2zzf2js7aj">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" data-savepage-src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" src="data:image/png;base64,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" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search"><form method="get" action="/search" role="search" accept-charset="UTF-8"><input name="utf8" type="hidden" value="✓"><div class="crayons-fields crayons-fields--horizontal"><div class="crayons-field flex-1 relative"><input class="crayons-header--search-input crayons-textfield" type="text" id="" name="q" placeholder="Search..." autocomplete="off" aria-label="Search term" value=""><button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="crayons-icon c-btn__icon" focusable="false"><path d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"></path></svg></button></div></div></form>
+      
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="at88eylvurgwlarhtxkm2wyjyqm50xcn" class="crayons-icon"><title id="at88eylvurgwlarhtxkm2wyjyqm50xcn">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <span class="hidden m:block">
+          <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant="">
+            Log in
+          </a>
+        </span>
+
+        <a href="/enter?state=new-user" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant="">
+          Create account
+        </a>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a9derovw96oin0y67gscfmq5va9v81de" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="a9derovw96oin0y67gscfmq5va9v81de">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2">
+      <div class="crayons-card crayons-card--secondary p-4">
+  <h2 class="crayons-subtitle-2 lh-tight mb-4">
+    <a href="/" class="c-link c-link--branded">DEV Community</a> is a community of 865,722 amazing developers
+
+  </h2>
+    <p class="color-base-70 mb-4">
+      We're a place where coders share, stay up-to-date and grow their careers.
+    </p>
+  <div>
+    <a href="/enter?state=new-user" class="c-cta c-cta--branded justify-center w-100 mb-1" aria-label="Create new account">Create account</a>
+    <a href="/enter" class="c-link c-link--block justify-center" aria-label="Log in">Log in</a>
+  </div>
+</div>
+
+      
+<nav class="mb-4 mt-4" data-testid="main-nav" aria-label="DEV Community">
+  <ul class="default-navigation-links sidebar-navigation-links spec-sidebar-navigation-links">
+        <li>
+    <a href="/" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g class="nc-icon-wrapper">
+        <path fill="#A0041E" d="M13.344 18.702h-2a.5.5 0 01-.5-.5v-7a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v7a.5.5 0 01-.5.5z"></path>
+        <path fill="#FFE8B6" d="M9 20L22 7l13 13v17H9z"></path>
+        <path fill="#FFCC4D" d="M22 20h1v16h-1z"></path>
+        <path fill="#66757F" d="M35 21a.997.997 0 01-.707-.293L22 8.414 9.707 20.707a1 1 0 11-1.414-1.414l13-13a.999.999 0 011.414 0l13 13A.999.999 0 0135 21z"></path>
+        <path fill="#66757F" d="M22 21a.999.999 0 01-.707-1.707l6.5-6.5a1 1 0 111.414 1.414l-6.5 6.5A.997.997 0 0122 21z"></path>
+        <path fill="#C1694F" d="M14 30h4v6h-4z"></path>
+        <path fill="#55ACEE" d="M14 21h4v4h-4zm12.5 0h4v4h-4zm0 9h4v4h-4z"></path>
+        <path fill="#5C913B" d="M37.5 37.5A1.5 1.5 0 0136 39H8a1.5 1.5 0 010-3h28a1.5 1.5 0 011.5 1.5z"></path>
+    </g>
+</svg>
+
+      </span>
+      Home
+    </a>
+  </li>
+
+      
+        <li>
+    <a href="/listings" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g class="nc-icon-wrapper">
+        <path fill="#FFD983" d="M36 4H14a4 4 0 00-4 4v24H8a4 4 0 000 8h24a4 4 0 004-4V12a4 4 0 000-8z"></path>
+        <path fill="#E39F3D" d="M12 14h24v-2H14l-2-1z"></path>
+        <path fill="#FFE8B6" d="M14 4a4 4 0 00-4 4v24.555A3.955 3.955 0 008 32a4 4 0 104 4V11.445c.59.344 1.268.555 2 .555a4 4 0 000-8z"></path>
+        <path fill="#C1694F" d="M16 8a2 2 0 11-4.001-.001A2 2 0 0116 8m-6 28a2 2 0 11-4.001-.001A2 2 0 0110 36m24-17a1 1 0 01-1 1H15a1 1 0 010-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1"></path>
+    </g>
+</svg>
+
+      </span>
+      Listings
+    </a>
+  </li>
+
+        <li>
+    <a href="/pod" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g class="nc-icon-wrapper">
+        <path fill="#292F33" d="M10 19h24v2H10zm15 15c0 2.208-.792 4-3 4-2.209 0-3-1.792-3-4s.791-2 3-2c2.208 0 3-.208 3 2z"></path>
+        <path fill="#66757F" d="M22 35c-6.627 0-10 1.343-10 3v2h20v-2c0-1.657-3.373-3-10-3z"></path>
+        <path fill="#99AAB5" d="M22 4a9 9 0 00-9 9v7h18v-7a9 9 0 00-9-9z"></path>
+        <g fill="#292F33" transform="translate(4 4)">
+            <circle cx="15.5" cy="2.5" r="1.5"></circle>
+            <circle cx="20.5" cy="2.5" r="1.5"></circle>
+            <circle cx="17.5" cy="6.5" r="1.5"></circle>
+            <circle cx="22.5" cy="6.5" r="1.5"></circle>
+            <circle cx="12.5" cy="6.5" r="1.5"></circle>
+            <circle cx="15.5" cy="10.5" r="1.5"></circle>
+            <circle cx="10.5" cy="10.5" r="1.5"></circle>
+            <circle cx="20.5" cy="10.5" r="1.5"></circle>
+            <circle cx="25.5" cy="10.5" r="1.5"></circle>
+            <circle cx="17.5" cy="14.5" r="1.5"></circle>
+            <circle cx="22.5" cy="14.5" r="1.5"></circle>
+            <circle cx="12.5" cy="14.5" r="1.5"></circle>
+        </g>
+        <path fill="#66757F" d="M13 19.062V21c0 4.971 4.029 9 9 9s9-4.029 9-9v-1.938H13z"></path>
+        <path fill="#66757F" d="M34 18a1 1 0 00-1 1v2c0 6.074-4.925 11-11 11s-11-4.926-11-11v-2a1 1 0 00-2 0v2c0 7.18 5.82 13 13 13s13-5.82 13-13v-2a1 1 0 00-1-1z"></path>
+    </g>
+</svg>
+
+      </span>
+      Podcasts
+    </a>
+  </li>
+
+        <li>
+    <a href="/videos" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g transform="translate(4 4)">
+        <path fill="#31373D" d="M34.074 18l-4.832 3H28v-4c0-.088-.02-.169-.026-.256C31.436 15.864 34 12.735 34 9a8 8 0 00-16.001 0c0 1.463.412 2.822 1.099 4H14.92c.047-.328.08-.66.08-1a7 7 0 10-14 0 6.995 6.995 0 004 6.317V29a4 4 0 004 4h15a4 4 0 004-4v-3h1.242l4.832 3H35V18h-.926zM28.727 3.977a5.713 5.713 0 012.984 4.961L28.18 8.35a2.276 2.276 0 00-.583-.982l1.13-3.391zm-.9 6.342l3.552.592a5.713 5.713 0 01-4.214 3.669 3.985 3.985 0 00-1.392-1.148l.625-2.19a2.425 2.425 0 001.429-.923zM26 3.285c.282 0 .557.027.828.067l-1.131 3.392c-.404.054-.772.21-1.081.446L21.42 5.592A5.703 5.703 0 0126 3.285zM20.285 9c0-.563.085-1.106.236-1.62l3.194 1.597-.002.023c0 .657.313 1.245.771 1.662L23.816 13h-1.871a5.665 5.665 0 01-1.66-4zm-9.088-.385A4.64 4.64 0 0112.667 12c0 .344-.043.677-.113 1H10.1c.145-.304.233-.641.233-1a2.32 2.32 0 00-.392-1.292l1.256-2.093zM8 7.333c.519 0 1.01.105 1.476.261L8.22 9.688c-.073-.007-.145-.022-.22-.022a2.32 2.32 0 00-1.292.392L4.615 8.803A4.64 4.64 0 018 7.333zM3.333 12c0-.519.105-1.01.261-1.477l2.095 1.257c-.007.073-.022.144-.022.22 0 .75.36 1.41.91 1.837a3.987 3.987 0 00-1.353 1.895C4.083 14.881 3.333 13.533 3.333 12z"></path>
+        <circle fill="#8899A6" cx="24" cy="19" r="2"></circle>
+        <circle fill="#8899A6" cx="9" cy="19" r="2"></circle>
+        <path fill="#8899A6" d="M24 27a2 2 0 00-2-2H11a2 2 0 00-2 2v6a2 2 0 002 2h11a2 2 0 002-2v-6z"></path>
+    </g>
+</svg>
+
+      </span>
+      Videos
+    </a>
+  </li>
+
+        <li>
+    <a href="/tags" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g class="nc-icon-wrapper">
+        <path fill="#FFD983" d="M36.017 24.181L21.345 9.746C20.687 9.087 19.823 9 18.96 9H8.883C7.029 9 6 10.029 6 11.883v10.082c0 .861.089 1.723.746 2.38L21.3 39.017a3.287 3.287 0 004.688 0l10.059-10.088c1.31-1.312 1.28-3.438-.03-4.748zm-23.596-8.76a1.497 1.497 0 11-2.118-2.117 1.497 1.497 0 012.118 2.117z"></path>
+        <path fill="#D99E82" d="M13.952 11.772a3.66 3.66 0 00-5.179 0 3.663 3.663 0 105.18 5.18 3.664 3.664 0 00-.001-5.18zm-1.53 3.65a1.499 1.499 0 11-2.119-2.12 1.499 1.499 0 012.119 2.12z"></path>
+        <path fill="#C1694F" d="M12.507 14.501a1 1 0 11-1.415-1.414l8.485-8.485a1 1 0 111.415 1.414l-8.485 8.485z"></path>
+    </g>
+</svg>
+
+      </span>
+      Tags
+    </a>
+  </li>
+
+        <li>
+    <a href="/faq" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g class="nc-icon-wrapper">
+        <path fill="#FFD983" d="M33 15.06c0 6.439-5 7.439-5 13.44 0 3.098-3.123 3.359-5.5 3.359-2.053 0-6.586-.779-6.586-3.361C15.914 22.5 11 21.5 11 15.06c0-6.031 5.285-10.92 11.083-10.92C27.883 4.14 33 9.029 33 15.06z"></path>
+        <path fill="#CCD6DD" d="M26.167 36.5c0 .828-2.234 2.5-4.167 2.5-1.933 0-4.167-1.672-4.167-2.5 0-.828 2.233-.5 4.167-.5 1.933 0 4.167-.328 4.167.5z"></path>
+        <path fill="#FFCC4D" d="M26.707 14.293a.999.999 0 00-1.414 0L22 17.586l-3.293-3.293a1 1 0 10-1.414 1.414L21 19.414V30a1 1 0 102 0V19.414l3.707-3.707a.999.999 0 000-1.414z"></path>
+        <path fill="#99AAB5" d="M28 35a2 2 0 01-2 2h-8a2 2 0 01-2-2v-6h12v6z"></path>
+        <path fill="#CCD6DD" d="M15.999 36a1 1 0 01-.163-1.986l12-2a.994.994 0 011.15.822.999.999 0 01-.822 1.15l-12 2a.927.927 0 01-.165.014zm0-4a1 1 0 01-.163-1.986l12-2a.995.995 0 011.15.822.999.999 0 01-.822 1.15l-12 2a.927.927 0 01-.165.014z"></path>
+    </g>
+</svg>
+
+      </span>
+      FAQ
+    </a>
+  </li>
+
+        <li>
+    <a href="https://shop.forem.com" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g class="nc-icon-wrapper">
+        <path fill="#F4900C" d="M15 4a8 8 0 00-8 8v8h2v-8a6 6 0 0112 0v8h2v-8a8 8 0 00-8-8z"></path>
+        <path fill="#DD2E44" d="M5 12l2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2v23H5z"></path>
+        <path fill="#FFCC4D" d="M29 9a8 8 0 00-8 8v8h2v-8a6 6 0 0112 0v8h2v-8a8 8 0 00-8-8z"></path>
+        <path fill="#744EAA" d="M19 17l2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2v23H19z"></path>
+    </g>
+</svg>
+
+      </span>
+      Forem Shop
+    </a>
+  </li>
+
+        <li>
+    <a href="/sponsorships" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <path fill="#DD2E44" d="M39.885 15.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C5.751 26.587 15.216 35.568 22 38.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z"></path>
+</svg>
+
+      </span>
+      Sponsors
+    </a>
+  </li>
+
+        <li>
+    <a href="/about" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg viewBox="0 0 235 234" xmlns="http://www.w3.org/2000/svg" class="rainbow-logo" preserveAspectRatio="xMinYMin meet">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#88AEDC" d="M234.04 175.67l-75.69 58.28h47.18L234.04 212z"></path>
+        <path d="M234.04 140.06l-121.93 93.89h.02l121.91-93.87zM133.25.95L.04 103.51v.02L133.27.95z"></path>
+        <path fill="#F58F8E" fill-rule="nonzero" d="M.04.95v30.16L39.21.95z"></path>
+        <path fill="#FEE18A" fill-rule="nonzero" d="M39.21.95L.04 31.11v35.9L85.84.95z"></path>
+        <path fill="#F3F095" fill-rule="nonzero" d="M85.84.95L.04 67.01v36.5L133.25.95z"></path>
+        <path fill="#55C1AE" fill-rule="nonzero" d="M133.27.95L.04 103.53v35.59L179.49.95z"></path>
+        <path fill="#F7B3CE" fill-rule="nonzero" d="M234.04.95h-7.37L.04 175.45v35.93l234-180.18z"></path>
+        <path fill="#88AEDC" fill-rule="nonzero" d="M179.49.95L.04 139.12v36.33L226.67.95z"></path>
+        <path fill="#F58F8E" fill-rule="nonzero" d="M234.04 31.2L.04 211.38v22.57h18.03l215.97-166.3z"></path>
+        <path fill="#FEE18A" fill-rule="nonzero" d="M234.04 67.65L18.07 233.95H64.7l169.34-130.39z"></path>
+        <path fill="#F3F095" fill-rule="nonzero" d="M234.04 103.56L64.7 233.95h47.41l121.93-93.89z"></path>
+        <path fill="#55C1AE" fill-rule="nonzero" d="M234.04 140.08l-121.91 93.87h46.22l75.69-58.28z"></path>
+        <path fill="#F7B3CE" fill-rule="nonzero" d="M234.04 212l-28.51 21.95h28.51z"></path>
+        <path d="M65.237 77.75c4.514.95 7.774 2.8 11.135 6.3 3.059 3.2 4.965 6.85 5.767 10.95.652 3.45.652 40.55 0 44.05-1.705 9.1-9.479 16.2-19.109 17.45-2.006.25-8.727.5-14.845.5H37V77h12.438c8.828 0 13.342.2 15.8.75zM51.545 117v25.6l5.166-.2c4.464-.15 5.417-.35 7.423-1.5 3.912-2.3 3.962-2.45 3.962-24.2 0-21.2 0-21.2-3.661-23.6-1.806-1.2-2.558-1.35-7.473-1.55l-5.417-.15V117zm79.245-32.75v7.25h-25.58v18h15.549V124H105.21l.1 9.1.15 9.15 12.69.15 12.638.1V157h-14.795c-16.451 0-19.009-.3-21.617-2.6-3.661-3.2-3.46-1.15-3.611-36.3-.1-21.9.05-32.25.401-33.65.702-2.6 3.661-5.8 6.27-6.7 1.554-.55 5.466-.7 17.704-.75h15.648v7.25zm31.647 20.85c3.712 14.25 6.821 25.6 6.922 25.25.15-.35 3.31-12.4 7.071-26.85l6.872-26.25 7.824-.15c5.918-.1 7.874.05 7.874.5s-17.354 66.2-18.357 69.5c-.702 2.3-4.463 7-6.57 8.25-2.658 1.5-6.57 1.75-8.978.5-2.156-1.1-5.015-4.4-6.47-7.5-.902-1.9-15.648-56-19.058-70l-.352-1.35h7.825c7.673 0 7.874 0 8.275 1.1.2.65 3.41 12.8 7.122 27z" fill="#FFF"></path>
+    </g>
+</svg>
+
+      </span>
+      About
+    </a>
+  </li>
+
+        <li>
+    <a href="/contact" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g class="nc-icon-wrapper">
+        <path fill="#FFAC33" d="M38.724 33.656c-1.239-.01-1.241 1.205-1.241 1.205H22.5c-5.246 0-9.5-4.254-9.5-9.5s4.254-9.5 9.5-9.5 9.5 4.254 9.5 9.5c0 3.062-1.6 5.897-3.852 7.633h5.434C35.022 30.849 36 28.139 36 25.361c0-7.456-6.045-13.5-13.5-13.5-7.456 0-13.5 6.044-13.5 13.5 0 7.455 6.044 13.5 13.5 13.5h14.982s-.003 1.127 1.241 1.139c1.238.012 1.228-1.245 1.228-1.245l.014-3.821s.001-1.267-1.241-1.278zM9 18.26a16.047 16.047 0 014-4.739V13c0-5 5-7 5-8s-1-1-1-1H5C4 4 4 5 4 5c0 1 5 3.333 5 7.69v5.57z"></path>
+        <path fill="#BE1931" d="M17.091 33.166a9.487 9.487 0 01-4.045-8.72l-3.977-.461c-.046.452-.069.911-.069 1.376 0 4.573 2.28 8.608 5.76 11.051l2.331-3.246z"></path>
+        <path fill="#BE1931" d="M10 29.924s-5.188-.812-5 1 5-1 5-1zm0 .312s-4.125 2.688-2.938 3.75S10 30.236 10 30.236z"></path>
+    </g>
+</svg>
+
+      </span>
+      Contact
+    </a>
+  </li>
+
+        <li>
+    <a href="/guides" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 47.5 47.5" style="enable-background:new 0 0 47.5 47.5;" id="svg2" xml:space="preserve"><defs id="defs6"><clipPath id="clipPath18"><path d="M 0,38 38,38 38,0 0,0 0,38 z" id="path20"></path></clipPath></defs><g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g12"><g id="g14"><g clip-path="url(#clipPath18)" id="g16"><g transform="translate(33,30)" id="g22"><path d="m 0,0 -28,0 c -2.209,0 -4,-1.791 -4,-4 l 0,-15 c 0,-2.209 1.791,-4 4,-4 l 11.416,0 c 0.52,-0.596 1.477,-1 2.584,-1 1.107,0 2.064,0.404 2.584,1 L 0,-23 c 2.209,0 4,1.791 4,4 L 4,-4 C 4,-1.791 2.209,0 0,0" id="path24" style="fill:#226699;fill-opacity:1;fill-rule:nonzero;stroke:none"></path></g><g transform="translate(21,10)" id="g26"><path d="m 0,0 c 0,-1.104 -0.896,-2 -2,-2 -1.104,0 -2,0.896 -2,2 l 0,18 c 0,1.104 0.896,2 2,2 1.104,0 2,-0.896 2,-2 L 0,0 z" id="path28" style="fill:#292f33;fill-opacity:1;fill-rule:nonzero;stroke:none"></path></g><g transform="translate(19,11)" id="g30"><path d="m 0,0 c 0,-1.104 -0.896,-2 -2,-2 l -12,0 c -1.104,0 -2,0.896 -2,2 l 0,18 c 0,1.104 0.896,2 2,2 l 12,0 c 1.104,0 2,-0.896 2,-2 L 0,0 z" id="path32" style="fill:#99aab5;fill-opacity:1;fill-rule:nonzero;stroke:none"></path></g><g transform="translate(19,11)" id="g34"><path d="m 0,0 c -0.999,1.998 -3.657,2 -4,2 -2,0 -5,-2 -8,-2 -1,0 -2,0.896 -2,2 l 0,16 c 0,1.104 1,2 2,2 3.255,0 6,2 8,2 3,0 4,-1.896 4,-3 L 0,0 z" id="path36" style="fill:#e1e8ed;fill-opacity:1;fill-rule:nonzero;stroke:none"></path></g><g transform="translate(35,11)" id="g38"><path d="m 0,0 c 0,-1.104 -0.896,-2 -2,-2 l -12,0 c -1.104,0 -2,0.896 -2,2 l 0,18 c 0,1.104 0.896,2 2,2 l 12,0 c 1.104,0 2,-0.896 2,-2 L 0,0 z" id="path40" style="fill:#99aab5;fill-opacity:1;fill-rule:nonzero;stroke:none"></path></g><g transform="translate(19,11)" id="g42"><path d="m 0,0 c 0.999,1.998 3.657,2 4,2 2,0 5,-2 8,-2 1,0 2,0.896 2,2 l 0,16 c 0,1.104 -1,2 -2,2 C 8.744,20 6,22 4,22 1,22 0,20.104 0,19 L 0,0 z" id="path44" style="fill:#ccd6dd;fill-opacity:1;fill-rule:nonzero;stroke:none"></path></g></g></g></g></svg>
+
+      </span>
+      Guides
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+  <nav class="mb-4" data-testid="other-nav" aria-labelledby="other-nav-heading-hamburger">
+    <h2 id="other-nav-heading-hamburger" class="crayons-subtitle-3 py-2 pl-3">
+      Other
+    </h2>
+    <ul class="other-navigation-links sidebar-navigation-links spec-sidebar-navigation-links">
+          <li>
+    <a href="/code-of-conduct" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g class="nc-icon-wrapper">
+        <path fill="#FFDB5E" d="M38.956 21.916c0-.503-.12-.975-.321-1.404-1.341-4.326-7.619-4.01-16.549-4.221-1.493-.035-.639-1.798-.115-5.668.341-2.517-1.282-6.382-4.01-6.382-4.498 0-.171 3.548-4.148 12.322-2.125 4.688-6.875 2.062-6.875 6.771v10.719c0 1.833.18 3.595 2.758 3.885 2.499.281 1.937 2.062 5.542 2.062h18.044a3.337 3.337 0 003.333-3.334c0-.762-.267-1.456-.698-2.018 1.02-.571 1.72-1.649 1.72-2.899 0-.76-.266-1.454-.696-2.015 1.023-.57 1.725-1.649 1.725-2.901 0-.909-.368-1.733-.961-2.336a3.311 3.311 0 001.251-2.581z"></path>
+        <path fill="#EE9547" d="M27.02 25.249h8.604c1.17 0 2.268-.626 2.866-1.633a.876.876 0 00-1.506-.892 1.588 1.588 0 01-1.361.775h-8.81c-.873 0-1.583-.71-1.583-1.583s.71-1.583 1.583-1.583H32.7a.875.875 0 000-1.75h-5.888a3.337 3.337 0 00-3.333 3.333c0 1.025.475 1.932 1.205 2.544a3.32 3.32 0 00-.998 2.373c0 1.028.478 1.938 1.212 2.549a3.318 3.318 0 00.419 5.08 3.305 3.305 0 00-.852 2.204 3.337 3.337 0 003.333 3.333h5.484a3.35 3.35 0 002.867-1.632.875.875 0 00-1.504-.894 1.594 1.594 0 01-1.363.776h-5.484c-.873 0-1.583-.71-1.583-1.583s.71-1.583 1.583-1.583h6.506a3.35 3.35 0 002.867-1.633.875.875 0 10-1.504-.894 1.572 1.572 0 01-1.363.777h-7.063a1.585 1.585 0 010-3.167h8.091a3.35 3.35 0 002.867-1.632.875.875 0 00-1.504-.894 1.573 1.573 0 01-1.363.776H27.02a1.585 1.585 0 010-3.167z"></path>
+    </g>
+</svg>
+
+      </span>
+      Code of Conduct
+    </a>
+  </li>
+
+          <li>
+    <a href="/privacy" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g transform="translate(4 4)">
+        <circle fill="#FFCC4D" cx="18" cy="18" r="18"></circle>
+        <path fill="#664500" d="M27.335 23.629a.501.501 0 00-.635-.029c-.039.029-3.922 2.9-8.7 2.9-4.766 0-8.662-2.871-8.7-2.9a.5.5 0 10-.729.657C8.7 24.472 11.788 29.5 18 29.5s9.301-5.028 9.429-5.243a.499.499 0 00-.094-.628z"></path>
+        <path fill="#65471B" d="M18 26.591c-.148 0-.291-.011-.438-.016v4.516h.875v-4.517c-.145.005-.289.017-.437.017z"></path>
+        <path fill="#FFF" d="M22 26c.016-.004-1.45.378-2.446.486-.366.042-.737.076-1.117.089v4.517H20c1.1 0 2-.9 2-2V26zm-8 0c-.016-.004 1.45.378 2.446.486.366.042.737.076 1.117.089v4.517H16c-1.1 0-2-.9-2-2V26z"></path>
+        <path fill="#65471B" d="M27.335 23.629a.501.501 0 00-.635-.029c-.03.022-2.259 1.668-5.411 2.47-.443.113-1.864.43-3.286.431-1.424 0-2.849-.318-3.292-.431-3.152-.802-5.381-2.448-5.411-2.47a.501.501 0 00-.729.657c.097.162 1.885 3.067 5.429 4.481v-1.829c-.016-.004 1.45.378 2.446.486.366.042.737.076 1.117.089.146.005.289.016.437.016.148 0 .291-.011.438-.016.38-.013.751-.046 1.117-.089.996-.108 2.462-.49 2.446-.486v1.829c3.544-1.414 5.332-4.319 5.429-4.481a.5.5 0 00-.095-.628zm-.711-9.605c0 1.714-.938 3.104-2.096 3.104-1.157 0-2.096-1.39-2.096-3.104s.938-3.104 2.096-3.104c1.158 0 2.096 1.39 2.096 3.104zm-17.167 0c0 1.714.938 3.104 2.096 3.104 1.157 0 2.096-1.39 2.096-3.104s-.938-3.104-2.096-3.104c-1.158 0-2.096 1.39-2.096 3.104z"></path>
+        <path fill="#292F33" d="M34.808 9.627c-.171-.166-1.267.274-2.376-.291-2.288-1.166-8.07-2.291-11.834.376-.403.285-2.087.333-2.558.313-.471.021-2.155-.027-2.558-.313-3.763-2.667-9.545-1.542-11.833-.376-1.109.565-2.205.125-2.376.291-.247.239-.247 1.196.001 1.436.246.239 1.477.515 1.722 1.232.247.718.249 4.958 2.213 6.424 1.839 1.372 6.129 1.785 8.848.238 2.372-1.349 2.289-4.189 2.724-5.881.155-.603.592-.907 1.26-.907s1.105.304 1.26.907c.435 1.691.351 4.532 2.724 5.881 2.719 1.546 7.009 1.133 8.847-.238 1.965-1.465 1.967-5.706 2.213-6.424.245-.717 1.476-.994 1.722-1.232.248-.24.249-1.197.001-1.436zm-20.194 3.65c-.077 1.105-.274 3.227-1.597 3.98-.811.462-1.868.743-2.974.743h-.001c-1.225 0-2.923-.347-3.587-.842-.83-.619-1.146-3.167-1.265-4.12-.076-.607-.28-2.09.388-2.318 1.06-.361 2.539-.643 4.052-.643.693 0 3.021.043 4.155.741 1.005.617.872 1.851.829 2.459zm16.278-.253c-.119.954-.435 3.515-1.265 4.134-.664.495-2.362.842-3.587.842h-.001c-1.107 0-2.163-.281-2.975-.743-1.323-.752-1.52-2.861-1.597-3.966-.042-.608-.176-1.851.829-2.468 1.135-.698 3.462-.746 4.155-.746 1.513 0 2.991.277 4.052.638.668.228.465 1.702.389 2.309z"></path>
+    </g>
+</svg>
+
+      </span>
+      Privacy Policy
+    </a>
+  </li>
+
+          <li>
+    <a href="/terms" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+      <span class="c-link__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+    <g transform="translate(4 4)">
+        <ellipse fill="#F5F8FA" cx="8.828" cy="18" rx="7.953" ry="13.281"></ellipse>
+        <path fill="#E1E8ED" d="M8.828 32.031C3.948 32.031.125 25.868.125 18S3.948 3.969 8.828 3.969 17.531 10.132 17.531 18s-3.823 14.031-8.703 14.031zm0-26.562C4.856 5.469 1.625 11.09 1.625 18s3.231 12.531 7.203 12.531S16.031 24.91 16.031 18 12.8 5.469 8.828 5.469z"></path>
+        <circle fill="#8899A6" cx="6.594" cy="18" r="4.96"></circle>
+        <circle fill="#292F33" cx="6.594" cy="18" r="3.565"></circle>
+        <circle fill="#F5F8FA" cx="7.911" cy="15.443" r="1.426"></circle>
+        <ellipse fill="#F5F8FA" cx="27.234" cy="18" rx="7.953" ry="13.281"></ellipse>
+        <path fill="#E1E8ED" d="M27.234 32.031c-4.88 0-8.703-6.163-8.703-14.031s3.823-14.031 8.703-14.031S35.938 10.132 35.938 18s-3.824 14.031-8.704 14.031zm0-26.562c-3.972 0-7.203 5.622-7.203 12.531 0 6.91 3.231 12.531 7.203 12.531S34.438 24.91 34.438 18 31.206 5.469 27.234 5.469z"></path>
+        <circle fill="#8899A6" cx="25" cy="18" r="4.96"></circle>
+        <circle fill="#292F33" cx="25" cy="18" r="3.565"></circle>
+        <circle fill="#F5F8FA" cx="26.317" cy="15.443" r="1.426"></circle>
+    </g>
+</svg>
+
+      </span>
+      Terms of use
+    </a>
+  </li>
+
+    </ul>
+  </nav>
+
+<div class="flex justify-start mb-4">
+    <a href="https://twitter.com/thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aj4d2lxd2f37zgr6ph6kv14demeabyqn" class="crayons-icon c-link__icon"><title id="aj4d2lxd2f37zgr6ph6kv14demeabyqn">Twitter</title>
+    <path d="M22.162 5.656a8.383 8.383 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.211 4.211 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.395 8.395 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.495 8.495 0 002.087-2.165l-.001-.001z" fill="#65bbf2"></path>
+</svg>
+
+  </a>
+  <a href="https://facebook.com/thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aqg9xo3cda77g22husvqqkjgmzayzg4d" class="crayons-icon c-link__icon"><title id="aqg9xo3cda77g22husvqqkjgmzayzg4d">Facebook</title>
+    <path d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z"></path>
+</svg>
+
+  </a>
+  <a href="https://github.com/forem" target="_blank" class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="afn3o75kcwxy9opr9y2iy0bpwurnlu74" class="crayons-icon c-link__icon"><title id="afn3o75kcwxy9opr9y2iy0bpwurnlu74">Github</title>
+    <path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z"></path>
+</svg>
+
+  </a>
+  <a href="https://instagram.com/thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="amw1avq6kqucpl0m9g0m9s3eo5fmnux4" class="crayons-icon c-link__icon"><title id="amw1avq6kqucpl0m9g0m9s3eo5fmnux4">Instagram</title>
+    <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"></path>
+</svg>
+
+  </a>
+  <a href="https://twitch.com/thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="an263hmk8gzqmq4lmcsntalmvg8imvgf" class="crayons-icon c-link__icon"><title id="an263hmk8gzqmq4lmcsntalmvg8imvgf">Twitch</title>
+    <path d="M4.3 3H21v11.7l-4.7 4.7h-3.9l-2.5 2.4H7v-2.4H3V6.2L4.3 3zM5 17.4h4v2.4h.095l2.5-2.4h3.877L19 13.872V5H5v12.4zM15 8h2v4.7h-2V8zm0 0h2v4.7h-2V8zm-5 0h2v4.7h-2V8z"></path>
+</svg>
+
+  </a>
+
+</div>
+
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+        <div id="message-notice"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper stories stories-show" data-current-page="stories-show">
+  <div id="page-content-inner" data-follow-clicks-initialized="true">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+
+
+<style>.html-variant-wrapper { display: none; }
+</style>
+
+<script data-savepage-src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.10/webcomponents-loader.js" integrity="sha384-3HK5hxQbkFqOIxMbpROlRmRtYl2LBZ52t+tqcjzsmr9NJuOWQxl8RgQSyFvq2lhy" crossorigin="anonymous" defer=""></script>
+
+  <script data-savepage-src="https://dev.to/packs/js/runtime~webShare-8c83951a96dc76a01689.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/webShare-e33388aba6e7448d26ae.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/runtime~articlePage-20ea5904a3a39e87d758.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/0-95fb0cef644d8e105bc9.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/1-5b42471a58e8e5ce23b2.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/articlePage-c1f7aa63bb96728fc92f.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/runtime~commentDropdowns-bb89282528435a6521ed.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/2-9613274770103eeb4674.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/commentDropdowns-3a1dbbbcc47e156687ba.chunk.js" defer="defer"></script>
+
+    <script type="application/ld+json"></script>
+
+  
+<div class="crayons-layout crayons-layout--3-cols crayons-layout--article">
+  <aside class="crayons-layout__sidebar-left" aria-label="Article actions">
+    <div class="crayons-article-actions print-hidden">
+  <div class="crayons-article-actions__inner">
+
+      <button id="reaction-butt-like" aria-label="Like" aria-pressed="false" class="crayons-reaction crayons-reaction--like activated" data-category="like" title="Heart">
+  <span class="crayons-reaction__icon crayons-reaction__icon--inactive">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M21.179 12.794l.013.014L12 22l-9.192-9.192.013-.014A6.5 6.5 0 0112 3.64a6.5 6.5 0 019.179 9.154zM4.575 5.383a4.5 4.5 0 000 6.364L12 19.172l7.425-7.425a4.5 4.5 0 10-6.364-6.364L8.818 9.626 7.404 8.21l3.162-3.162a4.5 4.5 0 00-5.99.334l-.001.001z"></path>
+</svg>
+
+  </span>
+  <span class="crayons-reaction__count" id="reaction-number-like">1</span>
+</button>
+
+      <button id="reaction-butt-unicorn" aria-label="React with unicorn" aria-pressed="false" class="crayons-reaction crayons-reaction--unicorn activated" data-category="unicorn" title="Unicorn">
+  <span class="crayons-reaction__icon crayons-reaction__icon--inactive">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M5.645 8.013c.013-.265-.261-.323-.4-.183-1.16 1.17-1.822 3.865-.344 7.32.294.961 1.938 3.19.84 6.131l-.003.006c-.094.255.206.404.366.263 1.395-1.226 1.933-3.593 1.1-6.375-.488-1.657-1.955-4.226-1.559-7.162zm-3.22 2.738c.05-.137-.124-.417-.326-.225-.939.893-1.316 2.863-.976 4.605.547 2.878 2.374 3.526 2.066 6.629-.028.102.176.38.348.154 1.546-2.033.409-4.453-.241-6.006-1.005-2.386-1.087-4.118-.871-5.157z" fill="#08090A"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.622 7.223l8.579-3.68c.598-.256 1.087.547.6.985l-6.618 5.941c.881 2.043 2.738 6.34 2.931 6.775 1.348 3.031-2.055 4.918-3.807 3.583a7.027 7.027 0 01-.623-.574c-.974-.965-2.419-2.398-5.207-1.877.284-2.115-.313-3.737-.883-5.288-.38-1.032-.747-2.032-.837-3.124-.346-3.329 3.763-8.23 4.696-7.953.386.115.326 1.229.266 2.319-.051.948-.102 1.88.143 2.12.145.142.428.43.76.773zM11.5 16.5l2.5.5 2.5 2 1-.5-2-4.5-1.5-4-1.5-1-1-1-1-1.5L10 8l-.5 1.5 1 2.5 1 4.5z"></path>
+</svg>
+
+  </span>
+  <span class="crayons-reaction__count" id="reaction-number-unicorn">2</span>
+</button>
+
+      <button id="reaction-butt-readinglist" aria-label="Add to reading list" aria-pressed="false" class="crayons-reaction crayons-reaction--readinglist activated" data-category="readinglist" title="Save">
+  <span class="crayons-reaction__icon crayons-reaction__icon--inactive">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z"></path>
+</svg>
+
+  </span>
+  <span class="crayons-reaction__count" id="reaction-number-readinglist">2</span>
+</button>
+
+    <div id="mod-actions-menu-btn-area" class="print-hidden hidden align-center"></div>
+    <div class="align-center m:relative">
+      <button id="article-show-more-button" aria-controls="article-show-more-dropdown" aria-expanded="false" aria-haspopup="true" class="dropbtn crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon-rounded" aria-label="Share post options" data-initialized="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a8vhgmk23jde3wz60e4v7by0d7l1kegz" aria-hidden="true" class="crayons-icon dropdown-icon"><title id="a8vhgmk23jde3wz60e4v7by0d7l1kegz">More...</title><path fill-rule="evenodd" clip-rule="evenodd" d="M7 12a2 2 0 11-4 0 2 2 0 014 0zm7 0a2 2 0 11-4 0 2 2 0 014 0zm5 2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+
+      </button>
+
+      <div id="article-show-more-dropdown" class="crayons-dropdown side-bar left-2 right-2 m:right-auto m:left-100 s:left-auto mb-1 m:mb-0 top-unset bottom-100 m:top-0 m:bottom-unset">
+        <div>
+          <button id="copy-post-url-button" class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0" data-posturl="https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg">
+            <span class="fw-bold">Copy link</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="article-copy-icon" role="img" aria-labelledby="arpds02bmcljuzp2ovunxxlv8bswakrq" aria-hidden="true" class="crayons-icon mx-2 shrink-0"><title id="arpds02bmcljuzp2ovunxxlv8bswakrq">Copy link</title>
+    <path d="M7 6V3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1 1 0 013 21l.003-14c0-.552.45-1 1.007-1H7zm2 0h8v10h2V4H9v2zm-2 5v2h6v-2H7zm0 4v2h6v-2H7z"></path>
+</svg>
+
+          </button>
+          <div id="article-copy-link-announcer" aria-live="polite" class="crayons-notice crayons-notice--success my-2 p-1" hidden="">Copied to Clipboard</div>
+        </div>
+
+        <div class="Desktop-only">
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://twitter.com/intent/tweet?text=%22How%20to%20get%20the%20directory%20of%20the%20currently%20running%20file%3F%22%20by%20natamacm%20%23DEVCommunity%20https%3A%2F%2Fdev.to%2Fnatamacm%2Fhow-to-get-the-directory-of-the-currently-running-file-47mg">
+            Share to Twitter
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdev.to%2Fnatamacm%2Fhow-to-get-the-directory-of-the-currently-running-file-47mg&title=How%20to%20get%20the%20directory%20of%20the%20currently%20running%20file%3F&summary=The%20Golang%20programming%20language%20makes%20it%20easy%20to%20build%20simple%2C%20reliable%2C%20and%20efficient%20software.%20%20%20%20Y...&source=DEV%20Community">
+            Share to LinkedIn
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.reddit.com/submit?url=https%3A%2F%2Fdev.to%2Fnatamacm%2Fhow-to-get-the-directory-of-the-currently-running-file-47mg&title=How%20to%20get%20the%20directory%20of%20the%20currently%20running%20file%3F">
+            Share to Reddit
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fdev.to%2Fnatamacm%2Fhow-to-get-the-directory-of-the-currently-running-file-47mg&t=How%20to%20get%20the%20directory%20of%20the%20currently%20running%20file%3F">
+            Share to Hacker News
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdev.to%2Fnatamacm%2Fhow-to-get-the-directory-of-the-currently-running-file-47mg">
+            Share to Facebook
+          </a>
+        </div>
+
+        <web-share-wrapper shareurl="https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg" sharetitle="How to get the directory of the currently running file?" sharetext="The Golang programming language makes it easy to build simple, reliable, and efficient software.    Y..." template="web-share-button">
+        </web-share-wrapper>
+        <template id="web-share-button"></template>
+
+        <a href="/report-abuse" class="crayons-link crayons-link--block">Report Abuse</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="html-variant-wrapper" id="html-variant-article-show-below-article" data-variant-id="382">
+        <div></div>
+      </div>
+
+  </aside>
+
+  <main id="main-content" class="crayons-layout__content grid gap-4">
+    <div class="article-wrapper">
+
+
+      <article class="crayons-card crayons-article mb-4" id="article-show-container" data-article-id="341634" data-article-slug="how-to-get-the-directory-of-the-currently-running-file-47mg" data-author-id="359047" data-author-name="natamacm" data-author-username="natamacm" data-co-author-ids="" data-path="/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg" data-pin-path="/stories/feed/pinned_article" data-pinned-article-id="" data-published="true">
+        <header class="crayons-article__header" id="main-title">
+            <div class="crayons-article__cover">
+              <img data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--EbQh2Ie3--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/u97jcovwe413ljrjba6y.jpg" src="data:image/jpeg;base64,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" style="background-color:#dddddd;" class="crayons-article__cover__image" alt="Cover image for How to get the directory of the currently running file?" width="1000" height="420">
+            </div>
+
+          <div class="crayons-article__header__meta">
+            <div class="flex s:items-start flex-col s:flex-row">
+              <div id="action-space" class="crayons-article__actions mb-4 s:mb-0 s:order-last"></div>
+              <div class="flex flex-1 mb-5 items-start">
+                <div class="relative">
+                    <a href="/natamacm"><img class="radius-full align-middle" data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--43_GFSdR--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/359047/ecc29d0e-9cfe-4d00-ad0b-d9d9d0daec89.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAHlBMVEWf0nrw8PCj04C+3aet146s147I4rbk7N3Z586x2ZPAI0ATAAAAcklEQVQ4y2MQxAUYqC1jGuIS6uIa4gqhIEQkWCaAARMwDXqZZGMsgAbhRk+ZcmSAIpOA5H/mIS5j4uLiYtGBAM1Avic8tg2RgkUMJR0MZhm3tLS0RJAokM7ESL2KQBkRrOl6MMpMUoIAkIwklK1Ev7wAAPfjWvNZyLqhAAAAAElFTkSuQmCC" alt="natamacm" width="40" height="40"></a>
+                </div>
+                <div class="pl-3 flex-1">
+                  <a href="/natamacm" class="crayons-link fw-bold">natamacm</a>
+                  <p class="fs-xs color-base-60">
+                      Posted on <time datetime="2020-05-22T12:57:14Z" class="date" title="2020年5月22日星期五 20:57:14">2020年5月22日</time>
+
+
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h1 class="fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 medium">
+              How to get the directory of the currently running file?
+            </h1>
+
+              <div class="spec__tags flex flex-wrap">
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(224, 235, 245, 0.10);
+        --tag-prefix: #E0EBF5;
+        --tag-bg-hover: rgba(224, 235, 245, 0.10);
+        --tag-prefix-hover: #E0EBF5;
+      " href="/t/go"><span class="crayons-tag__prefix">#</span>go</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="crayons-article__main">
+
+          <div class="crayons-article__body text-styles spec__body" data-article-id="341634" id="article-body">
+            <p>The <a href="https://golang.org/">Golang</a> programming language makes it easy to build simple, reliable, and efficient software.  </p>
+
+<p>You can get the current directory of the program you are running (<a href="https://golangr.com/hello-world/">run golang</a>). </p>
+
+<p>So how to find out where the executable is?</p>
+
+<p>As usual in programming languages, there are several ways to do this.<br>
+It's not Go specific, as you can have the same problem when programming C or C++. </p>
+
+<p>To get the directory of the executable you can use "path/filepath.Dir".</p>
+
+<p>For Go 1.8 and above you can use os.Executable for getting executable path<br>
+</p>
+
+<div class="highlight"><pre class="highlight go"><code><span class="k">package</span> <span class="n">main</span>                                                                                                                               
+
+<span class="k">import</span> <span class="p">(</span>                                                                                                                                   
+    <span class="s">"fmt"</span>                                                                                                                                  
+    <span class="s">"os"</span>                                                                                                                                   
+    <span class="s">"path/filepath"</span>                                                                                                                        
+<span class="p">)</span>                                                                                                                                          
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>                                                                                                                              
+    <span class="n">ex</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">os</span><span class="o">.</span><span class="n">Executable</span><span class="p">()</span>                                                                                                             
+    <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>                                                                                                                        
+        <span class="nb">panic</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>                                                                                                                         
+    <span class="p">}</span>                                                                                                                                      
+    <span class="n">exePath</span> <span class="o">:=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">Dir</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>                                                                                                            
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">exePath</span><span class="p">)</span>                                                                                                                   
+<span class="p">}</span>    
+</code></pre></div>
+
+
+
+<p>An alternative way to do this is with this code, it returns the current working directory:<br>
+</p>
+
+<div class="highlight"><pre class="highlight go"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+    <span class="s">"fmt"</span>
+    <span class="s">"os"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">pwd</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">os</span><span class="o">.</span><span class="n">Getwd</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+        <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">Exit</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+<p>You can also do it this way:<br>
+</p>
+
+<div class="highlight"><pre class="highlight python"><code><span class="k">import</span> <span class="p">(</span>
+    <span class="s">"fmt"</span>
+    <span class="s">"log"</span>
+    <span class="s">"os"</span>
+    <span class="s">"path/filepath"</span>
+<span class="p">)</span>
+
+<span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">dir</span><span class="p">,</span> <span class="n">err</span> <span class="p">:</span><span class="o">=</span> <span class="n">filepath</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">filepath</span><span class="p">.</span><span class="n">Dir</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">Args</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="n">fmt</span><span class="p">.</span><span class="n">Println</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+          </div>
+
+        </div>
+          <section id="comments" data-follow-button-container="true" data-updated-at="2022-06-22 10:36:51 UTC" class="text-padding mb-4 border-t-1 border-0 border-solid border-base-10">
+      <header class="relative flex justify-between items-center mb-6">
+        <h2 class="crayons-subtitle-1">
+          Discussion <span class="js-comments-count" data-comments-count="0">(0)</span>
+        </h2>
+        <div id="comment-subscription" class="print-hidden"><div class="static"><div role="group" aria-label="Comment subscription options" class="crayons-btn-group"><button class="crayons-btn crayons-btn--outlined" type="button" data-tracking-name="comment_subscription_toggle">Subscribe</button></div></div>
+          
+        </div>
+      </header>
+
+      <div id="comments-container" data-testid="comments-container" data-commentable-id="341634" data-commentable-type="Article" data-has-recent-comment-activity="false">
+
+          <div id="response-templates-data" class="hidden"></div>
+<script data-savepage-src="https://dev.to/packs/js/runtime~validateFileInputs-d96a0fa944bc6cb6821e.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/validateFileInputs-4a71b1b549ef8d213c04.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/runtime~responseTemplates-e773d8567bd49f3697cf.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/responseTemplates-3f0c817e6570702c7793.chunk.js" defer="defer"></script>
+
+
+<form class="comment-form print-hidden" id="new_comment" action="/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off">
+
+  <input type="hidden" name="authenticity_token" value="NOTHING" id="new_comment_authenticity_token">
+
+    <input value="341634" autocomplete="off" type="hidden" name="comment[commentable_id]" id="comment_commentable_id">
+    <input value="Article" autocomplete="off" type="hidden" name="comment[commentable_type]" id="comment_commentable_type">
+    
+
+  <span class="crayons-avatar m:crayons-avatar--l mr-2 shrink-0">
+    <img data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" src="data:image/png;base64,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" alt="pic" class="crayons-avatar__image overflow-hidden" id="comment-primary-user-profile--avatar" loading="lazy" width="32" height="32">
+  </span>
+  <div class="comment-form__inner">
+    <div class="comment-form__field" data-tracking-name="comment_form_textfield">
+      <textarea placeholder="Add to the discussion" onfocus="handleFocus(event)" onkeyup="handleKeyUp(event)" onkeydown="handleKeyDown(event)" oninput="handleChange(event)" id="text-area" required="required" class="crayons-textfield comment-textarea crayons-textfield--ghost" aria-label="Add a comment to the discussion" name="comment[body_markdown]"></textarea>
+      <div class="comment-form__toolbar">
+        <div class="editor-image-upload">
+          <input type="file" id="image-upload-main" name="file" accept="image/*" style="display:none" value="">
+          <button type="button" class="crayons-btn crayons-btn--s crayons-btn--icon-left crayons-btn--ghost-dimmed" onclick="handleImageUpload(event,'main')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" class="crayons-icon">
+    <path d="M20 5H4v14l9.292-9.294a1 1 0 011.414 0L20 15.01V5zM2 3.993A1 1 0 012.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 01-.992.993H2.992A.993.993 0 012 20.007V3.993zM8 11a2 2 0 110-4 2 2 0 010 4z"></path>
+</svg>
+
+            <span class="hidden s:inline-block" aria-hidden="false">Upload image</span>
+          </button>
+          <label class="image-upload-file-label" id="image-upload-file-label-main"></label>
+          <input type="submit" id="image-upload-submit-main" value="Upload" style="display:none">
+          <input class="hidden" id="uploaded-image-main" value="">
+        </div>
+
+        <button type="button" class="crayons-btn crayons-btn--s crayons-btn--icon-left crayons-btn--ghost-dimmed response-templates-button" title="Use a response template" data-has-listener="true" data-form-id="new_comment">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" class="crayons-icon">
+    <path d="M3 18.5V5a3 3 0 013-3h14a1 1 0 011 1v18a1 1 0 01-1 1H6.5A3.5 3.5 0 013 18.5zM19 20v-3H6.5a1.5 1.5 0 100 3H19zM10 4H6a1 1 0 00-1 1v10.337A3.485 3.485 0 016.5 15H19V4h-2v8l-3.5-2-3.5 2V4z"></path>
+</svg>
+
+          <span class="hidden s:inline-block" aria-hidden="false">Templates</span>
+        </button>
+
+        <a href="/p/editor_guide" class="crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon crayons-btn--s ml-auto" target="_blank" rel="noopener" title="Markdown Guide">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-labelledby="agrvtswv4kkoxp0yk4bu1wb4fbcoj0xj" class="crayons-icon"><title id="agrvtswv4kkoxp0yk4bu1wb4fbcoj0xj">Editor guide</title>
+    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
+</svg>
+
+        </a>
+      </div>
+    </div>
+
+    <div class="response-templates-container crayons-card crayons-card--secondary p-4 mb-4 comment-form__templates fs-base hidden">
+      <header class="mb-3">
+        <button type="button" class="crayons-btn personal-template-button active" data-target-type="personal" data-form-id="new_comment">Personal</button>
+        <button type="button" class="crayons-btn moderator-template-button hidden" data-target-type="moderator" data-form-id="new_comment">Trusted User</button>
+      </header>
+
+      <img class="loading-img hidden" data-savepage-src="https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg" src="" alt="loading" loading="lazy">
+
+      <div class="personal-responses-container">
+      </div>
+      <div class="moderator-responses-container hidden">
+      </div>
+
+      <a target="_blank" rel="noopener nofollow" href="/settings/response-templates">
+        Create template
+      </a>
+      <p>Templates let you quickly answer FAQs or store snippets for re-use.</p>
+    </div>
+
+    <div class="comment-form__preview text-styles text-styles--secondary" id="preview-div"></div>
+
+    <div class="comment-form__buttons mb-4">
+      <button type="submit" class="crayons-btn mr-2 js-btn-enable" onclick="validateField(event)" data-tracking-name="comment_submit_button" disabled="">Submit</button>
+      <button type="button" class="preview-toggle crayons-btn crayons-btn--secondary comment-action-preview js-btn-enable mr-2" data-tracking-name="comment_preview_button" disabled="">Preview</button>
+      <a href="/404.html" class="dismiss-edit-comment crayons-btn crayons-btn--ghost js-btn-dismiss hidden">Dismiss</a>
+    </div>
+  </div>
+
+  <div class="code-of-conduct" id="toggle-code-of-conduct-checkbox"></div>
+</form>
+
+
+        <div class="comments" id="comment-trees-container">
+        </div>
+      </div>
+
+      <div class="align-center">
+
+
+  <nav class="fs-s align-center block" aria-label="Conduct controls">
+  <a href="/code-of-conduct" class="crayons-link crayons-link--secondary">Code of Conduct</a>
+  <span class="opacity-25 px-2" role="presentation">•</span>
+  <a href="/report-abuse" class="crayons-link crayons-link--secondary">Report abuse</a>
+</nav>
+
+</div>
+
+  </section>
+  <div id="hide-comments-modal" class="hidden">
+  <form id="hide-comments-modal__form" class="hide-comments-modal__form" data-type="json" action="/comments/hide" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="9xLCh_N6_hv3XU_ZZo5nfO-36rgSRGnZVSmSd-ItWl_8KvdnQ-Y1TdPQN0HMXZCKRUsViKKe0lU1ua53QBglOA" autocomplete="off">
+    <div class="hide-comments-modal__content">
+      <p class="pb-2">
+        Are you sure you want to hide this comment? It will become hidden in your post, but will still be visible via the comment's <a id="hide-comments-modal__comment-permalink" href="#">permalink</a>.
+      </p>
+      <label class="crayons-field crayons-field--checkbox my-2">
+        <input name="hide_children" type="hidden" value="0" autocomplete="off"><input class="hide_children crayons-checkbox" type="checkbox" value="1" name="hide_children" id="hide_children">
+        <p class="crayons-field__label">Hide child comments as well</p>
+      </label>
+      <p class="pb-4 pt-2">
+        <button type="submit" class="crayons-btn">
+          Confirm
+        </button>
+      </p>
+    </div>
+</form>  <p class="fs-s color-base-60">For further actions, you may consider blocking this person and/or <a id="hide-comments-modal__report-link" href="/report-abuse">reporting abuse</a></p>
+</div>
+
+
+
+      </article>
+
+          <section class="crayons-card crayons-card--secondary text-padding mb-4 print-hidden" id="bottom-content-read-next">
+    <h2 class="crayons-subtitle-1">Read next</h2>
+      <a href="/willvelida/setting-up-our-go-development-environment-45jk" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--iNN84HGE--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b9wu2x0rpv8u7cjdgru8.png" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+            <img loading="lazy" alt="willvelida profile image" class="crayons-avatar__image" data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--d6goQ5sA--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/35069/dd0e9793-31a0-4578-9a0c-aa07426276b4.jpeg" src="data:image/jpeg;base64,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" width="100" height="100">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Setting up our Go Development Environment</h3>
+            <p class="opacity-75 pt-1">
+              Will Velida - <time datetime="2022-03-10T07:49:51Z">Mar 10</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/karanpratapsingh/graphql-subscriptions-at-scale-with-nats-f19" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--9GRH95wC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z13u693xn2qrwthzmrcp.png" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+            <img loading="lazy" alt="karanpratapsingh profile image" class="crayons-avatar__image" data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--_E2JzOM7--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/350819/b3e261fa-d88e-4cb4-80a2-233ab491af4e.jpg" src="data:image/jpeg;base64,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" width="100" height="100">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">GraphQL subscriptions at scale with NATS</h3>
+            <p class="opacity-75 pt-1">
+              Karan Pratap Singh - <time datetime="2022-03-09T09:02:19Z">Mar 9</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/clavinjune/golang-http-server-graceful-shutdown-4ke5" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+            <img loading="lazy" alt="clavinjune profile image" class="crayons-avatar__image" data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--CjhrToxP--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/106142/309330a8-636a-442a-8d4e-910fdd589929.jpg" src="data:image/jpeg;base64,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" width="100" height="100">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Golang HTTP Server Graceful Shutdown</h3>
+            <p class="opacity-75 pt-1">
+              Clavin June - <time datetime="2022-02-26T17:03:25Z">Feb 26</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/0xbf/sqlite-integer-can-save-up-to-signed-64-bit-with-golang-4i8a" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+            <img loading="lazy" alt="0xbf profile image" class="crayons-avatar__image" data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--R5MVoAZ5--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/264864/070271a6-bcda-475b-ba96-bc9f78f2cefe.png" src="data:image/jpeg;base64,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" width="100" height="100">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">SQLite integer can save up to signed 64-bit with Golang</h3>
+            <p class="opacity-75 pt-1">
+              Bo - <time datetime="2022-02-02T04:54:53Z">Feb 2</time>
+            </p>
+          </div>
+        </div>
+      </a>
+  </section>
+
+    </div>
+  </main>
+
+  <aside class="crayons-layout__sidebar-right" aria-label="Author details">
+      <div class="crayons-article-sticky grid gap-4 break-word" id="article-show-primary-sticky-nav">
+  <div class="crayons-card crayons-card--secondary branded-7 p-4 pt-0 gap-4 grid" style="border-top-color: #551029;">
+    <div class="-mt-4">
+  <a href="/natamacm" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--KzAKdZMZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/359047/ecc29d0e-9cfe-4d00-ad0b-d9d9d0daec89.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaAgMAAABFxqmRAAAADFBMVEWf0nrw8PDJ4ra225yWVQhFAAAAbElEQVRIx2MIxQoCGAadeNgqDLASLM6AAXhHxSkQ/48Bfg7G9DAcxKOQEjOyeAQiTphHxSkTB5Ub65ESM3K5wYuIkTDkfDEqTp44EzBwlwIFgdRq9HLGFCjegKX8GRUnURyajp8CxfcPufIZAM2X6r7/nLyNAAAAAElFTkSuQmCC" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">natamacm</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:359047,&quot;name&quot;:&quot;natamacm&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: natamacm" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-04-01T16:09:38Z" class="date">2020年4月2日</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+      <div class="crayons-card crayons-card--secondary">
+        <header class="crayons-card__header">
+          <h3 class="crayons-subtitle-2">
+            More from <a href="/natamacm">natamacm</a>
+          </h3>
+        </header>
+        <div>
+            <a class="crayons-link crayons-link--contentful" href="/natamacm/should-i-learn-golang-co6">
+              Should I learn golang?
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>go</span>
+              </div>
+            </a>
+            <a class="crayons-link crayons-link--contentful" href="/natamacm/golang-reader-1f10">
+              Golang reader
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>go</span>
+              </div>
+            </a>
+            <a class="crayons-link crayons-link--contentful" href="/natamacm/round-numbers-in-go-5c01">
+              Round numbers in Go
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>go</span>
+              </div>
+            </a>
+        </div>
+      </div>
+</div>
+
+  </aside>
+</div>
+
+
+<div class="mod-actions-menu print-hidden"></div>
+<div data-testid="flag-user-modal-container" class="flag-user-modal-container hidden"></div>
+<div data-testid="unpublish-post-modal-container" class="unpublish-post-modal-container hidden"></div>
+
+<div class="fullscreen-code js-fullscreen-code"></div>
+<script data-savepage-src="https://dev.to/packs/js/runtime~followButtons-274ece3881c7b1a3e6dd.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/2-9613274770103eeb4674.chunk.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/followButtons-6ba4cc157e7b67a55b6f.chunk.js" defer="defer"></script>
+
+  <script></script>
+
+    
+  </div>
+</div>
+    <footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">©</span> 2016 - 2022.</p>
+    </div>
+    <a href="https://www.forem.com" target="_blank" rel="noopener" class="c-link c-link c-link--block c-link--icon-alone self-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="ajpksekd82xuczx9dsq4jqb9y553gep9" class="crayons-icon crayons-icon--default c-link__icon"><title id="ajpksekd82xuczx9dsq4jqb9y553gep9">Forem logo</title>
+    <g clip-path="url(#clip0)" fill="#1AB3A6">
+        <path d="M4.603 1.438a8.056 8.056 0 017.643 5.478 8.543 8.543 0 00-3.023 5.968H8.054C3.606 12.884 0 9.296 0 4.87V1.468a.03.03 0 01.03-.03h4.573zM23.97 6.515a.03.03 0 01.03.03v2.833c0 4.11-3.354 7.442-7.491 7.442h-2.881v5.726h-2.305V14.53l.022-1.145c.294-3.843 3.526-6.87 7.469-6.87h5.155z"></path>
+    </g>
+    <defs>
+        <clipPath id="clip0">
+            <path fill="#fff" d="M0 0h24v24H0z"></path>
+        </clipPath>
+    </defs>
+</svg>
+
+    </a>
+  </div>
+</footer>
+<div id="snack-zone"><div class="hidden"></div></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" data-savepage-src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" src="data:image/png;base64,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" alt="DEV Community" loading="lazy">
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We're a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant="">
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand" aria-label="Create new account" data-no-instant="">
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script data-savepage-src="https://dev.to/packs/js/runtime~signupModalShortcuts-3eb3b8d3e07a49e38328.js" defer="defer"></script>
+<script data-savepage-src="https://dev.to/packs/js/signupModalShortcuts-ecc25ee1f0a16653d9bf.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  
+  
+</body></html>
