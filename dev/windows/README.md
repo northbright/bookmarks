@@ -79,3 +79,6 @@
 
 ## Issues
 * [win10 Initpki.dll加载失败](https://answers.microsoft.com/zh-hans/windows/forum/all/win10/912bc3bc-9879-44da-8942-128fba9ffb94)
+
+## Install & Uninstall Program
+* [How To Tell Which User Installed Or Removed An App In Windows](https://www.addictivetips.com/windows-tips/how-to-tell-which-user-installed-or-removed-an-app-in-windows/)
