@@ -81,4 +81,5 @@
 * [win10 Initpki.dll加载失败](https://answers.microsoft.com/zh-hans/windows/forum/all/win10/912bc3bc-9879-44da-8942-128fba9ffb94)
 
 ## Install & Uninstall Program
+* [History of uninstalled apps in Windows 10](https://answers.microsoft.com/en-us/windows/forum/all/history-of-uninstalled-apps-in-windows-10/2a8afc9e-c24c-47f9-8098-7ea94bd798a6)
 * [How To Tell Which User Installed Or Removed An App In Windows](https://www.addictivetips.com/windows-tips/how-to-tell-which-user-installed-or-removed-an-app-in-windows/)
