@@ -83,3 +83,7 @@
 ## Install & Uninstall Program
 * [History of uninstalled apps in Windows 10](https://answers.microsoft.com/en-us/windows/forum/all/history-of-uninstalled-apps-in-windows-10/2a8afc9e-c24c-47f9-8098-7ea94bd798a6)
 * [How To Tell Which User Installed Or Removed An App In Windows](https://www.addictivetips.com/windows-tips/how-to-tell-which-user-installed-or-removed-an-app-in-windows/)
+
+## Windows Defender Antivirus
+* [Detect and block potentially unwanted applications](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus?view=o365-worldwide)
+
