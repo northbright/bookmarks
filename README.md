@@ -28,3 +28,4 @@ Bookmarks of development and more...
 * [房产](house/README.md)
 * [Cloud(云)](cloud/README.md)
 * [Metaverse（元宇宙）](metaverse/README.md)
+* [Financing（理财）](financing/README.md)
