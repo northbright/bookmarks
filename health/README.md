@@ -48,3 +48,6 @@
 ## 防蓝光眼镜
 * [2022年618 防蓝光眼镜哪个品牌好？｜含12款产品横评，小米、京东京造、安汰蓝、AHT！守护视力，爱护眼睛！](https://zhuanlan.zhihu.com/p/376030337)
 * [科普|防蓝光眼镜怎么选？哪个更靠谱？](https://zhuanlan.zhihu.com/p/97809568)
+
+## 膝盖
+* [中里巴人：跪膝法补肝脏、强肾、减肥【附视频】](https://mp.weixin.qq.com/s/xd_9z1iU5AAf9YFdSMp6YQ)
