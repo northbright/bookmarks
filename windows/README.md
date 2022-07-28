@@ -10,6 +10,7 @@
 * [在 Windows 10 中，在安全模式下启动电脑](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8-windows-10-%E4%B8%AD-%E5%9C%A8%E5%AE%89%E5%85%A8%E6%A8%A1%E5%BC%8F%E4%B8%8B%E5%90%AF%E5%8A%A8%E7%94%B5%E8%84%91-92c27cff-db89-8644-1ce4-b3e5e56fe234)
 * [win10开机桌面不显示，黑屏但是有鼠标？](https://www.zhihu.com/question/53280292)
 * [windows10系统最近遇到的一些问题的解决方案](https://www.jianshu.com/p/4719850e237b)
+* [记一次蓝屏的解决，错误代码IRQL_NOT_LESS_OR_EQUAL](https://blog.csdn.net/aoqiao7983/article/details/101112985)
 
 ## ISO
 * [Windows 10 business 和 consumer 中的专业版有什么不同？](https://www.zhihu.com/question/379426445)
