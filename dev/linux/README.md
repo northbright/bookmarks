@@ -24,3 +24,4 @@
 * [network](network/README.md)
 * [Performance](performance/README.md)
 * [Rsync](rsync/README.md)
+* [LogRotate](logrotate/README.md)
