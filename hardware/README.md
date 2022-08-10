@@ -86,3 +86,6 @@
 ## NAS
 * [群晖为什么不卖操作系统？](https://www.zhihu.com/question/68392753/answer/1602212479)
 * [搭建家庭 NAS 服务器有什么好方案？](https://www.zhihu.com/question/21359049/answer/622344230)
+
+## Data Recovery
+* [中国最牛的数据恢复公司](https://zhuanlan.zhihu.com/p/31578790)
