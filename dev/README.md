@@ -89,6 +89,7 @@
 * [Hugo](hugo/README.md)
 * [acme.sh](acme-sh/README.md)
 * [GoAccess](goaccess/README.md)
+* [FFmpeg](ffmpeg/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
