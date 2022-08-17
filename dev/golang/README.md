@@ -99,6 +99,7 @@
 * [Go 语言生态发展之路](https://mp.weixin.qq.com/s/ussTB7RBL4MREJlB_K-4JA)
 * [Go 1.18中值得关注的几个变化](https://tonybai.com/2022/04/20/some-changes-in-go-1-18/)
 * [spf13 Google -->](https://spf13.com/p/spf13-google/)
+* [ 31个！Golang常用工具来啦（建议收藏） ](https://mp.weixin.qq.com/s/br1LgsL-4YFL5lRVwvnqZQ)
 
 
 ## Effective Go
