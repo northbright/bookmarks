@@ -5,6 +5,7 @@
 * [Can I use FFmpeg in a commercial product?](https://video.stackexchange.com/questions/14802/can-i-use-ffmpeg-in-a-commercial-product)
 * [How to use FFmpeg on iOS](https://shaunhevey.com/posts/how-to-use-ffmpeg-on-ios/)
 * [Build a cross-platform video player in 7 days](https://aaaron7.github.io/blog/video/tech/Build-a-cross-platform(iOS-Android)-video-player-in-7-days)
+* [Mac平台 编译FFmpeg iOS lib](https://www.jianshu.com/p/3dca7663fb68)
 
 ## Projects
 * [FFmpeg iOS build script](https://github.com/kewlbear/FFmpeg-iOS-build-script)
