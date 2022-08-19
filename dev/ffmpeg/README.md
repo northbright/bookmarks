@@ -7,4 +7,5 @@
 * [Build a cross-platform video player in 7 days](https://aaaron7.github.io/blog/video/tech/Build-a-cross-platform(iOS-Android)-video-player-in-7-days)
 
 ## Projects
+* [FFmpeg iOS build script](https://github.com/kewlbear/FFmpeg-iOS-build-script)
 * [FFmpegKit](https://github.com/tanersener/ffmpeg-kit)
