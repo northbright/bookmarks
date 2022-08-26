@@ -22,4 +22,6 @@
 * [Playing Video with AVPlayer in SwiftUI](https://benoitpasquier.com/playing-video-avplayer-swiftui/)
 
 ## Blogs
+* [Benoit Pasquier - Swift, iOS and more](https://benoitpasquier.com/)
 * [Ten years of blogging, one article at a time](https://benoitpasquier.com/2022/03/ten-years-of-blogging-one-article-at-a-time/)
+
