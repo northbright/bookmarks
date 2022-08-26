@@ -21,6 +21,9 @@
 * [Playing audio file on iOS in Swift 4](https://jayeshkawli.ghost.io/playing-audio-file-on-ios-with-swift/)
 * [Playing Video with AVPlayer in SwiftUI](https://benoitpasquier.com/playing-video-avplayer-swiftui/)
 
+## Swift
+* [Swift](swift/README.md)
+
 ## Blogs
 * [Benoit Pasquier - Swift, iOS and more](https://benoitpasquier.com/)
 * [Ten years of blogging, one article at a time](https://benoitpasquier.com/2022/03/ten-years-of-blogging-one-article-at-a-time/)
