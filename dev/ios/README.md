@@ -14,6 +14,9 @@
 * [Benoit Pasquier - Swift, iOS and more](https://benoitpasquier.com/)
 * [Ten years of blogging, one article at a time](https://benoitpasquier.com/2022/03/ten-years-of-blogging-one-article-at-a-time/)
 
+## Examples
+* [samples](https://github.com/popei69/samples)
+
 ## SMB
 * [Connect iPhone to Windows PC via SMB file sharing](https://www.iosappweekly.com/connect-iphone-windows-pc-smb-file-sharing-fileexplorer/)
 * [Share files between computer and iPhone](https://www.iosappweekly.com/share-files-between-computer-iphone-smb/)
