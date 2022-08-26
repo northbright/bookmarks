@@ -11,6 +11,8 @@
 ## Sites & Blogs
 * [唐巧的技术博客](http://blog.devtang.com/)
 * [我常去逛的iOS干货文章、blog等](http://www.jianshu.com/p/818d121363dd)
+* [Benoit Pasquier - Swift, iOS and more](https://benoitpasquier.com/)
+* [Ten years of blogging, one article at a time](https://benoitpasquier.com/2022/03/ten-years-of-blogging-one-article-at-a-time/)
 
 ## SMB
 * [Connect iPhone to Windows PC via SMB file sharing](https://www.iosappweekly.com/connect-iphone-windows-pc-smb-file-sharing-fileexplorer/)
@@ -23,8 +25,3 @@
 
 ## Swift
 * [Swift](swift/README.md)
-
-## Blogs
-* [Benoit Pasquier - Swift, iOS and more](https://benoitpasquier.com/)
-* [Ten years of blogging, one article at a time](https://benoitpasquier.com/2022/03/ten-years-of-blogging-one-article-at-a-time/)
-
