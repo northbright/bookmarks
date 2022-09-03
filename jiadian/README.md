@@ -18,3 +18,4 @@
   * [谁是2000元档最佳选择 6款55英寸电视横向评测（看评论）](https://www.bilibili.com/video/BV1tf4y1Q7a2)
   * [不谈跑分之后，Redmi X55重拾“真性价比”](https://baijiahao.baidu.com/s?id=1676048167487434216)
   * [小米/红米电视「选购排行榜」｜2022年高性价比小米电视推荐！含55/65/75寸数据对比！](https://zhuanlan.zhihu.com/p/439821773)
+  * [解析超高刷电视实用性，不要让高刷沉迷“比大小”](https://zhuanlan.zhihu.com/p/511443003)
