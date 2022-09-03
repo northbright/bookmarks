@@ -89,3 +89,6 @@
 
 ## Data Recovery
 * [中国最牛的数据恢复公司](https://zhuanlan.zhihu.com/p/31578790)
+
+## HDMI
+* [带你了解HDMI接口历代规格变化及各版本的区别介绍！](https://zhuanlan.zhihu.com/p/458337464)
