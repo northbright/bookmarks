@@ -5,3 +5,6 @@
 
 ## Keyboard
 * [技巧：在 macOS 上也可以用 Tab 键切换对话框的焦点](https://zhuanlan.zhihu.com/p/27586949)
+
+## macOS
+* [How to install Monterey on an unsupported Mac](https://www.macworld.com/article/672461/how-to-install-macos-monterey-on-an-older-mac.html)
