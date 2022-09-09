@@ -51,3 +51,6 @@
 
 ## Remote Desktop
 * [共享另一台 Mac 的屏幕](https://support.apple.com/zh-cn/guide/mac-help/mh14066/12.0/mac/12.0)
+
+## ssh
+* [How to Turn On SSH on Mac](https://osxdaily.com/2022/07/08/turn-on-ssh-mac/)
