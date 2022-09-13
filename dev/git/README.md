@@ -39,3 +39,6 @@
 
 ## Problems
 * [What to do when git branch has diverged?](https://poanchen.github.io/blog/2020/09/19/what-to-do-when-git-branch-has-diverged)
+
+## Move Files
+* [Moving files](https://githowto.com/moving_files)
