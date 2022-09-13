@@ -54,3 +54,4 @@
 
 ## ssh
 * [How to Turn On SSH on Mac](https://osxdaily.com/2022/07/08/turn-on-ssh-mac/)
+* [OS X: how to keep the computer from sleeping during a ssh session](https://unix.stackexchange.com/questions/1786/os-x-how-to-keep-the-computer-from-sleeping-during-a-ssh-session)
