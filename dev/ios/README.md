@@ -25,6 +25,7 @@
 * [What the difference between method `stop` and `pause` in AVAudio menber](https://stackoverflow.com/questions/28957443/what-the-difference-between-method-stop-and-pause-in-avaudio-menber)
 * [Playing audio file on iOS in Swift 4](https://jayeshkawli.ghost.io/playing-audio-file-on-ios-with-swift/)
 * [Playing Video with AVPlayer in SwiftUI](https://benoitpasquier.com/playing-video-avplayer-swiftui/)
+* [iOS音视频播放指南（一）](https://zhuanlan.zhihu.com/p/335087516)
 
 ## Swift
 * [Swift](swift/README.md)
