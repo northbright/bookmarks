@@ -7,6 +7,7 @@
 
 ## Articles
 * [Limboy：自学 iOS 开发的一些经验](http://www.cocoachina.com/ios/20150104/10823.html)
+* [iOS开发学习指南(2021更新)](https://zhuanlan.zhihu.com/p/252835578)
 
 ## Sites & Blogs
 * [唐巧的技术博客](http://blog.devtang.com/)
