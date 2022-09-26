@@ -45,6 +45,7 @@
 * [E-M5 MARKIII——超便携、高颜值、高画质、高性能的结合体](https://forum.xitek.com/thread-1856662-1-1-2.html)
 * [2022 年奥林巴斯 E-M1X 还值得买吗？](https://www.zhihu.com/question/535306314/answer/2525062274)
 * [M4/3 镜头有哪些值得购买？](https://www.zhihu.com/question/28286943)
+* [M43标准镜头怎么选（2022）](https://zhuanlan.zhihu.com/p/520276862)
 
 ## UV镜
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
