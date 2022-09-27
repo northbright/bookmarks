@@ -47,6 +47,7 @@
 * [M4/3 镜头有哪些值得购买？](https://www.zhihu.com/question/28286943)
 * [M43标准镜头怎么选（2022）](https://zhuanlan.zhihu.com/p/520276862)
 * [【20210123直播回顾】OLYMPUS鸟眼对焦深入解析+LIVECOMP实时合成（光绘）现场演示](https://www.bilibili.com/video/av501354945/)
+* [【20210314直播回顾】运动物体拍摄技巧与闪电拍摄现场演示](https://www.bilibili.com/video/BV1wy4y1t71W/)
 
 ## UV镜
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
