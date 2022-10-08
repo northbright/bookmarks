@@ -49,6 +49,7 @@
 * [【20210123直播回顾】OLYMPUS鸟眼对焦深入解析+LIVECOMP实时合成（光绘）现场演示](https://www.bilibili.com/video/av501354945/)
 * [【20210314直播回顾】运动物体拍摄技巧与闪电拍摄现场演示](https://www.bilibili.com/video/BV1wy4y1t71W/)
 * [如何评价奥之心 2 月 15 日发布的 M43 新机 OM-1？值得购买吗？](https://www.zhihu.com/question/516700297)
+* [2019年了，奥林巴斯还值得买吗？](https://www.zhihu.com/question/310574796)
 
 ## UV镜
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
