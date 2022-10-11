@@ -29,7 +29,6 @@
   * [sony a9神一般的存在（5.0固件+135GM）追焦无敌](https://www.bilibili.com/video/BV15b411H7vR/)
   * [【布瞎BB】索尼α7 III（ft.α7R III、α9）A7III、A7RIII、A9](https://www.bilibili.com/video/BV1ZW41157MC)
   * [【阿布垃机手册】【布瞎BB】索尼 a9](https://www.bilibili.com/video/BV1nx411a7Wx)
-  * [旗舰首测！索尼a9真机评测之外观镜头篇](https://www.bilibili.com/video/BV1Dx411m7R3/)
 
 ## M43
 * [我的M43旅程 -- DG15 + 12-100](http://forum.xitek.com/forum.php?mod=viewthread&tid=1356170&ordertype=2)
