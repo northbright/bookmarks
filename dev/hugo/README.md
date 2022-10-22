@@ -15,6 +15,9 @@
 
 ## Modules
 * [Master Hugo Modules: Managing Themes As Modules](https://www.hugofordevelopers.com/articles/master-hugo-modules-managing-themes-as-modules/)
+* “Hugo Modules” series
+  * [Hugo Modules: Getting Started](https://scripter.co/hugo-modules-getting-started/)
+  * [Hugo Modules: Importing a Theme](https://scripter.co/hugo-modules-importing-a-theme/)
 
 ## Pages
 * [How to use template parameters in page content in hugo](https://stackoverflow.com/questions/42023687/how-to-use-template-parameters-in-page-content-in-hugo)
