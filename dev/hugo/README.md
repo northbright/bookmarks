@@ -13,6 +13,9 @@
 * [Hugo Clarity](https://github.com/chipzoller/hugo-clarity)
 * [Using a Git Submodule for Your Theme](https://forestry.io/docs/troubleshooting/using-a-git-submodule-for-your-theme/)
 
+## Modules
+* [Master Hugo Modules: Managing Themes As Modules](https://www.hugofordevelopers.com/articles/master-hugo-modules-managing-themes-as-modules/)
+
 ## Pages
 * [How to use template parameters in page content in hugo](https://stackoverflow.com/questions/42023687/how-to-use-template-parameters-in-page-content-in-hugo)
 
