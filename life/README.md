@@ -74,3 +74,6 @@
 
 ## 牛排
 * [大希地牛排是合成牛排吗？](https://www.zhihu.com/question/359927756/answer/1892715532)
+
+## 化石
+* [淘宝卖的50块一个的狼鳍鱼化石是真的嘛？](https://www.zhihu.com/question/359269525)
