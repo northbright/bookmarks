@@ -95,3 +95,4 @@
 ## 二手相机购买
 * [如何选购二手相机&二手相机鉴别好坏](https://zhuanlan.zhihu.com/p/351710451)
 * [闲鱼上买二手相机需要注意些什么？](https://www.zhihu.com/question/277683171)
+* [买二手相机你需要知道这些——避坑+价格参考](https://zhuanlan.zhihu.com/p/483383338)
