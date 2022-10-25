@@ -14,7 +14,7 @@
 
 ## SONY
 
-#### RX100M3
+#### RX100
 * [如何评价 RX100M3?](https://www.zhihu.com/question/23805036)
 * [Sony RX100 专用防滑胶垫开箱](https://www.chiphell.com/thread-537528-1-1.html)
 * [索尼黑卡RX100设置与后期详解](http://forum.xitek.com/thread-1236369-1-1-2.html)
