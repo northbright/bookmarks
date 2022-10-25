@@ -97,3 +97,5 @@
 * [如何选购二手相机&二手相机鉴别好坏](https://zhuanlan.zhihu.com/p/351710451)
 * [闲鱼上买二手相机需要注意些什么？](https://www.zhihu.com/question/277683171)
 * [买二手相机你需要知道这些——避坑+价格参考](https://zhuanlan.zhihu.com/p/483383338)
+* [B熊数码](https://shop112478338.taobao.com/)
+  * [B熊数码 老板澄清贴 官方鉴定翻1赔3 请友商别再低级黑了](https://tieba.baidu.com/p/5783102086)
