@@ -75,6 +75,7 @@
 ## PDF
 * [Online JPG to PDF Converter](http://www.jpgtopdf.com/)
 * [Smallpdf(Online PDF Converters](https://smallpdf.com/)
+* [How to Combine Multiple JPEGs Into One PDF](https://www.lifewire.com/combine-multiple-jpegs-into-one-pdf-5204627)
 
 ## Windows
 * Security
