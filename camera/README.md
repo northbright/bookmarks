@@ -19,6 +19,7 @@
 * [Sony RX100 专用防滑胶垫开箱](https://www.chiphell.com/thread-537528-1-1.html)
 * [索尼黑卡RX100设置与后期详解](http://forum.xitek.com/thread-1236369-1-1-2.html)
 * [rx100周边配件交流讨论贴](http://forum.xitek.com/forum-viewthread-tid-1054587-ordertype-2-highlight-RX100%2B%C5%E4%BC%FE-page-1.html)
+* [一念天堂——我的黑卡7的相伴体验](https://www.chiphell.com/thread-2356661-1-1.html)
 
 #### RX10
 * [买了个索尼DSC-RX10 II](http://forum.xitek.com/thread-1487540-1-1-2.html)
