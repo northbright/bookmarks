@@ -79,6 +79,7 @@
 * [11 Best Free PDF Creators](https://www.lifewire.com/free-tools-to-create-pdf-files-1356335)
 * [The 9 Best Free PDF Editors (October 2022)](https://www.lifewire.com/best-free-pdf-editors-4147622)
 * <https://www.sejda.com/>
+* [Foxit PDF to Word](https://www.foxitsoftware.cn/pdf2word/)
 
 ## Windows
 * Security
