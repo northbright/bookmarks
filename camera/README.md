@@ -50,6 +50,7 @@
 
 #### A7R5
 * [川西旅拍｜索尼最高画质机型A7R5人像实拍全记录｜多图预警](https://www.bilibili.com/video/BV1De4y127pF/)
+* [A7R5上手体验报告-我拍了百亿像素的上海](https://www.bilibili.com/video/BV1HV4y1G7az/)
 
 ## M43
 * [我的M43旅程 -- DG15 + 12-100](http://forum.xitek.com/forum.php?mod=viewthread&tid=1356170&ordertype=2)
