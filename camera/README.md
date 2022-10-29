@@ -101,3 +101,4 @@
 * [B熊数码](https://shop112478338.taobao.com/)
   * [B熊数码 老板澄清贴 官方鉴定翻1赔3 请友商别再低级黑了](https://tieba.baidu.com/p/5783102086)
   * [淘宝b熊数码买二手相机 靠谱吗？](https://www.zhihu.com/question/280584201)
+* [请问咸鱼上卖港版相机的贩子靠谱吗，价格看起来比较正常？](https://www.zhihu.com/question/501916526/answer/2249008350)
