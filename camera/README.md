@@ -48,6 +48,9 @@
 #### A7M3
 * [剖析索尼A7M3：重新定义“全画幅门槛”](https://baijiahao.baidu.com/s?id=1595261618845349544)
 
+#### A7R5
+* [川西旅拍｜索尼最高画质机型A7R5人像实拍全记录｜多图预警](https://www.bilibili.com/video/BV1De4y127pF/)
+
 ## M43
 * [我的M43旅程 -- DG15 + 12-100](http://forum.xitek.com/forum.php?mod=viewthread&tid=1356170&ordertype=2)
 * [奥林巴斯75mm F1.8 （43/M43定焦镜）](http://forum.xitek.com/forum-viewthread-tid-1298892-extra-page%3D1-ordertype-2-t-1593668755.html)
