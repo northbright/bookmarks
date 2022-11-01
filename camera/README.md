@@ -43,6 +43,7 @@
 #### FE 卡口镜头
 * [FE卡口镜头现有适马85 1.4DGDN  福伦达10 f5.6   腾龙70-180 2.8 适马35 1.4DGDN](https://cnc.xitek.com/thread-1930982-1-2.html)
 * [索尼85/f1.8值得买吗？](https://www.zhihu.com/question/363335178)
+* [【顾俊】索尼 FE 85 f1.4 GM VS 索尼 FE 85 f1.8](https://www.bilibili.com/video/BV11s411M7ZD/)
 * [【顾俊】减肥瘦身后的适马 —— Sigma 85 f1.4 DG DN Art](https://www.bilibili.com/video/BV1TT4y177Xb/)
 
 #### A7M3
