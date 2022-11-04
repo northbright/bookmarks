@@ -11,3 +11,4 @@
 
 ## Security
 * [CVE-2022-3786 and CVE-2022-3602: X.509 Email Address Buffer Overflows](https://www.openssl.org/blog/blog/2022/11/01/email-address-overflows/)
+* <https://ubuntu.com/security/notices/USN-5710-1>
