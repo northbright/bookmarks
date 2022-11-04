@@ -2,6 +2,7 @@
 
 ## Category
 * [Javascript / ECMAScript](javascript/README.md)
+* [TypeScript](typescript/README.md)
 * [UI](ui/README.md)
 * [JSONP](jsonp/README.md)
 * [Cross Domain Request](cross-domain-request/README.md)
