@@ -29,6 +29,7 @@
 * [Stanford CS193p 2021 合集 SwiftUI （已完结）](https://www.bilibili.com/video/BV1fy4y1u7hX)
 * [一些适合 SwiftUI 初学者的教程](https://zhuanlan.zhihu.com/p/566168684)
 * [SwiftUI 学习资料整理](https://zhuanlan.zhihu.com/p/369562707)
+* [使用 SwiftUI 开发 iOS App 新手教程(bilibili)](https://www.bilibili.com/video/BV16L411H7xN/)
 * [Swift Programming for Beginners](https://blckbirds.com/wp-content/uploads/2020/02/SwiftProgramming1.0.pdf)
 
 #### Articles
