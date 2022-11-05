@@ -28,6 +28,7 @@
 * [Introduction to SwiftUI](https://developer.apple.com/videos/play/wwdc2020/10119/)
 * [Stanford CS193p 2021 合集 SwiftUI （已完结）](https://www.bilibili.com/video/BV1fy4y1u7hX)
 * [一些适合 SwiftUI 初学者的教程](https://zhuanlan.zhihu.com/p/566168684)
+* [SwiftUI 学习资料整理](https://zhuanlan.zhihu.com/p/369562707)
 
 #### Articles
 * [Why I Quit Using SwiftUI](https://chsxf.dev/2022/08/28/5-tup-why-i-quit-using-swiftui.html)
