@@ -6,3 +6,4 @@
 * [Remove elements in slice](https://stackoverflow.com/questions/28699485/remove-elements-in-slice)
 * [Filtering without allocating](https://github.com/golang/go/wiki/SliceTricks#filtering-without-allocating)
 * [Copy an array or slice in Go (Golang)](https://golangbyexample.com/copy-an-array-or-slice-golang/)
+* [How to Create Constant Maps, Slices, & Arrays in Golang](https://blog.boot.dev/golang/golang-constant-maps-slices/)
