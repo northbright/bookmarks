@@ -12,3 +12,6 @@
 
 ## QQ 邮箱
 * [登录qq邮箱提示：当前网络环境存在风险，推荐使用手机QQ扫码登录。你也可以更换网络环境后重试。怎么破？](https://www.zhihu.com/question/500862527)
+
+## cnBeta
+* [cnBeta挂了吗？](https://www.zhihu.com/question/561863279/answers/updated)
