@@ -86,6 +86,7 @@
 
 ## 陨石
 * [请问淘宝上卖的陨石是什么?](https://www.zhihu.com/question/327572111)
+* [如何在淘宝上挑选真的陨石？](https://www.zhihu.com/question/24084302)
 
 ## 手表
 * [卡西欧F-91W鉴真](http://bbs.xbiao.com/1153/1053123.html)
