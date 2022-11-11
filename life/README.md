@@ -83,3 +83,6 @@
 ## 矿石
 * [闪瞎你眼睛的，还真不一定是金子](https://zhuanlan.zhihu.com/p/90564228)
 * [黄铁矿为什么会烂掉？](https://zhuanlan.zhihu.com/p/50285096)
+
+## 手表
+* [卡西欧F-91W鉴真](http://bbs.xbiao.com/1153/1053123.html)
