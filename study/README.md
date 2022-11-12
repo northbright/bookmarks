@@ -6,9 +6,15 @@
 ## 升学
 * [教育强区闵行，坐享体制内外优质教育，多重选择冲击名校！](https://zhuanlan.zhihu.com/p/366001314)
 
-## 英语
+## 教材
 * 上海牛津英语教材 MP3 下载
   * [上海中小学教材配套音频资料下载中心](http://mp3.bookmall.com.cn/)
   * 提取码
     * [第一学期](mp3.bookmall.com.cn/img/tqm1.png)
     * [第二学期](mp3.bookmall.com.cn/img/tqm2.png)
+* [新版中小学电子教材下载攻略（pdf版）](https://zhuanlan.zhihu.com/p/542007886)
+
+## 数学
+#### 排列组合
+* [排列组合分不清？17分钟讲清楚原理与使用|小姚老师](https://www.bilibili.com/video/BV1sR4y1c7n3/)
+* [2022高考数学!【组合+概率+统计】重点全复习！](https://www.bilibili.com/video/BV14R4y1w7aU/)
