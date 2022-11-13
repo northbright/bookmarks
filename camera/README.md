@@ -40,6 +40,7 @@
 * [巧用Sony APS-C模式](https://zhuanlan.zhihu.com/p/102529584)
 * [索尼A9旗舰机身测评](https://zhuanlan.zhihu.com/p/32705004)
 * [宠物摄影 史上最强机身Sony a9](https://zhuanlan.zhihu.com/p/71693698)
+* [如何评价 Sony A9 相机？](https://www.zhihu.com/question/58738453)
 
 #### FE 卡口镜头
 * [FE卡口镜头现有适马85 1.4DGDN  福伦达10 f5.6   腾龙70-180 2.8 适马35 1.4DGDN](https://cnc.xitek.com/thread-1930982-1-2.html)
