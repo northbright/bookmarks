@@ -43,6 +43,7 @@
 * [如何评价 Sony A9 相机？](https://www.zhihu.com/question/58738453)
 * [对焦性能PK：新固件索尼A9对决佳能1DX2](https://baijiahao.baidu.com/s?id=1632656215287766161)
 * [来自MAX的报道, 公平真实的索尼A9和尼康D5对焦测试](https://zhuanlan.zhihu.com/p/27988134)
+* [索尼A9相机拍照快门打滑，出现“相机错误”，是哪里出问题了](https://www.bilibili.com/video/av681715892/)
 
 #### FE 卡口镜头
 * [FE卡口镜头现有适马85 1.4DGDN  福伦达10 f5.6   腾龙70-180 2.8 适马35 1.4DGDN](https://cnc.xitek.com/thread-1930982-1-2.html)
