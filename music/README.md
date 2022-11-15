@@ -8,6 +8,7 @@
 
 #### Sites
 * [Individual Profiles](https://www.worldorder-fansite.com/profiles)
+* [WORLD ORDER Members Profile](https://kprofiles.com/world-order-members-profile/)
 
 #### Have a Nice Day!
 * [【LIVE】#Have a Nice Day!#（#ハバナイ#）ダンスウィズバビロン 2-0-1-8-](https://www.bilibili.com/video/BV1tV411f7fN)
