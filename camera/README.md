@@ -87,6 +87,7 @@
 * [如何评价奥之心 2 月 15 日发布的 M43 新机 OM-1？值得购买吗？](https://www.zhihu.com/question/516700297)
 * [2019年了，奥林巴斯还值得买吗？](https://www.zhihu.com/question/310574796)
 * [漫谈M43 篇一：M43画幅相机？这个相机体系有什么优劣？有图有真相！](https://post.smzdm.com/p/a992nex5/)
+* [45mmf1.8我的m43挂机镜头](https://tieba.baidu.com/p/6062297438?pn=1)
 
 ## UV镜
 * [大家镜头都裸奔还是上UV镜？](http://forum.xitek.com/thread-1830738-1-1-2.html)
