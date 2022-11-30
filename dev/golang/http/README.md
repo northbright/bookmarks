@@ -12,6 +12,7 @@
 * [Download file concurrently in Golang](https://www.abilityrush.com/download-file-concurrently-in-golang-part-1/)
 * [Download file concurrently in Golang-Part 2(Memory)](https://www.abilityrush.com/download-file-concurrently-in-golang-part-2/)
 * [Download file concurrently in Golang-Part 3(Progress Bar)](https://www.abilityrush.com/download-file-concurrently-with-golang-part-3progress-bar/)
+* [Download file concurrently in Golang – Part 4(Resume)](https://www.abilityrush.com/download-file-concurrently-in-golang-part-4-resume/)
 
 ## HTTP Server
 * Multiple Domains 
