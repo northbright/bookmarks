@@ -11,6 +11,7 @@
 * [golang POST data using the Content-Type multipart/form-data](https://stackoverflow.com/questions/20205796/golang-post-data-using-the-content-type-multipart-form-data)
 * [Download file concurrently in Golang](https://www.abilityrush.com/download-file-concurrently-in-golang-part-1/)
 * [Download file concurrently in Golang-Part 2(Memory)](https://www.abilityrush.com/download-file-concurrently-in-golang-part-2/)
+* [Download file concurrently in Golang-Part 3(Progress Bar)](https://www.abilityrush.com/download-file-concurrently-with-golang-part-3progress-bar/)
 
 ## HTTP Server
 * Multiple Domains 
