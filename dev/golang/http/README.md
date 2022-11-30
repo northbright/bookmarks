@@ -10,6 +10,7 @@
 * [Streaming(Pipe) Solution of  MIME/Multipart POST](https://github.com/sclevine/cflocal/blob/master/remote/droplet.go)
 * [golang POST data using the Content-Type multipart/form-data](https://stackoverflow.com/questions/20205796/golang-post-data-using-the-content-type-multipart-form-data)
 * [Download file concurrently in Golang](https://www.abilityrush.com/download-file-concurrently-in-golang-part-1/)
+* [Download file concurrently in Golang-Part 2(Memory)](https://www.abilityrush.com/download-file-concurrently-in-golang-part-2/)
 
 ## HTTP Server
 * Multiple Domains 
