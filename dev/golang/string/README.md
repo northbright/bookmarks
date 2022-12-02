@@ -4,12 +4,12 @@
 * [How do you write multiline strings in Go?](http://stackoverflow.com/questions/7933460/how-do-you-write-multiline-strings-in-go)
 * [golang -- 字符串操作](http://my.oschina.net/1123581321/blog/192971)
 * [Gopher Go! - Bytes & Strings](https://vluxe.io/golang-bytes.html)
-* [Part 14: Strings(其中有rune以及for range的操作)](https://golangbot.com/strings/)
 
 ## Stringer
 * [Understanding Stringer Interface In Golang](https://www.abilityrush.com/understanding-stringer-interface-in-golang/)
 
 ## Rune
+* [Part 14: Strings(其中有rune以及for range的操作)](https://golangbot.com/strings/)
 * [What is a rune?](https://stackoverflow.com/questions/19310700/what-is-a-rune)
 * [How to get the number of Characters in a String?](https://stackoverflow.com/questions/12668681/how-to-get-the-number-of-characters-in-a-string)
 
