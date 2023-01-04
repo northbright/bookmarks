@@ -11,6 +11,9 @@
 * [烂泥：nginx、php-fpm、mysql用户权限解析](http://blog.51cto.com/ilanni/1561097)
 * [Compile nginx with existing pcre?](https://stackoverflow.com/questions/11824772/compile-nginx-with-existing-pcre)
 
+## Config
+* [Difference in sites-available vs sites-enabled vs conf.d directories (Nginx)?](https://serverfault.com/questions/527630/difference-in-sites-available-vs-sites-enabled-vs-conf-d-directories-nginx)
+
 ## Articles
 * [CentOS7安装维护Nginx](https://github.com/jaywcjlove/handbook/blob/master/CentOS/CentOS7%E5%AE%89%E8%A3%85%E7%BB%B4%E6%8A%A4Nginx.md)
 * [Example to extract an HttpOnly cookie and pass it on to a RESTful api as an OAuth Bearer token](https://stackoverflow.com/questions/26128412/how-to-extract-some-value-from-cookie-in-nginx)
