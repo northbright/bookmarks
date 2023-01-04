@@ -14,3 +14,6 @@
 
 ## Samba
 * [How can I connect to a Samba server using its hostname instead of the IP?](https://askubuntu.com/questions/243461/how-can-i-connect-to-a-samba-server-using-its-hostname-instead-of-the-ip)
+
+## Editor
+* [Change the Default Editor From Nano on Ubuntu Linux](https://www.howtogeek.com/140/change-the-default-editor-from-nano-on-ubuntu-linux/)
