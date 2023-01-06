@@ -16,6 +16,7 @@
 * [How can I connect to a Samba server using its hostname instead of the IP?](https://askubuntu.com/questions/243461/how-can-i-connect-to-a-samba-server-using-its-hostname-instead-of-the-ip)
 * [Install and Configure Samba](https://ubuntu.com/tutorials/install-and-configure-samba#1-overview)
 * [How to install SAMBA on Ubuntu 22.04 LTS Jammy Linux](https://www.how2shout.com/linux/how-to-install-samba-on-ubuntu-22-04-lts-jammy-linux/)
+* [A big change for Samba in Ubuntu 22.04 and how to get around it](https://www.techrepublic.com/article/big-change-samba-ubuntu/)
 
 ## Editor
 * [Change the Default Editor From Nano on Ubuntu Linux](https://www.howtogeek.com/140/change-the-default-editor-from-nano-on-ubuntu-linux/)
