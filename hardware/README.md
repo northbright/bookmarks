@@ -97,3 +97,6 @@
 ## Printer(打印机)
 * [极致小巧的便携打印机：“折叠伞”汉印 MT800Q](https://zhuanlan.zhihu.com/p/554121686)
 * [网红“打作业神器”汉印FT880怎么样？3个测试看透它！](https://zhuanlan.zhihu.com/p/349878373)
+
+## 工作站
+* [Precision 3460 小型机-设置和规格](https://dl.dell.com/content/manual58567807-precision-3460-%E5%B0%8F%E5%9E%8B%E6%9C%BA-%E8%AE%BE%E7%BD%AE%E5%92%8C%E8%A7%84%E6%A0%BC.pdf?language=zh-cn&ps=true)
