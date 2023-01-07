@@ -60,3 +60,6 @@
 * [白花蛇舌草真的是抗癌良药么？](https://www.zhihu.com/question/21584118)
 * [白花蛇舌草也被马兜铃酸中招，真是令人气愤！](https://www.haodf.com/neirong/wenzhang/5582796469.html)
 * [崂山白花蛇草水有多难喝？](https://www.zhihu.com/question/21751319/answer/88355313)
+
+## 新冠病毒
+* [阻断新冠肺炎转重症的8项核心治疗](https://mp.weixin.qq.com/s/fr04UfIST0YQ2cZayH2nzg)
