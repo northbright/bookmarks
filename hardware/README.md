@@ -37,6 +37,7 @@
 * [这些硬盘不要买！2021那些不推荐的机械硬盘](https://zhuanlan.zhihu.com/p/320796902)
 * [希捷酷鹰、酷狼有什么大区别？哪个适合用在NAS上？](https://www.zhihu.com/question/63730234)
 * [希捷酷狼Pro系列和银河系列的企业级硬盘区别在哪，哪个更好？](https://www.zhihu.com/question/518275410)
+* [目前最高性价比的两块大容量硬盘——希捷银河X18 18T和西数HC550 18T对比评测](https://www.bilibili.com/video/BV1U8411G7Es/)
 
 ## SSD
 * [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
