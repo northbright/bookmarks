@@ -63,3 +63,6 @@
 
 ## 新冠病毒
 * [阻断新冠肺炎转重症的8项核心治疗](https://mp.weixin.qq.com/s/fr04UfIST0YQ2cZayH2nzg)
+
+## 胆囊
+* [胆囊结石必须切胆囊吗？保胆取石靠谱吗？医生告诉你真相](https://www.zhihu.com/zvideo/1293499163519197184)
