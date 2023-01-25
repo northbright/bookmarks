@@ -90,6 +90,7 @@
 * [GoAccess](goaccess/README.md)
 * [FFmpeg](ffmpeg/README.md)
 * [Translation](translation/README.md)
+* [Fyne](fyne/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
