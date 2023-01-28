@@ -27,3 +27,6 @@
 
 ## Networks
 * [If you’re still using ifconfig, you’re living in the past](https://ubuntu.com/blog/if-youre-still-using-ifconfig-youre-living-in-the-past)
+
+## Boot
+* [ACPI error after installing Ubuntu 22.04](https://linux.org/threads/acpi-error-after-installing-ubuntu-22-04.40993/)
