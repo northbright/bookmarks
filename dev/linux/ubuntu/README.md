@@ -24,3 +24,6 @@
 ## Packages
 * [Debian / Ubuntu Linux: Find Out What Package Provides a File](https://www.cyberciti.biz/faq/equivalent-of-rpm-qf-command/)
 * [How do I find the package that provides a file?](https://askubuntu.com/questions/481/how-do-i-find-the-package-that-provides-a-file)
+
+## Networks
+* [If you’re still using ifconfig, you’re living in the past](https://ubuntu.com/blog/if-youre-still-using-ifconfig-youre-living-in-the-past)
