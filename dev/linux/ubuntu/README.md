@@ -20,3 +20,6 @@
 
 ## Editor
 * [Change the Default Editor From Nano on Ubuntu Linux](https://www.howtogeek.com/140/change-the-default-editor-from-nano-on-ubuntu-linux/)
+
+## Packages
+* [Debian / Ubuntu Linux: Find Out What Package Provides a File](https://www.cyberciti.biz/faq/equivalent-of-rpm-qf-command/)
