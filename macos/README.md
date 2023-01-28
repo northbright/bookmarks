@@ -59,3 +59,6 @@
 ## Finder
 * [在 Mac 上的“访达”中排序和排列项目](https://support.apple.com/zh-cn/guide/mac-help/mchlp1745/mac)
 * [How to list Folders first when sorting a Finder window in macOS Sierra](https://www.macworld.com/article/228886/how-to-list-folders-first-when-sorting-a-finder-window-in-macos-sierra.html)
+
+## Disk
+* [How to Copy an ISO to a USB Drive from Mac OS X with dd](https://osxdaily.com/2015/06/05/copy-iso-to-usb-drive-mac-os-x-command/)
