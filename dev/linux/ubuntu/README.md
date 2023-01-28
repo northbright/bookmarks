@@ -34,3 +34,4 @@
   * [ACPI error after installing Ubuntu 22.04](https://linux.org/threads/acpi-error-after-installing-ubuntu-22-04.40993/)
   * [ACPI BIOS errors when trying to install Ubuntu from an USB Stick](https://community.acer.com/en/discussion/566320/acpi-bios-errors-when-trying-to-install-ubuntu-from-an-usb-stick)
   * [ACPI BIOS error on Ubuntu](https://www.dell.com/community/Inspiron/ACPI-BIOS-error-on-Ubuntu/td-p/8249583)
+  * [Ubuntu 22.04 ACPI BIOS ERROR (BUG)](https://askubuntu.com/questions/1411354/ubuntu-22-04-acpi-bios-error-bug)
