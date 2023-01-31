@@ -11,3 +11,4 @@
 * [Go语言重新开始，Go Modules的前世今生与基本使用](https://mp.weixin.qq.com/s/0FU8YrPhb2ezc5Is7wVpNQ)
 * [Retract Module Versions](https://play-with-go.dev/retract-module-versions_go119_en/)
 * [Module retraction](https://go.dev/blog/go116-module-changes#module-retraction)
+* [How To Upgrade To A Major Version In Go](https://golang.cafe/blog/how-to-upgrade-to-a-major-version-in-go.html)
