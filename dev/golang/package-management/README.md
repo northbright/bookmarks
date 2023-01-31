@@ -10,3 +10,6 @@
 
 ## Internal Packages
 * [Internal packages in Go](https://stackoverflow.com/questions/41571946/internal-packages-in-go)
+
+## pkg.go.dev
+* [Removing a package](https://pkg.go.dev/about#removing-a-package)
