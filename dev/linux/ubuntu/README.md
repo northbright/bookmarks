@@ -18,6 +18,7 @@
 * [How to install SAMBA on Ubuntu 22.04 LTS Jammy Linux](https://www.how2shout.com/linux/how-to-install-samba-on-ubuntu-22-04-lts-jammy-linux/)
 * [A big change for Samba in Ubuntu 22.04 and how to get around it](https://www.techrepublic.com/article/big-change-samba-ubuntu/)
 * [小米电视无法访问samba共享文件](https://zhuanlan.zhihu.com/p/590959284)
+* [How To Set Up a Samba Share For A Small Organization on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-samba-share-for-a-small-organization-on-ubuntu-16-04)
 
 ## Editor
 * [Change the Default Editor From Nano on Ubuntu Linux](https://www.howtogeek.com/140/change-the-default-editor-from-nano-on-ubuntu-linux/)
