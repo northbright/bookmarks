@@ -73,3 +73,4 @@
 
 ## 血小板
 * [食疗榜首：藕对血小板减少用处大着哩！](https://health.sina.cn/awyh/art/5aaf4f16e4b03554f44b351f.html)
+* [升血小板最快的食物 – 通过饮食改善血小板计数和功能](https://zhuanlan.zhihu.com/p/450085961)
