@@ -69,3 +69,4 @@
 
 ## 漱口水
 * [比那氏漱口水真的那么神奇吗?](https://www.zhihu.com/question/27111682)
+* [10款漱口水测评：不推荐欧乐B、比那氏，4款含酒精的也不要乱用](https://www.zhihu.com/tardis/bd/art/85756518)
