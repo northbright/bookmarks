@@ -42,3 +42,6 @@
 
 ## Move Files
 * [Moving files](https://githowto.com/moving_files)
+
+## .gitignore
+* [.gitignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
