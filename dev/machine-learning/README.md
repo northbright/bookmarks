@@ -16,3 +16,6 @@
 
 ## TensorFlow
 * [TensorFlow学习笔记(一)](https://blog.csdn.net/dd864140130/article/details/71774229)
+
+## ChatGPT
+* [ChatGPT 很火，但它到底能改变什么?](https://www.zhihu.com/question/571009463/answer/2881384158)
