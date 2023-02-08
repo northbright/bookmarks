@@ -20,3 +20,5 @@
 ## ChatGPT
 * [ChatGPT 很火，但它到底能改变什么?](https://www.zhihu.com/question/571009463/answer/2881384158)
 * [ChatGPT 很火，但它到底能改变什么? - 知乎用户的回答](https://www.zhihu.com/question/571009463/answer/2835561701)
+* [最新最全GPT-3模型网络结构详细解析](https://zhuanlan.zhihu.com/p/174782647)
+  * 参考昊阳的评论
