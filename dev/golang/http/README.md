@@ -35,3 +35,6 @@
 ## Cookie
 * [6.1 Session and cookies](https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/06.1.html)
 * [Package securecookie encodes and decodes authenticated and optionally encrypted cookie values.](http://www.gorillatoolkit.org/pkg/securecookie)
+
+## HTML Templating
+* [HTML templating in Go](https://hakk.dev/docs/golang-html-template/)
