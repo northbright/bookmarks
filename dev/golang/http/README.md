@@ -41,3 +41,6 @@
 
 ## Sanitizer
 * [bluemonday](https://github.com/microcosm-cc/bluemonday)
+
+## Basic Auth
+* [Go语言HTTP Basic Authorization 实现例子](https://www.jianshu.com/p/a09f1402c285)
