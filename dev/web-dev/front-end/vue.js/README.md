@@ -90,3 +90,4 @@
 
 ## Vue3
 * [浅谈Vue3里面的Setup](https://zhuanlan.zhihu.com/p/461449135)
+* [Vue3语法糖setup（二）](https://juejin.cn/post/7087442636142804999)
