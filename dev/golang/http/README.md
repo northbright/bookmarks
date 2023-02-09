@@ -38,3 +38,6 @@
 
 ## HTML Templating
 * [HTML templating in Go](https://hakk.dev/docs/golang-html-template/)
+
+## Sanitizer
+* [bluemonday](https://github.com/microcosm-cc/bluemonday)
