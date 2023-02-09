@@ -87,3 +87,6 @@
 
 ## Basics
 * [深入响应式原理](https://cn.vuejs.org/v2/guide/reactivity.html#%E5%AF%B9%E4%BA%8E%E6%95%B0%E7%BB%84)
+
+## Vue3
+* [浅谈Vue3里面的Setup](https://zhuanlan.zhihu.com/p/461449135)
