@@ -90,3 +90,6 @@
 
 ## 手表
 * [卡西欧F-91W鉴真](http://bbs.xbiao.com/1153/1053123.html)
+
+## 游玩
+* [上海遛娃攻略｜52个超赞的地点推荐](https://zhuanlan.zhihu.com/p/545642261)
