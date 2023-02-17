@@ -15,3 +15,6 @@
 
 ## ls
 * [What do the fields in ls -al output mean?](https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean)
+
+## Touch
+* [9 Useful Examples of Touch Command in Linux](https://linuxhandbook.com/touch-command/)
