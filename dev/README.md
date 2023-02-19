@@ -93,6 +93,7 @@
 * [Translation](translation/README.md)
 * [Fyne](fyne/README.md)
 * [Samba](samba/README.md)
+* [PWA](pwa/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
