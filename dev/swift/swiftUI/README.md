@@ -11,5 +11,4 @@
 
 ## Articles
 * [Why I Quit Using SwiftUI](https://chsxf.dev/2022/08/28/5-tup-why-i-quit-using-swiftui.html)
-
-
+* [Fucking SwiftUI](https://fuckingswiftui.com/)
