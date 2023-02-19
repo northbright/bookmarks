@@ -13,3 +13,4 @@
 * [Why I Quit Using SwiftUI](https://chsxf.dev/2022/08/28/5-tup-why-i-quit-using-swiftui.html)
 * [Fucking SwiftUI](https://fuckingswiftui.com/)
 * [Understanding the 1Password Move to Electron](https://www.macobserver.com/analysis/understanding-1password-move-to-electron/)
+* [1Password 8: The Story So Far](https://blog.1password.com/1password-8-the-story-so-far/)
