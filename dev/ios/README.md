@@ -28,6 +28,3 @@
 * [Playing Video with AVPlayer in SwiftUI](https://benoitpasquier.com/playing-video-avplayer-swiftui/)
 * [iOS音视频播放指南（一）](https://zhuanlan.zhihu.com/p/335087516)
 * [iOS音视频播放指南（二）](https://zhuanlan.zhihu.com/p/335956344)
-
-## Swift
-* [Swift](swift/README.md)
