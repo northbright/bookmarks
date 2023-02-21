@@ -11,3 +11,6 @@
 * [挂载数据盘](https://help.aliyun.com/document_detail/25446.html)
 * [分区格式化数据盘（Linux）](https://help.aliyun.com/document_detail/25426.htm)
 * [在fstab文件中配置UUID方式自动挂载数据盘](https://help.aliyun.com/document_detail/194379.htm)
+
+## Backup
+* [How to clone a Linux system](https://linuxconfig.org/how-to-clone-a-linux-system)
