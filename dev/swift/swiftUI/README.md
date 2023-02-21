@@ -8,6 +8,7 @@
 * [SwiftUI 学习资料整理](https://zhuanlan.zhihu.com/p/369562707)
 * [使用 SwiftUI 开发 iOS App 新手教程(bilibili)](https://www.bilibili.com/video/BV16L411H7xN/)
 * [Swift Programming for Beginners](https://blckbirds.com/wp-content/uploads/2020/02/SwiftProgramming1.0.pdf)
+* [SwiftUI tutorial: Building a complete project](https://www.hackingwithswift.com/quick-start/swiftui/swiftui-tutorial-building-a-complete-project)
 
 ## Articles
 * [Why I Quit Using SwiftUI](https://chsxf.dev/2022/08/28/5-tup-why-i-quit-using-swiftui.html)
