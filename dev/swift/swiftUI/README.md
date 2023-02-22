@@ -16,3 +16,4 @@
 * [Understanding the 1Password Move to Electron](https://www.macobserver.com/analysis/understanding-1password-move-to-electron/)
 * [1Password 8: The Story So Far](https://blog.1password.com/1password-8-the-story-so-far/)
 * [Users lobby 1Password to abandon new Electron version](https://appleinsider.com/articles/21/08/16/users-lobby-1password-to-abandon-new-electron-version)
+* [系列文章深度解读|SwiftUI 背后那些事儿](https://mp.weixin.qq.com/s/ciiauLB__o-cXXfKn7lL1Q)
