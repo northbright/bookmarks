@@ -38,6 +38,8 @@
 
 * Remote Desktop
   * [Microsoft Remote Desktop now available outside the App Store](https://community.spiceworks.com/topic/2123651-microsoft-remote-desktop-now-available-outside-the-app-store)
+* Security & Privacy
+  * [What is AEServer and why is it requesting macOS Accessibility permissions?](https://apple.stackexchange.com/questions/403109/what-is-aeserver-and-why-is-it-requesting-macos-accessibility-permissions)
 
 * Microsoft Mac Downloads
   * [Microsoft Mac Downloads](https://macadmins.software/)
