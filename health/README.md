@@ -77,3 +77,6 @@
 
 ## 口腔
 * [如果不小心得了“牙周炎”，该怎么办？](https://zhuanlan.zhihu.com/p/60235581)
+
+## 纸尿裤
+* [成人纸尿裤什么牌子好？](https://www.zhihu.com/question/50237053)
