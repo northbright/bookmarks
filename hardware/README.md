@@ -70,6 +70,9 @@
 * [极米投影仪使用体验和分享](https://zhuanlan.zhihu.com/p/65107886)
 * [买投影仪你后悔了吗？](https://www.zhihu.com/question/349857311)
 
+## 考勤机
+* [考勤excel保护密码是多少详解,考勤机常见问题解答](https://zhuanlan.zhihu.com/p/528995401)
+
 ## Mini 主机
 * [戴尔微型工作站 t3240清灰顺便晒一晒](https://www.chiphell.com/thread-2327702-1-1.html)
 * [可能是目前最好玩的小机机](https://www.chiphell.com/forum.php?mod=viewthread&tid=2352814)
