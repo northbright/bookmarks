@@ -19,3 +19,5 @@
 * [DNS设置教程和常用DNS地址列表](https://zhuanlan.zhihu.com/p/537752087)
 * [新买的笔记本microsoft账户无法登陆怎么办？](https://www.zhihu.com/question/428164904)
 * [听说 DNS 根服务器只有 13 台，到底科不科学](https://www.ithome.com/0/660/189.htm)
+* 4.2.2.2
+  * [Who does the nameserver 4.2.2.2 belong to?](https://serverfault.com/questions/88115/who-does-the-nameserver-4-2-2-2-belong-to)
