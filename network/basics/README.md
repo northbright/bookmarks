@@ -14,3 +14,4 @@
 
 ## DNS
 * [公共DNS哪家强？](https://www.zhihu.com/question/32229915/answer/276159987)
+* ["追捕"GitHub.comIP地址,由特定DNS解析特定域名](https://www.bilibili.com/read/cv11413827)
