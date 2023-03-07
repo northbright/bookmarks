@@ -18,3 +18,4 @@
 * [一文入门DNS？从访问GitHub开始](https://zhuanlan.zhihu.com/p/165943024)
 * [DNS设置教程和常用DNS地址列表](https://zhuanlan.zhihu.com/p/537752087)
 * [新买的笔记本microsoft账户无法登陆怎么办？](https://www.zhihu.com/question/428164904)
+* [听说 DNS 根服务器只有 13 台，到底科不科学](https://www.ithome.com/0/660/189.htm)
