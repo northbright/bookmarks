@@ -17,3 +17,4 @@
 * ["追捕"GitHub.comIP地址,由特定DNS解析特定域名](https://www.bilibili.com/read/cv11413827)
 * [一文入门DNS？从访问GitHub开始](https://zhuanlan.zhihu.com/p/165943024)
 * [DNS设置教程和常用DNS地址列表](https://zhuanlan.zhihu.com/p/537752087)
+* [新买的笔记本microsoft账户无法登陆怎么办？](https://www.zhihu.com/question/428164904)

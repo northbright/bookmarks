@@ -25,3 +25,6 @@
 
 ## HEVC
 * [Windows 11看视频还要钱？教你免费安装HEVC视频扩展](https://www.cnbeta.com/articles/tech/1265127.htm)
+
+## Activation
+* [新买的笔记本microsoft账户无法登陆怎么办？](https://www.zhihu.com/question/428164904)
