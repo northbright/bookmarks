@@ -21,3 +21,4 @@
 * [听说 DNS 根服务器只有 13 台，到底科不科学](https://www.ithome.com/0/660/189.htm)
 * 4.2.2.2
   * [Who does the nameserver 4.2.2.2 belong to?](https://serverfault.com/questions/88115/who-does-the-nameserver-4-2-2-2-belong-to)
+  * [Why do we ping the IP 4.2.2.2 to test connectivity?](https://serverfault.com/questions/132805/why-do-we-ping-the-ip-4-2-2-2-to-test-connectivity)
