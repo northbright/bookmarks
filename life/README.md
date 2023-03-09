@@ -97,4 +97,4 @@
 
 ## 不粘锅
 * [有人知道WOLL不粘锅 弗欧不沾锅的真相吗？](https://www.zhihu.com/question/268590276/answer/341138379)
-
+* [woll不粘锅，慎买，并不是你想象的那口锅！10年质保大忽悠！](https://zhuanlan.zhihu.com/p/29583594)
