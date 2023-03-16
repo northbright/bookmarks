@@ -48,6 +48,8 @@
 * [USB3.1 gen2 Type-c 硬盘盒 ASM235CM JMS580 VL716 测试](https://tieba.baidu.com/p/6446387461)
 * [2019年为什么极少见到配备SATA接口固态硬盘的笔记本了？](https://www.zhihu.com/question/319773970)
 * [现在还有什么主流笔记本是带sata2.5寸硬盘接口的吗？](https://www.zhihu.com/question/469773031)
+* Samsung
+  * [三星的0E现在咋样了](https://www.chiphell.com/thread-2500479-1-1.html)
 
 ## Mac
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
