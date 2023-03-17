@@ -6,6 +6,7 @@
 * [【牛人手绘】一张图推荐主流世面上的键盘](http://bbs.wstx.com/thread-672259-1-1.html)
 * [为什么买cherry键盘的人并不多？](https://www.zhihu.com/question/312404445)
 * [也许是最适合Mac的机械键盘之一，米物ART系列 Z870键盘测评](https://bbs.wstx.com/thread-826852-1-1.html)
+* [2022年双11机械键盘选购攻略：盘点55个主流国产品牌，200余款机械键盘选购分析（全文三万字）](https://zhuanlan.zhihu.com/p/578001789)
 
 ## CPU
 * [CPU Benchmarks](http://www.cpubenchmark.net/cpu_list.php)
