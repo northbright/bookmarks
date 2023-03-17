@@ -103,6 +103,9 @@
 * [带你了解HDMI接口历代规格变化及各版本的区别介绍！](https://zhuanlan.zhihu.com/p/458337464)
 
 ## Printer(打印机)
+#### 文章
+* [2023年家用打印机怎么选？买打印机亏了大几千块的我，吐血整理！激光or喷墨？含家用、办公、学生用（防踩坑](https://zhuanlan.zhihu.com/p/357867539)
+
 #### 汉印
 * [极致小巧的便携打印机：“折叠伞”汉印 MT800Q](https://zhuanlan.zhihu.com/p/554121686)
 * [网红“打作业神器”汉印FT880怎么样？3个测试看透它！](https://zhuanlan.zhihu.com/p/349878373)
