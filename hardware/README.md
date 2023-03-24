@@ -112,6 +112,7 @@
 
 #### EPSON
 * [What are the causes for Epson Printer Error Code 000031?](https://www.techbii.com/how-to-fix-epson-printer-error-code-000031/)
+* [如何评价爱普生新出的6色照片打印机L8058?](https://www.zhihu.com/question/587558901)
 
 #### 激光打印机
 * [2023年二月 彩色激光打印机合集](https://zhuanlan.zhihu.com/p/444413059)
