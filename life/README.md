@@ -71,6 +71,7 @@
 ## 宠物鸟
 * [怎么挑选给鹦鹉的笼子？](https://www.zhihu.com/question/367451398)
 * [有什么适合文鸟的鸟笼？](https://www.zhihu.com/question/390765418)
+* [虎皮鹦鹉推荐什么饲料？要吃什么？新人，搜资料参差不齐，想听取一下建议。](https://www.zhihu.com/question/384395156)
 
 ## 牛排
 * [大希地牛排是合成牛排吗？](https://www.zhihu.com/question/359927756/answer/1892715532)
