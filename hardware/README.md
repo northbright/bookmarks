@@ -53,6 +53,7 @@
 * [金士顿KC3000、西数SN850X、致钛Tipro7000哪个好？](https://www.zhihu.com/question/587945577)
 * [NVME固态硬盘推荐（PCIE4.0篇）2023年3月更新](https://zhuanlan.zhihu.com/p/530426466)
 * [西数 SN850X SSD 安装 Win11 后出现蓝屏、卡死问题，官方称会尽快发布固件更新](https://www.ithome.com/0/674/985.htm)
+* [[Finally new firmware released][SN850X] The driver detected a controller error on \Device\RaidPort0](https://community.wd.com/t/finally-new-firmware-released-sn850x-the-driver-detected-a-controller-error-on-device-raidport0/281205)
 
 ## Mac
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
