@@ -19,3 +19,4 @@
 
 ## QRCode
 * [推荐6个好用的在线二维码生成器](https://zhuanlan.zhihu.com/p/166103009)
+* [参数化二维码生成器](https://qrbtf.com/)
