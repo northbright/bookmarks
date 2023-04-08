@@ -55,6 +55,7 @@
 * 西数 SN850X
   * [西数 SN850X SSD 安装 Win11 后出现蓝屏、卡死问题，官方称会尽快发布固件更新](https://www.ithome.com/0/674/985.htm)
   * [[Finally new firmware released][SN850X] The driver detected a controller error on \Device\RaidPort0](https://community.wd.com/t/finally-new-firmware-released-sn850x-the-driver-detected-a-controller-error-on-device-raidport0/281205)
+* [SSD Dashboard Unknown Error(0x2efd) during install](https://community.wd.com/t/ssd-dashboard-unknown-error-0x2efd-during-install/252696)
 
 ## Mac
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
