@@ -16,3 +16,6 @@
 ## cnBeta
 * [cnBeta挂了吗？](https://www.zhihu.com/question/561863279/answers/updated)
 * [Visit cnBeta via Jinritoutiao](https://github.com/northbright/Notes/blob/master/websites/cnbeta/visit-cnbeta-via-jin-ri-tou-tiao.md)
+
+## QRCode
+* [推荐6个好用的在线二维码生成器](https://zhuanlan.zhihu.com/p/166103009)
