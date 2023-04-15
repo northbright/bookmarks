@@ -31,6 +31,9 @@
 * [BLUR BUSTERS Motion Tests](https://www.testufo.com/blurtrail)
 * [PWM Ranking - The Best Displays for the Eyes](https://www.notebookcheck.net/PWM-Ranking-Notebooks-Smartphones-and-Tablets-with-PWM.163979.0.html)
 
+## 内存
+* [2022款加内存条开机黑屏](https://tieba.baidu.com/p/7888990903)
+
 ## SD Card
 * [Using SD Formatter Tool to restore full capacity on SDHC/SDXC cards](https://kb.sandisk.com/app/answers/detail/a_id/14827/~/using-sd-formatter-tool-to-restore-full-capacity-on-sdhc%2Fsdxc-cards)
 
