@@ -129,6 +129,7 @@
 * [Precision 3460 小型机-设置和规格](https://dl.dell.com/content/manual58567807-precision-3460-%E5%B0%8F%E5%9E%8B%E6%9C%BA-%E8%AE%BE%E7%BD%AE%E5%92%8C%E8%A7%84%E6%A0%BC.pdf?language=zh-cn&ps=true)
 * [Precision 3460 小型机-服务手册](https://dl.dell.com/content/manual41468291-precision-3460-%E5%B0%8F%E5%9E%8B%E6%9C%BA-%E6%9C%8D%E5%8A%A1%E6%89%8B%E5%86%8C.pdf?language=zh-cn&ps=true)
 * [dell optiplex 7000MT DDR5 Ram campatibility](https://www.dell.com/community/Optiplex-Desktops/dell-optiplex-7000MT-DDR5-Ram-campatibility/td-p/8224888)
+* [RAM upgrade for Optiplex SFF Plus 7010](https://www.dell.com/community/Optiplex-Desktops/RAM-upgrade-for-Optiplex-SFF-Plus-7010/td-p/8381425)
 
 ## 显示器
 * [想买一个戴尔27寸同时比较护眼的显示器，U2722DX和U2720QM怎么选？](https://www.zhihu.com/question/496077439)
