@@ -9,6 +9,7 @@
 * [Captcha](captcha/README.md)
 * [Live Streaming](live_streaming/README.md)
 * [ios](ios/README.md)
+* [macOS](macos/README.md)
 * [Swift](swift/README.md)
 * [Web Development](web-dev/README.md)
 * [Linux](linux/README.md)
