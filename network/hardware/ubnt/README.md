@@ -41,3 +41,4 @@
 * [UniFi - 高密度场景 WiFi 部署指南](https://help.ui.com.cn/articles/360000220301/)
 * [UniFi - 如何借助工具分析当前无线环境？](https://help.ui.com.cn/articles/115000003422/)
 * [Unifi Setup DNS Issues](https://community.spiceworks.com/topic/2312053-unifi-setup-dns-issues)
+* [新组网的ubnt两个ap为什会慢？](https://tieba.baidu.com/p/8330345414)
