@@ -28,3 +28,4 @@
 ## 设置
 * [WiFi 跑不满千兆的原因，今天终于搞懂了](https://www.isolves.com/it/wl/zs/2021-12-14/47231.html)
 * [国行iphone和macbook支持的5g信道有哪些](https://discussionschinese.apple.com/thread/250390030)
+* [Wi-Fi 路由器和接入点的推荐设置](https://support.apple.com/zh-cn/HT202068)
