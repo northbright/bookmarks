@@ -24,3 +24,6 @@
 
 ## WiFi 6
 * [【WLAN从入门到精通-Wi-Fi 6】第4期——空间复用 BSS Coloring](https://forum.huawei.com/enterprise/zh/thread/580927983735160833)
+
+## 设置
+* [WiFi 跑不满千兆的原因，今天终于搞懂了](https://www.isolves.com/it/wl/zs/2021-12-14/47231.html)
