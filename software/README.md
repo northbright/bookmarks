@@ -10,6 +10,7 @@
 * ["很抱歉，您的组织中的另一个帐户已登录此计算机"](https://docs.microsoft.com/zh-cn/office/troubleshoot/office-suite-issues/another-account-already-signed-in)
 * [获取 OneDrive（微软中国官网）](https://www.microsoft.com/zh-cn/microsoft-365/onedrive/download)
 * [将 Apple 设备与 Microsoft Exchange 集成](https://support.apple.com/zh-cn/guide/deployment/dep158966b23/web)
+* [Exchange Online服务即将停用基本身份验证](https://mp.weixin.qq.com/s?__biz=MzU0MzUxMzU2NA==&mid=2247485843&idx=1&sn=b415bc47e41ab63d53bf184c7ad3291b&chksm=fb0b0720cc7c8e368b3dd108610fa16b5635d47bd448e73736c086304c7316ad5ce7588a2856&scene=178&cur_album_id=2512101116806004739#rd)
 
 ## Office
 * Excel
