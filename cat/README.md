@@ -16,3 +16,4 @@
 * [这些玩具弄不好，可是会要猫命的！细数那些不安全的猫玩具](https://zhuanlan.zhihu.com/p/70074490)
 * [有哪些性价比很高的猫玩具？](https://www.zhihu.com/question/44724522)
 * [猫咪最爱的6类玩具盘点，看看你买对了吗](https://zhuanlan.zhihu.com/p/587772393)
+* [有哪些猫咪特别爱玩的玩具？](https://www.zhihu.com/question/371709648)
