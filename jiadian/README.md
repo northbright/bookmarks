@@ -20,3 +20,4 @@
   * [小米/红米电视「选购排行榜」｜2022年高性价比小米电视推荐！含55/65/75寸数据对比！](https://zhuanlan.zhihu.com/p/439821773)
   * [解析超高刷电视实用性，不要让高刷沉迷“比大小”](https://zhuanlan.zhihu.com/p/511443003)
   * [这些小米电视不要买！2023小米液晶电视/OLED电视避坑指南！（含Redmi红米）！](https://www.zhihu.com/tardis/bd/art/536436316)
+  * [哪款小米、Redmi电视值得购买？](https://www.zhihu.com/tardis/bd/art/562652298)
