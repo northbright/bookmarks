@@ -11,6 +11,7 @@
 
 ## 食物
 * [一个月的幼猫可以吃什么?](https://www.zhihu.com/question/463095328)
+* [幼猫一定要吃猫皇家猫奶糕吗？](https://zhuanlan.zhihu.com/p/63930504)
 
 ## 玩具
 * [这些玩具弄不好，可是会要猫命的！细数那些不安全的猫玩具](https://zhuanlan.zhihu.com/p/70074490)
