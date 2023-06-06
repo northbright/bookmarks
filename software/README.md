@@ -64,6 +64,7 @@
 * [使用您孩子的 iPhone、iPad 和 iPod touch 上的“家长控制”](https://support.apple.com/zh-cn/HT201304)
 * [iPhone 上最好的生日提醒 app 是哪款？](https://www.zhihu.com/question/20916221/answer/16903072)
 * [强制重新启动 iPhone](https://support.apple.com/zh-cn/guide/iphone/iph8903c3ee6/ios)
+* [如何将iphone靠近任何已连接的wifi的手机来访问不知道密码的wifi？](https://www.zhihu.com/question/67564189)
 
 ## iPad OS
 * [iPad版，怎么把图片批量做成PDF文件？](https://www.zhihu.com/question/380949981)
