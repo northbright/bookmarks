@@ -21,3 +21,6 @@
 * [有哪些性价比很高的猫玩具？](https://www.zhihu.com/question/44724522)
 * [猫咪最爱的6类玩具盘点，看看你买对了吗](https://zhuanlan.zhihu.com/p/587772393)
 * [有哪些猫咪特别爱玩的玩具？](https://www.zhihu.com/question/371709648)
+
+## 猫砂
+* [你们家里猫咪都用啥猫砂啊，养猫小白在某宝上看评论要疯了，麻烦推荐一下性价比还可以的猫砂？](https://www.zhihu.com/question/394612315)
