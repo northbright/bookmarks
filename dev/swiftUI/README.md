@@ -11,6 +11,7 @@
 * [SwiftUI tutorial: Building a complete project](https://www.hackingwithswift.com/quick-start/swiftui/swiftui-tutorial-building-a-complete-project)
 
 ## Articles
+* [SwiftUI 两周内入门到精通？](https://v2ex.com/t/693573)
 * [Why I Quit Using SwiftUI](https://chsxf.dev/2022/08/28/5-tup-why-i-quit-using-swiftui.html)
 * [Fucking SwiftUI](https://fuckingswiftui.com/)
 * [Understanding the 1Password Move to Electron](https://www.macobserver.com/analysis/understanding-1password-move-to-electron/)

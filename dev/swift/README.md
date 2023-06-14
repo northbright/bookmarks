@@ -7,7 +7,6 @@
 
 ## Articles
 * [Swift 有哪些优秀的第三方库？](http://www.zhihu.com/question/28816900)
-* [SwiftUI 两周内入门到精通？](https://v2ex.com/t/693573)
 * [都说swift取代oc，为何五年了依然是oc为主？](https://www.zhihu.com/question/327318736)
 
 ## Development Environment
