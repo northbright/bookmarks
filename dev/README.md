@@ -71,6 +71,7 @@
 * [Chrome/Puppeteer](chrome-puppeteer/README.md)
 * [Block Chain](block-chain/README.md)
 * [Machine Learning(机器学习)](machine-learning/README.md)
+* [AI](ai/README.md)
 * [Barcode and QR Code](barcode-qrcode/README.md)
 * [.NET Core](dot-net-core/README.md)
 * [WebRTC](webrtc/README.md)
