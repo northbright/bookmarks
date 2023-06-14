@@ -18,3 +18,4 @@
 * [Users lobby 1Password to abandon new Electron version](https://appleinsider.com/articles/21/08/16/users-lobby-1password-to-abandon-new-electron-version)
 * [系列文章深度解读|SwiftUI 背后那些事儿](https://mp.weixin.qq.com/s/ciiauLB__o-cXXfKn7lL1Q)
 * [如何评价 SwiftUI](https://www.zhihu.com/question/327763737/answer/1286453446)
+* [WWDC 2023 技术分析报告：含 visionOS、SwiftData 等](https://sspai.com/post/80173)
