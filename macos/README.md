@@ -62,3 +62,6 @@
 
 ## Disk
 * [How to Copy an ISO to a USB Drive from Mac OS X with dd](https://osxdaily.com/2015/06/05/copy-iso-to-usb-drive-mac-os-x-command/)
+
+## Photos
+* [iPad、iPhone向Mac传照片的3个高效方法](https://zhuanlan.zhihu.com/p/467381778)
