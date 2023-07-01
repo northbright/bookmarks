@@ -139,3 +139,4 @@
 
 ## Hikvision（海康威视）
 * [HiTools](https://www.hikvision.com/en/support/tools/hitools/)
+* [分类下载](https://www.hikvision.com/cn/support/Downloads/)
