@@ -137,6 +137,7 @@
 * [想买一个戴尔27寸同时比较护眼的显示器，U2722DX和U2720QM怎么选？](https://www.zhihu.com/question/496077439)
 * [护眼显示器怎么选?](https://www.zhihu.com/question/539205763/answer/2542303375)
 * [现在的显示器真的可以护眼吗？适合办公的护眼显示器有哪些推荐？](https://www.zhihu.com/question/450803777/answer/1907828285)
+* [铁打的面板，跳水的金刚。2K165hz电竞小金刚戴尔S2721DGF评测](https://zhuanlan.zhihu.com/p/416922459)
 
 ## Hikvision（海康威视）
 * [HiTools](https://www.hikvision.com/en/support/tools/hitools/)
