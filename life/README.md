@@ -18,6 +18,9 @@
 * [什么油用来做油炸食物最健康？](https://www.zhihu.com/question/454246107/answer/1869150900)
 * [现在常说Omega3对人体好，那哪些食用油有Omega3啊？](https://www.zhihu.com/question/462264845)
 
+## 酱油
+* [试过百多瓶酱油，才弄出这份国产酱油种草清单！告别科技与狠活……](https://www.zhihu.com/tardis/bd/art/571428555)
+
 ## 饮用水
 * [日常饮水用饮水机好，还是自来水烧开了喝好？请问下哪种饮水方式健康一些。](https://www.zhihu.com/question/20968081)
 
