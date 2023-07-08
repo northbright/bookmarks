@@ -19,6 +19,7 @@
 
 ## Network
 * [Unidentified Network, Static IP, LAN Ok](https://www.windows10forums.com/threads/unidentified-network-static-ip-lan-ok.13846/)
+* [如何解决win10系统睡眠模式及断网的情况？](https://blog.51cto.com/lifulin/5896016)
 
 ## iPhone
 * [iPhone复制大文件时提示 连到系统上的设备没有发挥作用 之后就断开复制了？](https://www.zhihu.com/question/263814773)
