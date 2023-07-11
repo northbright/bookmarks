@@ -20,3 +20,4 @@
 * [系列文章深度解读|SwiftUI 背后那些事儿](https://mp.weixin.qq.com/s/ciiauLB__o-cXXfKn7lL1Q)
 * [如何评价 SwiftUI](https://www.zhihu.com/question/327763737/answer/1286453446)
 * [WWDC 2023 技术分析报告：含 visionOS、SwiftData 等](https://sspai.com/post/80173)
+* [深度解读 Observation —— SwiftUI 性能提升的新途径](https://zhuanlan.zhihu.com/p/638059164)
