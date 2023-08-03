@@ -142,3 +142,6 @@
 ## Hikvision（海康威视）
 * [HiTools](https://www.hikvision.com/en/support/tools/hitools/)
 * [分类下载](https://www.hikvision.com/cn/support/Downloads/)
+
+## IP PBX and IP Phone
+* [国威官网文档下载](https://www.gwtx.com.cn/download.html)
