@@ -14,3 +14,6 @@
 
 ## Backup
 * [How to clone a Linux system](https://linuxconfig.org/how-to-clone-a-linux-system)
+
+## LVM
+* [在 Linux 中创建 LVM 分区的分步指南 | Linux 中国](https://zhuanlan.zhihu.com/p/574697807)
