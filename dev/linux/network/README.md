@@ -9,3 +9,4 @@
 * [Server 18.04 Netplan with multiple interfaces on different networks with different routers](https://askubuntu.com/questions/1191437/server-18-04-netplan-with-multiple-interfaces-on-different-networks-with-differe)
 * [Configuring Multiple Default Routes in Linux](https://kindlund.wordpress.com/2007/11/19/configuring-multiple-default-routes-in-linux/)
 * [how to configure 2 network interfaces with different gateways](https://askubuntu.com/questions/868942/how-to-configure-2-network-interfaces-with-different-gateways)
+* [Two Default Gateways on One System](https://www.thomas-krenn.com/en/wiki/Two_Default_Gateways_on_One_System)
