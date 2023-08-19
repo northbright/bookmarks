@@ -11,6 +11,7 @@
 * [How To Set Up a Firewall with UFW on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04)
 * [Ubuntu ufw: set a rule on a per interface basis](https://serverfault.com/questions/270715/ubuntu-ufw-set-a-rule-on-a-per-interface-basis)
 * [Where are the logs for ufw located on Ubuntu Server?](https://serverfault.com/questions/516838/where-are-the-logs-for-ufw-located-on-ubuntu-server)
+* [UFW Cheat Sheet](https://brabeum.com/2019/09/ufw-cheat-sheet/)
 
 ## Git
 * [How To Install Git on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04)
