@@ -10,3 +10,4 @@
 * [Configuring Multiple Default Routes in Linux](https://kindlund.wordpress.com/2007/11/19/configuring-multiple-default-routes-in-linux/)
 * [how to configure 2 network interfaces with different gateways](https://askubuntu.com/questions/868942/how-to-configure-2-network-interfaces-with-different-gateways)
 * [Two Default Gateways on One System](https://www.thomas-krenn.com/en/wiki/Two_Default_Gateways_on_One_System)
+* [Linux系列—策略路由、ip rule、ip route](https://www.cnblogs.com/wanstack/p/7728785.html)
