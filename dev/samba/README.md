@@ -20,3 +20,4 @@
 
 ## Permissions
 * [Hiding samba share from browse list for unauthorised users](https://serverfault.com/questions/144339/hiding-samba-share-from-browse-list-for-unauthorised-users)
+* [Show specific samba shares only to some users](https://unix.stackexchange.com/questions/245785/show-specific-samba-shares-only-to-some-users)
