@@ -11,3 +11,4 @@
 * [how to configure 2 network interfaces with different gateways](https://askubuntu.com/questions/868942/how-to-configure-2-network-interfaces-with-different-gateways)
 * [Two Default Gateways on One System](https://www.thomas-krenn.com/en/wiki/Two_Default_Gateways_on_One_System)
 * [Linux系列—策略路由、ip rule、ip route](https://www.cnblogs.com/wanstack/p/7728785.html)
+* [Understand the basics of Linux routing](https://www.techrepublic.com/article/understand-the-basics-of-linux-routing/)
