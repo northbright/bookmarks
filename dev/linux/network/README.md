@@ -13,3 +13,4 @@
 * [Linux系列—策略路由、ip rule、ip route](https://www.cnblogs.com/wanstack/p/7728785.html)
 * [Understand the basics of Linux routing](https://www.techrepublic.com/article/understand-the-basics-of-linux-routing/)
 * [阿里云 Ubuntu20.04 配置单机多公网IP访问外部服务](https://zhuanlan.zhihu.com/p/552611105)
+* [Netplan with 2 NICs each connected to a different gateway](https://serverfault.com/questions/939922/netplan-with-2-nics-each-connected-to-a-different-gateway)
