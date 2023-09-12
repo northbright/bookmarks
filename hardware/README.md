@@ -138,6 +138,7 @@
 * [护眼显示器怎么选?](https://www.zhihu.com/question/539205763/answer/2542303375)
 * [现在的显示器真的可以护眼吗？适合办公的护眼显示器有哪些推荐？](https://www.zhihu.com/question/450803777/answer/1907828285)
 * [铁打的面板，跳水的金刚。2K165hz电竞小金刚戴尔S2721DGF评测](https://zhuanlan.zhihu.com/p/416922459)
+* [2K为什么是1440p，4K为什么是2160p?](https://www.zhihu.com/question/345308612)
 
 ## Hikvision（海康威视）
 * [HiTools](https://www.hikvision.com/en/support/tools/hitools/)
