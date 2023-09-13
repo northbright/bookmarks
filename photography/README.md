@@ -8,3 +8,4 @@
 
 ## PPI and DPI
 * [别乱用dpi，ppi才是图像分辨率单位，很多人都搞错了](https://zhuanlan.zhihu.com/p/146713168)
+* [分辨率和像素是什么关系？](https://www.zhihu.com/question/21149600/answer/724435661)
