@@ -97,6 +97,7 @@
 * [Fyne](fyne/README.md)
 * [Samba](samba/README.md)
 * [PWA](pwa/README.md)
+* [Bat](bat/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
