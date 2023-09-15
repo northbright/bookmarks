@@ -15,6 +15,7 @@
 * [幼猫一定要吃猫皇家猫奶糕吗？](https://zhuanlan.zhihu.com/p/63930504)
 * [2023年16个幼猫成猫猫粮品牌推荐（超长图文详细版）](https://zhuanlan.zhihu.com/p/365701904)
 * [猫无忧2023年猫粮推荐：14款适合幼猫的猫粮推荐](https://zhuanlan.zhihu.com/p/403200278)
+* [有什么好的猫咪主食罐头推荐吗？](https://www.zhihu.com/tardis/bd/ans/1118338940)
 
 ## 玩具
 * [这些玩具弄不好，可是会要猫命的！细数那些不安全的猫玩具](https://zhuanlan.zhihu.com/p/70074490)
