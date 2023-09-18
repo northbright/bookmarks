@@ -58,6 +58,7 @@
 ## 饭店
 * [【记忆】上海西餐老字号的历史，有你记忆中的味道吗~](https://mp.weixin.qq.com/s/M0SvDT6VmmYpxoQwK7vJWg)
 * [【记忆】上海老字号中餐馆往事，哪个是你最怀念的味道?](https://mp.weixin.qq.com/s/Kk3agTBYhwV872Shy1ESqA)
+* [上海有哪些深夜食堂式的小店值得推荐？](https://www.zhihu.com/question/26795476)
 
 ## 虫害
 * [家里突然出现了这种很小的甲壳虫怎么清除？](https://zhidao.baidu.com/question/1836435729939076660.html)
