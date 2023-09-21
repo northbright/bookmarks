@@ -14,6 +14,7 @@
 
 ## Visit Github in China
 * [修改 Hosts 解决 Github 访问失败马克](https://zhuanlan.zhihu.com/p/107334179)
+* [GitHub520](https://github.com/521xueweihan/GitHub520)
 
 ## Commit
 * [Closing issues using keywords](https://help.github.com/articles/closing-issues-using-keywords/)
