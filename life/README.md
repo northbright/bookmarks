@@ -60,6 +60,7 @@
 * [【记忆】上海老字号中餐馆往事，哪个是你最怀念的味道?](https://mp.weixin.qq.com/s/Kk3agTBYhwV872Shy1ESqA)
 * [上海有哪些深夜食堂式的小店值得推荐？](https://www.zhihu.com/question/26795476)
 * [上海这些好吃不贵的日料店，给我简单朴实的快乐](https://zhuanlan.zhihu.com/p/179302703)
+* [上海这10家日式拉面绝不踩雷💥吃过都要二刷](https://www.xiaohongshu.com/explore/61e7f270000000002103738d)
 
 ## 虫害
 * [家里突然出现了这种很小的甲壳虫怎么清除？](https://zhidao.baidu.com/question/1836435729939076660.html)
