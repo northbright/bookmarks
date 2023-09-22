@@ -6,3 +6,4 @@
 ## DNS
 * [A toy DNS resolver](https://jvns.ca/blog/2022/02/01/a-dns-resolver-in-80-lines-of-go/)
 * <https://github.com/miekg/dns>
+* [DNS Resolution in Go and Cgo](https://engineering.grab.com/dns-resolution-in-go-and-cgo)
