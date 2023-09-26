@@ -146,3 +146,4 @@
 
 ## IP PBX and IP Phone
 * [国威官网文档下载](https://www.gwtx.com.cn/download.html)
+* [国威HB100/HB1910/HB1930/HB1960配置文档下载](https://cdn055.yun-img.com/static/upload/guoweidz/download/20230520165902_66819.pdf)
