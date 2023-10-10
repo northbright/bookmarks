@@ -81,3 +81,6 @@
 
 ## 纸尿裤
 * [成人纸尿裤什么牌子好？](https://www.zhihu.com/question/50237053)
+
+## 同仁堂
+* [三家同仁堂，你是否分的清？千万别被害群之马忽悠了！](https://zhuanlan.zhihu.com/p/581092902)
