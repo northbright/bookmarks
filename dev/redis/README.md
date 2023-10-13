@@ -115,3 +115,6 @@
 
 ## Persistence(持久化)
 * [深入浅出 Redis 持久化机制](https://mp.weixin.qq.com/s/oe1LxgGvkQYBtoU11tYe_A)
+
+## Memory（内存）
+* [【面试官】有遇到Redis内存过高的线上问题吗？为什么Redis删除数据后也无效？](https://zhuanlan.zhihu.com/p/363080080)
