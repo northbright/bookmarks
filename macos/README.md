@@ -45,6 +45,7 @@
 * [在不受支持的 Mac 上安装 macOS Monterey 12](https://sysin.org/blog/install-macos-12-on-unsupported-mac/)
 * [How to install Monterey on an unsupported Mac](https://www.macworld.com/article/672461/how-to-install-macos-monterey-on-an-older-mac.html)
 * [抹掉并重新安装 macOS](https://support.apple.com/zh-cn/guide/mac-help/mh27903/10.15/mac/10.15)
+* <https://github.com/dortania/OpenCore-Legacy-Patcher>
 
 ## Printer
 * [How to STOP default two sided printing](https://discussions.apple.com/thread/5244577)
