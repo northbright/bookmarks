@@ -15,6 +15,7 @@
 * [VueJs2.0建议学习路线](http://www.cnblogs.com/smartXiang/p/6051086.html)
 * [vuejs 单文件组件.vue 文件](http://www.cnblogs.com/SamWeb/p/6391373.html)
 * [滴滴 webapp 5.0 Vue 2.0 重构经验分享](https://github.com/DDFE/DDFE-blog/issues/13)
+* [Build and Deploy a Single Page App with Vue 3 + Vite and Pinia](https://pineview.io/learn-how-to-build-test-and-deploy-a-single-page-app-with-vue-3-vite-and-pinia/)
 
 ## Books
 * [深入理解Vue.js实战（作者：被删）](http://www.godbasin.com/vue-ebook/)
