@@ -11,6 +11,7 @@
 * [SwiftUI tutorial: Building a complete project](https://www.hackingwithswift.com/quick-start/swiftui/swiftui-tutorial-building-a-complete-project)
 * [Build SwiftUI apps for iOS 17](https://designcode.io/swiftui-ios17-intro)
 * [SwiftUI Handbook](https://designcode.io/swiftui-handbook)
+* [SwiftUI Advanced Handbook](https://designcode.io/swiftui-advanced-handbook)
 
 ## Articles
 * [SwiftUI 两周内入门到精通？](https://v2ex.com/t/693573)
