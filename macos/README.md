@@ -48,6 +48,7 @@
 * <https://github.com/dortania/OpenCore-Legacy-Patcher>
 * [如何在不支持的 Mac 上安装最新 macOS Ventura?](https://zhuanlan.zhihu.com/p/578585298)
 * [在不受支持的 Mac 上安装 macOS Sonoma (OpenCore Legacy Patcher)](https://sysin.org/blog/install-macos-14-on-unsupported-mac/)
+* [Install macOS Sonoma on Unsupported Macs [2008-2017] with OCLP!](https://www.bilibili.com/video/BV1vh4y167DA)
 
 ## Printer
 * [How to STOP default two sided printing](https://discussions.apple.com/thread/5244577)
