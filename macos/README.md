@@ -47,6 +47,7 @@
 * [抹掉并重新安装 macOS](https://support.apple.com/zh-cn/guide/mac-help/mh27903/10.15/mac/10.15)
 * <https://github.com/dortania/OpenCore-Legacy-Patcher>
 * [如何在不支持的 Mac 上安装最新 macOS Ventura?](https://zhuanlan.zhihu.com/p/578585298)
+* [在不受支持的 Mac 上安装 macOS Sonoma (OpenCore Legacy Patcher)](https://sysin.org/blog/install-macos-14-on-unsupported-mac/)
 
 ## Printer
 * [How to STOP default two sided printing](https://discussions.apple.com/thread/5244577)
