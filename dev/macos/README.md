@@ -5,3 +5,6 @@
 
 ## Notarize
 * [Is a paid Apple Developer account required for notarizing macOS apps?](https://apple.stackexchange.com/questions/388554/is-a-paid-apple-developer-account-required-for-notarizing-macos-apps)
+
+## Command Line Tools
+* [macOS, the command line developer tool missing after updated to Monterey 12.6](https://superuser.com/questions/1742439/macos-the-command-line-developer-tool-missing-after-updated-to-monterey-12-6)
