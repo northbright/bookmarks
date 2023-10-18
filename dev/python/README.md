@@ -3,6 +3,7 @@
 ## pip & easy_install
 * [python - easy_install的安装和使用](http://www.cnblogs.com/huangjacky/archive/2012/03/28/2421866.html)
 * [Install pip, setuptools, and wheel](https://packaging.python.org/installing/#install-pip-setuptools-and-wheel)
+* [venv](https://www.liaoxuefeng.com/wiki/1016959663602400/1019273143120480)
 
 ## setup.py
 * [What is setup.py?](https://stackoverflow.com/questions/1471994/what-is-setup-py)
