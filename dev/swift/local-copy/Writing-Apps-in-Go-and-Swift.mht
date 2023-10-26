@@ -1,0 +1,877 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://youngdynasty.net/posts/writing-mac-apps-in-go/
+Subject: =?utf-8?Q?Writing=20Apps=20in=20Go=20and=20Swift=20=C2=B7=20Young=20Dynas?=
+ =?utf-8?Q?ty?=
+Date: Thu, 26 Oct 2023 08:49:24 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--IoWUQqmsgeTSzv1UIFAtzY4yphEwhdIWs1TLmpZO9s----"
+
+
+------MultipartBoundary--IoWUQqmsgeTSzv1UIFAtzY4yphEwhdIWs1TLmpZO9s----
+Content-Type: text/html
+Content-ID: <frame-06DBC951AD8908EBA711B6295A0B9E0B@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://youngdynasty.net/posts/writing-mac-apps-in-go/
+
+<!DOCTYPE html><html lang=3D"en-us"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8">
+=09
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+.0">
+	=09
+
+=09
+=09
+	<title>Writing Apps in Go and Swift =C2=B7 Young Dynasty</title>
+	<meta property=3D"og:title" content=3D"Writing Apps in Go and Swift =C2=B7=
+ Young Dynasty">
+	<meta property=3D"og:image" content=3D"https://youngdynasty.net/images/og.=
+png">
+=09
+	<meta name=3D"description" content=3D"A guide for wrapping Go code in Swif=
+t for use within a native macOS or iOS application.">
+	<meta name=3D"og:description" content=3D"A guide for wrapping Go code in S=
+wift for use within a native macOS or iOS application.">
+=09
+	<meta property=3D"og:type" content=3D"website">
+	<meta property=3D"og:url" content=3D"https://youngdynasty.net/posts/writin=
+g-mac-apps-in-go/">
+    <meta name=3D"twitter:card" content=3D"summary">
+    <meta name=3D"twitter:site" content=3D"@youngdynastynet">
+    <meta name=3D"twitter:creator" content=3D"@youngdynastynet">
+
+=09
+	<link rel=3D"stylesheet" href=3D"https://youngdynasty.net/css/style.css">
+	<link rel=3D"stylesheet" href=3D"https://youngdynasty.net/css/custom.css">
+	<link rel=3D"stylesheet" href=3D"https://fonts.googleapis.com/css?family=
+=3DLibre+Baskerville:400,400i,700">
+
+=09
+	<link rel=3D"icon" type=3D"image/png" sizes=3D"32x32" href=3D"https://youn=
+gdynasty.net/images/favicon-32x32.png">
+	<link rel=3D"icon" type=3D"image/png" sizes=3D"16x16" href=3D"https://youn=
+gdynasty.net/images/favicon-16x16.png">
+	<link rel=3D"apple-touch-icon" sizes=3D"180x180" href=3D"https://youngdyna=
+sty.net/images/apple-touch-icon.png">
+
+=09
+=09
+	=09
+			<link rel=3D"alternate" type=3D"application/rss+xml" href=3D"https://you=
+ngdynasty.net/posts/index.xml" title=3D"Young Dynasty">
+	=09
+=09
+</head>
+
+    <body>
+        		<nav class=3D"nav">
+			<div class=3D"nav-container">
+				<a href=3D"https://youngdynasty.net/">
+					<h2 class=3D"nav-title">Young Dynasty</h2>
+				</a>
+				<ul>
+    <li><a href=3D"https://radblock.app/">RadBlock</a></li>
+    <li><a href=3D"https://emporter.app/">Emporter</a></li>
+    <li>|</li>
+    <li><a href=3D"https://youngdynasty.net/about">About</a></li>
+</ul>
+			</div>
+		</nav>
+
+       =20
+
+<main>
+	<article class=3D"post">
+		<a href=3D"https://youngdynasty.net/posts/writing-mac-apps-in-go/#"><h1 c=
+lass=3D"post-title">Writing Apps in Go and Swift</h1></a>
+
+		<div class=3D"post-info">A guide for wrapping Go code in Swift for use wi=
+thin a native macOS or iOS application.</div>
+<div class=3D"post-line"></div>
+
+	=09
+
+		<p>Go makes it easy to create safe, reliable and efficient software. Conc=
+urrency is part of the language, making otherwise complicated code more int=
+uitive to write. It can compile binaries for any non-obscure platform and h=
+as a quite capable standard library with a lively developer community.</p>
+<p>Although Swift is cross platform, it=E2=80=99s perhaps most commonly use=
+d to develop apps for Apple=E2=80=99s platforms. Maybe I=E2=80=99m just not=
+ very clever, but even after years of using <a href=3D"https://en.wikipedia=
+.org/wiki/Grand_Central_Dispatch">Grand Central Dispatch</a> (=E2=80=9CGCD=
+=E2=80=9D), I still find it hard to write maintainable multi-threaded code<=
+sup id=3D"fnref:1"><a href=3D"https://youngdynasty.net/posts/writing-mac-ap=
+ps-in-go/#fn:1" class=3D"footnote-ref" role=3D"doc-noteref">1</a></sup> for=
+ macOS or iOS. Although GCD offers a great improvement over how asynchronou=
+s code was written before Snow Leopard,<sup id=3D"fnref:2"><a href=3D"https=
+://youngdynasty.net/posts/writing-mac-apps-in-go/#fn:2" class=3D"footnote-r=
+ef" role=3D"doc-noteref">2</a></sup> I couldn=E2=80=99t help but wonder wha=
+t it would be like if I could focus on creating and designing APIs without =
+having to worry about the minutiae of parallelism (threads, semaphores, loc=
+ks, barriers, etc.).</p>
+<p>All that to say, when I discovered a straight-forward and performant way=
+ to call Go code from Swift, it felt like I unlocked new developer super-po=
+wers!</p>
+<p>As a demonstration, let=E2=80=99s build a library to escape/unescape HTM=
+L tags in Go and call it from Swift. This technique should work regardless =
+of the platform (iOS, macOS, Linux, =E2=80=A6), but for simplicity, this po=
+st will target macOS.</p>
+<p>If you=E2=80=99re curious to see an example of such a hybrid app, check =
+out <a href=3D"https://emporter.app/">Emporter</a> on the <a href=3D"https:=
+//itunes.apple.com/us/app/emporter/id1406832001?mt=3D12&amp;ls=3D1">Mac App=
+ Store</a>.</p>
+<p><em>There=E2=80=99s a complementary project hosted on <a href=3D"https:/=
+/github.com/youngdynasty/go-swift">GitHub</a> if you=E2=80=99re a =E2=80=9C=
+hands on=E2=80=9D learner.</em></p>
+<h2 id=3D"go"><a href=3D"https://youngdynasty.net/posts/writing-mac-apps-in=
+-go/#go">Writing a Go library</a></h2>
+<h3 id=3D"background">Background</h3>
+<p>It=E2=80=99s a pretty well-known feature that Go can call C code, but si=
+nce Go 1.5, it=E2=80=99s also possible to call Go code from C. The <code>go=
+ build</code> command has a <code>buildmode</code> flag to indicate what ty=
+pe of object should be built.</p>
+<p>From <code>go help buildmode</code>:</p>
+<div class=3D"highlight"><pre class=3D"chroma"><code class=3D"language-text=
+" data-lang=3D"text">-buildmode=3Dc-archive
+   Build the listed main package, plus all packages it imports,
+   into a C archive file. The only callable symbols will be those
+   functions exported using a cgo //export comment. Requires
+   exactly one main package to be listed.
+</code></pre></div><p>So what does this mean exactly? Well, if we can compi=
+le Go to C, and embed C libraries in our Mac app=E2=80=A6 well, I think we =
+just found our golden ticket!</p>
+<h3 id=3D"go-archive"><a href=3D"https://youngdynasty.net/posts/writing-mac=
+-apps-in-go/#go-archive">Write a C archive</a></h3>
+<p>To write a C library in Go, we need to use cgo, the bridge between C and=
+ Go. For now, it=E2=80=99s enough just to know that the C package can conve=
+rt Go values to and from C types, and vice-versa. If you want to dive-in a =
+little deeper, the Go authors have written an excellent post about cgo on t=
+he <a href=3D"https://blog.golang.org/c-go-cgo">Go Blog</a>.</p>
+<p>As mentioned previously, to build a C archive, we need to create a main =
+package and mark each method we want to export with a preceding <code>//exp=
+ort</code> cgo comment.</p>
+<p>The entire library would look something like this:</p>
+<div class=3D"highlight"><pre class=3D"chroma"><code class=3D"language-go" =
+data-lang=3D"go"><span class=3D"kn">package</span> <span class=3D"nx">main<=
+/span>
+
+<span class=3D"kn">import</span> <span class=3D"p">(</span>
+	<span class=3D"s">"C"</span>
+	<span class=3D"s">"html"</span>
+<span class=3D"p">)</span>
+
+<span class=3D"c1">//export escape_html
+</span><span class=3D"c1"></span><span class=3D"kd">func</span> <span class=
+=3D"nf">escape_html</span><span class=3D"p">(</span><span class=3D"nx">inpu=
+t</span> <span class=3D"o">*</span><span class=3D"nx">C</span><span class=
+=3D"p">.</span><span class=3D"nx">char</span><span class=3D"p">)</span> <sp=
+an class=3D"o">*</span><span class=3D"nx">C</span><span class=3D"p">.</span=
+><span class=3D"nx">char</span> <span class=3D"p">{</span>
+	<span class=3D"nx">s</span> <span class=3D"o">:=3D</span> <span class=3D"n=
+x">html</span><span class=3D"p">.</span><span class=3D"nf">EscapeString</sp=
+an><span class=3D"p">(</span><span class=3D"nx">C</span><span class=3D"p">.=
+</span><span class=3D"nf">GoString</span><span class=3D"p">(</span><span cl=
+ass=3D"nx">input</span><span class=3D"p">)</span><span class=3D"p">)</span>
+	<span class=3D"k">return</span> <span class=3D"nx">C</span><span class=3D"=
+p">.</span><span class=3D"nf">CString</span><span class=3D"p">(</span><span=
+ class=3D"nx">s</span><span class=3D"p">)</span>
+<span class=3D"p">}</span>
+
+<span class=3D"c1">//export unescape_html
+</span><span class=3D"c1"></span><span class=3D"kd">func</span> <span class=
+=3D"nf">unescape_html</span><span class=3D"p">(</span><span class=3D"nx">in=
+put</span> <span class=3D"o">*</span><span class=3D"nx">C</span><span class=
+=3D"p">.</span><span class=3D"nx">char</span><span class=3D"p">)</span> <sp=
+an class=3D"o">*</span><span class=3D"nx">C</span><span class=3D"p">.</span=
+><span class=3D"nx">char</span> <span class=3D"p">{</span>
+	<span class=3D"nx">s</span> <span class=3D"o">:=3D</span> <span class=3D"n=
+x">html</span><span class=3D"p">.</span><span class=3D"nf">UnescapeString</=
+span><span class=3D"p">(</span><span class=3D"nx">C</span><span class=3D"p"=
+>.</span><span class=3D"nf">GoString</span><span class=3D"p">(</span><span =
+class=3D"nx">input</span><span class=3D"p">)</span><span class=3D"p">)</spa=
+n>
+	<span class=3D"k">return</span> <span class=3D"nx">C</span><span class=3D"=
+p">.</span><span class=3D"nf">CString</span><span class=3D"p">(</span><span=
+ class=3D"nx">s</span><span class=3D"p">)</span>
+<span class=3D"p">}</span>
+
+<span class=3D"c1">// We need an entry point; it's ok for this to be empty
+</span><span class=3D"c1"></span><span class=3D"kd">func</span> <span class=
+=3D"nf">main</span><span class=3D"p">(</span><span class=3D"p">)</span> <sp=
+an class=3D"p">{</span><span class=3D"p">}</span>
+</code></pre></div><p>Notice that we also had to convert between C and Go s=
+trings using cgo, and only exposed C types in the method signatures.</p>
+<h3 id=3D"go-compile"><a href=3D"https://youngdynasty.net/posts/writing-mac=
+-apps-in-go/#go-compile">Compile the archive</a></h3>
+<p>Assuming you=E2=80=99re in the same directory as the Go source, the libr=
+ary can be compiled using the following command:</p>
+<div class=3D"highlight"><pre class=3D"chroma"><code class=3D"language-bash=
+" data-lang=3D"bash">go build --buildmode<span class=3D"o">=3D</span>c-arch=
+ive -o libhtmlescaper.a
+</code></pre></div><p>We=E2=80=99ve specified an explicit name and extensio=
+n to use for our library, which helps makes it a little easier to bundle fo=
+r use in Xcode. The build will also output a generated header<sup id=3D"fnr=
+ef:3"><a href=3D"https://youngdynasty.net/posts/writing-mac-apps-in-go/#fn:=
+3" class=3D"footnote-ref" role=3D"doc-noteref">3</a></sup> <code>libhtmlesc=
+aper.h</code> which exposes all of the exported functions / types available=
+ when linking the archive.</p>
+<h2 id=3D"swift"><a href=3D"https://youngdynasty.net/posts/writing-mac-apps=
+-in-go/#swift">Calling Go from Swift</a></h2>
+<h3 id=3D"swift-module-map"><a href=3D"https://youngdynasty.net/posts/writi=
+ng-mac-apps-in-go/#swift-module-map">Create a module map</a></h3>
+<p>The easiest way to use our compiled library from Swift is to create a <a=
+ href=3D"https://clang.llvm.org/docs/Modules.html#id21">module map</a>. Onc=
+e setup correctly (which honestly, can be painful), our library will be aut=
+omatically linked, with its headers included, when imported.</p>
+<p>Here=E2=80=99s what part of our <code>module.modulemap</code> might look=
+ like:</p>
+<div class=3D"highlight"><pre class=3D"chroma"><code class=3D"language-swif=
+t" data-lang=3D"swift"><span class=3D"n">module</span> <span class=3D"n">HT=
+MLEscaper</span> <span class=3D"p">{</span>
+    <span class=3D"n">header</span> <span class=3D"s">"</span><span class=
+=3D"s">libhtmlescaper.h</span><span class=3D"s">"</span>
+    <span class=3D"n">link</span> <span class=3D"s">"</span><span class=3D"=
+s">htmlescaper</span><span class=3D"s">"</span>
+    <span class=3D"n">export</span> <span class=3D"o">*</span>
+<span class=3D"p">}</span>
+</code></pre></div><p>If you don=E2=80=99t already have module maps setup f=
+or your project, you should save your module map in your Xcode project=E2=
+=80=99s <code>$(SRCROOT)</code> (the same directory as your <code>.xcodepro=
+j</code> file). Afterwards, you=E2=80=99ll need to update your target=E2=80=
+=99s build settings: set <code>LIBRARY_SEARCH_PATHS</code> and <code>SWIFT_=
+INCLUDE_PATHS</code> to <code>$(SRCROOT)</code>.</p>
+<p>I=E2=80=99ll admit, there can be little bit of friction here, but no mor=
+e than if you were to use other third-party libraries in Swift.</p>
+<h3 id=3D"swift-wrapper"><a href=3D"https://youngdynasty.net/posts/writing-=
+mac-apps-in-go/#swift-wrapper">Create a wrapper</a></h3>
+<p>If we=E2=80=99ve setup our module correctly and Xcode is on its best beh=
+avior, all we need to do is import it.</p>
+<p>Here=E2=80=99s what it might look like if we wrote a <code>String</code>=
+ extension to escapes HTML using our library:</p>
+<div class=3D"highlight"><pre class=3D"chroma"><code class=3D"language-swif=
+t" data-lang=3D"swift"><span class=3D"kd">import</span> <span class=3D"nc">=
+HTMLEscaper</span>
+
+<span class=3D"kd">extension</span> <span class=3D"nc">String</span> <span =
+class=3D"p">{</span>
+    <span class=3D"kd">public</span> <span class=3D"kd">func</span> <span c=
+lass=3D"nf">escapedHTMLString</span><span class=3D"p">(</span><span class=
+=3D"p">)</span> <span class=3D"p">-&gt;</span> <span class=3D"nb">String</s=
+pan><span class=3D"p">?</span> <span class=3D"p">{</span>
+        <span class=3D"k">return</span> <span class=3D"kc">self</span><span=
+ class=3D"p">.</span><span class=3D"n">withCString</span><span class=3D"p">=
+(</span><span class=3D"p">)</span> <span class=3D"p">{</span>
+            <span class=3D"k">guard</span> <span class=3D"kd">let</span> <s=
+pan class=3D"nv">v</span> <span class=3D"p">=3D</span> <span class=3D"n">es=
+cape_html</span><span class=3D"p">(</span><span class=3D"nb">UnsafeMutableP=
+ointer</span><span class=3D"p">(</span><span class=3D"kr">mutating</span><s=
+pan class=3D"p">:</span> <span class=3D"nv">$0</span><span class=3D"p">)</s=
+pan><span class=3D"p">)</span> <span class=3D"k">else</span> <span class=3D=
+"p">{</span> <span class=3D"k">return</span> <span class=3D"kc">nil</span> =
+<span class=3D"p">}</span>
+            <span class=3D"k">return</span> <span class=3D"nb">String</span=
+><span class=3D"p">(</span><span class=3D"n">bytesNoCopy</span><span class=
+=3D"p">:</span> <span class=3D"n">v</span><span class=3D"p">,</span> <span =
+class=3D"n">length</span><span class=3D"p">:</span> <span class=3D"n">strle=
+n</span><span class=3D"p">(</span><span class=3D"n">v</span><span class=3D"=
+p">)</span><span class=3D"p">,</span> <span class=3D"n">encoding</span><spa=
+n class=3D"p">:</span> <span class=3D"p">.</span><span class=3D"n">utf8</sp=
+an><span class=3D"p">,</span> <span class=3D"n">freeWhenDone</span><span cl=
+ass=3D"p">:</span> <span class=3D"kc">true</span><span class=3D"p">)</span>
+        <span class=3D"p">}</span>
+    <span class=3D"p">}</span>
+
+    <span class=3D"kd">public</span> <span class=3D"kd">func</span> <span c=
+lass=3D"nf">unescapedHTMLString</span><span class=3D"p">(</span><span class=
+=3D"p">)</span> <span class=3D"p">-&gt;</span> <span class=3D"nb">String</s=
+pan><span class=3D"p">?</span> <span class=3D"p">{</span>
+        <span class=3D"k">return</span> <span class=3D"kc">self</span><span=
+ class=3D"p">.</span><span class=3D"n">withCString</span><span class=3D"p">=
+(</span><span class=3D"p">)</span> <span class=3D"p">{</span>
+            <span class=3D"k">guard</span> <span class=3D"kd">let</span> <s=
+pan class=3D"nv">v</span> <span class=3D"p">=3D</span> <span class=3D"n">un=
+escape_html</span><span class=3D"p">(</span><span class=3D"nb">UnsafeMutabl=
+ePointer</span><span class=3D"p">(</span><span class=3D"kr">mutating</span>=
+<span class=3D"p">:</span> <span class=3D"nv">$0</span><span class=3D"p">)<=
+/span><span class=3D"p">)</span> <span class=3D"k">else</span> <span class=
+=3D"p">{</span> <span class=3D"k">return</span> <span class=3D"kc">nil</spa=
+n> <span class=3D"p">}</span>
+            <span class=3D"k">return</span> <span class=3D"nb">String</span=
+><span class=3D"p">(</span><span class=3D"n">bytesNoCopy</span><span class=
+=3D"p">:</span> <span class=3D"n">v</span><span class=3D"p">,</span> <span =
+class=3D"n">length</span><span class=3D"p">:</span> <span class=3D"n">strle=
+n</span><span class=3D"p">(</span><span class=3D"n">v</span><span class=3D"=
+p">)</span><span class=3D"p">,</span> <span class=3D"n">encoding</span><spa=
+n class=3D"p">:</span> <span class=3D"p">.</span><span class=3D"n">utf8</sp=
+an><span class=3D"p">,</span> <span class=3D"n">freeWhenDone</span><span cl=
+ass=3D"p">:</span> <span class=3D"kc">true</span><span class=3D"p">)</span>
+        <span class=3D"p">}</span>
+    <span class=3D"p">}</span>
+<span class=3D"p">}</span>
+</code></pre></div><p>And that=E2=80=99s it! Our Go library is now just an =
+implementation detail, and the Swift API feels right at home.</p>
+<h2 id=3D"value"><a href=3D"https://youngdynasty.net/posts/writing-mac-apps=
+-in-go/#value">Was that really worth it?</a></h2>
+<p>Really, it depends on your project.</p>
+<p>For <a href=3D"https://emporter.app/">Emporter</a>, its backend services=
+ are written in Go. By writing the client in Go, I have an easy way to run =
+tests, without mocks, instantaneously. I seriously can=E2=80=99t imagine ha=
+ving written it differently as a one-person project, based on the amount of=
+ time I=E2=80=99ve saved by keeping all of the networking code in a single =
+repo (then exporting the client as a C library).</p>
+<p>And if I ever grow enough to hire, expand to a different platform, or li=
+cense the service, I=E2=80=99m ready: its core can be developed independent=
+ly and works cross-platform.</p>
+<p>Give <a href=3D"https://emporter.app/">Emporter</a> a try and let me kno=
+w how it compares to an Electron app. =F0=9F=98=89</p>
+<h2 id=3D"conclusion"><a href=3D"https://youngdynasty.net/posts/writing-mac=
+-apps-in-go/#conclusion">Conclusion</a></h2>
+<p>In this article, we=E2=80=99ve written a simple Go library which was emb=
+edded in a native Mac app. Although we=E2=80=99ve focused on macOS, this te=
+chnique will work for any platform that Go supports with C bindings.</p>
+<p>You can download an example project on <a href=3D"https://github.com/you=
+ngdynasty/go-swift">GitHub</a>.</p>
+<section class=3D"footnotes" role=3D"doc-endnotes">
+<hr>
+<ol>
+<li id=3D"fn:1" role=3D"doc-endnote">
+<p>The subtleties required to implement coordination between routines and a=
+ccess to shared variables, especially after periods of inactivity in the co=
+debase, is hard. <a href=3D"https://youngdynasty.net/posts/writing-mac-apps=
+-in-go/#fnref:1" class=3D"footnote-backref" role=3D"doc-backlink">=E2=86=A9=
+=EF=B8=8E</a></p>
+</li>
+<li id=3D"fn:2" role=3D"doc-endnote">
+<p>Back in my day, we called macOS =E2=80=9COS X=E2=80=9D. And we managed <=
+code>NSThread</code> and <code>NSRunLoop</code> instances ourselves. Get of=
+f my lawn! =F0=9F=91=B4 <a href=3D"https://youngdynasty.net/posts/writing-m=
+ac-apps-in-go/#fnref:2" class=3D"footnote-backref" role=3D"doc-backlink">=
+=E2=86=A9=EF=B8=8E</a></p>
+</li>
+<li id=3D"fn:3" role=3D"doc-endnote">
+<p>The generated header is not very easy to read. In real projects, I tend =
+to write my own headers for well-documented code. <a href=3D"https://youngd=
+ynasty.net/posts/writing-mac-apps-in-go/#fnref:3" class=3D"footnote-backref=
+" role=3D"doc-backlink">=E2=86=A9=EF=B8=8E</a></p>
+</li>
+</ol>
+</section>
+
+	</article>
+
+	<section class=3D"pagination">
+	=09
+		 <a href=3D"https://youngdynasty.net/posts/introducting-emporter/" class=
+=3D"left arrow">=E2=86=90</a>
+		 <a href=3D"https://youngdynasty.net/posts/gdpr-is-an-asset/" class=3D"ri=
+ght arrow">=E2=86=92</a>
+	=09
+
+		<div class=3D"post-info">
+=09
+    <time datetime=3D"2019-01-29 20:05:45 +0100 CET">January 29, 2019</time=
+>
+=09
+</div>
+	</section>
+</main>
+
+
+        		<footer>
+			<span>
+				=C2=A9 <time datetime=3D"2020-04-09 15:38:00.143408 +0200 CEST m=3D+0.1=
+46282398">2020</time> Young Dynasty EURL
+				=C2=B7
+				<a href=3D"https://twitter.com/YoungDynastyNet">@YoungDynastyNet</a>
+			</span>
+		</footer>
+	=09
+   =20
+
+</body></html>
+------MultipartBoundary--IoWUQqmsgeTSzv1UIFAtzY4yphEwhdIWs1TLmpZO9s----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://youngdynasty.net/css/style.css
+
+@charset "utf-8";
+
+* { box-sizing: border-box; line-height: 1.5; }
+
+html, body { color: rgb(85, 85, 85); margin: 0px; padding: 0px; }
+
+html { font-family: "Libre Baskerville", "Times New Roman", Times, serif; f=
+ont-size: 14px; overflow-y: scroll; }
+
+@media (min-width: 600px) {
+  html { font-size: 16px; }
+}
+
+body { text-size-adjust: 100%; }
+
+h1, h2, h3, h4, h5, h6 { color: rgb(53, 53, 53); font-family: "Helvetica Ne=
+ue", "Segoe UI", Helvetica, Arial, sans-serif; line-height: normal; }
+
+a { color: rgb(74, 154, 225); text-decoration: none; }
+
+blockquote { border-left: 0.25rem solid rgb(229, 229, 229); color: rgb(151,=
+ 151, 151); margin: 0.8rem 0px; padding: 0.5rem 1rem; }
+
+blockquote p:last-child { margin-bottom: 0px; }
+
+@media (min-width: 600px) {
+  blockquote { padding: 0px 5rem 0px 1.25rem; }
+}
+
+img { display: block; margin: 0px 0px 1rem; max-width: 100%; }
+
+td { vertical-align: top; }
+
+pre, code { font-family: Menlo, Monaco, monospace; }
+
+code { background-color: rgb(249, 249, 249); border-radius: 3px; color: rgb=
+(191, 97, 106); font-size: 85%; padding: 0.25em 0.5em; }
+
+pre { margin: 0px 0px 1rem; }
+
+pre code { background-color: transparent; color: inherit; font-size: 100%; =
+padding: 0px; }
+
+.highlight { background-color: rgb(249, 249, 249); border-radius: 3px; line=
+-height: 1.4; margin: 0px 0px 1rem; padding: 1rem; }
+
+.highlight pre { margin-bottom: 0px; overflow-x: auto; }
+
+.highlight .lineno { color: rgb(170, 170, 170); display: inline-block; padd=
+ing: 0px 0.75rem 0px 0.25rem; user-select: none; }
+
+.post { padding: 3rem 0px; }
+
+.post-info { color: rgb(170, 170, 170); font-family: Palatino, "Palatino LT=
+ STD", "Palatino Linotype", "Book Antiqua", Georgia, serif; letter-spacing:=
+ 0.5px; text-align: center; }
+
+.post-info span { font-style: italic; }
+
+.post-title { color: rgb(53, 53, 53); font-family: "Helvetica Neue", "Segoe=
+ UI", Helvetica, Arial, sans-serif; font-size: 4rem; margin: 1rem 0px; text=
+-align: center; }
+
+.post-line { border-top: 0.4rem solid rgb(53, 53, 53); display: block; marg=
+in: 0px auto 3rem; width: 4rem; }
+
+.post p { margin: 0px 0px 1rem; text-align: justify; }
+
+.post a:hover { text-decoration: underline; }
+
+.post img { margin: 0px auto 0.5rem; }
+
+.post img + em { color: rgb(170, 170, 170); display: block; font-family: "H=
+elvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif; font-size: 0.9rem=
+; font-style: normal; text-align: center; }
+
+.post img.emoji { display: inline-block; left: 0px; transform: none; width:=
+ 1rem; height: 1rem; vertical-align: text-top; padding: 0px; margin: 0px; }
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight .c { color: rgb(153, 153, 153); }
+
+.highlight .err { color: rgb(170, 0, 0); background-color: rgb(255, 170, 17=
+0); }
+
+.highlight .k { color: rgb(0, 102, 153); }
+
+.highlight .o { color: rgb(85, 85, 85); }
+
+.highlight .cm { color: rgb(0, 153, 255); font-style: italic; }
+
+.highlight .cp { color: rgb(0, 153, 153); }
+
+.highlight .c1 { color: rgb(153, 153, 153); }
+
+.highlight .cs { color: rgb(153, 153, 153); }
+
+.highlight .gd { background-color: rgb(255, 204, 204); border: 1px solid rg=
+b(204, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gr { color: rgb(255, 0, 0); }
+
+.highlight .gh { color: rgb(0, 51, 0); }
+
+.highlight .gi { background-color: rgb(204, 255, 204); border: 1px solid rg=
+b(0, 204, 0); }
+
+.highlight .go { color: rgb(170, 170, 170); }
+
+.highlight .gp { color: rgb(0, 0, 153); }
+
+.highlight .gu { color: rgb(0, 51, 0); }
+
+.highlight .gt { color: rgb(153, 204, 102); }
+
+.highlight .kc { color: rgb(0, 102, 153); }
+
+.highlight .kd { color: rgb(0, 102, 153); }
+
+.highlight .kn { color: rgb(0, 102, 153); }
+
+.highlight .kp { color: rgb(0, 102, 153); }
+
+.highlight .kr { color: rgb(0, 102, 153); }
+
+.highlight .kt { color: rgb(0, 119, 136); }
+
+.highlight .m { color: rgb(255, 102, 0); }
+
+.highlight .s { color: rgb(212, 73, 80); }
+
+.highlight .na { color: rgb(79, 159, 207); }
+
+.highlight .nb { color: rgb(51, 102, 102); }
+
+.highlight .nc { color: rgb(0, 170, 136); }
+
+.highlight .no { color: rgb(51, 102, 0); }
+
+.highlight .nd { color: rgb(153, 153, 255); }
+
+.highlight .ni { color: rgb(153, 153, 153); }
+
+.highlight .ne { color: rgb(204, 0, 0); }
+
+.highlight .nf { color: rgb(204, 0, 255); }
+
+.highlight .nl { color: rgb(153, 153, 255); }
+
+.highlight .nn { color: rgb(0, 204, 255); }
+
+.highlight .nt { color: rgb(47, 111, 159); }
+
+.highlight .nv { color: rgb(0, 51, 51); }
+
+.highlight .ow { color: rgb(0, 0, 0); }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mf { color: rgb(255, 102, 0); }
+
+.highlight .mh { color: rgb(255, 102, 0); }
+
+.highlight .mi { color: rgb(255, 102, 0); }
+
+.highlight .mo { color: rgb(255, 102, 0); }
+
+.highlight .sb { color: rgb(204, 51, 0); }
+
+.highlight .sc { color: rgb(204, 51, 0); }
+
+.highlight .sd { color: rgb(204, 51, 0); font-style: italic; }
+
+.highlight .s2 { color: rgb(204, 51, 0); }
+
+.highlight .se { color: rgb(204, 51, 0); }
+
+.highlight .sh { color: rgb(204, 51, 0); }
+
+.highlight .si { color: rgb(170, 0, 0); }
+
+.highlight .sx { color: rgb(204, 51, 0); }
+
+.highlight .sr { color: rgb(51, 170, 170); }
+
+.highlight .s1 { color: rgb(204, 51, 0); }
+
+.highlight .ss { color: rgb(255, 204, 51); }
+
+.highlight .bp { color: rgb(51, 102, 102); }
+
+.highlight .vc { color: rgb(0, 51, 51); }
+
+.highlight .vg { color: rgb(0, 51, 51); }
+
+.highlight .vi { color: rgb(0, 51, 51); }
+
+.highlight .il { color: rgb(255, 102, 0); }
+
+.css .o, .css .o + .nt, .css .nt + .nt { color: rgb(153, 153, 153); }
+
+.container { margin: 0px auto; max-width: 800px; width: 80%; }
+
+main, footer, .nav-container { display: block; margin: 0px auto; max-width:=
+ 800px; width: 80%; }
+
+.nav { box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px -2px; overflow: auto; }
+
+.nav-container { margin: 1rem auto; position: relative; text-align: center;=
+ }
+
+.nav-title { transition: all 0.2s ease-out 0s; color: rgb(85, 85, 85); disp=
+lay: inline-block; margin: 0px; padding-right: 0.2rem; }
+
+.nav-title:hover, .nav-title:focus { opacity: 0.6; }
+
+.nav ul { list-style-type: none; margin: 1rem 0px 0px; padding: 0px; text-a=
+lign: center; }
+
+.nav li { transition: all 0.2s ease-out 0s; color: rgb(85, 85, 85); display=
+: inline-block; opacity: 0.6; padding: 0px 2rem 0px 0px; }
+
+.nav li:last-child { padding-right: 0px; }
+
+.nav li:hover, .nav li:focus { opacity: 1; }
+
+.nav a { color: rgb(85, 85, 85); font-family: "Helvetica Neue", "Segoe UI",=
+ Helvetica, Arial, sans-serif; }
+
+@media (min-width: 600px) {
+  .nav-container { text-align: left; }
+  .nav ul { bottom: 0px; position: absolute; right: 0px; }
+}
+
+footer { font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Bo=
+ok Antiqua", Georgia, serif; padding: 2rem 0px; text-align: center; }
+
+footer span { color: rgb(85, 85, 85); font-size: 0.8rem; }
+
+.pagination { border-top: 0.5px solid rgb(229, 229, 229); font-family: Pala=
+tino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, seri=
+f; padding-top: 2rem; position: relative; text-align: center; }
+
+.pagination span { color: rgb(53, 53, 53); font-size: 1.1rem; }
+
+.pagination .top { transition: all 0.3s ease-out 0s; color: rgb(85, 85, 85)=
+; font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif; =
+font-size: 1.1rem; opacity: 0.6; }
+
+.pagination .top:hover { opacity: 1; }
+
+.pagination .arrow { transition: all 0.3s ease-out 0s; color: rgb(85, 85, 8=
+5); position: absolute; }
+
+.pagination .arrow:hover, .pagination .arrow:focus { opacity: 0.6; text-dec=
+oration: none; }
+
+.pagination .left { left: 0px; }
+
+.pagination .right { right: 0px; }
+
+.catalogue-item { border-bottom: 1px solid rgb(229, 229, 229); color: rgb(8=
+5, 85, 85); display: block; padding: 2rem 0px; }
+
+.catalogue-item:hover .catalogue-line, .catalogue-item:focus .catalogue-lin=
+e { width: 5rem; }
+
+.catalogue-item:last-child { border: 0px; }
+
+.catalogue-time { color: rgb(170, 170, 170); font-family: Palatino, "Palati=
+no LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif; letter-spa=
+cing: 0.5px; }
+
+.catalogue-title { color: rgb(53, 53, 53); display: block; font-family: "He=
+lvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif; font-size: 2rem; f=
+ont-weight: 700; margin: 0.5rem 0px; }
+
+.catalogue-line { transition: all 0.3s ease-out 0s; border-top: 0.2rem soli=
+d rgb(53, 53, 53); display: block; width: 2rem; }
+------MultipartBoundary--IoWUQqmsgeTSzv1UIFAtzY4yphEwhdIWs1TLmpZO9s----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://youngdynasty.net/css/custom.css
+
+@charset "utf-8";
+
+html, footer, .catalogue-time, h1, h2, h3, h4, h5, h6 { font-family: system=
+-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+.nav li { padding: 0px 1rem 0px 0px; }
+
+.post-info { margin: 0px auto 2rem; font-family: system-ui, sans-serif; -we=
+bkit-font-smoothing: antialiased; letter-spacing: normal; }
+
+.post-line { border-top: 0.4rem solid rgb(247, 247, 247); margin: 0px auto =
+2rem; }
+
+.post p { text-align: left; }
+
+.post sup { line-height: 0; }
+
+.nav-title, a { color: rgb(107, 56, 162); }
+
+.footnotes li:not(:last-child) { margin-bottom: 20px; }
+
+.highlight .nf { color: rgb(107, 56, 162); }
+
+hr { border: none; background: rgb(229, 229, 229); height: 1px; }
+
+article h1 a, article h2 a, article h3 a { color: black; }
+
+article h1 a:hover, article h2 a:hover, article h3 a:hover { text-decoratio=
+n: none !important; }
+
+code { border-radius: 3px; color: rgb(212, 73, 80); }
+
+article .footnotes hr { margin: 30px 0px; }
+
+@media screen and (max-width: 600px) {
+  .post-title { font-size: 2.5rem; }
+}
+
+@media screen and (max-width: 800px) {
+  .post-title { font-size: 3rem; }
+}
+
+:root { color-scheme: light dark; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --background-color: #111; --default-color: #ddd; --default-shade:=
+ #fff; --default-tint: #ccc; --grey-1: #ccc; --grey-2: #bbb; --grey-3: #222=
+; --blue: #a880d3; --shadow-color: rgba(255, 255, 255, 0.4); --code-color: =
+#d44950; }
+  body { background-color: var(--background-color); }
+  article h1 a, article h2 a, article h3 a, .post-title, .catalogue-title, =
+h1, h2, h3, h4, h5, h6 { color: var(--default-shade); }
+  body, footer span, .nav li, .nav a, .pagination .top, .pagination .arrow,=
+ .catalogue-item { color: var(--default-color); }
+  .post img + em, .post-info, .catalogue-time { color: var(--default-tint);=
+ }
+  .nav-title, a { color: var(--blue); }
+  blockquote { border-left: 0.25rem solid var(--grey-2); color: var(--grey-=
+1); }
+  code { background-color: var(--grey-3); color: var(--code-color); }
+  hr { background: var(--grey-2); }
+  .nav { box-shadow: 0 2px 2px -2px var(--shadow-color); }
+  .pagination { border-top: 0.5px solid var(--grey-2); }
+  .catalogue-item { border-bottom: 1px solid var(--grey-2); }
+  .catalogue-line { border-top: 0.2rem solid var(--default-shade); }
+  .highlight { border: 1px solid var(--grey-3); }
+  .highlight .hll { background-color: rgb(34, 34, 34); }
+  .highlight { background: rgb(0, 0, 0); color: rgb(204, 204, 204); }
+  .highlight .c { color: rgb(0, 0, 128); }
+  .highlight .err { color: rgb(204, 204, 204); border: 1px solid rgb(255, 0=
+, 0); }
+  .highlight .esc { color: rgb(204, 204, 204); }
+  .highlight .g { color: rgb(204, 204, 204); }
+  .highlight .k { color: rgb(205, 205, 0); }
+  .highlight .l { color: rgb(204, 204, 204); }
+  .highlight .n { color: rgb(204, 204, 204); }
+  .highlight .o { color: rgb(51, 153, 204); }
+  .highlight .x { color: rgb(204, 204, 204); }
+  .highlight .p { color: rgb(204, 204, 204); }
+  .highlight .ch { color: rgb(0, 0, 128); }
+  .highlight .cm { color: rgb(0, 0, 128); }
+  .highlight .cp { color: rgb(0, 0, 128); }
+  .highlight .cpf { color: rgb(0, 0, 128); }
+  .highlight .c1 { color: rgb(0, 0, 128); }
+  .highlight .cs { color: rgb(205, 0, 0); font-weight: bold; }
+  .highlight .gd { color: rgb(205, 0, 0); }
+  .highlight .ge { color: rgb(204, 204, 204); font-style: italic; }
+  .highlight .gr { color: rgb(255, 0, 0); }
+  .highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+  .highlight .gi { color: rgb(0, 205, 0); }
+  .highlight .go { color: rgb(136, 136, 136); }
+  .highlight .gp { color: rgb(0, 0, 128); font-weight: bold; }
+  .highlight .gs { color: rgb(204, 204, 204); font-weight: bold; }
+  .highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+  .highlight .gt { color: rgb(0, 68, 221); }
+  .highlight .kc { color: rgb(205, 205, 0); }
+  .highlight .kd { color: rgb(0, 205, 0); }
+  .highlight .kn { color: rgb(205, 0, 205); }
+  .highlight .kp { color: rgb(205, 205, 0); }
+  .highlight .kr { color: rgb(205, 205, 0); }
+  .highlight .kt { color: rgb(0, 205, 0); }
+  .highlight .ld { color: rgb(204, 204, 204); }
+  .highlight .m { color: rgb(205, 0, 205); }
+  .highlight .s { color: rgb(205, 0, 0); }
+  .highlight .na { color: rgb(204, 204, 204); }
+  .highlight .nb { color: rgb(205, 0, 205); }
+  .highlight .nc { color: rgb(0, 205, 205); }
+  .highlight .no { color: rgb(204, 204, 204); }
+  .highlight .nd { color: rgb(204, 204, 204); }
+  .highlight .ni { color: rgb(204, 204, 204); }
+  .highlight .ne { color: rgb(102, 102, 153); font-weight: bold; }
+  .highlight .nf { color: rgb(204, 204, 204); }
+  .highlight .nl { color: rgb(204, 204, 204); }
+  .highlight .nn { color: rgb(204, 204, 204); }
+  .highlight .nx { color: rgb(204, 204, 204); }
+  .highlight .py { color: rgb(204, 204, 204); }
+  .highlight .nt { color: rgb(204, 204, 204); }
+  .highlight .nv { color: rgb(0, 205, 205); }
+  .highlight .ow { color: rgb(205, 205, 0); }
+  .highlight .w { color: rgb(204, 204, 204); }
+  .highlight .mb { color: rgb(205, 0, 205); }
+  .highlight .mf { color: rgb(205, 0, 205); }
+  .highlight .mh { color: rgb(205, 0, 205); }
+  .highlight .mi { color: rgb(205, 0, 205); }
+  .highlight .mo { color: rgb(205, 0, 205); }
+  .highlight .sa { color: rgb(205, 0, 0); }
+  .highlight .sb { color: rgb(205, 0, 0); }
+  .highlight .sc { color: rgb(205, 0, 0); }
+  .highlight .dl { color: rgb(205, 0, 0); }
+  .highlight .sd { color: rgb(205, 0, 0); }
+  .highlight .s2 { color: rgb(205, 0, 0); }
+  .highlight .se { color: rgb(205, 0, 0); }
+  .highlight .sh { color: rgb(205, 0, 0); }
+  .highlight .si { color: rgb(205, 0, 0); }
+  .highlight .sx { color: rgb(205, 0, 0); }
+  .highlight .sr { color: rgb(205, 0, 0); }
+  .highlight .s1 { color: rgb(205, 0, 0); }
+  .highlight .ss { color: rgb(205, 0, 0); }
+  .highlight .bp { color: rgb(205, 0, 205); }
+  .highlight .fm { color: rgb(204, 204, 204); }
+  .highlight .vc { color: rgb(0, 205, 205); }
+  .highlight .vg { color: rgb(0, 205, 205); }
+  .highlight .vi { color: rgb(0, 205, 205); }
+  .highlight .vm { color: rgb(0, 205, 205); }
+  .highlight .il { color: rgb(205, 0, 205); }
+}
+------MultipartBoundary--IoWUQqmsgeTSzv1UIFAtzY4yphEwhdIWs1TLmpZO9s----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700
+
+@charset "utf-8";
+
+@font-face { font-family: "Libre Baskerville"; font-style: italic; font-wei=
+ght: 400; src: url("https://fonts.gstatic.com/s/librebaskerville/v14/kmKhZr=
+c3Hgbbcjq75U4uslyuy4kn0qNcWx8QDO-WyrubOA.woff2") format("woff2"); unicode-r=
+ange: U+100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+2=
+0A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Libre Baskerville"; font-style: italic; font-wei=
+ght: 400; src: url("https://fonts.gstatic.com/s/librebaskerville/v14/kmKhZr=
+c3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2") format("woff2"); unicode-rang=
+e: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, =
+U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,=
+ U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Libre Baskerville"; font-style: normal; font-wei=
+ght: 400; src: url("https://fonts.gstatic.com/s/librebaskerville/v14/kmKnZr=
+c3Hgbbcjq75U4uslyuy4kn0qNXaxMaC82U-ro.woff2") format("woff2"); unicode-rang=
+e: U+100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0=
+-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Libre Baskerville"; font-style: normal; font-wei=
+ght: 400; src: url("https://fonts.gstatic.com/s/librebaskerville/v14/kmKnZr=
+c3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2") format("woff2"); unicode-range: =
+U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+3=
+29, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+=
+FEFF, U+FFFD; }
+
+@font-face { font-family: "Libre Baskerville"; font-style: normal; font-wei=
+ght: 700; src: url("https://fonts.gstatic.com/s/librebaskerville/v14/kmKiZr=
+c3Hgbbcjq75U4uslyuy4kn0qviTgY5KcC-wLOjAUw.woff2") format("woff2"); unicode-=
+range: U+100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+=
+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Libre Baskerville"; font-style: normal; font-wei=
+ght: 700; src: url("https://fonts.gstatic.com/s/librebaskerville/v14/kmKiZr=
+c3Hgbbcjq75U4uslyuy4kn0qviTgY3KcC-wLOj.woff2") format("woff2"); unicode-ran=
+ge: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308,=
+ U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215=
+, U+FEFF, U+FFFD; }
+------MultipartBoundary--IoWUQqmsgeTSzv1UIFAtzY4yphEwhdIWs1TLmpZO9s------
