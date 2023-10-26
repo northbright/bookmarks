@@ -25,3 +25,6 @@
 * [WWDC 2023 技术分析报告：含 visionOS、SwiftData 等](https://sspai.com/post/80173)
 * [深度解读 Observation —— SwiftUI 性能提升的新途径](https://zhuanlan.zhihu.com/p/638059164)
 * [打造可适配多平台的 SwiftUI 应用](https://zhuanlan.zhihu.com/p/624659481)
+
+## Task
+* [How to run an asynchronous task when a view is shown](https://www.hackingwithswift.com/quick-start/swiftui/how-to-run-an-asynchronous-task-when-a-view-is-shown)
