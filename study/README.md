@@ -19,6 +19,8 @@
 #### 排列组合
 * [排列组合分不清？17分钟讲清楚原理与使用|小姚老师](https://www.bilibili.com/video/BV1sR4y1c7n3/)
 * [2022高考数学!【组合+概率+统计】重点全复习！](https://www.bilibili.com/video/BV14R4y1w7aU/)
+#### 初中
+* [【初一数学170讲】七年级数学全集](https://www.bilibili.com/video/BV1aP4y1o7n1/?p=1)
 
 ## 英语
 * [有什么好的初中英语教辅？](https://www.zhihu.com/question/29693069)
