@@ -38,6 +38,7 @@
 * [宜家的家具甲醛超标么？](http://www.zhihu.com/question/21307878)
 * [终于知道在上海去哪里买家具最划算了！！！ ](http://www.douban.com/group/topic/89266297/?type=like)
 * [全屋定制，柜子用不知名的生态板好还是克诺斯邦颗粒板？](https://www.zhihu.com/question/360660417)
+* [[案例分享(完工啦)] 杭州滨江，223㎡顶楼复式带阁楼老房改造，用直白的方式对话空间](https://www.chiphell.com/thread-2555296-1-1.html)
 
 ## 植物
 * [阳台种菜 - 纸巾种子催芽图解 （蔬菜与花种子）](http://www.taohua001.com/thread-4583-1-1.html)
