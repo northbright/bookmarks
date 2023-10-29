@@ -46,7 +46,9 @@
 
 ## C++
 * [Mixing Swift and C++](https://www.swift.org/documentation/cxx-interop/)
-
+* Sample Code
+  * [Mixing Languages in an Xcode project](https://developer.apple.com/documentation/swift/mixinglanguagesinanxcodeproject)
+  * [Calling APIs Across Language Boundaries](https://developer.apple.com/documentation/swift/callingapisacrosslanguageboundaries)
 ## Golang
 * [Writing Apps in Go and Swift](https://youngdynasty.net/posts/writing-mac-apps-in-go/)
 * [Packaging a Go application for macOS](https://medium.com/@mattholt/packaging-a-go-application-for-macos-f7084b00f6b5)
