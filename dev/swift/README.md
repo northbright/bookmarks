@@ -60,3 +60,6 @@
 ## Pointers
 * [Swift Pointers Overview: Unsafe, Buffer, Raw and Managed Pointers](https://www.vadimbulavin.com/swift-pointers-overview-unsafe-buffer-raw-and-managed-pointers/)
 * [Pointers in Swift](https://theswiftdev.com/unsafe-memory-pointers-in-swift/)
+
+## Closure（闭包）
+* [[极速Swift教程之六] 闭包](https://zhuanlan.zhihu.com/p/92464947)
