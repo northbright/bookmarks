@@ -44,6 +44,9 @@
 * [How to use instance method as callback for function which takes only func or literal closure](https://stackoverflow.com/questions/33260808/how-to-use-instance-method-as-callback-for-function-which-takes-only-func-or-lit/33262376#33262376)
 * [Swift 2 - UnsafeMutablePointer<Void> to object](https://stackoverflow.com/questions/30786883/swift-2-unsafemutablepointervoid-to-object/30788165#30788165)
 
+## C++
+* [Mixing Swift and C++](https://www.swift.org/documentation/cxx-interop/)
+
 ## Golang
 * [Writing Apps in Go and Swift](https://youngdynasty.net/posts/writing-mac-apps-in-go/)
 * [Packaging a Go application for macOS](https://medium.com/@mattholt/packaging-a-go-application-for-macos-f7084b00f6b5)
