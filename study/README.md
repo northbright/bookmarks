@@ -22,6 +22,7 @@
 #### 初中
 * [【初一数学170讲】七年级数学全集](https://www.bilibili.com/video/BV1aP4y1o7n1/?p=1)
 * [【初一数学170讲】七年级数学全集 - 去括号与填括号](https://www.bilibili.com/video/BV1aP4y1o7n1/?p=34)
+* [因式分解你还不会吗？过程很详细！！！](https://www.bilibili.com/video/BV1um4y117TP/)
 
 ## 英语
 * [有什么好的初中英语教辅？](https://www.zhihu.com/question/29693069)
