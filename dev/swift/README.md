@@ -46,6 +46,7 @@
 
 ## C++
 * [Mixing Swift and C++](https://www.swift.org/documentation/cxx-interop/)
+* [Setting Up Mixed-Language Swift and C++ Projects](https://www.swift.org/documentation/cxx-interop/project-build-setup/)
 * Sample Code
   * [Mixing Languages in an Xcode project](https://developer.apple.com/documentation/swift/mixinglanguagesinanxcodeproject)
   * [Calling APIs Across Language Boundaries](https://developer.apple.com/documentation/swift/callingapisacrosslanguageboundaries)
