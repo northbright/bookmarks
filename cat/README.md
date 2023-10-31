@@ -34,3 +34,6 @@
 
 ## 消毒
 * [猫咪在家，用百分之七十五的酒精消毒会有害猫身健康吗？该怎么办？](https://www.zhihu.com/question/371548956)
+
+## 皮肤病
+* [人长猫藓什么样子？](https://www.zhihu.com/question/433163557/answer/2475025359)
