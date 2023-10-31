@@ -1,4 +1,4 @@
-# Animation（动画）
+## Anime and Comic（动漫）
 
 ## 米老鼠和唐老鸭
 * 米奇与豌豆茎

@@ -24,7 +24,7 @@ Bookmarks of development and more...
 * [Music](music/README.md)
 * [Study（学习）](study/README.md)
 * [Health（健康）](health/README.md)
-* [Anime（动画）](anime/README.md)
+* [Anime and Comic（动漫）](anime-and-comic/README.md)
 * [Comic（漫画）](comic/README.md)
 * [房产](house/README.md)
 * [Cloud(云)](cloud/README.md)
