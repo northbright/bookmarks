@@ -116,3 +116,4 @@
 * [一口好锅，我用了四年才敢向你推荐](https://zhuanlan.zhihu.com/p/145259451)
 * [⭐️老赵厨单（二）：炒锅选购攻略！熟铁、生铁、不锈钢等哪个材质好？附品牌炒锅推荐清单-2023.01更新](https://zhuanlan.zhihu.com/p/353443019)
 * [那口让你颠覆三观的假铁锅skeppshult又出来了！](https://zhuanlan.zhihu.com/p/38950226)
+* [PFOA——不粘锅涂层中的活性剂，毒性极大，可引发肿瘤](https://zhuanlan.zhihu.com/p/91553747)
