@@ -7,3 +7,4 @@
 
 ## Memory Management
 * [Cgo and Destructors for Managing Allocated Memory in Go](http://rabarar.github.io/blog/2015/09/29/cgo-and-destructors-for-managing-allocated-memory-in-go/)
+* [Defer to call c.free cause memory leak #43363](https://github.com/golang/go/issues/43363)
