@@ -64,3 +64,6 @@
 
 ## Closure（闭包）
 * [[极速Swift教程之六] 闭包](https://zhuanlan.zhihu.com/p/92464947)
+
+## String
+* [UTF-8 String](https://www.swift.org/blog/utf8-string/)
