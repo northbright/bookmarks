@@ -4,3 +4,6 @@
 * [cgo](https://github.com/golang/go/wiki/cgo)
 * [Using Go code in an existing C project](https://stackoverflow.com/questions/32215509/using-go-code-in-an-existing-c-project)
 * <https://godoc.org/cmd/cgo>
+
+## Memory Management
+* [Cgo and Destructors for Managing Allocated Memory in Go](http://rabarar.github.io/blog/2015/09/29/cgo-and-destructors-for-managing-allocated-memory-in-go/)
