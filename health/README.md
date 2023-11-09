@@ -86,3 +86,6 @@
 * [三家同仁堂，你是否分的清？千万别被害群之马忽悠了！](https://zhuanlan.zhihu.com/p/581092902)
 * [北京、天津、南京：哪个“同仁堂”是正品？](https://zhuanlan.zhihu.com/p/407296276)
 * [聚焦·315｜医药“贴牌生意”背后有何玄机？](https://baijiahao.baidu.com/s?id=1760478544142240627)
+
+## 糖尿病
+* [什么是1型糖尿病？1型糖尿病能治愈吗？](https://zhuanlan.zhihu.com/p/34608407)
