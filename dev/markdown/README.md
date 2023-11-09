@@ -35,3 +35,6 @@
 
 ## Table
 * [Can I merge table rows in markdown](https://stackoverflow.com/questions/46621765/can-i-merge-table-rows-in-markdown)
+
+## Page Break
+* [Insert Page Breaks into your Documents](https://markdownmonster.west-wind.com/docs/_5ne1ccv4t.htm)
