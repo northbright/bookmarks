@@ -16,7 +16,7 @@
 ## Keys
 * [Can I remove newlines in a public key?](https://crypto.stackexchange.com/questions/19043/can-i-remove-newlines-in-a-public-key)
 
-## SysLog
+## Log
 * [How to Enable SSH Log and List Failed Login in Linux](https://linoxide.com/enable-sshd-logging/)
 
 ## ssh-keyscan
