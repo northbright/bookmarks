@@ -18,6 +18,8 @@
 
 ## Log
 * [How to Enable SSH Log and List Failed Login in Linux](https://linoxide.com/enable-sshd-logging/)
+* [How to View SSH Logs?](https://www.strongdm.com/blog/view-ssh-logs)
+* [Meaning of “Connection closed by xxx [preauth]” in sshd logs](https://unix.stackexchange.com/questions/102502/meaning-of-connection-closed-by-xxx-preauth-in-sshd-logs)
 
 ## ssh-keyscan
 * [linux的ssh-keyscan命令有啥用?](https://www.zhihu.com/question/344870145)
