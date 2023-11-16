@@ -99,6 +99,7 @@
 * [Samba](samba/README.md)
 * [PWA](pwa/README.md)
 * [Bat](bat/README.md)
+* [LaTeX](latex/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
