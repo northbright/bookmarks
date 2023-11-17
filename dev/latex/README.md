@@ -13,3 +13,6 @@
 
 ## Table
 * [Convert CSV to LaTeX Table](https://tableconvert.com/csv-to-latex)
+
+## Editor
+* [TeXShop](https://pages.uoregon.edu/koch/texshop/)
