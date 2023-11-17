@@ -7,3 +7,6 @@
 ## CJK
 * [[LaTeX 引擎] XeLaTeX + macOS，通过字体名调用发行版字体](https://zhuanlan.zhihu.com/p/59774395)
 * [LaTeX 中文字体配置基础指南](https://zhuanlan.zhihu.com/p/538459335)
+
+## Title
+* [请问如何在页眉中显示article标题、作者名字？](https://ask.latexstudio.net/index.php/ask/question/3381.html)
