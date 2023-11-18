@@ -90,3 +90,4 @@
 ## 糖尿病
 * [什么是1型糖尿病？1型糖尿病能治愈吗？](https://zhuanlan.zhihu.com/p/34608407)
 * [一型糖尿病的治疗：过去、现在和将来](https://zhuanlan.zhihu.com/p/616926234)
+* [牛奶与1型糖尿病的关系，它可能是罪魁祸首之一！尤其是对婴儿与儿童来说](https://zhuanlan.zhihu.com/p/471651363)
