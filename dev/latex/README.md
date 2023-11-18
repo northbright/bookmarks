@@ -20,6 +20,7 @@
 ## Title Page
 * [How to Write a Thesis in LaTeX (Part 5): Customising Your Title Page and Abstract](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_5)%3A_Customising_Your_Title_Page_and_Abstract)
 * [latex论文封面的简洁代码](https://zhuanlan.zhihu.com/p/524221069)
+* [LaTeX 添加封面例则](https://zhuanlan.zhihu.com/p/633431642)
 
 ## Table
 * [Convert CSV to LaTeX Table](https://tableconvert.com/csv-to-latex)
