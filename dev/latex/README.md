@@ -7,6 +7,9 @@
 ## Guides
 * [Getting to Grips with LaTeX](https://www.andy-roberts.net/latex/)
 
+## Editor
+* [TeXShop](https://pages.uoregon.edu/koch/texshop/)
+
 ## CJK
 * [[LaTeX 引擎] XeLaTeX + macOS，通过字体名调用发行版字体](https://zhuanlan.zhihu.com/p/59774395)
 * [LaTeX 中文字体配置基础指南](https://zhuanlan.zhihu.com/p/538459335)
@@ -16,6 +19,3 @@
 
 ## Table
 * [Convert CSV to LaTeX Table](https://tableconvert.com/csv-to-latex)
-
-## Editor
-* [TeXShop](https://pages.uoregon.edu/koch/texshop/)
