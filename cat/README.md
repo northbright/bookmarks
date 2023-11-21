@@ -40,3 +40,4 @@
 
 ## 排毛
 * [猫草、化毛膏和化毛片的区别及用法](https://zhuanlan.zhihu.com/p/336443539)
+* [如何在阳台种小麦草？收小麦穗，可持续种植食物](https://zhuanlan.zhihu.com/p/363592028)
