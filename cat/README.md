@@ -37,3 +37,6 @@
 
 ## 皮肤病
 * [人长猫藓什么样子？](https://www.zhihu.com/question/433163557/answer/2475025359)
+
+## 排毛
+* [猫草、化毛膏和化毛片的区别及用法](https://zhuanlan.zhihu.com/p/336443539)
