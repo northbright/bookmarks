@@ -5,6 +5,8 @@
 * [【LaTeX】针对萌新自学者的入门教程](https://zhuanlan.zhihu.com/p/521649367)
 * [一份其实很短的 LaTeX 入门文档](https://liam0205.me/2014/09/08/latex-introduction/)
 * [The Not So Short Introduction To LaTeX2ε (Chinese Edition)](https://github.com/CTeX-org/lshort-zh-cn/)
+* [现代 LaTex 入门讲座（曾祥东）](https://github.com/stone-zeng/latex-talk)
+  * [Overleaf 版本](https://www.overleaf.com/project/622df830d7e1111ae7ccddb7)
 
 ## Editor
 * [TeXShop](https://pages.uoregon.edu/koch/texshop/)
