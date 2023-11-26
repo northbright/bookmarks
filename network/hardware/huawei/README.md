@@ -9,3 +9,4 @@
 ## Tutorial
 * [华为 路由器交换机配置课程（86集）](https://www.bilibili.com/video/BV1Kt4y1Q7MJ/)
 * [CloudEngine S5700, S6700系列交换机 典型配置案例（V600版本）](https://support.huawei.com/enterprise/zh/doc/EDOC1100278287/43b427f7)
+* [（多媒体）华为乾坤云管理网络-AP上线（华为乾坤APP）](https://support.huawei.com/enterprise/zh/doc/EDOC1100268006?idPath=24030814%7C250382819%7C250382820%7C255370227)
