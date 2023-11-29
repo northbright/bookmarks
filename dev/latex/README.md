@@ -31,3 +31,6 @@
 * [使用 TeX 盒子的两个例子](https://zhuanlan.zhihu.com/p/362226568)
 * [How can I get my table or figure to stay where they are, instead of going to the next page?](https://www.overleaf.com/learn/latex/Questions/How_can_I_get_my_table_or_figure_to_stay_where_they_are%2C_instead_of_going_to_the_next_page%3F)
 * [LaTeX技巧816：LaTeX中的宽度](https://www.latexstudio.net/archives/4257)
+
+## Header and Footer
+* [How to remove the top horizontal bar in fancyhdr?](https://tex.stackexchange.com/questions/13896/how-to-remove-the-top-horizontal-bar-in-fancyhdr)
