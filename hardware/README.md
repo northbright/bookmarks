@@ -148,3 +148,7 @@
 ## IP PBX and IP Phone
 * [国威官网文档下载](https://www.gwtx.com.cn/download.html)
 * [国威HB100/HB1910/HB1930/HB1960配置文档下载](https://cdn055.yun-img.com/static/upload/guoweidz/download/20230520165902_66819.pdf)
+
+## MSI
+* [聊聊微星主板的M.2/Optane Genie功能](https://zhuanlan.zhihu.com/p/568030208)
+* [MAG B460 TOMAHAWK Manual](https://download.msi.com/archive/mnu_exe/mb/E7C81v1.2.pdf)
