@@ -21,3 +21,6 @@
   * [解析超高刷电视实用性，不要让高刷沉迷“比大小”](https://zhuanlan.zhihu.com/p/511443003)
   * [这些小米电视不要买！2023小米液晶电视/OLED电视避坑指南！（含Redmi红米）！](https://www.zhihu.com/tardis/bd/art/536436316)
   * [哪款小米、Redmi电视值得购买？](https://www.zhihu.com/tardis/bd/art/562652298)
+
+## 空气开关
+* [断路器外壳上常见的技术参数，到底都代表什么意思？](https://www.zhihu.com/question/583324255/answer/2889009388)
