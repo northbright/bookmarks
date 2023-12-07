@@ -6,6 +6,7 @@
 
 ## File
 * [How to check if a file exists in Go?](https://stackoverflow.com/questions/12518876/how-to-check-if-a-file-exists-in-go)
+* [How to create a directory if it does not exist in Go](https://freshman.tech/snippets/go/create-directory-if-not-exist/)
 
 ## Signal
 * [Go进阶13:signal处理和优雅退出守护进程](https://mojotv.cn/2019/01/17/golang-signal-restart-deamom)
