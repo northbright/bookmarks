@@ -14,3 +14,4 @@
 * [How To Upgrade To A Major Version In Go](https://golang.cafe/blog/how-to-upgrade-to-a-major-version-in-go.html)
 * [Semantic Import Versioning](https://github.com/golang/go/wiki/Modules#semantic-import-versioning)
 * [Go Modules: v2 and Beyond](https://go.dev/blog/v2-go-modules)
+* [cmd/go, x/mod: "invalid go version" message mentions old version format #61888](https://github.com/golang/go/issues/61888)
