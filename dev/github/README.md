@@ -73,3 +73,6 @@
 
 ## Label
 * [Can I search github labels with logical operator OR?](https://stackoverflow.com/questions/29136057/can-i-search-github-labels-with-logical-operator-or)
+
+# Formatting
+* [Syntax highlighting](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting)
