@@ -126,6 +126,7 @@
 * [2023年二月 彩色激光打印机合集](https://zhuanlan.zhihu.com/p/444413059)
 * [家用打印机买什么样的比较经济耐用?能用N年的神机系列大汇总!2023年家用激光打印机推荐，办公、学生通用](家用打印机买什么样的比较经济耐用?能用N年的神机系列大汇总!2023年家用激光打印机推荐，办公、学生通用)
 * [办公用，预算 2 万左右，有没有耗材比较便宜的彩色激光打印机？](https://www.zhihu.com/question/604830665)
+* [中小型企业复合机该如何选？七款A3彩色复合机横向对比评测](https://zhuanlan.zhihu.com/p/108202870)
 
 ## 工作站
 * [Precision 3460 小型机-设置和规格](https://dl.dell.com/content/manual58567807-precision-3460-%E5%B0%8F%E5%9E%8B%E6%9C%BA-%E8%AE%BE%E7%BD%AE%E5%92%8C%E8%A7%84%E6%A0%BC.pdf?language=zh-cn&ps=true)
