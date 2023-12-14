@@ -5,3 +5,4 @@
 * [acme.sh获取证书 设置crontab定时检查更新及更新通知Li.017](https://zhuanlan.zhihu.com/p/393423092)
 * [Set up LetsEncrypt using acme.sh without root](https://gist.github.com/lachesis/943769f3fac740d5848352752ac08741)
 * [Set up Let’s Encrypt certificate using acme.sh as non-root user](https://gist.github.com/Greelan/28a46a33140b65c9a045573ca460f044)
+* [Stop Cert Renewal](https://github.com/acmesh-official/acme.sh?tab=readme-ov-file#13-how-to-stop-cert-renewal)
