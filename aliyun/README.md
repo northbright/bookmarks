@@ -8,3 +8,4 @@
 
 ## ECS
 * [如何跨账号过户迁移ECS实例](https://help.aliyun.com/zh/ecs/user-guide/how-to-cross-account-transfer-migration-ecs-instance)
+* [资源过户介绍](https://help.aliyun.com/zh/user-center/user-guide/transfer-the-ownership-of-an-ecs-instance)
