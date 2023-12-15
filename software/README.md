@@ -191,3 +191,6 @@
 ## USB Drive
 * [Rufus](https://rufus.ie/)
 * [Etcher](https://www.balena.io/etcher)
+
+## FIO
+* [How fast are your disks? Find out the open source way, with fio](https://arstechnica.com/gadgets/2020/02/how-fast-are-your-disks-find-out-the-open-source-way-with-fio/)
