@@ -78,6 +78,7 @@
 * [Swagger](swagger/README.md)
 * [Markdown](markdown/README.md)
 * [Embed](embed/README.md)
+* [go generate](go-generate/README.md)
 
 ## Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
