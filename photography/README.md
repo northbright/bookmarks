@@ -14,3 +14,6 @@
 
 ## Shutter
 * [进阶科普｜用动画彻底搞懂“相机快门”!](https://www.bilibili.com/video/BV1Qu411p7Jj/)
+
+## Print
+* [哪个淘宝店铺或app洗照片比较好？](https://www.zhihu.com/question/276145977)
