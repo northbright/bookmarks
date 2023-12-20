@@ -42,3 +42,4 @@
 * 新疆
   * [《国之美·新疆》 丰饶的壮阔](https://www.bilibili.com/video/BV1PR4y1w7rD/)
   * [中国瑞士？熬夜天堂？人均热巴？最真实的新疆了解一下！](https://www.bilibili.com/video/BV1yg4y1N7MS/)
+  * [南疆、北疆——新疆！](https://zhuanlan.zhihu.com/p/632030368)
