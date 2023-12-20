@@ -39,3 +39,5 @@
   * [上海市2023年最新版高清行政区划地图](https://zhuanlan.zhihu.com/p/658689558)
   * [我的家乡在哪里之上海市](https://zhuanlan.zhihu.com/p/337081220)
   * [上海市，是一座怎样的城市？](https://sns-webpic-qc.xhscdn.com/202312191437/9c31bfb56c1f06d49ef2546c15c8884f/4835785e-d03a-3142-b93a-62716b941a8d!nd_dft_wlteh_webp_3)
+* 新疆
+  * [《国之美·新疆》 丰饶的壮阔](https://www.bilibili.com/video/BV1PR4y1w7rD/)
