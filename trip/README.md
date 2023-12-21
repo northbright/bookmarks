@@ -9,6 +9,7 @@
 
 ## 新疆
 * [分享新疆旅行故事](https://www.zhihu.com/people/xin-jiang-ding-zhi-lu-xing)
+* [新疆之美，一半在南疆，南疆大环线保姆级攻略，带你看尽南疆之美](https://www.bilibili.com/video/BV1K8411Q7LT/)
 
 ## 日本
 * [只靠公交能走多远？- 奄美大岛游记&公交攻略](https://www.chiphell.com/thread-2566378-1-1.html)
