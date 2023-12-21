@@ -43,6 +43,7 @@
   * [《国之美·新疆》 丰饶的壮阔](https://www.bilibili.com/video/BV1PR4y1w7rD/)
   * [中国瑞士？熬夜天堂？人均热巴？最真实的新疆了解一下！](https://www.bilibili.com/video/BV1yg4y1N7MS/)
   * [南疆、北疆——新疆！](https://zhuanlan.zhihu.com/p/632030368)
+  * [垂直新疆](https://baike.baidu.com/item/%E5%9E%82%E7%9B%B4%E6%96%B0%E7%96%86/12355313)
   * [新疆旅游！五次去新疆旅游后，我想给大家的34个建议！值得一看！](https://zhuanlan.zhihu.com/p/377801244)
   * [「中国地理」高中地理老师带你，5分钟了解新疆地形地貌气候水文](https://baijiahao.baidu.com/s?id=1694857540239752271)
   * [新疆概况——图说新疆](https://zhuanlan.zhihu.com/p/28856212)
