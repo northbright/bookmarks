@@ -51,3 +51,6 @@
   * [真正的新疆是什么样子的？(Alfred大老虎的回答)](https://www.zhihu.com/question/440636963/answer/1695926294)
   * [分享新疆旅行故事](https://www.zhihu.com/people/xin-jiang-ding-zhi-lu-xing)
     * [我来说下新疆美食](https://www.zhihu.com/question/621974779/answer/3228475397)
+
+## 历史
+* [汤因比：一个地地道道的英国人 为何希望自己是中国人](https://zhuanlan.zhihu.com/p/445016922)
