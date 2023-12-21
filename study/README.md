@@ -47,6 +47,7 @@
   * [新疆旅游！五次去新疆旅游后，我想给大家的34个建议！值得一看！](https://zhuanlan.zhihu.com/p/377801244)
   * [「中国地理」高中地理老师带你，5分钟了解新疆地形地貌气候水文](https://baijiahao.baidu.com/s?id=1694857540239752271)
   * [新疆概况——图说新疆](https://zhuanlan.zhihu.com/p/28856212)
+  * [新疆自治区各地市高清地图](https://zhuanlan.zhihu.com/p/576174774)
   * [真正的新疆是什么样子的？(Alfred大老虎的回答)](https://www.zhihu.com/question/440636963/answer/1695926294)
   * [分享新疆旅行故事](https://www.zhihu.com/people/xin-jiang-ding-zhi-lu-xing)
     * [我来说下新疆美食](https://www.zhihu.com/question/621974779/answer/3228475397)
