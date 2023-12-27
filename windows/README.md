@@ -29,3 +29,6 @@
 
 ## Activation
 * [新买的笔记本microsoft账户无法登陆怎么办？](https://www.zhihu.com/question/428164904)
+
+## Install
+* [How to Install Windows 11 Without a Microsoft Account](https://www.tomshardware.com/how-to/install-windows-11-without-microsoft-account)
