@@ -63,3 +63,5 @@
   * [古蜀文明-三星堆](https://zhuanlan.zhihu.com/p/634569823)
 * 埃及绘画
   * [十五分钟看懂神秘的埃及艺术](https://zhuanlan.zhihu.com/p/30937659)
+  * [壁画艺术百花齐放，古埃及人物壁画独树一帜，能超过敦煌飞天吗？](https://zhuanlan.zhihu.com/p/626055833)
+  * [世界历史上有哪些逆天的文物？-素细流的回答](https://www.zhihu.com/question/22837618/answer/647353094)
