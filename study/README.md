@@ -66,6 +66,7 @@
   * [壁画艺术百花齐放，古埃及人物壁画独树一帜，能超过敦煌飞天吗？](https://zhuanlan.zhihu.com/p/626055833)
   * [世界历史上有哪些逆天的文物？-素细流的回答](https://www.zhihu.com/question/22837618/answer/647353094)
   * [古埃及艺术到底该怎么欣赏？](https://www.zhihu.com/question/299999274/answer/2823976950)
+  * [【看老高记笔记2-神话与文明】埃及神话1](https://zhuanlan.zhihu.com/p/531497854)
 * 世界文物
   * [六件逆天文物，第一件就让人振奋！](https://zhuanlan.zhihu.com/p/100845784)
   
