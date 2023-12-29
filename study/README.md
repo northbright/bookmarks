@@ -61,3 +61,5 @@
 * 三星堆
   * [带你全面了解三星堆文明~](https://zhuanlan.zhihu.com/p/641606190)
   * [古蜀文明-三星堆](https://zhuanlan.zhihu.com/p/634569823)
+* 埃及绘画
+  * [十五分钟看懂神秘的埃及艺术](https://zhuanlan.zhihu.com/p/30937659)
