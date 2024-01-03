@@ -45,3 +45,4 @@
 
 ## .gitignore
 * [.gitignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
+* [.gitignore文件的配置使用](https://zhuanlan.zhihu.com/p/52885189/)
