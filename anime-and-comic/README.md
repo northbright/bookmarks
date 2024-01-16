@@ -11,3 +11,6 @@
 
 ## 爆漫王
 * [《爆漫王》—漫画家们热血追梦背后的一些八卦花絮](https://zhuanlan.zhihu.com/p/138245851)
+
+## 魔神英雄传
+* [泪目！《魔神英雄传》35周年感谢祭(2024）OP/ED精简版](https://www.bilibili.com/video/BV1hQ4y1L73F/)
