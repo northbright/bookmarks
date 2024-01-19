@@ -14,3 +14,4 @@
 
 ## 魔神英雄传
 * [泪目！《魔神英雄传》35周年感谢祭(2024）OP/ED精简版](https://www.bilibili.com/video/BV1hQ4y1L73F/)
+* [【4K/怀旧/经典】魔神英雄传四部动画主题曲OP/片尾曲ED合集](https://www.bilibili.com/video/BV1XY411X7ER/)
