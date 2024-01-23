@@ -1,0 +1,2523 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://blog.kowalczyk.info/article/wOYk/advanced-command-execution-in-go-with-osexec.html
+Subject: Advanced command execution in Go with os/exec
+Date: Tue, 23 Jan 2024 11:51:03 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--XgvdT5YdSooo3hfvWY9Up3kYKfWecWjfWvNl6ynhQr----"
+
+
+------MultipartBoundary--XgvdT5YdSooo3hfvWY9Up3kYKfWecWjfWvNl6ynhQr----
+Content-Type: text/html
+Content-ID: <frame-BF969057AB7F4CB085A9BB8BE3E78DA0@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://blog.kowalczyk.info/article/wOYk/advanced-command-execution-in-go-with-osexec.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-a01e2e41-6358-4cfa-b91c-e5ceb4e8454d@mhtml.blink" />
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <meta name=3D"referrer" content=3D"always">
+    <link rel=3D"alternate" type=3D"application/atom+xml" title=3D"RSS 2.0"=
+ href=3D"https://blog.kowalczyk.info/atom.xml">
+    <link rel=3D"canonical" href=3D"https://blog.kowalczyk.info/article/wOY=
+k/advanced-command-execution-in-go-with-osexec.html">=20
+    <meta name=3D"description" content=3D"Examples of using os/exec library=
+ to execute external programs in Go.">=20
+
+   =20
+    <meta name=3D"twitter:card" content=3D"summary_large_image">
+    <meta name=3D"twitter:site" content=3D"@kjk">
+    <meta name=3D"twitter:title" content=3D"Advanced command execution in G=
+o with os/exec">=20
+    <meta name=3D"twitter:description" content=3D"Examples of using os/exec=
+ library to execute external programs in Go.">=20
+    <meta name=3D"twitter:creator" content=3D"@kjk">=20
+    <meta name=3D"twitter:image" content=3D"https://blog.kowalczyk.info/img=
+/e40644af4f292f22988946103fb8d1b195262caf.jpg"> =20
+    <meta name=3D"twitter:description" content=3D"Examples of using os/exec=
+ library to execute external programs in Go.">=20
+
+   =20
+    <meta property=3D"og:title" content=3D"Advanced command execution in Go=
+ with os/exec">
+    <meta property=3D"og:type" content=3D"article">
+    <meta property=3D"og:url" content=3D"https://blog.kowalczyk.info/articl=
+e/wOYk/advanced-command-execution-in-go-with-osexec.html">=20
+    <meta property=3D"og:description" content=3D"Examples of using os/exec =
+library to execute external programs in Go."> =20
+    <meta property=3D"og:image" content=3D"https://blog.kowalczyk.info/img/=
+e40644af4f292f22988946103fb8d1b195262caf.jpg">=20
+
+    <title>Advanced command execution in Go with os/exec</title>
+
+    <link href=3D"https://blog.kowalczyk.info/css/main.css" rel=3D"styleshe=
+et">
+   =20
+   =20
+
+   =20
+   =20
+</head>
+
+<body>
+    <div class=3D"hdr flex z-10 sticky top-0 bg-white py-2">
+  <div class=3D"wrap flex items-center justify-between" style=3D"column-gap=
+: 0.5em;">
+   =20
+
+   =20
+    <div style=3D"width: 72px"></div>
+    <div class=3D"grow"></div>
+    <a href=3D"https://blog.kowalczyk.info/">Home</a>
+    <div>=E2=80=A2</div>
+    <a href=3D"https://blog.kowalczyk.info/software/">Software</a>
+    <div>=E2=80=A2</div>
+    <a href=3D"https://blog.kowalczyk.info/article/25a256f90ce44eb788390ecc=
+3cf9cd65/writings.html">Writings</a>
+   =20
+    <div class=3D"grow"></div>
+    <a href=3D"https://github.com/kjk" target=3D"_blank">
+      <svg xmlns=3D"http://www.w3.org/2000/svg" class=3D"icon icon-tabler i=
+con-tabler-brand-github" width=3D"1em" height=3D"1em" viewBox=3D"0 0 24 24"=
+ stroke-width=3D"2" stroke=3D"currentColor" fill=3D"none" stroke-linecap=3D=
+"round" stroke-linejoin=3D"round">
+        <path stroke=3D"none" d=3D"M0 0h24v24H0z" fill=3D"none"></path>
+        <path d=3D"M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.=
+5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2=
+s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2=
+ 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.=
+2 -.5 2v3.5">
+        </path>
+      </svg>
+    </a>
+    <a href=3D"https://twitter.com/kjk" target=3D"_blank">
+      <svg xmlns=3D"http://www.w3.org/2000/svg" class=3D"icon icon-tabler i=
+con-tabler-brand-twitter" width=3D"1em" height=3D"1em" viewBox=3D"0 0 24 24=
+" stroke-width=3D"2" stroke=3D"currentColor" fill=3D"none" stroke-linecap=
+=3D"round" stroke-linejoin=3D"round">
+        <path stroke=3D"none" d=3D"M0 0h24v24H0z" fill=3D"none"></path>
+        <path d=3D"M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -=
+1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4=
+c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.4=
+23 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497=
+ -3.753c0 -.249 1.51 -2.772 1.818 -4.013z">
+        </path>
+      </svg>
+    </a>
+    <a href=3D"https://blog.kowalczyk.info/atom.xml">
+      <svg xmlns=3D"http://www.w3.org/2000/svg" class=3D"icon icon-tabler i=
+con-tabler-rss" width=3D"1em" height=3D"1em" viewBox=3D"0 0 24 24" stroke-w=
+idth=3D"2" stroke=3D"currentColor" fill=3D"none" stroke-linecap=3D"round" s=
+troke-linejoin=3D"round">
+        <path stroke=3D"none" d=3D"M0 0h24v24H0z" fill=3D"none"></path>
+        <path d=3D"M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d=3D"M4 4a16 16 0 0 1 16 16"></path>
+        <path d=3D"M4 11a9 9 0 0 1 9 9"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+
+   =20
+
+   =20
+    <picture class=3D"w-full">
+        <source srcset=3D" data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQ=
+ABAAACADs=3D" media=3D"(max-width: 768px)">
+        <img class=3D"page-cover-image" src=3D"https://blog.kowalczyk.info/=
+img/e40644af4f292f22988946103fb8d1b195262caf.jpg">
+    </picture>
+   =20
+
+    <div class=3D"flex tnav wrap relative" style=3D"margin-top: 12px">
+       =20
+
+       =20
+        <div class=3D"relative title ">
+            <div>Advanced command execution in Go with os/exec</div>
+
+           =20
+            <div class=3D"absolute" style=3D"right: -2.3em; top: 0px;">
+                <a class=3D"edit-link" href=3D"https://github.com/kjk/blog/=
+edit/master/server/www/md/2017-06-23-advanced-command-execution-in-go-with-=
+osexec.md" rel=3D"nofollow" target=3D"_blank">edit</a>
+            </div>
+           =20
+        </div>
+
+       =20
+
+    </div>
+
+   =20
+    <div class=3D"flex flex-col" style=3D"margin-bottom: 12px; margin-top: =
+-8px">
+        <div class=3D"mx-auto">in: <a href=3D"https://blog.kowalczyk.info/b=
+ook/go-cookbook.html">Go Cookbook</a></div>
+    </div>
+   =20
+
+   =20
+    <div class=3D"flex justify-center">
+       =20
+        <a href=3D"https://blog.kowalczyk.info/tag/go" class=3D"tagtop">go<=
+/a>
+       =20
+    </div>
+   =20
+
+    <div id=3D"post" class=3D"wrap">
+        <div class=3D"notion-page" id=3D"wOYk">
+<div>Go has excellent support for executing external programs. Let=E2=80=99=
+s start at the beginning.</div>
+
+<div>In our examples we=E2=80=99ll be running <code>ls -lah</code> command =
+as it produces an output. There is no <code>ls</code> on Windows so you can=
+ change that to e.g. <code>tasklist</code>.</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"running-a-command"><div>Running a comma=
+nd</div><a class=3D"header-anchor" href=3D"https://blog.kowalczyk.info/arti=
+cle/wOYk/advanced-command-execution-in-go-with-osexec.html#running-a-comman=
+d">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"nx">cmd</span> <span class=3D"o">:=3D</span> <span c=
+lass=3D"nx">exec</span><span class=3D"p">.</span><span class=3D"nf">Command=
+</span><span class=3D"p">(</span><span class=3D"s">"ls"</span><span class=
+=3D"p">,</span> <span class=3D"s">"-lah"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">runtime</span><span class=3D"p">.</span><span cl=
+ass=3D"nx">GOOS</span> <span class=3D"o">=3D=3D</span> <span class=3D"s">"w=
+indows"</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+cmd</span> <span class=3D"p">=3D</span> <span class=3D"nx">exec</span><span=
+ class=3D"p">.</span><span class=3D"nf">Command</span><span class=3D"p">(</=
+span><span class=3D"s">"tasklist"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">e=
+rr</span> <span class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span =
+class=3D"p">.</span><span class=3D"nf">Run</span><span class=3D"p">()</span=
+>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <span c=
+lass=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span><span c=
+lass=3D"p">(</span><span class=3D"s">"cmd.Run() failed with %s\n"</span><sp=
+an class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D"p">)</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?8e5b7808e6a21f3d9d70e844646b55de">https://codeeval.dev/gist/8e=
+5b7808e6a21f3d9d70e844646b55de</a></div>
+
+<div>If you run it, nothing seems to happen. Fear not, the command has actu=
+ally been executed.</div>
+
+<div>If we were running <code>ls -lah</code> in the shell, the shell would =
+copy programs=E2=80=99 stdout and stderr to console, so that we can see it.=
+</div>
+
+<div>We=E2=80=99re executing the program via Go standard library function a=
+nd by default stdout and stderr are discarded.</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"running-a-command-and-showing-output"><=
+div>Running a command and showing output</div><a class=3D"header-anchor" hr=
+ef=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command-execution-i=
+n-go-with-osexec.html#running-a-command-and-showing-output">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>To let the human see the output, we can connect the output (<code>cmd.=
+Stdout</code> and <code>cmd.Stderr</code>) of the program we=E2=80=99re exe=
+cuting to <code>os.Stdout</code> and <code>os.Stderr</code>, which is the o=
+utput of our program:</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"nx">cmd</span> <span class=3D"o">:=3D</span> <span c=
+lass=3D"nx">exec</span><span class=3D"p">.</span><span class=3D"nf">Command=
+</span><span class=3D"p">(</span><span class=3D"s">"ls"</span><span class=
+=3D"p">,</span> <span class=3D"s">"-lah"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">c=
+md</span><span class=3D"p">.</span><span class=3D"nx">Stdout</span> <span c=
+lass=3D"p">=3D</span> <span class=3D"nx">os</span><span class=3D"p">.</span=
+><span class=3D"nx">Stdout</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">c=
+md</span><span class=3D"p">.</span><span class=3D"nx">Stderr</span> <span c=
+lass=3D"p">=3D</span> <span class=3D"nx">os</span><span class=3D"p">.</span=
+><span class=3D"nx">Stderr</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">e=
+rr</span> <span class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span =
+class=3D"p">.</span><span class=3D"nf">Run</span><span class=3D"p">()</span=
+>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <span c=
+lass=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span><span c=
+lass=3D"p">(</span><span class=3D"s">"cmd.Run() failed with %s\n"</span><sp=
+an class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D"p">)</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?08e519d3d47a6d82ca289ccff53e28b7">https://codeeval.dev/gist/08=
+e519d3d47a6d82ca289ccff53e28b7</a></div>
+
+<div><code>cmd.Stdout</code> and <code>cmd.Stderr</code> are declared as <c=
+ode>io.Writer</code> interface so we can set them to any type that implemen=
+ts <code>Write()</code> method, like <code>os.File</code> or an in-memory b=
+uffer <code>bytes.Buffer</code>.</div>
+
+<div><code>io.Reader</code> and <code>io.Writer</code> are very simple, yet=
+ very powerful, abstractions.</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"running-a-command-and-capturing-the-out=
+put"><div>Running a command and capturing the output</div><a class=3D"heade=
+r-anchor" href=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command=
+-execution-in-go-with-osexec.html#running-a-command-and-capturing-the-outpu=
+t">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>The above examples allows human to see the output but sometimes we wan=
+t to capture the output and analyze it:</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"kd">func</span> <span class=3D"nf">main</span><span =
+class=3D"p">()</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">cmd</span> <span class=3D"o">:=3D</span> <span class=3D"nx">exec</span><s=
+pan class=3D"p">.</span><span class=3D"nf">Command</span><span class=3D"p">=
+(</span><span class=3D"s">"ls"</span><span class=3D"p">,</span> <span class=
+=3D"s">"-lah"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">out</span><span class=3D"p">,</span> <span class=3D"nx">err</span> <span =
+class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span class=3D"p">.</s=
+pan><span class=3D"nf">CombinedOutput</span><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>if</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <spa=
+n class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span=
+><span class=3D"p">(</span><span class=3D"s">"cmd.Run() failed with %s\n"</=
+span><span class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D=
+"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">fmt</span><span class=3D"p">.</span><span class=3D"nf">Printf</span><span=
+ class=3D"p">(</span><span class=3D"s">"combined out:\n%s\n"</span><span cl=
+ass=3D"p">,</span> <span class=3D"nb">string</span><span class=3D"p">(</spa=
+n><span class=3D"nx">out</span><span class=3D"p">))</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?4dfceac2f8229a077595c6cae84b3a56">https://codeeval.dev/gist/4d=
+fceac2f8229a077595c6cae84b3a56</a></div>
+
+<div><code>CombinedOutput</code> runs a command and returns combined stdout=
+ and stderr.</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"behind-the-scenes-of-combinedoutput"><d=
+iv>Behind the scenes of <code>CombinedOutput</code></div><a class=3D"header=
+-anchor" href=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command-=
+execution-in-go-with-osexec.html#behind-the-scenes-of-combinedoutput">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>The good thing about Go is that it=E2=80=99s open source so we can pee=
+k at how a given functionality is implemented.</div>
+
+<div>Another good thing is that most of the code in the standard library is=
+ simple. Here=E2=80=99s how <code>CombinedOutput</code> is implemented:</di=
+v>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"kd">func</span> <span class=3D"p">(</span><span clas=
+s=3D"nx">c</span> <span class=3D"o">*</span><span class=3D"nx">Cmd</span><s=
+pan class=3D"p">)</span> <span class=3D"nf">CombinedOutput</span><span clas=
+s=3D"p">()</span> <span class=3D"p">([]</span><span class=3D"kt">byte</span=
+><span class=3D"p">,</span> <span class=3D"kt">error</span><span class=3D"p=
+">)</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">c</span><span class=3D"p">.</span><span class=3D=
+"nx">Stdout</span> <span class=3D"o">!=3D</span> <span class=3D"kc">nil</sp=
+an> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"k">r=
+eturn</span> <span class=3D"kc">nil</span><span class=3D"p">,</span> <span =
+class=3D"nx">errors</span><span class=3D"p">.</span><span class=3D"nf">New<=
+/span><span class=3D"p">(</span><span class=3D"s">"exec: Stdout already set=
+"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">c</span><span class=3D"p">.</span><span class=3D=
+"nx">Stderr</span> <span class=3D"o">!=3D</span> <span class=3D"kc">nil</sp=
+an> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"k">r=
+eturn</span> <span class=3D"kc">nil</span><span class=3D"p">,</span> <span =
+class=3D"nx">errors</span><span class=3D"p">.</span><span class=3D"nf">New<=
+/span><span class=3D"p">(</span><span class=3D"s">"exec: Stderr already set=
+"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"kd">v=
+ar</span> <span class=3D"nx">b</span> <span class=3D"nx">bytes</span><span =
+class=3D"p">.</span><span class=3D"nx">Buffer</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">c=
+</span><span class=3D"p">.</span><span class=3D"nx">Stdout</span> <span cla=
+ss=3D"p">=3D</span> <span class=3D"o">&amp;</span><span class=3D"nx">b</spa=
+n>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">c=
+</span><span class=3D"p">.</span><span class=3D"nx">Stderr</span> <span cla=
+ss=3D"p">=3D</span> <span class=3D"o">&amp;</span><span class=3D"nx">b</spa=
+n>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">e=
+rr</span> <span class=3D"o">:=3D</span> <span class=3D"nx">c</span><span cl=
+ass=3D"p">.</span><span class=3D"nf">Run</span><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">re=
+turn</span> <span class=3D"nx">b</span><span class=3D"p">.</span><span clas=
+s=3D"nf">Bytes</span><span class=3D"p">(),</span> <span class=3D"nx">err</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Notice that it=E2=80=99s almost as simple as our second example. Inste=
+ad of setting <code>cmd.Stdout</code> and <code>cmd.Stderr</code> to standa=
+rd output, we set them to a single in-memory buffer.</div>
+
+<div>When program finishes, we returned everything written to that buffer.<=
+/div>
+
+<div>Don=E2=80=99t be afraid to peruse the code of standard library.</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"capture-stdout-and-stderr-separately"><=
+div>Capture stdout and stderr separately</div><a class=3D"header-anchor" hr=
+ef=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command-execution-i=
+n-go-with-osexec.html#capture-stdout-and-stderr-separately">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>What if you want to do the same but capture stdout and stderr separate=
+ly?</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"kd">func</span> <span class=3D"nf">main</span><span =
+class=3D"p">()</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">cmd</span> <span class=3D"o">:=3D</span> <span class=3D"nx">exec</span><s=
+pan class=3D"p">.</span><span class=3D"nf">Command</span><span class=3D"p">=
+(</span><span class=3D"s">"ls"</span><span class=3D"p">,</span> <span class=
+=3D"s">"-lah"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"kd=
+">var</span> <span class=3D"nx">stdout</span><span class=3D"p">,</span> <sp=
+an class=3D"nx">stderr</span> <span class=3D"nx">bytes</span><span class=3D=
+"p">.</span><span class=3D"nx">Buffer</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">cmd</span><span class=3D"p">.</span><span class=3D"nx">Stdout</span> <spa=
+n class=3D"p">=3D</span> <span class=3D"o">&amp;</span><span class=3D"nx">s=
+tdout</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">cmd</span><span class=3D"p">.</span><span class=3D"nx">Stderr</span> <spa=
+n class=3D"p">=3D</span> <span class=3D"o">&amp;</span><span class=3D"nx">s=
+tderr</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">err</span> <span class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><sp=
+an class=3D"p">.</span><span class=3D"nf">Run</span><span class=3D"p">()</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>if</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <spa=
+n class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span=
+><span class=3D"p">(</span><span class=3D"s">"cmd.Run() failed with %s\n"</=
+span><span class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D=
+"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">outStr</span><span class=3D"p">,</span> <span class=3D"nx">errStr</span> =
+<span class=3D"o">:=3D</span> <span class=3D"nb">string</span><span class=
+=3D"p">(</span><span class=3D"nx">stdout</span><span class=3D"p">.</span><s=
+pan class=3D"nf">Bytes</span><span class=3D"p">()),</span> <span class=3D"n=
+b">string</span><span class=3D"p">(</span><span class=3D"nx">stderr</span><=
+span class=3D"p">.</span><span class=3D"nf">Bytes</span><span class=3D"p">(=
+))</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">fmt</span><span class=3D"p">.</span><span class=3D"nf">Printf</span><span=
+ class=3D"p">(</span><span class=3D"s">"out:\n%s\nerr:\n%s\n"</span><span c=
+lass=3D"p">,</span> <span class=3D"nx">outStr</span><span class=3D"p">,</sp=
+an> <span class=3D"nx">errStr</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?8d5cf19aa518c45f6ea8e35ae5250cda">https://codeeval.dev/gist/8d=
+5cf19aa518c45f6ea8e35ae5250cda</a></div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"capture-output-but-also-show-progress">=
+<div>Capture output but also show progress</div><a class=3D"header-anchor" =
+href=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command-execution=
+-in-go-with-osexec.html#capture-output-but-also-show-progress">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>What if the command takes a long time to finish?</div>
+
+<div>It would be nice to see its progress on the console as it happens in a=
+ddition to capturing stdout/stderr.</div>
+
+<div>It=E2=80=99s a little bit more involved, but not terribly so.</div>
+
+<div>First, a helper function that copies from reader to a writer and also =
+captures copied data:</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"kd">func</span> <span class=3D"nf">copyAndCapture</s=
+pan><span class=3D"p">(</span><span class=3D"nx">w</span> <span class=3D"nx=
+">io</span><span class=3D"p">.</span><span class=3D"nx">Writer</span><span =
+class=3D"p">,</span> <span class=3D"nx">r</span> <span class=3D"nx">io</spa=
+n><span class=3D"p">.</span><span class=3D"nx">Reader</span><span class=3D"=
+p">)</span> <span class=3D"p">([]</span><span class=3D"kt">byte</span><span=
+ class=3D"p">,</span> <span class=3D"kt">error</span><span class=3D"p">)</s=
+pan> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"kd=
+">var</span> <span class=3D"nx">out</span> <span class=3D"p">[]</span><span=
+ class=3D"kt">byte</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">buf</span> <span class=3D"o">:=3D</span> <span class=3D"nb">make</span><s=
+pan class=3D"p">([]</span><span class=3D"kt">byte</span><span class=3D"p">,=
+</span> <span class=3D"mi">1024</span><span class=3D"p">,</span> <span clas=
+s=3D"mi">1024</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>for</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">n</span><span class=3D"p">,</span> <span class=3D"nx">err</span> <s=
+pan class=3D"o">:=3D</span> <span class=3D"nx">r</span><span class=3D"p">.<=
+/span><span class=3D"nf">Read</span><span class=3D"p">(</span><span class=
+=3D"nx">buf</span><span class=3D"p">[:])</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"k">if</span> <span class=3D"nx">n</span> <span class=3D"p">&gt;</span> =
+<span class=3D"mi">0</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">            <span cla=
+ss=3D"nx">d</span> <span class=3D"o">:=3D</span> <span class=3D"nx">buf</sp=
+an><span class=3D"p">[:</span><span class=3D"nx">n</span><span class=3D"p">=
+]</span>
+</span></span><span class=3D"line"><span class=3D"cl">            <span cla=
+ss=3D"nx">out</span> <span class=3D"p">=3D</span> <span class=3D"nb">append=
+</span><span class=3D"p">(</span><span class=3D"nx">out</span><span class=
+=3D"p">,</span> <span class=3D"nx">d</span><span class=3D"o">...</span><spa=
+n class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">            <span cla=
+ss=3D"nx">_</span><span class=3D"p">,</span> <span class=3D"nx">err</span> =
+<span class=3D"o">:=3D</span> <span class=3D"nx">w</span><span class=3D"p">=
+.</span><span class=3D"nf">Write</span><span class=3D"p">(</span><span clas=
+s=3D"nx">d</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">            <span cla=
+ss=3D"k">if</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</sp=
+an> <span class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">                <span=
+ class=3D"k">return</span> <span class=3D"nx">out</span><span class=3D"p">,=
+</span> <span class=3D"nx">err</span>
+</span></span><span class=3D"line"><span class=3D"cl">            <span cla=
+ss=3D"p">}</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"p">}</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"k">if</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span=
+> <span class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">            <span cla=
+ss=3D"c1">// Read returns io.EOF at the end of file, which is not an error =
+for us
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>            <span class=3D"k">if</span> <span class=3D"nx">err<=
+/span> <span class=3D"o">=3D=3D</span> <span class=3D"nx">io</span><span cl=
+ass=3D"p">.</span><span class=3D"nx">EOF</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">                <span=
+ class=3D"nx">err</span> <span class=3D"p">=3D</span> <span class=3D"kc">ni=
+l</span>
+</span></span><span class=3D"line"><span class=3D"cl">            <span cla=
+ss=3D"p">}</span>
+</span></span><span class=3D"line"><span class=3D"cl">            <span cla=
+ss=3D"k">return</span> <span class=3D"nx">out</span><span class=3D"p">,</sp=
+an> <span class=3D"nx">err</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"p">}</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Handling errors from <code>Read</code> is subtle. An error <code>io.EO=
+F</code> means that we=E2=80=99ve read everything. It=E2=80=99s not an actu=
+al error so we turn <code>io.EOF</code> into <code>nil</code>.</div>
+
+<div>The meat of the code:</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"kd">func</span> <span class=3D"nf">main</span><span =
+class=3D"p">()</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">  <span class=3D"nx">=
+cmd</span> <span class=3D"o">:=3D</span> <span class=3D"nx">exec</span><spa=
+n class=3D"p">.</span><span class=3D"nf">Command</span><span class=3D"p">(<=
+/span><span class=3D"s">"ls"</span><span class=3D"p">,</span> <span class=
+=3D"s">"-lah"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"kd">v=
+ar</span> <span class=3D"nx">stdout</span><span class=3D"p">,</span> <span =
+class=3D"nx">stderr</span> <span class=3D"p">[]</span><span class=3D"kt">by=
+te</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"kd">v=
+ar</span> <span class=3D"nx">errStdout</span><span class=3D"p">,</span> <sp=
+an class=3D"nx">errStderr</span> <span class=3D"kt">error</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">s=
+tdoutIn</span><span class=3D"p">,</span> <span class=3D"nx">_</span> <span =
+class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span class=3D"p">.</s=
+pan><span class=3D"nf">StdoutPipe</span><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">s=
+tderrIn</span><span class=3D"p">,</span> <span class=3D"nx">_</span> <span =
+class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span class=3D"p">.</s=
+pan><span class=3D"nf">StderrPipe</span><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">e=
+rr</span> <span class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span =
+class=3D"p">.</span><span class=3D"nf">Start</span><span class=3D"p">()</sp=
+an>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <span c=
+lass=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span><span c=
+lass=3D"p">(</span><span class=3D"s">"cmd.Start() failed with '%s'\n"</span=
+><span class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D"p">=
+)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"c1">/=
+/ cmd.Wait() should be called only after we finish reading
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>	<span class=3D"c1">// from stdoutIn and stderrIn.
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>	<span class=3D"c1">// wg ensures that we finish
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>	<span class=3D"kd">var</span> <span class=3D"nx">wg</span> <sp=
+an class=3D"nx">sync</span><span class=3D"p">.</span><span class=3D"nx">Wai=
+tGroup</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">w=
+g</span><span class=3D"p">.</span><span class=3D"nf">Add</span><span class=
+=3D"p">(</span><span class=3D"mi">1</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">go=
+</span> <span class=3D"kd">func</span><span class=3D"p">()</span> <span cla=
+ss=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+stdout</span><span class=3D"p">,</span> <span class=3D"nx">errStdout</span>=
+ <span class=3D"p">=3D</span> <span class=3D"nf">copyAndCapture</span><span=
+ class=3D"p">(</span><span class=3D"nx">os</span><span class=3D"p">.</span>=
+<span class=3D"nx">Stdout</span><span class=3D"p">,</span> <span class=3D"n=
+x">stdoutIn</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+wg</span><span class=3D"p">.</span><span class=3D"nf">Done</span><span clas=
+s=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}(=
+)</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">s=
+tderr</span><span class=3D"p">,</span> <span class=3D"nx">errStderr</span> =
+<span class=3D"p">=3D</span> <span class=3D"nf">copyAndCapture</span><span =
+class=3D"p">(</span><span class=3D"nx">os</span><span class=3D"p">.</span><=
+span class=3D"nx">Stderr</span><span class=3D"p">,</span> <span class=3D"nx=
+">stderrIn</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">w=
+g</span><span class=3D"p">.</span><span class=3D"nf">Wait</span><span class=
+=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">e=
+rr</span> <span class=3D"p">=3D</span> <span class=3D"nx">cmd</span><span c=
+lass=3D"p">.</span><span class=3D"nf">Wait</span><span class=3D"p">()</span=
+>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <span c=
+lass=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span><span c=
+lass=3D"p">(</span><span class=3D"s">"cmd.Run() failed with %s\n"</span><sp=
+an class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D"p">)</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">errStdout</span> <span class=3D"o">!=3D</span> <=
+span class=3D"kc">nil</span> <span class=3D"o">||</span> <span class=3D"nx"=
+>errStderr</span> <span class=3D"o">!=3D</span> <span class=3D"kc">nil</spa=
+n> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+log</span><span class=3D"p">.</span><span class=3D"nf">Fatal</span><span cl=
+ass=3D"p">(</span><span class=3D"s">"failed to capture stdout or stderr\n"<=
+/span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">o=
+utStr</span><span class=3D"p">,</span> <span class=3D"nx">errStr</span> <sp=
+an class=3D"o">:=3D</span> <span class=3D"nb">string</span><span class=3D"p=
+">(</span><span class=3D"nx">stdout</span><span class=3D"p">),</span> <span=
+ class=3D"nb">string</span><span class=3D"p">(</span><span class=3D"nx">std=
+err</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">f=
+mt</span><span class=3D"p">.</span><span class=3D"nf">Printf</span><span cl=
+ass=3D"p">(</span><span class=3D"s">"\nout:\n%s\nerr:\n%s\n"</span><span cl=
+ass=3D"p">,</span> <span class=3D"nx">outStr</span><span class=3D"p">,</spa=
+n> <span class=3D"nx">errStr</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?7cca5f1526b2785e03febc16542b96ea">https://codeeval.dev/gist/7c=
+ca5f1526b2785e03febc16542b96ea</a></div>
+
+<div>We have two outputs to copy. To avoid serializing them, we=E2=80=99ll =
+read one in a goroutine.</div>
+
+<div>As documentation of <code>StdoutPipe</code> warns, <code>Wait</code> w=
+ill close the pipes when the process finishes. This might lead to losing so=
+me output if we haven=E2=80=99t finished reading it.</div>
+
+<div>To prevent that we use <code>sync.WaitGroup</code> to ensure that the =
+gorutine handling <code>os.Stdout</code> finishes reading before we call <c=
+ode>cmd.Wait</code>.</div>
+
+<div>I encourage you to read the implementation of <code>cmd.StdoutPipe</co=
+de>. You=E2=80=99ll be surprised by how short it is.</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"capture-output-but-also-show-progress-2=
+"><div>Capture output but also show progress #2</div><a class=3D"header-anc=
+hor" href=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command-exec=
+ution-in-go-with-osexec.html#capture-output-but-also-show-progress-2">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>Previous solution works but <code>copyAndCapture</code> looks like we=
+=E2=80=99re re-implementing <code>io.Copy</code>. Thanks to Go=E2=80=99s us=
+e of interfaces we can re-use <code>io.Copy</code>.</div>
+
+<div>We=E2=80=99ll write <code>CapturingPassThroughWriter</code> struct imp=
+lementing <code>io.Writer</code> interface. It=E2=80=99ll capture everythin=
+g that=E2=80=99s written to it and also write it to underlying <code>io.Wri=
+ter</code>.</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"c1">// CapturingPassThroughWriter is a writer that r=
+emembers
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1">// data written to it and passes it to w
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span><span class=3D"kd">type</span> <span class=3D"nx">CapturingPass=
+ThroughWriter</span> <span class=3D"kd">struct</span> <span class=3D"p">{</=
+span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">buf</span> <span class=3D"nx">bytes</span><span class=3D"p">.</span><span=
+ class=3D"nx">Buffer</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">w</span> <span class=3D"nx">io</span><span class=3D"p">.</span><span clas=
+s=3D"nx">Writer</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1">//=
+ NewCapturingPassThroughWriter creates new CapturingPassThroughWriter
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span><span class=3D"kd">func</span> <span class=3D"nf">NewCapturingP=
+assThroughWriter</span><span class=3D"p">(</span><span class=3D"nx">w</span=
+> <span class=3D"nx">io</span><span class=3D"p">.</span><span class=3D"nx">=
+Writer</span><span class=3D"p">)</span> <span class=3D"o">*</span><span cla=
+ss=3D"nx">CapturingPassThroughWriter</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>return</span> <span class=3D"o">&amp;</span><span class=3D"nx">CapturingPa=
+ssThroughWriter</span><span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">w</span><span class=3D"p">:</span> <span class=3D"nx">w</span><span=
+ class=3D"p">,</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"kd">fu=
+nc</span> <span class=3D"p">(</span><span class=3D"nx">w</span> <span class=
+=3D"o">*</span><span class=3D"nx">CapturingPassThroughWriter</span><span cl=
+ass=3D"p">)</span> <span class=3D"nf">Write</span><span class=3D"p">(</span=
+><span class=3D"nx">d</span> <span class=3D"p">[]</span><span class=3D"kt">=
+byte</span><span class=3D"p">)</span> <span class=3D"p">(</span><span class=
+=3D"kt">int</span><span class=3D"p">,</span> <span class=3D"kt">error</span=
+><span class=3D"p">)</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">w</span><span class=3D"p">.</span><span class=3D"nx">buf</span><span clas=
+s=3D"p">.</span><span class=3D"nf">Write</span><span class=3D"p">(</span><s=
+pan class=3D"nx">d</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>return</span> <span class=3D"nx">w</span><span class=3D"p">.</span><span c=
+lass=3D"nx">w</span><span class=3D"p">.</span><span class=3D"nf">Write</spa=
+n><span class=3D"p">(</span><span class=3D"nx">d</span><span class=3D"p">)<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1">//=
+ Bytes returns bytes written to the writer
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span><span class=3D"kd">func</span> <span class=3D"p">(</span><span =
+class=3D"nx">w</span> <span class=3D"o">*</span><span class=3D"nx">Capturin=
+gPassThroughWriter</span><span class=3D"p">)</span> <span class=3D"nf">Byte=
+s</span><span class=3D"p">()</span> <span class=3D"p">[]</span><span class=
+=3D"kt">byte</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>return</span> <span class=3D"nx">w</span><span class=3D"p">.</span><span c=
+lass=3D"nx">buf</span><span class=3D"p">.</span><span class=3D"nf">Bytes</s=
+pan><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"kd">fu=
+nc</span> <span class=3D"nf">main</span><span class=3D"p">()</span> <span c=
+lass=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">cmd</span> <span class=3D"o">:=3D</span> <span class=3D"nx">exec</span><s=
+pan class=3D"p">.</span><span class=3D"nf">Command</span><span class=3D"p">=
+(</span><span class=3D"s">"ls"</span><span class=3D"p">,</span> <span class=
+=3D"s">"-lah"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"kd">=
+var</span> <span class=3D"nx">errStdout</span><span class=3D"p">,</span> <s=
+pan class=3D"nx">errStderr</span> <span class=3D"kt">error</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+stdoutIn</span><span class=3D"p">,</span> <span class=3D"nx">_</span> <span=
+ class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span class=3D"p">.</=
+span><span class=3D"nf">StdoutPipe</span><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+stderrIn</span><span class=3D"p">,</span> <span class=3D"nx">_</span> <span=
+ class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span class=3D"p">.</=
+span><span class=3D"nf">StderrPipe</span><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+stdout</span> <span class=3D"o">:=3D</span> <span class=3D"nf">NewCapturing=
+PassThroughWriter</span><span class=3D"p">(</span><span class=3D"nx">os</sp=
+an><span class=3D"p">.</span><span class=3D"nx">Stdout</span><span class=3D=
+"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+stderr</span> <span class=3D"o">:=3D</span> <span class=3D"nf">NewCapturing=
+PassThroughWriter</span><span class=3D"p">(</span><span class=3D"nx">os</sp=
+an><span class=3D"p">.</span><span class=3D"nx">Stderr</span><span class=3D=
+"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+err</span> <span class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span=
+ class=3D"p">.</span><span class=3D"nf">Start</span><span class=3D"p">()</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"k">i=
+f</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <span =
+class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">			<span class=3D"nx"=
+>log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span><span =
+class=3D"p">(</span><span class=3D"s">"cmd.Start() failed with '%s'\n"</spa=
+n><span class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D"p"=
+>)</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"p">}=
+</span>
+</span></span><span class=3D"line"><span class=3D"cl">=09
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"kd">=
+var</span> <span class=3D"nx">wg</span> <span class=3D"nx">sync</span><span=
+ class=3D"p">.</span><span class=3D"nx">WaitGroup</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+wg</span><span class=3D"p">.</span><span class=3D"nf">Add</span><span class=
+=3D"p">(</span><span class=3D"mi">1</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">=09
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"k">g=
+o</span> <span class=3D"kd">func</span><span class=3D"p">()</span> <span cl=
+ass=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">			<span class=3D"nx"=
+>_</span><span class=3D"p">,</span> <span class=3D"nx">errStdout</span> <sp=
+an class=3D"p">=3D</span> <span class=3D"nx">io</span><span class=3D"p">.</=
+span><span class=3D"nf">Copy</span><span class=3D"p">(</span><span class=3D=
+"nx">stdout</span><span class=3D"p">,</span> <span class=3D"nx">stdoutIn</s=
+pan><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">			<span class=3D"nx"=
+>wg</span><span class=3D"p">.</span><span class=3D"nf">Done</span><span cla=
+ss=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"p">}=
+()</span>
+</span></span><span class=3D"line"><span class=3D"cl">=09
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+_</span><span class=3D"p">,</span> <span class=3D"nx">errStderr</span> <spa=
+n class=3D"p">=3D</span> <span class=3D"nx">io</span><span class=3D"p">.</s=
+pan><span class=3D"nf">Copy</span><span class=3D"p">(</span><span class=3D"=
+nx">stderr</span><span class=3D"p">,</span> <span class=3D"nx">stderrIn</sp=
+an><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+wg</span><span class=3D"p">.</span><span class=3D"nf">Wait</span><span clas=
+s=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">=09
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">err</span> <span class=3D"p">=3D</span> <span class=3D"nx">cmd</span><spa=
+n class=3D"p">.</span><span class=3D"nf">Wait</span><span class=3D"p">()</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>if</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <spa=
+n class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span=
+><span class=3D"p">(</span><span class=3D"s">"cmd.Run() failed with %s\n"</=
+span><span class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D=
+"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>if</span> <span class=3D"nx">errStdout</span> <span class=3D"o">!=3D</span=
+> <span class=3D"kc">nil</span> <span class=3D"o">||</span> <span class=3D"=
+nx">errStderr</span> <span class=3D"o">!=3D</span> <span class=3D"kc">nil</=
+span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span=
+><span class=3D"p">(</span><span class=3D"s">"failed to capture stdout or s=
+tderr\n"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">outStr</span><span class=3D"p">,</span> <span class=3D"nx">errStr</span> =
+<span class=3D"o">:=3D</span> <span class=3D"nb">string</span><span class=
+=3D"p">(</span><span class=3D"nx">stdout</span><span class=3D"p">.</span><s=
+pan class=3D"nf">Bytes</span><span class=3D"p">()),</span> <span class=3D"n=
+b">string</span><span class=3D"p">(</span><span class=3D"nx">stderr</span><=
+span class=3D"p">.</span><span class=3D"nf">Bytes</span><span class=3D"p">(=
+))</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">fmt</span><span class=3D"p">.</span><span class=3D"nf">Printf</span><span=
+ class=3D"p">(</span><span class=3D"s">"\nout:\n%s\nerr:\n%s\n"</span><span=
+ class=3D"p">,</span> <span class=3D"nx">outStr</span><span class=3D"p">,</=
+span> <span class=3D"nx">errStr</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?2e4acc63f4f67eafc9c9a30776c01a22">https://codeeval.dev/gist/2e=
+4acc63f4f67eafc9c9a30776c01a22</a></div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"capture-output-but-also-show-progress-3=
+"><div>Capture output but also show progress #3</div><a class=3D"header-anc=
+hor" href=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command-exec=
+ution-in-go-with-osexec.html#capture-output-but-also-show-progress-3">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>Turns out Go=E2=80=99s standard library implements <a target=3D"_blank=
+" href=3D"https://golang.org/pkg/io/#MultiWriter">io.MultiWriter</a>, which=
+ is a more generic version of <code>CapturingPassThroughWriter</code>. Let=
+=E2=80=99s use that instead:</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"kd">func</span> <span class=3D"nf">main</span><span =
+class=3D"p">()</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">c=
+md</span> <span class=3D"o">:=3D</span> <span class=3D"nx">exec</span><span=
+ class=3D"p">.</span><span class=3D"nf">Command</span><span class=3D"p">(</=
+span><span class=3D"s">"ls"</span><span class=3D"p">,</span> <span class=3D=
+"s">"-lah"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">runtime</span><span class=3D"p">.</span><span cl=
+ass=3D"nx">GOOS</span> <span class=3D"o">=3D=3D</span> <span class=3D"s">"w=
+indows"</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+cmd</span> <span class=3D"p">=3D</span> <span class=3D"nx">exec</span><span=
+ class=3D"p">.</span><span class=3D"nf">Command</span><span class=3D"p">(</=
+span><span class=3D"s">"tasklist"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"kd">v=
+ar</span> <span class=3D"nx">stdoutBuf</span><span class=3D"p">,</span> <sp=
+an class=3D"nx">stderrBuf</span> <span class=3D"nx">bytes</span><span class=
+=3D"p">.</span><span class=3D"nx">Buffer</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">c=
+md</span><span class=3D"p">.</span><span class=3D"nx">Stdout</span> <span c=
+lass=3D"p">=3D</span> <span class=3D"nx">io</span><span class=3D"p">.</span=
+><span class=3D"nf">MultiWriter</span><span class=3D"p">(</span><span class=
+=3D"nx">os</span><span class=3D"p">.</span><span class=3D"nx">Stdout</span>=
+<span class=3D"p">,</span> <span class=3D"o">&amp;</span><span class=3D"nx"=
+>stdoutBuf</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">c=
+md</span><span class=3D"p">.</span><span class=3D"nx">Stderr</span> <span c=
+lass=3D"p">=3D</span> <span class=3D"nx">io</span><span class=3D"p">.</span=
+><span class=3D"nf">MultiWriter</span><span class=3D"p">(</span><span class=
+=3D"nx">os</span><span class=3D"p">.</span><span class=3D"nx">Stderr</span>=
+<span class=3D"p">,</span> <span class=3D"o">&amp;</span><span class=3D"nx"=
+>stderrBuf</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">e=
+rr</span> <span class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span =
+class=3D"p">.</span><span class=3D"nf">Run</span><span class=3D"p">()</span=
+>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">if=
+</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <span c=
+lass=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"nx">=
+log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span><span c=
+lass=3D"p">(</span><span class=3D"s">"cmd.Run() failed with %s\n"</span><sp=
+an class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D"p">)</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">}<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">o=
+utStr</span><span class=3D"p">,</span> <span class=3D"nx">errStr</span> <sp=
+an class=3D"o">:=3D</span> <span class=3D"nb">string</span><span class=3D"p=
+">(</span><span class=3D"nx">stdoutBuf</span><span class=3D"p">.</span><spa=
+n class=3D"nf">Bytes</span><span class=3D"p">()),</span> <span class=3D"nb"=
+>string</span><span class=3D"p">(</span><span class=3D"nx">stderrBuf</span>=
+<span class=3D"p">.</span><span class=3D"nf">Bytes</span><span class=3D"p">=
+())</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"nx">f=
+mt</span><span class=3D"p">.</span><span class=3D"nf">Printf</span><span cl=
+ass=3D"p">(</span><span class=3D"s">"\nout:\n%s\nerr:\n%s\n"</span><span cl=
+ass=3D"p">,</span> <span class=3D"nx">outStr</span><span class=3D"p">,</spa=
+n> <span class=3D"nx">errStr</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?2846af817271b7cb727962c8e556650b">https://codeeval.dev/gist/0a=
+1c2b1df8f675c86429768ae496c6f0</a></div>
+
+<div>It=E2=80=99s good to be able to write the code ourselves, but it=E2=80=
+=99s even better to know standard library well!</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"writing-to-program-s-stdin"><div>Writin=
+g to program=E2=80=99s stdin</div><a class=3D"header-anchor" href=3D"https:=
+//blog.kowalczyk.info/article/wOYk/advanced-command-execution-in-go-with-os=
+exec.html#writing-to-program-s-stdin">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>We know how to read program=E2=80=99s stdout but we can also write to =
+its stdin.</div>
+
+<div>There is no Go library to do bzip2 compression (only decompression is =
+available in standard library).</div>
+
+<div>We can use <code>bzip2</code> to do the compression by: * writing the =
+data to a temporary file * call <code>bzip2 -c ${file_in}</code> and captur=
+e its stdout</div>
+
+<div>It would be even better if we didn=E2=80=99t have to create a temporar=
+y file.</div>
+
+<div>Most compression programs accept data to compress/decompress on stdin.=
+</div>
+
+<div>To do that on command-line we would use the following command: <code>b=
+zip2 -c &lt;${file_in} &gt;${file_out}</code>.</div>
+
+<div>Here=E2=80=99s the same thing in Go:</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"c1">// compress data using bzip2 without creating te=
+mporary files
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span><span class=3D"kd">func</span> <span class=3D"nf">bzipCompress<=
+/span><span class=3D"p">(</span><span class=3D"nx">d</span> <span class=3D"=
+p">[]</span><span class=3D"kt">byte</span><span class=3D"p">)</span> <span =
+class=3D"p">([]</span><span class=3D"kt">byte</span><span class=3D"p">,</sp=
+an> <span class=3D"kt">error</span><span class=3D"p">)</span> <span class=
+=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"kd=
+">var</span> <span class=3D"nx">out</span> <span class=3D"nx">bytes</span><=
+span class=3D"p">.</span><span class=3D"nx">Buffer</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"c1=
+">// -c : compress
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>    <span class=3D"c1">// -9 : select the highest level of comp=
+resion
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>    <span class=3D"nx">cmd</span> <span class=3D"o">:=3D</span>=
+ <span class=3D"nx">exec</span><span class=3D"p">.</span><span class=3D"nf"=
+>Command</span><span class=3D"p">(</span><span class=3D"s">"bzip2"</span><s=
+pan class=3D"p">,</span> <span class=3D"s">"-c"</span><span class=3D"p">,</=
+span> <span class=3D"s">"-9"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">cmd</span><span class=3D"p">.</span><span class=3D"nx">Stdin</span> <span=
+ class=3D"p">=3D</span> <span class=3D"nx">bytes</span><span class=3D"p">.<=
+/span><span class=3D"nf">NewBuffer</span><span class=3D"p">(</span><span cl=
+ass=3D"nx">d</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">cmd</span><span class=3D"p">.</span><span class=3D"nx">Stdout</span> <spa=
+n class=3D"p">=3D</span> <span class=3D"o">&amp;</span><span class=3D"nx">o=
+ut</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">err</span> <span class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><sp=
+an class=3D"p">.</span><span class=3D"nf">Run</span><span class=3D"p">()</s=
+pan>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>if</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <spa=
+n class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"k">return</span> <span class=3D"kc">nil</span><span class=3D"p">,</span=
+> <span class=3D"nx">err</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>return</span> <span class=3D"nx">out</span><span class=3D"p">.</span><span=
+ class=3D"nf">Bytes</span><span class=3D"p">(),</span> <span class=3D"kc">n=
+il</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?1d572914e41d8d88f9ec92230dae25b7">https://codeeval.dev/gist/1d=
+572914e41d8d88f9ec92230dae25b7</a></div>
+
+<div>We can also call <code>cmd.StdinPipe()</code>, which returns <code>io.=
+WriteCloser</code>. It=E2=80=99s more complicated but gives more control ov=
+er writing.</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"changing-environment-of-executed-progra=
+m"><div>Changing environment of executed program</div><a class=3D"header-an=
+chor" href=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command-exe=
+cution-in-go-with-osexec.html#changing-environment-of-executed-program">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>Things to know about environment variables in Go:</div>
+
+<ul>
+<li><code>os.Environ()</code> returns <code>[]string</code> where each stri=
+ng is in form of <code>FOO=3Dbar</code>, where <code>FOO</code> is the name=
+ of environment variable and <code>bar</code> is the value</li>
+<li><code>os.Getenv("FOO")</code> returns the value of environment variable=
+ <code>FOO</code>.</li>
+</ul>
+
+<div>Sometimes you need to modify the environment of the executed program.<=
+/div>
+
+<div>Go supports that by setting <code>Env</code> member of <code>exec.Cmd<=
+/code>. <code>cmd.Env</code> has the same format as <code>os.Environ()</cod=
+e>.</div>
+
+<div>If <code>Env</code> is not set, the process inherits environment of th=
+e calling process.</div>
+
+<div>Usually, you don=E2=80=99t want to construct a completely new environm=
+ent from scratch but pass a modified version of an environment of the curre=
+nt process. Here=E2=80=99s how to add a new variable:</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"nx">cmd</span> <span class=3D"o">:=3D</span> <span c=
+lass=3D"nx">exec</span><span class=3D"p">.</span><span class=3D"nf">Command=
+</span><span class=3D"p">(</span><span class=3D"s">"programToExecute"</span=
+><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">additionalEnv</span> <span class=3D"o">:=3D</span> <span class=3D"s">"FOO=
+=3Dbar"</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">newEnv</span> <span class=3D"o">:=3D</span> <span class=3D"nb">append</sp=
+an><span class=3D"p">(</span><span class=3D"nx">os</span><span class=3D"p">=
+.</span><span class=3D"nf">Environ</span><span class=3D"p">(),</span> <span=
+ class=3D"nx">additionalEnv</span><span class=3D"p">))</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">cmd</span><span class=3D"p">.</span><span class=3D"nx">Env</span> <span c=
+lass=3D"p">=3D</span> <span class=3D"nx">newEnv</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">out</span><span class=3D"p">,</span> <span class=3D"nx">err</span> <span =
+class=3D"o">:=3D</span> <span class=3D"nx">cmd</span><span class=3D"p">.</s=
+pan><span class=3D"nf">CombinedOutput</span><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>if</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <spa=
+n class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">log</span><span class=3D"p">.</span><span class=3D"nf">Fatalf</span=
+><span class=3D"p">(</span><span class=3D"s">"cmd.Run() failed with %s\n"</=
+span><span class=3D"p">,</span> <span class=3D"nx">err</span><span class=3D=
+"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">fmt</span><span class=3D"p">.</span><span class=3D"nf">Printf</span><span=
+ class=3D"p">(</span><span class=3D"s">"%s"</span><span class=3D"p">,</span=
+> <span class=3D"nx">out</span><span class=3D"p">)</span>
+</span></span></code></pre>
+<div>Full example</div>
+
+<div>Things get more complicated if you want to delete an environment or to=
+ ensure you=E2=80=99re not setting the same variable twice. Package <a targ=
+et=3D"_blank" href=3D"https://godoc.org/github.com/shurcooL/go/osutil#Envir=
+on">shurcooL/go/osutil</a>  offers an easier way of manipulating environmen=
+t variables.</div>
+
+<h2 class=3D"hdr-with-anchor" id=3D"check-early-that-a-program-is-installed=
+"><div>Check early that a program is installed</div><a class=3D"header-anch=
+or" href=3D"https://blog.kowalczyk.info/article/wOYk/advanced-command-execu=
+tion-in-go-with-osexec.html#check-early-that-a-program-is-installed">
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"1em" height=3D"1em" view=
+Box=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" =
+stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"header-anchor-w=
+idget-icon">
+	<path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></=
+path>
+	<path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path>
+</svg>
+</a>
+</h2>
+
+<div>Imagine you wrote a program that takes a long time to run. At the end,=
+ you call executable <code>foo</code> to perform an essential task.</div>
+
+<div>If <code>foo</code> executable is not present, the call will fail.</di=
+v>
+
+<div>It=E2=80=99s a good idea to detect lack of executable <code>foo</code>=
+ at the beginning and fail early with descriptive error message.</div>
+
+<div>You can do it using <code>exec.LookPath</code>.</div>
+<pre tabindex=3D"0" class=3D"chroma"><code><span class=3D"line"><span class=
+=3D"cl"><span class=3D"kd">func</span> <span class=3D"nf">checkLsExists</sp=
+an><span class=3D"p">()</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"nx=
+">path</span><span class=3D"p">,</span> <span class=3D"nx">err</span> <span=
+ class=3D"o">:=3D</span> <span class=3D"nx">exec</span><span class=3D"p">.<=
+/span><span class=3D"nf">LookPath</span><span class=3D"p">(</span><span cla=
+ss=3D"s">"ls"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"k"=
+>if</span> <span class=3D"nx">err</span> <span class=3D"o">!=3D</span> <spa=
+n class=3D"kc">nil</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">fmt</span><span class=3D"p">.</span><span class=3D"nf">Printf</span=
+><span class=3D"p">(</span><span class=3D"s">"didn't find 'ls' executable\n=
+"</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span> <span class=3D"k">else</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">        <span class=
+=3D"nx">fmt</span><span class=3D"p">.</span><span class=3D"nf">Printf</span=
+><span class=3D"p">(</span><span class=3D"s">"'ls' executable is in '%s'\n"=
+</span><span class=3D"p">,</span> <span class=3D"nx">path</span><span class=
+=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>}</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre>
+<div>Full example at <a target=3D"_blank" href=3D"https://onlinetool.io/gis=
+teditor/edit?2a80bc3e48d7f36f3299367660a0aedd">https://codeeval.dev/gist/2a=
+80bc3e48d7f36f3299367660a0aedd</a></div>
+
+<div>Another way to check if a program exists is to try to execute it in a =
+no-op mode (e.g.&nbsp;many programs support <code>--help</code> option).</d=
+iv>
+
+<div>Code for this chapter: <a target=3D"_blank" href=3D"https://github.com=
+/kjk/the-code/tree/master/go/advanced-exec">https://github.com/kjk/the-code=
+/tree/master/go/advanced-exec</a></div>
+
+</div>
+
+
+        <div class=3D"article-meta">
+            <div>
+               =20
+               =20
+               =20
+            </div>
+            <div>
+               =20
+               =20
+                <a href=3D"https://blog.kowalczyk.info/book/go-cookbook.htm=
+l">Go Cookbook</a>
+               =20
+               =20
+            </div>
+            <div>
+                Found a mistake, have a comment?
+                <a href=3D"https://blog.kowalczyk.info/article/wOYk/advance=
+d-command-execution-in-go-with-osexec.html#">Let me know</a>.
+            </div>
+        </div>
+
+        <form name=3D"blog-article-feedback" netlify=3D"" id=3D"contact-for=
+m">
+            <p>
+            </p><div class=3D"contact-light">Feedback about page:</div>
+            <input type=3D"text" name=3D"page-url" id=3D"contact-page-url" =
+readonly=3D"">
+            <p></p>
+            <p>
+            </p><div class=3D"contact-light">Feedback:</div>
+            <textarea name=3D"message" id=3D"msg-for-chris"></textarea>
+            <div class=3D"contact-light">Optional: your email if you want m=
+e to get back to you: </div>
+            <input type=3D"email" name=3D"email">
+            <p></p>
+            <p>
+                <button type=3D"submit" class=3D"contact-btn">
+                    Send Feedback
+                </button>
+                <button class=3D"contact-btn" style=3D"float: right;">
+                    Cancel
+                </button>
+            </p>
+        </form>
+
+        <p></p>
+    </div>
+
+
+
+</body></html>
+------MultipartBoundary--XgvdT5YdSooo3hfvWY9Up3kYKfWecWjfWvNl6ynhQr----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-a01e2e41-6358-4cfa-b91c-e5ceb4e8454d@mhtml.blink
+
+@charset "utf-8";
+
+.tnav { margin-top: 0.5rem; align-items: baseline; flex-wrap: wrap; justify=
+-content: space-around; gap: 8px 4px; }
+
+.title { font-size: 18pt; font-weight: bold; }
+
+.tagtop { font-size: 9pt; margin-left: 1em; color: rgb(68, 68, 68); backgro=
+und-color: rgb(243, 243, 243); padding: 4px 1em 6px; }
+
+.tagtop:hover { color: black; background-color: rgb(231, 231, 231); outline=
+: rgb(215, 215, 215) solid 1px; }
+
+.toc-toggle { font-size: 12px; right: 8px; top: 42px; padding: 4px 8px; bor=
+der: 1px solid lightgray; background-color: white; color: gray; z-index: 10=
+; }
+------MultipartBoundary--XgvdT5YdSooo3hfvWY9Up3kYKfWecWjfWvNl6ynhQr----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://blog.kowalczyk.info/css/main.css
+
+@charset "utf-8";
+
+body { background: white; color: rgb(51, 51, 51); font-family: -apple-syste=
+m, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Col=
+or Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; margin: 0px; padding: 0px 0=
+px 2em; }
+
+h1, h2, h3 { letter-spacing: -0.01em; line-height: 1.2; font-weight: 600; m=
+argin-bottom: 4pt; }
+
+.page-title { font-size: 2.5rem; font-weight: 700; margin-top: 0px; margin-=
+bottom: 0.75em; }
+
+h1 { font-size: 1.875rem; }
+
+h2 { font-size: 1.5rem; }
+
+h3 { font-size: 1.25rem; }
+
+img { border: 0px; }
+
+blockquote { font-style: italic; }
+
+div#tophdr { font-size: 10pt; font-weight: bold; margin: 0px; padding: 6pt =
+16px; }
+
+div.centered { text-align: center; }
+
+div.centered table { margin: 0px auto; text-align: left; }
+
+#content { display: flex; justify-content: center; }
+
+hr { border-width: 1px 0px 0px; border-right-style: initial; border-bottom-=
+style: initial; border-left-style: initial; border-right-color: initial; bo=
+rder-bottom-color: initial; border-left-color: initial; border-image: initi=
+al; border-top-style: solid; border-top-color: rgb(238, 238, 238); }
+
+.lvl1 { margin-left: 1em; }
+
+.lvl2 { margin-left: 2em; }
+
+.lvl3 { margin-left: 3em; }
+
+.lvl4 { margin-left: 4em; }
+
+.column-list { display: flex; width: 100%; }
+
+.column-list > div { flex: 1 1 0%; }
+
+.title { display: flex; align-items: center; flex-wrap: wrap; justify-conte=
+nt: space-around; gap: 8px 4px; margin-block-end: 0.5em !important; }
+
+a { color: rgb(8, 148, 241); background: transparent; text-decoration: none=
+; }
+
+a:hover { color: rgb(5, 77, 125); }
+
+.taglink { color: gray; text-decoration: none; }
+
+a.taglink:hover { text-decoration: underline; }
+
+.article-header { margin-top: 16px; }
+
+.tryonline { font-size: 80%; position: absolute; bottom: 0.5rem; right: 0.5=
+rem; padding: 0.25rem 0.5rem; color: black; border: 1px solid gray; }
+
+.tryonline:hover { color: black; background-color: lightgray; }
+
+.hdr-image:hover { filter: grayscale(100%); }
+
+.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+.wrap { width: calc(100% - 2rem); max-width: 960px; margin-left: auto; marg=
+in-right: auto; }
+
+.selected-img { border: 1px solid lightskyblue; }
+
+.img-wrapper-wrapper { display: flex; flex-direction: row; justify-content:=
+ center; }
+
+.img-wrapper { position: relative; }
+
+.img-wrapper > img { object-fit: scale-down; max-width: 95vw; max-height: 4=
+80px; }
+
+.nav-icon-left { position: absolute; left: -16px; top: calc(50% - 24px); }
+
+.nav-icon-right { position: absolute; right: -16px; top: calc(50% - 24px); =
+}
+
+a.for-nav-icon { display: flex; text-decoration: none; font-size: 0px; just=
+ify-content: center; align-items: center; fill: gray; width: 40px; height: =
+40px; border-radius: 24px; background-color: rgb(255, 255, 255); box-shadow=
+: rgba(0, 0, 0, 0.3) 0px 4px 4px, rgba(0, 0, 0, 0.2) 0px 0px 4px; }
+
+a.for-nav-icon:hover { fill: rgb(85, 85, 85); background-color: rgb(242, 24=
+2, 242); }
+
+.nav-icon { width: 24px; height: 24px; pointer-events: none; display: block=
+; }
+
+.ib { display: inline-block; }
+
+@media only screen and (max-width: 767px), only screen and (max-device-widt=
+h: 767px) {
+  .hide-mobile { display: none; }
+}
+
+.page-cover-image { width: 100%; }
+
+@media (max-width: 768px) {
+  .page-cover-image { display: none; }
+}
+
+.table_of_contents-item { display: block; font-size: 0.875rem; line-height:=
+ 1.3; padding: 0.125rem; }
+
+.table_of_contents-indent-1 { margin-left: 1.5rem; }
+
+.table_of_contents-indent-2 { margin-left: 3rem; }
+
+.table_of_contents-indent-3 { margin-left: 4.5rem; }
+
+.table_of_contents-link { text-decoration: none; opacity: 0.7; border-botto=
+m: 1px solid rgba(55, 53, 47, 0.18); }
+
+nav div { margin-block-end: 0px !important; }
+
+.block-color-gray { color: rgba(55, 53, 47, 0.6); fill: rgba(55, 53, 47, 0.=
+6); }
+
+.article-meta { display: flex; flex-direction: row; align-items: center; pa=
+dding-top: 1em; color: gray; font-size: 0.9em; }
+
+.article-meta > div { flex: 1 0 0px; }
+
+.article-meta > div:nth-child(2) { text-align: center; font-size: 1.1em; fl=
+ex-grow: 0; flex-shrink: 1; }
+
+.article-meta > div:nth-child(3) { text-align: right; }
+
+div.indented { margin-left: 1em; }
+
+div#post div { min-height: 1em; margin-block: 0px 0.5em; }
+
+div#post div.page { margin-block-end: 0px; }
+
+.relative { position: relative; }
+
+.absolute { position: absolute; }
+
+.fixed { position: fixed; }
+
+.notion-callout { background-color: rgb(239, 239, 239); padding: 0.5em; }
+
+.notion-page { padding-top: 1em; }
+
+.notion-figure-icon-wrap { padding-right: 0.3em; }
+
+.notion-date { opacity: 0.5; }
+
+.notion-video { max-width: 100%; }
+
+hr.notion-divider { margin-top: 1em; margin-bottom: 1em; border-width: 1px =
+0px 0px; border-right-style: initial; border-bottom-style: initial; border-=
+left-style: initial; border-right-color: initial; border-bottom-color: init=
+ial; border-left-color: initial; border-image: initial; border-top-style: s=
+olid; border-top-color: rgb(238, 238, 238); }
+
+details.notion-toggle > div, details.notion-toggle > details { margin-left:=
+ 1.4em; }
+
+details.notion-toggle > ul, details.notion-toggle > ol { margin-block: 0px;=
+ }
+
+details.notion-toggle > summary::-webkit-details-marker:hover { color: gray=
+; cursor: pointer; }
+
+img.notion-image { display: block; margin-left: auto; margin-right: auto; m=
+ax-width: 100%; }
+
+div.column-list { display: flex; width: 100%; }
+
+div.column { flex: 1 1 0%; padding-right: 8px; }
+
+table.notion-table { background-color: white; }
+
+table.notion-table th { color: rgb(165, 165, 165); font-weight: normal; bor=
+der-right: 1px solid rgb(243, 243, 243); border-bottom: 1px solid rgb(221, =
+225, 227); border-top: 1px solid rgb(221, 225, 227); padding: 1px 8px; marg=
+in: 0px; }
+
+table.notion-table td { border-right: 1px solid rgb(243, 243, 243); border-=
+bottom: 1px solid rgb(221, 225, 227); padding: 1px 8px; margin: 0px; }
+
+.ad { font-family: geneva, helvetica, arial, sans-serif; font-size: 12pt; b=
+ackground-color: rgb(251, 240, 250); padding: 4px 8px; }
+
+.adl { color: green; }
+
+.light { color: rgb(153, 153, 153); }
+
+.blog-img { display: block; margin-left: auto; margin-right: auto; max-widt=
+h: 100%; }
+
+#container { margin-left: 16pt; margin-right: 16pt; }
+
+.hdr { padding-top: 2px; box-shadow: rgb(8, 148, 241) 0px 3px 4px -4px; }
+
+.hdr-with-anchor { display: flex; align-items: baseline; }
+
+.hdr-with-anchor:hover .header-anchor { display: block; }
+
+h1 .header-anchor { transform: translateY(3px); }
+
+h2 .header-anchor { transform: translateY(2px); }
+
+h3 .header-anchor { transform: translateY(1px); }
+
+.header-anchor { margin-left: 0.5rem; font-size: 70%; color: black; display=
+: none; }
+
+.underline { border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding-bottom: 4=
+px; margin-bottom: 24px; }
+
+.book-cover { width: 160px; height: 160px; margin-left: 4px; margin-right: =
+4px; object-fit: contain; }
+
+.book-list-headline { margin-bottom: 1em; margin-top: 0.5em; text-align: ce=
+nter; font-weight: bold; }
+
+#books-list { justify-content: center; }
+
+.articles-list-wrap { align-items: center; line-height: 1.8; }
+
+.headline { line-height: 1.4em; }
+
+#soft-list { display: flex; flex-flow: wrap; justify-content: center; }
+
+.soft-title { align-self: center; margin-top: 8px; font-weight: bold; }
+
+.soft-card { display: flex; flex-direction: column; padding: 15px; margin-l=
+eft: 16px; box-shadow: rgba(60, 66, 87, 0.1) 0px 7px 14px 0px, rgba(0, 0, 0=
+, 0.07) 0px 3px 6px 0px; }
+
+.soft-desc { font-size: 90%; max-width: 240px; margin-top: 8px; }
+
+.soft-card-img { width: 240px; height: 240px; }
+
+#banner-notice { display: flex; flex-direction: row; justify-content: cente=
+r; padding-top: 1em; font-weight: bold; }
+
+#banner-notice div { padding: 0.5em 1em; border: 1px solid dodgerblue; bord=
+er-radius: 8px; }
+
+#ad-software { position: fixed; left: 0px; right: 0px; bottom: 0px; padding=
+: 8px 2em; border-top: 1px solid rgb(230, 224, 12); background-color: rgb(2=
+53, 255, 120); color: rgb(84, 21, 21); display: none; }
+
+#ad-software a { color: rgb(84, 21, 21); text-decoration: underline; positi=
+on: relative; }
+
+#ad-software a:hover { position: relative; }
+
+#ad-software a:hover::after { content: url("/static/documentalist-shot-320p=
+x.png"); display: block; position: absolute; left: -74px; bottom: 1.5em; ba=
+ckground-color: rgb(253, 255, 120); padding: 1em; }
+
+.hljs { display: block; padding: 0.5em; background-color: rgb(253, 253, 253=
+); color: rgb(101, 123, 131); border: 1px solid rgb(229, 229, 229); overflo=
+w-x: visible; font-size: 85%; tab-size: 2; }
+
+.hljs-comment, .hljs-quote { color: rgb(147, 161, 161); }
+
+.hljs-keyword, .hljs-selector-tag, .hljs-addition { color: rgb(133, 153, 0)=
+; }
+
+.hljs-number, .hljs-string, .hljs-meta .hljs-meta-string, .hljs-literal, .h=
+ljs-doctag, .hljs-regexp { color: rgb(42, 161, 152); }
+
+.hljs-title, .hljs-section, .hljs-name, .hljs-selector-id, .hljs-selector-c=
+lass { color: rgb(38, 139, 210); }
+
+.hljs-attribute, .hljs-attr, .hljs-variable, .hljs-template-variable, .hljs=
+-class .hljs-title, .hljs-type { color: rgb(181, 137, 0); }
+
+.hljs-symbol, .hljs-bullet, .hljs-subst, .hljs-meta, .hljs-meta .hljs-keywo=
+rd, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-link { color: rgb(203=
+, 75, 22); }
+
+.hljs-built_in, .hljs-deletion { color: rgb(220, 50, 47); }
+
+.hljs-formula { background: rgb(238, 232, 213); }
+
+.hljs-emphasis { font-style: italic; }
+
+.hljs-strong { font-weight: bold; }
+
+.pln { color: rgb(0, 0, 0); }
+
+@media screen {
+  .str { color: rgb(0, 136, 0); }
+  .kwd { color: rgb(0, 0, 136); }
+  .com { color: rgb(136, 0, 0); }
+  .typ { color: rgb(102, 0, 102); }
+  .lit { color: rgb(0, 102, 102); }
+  .pun, .opn, .clo { color: rgb(102, 102, 0); }
+  .tag { color: rgb(0, 0, 136); }
+  .atn { color: rgb(102, 0, 102); }
+  .atv { color: rgb(0, 136, 0); }
+  .dec, .var { color: rgb(102, 0, 102); }
+  .fun { color: red; }
+}
+
+@media print, projection {
+  .str { color: rgb(0, 102, 0); }
+  .kwd { color: rgb(0, 0, 102); font-weight: bold; }
+  .com { color: rgb(102, 0, 0); font-style: italic; }
+  .typ { color: rgb(68, 0, 68); font-weight: bold; }
+  .lit { color: rgb(0, 68, 68); }
+  .pun, .opn, .clo { color: rgb(68, 68, 0); }
+  .tag { color: rgb(0, 0, 102); font-weight: bold; }
+  .atn { color: rgb(68, 0, 68); }
+  .atv { color: rgb(0, 102, 0); }
+}
+
+pre.prettyprint { padding: 2px; border: 1px solid rgb(136, 136, 136); }
+
+ol.linenums { margin-top: 0px; margin-bottom: 0px; }
+
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { list-style-type: n=
+one; }
+
+li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgb(238, 238, 238); }
+
+.share-me { font-size: 90%; color: gray; background-color: rgb(243, 250, 25=
+3); display: inline-block; padding: 8px 16px; }
+
+.edit-link { color: white; }
+
+.edit-link:hover { color: rgb(8, 148, 241); }
+
+#msg-for-chris { width: 100%; height: 8em; }
+
+textarea { font-size: 12pt; }
+
+#contact-form { padding: 1em 2em; width: 75vw; position: fixed; right: 8px;=
+ bottom: 2em; z-index: 99; background-color: rgb(243, 243, 243); border: 1p=
+x solid lightgray; box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 4px, rgba(0, 0, 0=
+, 0.2) 0px 0px 4px; display: none; }
+
+#contact-form button { padding: 8px; }
+
+#contact-page-url { font-size: 85%; border: 0px; color: grey; margin-left: =
+2px; background-color: inherit; }
+
+form > input { width: 100%; }
+
+form > button { border: 1px solid lightgray; }
+
+form > button:hover { background-color: lightgray; }
+
+.contact-light { font-size: 85%; color: gray; margin-left: 2px; margin-bott=
+om: 4px; }
+
+.sticky { position: sticky; }
+
+.hidden { display: none; }
+
+.top-0 { top: 0px; }
+
+.bg-white { --tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--t=
+w-bg-opacity)); }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.w-full { width: 100%; }
+
+.font-bold { font-weight: bold; }
+
+.flex { display: flex; }
+
+.flex-col { flex-direction: column; }
+
+.grow { flex-grow: 1; }
+
+.items-center { align-items: center; }
+
+.justify-center { justify-content: center; }
+
+.justify-between { justify-content: space-between; }
+
+.px-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+
+.flex-row { display: flex; flex-direction: row; }
+
+.flex-col { display: flex; flex-direction: column; }
+
+.z-10 { z-index: 10; }
+
+.f7 { font-size: 0.75rem; }
+
+.mt1 { margin-top: 0.25rem; }
+
+.mt2 { margin-top: 0.5rem; }
+
+.mt3 { margin-top: 1rem; }
+
+.mb6 { margin-bottom: 2rem; }
+
+.pa1 { padding: 4px; }
+
+.mr2 { margin-right: 0.5rem; }
+
+.mr3 { margin-right: 1rem; }
+
+.nowrap { white-space: nowrap; }
+
+.draft { color: rgb(255, 5, 145); }
+
+code { background-color: rgb(248, 248, 248); }
+
+.chroma { display: block; background-color: rgb(248, 248, 248); color: rgb(=
+0, 0, 0); overflow-x: visible; tab-size: 2; border-top: 1px solid rgb(229, =
+229, 229); border-bottom: 1px solid rgb(229, 229, 229); padding: 0.5em 0px;=
+ font-size: 10pt; }
+
+.bg { background-color: rgb(255, 255, 255); }
+
+.chroma .lnlinks { outline: none; text-decoration: none; color: inherit; }
+
+.chroma .lntd { vertical-align: top; padding: 0px; margin: 0px; border: 0px=
+; }
+
+.chroma .lntable { border-spacing: 0px; padding: 0px; margin: 0px; border: =
+0px; }
+
+.chroma .hl { background-color: rgb(229, 229, 229); }
+
+.chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; pa=
+dding: 0px 0.4em; color: rgb(127, 127, 127); }
+
+.chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; pad=
+ding: 0px 0.4em; color: rgb(127, 127, 127); }
+
+.chroma .line { display: flex; }
+
+.chroma .k { color: rgb(0, 0, 255); }
+
+.chroma .kc { color: rgb(0, 0, 255); }
+
+.chroma .kd { color: rgb(0, 0, 255); }
+
+.chroma .kn { color: rgb(0, 0, 255); }
+
+.chroma .kp { color: rgb(0, 0, 255); }
+
+.chroma .kr { color: rgb(0, 0, 255); }
+
+.chroma .kt { color: rgb(0, 0, 255); }
+
+.chroma .nc { color: rgb(0, 117, 117); }
+
+.chroma .nd { color: rgb(204, 0, 163); }
+
+.chroma .nf { color: rgb(195, 78, 0); }
+
+.chroma .s { color: rgb(0, 156, 0); }
+
+.chroma .sa { color: rgb(0, 156, 0); }
+
+.chroma .sb { color: rgb(0, 156, 0); }
+
+.chroma .sc { color: rgb(0, 156, 0); }
+
+.chroma .dl { color: rgb(0, 156, 0); }
+
+.chroma .sd { color: rgb(0, 156, 0); }
+
+.chroma .s2 { color: rgb(0, 156, 0); }
+
+.chroma .se { color: rgb(0, 156, 0); }
+
+.chroma .sh { color: rgb(0, 156, 0); }
+
+.chroma .si { color: rgb(0, 156, 0); }
+
+.chroma .sx { color: rgb(0, 156, 0); }
+
+.chroma .sr { color: rgb(0, 156, 0); }
+
+.chroma .s1 { color: rgb(0, 156, 0); }
+
+.chroma .ss { color: rgb(0, 156, 0); }
+
+.chroma .c { color: rgb(255, 0, 0); font-style: italic; }
+
+.chroma .ch { color: rgb(255, 0, 0); font-style: italic; }
+
+.chroma .cm { color: rgb(255, 0, 0); font-style: italic; }
+
+.chroma .c1 { color: rgb(255, 0, 0); font-style: italic; }
+
+.chroma .cs { color: rgb(255, 0, 0); font-style: italic; }
+
+.chroma .cp { color: rgb(255, 0, 0); font-style: italic; }
+
+.chroma .cpf { color: rgb(255, 0, 0); font-style: italic; }
+------MultipartBoundary--XgvdT5YdSooo3hfvWY9Up3kYKfWecWjfWvNl6ynhQr----
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: https://blog.kowalczyk.info/img/e40644af4f292f22988946103fb8d1b195262caf.jpg
+
+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
+dXUMf5obL+DP/9k=
+
+------MultipartBoundary--XgvdT5YdSooo3hfvWY9Up3kYKfWecWjfWvNl6ynhQr------
