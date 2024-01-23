@@ -35,3 +35,6 @@
 ## Header and Footer
 * [How to remove the top horizontal bar in fancyhdr?](https://tex.stackexchange.com/questions/13896/how-to-remove-the-top-horizontal-bar-in-fancyhdr)
 * [Using the fancyhdr package](https://www.overleaf.com/learn/latex/Headers_and_footers#Using_the_fancyhdr_package)
+
+## Compile
+* [Prevent pdflatex from writing a bunch of files](https://tex.stackexchange.com/questions/11123/prevent-pdflatex-from-writing-a-bunch-of-files)
