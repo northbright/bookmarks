@@ -38,3 +38,4 @@
 
 ## Compile
 * [Prevent pdflatex from writing a bunch of files](https://tex.stackexchange.com/questions/11123/prevent-pdflatex-from-writing-a-bunch-of-files)
+* [Definition of the TEXINPUTS variable](https://tex.stackexchange.com/questions/93712/definition-of-the-texinputs-variable)
