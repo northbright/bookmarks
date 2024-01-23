@@ -41,3 +41,4 @@
 * [Definition of the TEXINPUTS variable](https://tex.stackexchange.com/questions/93712/definition-of-the-texinputs-variable)
 * [How can I enable shell-escape?](https://tex.stackexchange.com/questions/598818/how-can-i-enable-shell-escape)
 * [What does --shell-escape do?](https://tex.stackexchange.com/questions/88740/what-does-shell-escape-do)
+* [Interaction modes](https://tex.stackexchange.com/questions/91592/where-to-find-official-and-extended-documentation-for-tex-latexs-commandlin)
