@@ -40,3 +40,4 @@
 * [Prevent pdflatex from writing a bunch of files](https://tex.stackexchange.com/questions/11123/prevent-pdflatex-from-writing-a-bunch-of-files)
 * [Definition of the TEXINPUTS variable](https://tex.stackexchange.com/questions/93712/definition-of-the-texinputs-variable)
 * [How can I enable shell-escape?](https://tex.stackexchange.com/questions/598818/how-can-i-enable-shell-escape)
+* [What does --shell-escape do?](https://tex.stackexchange.com/questions/88740/what-does-shell-escape-do)
