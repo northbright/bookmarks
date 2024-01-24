@@ -13,6 +13,8 @@
 * [How to install LaTex on Ubuntu 22.04 Jammy Jellyfish Linux](https://linuxconfig.org/how-to-install-latex-on-ubuntu-22-04-jammy-jellyfish-linux)
 * [TeX Live - Quick install for Unix](https://tug.org/texlive/quickinstall.html)
 * [install-tl - TeX Live cross-platform installer](https://tug.org/texlive/doc/install-tl.html)
+* Github Action
+  * [setup-texlive-action](https://github.com/teatimeguest/setup-texlive-action)
 
 ## Editor
 * [TeXShop](https://pages.uoregon.edu/koch/texshop/)
