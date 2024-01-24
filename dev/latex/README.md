@@ -16,6 +16,9 @@
 * Github Action
   * [setup-texlive-action](https://github.com/teatimeguest/setup-texlive-action)
 
+## tlmgr
+* [关于 tlmgr 使用方法的简介](https://ctan.math.washington.edu/tex-archive/info/tlmgr-intro-zh-cn/tlmgr-intro-zh-cn.pdf)
+
 ## Editor
 * [TeXShop](https://pages.uoregon.edu/koch/texshop/)
 
