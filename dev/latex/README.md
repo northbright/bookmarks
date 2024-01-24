@@ -9,6 +9,9 @@
   * [Overleaf 版本](https://www.overleaf.com/project/622df830d7e1111ae7ccddb7)
 * [如何从零开始，入门 LaTeX？](https://www.zhihu.com/question/62943097/answer/2432483007)
 
+## Installation
+* [How to install LaTex on Ubuntu 22.04 Jammy Jellyfish Linux](https://linuxconfig.org/how-to-install-latex-on-ubuntu-22-04-jammy-jellyfish-linux)
+
 ## Editor
 * [TeXShop](https://pages.uoregon.edu/koch/texshop/)
 
