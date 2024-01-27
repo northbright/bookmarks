@@ -126,3 +126,4 @@
 * [尼康到底黄不黄，入手尼康D3，依旧令人振奋](https://zhuanlan.zhihu.com/p/123351570)
 * [14年前力挽狂澜，帝国旗舰破局之作：尼康D3](https://www.zhihu.com/zvideo/1383713246390640640)
 * [最爱尼康老旗舰D3](https://zhuanlan.zhihu.com/p/144385211)
+* [尼康首款全画幅旗舰单反尼康D3力挽狂澜之作](https://www.bilibili.com/video/BV1DF41127QU/)
