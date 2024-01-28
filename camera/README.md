@@ -131,3 +131,4 @@
   * [最爱尼康老旗舰D3](https://zhuanlan.zhihu.com/p/144385211)
   * [尼康首款全画幅旗舰单反尼康D3力挽狂澜之作](https://www.bilibili.com/video/BV1DF41127QU/)
   * [尼康D3X、D3S、D3、D700以及大疆无人机使用分享贴](https://forum.xitek.com/thread-1854381-1-1.html)
+  * [尼康D3 ·经典铭机【Nikon‘第一台’全画幅数码相机】专为运动而生](https://www.bilibili.com/video/BV1bb4y127rc/)
