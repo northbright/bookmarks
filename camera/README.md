@@ -127,6 +127,8 @@
 * [二手尼康数码单反相机推荐](https://zhuanlan.zhihu.com/p/634612235)
 * 105mm / f1.4E
   * [性能怪兽尼康D850配玄学105 1.4E？谢谢，有被燃到！](https://www.bilibili.com/video/BV1DF41127QU/)
+* D700
+  * [【穷玩摄影】1100元入手十年前全画幅相机D700！尼康捡垃圾，都是好兄弟](https://www.bilibili.com/video/BV1tT4y1y7tG/)
 * D3
   * [尼康到底黄不黄，入手尼康D3，依旧令人振奋](https://zhuanlan.zhihu.com/p/123351570)
   * [14年前力挽狂澜，帝国旗舰破局之作：尼康D3](https://www.zhihu.com/zvideo/1383713246390640640)
