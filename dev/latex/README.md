@@ -55,3 +55,4 @@
 
 ## Code Listing
 * [Create Beautiful Code Listings with Minted](https://latex-tutorial.com/code-listings/)
+* [Code Highlighting with minted](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted)
