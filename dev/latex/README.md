@@ -57,3 +57,4 @@
 * [Create Beautiful Code Listings with Minted](https://latex-tutorial.com/code-listings/)
 * [Code Highlighting with minted](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted)
 * [Code listing](https://www.overleaf.com/learn/latex/Code_listing)
+* [minted environment not working in overleaf](https://tex.stackexchange.com/questions/531738/minted-environment-not-working-in-overleaf)
