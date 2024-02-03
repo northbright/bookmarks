@@ -137,3 +137,4 @@
   * [尼康D3X、D3S、D3、D700以及大疆无人机使用分享贴](https://forum.xitek.com/thread-1854381-1-1.html)
   * [尼康D3 ·经典铭机【Nikon‘第一台’全画幅数码相机】专为运动而生](https://www.bilibili.com/video/BV1bb4y127rc/)
   * [超人眼极限 尼康D3S十万ISO全黑环境实拍](https://dc.pconline.com.cn/pingce/smdfpcysr/0912/1960666_all.html)
+  * [尼康50 1.8D｜D3:“这机身盖有点厚啊！”](https://www.bilibili.com/video/BV1s8411u7kX)
