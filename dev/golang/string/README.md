@@ -4,6 +4,7 @@
 * [How do you write multiline strings in Go?](http://stackoverflow.com/questions/7933460/how-do-you-write-multiline-strings-in-go)
 * [golang -- 字符串操作](http://my.oschina.net/1123581321/blog/192971)
 * [Gopher Go! - Bytes & Strings](https://vluxe.io/golang-bytes.html)
+* [GO Bytes to String Conversion Best Practices [5 Methods]](https://www.golinuxcloud.com/go-bytes-to-string/)
 
 ## Stringer
 * [Understanding Stringer Interface In Golang](https://www.abilityrush.com/understanding-stringer-interface-in-golang/)
