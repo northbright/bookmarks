@@ -8,6 +8,7 @@
 * [现代 LaTex 入门讲座（曾祥东）](https://github.com/stone-zeng/latex-talk)
   * [Overleaf 版本](https://www.overleaf.com/project/622df830d7e1111ae7ccddb7)
 * [如何从零开始，入门 LaTeX？](https://www.zhihu.com/question/62943097/answer/2432483007)
+* [LaTeX vs. MiKTeX: The levels of TeX](https://tug.org/levels.html)
 
 ## Installation
 * [How to install LaTex on Ubuntu 22.04 Jammy Jellyfish Linux](https://linuxconfig.org/how-to-install-latex-on-ubuntu-22-04-jammy-jellyfish-linux)

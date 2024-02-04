@@ -1,0 +1,265 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://tug.org/levels.html
+Subject: Levels of TeX - TeX Users Group
+Date: Sun, 4 Feb 2024 03:49:12 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--pUdnFAj8FqerOeTqtsoCXiIARt9fxwsYIn5pL9tknv----"
+
+
+------MultipartBoundary--pUdnFAj8FqerOeTqtsoCXiIARt9fxwsYIn5pL9tknv----
+Content-Type: text/html
+Content-ID: <frame-96BFA42F0771751A62C48C347BA20897@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://tug.org/levels.html
+
+<!-- $Id: header.html,v 1.2 2020/11/27 18:46:49 karl Exp $ --><!DOCTYPE htm=
+l><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" content=3D"text=
+/html; charset=3DUTF-8">
+
+<meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1">
+<link rel=3D"stylesheet" href=3D"https://tug.org/tugstyle.css">
+<!-- end header -->
+
+<!-- $Id: levels.html,v 1.23 2021/11/26 02:09:37 karl Exp $ -->
+<title>Levels of TeX - TeX Users Group</title>
+</head><body>
+
+<h2>LaTeX vs. MiKTeX: The levels of TeX</h2>
+
+<p>A friend once asked us, =E2=80=9CShould I use LaTeX or MiKTeX?=E2=80=9D
+In various guises, this is a common question, seemingly innocent, but
+actually betraying a fundamental confusion about the levels of operation
+in the TeX world.  As a further confusion, the word =E2=80=9CTeX=E2=80=9D
+can be used to refer to any of a myriad of items at any level.  Starting
+at the top:
+
+</p><ol>
+<li><b>Distributions:</b>
+<a href=3D"https://miktex.org/">MiKTeX</a>, <a href=3D"https://tug.org/texl=
+ive/">TeX
+Live</a>, <a href=3D"http://w32tex.org/">W32TeX</a>, =E2=80=A6 These are
+the large, coherent collections of TeX-related software to be downloaded
+and installed. When someone says =E2=80=9CI need to install TeX on my
+machine=E2=80=9D, they're usually looking for a distribution.
+
+</li><li><b>Front ends and editors:</b>
+<a href=3D"https://www.gnu.org/software/emacs/">Emacs</a>,=20
+<a href=3D"http://vim.org/">vim</a>,=20
+<a href=3D"https://tug.org/texworks/">TeXworks</a>,=20
+<a href=3D"http://www.uoregon.edu/~koch/texshop/">TeXShop</a>,=20
+<a href=3D"http://www.toolscenter.org/">TeXnicCenter</a>,=20
+<a href=3D"https://tug.org/winedt/">WinEdt</a>, =E2=80=A6 These editors are=
+ what you use
+to create a document file.  Some (e.g., TeXShop) are devoted specifically
+to TeX, others (e.g., Emacs) can be used to edit any sort of file.  TeX
+documents are independent of any particular editor; the TeX typesetting
+program itself does not include an editor.
+
+</li><li><b>Engines:</b> TeX,
+<a href=3D"http://pdftex.org/">pdfTeX</a>, <a href=3D"http://scripts.sil.or=
+g/xetex">XeTeX</a>, <a href=3D"http://luatex.org/">LuaTeX</a>, =E2=80=A6 Th=
+ese are the executable
+binaries which implement different TeX variants.  In short:
+<ul>
+<li>pdfTeX implements direct PDF output, along with a variety of
+    programming and other extensions.
+</li><li>XeTeX does the above, and also supports Unicode natively, OpenType
+    and TrueType fonts, access to system fonts, =E2=80=A6
+</li><li>LuaTeX does all the above, and provides access to many internals v=
+ia
+    the embedded Lua language. Thus it is by far the most programmable engi=
+ne.
+</li><li>[e][u]pTeX provide full support for Japanese typesetting.
+</li></ul>
+There are other engines, but the above are by far the most commonly used
+nowadays.
+
+</li><li><b>Formats:</b>
+<a href=3D"https://texfaq.org/FAQ-latex">LaTeX</a>,
+<a href=3D"https://ctan.org/pkg/texbytopic">plain TeX</a>, <a href=3D"https=
+://ctan.org/pkg/optex">OpTeX</a>, =E2=80=A6 These are the
+TeX-based languages in which one actually writes documents. When someone
+says =E2=80=9CTeX is giving me a mysterious error=E2=80=9D, they usually
+mean a format.
+
+</li><li><b>Packages:</b>
+<a href=3D"https://ctan.org/pkg/geometry">geometry</a>, <a href=3D"https://=
+ctan.org/pkg/lm">lm</a>, =E2=80=A6 These are add-ons to
+the basic TeX system, developed independently, providing additional
+typesetting features, fonts, documentation, etc.  A package might or
+might not work with any given format and/or engine; for example, many
+are designed specifically for LaTeX, but there are plenty of others,
+too.  The <a href=3D"https://ctan.org/">CTAN sites</a> provide access
+to the vast majority of packages in the TeX world; CTAN is generally the
+source used by the distributions.
+
+</li></ol>
+
+
+<h3>Output formats</h3>
+
+<p>TeX source files can be typeset into several different output
+formats, depending on the engine.  Notably, the pdfTeX engine (despite
+its name) can output both <a href=3D"https://texfaq.org/FAQ-dvi">DVI</a> an=
+d <a href=3D"https://texfaq.org/FAQ-acrobat">PDF</a>
+files.
+
+</p><p>At a high level, the output format that gets used depends on the
+program you invoke.  If you run <tt>latex</tt> (which implements the
+LaTeX format), you will get DVI; if you run <tt>pdflatex</tt> (which
+also implements the LaTeX format), you will get PDF.=20
+
+</p><p>No TeX engine implements native HTML output, but it is still possibl=
+e
+to get HTML, XML, etc., output:
+</p><ul>
+<li>The <a href=3D"https://tug.org/tex4ht/">tex4ht</a> program can be run
+(e.g., <tt>htlatex</tt>, <a href=3D"https://ctan.org/pkg/make4ht">make4ht</=
+a>). TeX4ht uses TeX behind
+the scenes, so user macros, etc., are generally recognized. There are
+many possible output formats, including Office XML.
+<a href=3D"https://tug.org/TUGboat/tb25-1/gurari.pdf">TUGboat article on te=
+x4ht</a>, and
+<a href=3D"https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf">more re=
+cent
+article</a>.
+
+</li><li>The <a href=3D"https://ctan.org/pkg/lwarp">lwarp</a> LaTeX package=
+ causes LaTeX
+to output HTML5. It hooks into many packages to create the html.
+<a href=3D"https://tug.org/TUGboat/tb38-1/tb118dunn-lwarp.pdf">TUGboat arti=
+cle on lwarp</a>.
+
+</li><li>The <a href=3D"https://dlmf.nist.gov/LaTeXML/">LaTeXML</a> Perl pr=
+ogram
+independently parses LaTeX documents and generates many output formats.
+
+</li></ul>
+
+
+<h3>ConTeXt</h3>
+
+<p><a href=3D"http://www.pragma-ade.com/">ConTeXt</a> is a special case,
+straddling levels. It contains a format at the level of plain TeX and
+LaTeX, but unlike the other formats, it is invoked via a separate
+program (e.g., <tt>context</tt>) which then runs a TeX engine. This
+makes it possible to support a wide array of advanced features, such as
+integrated graphics and XML input, since the control program can
+determine the flow of processing.
+
+
+</p><h3>References</h3>
+
+<p>Of course, this short web page is only a brief introduction to the
+basics.  Here are some pointers to further information.
+
+</p><ul>
+<li><a href=3D"https://tug.org/begin.html">Getting started with TeX</a>, th=
+e TUG page
+    giving an introduction to various parts of the TeX world.
+
+</li><li><a href=3D"https://ctan.org/pkg/components">Components
+    of TeX</a>, Joachim Schrod's technical article describing many of
+    the relationships hinted at here in more detail.  It was written
+    many years ago, but the relationships still hold.
+
+</li><li><a href=3D"https://ctan.org/pkg/latex-doc-ptr">A First Set of LaTe=
+X
+    Resources</a>, Jim Hefferon's document recommending LaTeX packages
+    for many common tasks.
+
+</li><li><a href=3D"https://texfaq.org/FAQ-texthings">Things
+    with =E2=80=9CTeX=E2=80=9D in the name</a>, FAQ entry.
+
+</li><li><a href=3D"https://tug.org/notices/">The TeX Family in 2009</a>, a=
+n article published
+    in AMS&nbsp;Notices by Jim Hefferon and Karl Berry, giving an overview
+    of the TeX engines, graphics, hypertext, presentations, fonts, etc.
+    Although now more than a decade old, it still reasonably describes
+    the current state of things.
+
+</li></ul>
+
+<hr><small>This file is public domain.
+$Date: 2021/11/26 02:09:37 $;</small>
+<!-- $Id: footer.html,v 1.27 2023/04/04 21:57:35 karl Exp $ (generic footer=
+) -->
+<form method=3D"get" action=3D"https://duckduckgo.com/">
+<small>
+  <a href=3D"https://tug.org/index.html">TUG home page</a>;
+  <a href=3D"mailto:webmaster@tug.org">webmaster</a>;
+  <a href=3D"https://www.facebook.com/groups/TeXUsersGroup">facebook</a>;
+  <a href=3D"https://twitter.com/texusersgroup">twitter</a>;
+  <a href=3D"https://techhub.social/@TeXUsersGroup">mastodon</a>;
+  &nbsp;
+  =20
+   <input name=3D"q" size=3D"13" maxlength=3D"99"><input type=3D"submit" va=
+lue=3D"Search tug.org">
+   (via&nbsp;<a href=3D"https://duckduckgo.com/">DuckDuckGo</a>)
+</small>
+</form>
+
+
+
+</body></html><!-- end footer -->
+------MultipartBoundary--pUdnFAj8FqerOeTqtsoCXiIARt9fxwsYIn5pL9tknv----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://tug.org/tugstyle.css
+
+@charset "utf-8";
+
+body { margin: 1rem; max-width: 60rem; }
+
+@media (max-width: 768px) {
+  body { font-size: 130%; }
+  table { font-size: 100%; }
+}
+
+h1, h2, h3, h4 { color: navy; }
+
+a:link { color: navy; }
+
+a:visited { color: green; }
+
+a:active { color: red; }
+
+.negskip { margin-top: -0.6rem; }
+
+.negskipp { margin-top: -0.9rem; }
+
+.tinyskip { margin-top: 2pt; }
+
+.smallskip { margin-top: 8pt; }
+
+.indent { text-indent: 2rem; }
+
+.navbar { color: navy; text-decoration: none; }
+
+.navbar a:link { color: navy; }
+
+.navbar a:visited { color: navy; }
+
+.navbar a:hover { color: red; }
+
+article, aside, figure, footer, header, hgroup, menu, nav, section { displa=
+y: block; }
+
+.tubidxentry { padding-left: 3rem; text-indent: -2rem; list-style: none; ma=
+rgin-top: 0px; margin-bottom: 0px; }
+
+.tubidxgroup { margin-top: 0.5rem; margin-bottom: 0px; }
+
+.tubidxTgroup { margin-top: 0.1rem; margin-bottom: 0.1rem; }
+
+.tubissuenav { font-size: small; font-weight: normal; }
+
+ol.tugbbl { margin-top: -0.5rem; }
+
+li.tugbbl { margin-bottom: 0.5rem; }
+
+.back-to-top { position: fixed; right: 15px; bottom: 15px; background-color=
+: white; }
+------MultipartBoundary--pUdnFAj8FqerOeTqtsoCXiIARt9fxwsYIn5pL9tknv------
