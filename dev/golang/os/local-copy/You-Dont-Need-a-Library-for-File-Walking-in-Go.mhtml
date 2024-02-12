@@ -1,0 +1,2535 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://engineering.kablamo.com.au/posts/2021/quick-comparison-between-go-file-walk-implementations/
+Subject: You Don't Need a Library for File Walking in Go | Kablamo Engineering Blog
+Date: Mon, 12 Feb 2024 03:55:01 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----"
+
+
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: text/html
+Content-ID: <frame-6D9204414B19F6FE6CD5E0937D7FE2DD@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://engineering.kablamo.com.au/posts/2021/quick-comparison-between-go-file-walk-implementations/
+
+<!DOCTYPE html><html lang=3D"en" style=3D"--nav-header-height: 97px;"><head=
+><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><=
+link rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-b09c6725-ea8a-4ba=
+b-9e4b-de7d2d4a5184@mhtml.blink" /><link rel=3D"stylesheet" type=3D"text/cs=
+s" href=3D"cid:css-cdc27c7c-5be2-462a-b44e-648e37840c5f@mhtml.blink" /><lin=
+k rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-bc04b200-5730-4fcc-8=
+3d8-13935438b55e@mhtml.blink" /><link rel=3D"stylesheet" type=3D"text/css" =
+href=3D"cid:css-d899d44b-3ae1-4ecc-b730-91922be2feec@mhtml.blink" /><meta h=
+ttp-equiv=3D"x-ua-compatible" content=3D"ie=3Dedge"><meta name=3D"viewport"=
+ content=3D"width=3Ddevice-width, initial-scale=3D1, shrink-to-fit=3Dno"><m=
+eta name=3D"generator" content=3D"Gatsby 5.9.1"><meta data-rh=3D"true" name=
+=3D"title" content=3D"You Don't Need a Library for File Walking in Go" data=
+-react-helmet=3D"true"><meta data-rh=3D"true" name=3D"description" content=
+=3D"Go file walk implementations have radically different performance chara=
+cteristics. In 2021 the native implementation has improved so much, you don=
+'t need anything else.
+"><meta data-rh=3D"true" property=3D"og:site_name" content=3D"Insights from=
+ Kablamo Engineering."><meta data-rh=3D"true" name=3D"image" property=3D"og=
+:image" content=3D"https://engineering.kablamo.com.au/static/77d5139651328f=
+22d2cb5a0dff4d908b/490dc/gopher.jpg"><meta data-rh=3D"true" property=3D"og:=
+locale" content=3D"en_AU"><meta data-rh=3D"true" property=3D"article:sectio=
+n" content=3D"blog"><meta data-rh=3D"true" property=3D"article:published_ti=
+me" content=3D"2021-10-19T00:00:00.000Z"><meta data-rh=3D"true" property=3D=
+"og:url" content=3D"https://engineering.kablamo.com.au/posts/2021/quick-com=
+parison-between-go-file-walk-implementations/"><meta data-rh=3D"true" prope=
+rty=3D"og:type" content=3D"article"><meta data-rh=3D"true" property=3D"og:t=
+itle" content=3D"You Don't Need a Library for File Walking in Go"><meta dat=
+a-rh=3D"true" property=3D"og:description" content=3D"Go file walk implement=
+ations have radically different performance characteristics. In 2021 the na=
+tive implementation has improved so much, you don't need anything else.
+"><meta data-rh=3D"true" property=3D"og:image:type" content=3D"image/jpg"><=
+meta data-rh=3D"true" name=3D"twitter:card" content=3D"summary_large_image"=
+><meta data-rh=3D"true" name=3D"twitter:title" content=3D"You Don't Need a =
+Library for File Walking in Go"><meta data-rh=3D"true" name=3D"twitter:desc=
+ription" content=3D"Go file walk implementations have radically different p=
+erformance characteristics. In 2021 the native implementation has improved =
+so much, you don't need anything else.
+"><meta data-rh=3D"true" name=3D"twitter:image" content=3D"https://engineer=
+ing.kablamo.com.au/static/77d5139651328f22d2cb5a0dff4d908b/490dc/gopher.jpg=
+"><meta data-rh=3D"true" property=3D"article:tag" content=3D"go,golang,perf=
+ormance"><link href=3D"https://fonts.googleapis.com/css2?family=3DMontserra=
+t:wght@400;700&amp;family=3DFugaz+One&amp;display=3Dswap" rel=3D"stylesheet=
+"><link rel=3D"sitemap" type=3D"application/xml" href=3D"https://engineerin=
+g.kablamo.com.au/sitemap-index.xml"><link rel=3D"preconnect" href=3D"https:=
+//www.googletagmanager.com/"><link rel=3D"dns-prefetch" href=3D"https://www=
+.googletagmanager.com/"><title>You Don't Need a Library for File Walking in=
+ Go | Kablamo Engineering Blog</title><link data-rh=3D"true" rel=3D"canonic=
+al" href=3D"https://engineering.kablamo.com.au/posts/2021/quick-comparison-=
+between-go-file-walk-implementations/"><meta http-equiv=3D"origin-trial" co=
+ntent=3D"AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMV=
+OtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ=
+2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5Ijox=
+Njk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><link type=3D"image/x-icon" rel=
+=3D"icon" href=3D"https://engineering.kablamo.com.au/favicon-dark.ico"><lin=
+k rel=3D"apple-touch-icon" href=3D"https://engineering.kablamo.com.au/favic=
+on-dark.ico"><link rel=3D"prefetch" href=3D"https://engineering.kablamo.com=
+.au/page-data/index/page-data.json" crossorigin=3D"anonymous" as=3D"fetch">=
+<link rel=3D"prefetch" href=3D"https://engineering.kablamo.com.au/page-data=
+/tag/go/page-data.json" crossorigin=3D"anonymous" as=3D"fetch"><link rel=3D=
+"prefetch" href=3D"https://engineering.kablamo.com.au/page-data/tag/perform=
+ance/page-data.json" crossorigin=3D"anonymous" as=3D"fetch"><link rel=3D"pr=
+efetch" href=3D"https://engineering.kablamo.com.au/page-data/tag/golang/pag=
+e-data.json" crossorigin=3D"anonymous" as=3D"fetch"><link rel=3D"prefetch" =
+href=3D"https://engineering.kablamo.com.au/page-data/posts/2021/lessons-lea=
+rnt-building-for-the-atlassian-marketplace/page-data.json" crossorigin=3D"a=
+nonymous" as=3D"fetch"><link rel=3D"prefetch" href=3D"https://engineering.k=
+ablamo.com.au/page-data/posts/2021/my-first-css/page-data.json" crossorigin=
+=3D"anonymous" as=3D"fetch"></head><body><div id=3D"___gatsby"><div class=
+=3D"App__Container-sc-1ocgh4k-0 fJngzr"><div class=3D"theme__Wrapper-sc-1yz=
+pguy-0 fBjCYu"><div class=3D"navHeader__Header-sc-1u2sa2x-0 idSRat"><div cl=
+ass=3D"navHeader__MenuLeft-sc-1u2sa2x-1 iMuXqy"><span class=3D"navHeader__D=
+esktopOnly-sc-1u2sa2x-3 gPWWNs"><a href=3D"https://www.kablamo.com.au/" ari=
+a-label=3D"Kablamo website" class=3D"navHeader__LogoLink-sc-1u2sa2x-5 hVDbU=
+V"><svg color=3D"#020202" class=3D"KablamoLogoHorizontal__ColoredSvg-sc-itp=
+wg8-0 inAAQM" viewBox=3D"0 0 128 24"><path fill=3D"currentColor" fill-rule=
+=3D"evenodd" d=3D"M48.6 13.5c-.604-.93-1.765-1.467-3.6-1.735 1.892-.158 3.4=
+28-.863 4.5-2.015l-.9 3.75zm-4.368-6.62C44.07 8.154 42.782 9 41.012 9H40.5l=
+1.027-3.718c.28-.032.633-.032.751-.032 1.416 0 2.092.555 1.954 1.63zm-2.246=
+ 9.254c-.172 1.57-1.473 2.617-3.164 2.616-.144 0-.324 0-.572-.035l1.06-4.43=
+c.185-.035.4-.035.472-.035 1.547 0 2.334.698 2.204 1.884zM27.67 6.731l-.232=
+ 1.463c-.13.87-.198 1.497-.237 1.846l-.182 1.671c-.072.661-.126 1.149-.11 1=
+.323l-.26 2.716L24 15.749l1.51-3.656.156-.452.193-.453c.207-.592.102-.279.3=
+53-.94.455-1.219.345-.87.87-2.403.154-.417.401-1.044.668-1.845l-.08.731zM52=
+.034.027l-.82 3.415C50.547 1.175 48.215.016 44.277.015L36.533.01 32.98 14.3=
+7 33.303.011 25.144.007l-8.576 17.05L15.1 11.22 23.192.007l-7.03-.003-6.369=
+ 9.961L12.401.002 5.746 0 0 23.234l6.655.003L9.16 12.543l1.782 10.696h2.516=
+l3.768.002h.898l2.215.001 1.28-2.96 4.51.002-.264 2.96 6.919.003 7.328.003c=
+2.815.001 5.33-1.096 7.032-2.863l-.68 2.833 11.704.008 1.309-5.544-5.001-.0=
+03.012-.04h-.006L60 .028h-7.966zm68.632 9.468c-.547 4.677-2.565 8.506-4.47 =
+8.505-1.195 0-1.654-1.187-1.36-3.694.524-4.474 2.669-8.439 4.483-8.303 1.22=
+5.07 1.625 1.12 1.347 3.492zM79.42 6.732l-.231 1.462c-.131.87-.2 1.497-.237=
+ 1.846l-.183 1.671c-.072.662-.125 1.15-.11 1.323l-.26 2.716H75.75l1.51-3.65=
+6.156-.453.193-.453c.207-.592.102-.279.353-.94.455-1.219.346-.87.871-2.403.=
+153-.417.4-1.044.667-1.845l-.08.732zM120.646 0c-4.464-.001-8.454 2.956-10.7=
+98 7.537L110.87.413 102.675.41l-3.73 8.405c-.592 1.25-1.015 2.327-1.572 3.9=
+24.25-1.528.367-2.223.438-2.848.048-.417.115-1.007.153-1.667l.52-7.816-8.26=
+9-.003-5.177 14.006.313-14.008-12.6-.013-3.156 6.214 5.695-.674-11.54 17.66=
+5 8.698-.028 1.273-2.952 4.49.002-.263 2.952 6.886.003 3.928.001 2.975-9.65=
+5c.98-3.647.971-3.577 1.37-5.105-.144.937-.208 1.493-.315 2.43l-.135 1.182-=
+.827 11.15 5.388.002 4.623-10.315c.6-1.32 1.182-2.813 1.78-4.445-.15.66-.24=
+7 1.18-.32 1.493-.417 2.015-.39 1.771-.572 2.71l-2.105 10.558 6.921.003.613=
+-4.267c.932 2.953 3.266 4.685 6.636 4.686 6.174.003 11.654-6.352 12.607-14.=
+688.652-5.696-1.966-9.31-6.755-9.312z"></path></svg></a></span><span class=
+=3D"navHeader__MobileOnly-sc-1u2sa2x-4 klQinX"><div><span class=3D"mobileMe=
+nu__MobileMenuIcon-sc-1pht3mo-0 dYupOo"><svg width=3D"24px" height=3D"16px"=
+ viewBox=3D"0 0 24 16" version=3D"1.1"><defs><path d=3D"M22.6754698,16 C23.=
+4069876,16 24,15.4081802 24,14.6666667 L24,14.6666667 C24,13.930287 23.4067=
+383,13.3333333 22.6754698,13.3333333 L1.32453024,13.3333333 C0.59301239,13.=
+3333333 0,13.9251531 0,14.6666667 L0,14.6666667 C0,15.4030463 0.593261719,1=
+6 1.32453024,16 L22.6754698,16 Z M22.6754698,9.33333333 C23.4069876,9.33333=
+333 24,8.74151357 24,8 L24,8 C24,7.26362033 23.4067383,6.66666667 22.675469=
+8,6.66666667 L1.32453024,6.66666667 C0.59301239,6.66666667 0,7.25848643 0,8=
+ L0,8 C0,8.73637967 0.593261719,9.33333333 1.32453024,9.33333333 L22.675469=
+8,9.33333333 Z M0,1.33333333 C0,2.069713 0.593261719,2.66666667 1.32453024,=
+2.66666667 L22.6754698,2.66666667 C23.4069876,2.66666667 24,2.0748469 24,1.=
+33333333 L24,1.33333333 C24,0.596953667 23.4067383,0 22.6754698,0 L1.324530=
+24,0 C0.59301239,0 0,0.591819763 0,1.33333333 L0,1.33333333 Z" id=3D"path-1=
+"></path></defs><g id=3D"Symbols" stroke=3D"none" stroke-width=3D"1" fill-r=
+ule=3D"evenodd"><g id=3D"Mobile-Navbar-Dark" transform=3D"translate(-20.000=
+000, -19.000000)"><g id=3D"icon-menu" transform=3D"translate(20.000000, 19.=
+000000)"><mask id=3D"mask-2"><use xlink:href=3D"#path-1"></use></mask><use =
+id=3D"Mask" xlink:href=3D"#path-1"></use><g id=3D"Atoms-/-Colors-/-Gray-#3"=
+ mask=3D"url(#mask-2)"><g transform=3D"translate(-6.000000, -14.000000)" id=
+=3D"Atoms-/-Colors-/-Black"><rect x=3D"0" y=3D"0" width=3D"32" height=3D"32=
+"></rect></g></g></g></g></g></svg></span></div></span></div><a aria-curren=
+t=3D"page" aria-label=3D"Navigate to homepage" style=3D"z-index:5" class=3D=
+"" href=3D"https://engineering.kablamo.com.au/"><div class=3D"kablamoBolt__=
+LogoWrapper-sc-17v810d-0 zUEKw"><svg viewBox=3D"0 0 80.74 140"><g data-name=
+=3D"BoltWrapper"><path d=3D"M32.83 5.08L80.74 0 59.88 40.58l18.46-2.16L11.1=
+5 140l15.01-62.88H10L32.83 5.08z" data-name=3D"Bolt"></path></g></svg></div=
+></a><div class=3D"navHeader__MenuRight-sc-1u2sa2x-2 gHmHZJ"><span class=3D=
+"navHeader__DesktopOnly-sc-1u2sa2x-3 gPWWNs"><a href=3D"https://www.kablamo=
+.com.au/get-in-touch" class=3D"link__Anchor-sc-qvnqzr-0 navMenuLink__MenuLi=
+nk-sc-18eu672-0 fsWEXQ eaeEnU">Get in touch</a></span><div style=3D"positio=
+n:relative;display:inline-block;text-align:left;opacity:1;direction:ltr;bor=
+der-radius:14px;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.=
+25s;transition:opacity 0.25s;touch-action:none;-webkit-tap-highlight-color:=
+rgba(0, 0, 0, 0);-webkit-user-select:none;-moz-user-select:none;-ms-user-se=
+lect:none;user-select:none"><div class=3D"react-switch-bg" style=3D"height:=
+28px;width:60px;margin:0;position:relative;background:#dadada;border-radius=
+:14px;cursor:pointer;-webkit-transition:background 0.25s;-moz-transition:ba=
+ckground 0.25s;transition:background 0.25s"><div style=3D"height:28px;width=
+:34px;position:relative;opacity:1;pointer-events:none;-webkit-transition:op=
+acity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s"><span s=
+tyle=3D"display:inline-block;margin-left:0.5em;margin-top:0.1em;color:#2f2f=
+2f">=E2=98=80</span></div><div style=3D"height:28px;width:34px;position:abs=
+olute;opacity:0;right:0;top:0;pointer-events:none;-webkit-transition:opacit=
+y 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s"><span style=
+=3D"display:inline-block;margin-left:0.5em;margin-top:0.05em;color:#2f2f2f"=
+>=E2=98=BE</span></div></div><div class=3D"react-switch-handle" style=3D"he=
+ight:26px;width:26px;background:#f6f6f6;display:inline-block;cursor:pointer=
+;border-radius:50%;position:absolute;transform:translateX(33px);top:1px;out=
+line:0;border:0;-webkit-transition:background-color 0.25s, transform 0.25s,=
+ box-shadow 0.15s;-moz-transition:background-color 0.25s, transform 0.25s, =
+box-shadow 0.15s;transition:background-color 0.25s, transform 0.25s, box-sh=
+adow 0.15s"></div><input type=3D"checkbox" role=3D"switch" aria-checked=3D"=
+true" style=3D"border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:=
+hidden;padding:0;position:absolute;width:1px" aria-label=3D"Theme switch" c=
+hecked=3D""></div></div></div><div style=3D"outline:none" tabindex=3D"-1" i=
+d=3D"gatsby-focus-wrapper"><div class=3D"post__Flex-sc-1ia9brz-0 eHxeEl"><d=
+iv class=3D"post__Body-sc-1ia9brz-1 iA-deDt"><div class=3D"post__HeadingCon=
+tainer-sc-1ia9brz-3 geXtNX"><div class=3D"byLine__DateWrapper-sc-1vu2w2p-0 =
+jZwrBM">19.10.2021 - By Ben Boyter</div><h2 class=3D"typography__ShortTitle=
+-sc-1w0zu20-0 bpQHbQ">If this code could walk</h2><h1 class=3D"typography__=
+Title-sc-1w0zu20-1 bxfcru">You Don't Need a Library for File Walking in Go<=
+/h1></div><div class=3D"post__BodyWrapper-sc-1ia9brz-2 frGuRk"><p class=3D"=
+paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-6 ioAMuT">So=
+me time ago I tested multiple <a class=3D"link__Anchor-sc-qvnqzr-0 fsWEXQ" =
+href=3D"https://boyter.org/2018/03/quick-comparison-go-file-walk-implementa=
+tions/" target=3D"_blank" rel=3D"noopener noreferrer">Go file walk implemen=
+tations</a> on my personal <a class=3D"link__Anchor-sc-qvnqzr-0 fsWEXQ" hre=
+f=3D"https://boyter.org/" target=3D"_blank" rel=3D"noopener noreferrer">blo=
+g</a>.</p>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">At the time I was building <a class=3D"link__Anchor-sc-qvnqzr-0 f=
+sWEXQ" href=3D"https://github.com/boyter/scc/" target=3D"_blank" rel=3D"noo=
+pener noreferrer">scc</a> and quicly discovered one of the main bottlenecks=
+ in the application was walking the file tree finding files to process. Thi=
+s resulted in me exploring other file walk implementations for Go in order =
+to remove the bottleneck.</p>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">The conclusion I came to was to use <a class=3D"link__Anchor-sc-q=
+vnqzr-0 fsWEXQ" href=3D"https://github.com/karrick/godirwalk" target=3D"_bl=
+ank" rel=3D"noopener noreferrer">github.com/karrick/godirwalk</a> which was=
+ much faster than any of the other implementations at the time. That conclu=
+sion was written in 2018 however, and there have been multiple Go releases =
+since then including performance changes related to files https://golang.or=
+g/doc/go1.16#os As such it seemed like a good time to revisit the tests and=
+ see if anything has changed.</p>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">All code for the tests can be found on <a class=3D"link__Anchor-s=
+c-qvnqzr-0 fsWEXQ" href=3D"https://github.com/KablamoOSS/gofilewalk" target=
+=3D"_blank" rel=3D"noopener noreferrer">Kablamo's GitHub</a>. The tests wer=
+e written to recursively count the number of files and directories from whe=
+re the application was run and print the total count at the end. The output=
+ for each application should be identical, and this was confirmed for all t=
+ests run. Because some walk implementations use goroutines <code class=3D"m=
+dx__Code-sc-11dgazd-0 fwHEyG">atomic.AddInt64</code> operations were used w=
+hen counting for all implementations in order to keep the comparison as clo=
+se as posible.</p>
+<h3 class=3D"headings__Heading3-sc-1wptsoj-2 mdx__PostHeading3-sc-188ddkx-2=
+ bMJfZk itqLoh">Walking the Linux Kernel</h3>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">The first test was run against a shallow checkout of the linux ke=
+rnel commit <code class=3D"mdx__Code-sc-11dgazd-0 fwHEyG">d999ade1cc86cd295=
+1d41c11ea769cb4452c8811</code> with the excellent <a class=3D"link__Anchor-=
+sc-qvnqzr-0 fsWEXQ" href=3D"https://github.com/sharkdp/hyperfine" target=3D=
+"_blank" rel=3D"noopener noreferrer">hyperfine command line tool</a> used t=
+o run the tests. All code was compiled using Go 1.17 and run on a MacBook A=
+ir 2020 M1 with 16 GB of RAM.</p>
+<pre class=3D"styled__Pre-sc-wbinsk-0 yPDNg prism-code language-bash" style=
+=3D"color:#4d4d4c;background-color:#f9f9f9"><div class=3D"styled__Meta-sc-w=
+binsk-5 dtsvnt"><div class=3D"styled__Language-sc-wbinsk-6 jfrmHH">bash</di=
+v></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"=
+color:#4d4d4c"><div data-line-number=3D"1" class=3D"styled__LineNumber-sc-w=
+binsk-2 jBsdnT"></div><span class=3D"token comment" style=3D"color:#8e908c"=
+># what version of Go compiled everything?</span><span class=3D"token plain=
+"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" st=
+yle=3D"color:#4d4d4c"><div data-line-number=3D"2" class=3D"styled__LineNumb=
+er-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain" style=3D"display:i=
+nline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"3" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">$ go version</span><=
+/div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"col=
+or:#4d4d4c"><div data-line-number=3D"4" class=3D"styled__LineNumber-sc-wbin=
+sk-2 jBsdnT"></div><span class=3D"token plain">go version go1.17 darwin/arm=
+64</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" st=
+yle=3D"color:#4d4d4c"><div data-line-number=3D"5" class=3D"styled__LineNumb=
+er-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain" style=3D"display:i=
+nline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"6" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=
+=3D"token comment" style=3D"color:#8e908c"># verify the output of each appl=
+ication is the same</span><span class=3D"token plain"></span></div><div cla=
+ss=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><=
+div data-line-number=3D"7" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT">=
+</div><span class=3D"token plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"8" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">$ filepathwalk </spa=
+n><span class=3D"token operator" style=3D"color:#3e999f">&amp;&amp;</span><=
+span class=3D"token plain"> filepathwalkdir </span><span class=3D"token ope=
+rator" style=3D"color:#3e999f">&amp;&amp;</span><span class=3D"token plain"=
+> iafan </span><span class=3D"token operator" style=3D"color:#3e999f">&amp;=
+&amp;</span><span class=3D"token plain"> karrick </span><span class=3D"toke=
+n operator" style=3D"color:#3e999f">&amp;&amp;</span><span class=3D"token p=
+lain"> michealtjones </span><span class=3D"token operator" style=3D"color:#=
+3e999f">&amp;&amp;</span><span class=3D"token plain"> readdir</span></div><=
+div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d=
+4d4c"><div data-line-number=3D"9" class=3D"styled__LineNumber-sc-wbinsk-2 j=
+BsdnT"></div><span class=3D"token plain"></span><span class=3D"token number=
+" style=3D"color:#f5871f">78498</span><span class=3D"token plain"></span></=
+div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"colo=
+r:#4d4d4c"><div data-line-number=3D"10" class=3D"styled__LineNumber-sc-wbin=
+sk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=3D"token =
+number" style=3D"color:#f5871f">78498</span><span class=3D"token plain"></s=
+pan></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=
+=3D"color:#4d4d4c"><div data-line-number=3D"11" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=
+=3D"token number" style=3D"color:#f5871f">78498</span><span class=3D"token =
+plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-lin=
+e" style=3D"color:#4d4d4c"><div data-line-number=3D"12" class=3D"styled__Li=
+neNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><span=
+ class=3D"token number" style=3D"color:#f5871f">78498</span><span class=3D"=
+token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl tok=
+en-line" style=3D"color:#4d4d4c"><div data-line-number=3D"13" class=3D"styl=
+ed__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span=
+><span class=3D"token number" style=3D"color:#f5871f">78498</span><span cla=
+ss=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmK=
+Gl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"14" class=
+=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain=
+"></span><span class=3D"token number" style=3D"color:#f5871f">78498</span><=
+span class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbins=
+k-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"15"=
+ class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token=
+ plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"16" class=3D"styled__LineNumbe=
+r-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=
+=3D"token comment" style=3D"color:#8e908c"># run the benchmark using hyperf=
+ine</span><span class=3D"token plain"></span></div><div class=3D"styled__Li=
+ne-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-nu=
+mber=3D"17" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span cla=
+ss=3D"token plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"18" class=3D"styled__LineNumbe=
+r-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">$ hyperfine </span>=
+<span class=3D"token string" style=3D"color:#718c00">'filepathwalk'</span><=
+span class=3D"token plain"> </span><span class=3D"token string" style=3D"co=
+lor:#718c00">'filepathwalkdir'</span><span class=3D"token plain"> </span><s=
+pan class=3D"token string" style=3D"color:#718c00">'iafan'</span><span clas=
+s=3D"token plain"> </span><span class=3D"token string" style=3D"color:#718c=
+00">'karrick'</span><span class=3D"token plain"> </span><span class=3D"toke=
+n string" style=3D"color:#718c00">'michealtjones'</span><span class=3D"toke=
+n plain"> </span><span class=3D"token string" style=3D"color:#718c00">'read=
+dir'</span><span class=3D"token plain"></span></div><div class=3D"styled__L=
+ine-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-n=
+umber=3D"19" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span cl=
+ass=3D"token plain">Benchmark </span><span class=3D"token comment" style=3D=
+"color:#8e908c">#1: filepathwalk</span><span class=3D"token plain"></span><=
+/div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"col=
+or:#4d4d4c"><div data-line-number=3D"20" class=3D"styled__LineNumber-sc-wbi=
+nsk-2 jBsdnT"></div><span class=3D"token plain">  Time </span><span class=
+=3D"token punctuation" style=3D"color:#4d4d4c">(</span><span class=3D"token=
+ plain">mean =C2=B1 =CF=83</span><span class=3D"token punctuation" style=3D=
+"color:#4d4d4c">)</span><span class=3D"token plain">:     </span><span clas=
+s=3D"token number" style=3D"color:#f5871f">236.4</span><span class=3D"token=
+ plain"> ms =C2=B1   </span><span class=3D"token number" style=3D"color:#f5=
+871f">3.3</span><span class=3D"token plain"> ms    </span><span class=3D"to=
+ken punctuation" style=3D"color:#4d4d4c">[</span><span class=3D"token plain=
+">User: </span><span class=3D"token number" style=3D"color:#f5871f">54.7</s=
+pan><span class=3D"token plain"> ms, System: </span><span class=3D"token nu=
+mber" style=3D"color:#f5871f">186.7</span><span class=3D"token plain"> ms</=
+span><span class=3D"token punctuation" style=3D"color:#4d4d4c">]</span><spa=
+n class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1=
+ kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"21" cl=
+ass=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token pl=
+ain">  Range </span><span class=3D"token punctuation" style=3D"color:#4d4d4=
+c">(</span><span class=3D"token plain">min =E2=80=A6 max</span><span class=
+=3D"token punctuation" style=3D"color:#4d4d4c">)</span><span class=3D"token=
+ plain">:   </span><span class=3D"token number" style=3D"color:#f5871f">232=
+.9</span><span class=3D"token plain"> ms =E2=80=A6 </span><span class=3D"to=
+ken number" style=3D"color:#f5871f">246.0</span><span class=3D"token plain"=
+> ms    </span><span class=3D"token number" style=3D"color:#f5871f">12</spa=
+n><span class=3D"token plain"> runs</span></div><div class=3D"styled__Line-=
+sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-numbe=
+r=3D"22" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=
+=3D"token plain"> </span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKG=
+l token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"23" class=3D=
+"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">B=
+enchmark </span><span class=3D"token comment" style=3D"color:#8e908c">#2: f=
+ilepathwalkdir</span><span class=3D"token plain"></span></div><div class=3D=
+"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div d=
+ata-line-number=3D"24" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></di=
+v><span class=3D"token plain">  Time </span><span class=3D"token punctuatio=
+n" style=3D"color:#4d4d4c">(</span><span class=3D"token plain">mean =C2=B1 =
+=CF=83</span><span class=3D"token punctuation" style=3D"color:#4d4d4c">)</s=
+pan><span class=3D"token plain">:     </span><span class=3D"token number" s=
+tyle=3D"color:#f5871f">141.0</span><span class=3D"token plain"> ms =C2=B1  =
+ </span><span class=3D"token number" style=3D"color:#f5871f">1.3</span><spa=
+n class=3D"token plain"> ms    </span><span class=3D"token punctuation" sty=
+le=3D"color:#4d4d4c">[</span><span class=3D"token plain">User: </span><span=
+ class=3D"token number" style=3D"color:#f5871f">42.5</span><span class=3D"t=
+oken plain"> ms, System: </span><span class=3D"token number" style=3D"color=
+:#f5871f">101.1</span><span class=3D"token plain"> ms</span><span class=3D"=
+token punctuation" style=3D"color:#4d4d4c">]</span><span class=3D"token pla=
+in"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" =
+style=3D"color:#4d4d4c"><div data-line-number=3D"25" class=3D"styled__LineN=
+umber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">  Range </span>=
+<span class=3D"token punctuation" style=3D"color:#4d4d4c">(</span><span cla=
+ss=3D"token plain">min =E2=80=A6 max</span><span class=3D"token punctuation=
+" style=3D"color:#4d4d4c">)</span><span class=3D"token plain">:   </span><s=
+pan class=3D"token number" style=3D"color:#f5871f">139.2</span><span class=
+=3D"token plain"> ms =E2=80=A6 </span><span class=3D"token number" style=3D=
+"color:#f5871f">145.9</span><span class=3D"token plain"> ms    </span><span=
+ class=3D"token number" style=3D"color:#f5871f">20</span><span class=3D"tok=
+en plain"> runs</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl t=
+oken-line" style=3D"color:#4d4d4c"><div data-line-number=3D"26" class=3D"st=
+yled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"> </s=
+pan></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=
+=3D"color:#4d4d4c"><div data-line-number=3D"27" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">Benchmark </span><sp=
+an class=3D"token comment" style=3D"color:#8e908c">#3: iafan</span><span cl=
+ass=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpm=
+KGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"28" class=
+=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain=
+">  Time </span><span class=3D"token punctuation" style=3D"color:#4d4d4c">(=
+</span><span class=3D"token plain">mean =C2=B1 =CF=83</span><span class=3D"=
+token punctuation" style=3D"color:#4d4d4c">)</span><span class=3D"token pla=
+in">:      </span><span class=3D"token number" style=3D"color:#f5871f">93.5=
+</span><span class=3D"token plain"> ms =C2=B1   </span><span class=3D"token=
+ number" style=3D"color:#f5871f">3.4</span><span class=3D"token plain"> ms =
+   </span><span class=3D"token punctuation" style=3D"color:#4d4d4c">[</span=
+><span class=3D"token plain">User: </span><span class=3D"token number" styl=
+e=3D"color:#f5871f">117.0</span><span class=3D"token plain"> ms, System: </=
+span><span class=3D"token number" style=3D"color:#f5871f">526.8</span><span=
+ class=3D"token plain"> ms</span><span class=3D"token punctuation" style=3D=
+"color:#4d4d4c">]</span><span class=3D"token plain"></span></div><div class=
+=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><di=
+v data-line-number=3D"29" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"><=
+/div><span class=3D"token plain">  Range </span><span class=3D"token punctu=
+ation" style=3D"color:#4d4d4c">(</span><span class=3D"token plain">min =E2=
+=80=A6 max</span><span class=3D"token punctuation" style=3D"color:#4d4d4c">=
+)</span><span class=3D"token plain">:    </span><span class=3D"token number=
+" style=3D"color:#f5871f">91.4</span><span class=3D"token plain"> ms =E2=80=
+=A6 </span><span class=3D"token number" style=3D"color:#f5871f">110.0</span=
+><span class=3D"token plain"> ms    </span><span class=3D"token number" sty=
+le=3D"color:#f5871f">26</span><span class=3D"token plain"> runs</span></div=
+><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#=
+4d4d4c"><div data-line-number=3D"30" class=3D"styled__LineNumber-sc-wbinsk-=
+2 jBsdnT"></div><span class=3D"token plain"> </span></div><div class=3D"sty=
+led__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-=
+line-number=3D"31" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><s=
+pan class=3D"token plain">Benchmark </span><span class=3D"token comment" st=
+yle=3D"color:#8e908c">#4: karrick</span><span class=3D"token plain"></span>=
+</div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"co=
+lor:#4d4d4c"><div data-line-number=3D"32" class=3D"styled__LineNumber-sc-wb=
+insk-2 jBsdnT"></div><span class=3D"token plain">  Time </span><span class=
+=3D"token punctuation" style=3D"color:#4d4d4c">(</span><span class=3D"token=
+ plain">mean =C2=B1 =CF=83</span><span class=3D"token punctuation" style=3D=
+"color:#4d4d4c">)</span><span class=3D"token plain">:     </span><span clas=
+s=3D"token number" style=3D"color:#f5871f">263.4</span><span class=3D"token=
+ plain"> ms =C2=B1   </span><span class=3D"token number" style=3D"color:#f5=
+871f">1.5</span><span class=3D"token plain"> ms    </span><span class=3D"to=
+ken punctuation" style=3D"color:#4d4d4c">[</span><span class=3D"token plain=
+">User: </span><span class=3D"token number" style=3D"color:#f5871f">57.0</s=
+pan><span class=3D"token plain"> ms, System: </span><span class=3D"token nu=
+mber" style=3D"color:#f5871f">213.5</span><span class=3D"token plain"> ms</=
+span><span class=3D"token punctuation" style=3D"color:#4d4d4c">]</span><spa=
+n class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1=
+ kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"33" cl=
+ass=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token pl=
+ain">  Range </span><span class=3D"token punctuation" style=3D"color:#4d4d4=
+c">(</span><span class=3D"token plain">min =E2=80=A6 max</span><span class=
+=3D"token punctuation" style=3D"color:#4d4d4c">)</span><span class=3D"token=
+ plain">:   </span><span class=3D"token number" style=3D"color:#f5871f">260=
+.9</span><span class=3D"token plain"> ms =E2=80=A6 </span><span class=3D"to=
+ken number" style=3D"color:#f5871f">266.4</span><span class=3D"token plain"=
+> ms    </span><span class=3D"token number" style=3D"color:#f5871f">11</spa=
+n><span class=3D"token plain"> runs</span></div><div class=3D"styled__Line-=
+sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-numbe=
+r=3D"34" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=
+=3D"token plain"> </span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKG=
+l token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"35" class=3D=
+"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">B=
+enchmark </span><span class=3D"token comment" style=3D"color:#8e908c">#5: m=
+ichealtjones</span><span class=3D"token plain"></span></div><div class=3D"s=
+tyled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div dat=
+a-line-number=3D"36" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div>=
+<span class=3D"token plain">  Time </span><span class=3D"token punctuation"=
+ style=3D"color:#4d4d4c">(</span><span class=3D"token plain">mean =C2=B1 =
+=CF=83</span><span class=3D"token punctuation" style=3D"color:#4d4d4c">)</s=
+pan><span class=3D"token plain">:      </span><span class=3D"token number" =
+style=3D"color:#f5871f">91.8</span><span class=3D"token plain"> ms =C2=B1  =
+ </span><span class=3D"token number" style=3D"color:#f5871f">3.8</span><spa=
+n class=3D"token plain"> ms    </span><span class=3D"token punctuation" sty=
+le=3D"color:#4d4d4c">[</span><span class=3D"token plain">User: </span><span=
+ class=3D"token number" style=3D"color:#f5871f">106.7</span><span class=3D"=
+token plain"> ms, System: </span><span class=3D"token number" style=3D"colo=
+r:#f5871f">549.3</span><span class=3D"token plain"> ms</span><span class=3D=
+"token punctuation" style=3D"color:#4d4d4c">]</span><span class=3D"token pl=
+ain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line"=
+ style=3D"color:#4d4d4c"><div data-line-number=3D"37" class=3D"styled__Line=
+Number-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">  Range </span=
+><span class=3D"token punctuation" style=3D"color:#4d4d4c">(</span><span cl=
+ass=3D"token plain">min =E2=80=A6 max</span><span class=3D"token punctuatio=
+n" style=3D"color:#4d4d4c">)</span><span class=3D"token plain">:    </span>=
+<span class=3D"token number" style=3D"color:#f5871f">90.0</span><span class=
+=3D"token plain"> ms =E2=80=A6 </span><span class=3D"token number" style=3D=
+"color:#f5871f">109.6</span><span class=3D"token plain"> ms    </span><span=
+ class=3D"token number" style=3D"color:#f5871f">26</span><span class=3D"tok=
+en plain"> runs</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl t=
+oken-line" style=3D"color:#4d4d4c"><div data-line-number=3D"38" class=3D"st=
+yled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"> </s=
+pan></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=
+=3D"color:#4d4d4c"><div data-line-number=3D"39" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">Benchmark </span><sp=
+an class=3D"token comment" style=3D"color:#8e908c">#6: readdir</span><span =
+class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 k=
+pmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"40" clas=
+s=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plai=
+n">  Time </span><span class=3D"token punctuation" style=3D"color:#4d4d4c">=
+(</span><span class=3D"token plain">mean =C2=B1 =CF=83</span><span class=3D=
+"token punctuation" style=3D"color:#4d4d4c">)</span><span class=3D"token pl=
+ain">:     </span><span class=3D"token number" style=3D"color:#f5871f">117.=
+8</span><span class=3D"token plain"> ms =C2=B1   </span><span class=3D"toke=
+n number" style=3D"color:#f5871f">2.8</span><span class=3D"token plain"> ms=
+    </span><span class=3D"token punctuation" style=3D"color:#4d4d4c">[</spa=
+n><span class=3D"token plain">User: </span><span class=3D"token number" sty=
+le=3D"color:#f5871f">22.5</span><span class=3D"token plain"> ms, System: </=
+span><span class=3D"token number" style=3D"color:#f5871f">92.9</span><span =
+class=3D"token plain"> ms</span><span class=3D"token punctuation" style=3D"=
+color:#4d4d4c">]</span><span class=3D"token plain"></span></div><div class=
+=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><di=
+v data-line-number=3D"41" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"><=
+/div><span class=3D"token plain">  Range </span><span class=3D"token punctu=
+ation" style=3D"color:#4d4d4c">(</span><span class=3D"token plain">min =E2=
+=80=A6 max</span><span class=3D"token punctuation" style=3D"color:#4d4d4c">=
+)</span><span class=3D"token plain">:   </span><span class=3D"token number"=
+ style=3D"color:#f5871f">112.1</span><span class=3D"token plain"> ms =E2=80=
+=A6 </span><span class=3D"token number" style=3D"color:#f5871f">124.3</span=
+><span class=3D"token plain"> ms    </span><span class=3D"token number" sty=
+le=3D"color:#f5871f">23</span><span class=3D"token plain"> runs</span></div=
+><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#=
+4d4d4c"><div data-line-number=3D"42" class=3D"styled__LineNumber-sc-wbinsk-=
+2 jBsdnT"></div><span class=3D"token plain"> </span></div><div class=3D"sty=
+led__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-=
+line-number=3D"43" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><s=
+pan class=3D"token plain">Summary</span></div><div class=3D"styled__Line-sc=
+-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=
+=3D"44" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=
+=3D"token plain">  </span><span class=3D"token string" style=3D"color:#718c=
+00">'michealtjones'</span><span class=3D"token plain"> ran</span></div><div=
+ class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4=
+c"><div data-line-number=3D"45" class=3D"styled__LineNumber-sc-wbinsk-2 jBs=
+dnT"></div><span class=3D"token plain">    </span><span class=3D"token numb=
+er" style=3D"color:#f5871f">1.02</span><span class=3D"token plain"> =C2=B1 =
+</span><span class=3D"token number" style=3D"color:#f5871f">0.06</span><spa=
+n class=3D"token plain"> </span><span class=3D"token builtin class-name" st=
+yle=3D"color:#eab700">times</span><span class=3D"token plain"> faster than =
+</span><span class=3D"token string" style=3D"color:#718c00">'iafan'</span><=
+span class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbins=
+k-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"46"=
+ class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token=
+ plain">    </span><span class=3D"token number" style=3D"color:#f5871f">1.2=
+8</span><span class=3D"token plain"> =C2=B1 </span><span class=3D"token num=
+ber" style=3D"color:#f5871f">0.06</span><span class=3D"token plain"> </span=
+><span class=3D"token builtin class-name" style=3D"color:#eab700">times</sp=
+an><span class=3D"token plain"> faster than </span><span class=3D"token str=
+ing" style=3D"color:#718c00">'readdir'</span><span class=3D"token plain"></=
+span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=
+=3D"color:#4d4d4c"><div data-line-number=3D"47" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">    </span><span cla=
+ss=3D"token number" style=3D"color:#f5871f">1.54</span><span class=3D"token=
+ plain"> =C2=B1 </span><span class=3D"token number" style=3D"color:#f5871f"=
+>0.07</span><span class=3D"token plain"> </span><span class=3D"token builti=
+n class-name" style=3D"color:#eab700">times</span><span class=3D"token plai=
+n"> faster than </span><span class=3D"token string" style=3D"color:#718c00"=
+>'filepathwalkdir'</span><span class=3D"token plain"></span></div><div clas=
+s=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><d=
+iv data-line-number=3D"48" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT">=
+</div><span class=3D"token plain">    </span><span class=3D"token number" s=
+tyle=3D"color:#f5871f">2.58</span><span class=3D"token plain"> =C2=B1 </spa=
+n><span class=3D"token number" style=3D"color:#f5871f">0.11</span><span cla=
+ss=3D"token plain"> </span><span class=3D"token builtin class-name" style=
+=3D"color:#eab700">times</span><span class=3D"token plain"> faster than </s=
+pan><span class=3D"token string" style=3D"color:#718c00">'filepathwalk'</sp=
+an><span class=3D"token plain"></span></div><div class=3D"styled__Line-sc-w=
+binsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D=
+"49" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"t=
+oken plain">    </span><span class=3D"token number" style=3D"color:#f5871f"=
+>2.87</span><span class=3D"token plain"> =C2=B1 </span><span class=3D"token=
+ number" style=3D"color:#f5871f">0.12</span><span class=3D"token plain"> </=
+span><span class=3D"token builtin class-name" style=3D"color:#eab700">times=
+</span><span class=3D"token plain"> faster than </span><span class=3D"token=
+ string" style=3D"color:#718c00">'karrick'</span><span class=3D"token plain=
+"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" st=
+yle=3D"color:#4d4d4c"><div data-line-number=3D"50" class=3D"styled__LineNum=
+ber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain" style=3D"display:=
+inline-block">
+</span></div></pre>
+<span><span class=3D"gatsby-resp-image-wrapper" style=3D"position: relative=
+; display: block; margin-left: auto; margin-right: auto; max-width: 1024px;=
+ ">
+      <span class=3D"gatsby-resp-image-background-image" style=3D"padding-b=
+ottom: 45.7031%; position: relative; bottom: 0px; left: 0px; background-ima=
+ge: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAA=
+ywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABlklEQVR42nWS7UsUURSH9w/uW18riGwVQgQ/Fk=
+UviC9tuWtpGWxIxrhGhC2ibYpoa8HSl9z23nNf54k7M6KWHfjNmXsYnrnnd05tNBqhlEJrzfC3w=
+rqADzk+xEo5zseqdrGecsxz8koxRmpcGvlfZwtBQa5LES58m2ApCmCIkegtRwPNXGZZ6DjmMmF+=
+I71b5jOhsWmZeS/cbSserBnuv9XcawuzmeNE+YQiMZ1z1NK1gxN2vmmuLQg3Gme6/lS4OiNceai=
+ZemX4eBDo7AU6+56NPV+cxZ62XN1QKV38ofdduN0UJpYME0tCvSlMrRi2Dj3b/cDPYeT/cQ7462=
+RYlHrHwtiiUG8Z6q0Sfuelob3tyL561nY8rz87VrtlTnrT9axsOXo/Sk9DiNRGShUmf+lrxprCe=
+MswXgEnlw0vPjmefXCFn8nLxqarsi3qs5mle3QOmB7RG3b7mluLCWQK2M3nwvSq4WAQ/pn5pU2f=
+tpyAycPDgfDoneHJuuHx+lmeXBZ2j8tJWlfuYNrLcjfLnBhpMCEE/gAzGZkxYsvaWwAAAABJRU5=
+ErkJggg=3D=3D&quot;); background-size: cover; display: block; opacity: 0;">=
+</span>
+  <img class=3D"gatsby-resp-image-image" alt=3D"graphed results" title=3D""=
+ src=3D"https://engineering.kablamo.com.au/static/f8cf7192aaa7615acf9cab779=
+ef8537e/2bef9/results1.png" style=3D"width: 100%; height: 100%; margin: 0px=
+; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity:=
+ 1; color: inherit; box-shadow: white 0px 0px 0px 400px inset;" loading=3D"=
+lazy" decoding=3D"async" width=3D"720" height=3D"329">
+    </span></span>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">The results show that the parallel implementations now edge out a=
+ll other implementations. This is the opposite of what I experienced in 201=
+8.</p>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">Interestingly what was the fastest implementaton in 2018 <a class=
+=3D"link__Anchor-sc-qvnqzr-0 fsWEXQ" href=3D"https://github.com/karrick/god=
+irwalk" target=3D"_blank" rel=3D"noopener noreferrer">github.com/karrick/go=
+dirwalk</a> is now the slowest. It also has the biggest difference in API i=
+mplementaion and as such should probably not be used anymore. Pleasingly <c=
+ode class=3D"mdx__Code-sc-11dgazd-0 fwHEyG">filepath.Walk</code> has improv=
+ed a lot since I last tried this, and is now fast enough that it should be =
+acceptable for most use cases.</p>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">For the remaining implementations the margin of difference is not=
+ as large as you would expect when compared to the new <code class=3D"mdx__=
+Code-sc-11dgazd-0 fwHEyG">ReadDir</code> implementation added in Go 1.16.</=
+p>
+<h3 class=3D"headings__Heading3-sc-1wptsoj-2 mdx__PostHeading3-sc-188ddkx-2=
+ bMJfZk itqLoh">Walking Over My Code</h3>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">Wondering if the results might be due to not having enough data t=
+o work with, I tried the implementations against all my projects. With just=
+ shy of 180,000 files in different directories, it's about 5.2 GB of conten=
+t.</p>
+<pre class=3D"styled__Pre-sc-wbinsk-0 yPDNg prism-code language-bash" style=
+=3D"color:#4d4d4c;background-color:#f9f9f9"><div class=3D"styled__Meta-sc-w=
+binsk-5 dtsvnt"><div class=3D"styled__Language-sc-wbinsk-6 jfrmHH">bash</di=
+v></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"=
+color:#4d4d4c"><div data-line-number=3D"1" class=3D"styled__LineNumber-sc-w=
+binsk-2 jBsdnT"></div><span class=3D"token comment" style=3D"color:#8e908c"=
+># whats the size of the content we are about to look over</span><span clas=
+s=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKG=
+l token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"2" class=3D"=
+styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain" st=
+yle=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"3" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">$ </span><span class=
+=3D"token function" style=3D"color:#f5871f">du</span><span class=3D"token p=
+lain"> -hs</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-=
+line" style=3D"color:#4d4d4c"><div data-line-number=3D"4" class=3D"styled__=
+LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><sp=
+an class=3D"token number" style=3D"color:#f5871f">5</span><span class=3D"to=
+ken plain">.2G	</span><span class=3D"token builtin class-name" style=3D"col=
+or:#eab700">.</span><span class=3D"token plain"></span></div><div class=3D"=
+styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div da=
+ta-line-number=3D"5" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div>=
+<span class=3D"token plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"6" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=
+=3D"token comment" style=3D"color:#8e908c"># independently verify how many =
+files we should be scanning</span><span class=3D"token plain"></span></div>=
+<div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4=
+d4d4c"><div data-line-number=3D"7" class=3D"styled__LineNumber-sc-wbinsk-2 =
+jBsdnT"></div><span class=3D"token plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"8" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">$ </span><span class=
+=3D"token function" style=3D"color:#f5871f">find</span><span class=3D"token=
+ plain"> </span><span class=3D"token builtin class-name" style=3D"color:#ea=
+b700">.</span><span class=3D"token plain"> </span><span class=3D"token oper=
+ator" style=3D"color:#3e999f">|</span><span class=3D"token plain"> </span><=
+span class=3D"token function" style=3D"color:#f5871f">wc</span><span class=
+=3D"token plain"> -l</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpm=
+KGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"9" class=
+=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain=
+">  </span><span class=3D"token number" style=3D"color:#f5871f">179709</spa=
+n><span class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wb=
+insk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"=
+10" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"to=
+ken plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"11" class=3D"styled__LineNumbe=
+r-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=
+=3D"token comment" style=3D"color:#8e908c"># verify the output of each appl=
+ication is the same</span><span class=3D"token plain"></span></div><div cla=
+ss=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><=
+div data-line-number=3D"12" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"=
+></div><span class=3D"token plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"13" class=3D"styled__LineNumbe=
+r-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">$ filepathwalk </sp=
+an><span class=3D"token operator" style=3D"color:#3e999f">&amp;&amp;</span>=
+<span class=3D"token plain"> filepathwalkdir </span><span class=3D"token op=
+erator" style=3D"color:#3e999f">&amp;&amp;</span><span class=3D"token plain=
+"> iafan </span><span class=3D"token operator" style=3D"color:#3e999f">&amp=
+;&amp;</span><span class=3D"token plain"> karrick </span><span class=3D"tok=
+en operator" style=3D"color:#3e999f">&amp;&amp;</span><span class=3D"token =
+plain"> michealtjones </span><span class=3D"token operator" style=3D"color:=
+#3e999f">&amp;&amp;</span><span class=3D"token plain"> readdir</span></div>=
+<div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4=
+d4d4c"><div data-line-number=3D"14" class=3D"styled__LineNumber-sc-wbinsk-2=
+ jBsdnT"></div><span class=3D"token plain"></span><span class=3D"token numb=
+er" style=3D"color:#f5871f">179709</span><span class=3D"token plain"></span=
+></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"c=
+olor:#4d4d4c"><div data-line-number=3D"15" class=3D"styled__LineNumber-sc-w=
+binsk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=3D"tok=
+en number" style=3D"color:#f5871f">179709</span><span class=3D"token plain"=
+></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" sty=
+le=3D"color:#4d4d4c"><div data-line-number=3D"16" class=3D"styled__LineNumb=
+er-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=
+=3D"token number" style=3D"color:#f5871f">179709</span><span class=3D"token=
+ plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-li=
+ne" style=3D"color:#4d4d4c"><div data-line-number=3D"17" class=3D"styled__L=
+ineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><spa=
+n class=3D"token number" style=3D"color:#f5871f">179709</span><span class=
+=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl=
+ token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"18" class=3D"=
+styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></=
+span><span class=3D"token number" style=3D"color:#f5871f">179709</span><spa=
+n class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1=
+ kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"19" cl=
+ass=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token pl=
+ain"></span><span class=3D"token number" style=3D"color:#f5871f">179709</sp=
+an><span class=3D"token plain"></span></div><div class=3D"styled__Line-sc-w=
+binsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D=
+"20" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"t=
+oken plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"21" class=3D"styled__LineNumbe=
+r-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"></span><span class=
+=3D"token comment" style=3D"color:#8e908c"># run the benchmark using hyperf=
+ine</span><span class=3D"token plain"></span></div><div class=3D"styled__Li=
+ne-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-nu=
+mber=3D"22" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span cla=
+ss=3D"token plain" style=3D"display:inline-block">
+</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" styl=
+e=3D"color:#4d4d4c"><div data-line-number=3D"23" class=3D"styled__LineNumbe=
+r-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">$ hyperfine </span>=
+<span class=3D"token string" style=3D"color:#718c00">'filepathwalk'</span><=
+span class=3D"token plain"> </span><span class=3D"token string" style=3D"co=
+lor:#718c00">'filepathwalkdir'</span><span class=3D"token plain"> </span><s=
+pan class=3D"token string" style=3D"color:#718c00">'iafan'</span><span clas=
+s=3D"token plain"> </span><span class=3D"token string" style=3D"color:#718c=
+00">'karrick'</span><span class=3D"token plain"> </span><span class=3D"toke=
+n string" style=3D"color:#718c00">'michealtjones'</span><span class=3D"toke=
+n plain"> </span><span class=3D"token string" style=3D"color:#718c00">'read=
+dir'</span><span class=3D"token plain"></span></div><div class=3D"styled__L=
+ine-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-n=
+umber=3D"24" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span cl=
+ass=3D"token plain">Benchmark </span><span class=3D"token comment" style=3D=
+"color:#8e908c">#1: filepathwalk</span><span class=3D"token plain"></span><=
+/div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"col=
+or:#4d4d4c"><div data-line-number=3D"25" class=3D"styled__LineNumber-sc-wbi=
+nsk-2 jBsdnT"></div><span class=3D"token plain">  Time </span><span class=
+=3D"token punctuation" style=3D"color:#4d4d4c">(</span><span class=3D"token=
+ plain">mean =C2=B1 =CF=83</span><span class=3D"token punctuation" style=3D=
+"color:#4d4d4c">)</span><span class=3D"token plain">:     </span><span clas=
+s=3D"token number" style=3D"color:#f5871f">530.7</span><span class=3D"token=
+ plain"> ms =C2=B1   </span><span class=3D"token number" style=3D"color:#f5=
+871f">7.9</span><span class=3D"token plain"> ms    </span><span class=3D"to=
+ken punctuation" style=3D"color:#4d4d4c">[</span><span class=3D"token plain=
+">User: </span><span class=3D"token number" style=3D"color:#f5871f">150.7</=
+span><span class=3D"token plain"> ms, System: </span><span class=3D"token n=
+umber" style=3D"color:#f5871f">398.9</span><span class=3D"token plain"> ms<=
+/span><span class=3D"token punctuation" style=3D"color:#4d4d4c">]</span><sp=
+an class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-=
+1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"26" c=
+lass=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token p=
+lain">  Range </span><span class=3D"token punctuation" style=3D"color:#4d4d=
+4c">(</span><span class=3D"token plain">min =E2=80=A6 max</span><span class=
+=3D"token punctuation" style=3D"color:#4d4d4c">)</span><span class=3D"token=
+ plain">:   </span><span class=3D"token number" style=3D"color:#f5871f">525=
+.2</span><span class=3D"token plain"> ms =E2=80=A6 </span><span class=3D"to=
+ken number" style=3D"color:#f5871f">550.5</span><span class=3D"token plain"=
+> ms    </span><span class=3D"token number" style=3D"color:#f5871f">10</spa=
+n><span class=3D"token plain"> runs</span></div><div class=3D"styled__Line-=
+sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-numbe=
+r=3D"27" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=
+=3D"token plain"> </span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKG=
+l token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"28" class=3D=
+"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">B=
+enchmark </span><span class=3D"token comment" style=3D"color:#8e908c">#2: f=
+ilepathwalkdir</span><span class=3D"token plain"></span></div><div class=3D=
+"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div d=
+ata-line-number=3D"29" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></di=
+v><span class=3D"token plain">  Time </span><span class=3D"token punctuatio=
+n" style=3D"color:#4d4d4c">(</span><span class=3D"token plain">mean =C2=B1 =
+=CF=83</span><span class=3D"token punctuation" style=3D"color:#4d4d4c">)</s=
+pan><span class=3D"token plain">:     </span><span class=3D"token number" s=
+tyle=3D"color:#f5871f">346.6</span><span class=3D"token plain"> ms =C2=B1  =
+</span><span class=3D"token number" style=3D"color:#f5871f">21.5</span><spa=
+n class=3D"token plain"> ms    </span><span class=3D"token punctuation" sty=
+le=3D"color:#4d4d4c">[</span><span class=3D"token plain">User: </span><span=
+ class=3D"token number" style=3D"color:#f5871f">133.6</span><span class=3D"=
+token plain"> ms, System: </span><span class=3D"token number" style=3D"colo=
+r:#f5871f">230.4</span><span class=3D"token plain"> ms</span><span class=3D=
+"token punctuation" style=3D"color:#4d4d4c">]</span><span class=3D"token pl=
+ain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line"=
+ style=3D"color:#4d4d4c"><div data-line-number=3D"30" class=3D"styled__Line=
+Number-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">  Range </span=
+><span class=3D"token punctuation" style=3D"color:#4d4d4c">(</span><span cl=
+ass=3D"token plain">min =E2=80=A6 max</span><span class=3D"token punctuatio=
+n" style=3D"color:#4d4d4c">)</span><span class=3D"token plain">:   </span><=
+span class=3D"token number" style=3D"color:#f5871f">329.2</span><span class=
+=3D"token plain"> ms =E2=80=A6 </span><span class=3D"token number" style=3D=
+"color:#f5871f">401.8</span><span class=3D"token plain"> ms    </span><span=
+ class=3D"token number" style=3D"color:#f5871f">10</span><span class=3D"tok=
+en plain"> runs</span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl t=
+oken-line" style=3D"color:#4d4d4c"><div data-line-number=3D"31" class=3D"st=
+yled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain"> </s=
+pan></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=
+=3D"color:#4d4d4c"><div data-line-number=3D"32" class=3D"styled__LineNumber=
+-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">Benchmark </span><sp=
+an class=3D"token comment" style=3D"color:#8e908c">#3: iafan</span><span cl=
+ass=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpm=
+KGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"33" class=
+=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain=
+">  Time </span><span class=3D"token punctuation" style=3D"color:#4d4d4c">(=
+</span><span class=3D"token plain">mean =C2=B1 =CF=83</span><span class=3D"=
+token punctuation" style=3D"color:#4d4d4c">)</span><span class=3D"token pla=
+in">:     </span><span class=3D"token number" style=3D"color:#f5871f">303.7=
+</span><span class=3D"token plain"> ms =C2=B1  </span><span class=3D"token =
+number" style=3D"color:#f5871f">47.7</span><span class=3D"token plain"> ms =
+   </span><span class=3D"token punctuation" style=3D"color:#4d4d4c">[</span=
+><span class=3D"token plain">User: </span><span class=3D"token number" styl=
+e=3D"color:#f5871f">290.7</span><span class=3D"token plain"> ms, System: </=
+span><span class=3D"token number" style=3D"color:#f5871f">1136.0</span><spa=
+n class=3D"token plain"> ms</span><span class=3D"token punctuation" style=
+=3D"color:#4d4d4c">]</span><span class=3D"token plain"></span></div><div cl=
+ass=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c">=
+<div data-line-number=3D"34" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT=
+"></div><span class=3D"token plain">  Range </span><span class=3D"token pun=
+ctuation" style=3D"color:#4d4d4c">(</span><span class=3D"token plain">min =
+=E2=80=A6 max</span><span class=3D"token punctuation" style=3D"color:#4d4d4=
+c">)</span><span class=3D"token plain">:   </span><span class=3D"token numb=
+er" style=3D"color:#f5871f">268.3</span><span class=3D"token plain"> ms =E2=
+=80=A6 </span><span class=3D"token number" style=3D"color:#f5871f">435.5</s=
+pan><span class=3D"token plain"> ms    </span><span class=3D"token number" =
+style=3D"color:#f5871f">10</span><span class=3D"token plain"> runs</span></=
+div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"colo=
+r:#4d4d4c"><div data-line-number=3D"35" class=3D"styled__LineNumber-sc-wbin=
+sk-2 jBsdnT"></div><span class=3D"token plain"> </span></div><div class=3D"=
+styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div da=
+ta-line-number=3D"36" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div=
+><span class=3D"token plain">Benchmark </span><span class=3D"token comment"=
+ style=3D"color:#8e908c">#4: karrick</span><span class=3D"token plain"></sp=
+an></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D=
+"color:#4d4d4c"><div data-line-number=3D"37" class=3D"styled__LineNumber-sc=
+-wbinsk-2 jBsdnT"></div><span class=3D"token plain">  Time </span><span cla=
+ss=3D"token punctuation" style=3D"color:#4d4d4c">(</span><span class=3D"tok=
+en plain">mean =C2=B1 =CF=83</span><span class=3D"token punctuation" style=
+=3D"color:#4d4d4c">)</span><span class=3D"token plain">:      </span><span =
+class=3D"token number" style=3D"color:#f5871f">1.750</span><span class=3D"t=
+oken plain"> s =C2=B1  </span><span class=3D"token number" style=3D"color:#=
+f5871f">0.017</span><span class=3D"token plain"> s    </span><span class=3D=
+"token punctuation" style=3D"color:#4d4d4c">[</span><span class=3D"token pl=
+ain">User: </span><span class=3D"token number" style=3D"color:#f5871f">339.=
+9</span><span class=3D"token plain"> ms, System: </span><span class=3D"toke=
+n number" style=3D"color:#f5871f">1434.1</span><span class=3D"token plain">=
+ ms</span><span class=3D"token punctuation" style=3D"color:#4d4d4c">]</span=
+><span class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbi=
+nsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"3=
+8" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"tok=
+en plain">  Range </span><span class=3D"token punctuation" style=3D"color:#=
+4d4d4c">(</span><span class=3D"token plain">min =E2=80=A6 max</span><span c=
+lass=3D"token punctuation" style=3D"color:#4d4d4c">)</span><span class=3D"t=
+oken plain">:    </span><span class=3D"token number" style=3D"color:#f5871f=
+">1.730</span><span class=3D"token plain"> s =E2=80=A6  </span><span class=
+=3D"token number" style=3D"color:#f5871f">1.784</span><span class=3D"token =
+plain"> s    </span><span class=3D"token number" style=3D"color:#f5871f">10=
+</span><span class=3D"token plain"> runs</span></div><div class=3D"styled__=
+Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-=
+number=3D"39" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span c=
+lass=3D"token plain"> </span></div><div class=3D"styled__Line-sc-wbinsk-1 k=
+pmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"40" clas=
+s=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plai=
+n">Benchmark </span><span class=3D"token comment" style=3D"color:#8e908c">#=
+5: michealtjones</span><span class=3D"token plain"></span></div><div class=
+=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><di=
+v data-line-number=3D"41" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"><=
+/div><span class=3D"token plain">  Time </span><span class=3D"token punctua=
+tion" style=3D"color:#4d4d4c">(</span><span class=3D"token plain">mean =C2=
+=B1 =CF=83</span><span class=3D"token punctuation" style=3D"color:#4d4d4c">=
+)</span><span class=3D"token plain">:     </span><span class=3D"token numbe=
+r" style=3D"color:#f5871f">276.3</span><span class=3D"token plain"> ms =C2=
+=B1  </span><span class=3D"token number" style=3D"color:#f5871f">18.3</span=
+><span class=3D"token plain"> ms    </span><span class=3D"token punctuation=
+" style=3D"color:#4d4d4c">[</span><span class=3D"token plain">User: </span>=
+<span class=3D"token number" style=3D"color:#f5871f">271.4</span><span clas=
+s=3D"token plain"> ms, System: </span><span class=3D"token number" style=3D=
+"color:#f5871f">1229.3</span><span class=3D"token plain"> ms</span><span cl=
+ass=3D"token punctuation" style=3D"color:#4d4d4c">]</span><span class=3D"to=
+ken plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token=
+-line" style=3D"color:#4d4d4c"><div data-line-number=3D"42" class=3D"styled=
+__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">  Range =
+</span><span class=3D"token punctuation" style=3D"color:#4d4d4c">(</span><s=
+pan class=3D"token plain">min =E2=80=A6 max</span><span class=3D"token punc=
+tuation" style=3D"color:#4d4d4c">)</span><span class=3D"token plain">:   </=
+span><span class=3D"token number" style=3D"color:#f5871f">263.3</span><span=
+ class=3D"token plain"> ms =E2=80=A6 </span><span class=3D"token number" st=
+yle=3D"color:#f5871f">308.7</span><span class=3D"token plain"> ms    </span=
+><span class=3D"token number" style=3D"color:#f5871f">10</span><span class=
+=3D"token plain"> runs</span></div><div class=3D"styled__Line-sc-wbinsk-1 k=
+pmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"43" clas=
+s=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plai=
+n"> </span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" =
+style=3D"color:#4d4d4c"><div data-line-number=3D"44" class=3D"styled__LineN=
+umber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">Benchmark </spa=
+n><span class=3D"token comment" style=3D"color:#8e908c">#6: readdir</span><=
+span class=3D"token plain"></span></div><div class=3D"styled__Line-sc-wbins=
+k-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=3D"45"=
+ class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token=
+ plain">  Time </span><span class=3D"token punctuation" style=3D"color:#4d4=
+d4c">(</span><span class=3D"token plain">mean =C2=B1 =CF=83</span><span cla=
+ss=3D"token punctuation" style=3D"color:#4d4d4c">)</span><span class=3D"tok=
+en plain">:     </span><span class=3D"token number" style=3D"color:#f5871f"=
+>268.7</span><span class=3D"token plain"> ms =C2=B1   </span><span class=3D=
+"token number" style=3D"color:#f5871f">1.7</span><span class=3D"token plain=
+"> ms    </span><span class=3D"token punctuation" style=3D"color:#4d4d4c">[=
+</span><span class=3D"token plain">User: </span><span class=3D"token number=
+" style=3D"color:#f5871f">60.1</span><span class=3D"token plain"> ms, Syste=
+m: </span><span class=3D"token number" style=3D"color:#f5871f">219.6</span>=
+<span class=3D"token plain"> ms</span><span class=3D"token punctuation" sty=
+le=3D"color:#4d4d4c">]</span><span class=3D"token plain"></span></div><div =
+class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c=
+"><div data-line-number=3D"46" class=3D"styled__LineNumber-sc-wbinsk-2 jBsd=
+nT"></div><span class=3D"token plain">  Range </span><span class=3D"token p=
+unctuation" style=3D"color:#4d4d4c">(</span><span class=3D"token plain">min=
+ =E2=80=A6 max</span><span class=3D"token punctuation" style=3D"color:#4d4d=
+4c">)</span><span class=3D"token plain">:   </span><span class=3D"token num=
+ber" style=3D"color:#f5871f">266.6</span><span class=3D"token plain"> ms =
+=E2=80=A6 </span><span class=3D"token number" style=3D"color:#f5871f">271.6=
+</span><span class=3D"token plain"> ms    </span><span class=3D"token numbe=
+r" style=3D"color:#f5871f">11</span><span class=3D"token plain"> runs</span=
+></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"c=
+olor:#4d4d4c"><div data-line-number=3D"47" class=3D"styled__LineNumber-sc-w=
+binsk-2 jBsdnT"></div><span class=3D"token plain"> </span></div><div class=
+=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><di=
+v data-line-number=3D"48" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"><=
+/div><span class=3D"token plain">Summary</span></div><div class=3D"styled__=
+Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-=
+number=3D"49" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span c=
+lass=3D"token plain">  </span><span class=3D"token string" style=3D"color:#=
+718c00">'readdir'</span><span class=3D"token plain"> ran</span></div><div c=
+lass=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"=
+><div data-line-number=3D"50" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdn=
+T"></div><span class=3D"token plain">    </span><span class=3D"token number=
+" style=3D"color:#f5871f">1.03</span><span class=3D"token plain"> =C2=B1 </=
+span><span class=3D"token number" style=3D"color:#f5871f">0.07</span><span =
+class=3D"token plain"> </span><span class=3D"token builtin class-name" styl=
+e=3D"color:#eab700">times</span><span class=3D"token plain"> faster than </=
+span><span class=3D"token string" style=3D"color:#718c00">'michealtjones'</=
+span><span class=3D"token plain"></span></div><div class=3D"styled__Line-sc=
+-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-number=
+=3D"51" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=
+=3D"token plain">    </span><span class=3D"token number" style=3D"color:#f5=
+871f">1.13</span><span class=3D"token plain"> =C2=B1 </span><span class=3D"=
+token number" style=3D"color:#f5871f">0.18</span><span class=3D"token plain=
+"> </span><span class=3D"token builtin class-name" style=3D"color:#eab700">=
+times</span><span class=3D"token plain"> faster than </span><span class=3D"=
+token string" style=3D"color:#718c00">'iafan'</span><span class=3D"token pl=
+ain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line"=
+ style=3D"color:#4d4d4c"><div data-line-number=3D"52" class=3D"styled__Line=
+Number-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain">    </span><sp=
+an class=3D"token number" style=3D"color:#f5871f">1.29</span><span class=3D=
+"token plain"> =C2=B1 </span><span class=3D"token number" style=3D"color:#f=
+5871f">0.08</span><span class=3D"token plain"> </span><span class=3D"token =
+builtin class-name" style=3D"color:#eab700">times</span><span class=3D"toke=
+n plain"> faster than </span><span class=3D"token string" style=3D"color:#7=
+18c00">'filepathwalkdir'</span><span class=3D"token plain"></span></div><di=
+v class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d=
+4c"><div data-line-number=3D"53" class=3D"styled__LineNumber-sc-wbinsk-2 jB=
+sdnT"></div><span class=3D"token plain">    </span><span class=3D"token num=
+ber" style=3D"color:#f5871f">1.97</span><span class=3D"token plain"> =C2=B1=
+ </span><span class=3D"token number" style=3D"color:#f5871f">0.03</span><sp=
+an class=3D"token plain"> </span><span class=3D"token builtin class-name" s=
+tyle=3D"color:#eab700">times</span><span class=3D"token plain"> faster than=
+ </span><span class=3D"token string" style=3D"color:#718c00">'filepathwalk'=
+</span><span class=3D"token plain"></span></div><div class=3D"styled__Line-=
+sc-wbinsk-1 kpmKGl token-line" style=3D"color:#4d4d4c"><div data-line-numbe=
+r=3D"54" class=3D"styled__LineNumber-sc-wbinsk-2 jBsdnT"></div><span class=
+=3D"token plain">    </span><span class=3D"token number" style=3D"color:#f5=
+871f">6.51</span><span class=3D"token plain"> =C2=B1 </span><span class=3D"=
+token number" style=3D"color:#f5871f">0.08</span><span class=3D"token plain=
+"> </span><span class=3D"token builtin class-name" style=3D"color:#eab700">=
+times</span><span class=3D"token plain"> faster than </span><span class=3D"=
+token string" style=3D"color:#718c00">'karrick'</span><span class=3D"token =
+plain"></span></div><div class=3D"styled__Line-sc-wbinsk-1 kpmKGl token-lin=
+e" style=3D"color:#4d4d4c"><div data-line-number=3D"55" class=3D"styled__Li=
+neNumber-sc-wbinsk-2 jBsdnT"></div><span class=3D"token plain" style=3D"dis=
+play:inline-block">
+</span></div></pre>
+<span><span class=3D"gatsby-resp-image-wrapper" style=3D"position: relative=
+; display: block; margin-left: auto; margin-right: auto; max-width: 1024px;=
+ ">
+      <span class=3D"gatsby-resp-image-background-image" style=3D"padding-b=
+ottom: 45.3125%; position: relative; bottom: 0px; left: 0px; background-ima=
+ge: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAA=
+ywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABSklEQVR42pVSS0sDQQzu7xYE0YIgePPmxZuVtV=
+YRClYRvFQXL+paLIhgraIeRFt2HjuPfJKZad2TaOAjySR8eU2jLEsIISCExGRaohQS1nlYR/CeQ=
+OThvQcRzVH32Z75rBv4VQgEQGsNLiylDMWdcyHKBHUJhM55eFth9K7Q6lfILips9w02TxVePmxK=
+pEDCqHdnbYyzzcJ+g8dzRmEwkljMFBZ2FDZ6GpcPDp8iJjrPpKwJnqKuwyfC0CHvDPAYPiusHig=
+s7ykMxg5/E/qxKBF+TabhYThWaO4rNDsKWW5wcmtwdG3QK2zEjYmY+YXFcWHQvTK4f3VpktChYB=
+N3TxIrHYW1Q43WeYXd3CDLo46oEswc7Zz3XaFIE/E90lF0IFxqK6x3NYjwb5mPzIS8w8c3ha0zH=
+boS2odqxvr0J6Nd920tzrl8af4F3+qyrZkg/CJ9AAAAAElFTkSuQmCC&quot;); background-=
+size: cover; display: block; opacity: 0;"></span>
+  <img class=3D"gatsby-resp-image-image" alt=3D"graphed results second run"=
+ title=3D"" src=3D"https://engineering.kablamo.com.au/static/b4727df4d43fc8=
+8c4170e09a44c25a86/2bef9/results2.png" style=3D"width: 100%; height: 100%; =
+margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0p=
+x; opacity: 1; color: inherit; box-shadow: white 0px 0px 0px 400px inset;" =
+loading=3D"lazy" decoding=3D"async" width=3D"720" height=3D"326">
+    </span></span>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">This shows that the lower overhead promised in Go 1.16 is indeed =
+the case. The new implementation is the fastest here, and that's without ap=
+pling goroutines which could yield more performance for those willing to do=
+ so.</p>
+<h3 class=3D"headings__Heading3-sc-1wptsoj-2 mdx__PostHeading3-sc-188ddkx-2=
+ bMJfZk itqLoh">Go's Shoes Are Made For Walking</h3>
+<p class=3D"paragraph__Paragraph-sc-gsml0g-0 mdx__PostParagraph-sc-188ddkx-=
+6 ioAMuT">In 2021 the Go native file walk implementations beat any library.=
+ It's clear that <code class=3D"mdx__Code-sc-11dgazd-0 fwHEyG">filepath.Wal=
+k</code> has improved enough that its no slower than any other similar impl=
+ementaion I tried, and the new <code class=3D"mdx__Code-sc-11dgazd-0 fwHEyG=
+">ReadDir</code> implementation is as fast or faster than any other impleme=
+ntation I tried even without Go routines. It's wonderful to see such baseli=
+ne performance improvements applied to Go, and it seems even a simple recom=
+pile with the latest Go version will give some impressive disk performance =
+improvements.</p></div></div><div class=3D"postMetadata__PostMetadataContai=
+ner-sc-11mjaym-1 cISVYB"><div><h2 class=3D"typography__ShortTitle-sc-1w0zu2=
+0-0 postMetadata__PostMetadataTitle-sc-11mjaym-2 bpQHbQ fGfLat">AUTHOR</h2>=
+<div class=3D"postMetadata__AuthorDetailsContainer-sc-11mjaym-3 hQTgoS"><di=
+v class=3D"postMetadata__AuthorPhoto-sc-11mjaym-4 bjulQs"><div class=3D"pos=
+tMetadata__AuthorPhotoPlaceholder-sc-11mjaym-5 dpccLi"><div style=3D"fill:w=
+hite"><svg viewBox=3D"0 0 80.74 140"><g data-name=3D"BoltWrapper"><path d=
+=3D"M32.83 5.08L80.74 0 59.88 40.58l18.46-2.16L11.15 140l15.01-62.88H10L32.=
+83 5.08z" data-name=3D"Bolt"></path></g></svg></div></div></div><div class=
+=3D"postMetadata__AuthorDetails-sc-11mjaym-6 jdYwDW"><h1 class=3D"typograph=
+y__Title-sc-1w0zu20-1 postMetadata__AuthorName-sc-11mjaym-7 bxfcru dAKKSv">=
+Ben Boyter</h1><div class=3D"postMetadata__AuthorJobTitle-sc-11mjaym-8 bnNx=
+Ci">CodeMonkey</div><div class=3D"postMetadata__AuthorSocialLinksContainer-=
+sc-11mjaym-9 ebTzYa"><div class=3D"postMetadata__AuthorSocialLinks-sc-11mja=
+ym-10 OmzwJ"><a href=3D"https://github.com/boyter/" class=3D"socialLinks__I=
+conLinkWrapper-sc-ki0oed-0 gVTUMW"><svg width=3D"16px" height=3D"16px" view=
+Box=3D"0 0 16 16" version=3D"1.1"><title>Icon/Social/GitHub</title><desc>Cr=
+eated with Sketch.</desc><g id=3D"Icon/Social/GitHub" stroke=3D"none" strok=
+e-width=3D"1" fill-rule=3D"evenodd"><path d=3D"M7.89750303,-3.55271368e-15 =
+C3.53629091,-3.55271368e-15 -0.000193939394,3.6465 -0.000193939394,8.1455 C=
+-0.000193939394,11.7435 2.26259394,14.796 5.40150303,15.8735 C5.79665455,15=
+.948 5.94065455,15.6965 5.94065455,15.4805 C5.94065455,15.2875 5.93386667,1=
+4.775 5.92998788,14.0955 C3.73313939,14.5875 3.26962424,13.0035 3.26962424,=
+13.0035 C2.91035152,12.0625 2.39253333,11.8125 2.39253333,11.8125 C1.675442=
+42,11.307 2.44683636,11.317 2.44683636,11.317 C3.23956364,11.375 3.65653333=
+,12.1565 3.65653333,12.1565 C4.36101818,13.401 5.50477576,13.0415 5.9552,12=
+.8335 C6.02695758,12.307 6.23059394,11.948 6.45653333,11.7445 C4.70283636,1=
+1.539 2.85895758,10.84 2.85895758,7.719 C2.85895758,6.83 3.16683636,6.103 3=
+.67204848,5.5335 C3.59059394,5.3275 3.31956364,4.4995 3.74913939,3.378 C3.7=
+4913939,3.378 4.41241212,3.159 5.92126061,4.213 C6.55107879,4.032 7.2269575=
+8,3.942 7.89847273,3.9385 C8.56901818,3.942 9.24489697,4.032 9.87568485,4.2=
+13 C11.3835636,3.159 12.0453818,3.378 12.0453818,3.378 C12.4764121,4.4995 1=
+2.2053818,5.3275 12.1239273,5.5335 C12.6301091,6.103 12.9360485,6.83 12.936=
+0485,7.719 C12.9360485,10.848 11.0892606,11.5365 9.32974545,11.738 C9.61338=
+182,11.9895 9.86598788,12.4865 9.86598788,13.2465 C9.86598788,14.335 9.8562=
+9091,15.2135 9.85629091,15.4805 C9.85629091,15.6985 9.99835152,15.952 10.39=
+93212,15.8725 C13.5348364,14.793 15.7961697,11.7425 15.7961697,8.1455 C15.7=
+961697,3.6465 12.2596848,-3.55271368e-15 7.89750303,-3.55271368e-15" id=3D"=
+Github"></path></g></svg></a><a href=3D"https://twitter.com/boyter/" class=
+=3D"socialLinks__IconLinkWrapper-sc-ki0oed-0 gVTUMW"><svg width=3D"16px" he=
+ight=3D"16px" viewBox=3D"0 0 16 16" version=3D"1.1"><defs><path d=3D"M16,3.=
+42015385 C15.4113528,3.66153846 14.7791948,3.82446154 14.1145286,3.89692308=
+ C14.792198,3.52215385 15.3128282,2.92861538 15.5583896,2.22153846 C14.9237=
+309,2.56815385 14.2215554,2.82107692 13.4738685,2.95630769 C12.8747187,2.36=
+784615 12.0215054,2 11.0767692,2 C9.26381595,2 7.79494874,3.356 7.79494874,=
+5.02907692 C7.79494874,5.26630769 7.82345586,5.498 7.87946987,5.71953846 C5=
+.15128782,5.59307692 2.73268317,4.38707692 1.11327832,2.55430769 C0.8312078=
+02,3.002 0.669167292,3.52215385 0.669167292,4.07738462 C0.669167292,5.12876=
+923 1.2488122,6.05553846 2.12903226,6.59923077 C1.59139785,6.58307692 1.085=
+27132,6.44738462 0.642660665,6.22030769 C0.64216054,6.23276923 0.64216054,6=
+.24615385 0.64216054,6.25815385 C0.64216054,7.72630769 1.77344336,8.9507692=
+3 3.27531883,9.22907692 C3.00025006,9.29784615 2.71017754,9.33523077 2.4106=
+0265,9.33523077 C2.19854964,9.33523077 1.99349837,9.31630769 1.79344836,9.2=
+8123077 C2.21055264,10.484 3.42335584,11.36 4.8592148,11.3849231 C3.7364341=
+1,12.1972308 2.32108027,12.6823077 0.783195799,12.6823077 C0.518129532,12.6=
+823077 0.256564141,12.668 0,12.6398462 C1.45236309,13.4983077 3.17779445,14=
+ 5.03175794,14 C11.0692673,14 14.3715929,9.38415385 14.3715929,5.38076923 C=
+14.3715929,5.24969231 14.3675919,5.11861538 14.3615904,4.98846154 C15.00325=
+08,4.56153846 15.5593898,4.02846154 16,3.42015385 Z" id=3D"path-twitter"></=
+path></defs><g id=3D"Icon/Social/Twitter" stroke=3D"none" stroke-width=3D"1=
+" fill-rule=3D"evenodd"><mask id=3D"mask-twitter" fill=3D"white"><use xlink=
+:href=3D"#path-twitter"></use></mask><g id=3D"Twitter"></g><g id=3D"UI/Colo=
+r/Flat/A7A7A7" mask=3D"url(#mask-twitter)"><rect id=3D"Base" x=3D"0" y=3D"0=
+" width=3D"16" height=3D"16"></rect></g></g></svg></a></div></div></div></d=
+iv></div><div><h2 class=3D"typography__ShortTitle-sc-1w0zu20-0 postMetadata=
+__PostMetadataTitle-sc-11mjaym-2 bpQHbQ fGfLat">TAGS</h2><div class=3D"post=
+Metadata__TagContainer-sc-11mjaym-0 vnfn"><a class=3D"link__Anchor-sc-qvnqz=
+r-0 tag__Link-sc-wl9txb-0 fsWEXQ dxGFxT" href=3D"https://engineering.kablam=
+o.com.au/tag/go/">go</a><a class=3D"link__Anchor-sc-qvnqzr-0 tag__Link-sc-w=
+l9txb-0 fsWEXQ dxGFxT" href=3D"https://engineering.kablamo.com.au/tag/golan=
+g/">golang</a><a class=3D"link__Anchor-sc-qvnqzr-0 tag__Link-sc-wl9txb-0 fs=
+WEXQ dxGFxT" href=3D"https://engineering.kablamo.com.au/tag/performance/">p=
+erformance</a></div></div></div><div class=3D"card__CardPairWrapper-sc-14d9=
+ofs-5 gqcpgQ"><div class=3D"card__CardPairInner-sc-14d9ofs-6 hhhGes"><a cla=
+ss=3D"link__Anchor-sc-qvnqzr-0 card__Link-sc-14d9ofs-0 fsWEXQ hcZpLn" href=
+=3D"https://engineering.kablamo.com.au/posts/2021/lessons-learnt-building-f=
+or-the-atlassian-marketplace/"><div class=3D"card__Meta-sc-14d9ofs-3 eiTvpN=
+"><div class=3D"byLine__DateWrapper-sc-1vu2w2p-0 jZwrBM">28.7.2021 - By Ben=
+ Boyter</div></div><h1 class=3D"card__Title-sc-14d9ofs-1 kdvAfN">Lessons Le=
+arnt Building for the Atlassian Marketplace</h1><div class=3D"card__Excerpt=
+-sc-14d9ofs-2 fwjdiy">Recurring revenue is considered the holy grail for an=
+y technology business with SaaS being the main way to  achieve this. In 202=
+1 while more people are using the internet than ever, building your SaaS it=
+'s harder than ever.
+</div></a><a class=3D"link__Anchor-sc-qvnqzr-0 card__Link-sc-14d9ofs-0 fsWE=
+XQ hcZpLn" href=3D"https://engineering.kablamo.com.au/posts/2021/my-first-c=
+ss/"><div class=3D"card__Meta-sc-14d9ofs-3 eiTvpN"><div class=3D"byLine__Da=
+teWrapper-sc-1vu2w2p-0 jZwrBM">26.7.2021 - By Nathan Hardy</div></div><h1 c=
+lass=3D"card__Title-sc-14d9ofs-1 kdvAfN">What I Wish I Knew About CSS When =
+Starting Out As A Frontender</h1><div class=3D"card__Excerpt-sc-14d9ofs-2 f=
+wjdiy">CSS can be hard to grasp when you're first learning it. Here are som=
+e things that tripped me up when I was getting started that I wish I knew e=
+arlier on.
+</div></a></div></div></div></div><div id=3D"gatsby-announcer" style=3D"pos=
+ition:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:re=
+ct(0, 0, 0, 0);white-space:nowrap;border:0" aria-live=3D"assertive" aria-at=
+omic=3D"true"></div><div class=3D"footer__FooterWrapper-sc-1dfi99c-0 jOgxTg=
+"><h2 class=3D"footer__FooterHeader-sc-1dfi99c-1 bTqemW">Our Partners</h2><=
+img src=3D"https://engineering.kablamo.com.au/static/partner_brands_dark-8a=
+29c9873db284b2dd727f193fae3941.png" alt=3D"Our partners"><div class=3D"foot=
+er__FooterLinksWrapper-sc-1dfi99c-2 fSVjkO"><a class=3D"link__Anchor-sc-qvn=
+qzr-0 footer__FooterLink-sc-1dfi99c-3 fsWEXQ iuCGiS" href=3D"https://github=
+.com/KablamoOSS" target=3D"_blank" rel=3D"noopener noreferrer">Github</a><a=
+ class=3D"link__Anchor-sc-qvnqzr-0 footer__FooterLink-sc-1dfi99c-3 fsWEXQ i=
+uCGiS" href=3D"https://www.kablamo.com.au/terms" target=3D"_blank" rel=3D"n=
+oopener noreferrer">Terms</a><a class=3D"link__Anchor-sc-qvnqzr-0 footer__F=
+ooterLink-sc-1dfi99c-3 fsWEXQ iuCGiS" href=3D"https://www.kablamo.com.au/pr=
+ivacy" target=3D"_blank" rel=3D"noopener noreferrer">Privacy Policy</a></di=
+v><div class=3D"footer__KablamoLocation-sc-1dfi99c-4 fgkhhh">Level 1, 20 Yo=
+rk St, Sydney, NSW, 2000, Australia</div><div class=3D"footer__Copyright-sc=
+-1dfi99c-5 fCVwgi">Copyright =C2=A9 2018-<!-- -->2024<!-- -->. All rights r=
+eserved. ABN: 36 618 932 737</div></div></div></div></div><!-- slice-start =
+id=3D"_gatsby-scripts-1" -->
+         =20
+        <!-- slice-end id=3D"_gatsby-scripts-1" --></body></html>
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-b09c6725-ea8a-4bab-9e4b-de7d2d4a5184@mhtml.blink
+
+@charset "utf-8";
+
+#gatsby-focus-wrapper { max-width: 100%; flex: 1 1 0%; width: 100%; }
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-cdc27c7c-5be2-462a-b44e-648e37840c5f@mhtml.blink
+
+@charset "utf-8";
+
+html { font-family: sans-serif; text-size-adjust: 100%; }
+
+body { margin: 0px; }
+
+article, aside, details, figcaption, figure, footer, header, main, menu, na=
+v, section, summary { display: block; }
+
+audio, canvas, progress, video { display: inline-block; }
+
+audio:not([controls]) { display: none; height: 0px; }
+
+progress { vertical-align: baseline; }
+
+[hidden], template { display: none; }
+
+a { background-color: transparent; }
+
+a:active, a:hover { outline-width: 0px; }
+
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+
+b, strong { font-weight: bolder; }
+
+dfn { font-style: italic; }
+
+h1 { font-size: 2em; margin: 0.67em 0px; }
+
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-ali=
+gn: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+img { border-style: none; }
+
+svg:not(:root) { overflow: hidden; }
+
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+figure { margin: 1em 40px; }
+
+hr { box-sizing: content-box; height: 0px; overflow: visible; }
+
+button, input, optgroup, select, textarea { font: inherit; margin: 0px; }
+
+optgroup { font-weight: 700; }
+
+button, input { overflow: visible; }
+
+button, select { text-transform: none; }
+
+[type=3D"reset"], [type=3D"submit"], button, html [type=3D"button"] { appea=
+rance: button; }
+
+fieldset { border: 1px solid silver; margin: 0px 2px; padding: 0.35em 0.625=
+em 0.75em; }
+
+legend { box-sizing: border-box; color: inherit; display: table; max-width:=
+ 100%; padding: 0px; white-space: normal; }
+
+textarea { overflow: auto; }
+
+[type=3D"checkbox"], [type=3D"radio"] { box-sizing: border-box; padding: 0p=
+x; }
+
+[type=3D"number"]::-webkit-inner-spin-button, [type=3D"number"]::-webkit-ou=
+ter-spin-button { height: auto; }
+
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+[type=3D"search"]::-webkit-search-cancel-button, [type=3D"search"]::-webkit=
+-search-decoration { appearance: none; }
+
+::-webkit-input-placeholder { color: inherit; opacity: 0.54; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+html { font: 112.5% / 1.6 sans; box-sizing: border-box; overflow-y: scroll;=
+ }
+
+* { box-sizing: inherit; }
+
+::before { box-sizing: inherit; }
+
+::after { box-sizing: inherit; }
+
+body { color: rgba(0, 0, 0, 0.8); font-family: sans; font-weight: 400; over=
+flow-wrap: break-word; font-kerning: normal; font-feature-settings: "kern",=
+ "liga", "clig", "calt"; }
+
+img { max-width: 100%; margin: 0px 0px 1.6rem; padding: 0px; }
+
+h1 { margin: 0px 0px 1.6rem; padding: 0px; color: inherit; font-family: "Fu=
+gaz One"; font-weight: 700; text-rendering: optimizelegibility; font-size: =
+2rem; line-height: 1.1; }
+
+h2 { margin: 0px 0px 1.6rem; padding: 0px; color: inherit; font-family: "Fu=
+gaz One"; font-weight: 700; text-rendering: optimizelegibility; font-size: =
+1.51572rem; line-height: 1.1; }
+
+h3 { margin: 0px 0px 1.6rem; padding: 0px; color: inherit; font-family: "Fu=
+gaz One"; font-weight: 700; text-rendering: optimizelegibility; font-size: =
+1.31951rem; line-height: 1.1; }
+
+h4 { margin: 0px 0px 1.6rem; padding: 0px; color: inherit; font-family: "Fu=
+gaz One"; font-weight: 700; text-rendering: optimizelegibility; font-size: =
+1rem; line-height: 1.1; }
+
+h5 { margin: 0px 0px 1.6rem; padding: 0px; color: inherit; font-family: "Fu=
+gaz One"; font-weight: 700; text-rendering: optimizelegibility; font-size: =
+0.87055rem; line-height: 1.1; }
+
+h6 { margin: 0px 0px 1.6rem; padding: 0px; color: inherit; font-family: "Fu=
+gaz One"; font-weight: 700; text-rendering: optimizelegibility; font-size: =
+0.81225rem; line-height: 1.1; }
+
+hgroup { margin: 0px 0px 1.6rem; padding: 0px; }
+
+ul { margin: 0px 0px 1.6rem 1.6rem; padding: 0px; list-style-position: outs=
+ide; list-style-image: none; }
+
+ol { margin: 0px 0px 1.6rem 1.6rem; padding: 0px; list-style-position: outs=
+ide; list-style-image: none; }
+
+dl { margin: 0px 0px 1.6rem; padding: 0px; }
+
+dd { margin: 0px 0px 1.6rem; padding: 0px; }
+
+p { margin: 0px 0px 1.6rem; padding: 0px; }
+
+figure { margin: 0px 0px 1.6rem; padding: 0px; }
+
+pre { margin: 0px 0px 1.6rem; padding: 0px; font-size: 0.85rem; line-height=
+: 1.6rem; }
+
+table { margin: 0px 0px 1.6rem; padding: 0px; font-size: 1rem; line-height:=
+ 1.6rem; border-collapse: collapse; width: 100%; }
+
+fieldset { margin: 0px 0px 1.6rem; padding: 0px; }
+
+blockquote { margin: 0px 1.6rem 1.6rem; padding: 0px; }
+
+form { margin: 0px 0px 1.6rem; padding: 0px; }
+
+noscript { margin: 0px 0px 1.6rem; padding: 0px; }
+
+iframe { margin: 0px 0px 1.6rem; padding: 0px; }
+
+hr { margin: 0px 0px calc(1.6rem - 1px); padding: 0px; background: rgba(0, =
+0, 0, 0.2); border: none; height: 1px; }
+
+address { margin: 0px 0px 1.6rem; padding: 0px; }
+
+b { font-weight: 700; }
+
+strong { font-weight: 700; }
+
+dt { font-weight: 700; }
+
+th { font-weight: 700; }
+
+li { margin-bottom: calc(0.8rem); }
+
+ol li { padding-left: 0px; }
+
+ul li { padding-left: 0px; }
+
+li > ol { margin-left: 1.6rem; margin-bottom: calc(0.8rem); margin-top: cal=
+c(0.8rem); }
+
+li > ul { margin-left: 1.6rem; margin-bottom: calc(0.8rem); margin-top: cal=
+c(0.8rem); }
+
+blockquote :last-child { margin-bottom: 0px; }
+
+li :last-child { margin-bottom: 0px; }
+
+p :last-child { margin-bottom: 0px; }
+
+li > p { margin-bottom: calc(0.8rem); }
+
+code { font-size: 0.85rem; line-height: 1.6rem; }
+
+kbd { font-size: 0.85rem; line-height: 1.6rem; }
+
+samp { font-size: 0.85rem; line-height: 1.6rem; }
+
+abbr { border-bottom: 1px dotted rgba(0, 0, 0, 0.5); cursor: help; }
+
+acronym { border-bottom: 1px dotted rgba(0, 0, 0, 0.5); cursor: help; }
+
+abbr[title] { border-bottom: 1px dotted rgba(0, 0, 0, 0.5); cursor: help; t=
+ext-decoration: none; }
+
+thead { text-align: left; }
+
+td, th { text-align: left; border-bottom: 1px solid rgba(0, 0, 0, 0.12); fo=
+nt-feature-settings: "tnum"; padding: 0.8rem 1.06667rem calc(0.8rem - 1px);=
+ }
+
+th:first-child, td:first-child { padding-left: 0px; }
+
+th:last-child, td:last-child { padding-right: 0px; }
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-bc04b200-5730-4fcc-83d8-13935438b55e@mhtml.blink
+
+@charset "utf-8";
+
+.gatsby-image-wrapper { position: relative; overflow: hidden; }
+
+.gatsby-image-wrapper picture.object-fit-polyfill { position: static !impor=
+tant; }
+
+.gatsby-image-wrapper img { inset: 0px; height: 100%; margin: 0px; max-widt=
+h: none; padding: 0px; position: absolute; width: 100%; object-fit: cover; =
+}
+
+.gatsby-image-wrapper [data-main-image] { opacity: 0; transform: translateZ=
+(0px); transition: opacity 0.25s linear 0s; will-change: opacity; }
+
+.gatsby-image-wrapper-constrained { display: inline-block; vertical-align: =
+top; }
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-d899d44b-3ae1-4ecc-b730-91922be2feec@mhtml.blink
+
+@charset "utf-8";
+
+.yPDNg { padding: 1.2em 0.5em; width: 50rem; border-radius: 0.3rem; margin:=
+ 3em auto; font-family: "SF Mono", Menlo, Monaco, "Courier New", monospace;=
+ font-variant-ligatures: none; max-width: 98%; overflow: auto; }
+
+@media (max-width: 900px) {
+  .yPDNg { font-size: 0.8125rem; line-height: 1.375rem; }
+}
+
+.kpmKGl { margin-left: 0.5em; }
+
+.jBsdnT { display: inline-block; width: 3em; padding-right: 1em; text-align=
+: right; color: rgb(214, 214, 214); user-select: none; }
+
+.jBsdnT::before { content: attr(data-line-number); }
+
+.dtsvnt { margin: 0px 2em; display: flex; -webkit-box-pack: justify; justif=
+y-content: space-between; }
+
+.jfrmHH { position: relative; text-align: left; color: rgb(214, 214, 214); =
+font-family: "SF Mono", Menlo, Monaco, "Courier New", monospace; text-trans=
+form: uppercase; font-weight: bold; }
+
+.fwHEyG { font-variant-ligatures: none; --code-color: #2f2f2f; --code-bg-co=
+lor: #ffffff; --code-border-color: #d6d6d6; }
+
+:not(.styled__Pre-sc-wbinsk-0) > .mdx__Code-sc-11dgazd-0 { color: var(--cod=
+e-color); background-color: var(--code-bg-color); border: 1px solid var(--c=
+ode-border-color); font-family: "SF Mono", Menlo, Monaco, "Courier New", mo=
+nospace; padding: 0.2em 0.4em; font-size: 0.8em; border-radius: 3px; }
+
+.bMJfZk { color: rgb(28, 28, 28); max-width: 80rem; padding-bottom: 0.4rem;=
+ margin: 1.8em auto 0.5em; font-family: "Fugaz One", -apple-system, BlinkMa=
+cSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica=
+ Neue", sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+
+@media (max-width: 900px) {
+  .bMJfZk { font-size: 0.9375rem; }
+}
+
+.fsWEXQ { color: rgb(28, 28, 28); font-size: 1em; font-feature-settings: "k=
+ern", "liga", "clig", "calt"; }
+
+.jOgxTg { background-color: rgb(244, 244, 244); text-align: center; font-fa=
+mily: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ox=
+ygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; color: rgb(42, =
+42, 42); width: 100%; padding: 0px 1.25rem; }
+
+.bTqemW { padding-top: 50px; font-size: 25px; line-height: 30px; font-weigh=
+t: 700; }
+
+.fSVjkO { display: flex; -webkit-box-pack: center; justify-content: center;=
+ }
+
+.iuCGiS { color: rgb(42, 42, 42); font-size: 15px; line-height: 19px; font-=
+weight: 400; text-transform: uppercase; margin: 0px 1em; }
+
+.fgkhhh { text-transform: uppercase; margin-top: 70px; font-weight: 400; fo=
+nt-size: 12px; line-height: 15px; }
+
+.fCVwgi { font-size: 12px; line-height: 15px; margin-top: 30px; padding-bot=
+tom: 30px; }
+
+.inAAQM { height: 100%; width: 100%; max-height: 100%; max-width: 100%; col=
+or: rgb(2, 2, 2); }
+
+.eaeEnU { color: rgb(28, 28, 28); text-decoration: none; text-transform: up=
+percase; font-size: 1rem; font-family: "Fugaz One", -apple-system, BlinkMac=
+SystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica =
+Neue", sans-serif; line-height: 1rem; letter-spacing: 0.05em; }
+
+.eaeEnU:hover { border-bottom: 2px solid rgb(28, 28, 28); }
+
+.dYupOo { fill: rgb(141, 141, 141); }
+
+.idSRat { position: relative; display: grid; grid-template-columns: 1fr aut=
+o 1fr; column-gap: 1.2rem; -webkit-box-align: center; align-items: center; =
+width: 80rem; padding-top: 1.5rem; padding-bottom: 0.8125rem; max-width: 98=
+vw; }
+
+.iMuXqy { margin-left: 1.2rem; }
+
+.gHmHZJ { justify-self: end; margin-right: 1.2rem; }
+
+.gHmHZJ :not(:last-child) { margin-right: 1.7rem; }
+
+@media (max-width: 900px) {
+  .gPWWNs { display: none; }
+}
+
+@media (min-width: 900px) {
+  .klQinX { display: none; }
+}
+
+.hVDbUV { display: inline-block; height: 16px; width: 86px; }
+
+html { font-size: 16px; }
+
+body { color: rgb(28, 28, 28); background-color: rgb(255, 255, 255); }
+
+:root { color-scheme: light only; --svh: 1vh; --dvh: 1vh; --lvh: 1vh; }
+
+@supports (height:1svh) {
+  :root { --svh: 1svh; }
+}
+
+@supports (height:1dvh) {
+  :root { --dvh: 1dvh; }
+}
+
+@supports (height:1lvh) {
+  :root { --lvh: 1lvh; }
+}
+
+.fBjCYu { display: flex; -webkit-box-align: center; align-items: center; -w=
+ebkit-box-pack: end; justify-content: flex-end; flex-direction: column; min=
+-height: 100vh; }
+
+.zUEKw { width: 60px; height: 60px; fill: rgb(2, 2, 2); }
+
+.ioAMuT { color: rgb(47, 47, 47); font-size: 1.125rem; font-weight: 400; li=
+ne-height: 1.7rem; font-feature-settings: "kern", "liga", "clig", "calt"; m=
+argin: 0px auto 1.4rem; font-family: Montserrat, -apple-system, BlinkMacSys=
+temFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neu=
+e", sans-serif; width: 45rem; max-width: 90%; }
+
+@media (max-width: 900px) {
+  .ioAMuT { font-size: 0.8125rem; line-height: 1.375rem; }
+}
+
+.itqLoh { width: 45rem; max-width: 90%; }
+
+.fJngzr { margin: 0px auto; max-width: 100%; width: 100%; }
+
+.jZwrBM { font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Sego=
+e UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif=
+; color: rgb(28, 28, 28); letter-spacing: 0.03em; font-size: 1rem; line-hei=
+ght: 1.1875rem; }
+
+@media (max-width: 900px) {
+  .jZwrBM { font-size: 0.75rem; letter-spacing: 0.025rem; line-height: 0.93=
+75rem; }
+}
+
+.hcZpLn { text-decoration: none; border-radius: 1rem; padding: 1rem; flex: =
+1 1 0%; margin: 0.2rem; }
+
+.kdvAfN { display: inline; color: rgb(28, 28, 28); font-size: 1.56rem; font=
+-family: "Fugaz One", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto=
+, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; text-transf=
+orm: uppercase; line-height: 2.5rem; letter-spacing: 0.03rem; text-decorati=
+on: none; }
+
+@media (max-width: 900px) {
+  .kdvAfN { font-size: 1.125rem; line-height: 1.6875rem; letter-spacing: -0=
+.008125rem; }
+}
+
+.card__Link-sc-14d9ofs-0:hover .card__Title-sc-14d9ofs-1 { background-image=
+: linear-gradient(to right, rgb(28, 28, 28), rgb(28, 28, 28)); background-r=
+epeat: repeat-x; background-position: 0px 1.4em; background-size: 8px 3px; =
+}
+
+.fwjdiy { font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Sego=
+e UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif=
+; text-transform: none; font-size: 1.125rem; letter-spacing: 0.03em; line-h=
+eight: 1.7rem; min-height: 2em; place-self: flex-end; width: 100%; margin-t=
+op: 0.9rem; }
+
+@media (max-width: 900px) {
+  .fwjdiy { font-size: 0.8125rem; line-height: 1.375rem; }
+}
+
+.eiTvpN { display: flex; flex-direction: row; margin: 1rem 0px; }
+
+.gqcpgQ { display: flex; -webkit-box-pack: justify; justify-content: space-=
+between; max-width: 80rem; margin: 0px auto; width: 100%; }
+
+@media (min-width: 900px) {
+  .gqcpgQ { padding: 4rem 0px; }
+}
+
+.hhhGes { display: flex; -webkit-box-pack: justify; justify-content: space-=
+between; max-width: 80rem; width: 100%; margin: 0px auto; }
+
+@media (max-width: 900px) {
+  .hhhGes { flex-direction: column; }
+}
+
+.gVTUMW { fill: rgb(167, 167, 167); }
+
+.gVTUMW:hover { fill: rgb(29, 31, 33); }
+
+.dxGFxT { color: rgb(141, 141, 141); background-color: rgb(244, 244, 244); =
+border: 0.06rem solid rgb(214, 214, 214); text-decoration: none; font-famil=
+y: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxyge=
+n-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; display: inline-bl=
+ock; font-size: 0.9375em; padding: 0.03rem 0.84rem; }
+
+.dxGFxT:hover { color: rgb(246, 246, 246); background-color: rgb(28, 28, 28=
+); border: 1px solid rgb(47, 47, 47); }
+
+.bpQHbQ { color: rgb(28, 28, 28); font-size: 4.69rem; font-family: "Fugaz O=
+ne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ub=
+untu, Cantarell, "Helvetica Neue", sans-serif; margin: 0.4rem 0px; line-hei=
+ght: 6.88rem; letter-spacing: 0.1rem; text-transform: uppercase; max-width:=
+ 80rem; }
+
+@media (max-width: 900px) {
+  .bpQHbQ { font-size: 1.75rem; letter-spacing: 0.029375rem; line-height: 2=
+.75rem; max-width: 96vw; }
+}
+
+.bxfcru { color: rgb(28, 28, 28); font-family: Montserrat, -apple-system, B=
+linkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Hel=
+vetica Neue", sans-serif; letter-spacing: 0.07em; font-size: 2.19rem; margi=
+n-top: 0.1rem; font-weight: 700; }
+
+@media (max-width: 900px) {
+  .bxfcru { font-size: 0.9375rem; line-height: 1.5rem; font-weight: normal;=
+ }
+}
+
+.vnfn { display: flex; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .vnfn { -webkit-box-pack: center; justify-content: center; }
+}
+
+.vnfn > * { margin-right: 1rem; margin-bottom: 1rem; }
+
+.cISVYB { width: 45rem; display: flex; padding-bottom: 6.25rem; border-bott=
+om: 0.06rem solid rgb(151, 151, 151); margin-top: 5rem; max-width: 90%; }
+
+@media (min-width: 900px) {
+  .cISVYB { -webkit-box-pack: justify; justify-content: space-between; }
+  .cISVYB > div { width: 45%; }
+}
+
+@media (max-width: 900px) {
+  .cISVYB { max-width: 94vw; flex-direction: column; }
+}
+
+@media (max-width: 900px) {
+  .cISVYB { flex-direction: column; }
+  .cISVYB > div { width: 100%; margin: 1rem 0px; }
+}
+
+.fGfLat { font-size: 2.19rem; line-height: 2.81rem; margin-bottom: 1rem; }
+
+@media (max-width: 900px) {
+  .fGfLat { text-align: center; font-size: 1.4rem; line-height: 1.2em; }
+}
+
+.hQTgoS { display: flex; margin-left: 1.25rem; }
+
+.bjulQs { width: 50%; }
+
+.dpccLi { height: 8.0625rem; width: 8.0625rem; background-color: rgb(63, 15=
+9, 232); display: flex; -webkit-box-align: center; align-items: center; -we=
+bkit-box-pack: center; justify-content: center; }
+
+.dpccLi * { height: 6.01rem; }
+
+.jdYwDW { margin-left: 1.5rem; display: flex; flex-direction: column; -webk=
+it-box-pack: justify; justify-content: space-between; }
+
+.dAKKSv { font-size: 1rem; line-height: 1.19rem; }
+
+.bnNxCi { font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Sego=
+e UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif=
+; color: rgb(28, 28, 28); font-size: 1.13rem; line-height: 2rem; }
+
+.ebTzYa { min-height: 25%; }
+
+.OmzwJ > * { margin-right: 1.2rem; }
+
+.eHxeEl { display: flex; -webkit-box-align: center; align-items: center; -w=
+ebkit-box-pack: center; justify-content: center; flex-direction: column; ma=
+rgin: 0px auto; padding: 0px; max-width: 100%; width: 100%; }
+
+.iA-deDt { width: 80rem; margin: auto; word-break: break-word; box-sizing: =
+border-box; max-width: 100%; }
+
+.frGuRk { margin: 4rem 0px 0px; }
+
+.frGuRk #table-of-contents { color: rgb(47, 47, 47); width: 45rem; max-widt=
+h: 90%; font-size: 1.125rem; font-weight: 400; line-height: 1.6rem; font-fe=
+ature-settings: "kern", "liga", "clig", "calt"; margin: 0.4rem auto; font-f=
+amily: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, O=
+xygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+
+@media (max-width: 900px) {
+  .frGuRk #table-of-contents { margin-left: 2.2rem; font-size: 0.8125rem; }
+}
+
+.frGuRk #table-of-contents li p { max-width: 100%; }
+
+.frGuRk #table-of-contents a { color: rgb(28, 28, 28); }
+
+.frGuRk .gatsby-resp-image-wrapper { margin: 0px auto 1.4rem; width: 100%; =
+max-width: 90%; }
+
+@media (min-width: 45rem) {
+  .frGuRk .gatsby-resp-image-wrapper { width: 45rem; }
+}
+
+.geXtNX { text-align: center; margin: 9.1875rem 3.5rem 8rem; }
+
+@media (max-width: 900px) {
+  .geXtNX { margin: 5.1875rem 3.5rem 4rem; }
+}
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Fugaz+One&display=swap
+
+@charset "utf-8";
+
+@font-face { font-family: "Fugaz One"; font-style: normal; font-weight: 400=
+; font-display: swap; src: url("https://fonts.gstatic.com/s/fugazone/v19/ra=
+x_HiWKp9EAITukFsl8AxhfsUjQ8Q.woff2") format("woff2"); unicode-range: U+0-FF=
+, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+=
+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, =
+U+FFFD; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2") format("woff2"); unicode-range: U=
++460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2") format("woff2"); unicode-range: U=
++301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2") format("woff2"); unicode-range: U=
++102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301,=
+ U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2") format("woff2"); unicode-range: U=
++100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20A=
+B, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2") format("woff2"); unicode-range: U+0-=
+FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, =
+U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF=
+, U+FFFD; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2") format("woff2"); unicode-range: U=
++460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2") format("woff2"); unicode-range: U=
++301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2") format("woff2"); unicode-range: U=
++102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301,=
+ U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2") format("woff2"); unicode-range: U=
++100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20A=
+B, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ font-display: swap; src: url("https://fonts.gstatic.com/s/montserrat/v26/J=
+TUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2") format("woff2"); unicode-range: U+0-=
+FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, =
+U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF=
+, U+FFFD; }
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://engineering.kablamo.com.au/static/f8cf7192aaa7615acf9cab779ef8537e/2bef9/results1.png
+
+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
+V0nPAAAAAElFTkSuQmCC
+
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://engineering.kablamo.com.au/static/b4727df4d43fc88c4170e09a44c25a86/2bef9/results2.png
+
+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
+
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://engineering.kablamo.com.au/static/partner_brands_dark-8a29c9873db284b2dd727f193fae3941.png
+
+iVBORw0KGgoAAAANSUhEUgAAA+AAAABkCAYAAAAG7louAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2
+MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiIHhtcE1NOklu
+c3RhbmNlSUQ9InhtcC5paWQ6NjJBRkZBNjZBQ0Y3MTFFOTlENkNBQjg5NDc1RDY3QzEiIHhtcE1N
+OkRvY3VtZW50SUQ9InhtcC5kaWQ6NjJBRkZBNjdBQ0Y3MTFFOTlENkNBQjg5NDc1RDY3QzEiPiA8
+eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MkFGRkE2NEFDRjcx
+MUU5OUQ2Q0FCODk0NzVENjdDMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MkFGRkE2NUFD
+RjcxMUU5OUQ2Q0FCODk0NzVENjdDMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8
+L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpJ9caUAADbeSURBVHja7J0PfF1Fte9XJRAg
+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
+jfOfAgwA5AjbtXyD1kcAAAAASUVORK5CYII=
+
+------MultipartBoundary--CVFvS7o4lBgBVEMskjz3jQdCNNkgrps5YSXw4EwV52------
