@@ -8,6 +8,7 @@
 * [How to check if a file exists in Go?](https://stackoverflow.com/questions/12518876/how-to-check-if-a-file-exists-in-go)
 * [How to create a directory if it does not exist in Go](https://freshman.tech/snippets/go/create-directory-if-not-exist/)
 * [You Don't Need a Library for File Walking in Go](https://engineering.kablamo.com.au/posts/2021/quick-comparison-between-go-file-walk-implementations/)
+* [Perform operations on files and directories](https://softchris.github.io/golang-book/06-io/02-file-directories/)
 
 ## Signal
 * [Go进阶13:signal处理和优雅退出守护进程](https://mojotv.cn/2019/01/17/golang-signal-restart-deamom)
