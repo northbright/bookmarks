@@ -1,0 +1,802 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://benhoyt.com/writings/go-readdir/
+Subject: Coming in Go 1.16: ReadDir and DirEntry
+Date: Mon, 12 Feb 2024 06:21:03 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--PM9wztnVn36n1fkOFfqXaFXPaBleixO17D1iDMgprm----"
+
+
+------MultipartBoundary--PM9wztnVn36n1fkOFfqXaFXPaBleixO17D1iDMgprm----
+Content-Type: text/html
+Content-ID: <frame-B017F4E4C75A1615422DEBD6DB64A88E@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://benhoyt.com/writings/go-readdir/
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd"><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-87b24398-e62c-43f2-ab8a-2d23329445a4@mhtml.blink" />
+ <title>Coming in Go 1.16: ReadDir and DirEntry</title>
+ <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+">
+=20
+
+ <meta name=3D"description" content=3D"A look at the new os.ReadDir functio=
+n and os.DirEntry interface coming in Go 1.16, with a comparison to os.scan=
+dir in Python.">
+
+ <meta name=3D"author" content=3D"Ben Hoyt">
+
+ <link rel=3D"shortcut icon" type=3D"image/png" href=3D"https://benhoyt.com=
+/images/favicon.png">
+
+=20
+</head>
+
+<body>
+
+<div id=3D"container">
+
+<div id=3D"menu">
+
+ <div class=3D"site-title"><a href=3D"https://benhoyt.com/">Ben Hoyt</a></d=
+iv>
+
+=20
+ <ul class=3D"links no-print">
+  <li><a href=3D"https://benhoyt.com/" title=3D"Go to the home page">Home</=
+a></li>
+  <li><a href=3D"https://benhoyt.com/cv/" title=3D"Go to my Resume/CV">Resu=
+me/CV</a></li>
+  <li><a href=3D"https://benhoyt.com/projects/" title=3D"Projects I've auth=
+ored">Projects</a></li>
+  <li><a href=3D"https://benhoyt.com/writings/" title=3D"Stuff I've written=
+">Tech Writing</a></li>
+  <li><a href=3D"https://benhoyt.com/writings/non-tech/" title=3D"Stuff I'v=
+e written">Non-Tech</a></li>
+  <li><a href=3D"mailto:benhoyt@gmail.com" title=3D"Email me">Email</a></li=
+>
+ </ul>
+
+ <ul class=3D"links print-only">
+  <li><a href=3D"https://benhoyt.com/">benhoyt.com</a>
+  </li><li><a href=3D"mailto:benhoyt@gmail.com">benhoyt@gmail.com</a></li>
+ </ul>
+</div>
+
+<div id=3D"content">
+<h1>Coming in Go 1.16: ReadDir and DirEntry</h1>
+<p class=3D"subtitle">January 2021</p>
+
+<p>As the primary author of Python=E2=80=99s <a href=3D"https://docs.python=
+.org/3/library/os.html#os.scandir"><code class=3D"language-plaintext highli=
+ghter-rouge">os.scandir</code></a> function and <a href=3D"https://www.pyth=
+on.org/dev/peps/pep-0471/">PEP 471</a> (the original proposal for <code cla=
+ss=3D"language-plaintext highlighter-rouge">scandir</code>), I was very hap=
+py to see that Go is adding something similar in Go 1.16, which is coming o=
+ut in late February 2021.</p>
+
+<p>In Go it will be called <a href=3D"https://tip.golang.org/pkg/os/#ReadDi=
+r"><code class=3D"language-plaintext highlighter-rouge">os.ReadDir</code></=
+a>, and was <a href=3D"https://github.com/golang/go/issues/41467">proposed<=
+/a> last September. After more than 100 comments and several tweaks to the =
+design, it was <a href=3D"https://github.com/golang/go/commit/a4ede9f9a6254=
+360d39d0f45aec133c355ac6b2a">committed</a> by Russ Cox in October. A file s=
+ystem-agnostic version is also included in the new <a href=3D"https://tip.g=
+olang.org/pkg/io/fs/"><code class=3D"language-plaintext highlighter-rouge">=
+io/fs</code></a> package as <a href=3D"https://tip.golang.org/pkg/io/fs/#Re=
+adDir"><code class=3D"language-plaintext highlighter-rouge">fs.ReadDir</cod=
+e></a>.</p>
+
+<h2 id=3D"why-is-readdir-needed">Why is ReadDir needed?</h2>
+
+<p>The short answer is: performance.</p>
+
+<p>When you call the system functions to read directory entries, the OS typ=
+ically returns the file name <em>and</em> its type (and on Windows, stat in=
+formation such as file size and last modified time). However, the original =
+Go and Python interfaces threw away this extra information, requiring you t=
+o make an additional <code class=3D"language-plaintext highlighter-rouge">s=
+tat</code> call per entry. System calls <a href=3D"https://stackoverflow.co=
+m/a/6424772/68707">aren=E2=80=99t cheap</a> to begin with, and <code class=
+=3D"language-plaintext highlighter-rouge">stat</code> may read from disk, o=
+r at least the disk cache.</p>
+
+<p>When recursively walking a directory tree, you need to know whether an e=
+ntry is a file or directory so you know whether to recurse in. So even a si=
+mple directory tree traversal required reading the directory entries <em>an=
+d</em> <code class=3D"language-plaintext highlighter-rouge">stat</code>-ing=
+ each entry. But if you use the file type information the OS provides, you =
+can avoid those <code class=3D"language-plaintext highlighter-rouge">stat</=
+code> calls and traverse a directory several times as fast (even dozens of =
+times as fast on network file systems). See some <a href=3D"https://github.=
+com/benhoyt/scandir#benchmarks">benchmarks</a> for the Python version.</p>
+
+<p>Both languages, unfortunately, started with a non-optimal design for rea=
+ding directories that didn=E2=80=99t allow you to access the type informati=
+on without extra calls to <code class=3D"language-plaintext highlighter-rou=
+ge">stat</code>: <a href=3D"https://docs.python.org/3/library/os.html#os.li=
+stdir"><code class=3D"language-plaintext highlighter-rouge">os.listdir</cod=
+e></a> in Python, and <a href=3D"https://golang.org/pkg/io/ioutil/#ReadDir"=
+><code class=3D"language-plaintext highlighter-rouge">ioutil.ReadDir</code>=
+</a> in Go.</p>
+
+<p>I first came up with the idea behind Python=E2=80=99s <code class=3D"lan=
+guage-plaintext highlighter-rouge">scandir</code> in 2012, and implemented =
+it for Python 3.5, which came out in 2015 (<a href=3D"https://benhoyt.com/w=
+ritings/scandir/">read more about that process</a>). It=E2=80=99s been impr=
+oved and added to since: for example, <code class=3D"language-plaintext hig=
+hlighter-rouge">with</code> statement handling and file descriptor support.=
+</p>
+
+<p>For Go, I didn=E2=80=99t have anything to do with the proposal or implem=
+entation, apart from a <a href=3D"https://github.com/golang/go/issues/41467=
+#issuecomment-694603286">couple</a> <a href=3D"https://github.com/golang/go=
+/issues/41467#issuecomment-697937162">of</a> <a href=3D"https://github.com/=
+golang/go/issues/41188#issuecomment-686720957">comments</a> suggesting impr=
+ovements based on my experience with the Python version.</p>
+
+<h2 id=3D"python-vs-go">Python vs Go</h2>
+
+<p>Let=E2=80=99s have a look at the new =E2=80=9Cread directory=E2=80=9D in=
+terfaces, particularly how similar they are in Python and Go.</p>
+
+<p>In Python you call <code class=3D"language-plaintext highlighter-rouge">=
+os.scandir(path)</code>, and it returns an iterator of <code class=3D"langu=
+age-plaintext highlighter-rouge">os.DirEntry</code> objects, which are as f=
+ollows:</p>
+
+<div class=3D"language-python highlighter-rouge"><div class=3D"highlight"><=
+pre class=3D"highlight"><code><span class=3D"k">class</span> <span class=3D=
+"nc">DirEntry</span><span class=3D"p">:</span>
+    <span class=3D"c1"># This entry's filename.
+</span>    <span class=3D"n">name</span><span class=3D"p">:</span> <span cl=
+ass=3D"nb">str</span>
+
+    <span class=3D"c1"># This entry's full path: os.path.join(scandir_path,=
+ entry.name).
+</span>    <span class=3D"n">path</span><span class=3D"p">:</span> <span cl=
+ass=3D"nb">str</span>
+
+    <span class=3D"c1"># Return inode or file ID for this entry.
+</span>    <span class=3D"k">def</span> <span class=3D"nf">inode</span><spa=
+n class=3D"p">(</span><span class=3D"bp">self</span><span class=3D"p">)</sp=
+an> <span class=3D"o">-&gt;</span> <span class=3D"nb">int</span><span class=
+=3D"p">:</span> <span class=3D"p">...</span>
+
+    <span class=3D"c1"># Return True if this entry is a directory.
+</span>    <span class=3D"k">def</span> <span class=3D"nf">is_dir</span><sp=
+an class=3D"p">(</span><span class=3D"bp">self</span><span class=3D"p">,</s=
+pan> <span class=3D"n">follow_symlinks</span><span class=3D"o">=3D</span><s=
+pan class=3D"bp">True</span><span class=3D"p">)</span> <span class=3D"o">-&=
+gt;</span> <span class=3D"nb">bool</span><span class=3D"p">:</span> <span c=
+lass=3D"p">...</span>
+
+    <span class=3D"c1"># Return True if this entry is a regular file.
+</span>    <span class=3D"k">def</span> <span class=3D"nf">is_file</span><s=
+pan class=3D"p">(</span><span class=3D"bp">self</span><span class=3D"p">,</=
+span> <span class=3D"n">follow_symlinks</span><span class=3D"o">=3D</span><=
+span class=3D"bp">True</span><span class=3D"p">)</span> <span class=3D"o">-=
+&gt;</span> <span class=3D"nb">bool</span><span class=3D"p">:</span> <span =
+class=3D"p">...</span>
+
+    <span class=3D"c1"># Return True if this entry is a symbolic link.
+</span>    <span class=3D"k">def</span> <span class=3D"nf">is_symlink</span=
+><span class=3D"p">(</span><span class=3D"bp">self</span><span class=3D"p">=
+)</span> <span class=3D"o">-&gt;</span> <span class=3D"nb">bool</span><span=
+ class=3D"p">:</span> <span class=3D"p">...</span>
+
+    <span class=3D"c1"># Return stat information for this entry.
+</span>    <span class=3D"k">def</span> <span class=3D"nf">stat</span><span=
+ class=3D"p">(</span><span class=3D"bp">self</span><span class=3D"p">,</spa=
+n> <span class=3D"n">follow_symlinks</span><span class=3D"o">=3D</span><spa=
+n class=3D"bp">True</span><span class=3D"p">)</span> <span class=3D"o">-&gt=
+;</span> <span class=3D"n">stat_result</span><span class=3D"p">:</span> <sp=
+an class=3D"p">...</span>
+</code></pre></div></div>
+
+<p>Accessing the <code class=3D"language-plaintext highlighter-rouge">name<=
+/code> and <code class=3D"language-plaintext highlighter-rouge">path</code>=
+ attributes will never raise exceptions, but the method calls may raise <co=
+de class=3D"language-plaintext highlighter-rouge">OSError</code>, depending=
+ on operating system and file system, and whether the entry is a symbolic l=
+ink or not. For example, on Linux, <code class=3D"language-plaintext highli=
+ghter-rouge">stat</code> always performs a system call, and hence may raise=
+ an exception, but the <code class=3D"language-plaintext highlighter-rouge"=
+>is_X</code> methods usually do not.</p>
+
+<p>In Go you call <code class=3D"language-plaintext highlighter-rouge">os.R=
+eadDir(path)</code>, and it returns a slice of <code class=3D"language-plai=
+ntext highlighter-rouge">os.DirEntry</code> objects, which look like this:<=
+/p>
+
+<div class=3D"language-go highlighter-rouge"><div class=3D"highlight"><pre =
+class=3D"highlight"><code><span class=3D"k">type</span> <span class=3D"n">D=
+irEntry</span> <span class=3D"k">interface</span> <span class=3D"p">{</span=
+>
+    <span class=3D"c">// Returns the name of this entry's file (or subdirec=
+tory).</span>
+    <span class=3D"n">Name</span><span class=3D"p">()</span> <span class=3D=
+"kt">string</span>
+
+    <span class=3D"c">// Reports whether the entry describes a directory.</=
+span>
+    <span class=3D"n">IsDir</span><span class=3D"p">()</span> <span class=
+=3D"kt">bool</span>
+
+    <span class=3D"c">// Returns the type bits for the entry (a subset of F=
+ileMode).</span>
+    <span class=3D"n">Type</span><span class=3D"p">()</span> <span class=3D=
+"n">FileMode</span>
+
+    <span class=3D"c">// Returns the FileInfo (stat information) for this e=
+ntry.</span>
+    <span class=3D"n">Info</span><span class=3D"p">()</span> <span class=3D=
+"p">(</span><span class=3D"n">FileInfo</span><span class=3D"p">,</span> <sp=
+an class=3D"kt">error</span><span class=3D"p">)</span>
+<span class=3D"p">}</span>
+</code></pre></div></div>
+
+<p>You can see the similarities right away, though in true Go fashion, the =
+Go version is somewhat simpler. In fact, if I were doing Python=E2=80=99s <=
+code class=3D"language-plaintext highlighter-rouge">scandir</code> again, I=
+=E2=80=99d probably push for a slightly simpler interface =E2=80=93 in part=
+icular, getting rid of the <code class=3D"language-plaintext highlighter-ro=
+uge">follow_symlinks</code> parameter and making it not follow symbolic lin=
+ks by default.</p>
+
+<p>Here=E2=80=99s an example that uses <code class=3D"language-plaintext hi=
+ghlighter-rouge">os.scandir</code> =E2=80=93 a function that calculates the=
+ total size of the files in a directory and its subdirectories, recursively=
+:</p>
+
+<div class=3D"language-python highlighter-rouge"><div class=3D"highlight"><=
+pre class=3D"highlight"><code><span class=3D"k">def</span> <span class=3D"n=
+f">get_tree_size</span><span class=3D"p">(</span><span class=3D"n">path</sp=
+an><span class=3D"p">):</span>
+    <span class=3D"n">total</span> <span class=3D"o">=3D</span> <span class=
+=3D"mi">0</span>
+    <span class=3D"k">with</span> <span class=3D"n">os</span><span class=3D=
+"p">.</span><span class=3D"n">scandir</span><span class=3D"p">(</span><span=
+ class=3D"n">path</span><span class=3D"p">)</span> <span class=3D"k">as</sp=
+an> <span class=3D"n">entries</span><span class=3D"p">:</span>
+        <span class=3D"k">for</span> <span class=3D"n">entry</span> <span c=
+lass=3D"ow">in</span> <span class=3D"n">entries</span><span class=3D"p">:</=
+span>
+            <span class=3D"k">if</span> <span class=3D"n">entry</span><span=
+ class=3D"p">.</span><span class=3D"n">is_dir</span><span class=3D"p">(</sp=
+an><span class=3D"n">follow_symlinks</span><span class=3D"o">=3D</span><spa=
+n class=3D"bp">False</span><span class=3D"p">):</span>
+                <span class=3D"n">total</span> <span class=3D"o">+=3D</span=
+> <span class=3D"n">get_tree_size</span><span class=3D"p">(</span><span cla=
+ss=3D"n">entry</span><span class=3D"p">.</span><span class=3D"n">path</span=
+><span class=3D"p">)</span>
+            <span class=3D"k">else</span><span class=3D"p">:</span>
+                <span class=3D"n">total</span> <span class=3D"o">+=3D</span=
+> <span class=3D"n">entry</span><span class=3D"p">.</span><span class=3D"n"=
+>stat</span><span class=3D"p">(</span><span class=3D"n">follow_symlinks</sp=
+an><span class=3D"o">=3D</span><span class=3D"bp">False</span><span class=
+=3D"p">).</span><span class=3D"n">st_size</span>
+    <span class=3D"k">return</span> <span class=3D"n">total</span>
+</code></pre></div></div>
+
+<p>In Go (once 1.16 comes out) it would look like this:</p>
+
+<div class=3D"language-go highlighter-rouge"><div class=3D"highlight"><pre =
+class=3D"highlight"><code><span class=3D"k">func</span> <span class=3D"n">G=
+etTreeSize</span><span class=3D"p">(</span><span class=3D"n">path</span> <s=
+pan class=3D"kt">string</span><span class=3D"p">)</span> <span class=3D"p">=
+(</span><span class=3D"kt">int64</span><span class=3D"p">,</span> <span cla=
+ss=3D"kt">error</span><span class=3D"p">)</span> <span class=3D"p">{</span>
+    <span class=3D"n">entries</span><span class=3D"p">,</span> <span class=
+=3D"n">err</span> <span class=3D"o">:=3D</span> <span class=3D"n">os</span>=
+<span class=3D"o">.</span><span class=3D"n">ReadDir</span><span class=3D"p"=
+>(</span><span class=3D"n">path</span><span class=3D"p">)</span>
+    <span class=3D"k">if</span> <span class=3D"n">err</span> <span class=3D=
+"o">!=3D</span> <span class=3D"no">nil</span> <span class=3D"p">{</span>
+        <span class=3D"k">return</span> <span class=3D"m">0</span><span cla=
+ss=3D"p">,</span> <span class=3D"n">err</span>
+    <span class=3D"p">}</span>
+    <span class=3D"k">var</span> <span class=3D"n">total</span> <span class=
+=3D"kt">int64</span>
+    <span class=3D"k">for</span> <span class=3D"n">_</span><span class=3D"p=
+">,</span> <span class=3D"n">entry</span> <span class=3D"o">:=3D</span> <sp=
+an class=3D"k">range</span> <span class=3D"n">entries</span> <span class=3D=
+"p">{</span>
+        <span class=3D"k">if</span> <span class=3D"n">entry</span><span cla=
+ss=3D"o">.</span><span class=3D"n">IsDir</span><span class=3D"p">()</span> =
+<span class=3D"p">{</span>
+            <span class=3D"n">size</span><span class=3D"p">,</span> <span c=
+lass=3D"n">err</span> <span class=3D"o">:=3D</span> <span class=3D"n">GetTr=
+eeSize</span><span class=3D"p">(</span><span class=3D"n">filepath</span><sp=
+an class=3D"o">.</span><span class=3D"n">Join</span><span class=3D"p">(</sp=
+an><span class=3D"n">path</span><span class=3D"p">,</span> <span class=3D"n=
+">entry</span><span class=3D"o">.</span><span class=3D"n">Name</span><span =
+class=3D"p">()))</span>
+            <span class=3D"k">if</span> <span class=3D"n">err</span> <span =
+class=3D"o">!=3D</span> <span class=3D"no">nil</span> <span class=3D"p">{</=
+span>
+                <span class=3D"k">return</span> <span class=3D"m">0</span><=
+span class=3D"p">,</span> <span class=3D"n">err</span>
+            <span class=3D"p">}</span>
+            <span class=3D"n">total</span> <span class=3D"o">+=3D</span> <s=
+pan class=3D"n">size</span>
+        <span class=3D"p">}</span> <span class=3D"k">else</span> <span clas=
+s=3D"p">{</span>
+            <span class=3D"n">info</span><span class=3D"p">,</span> <span c=
+lass=3D"n">err</span> <span class=3D"o">:=3D</span> <span class=3D"n">entry=
+</span><span class=3D"o">.</span><span class=3D"n">Info</span><span class=
+=3D"p">()</span>
+            <span class=3D"k">if</span> <span class=3D"n">err</span> <span =
+class=3D"o">!=3D</span> <span class=3D"no">nil</span> <span class=3D"p">{</=
+span>
+                <span class=3D"k">return</span> <span class=3D"m">0</span><=
+span class=3D"p">,</span> <span class=3D"n">err</span>
+            <span class=3D"p">}</span>
+            <span class=3D"n">total</span> <span class=3D"o">+=3D</span> <s=
+pan class=3D"n">info</span><span class=3D"o">.</span><span class=3D"n">Size=
+</span><span class=3D"p">()</span>
+        <span class=3D"p">}</span>
+    <span class=3D"p">}</span>
+    <span class=3D"k">return</span> <span class=3D"n">total</span><span cla=
+ss=3D"p">,</span> <span class=3D"no">nil</span>
+<span class=3D"p">}</span>
+</code></pre></div></div>
+
+<p>A similar high-level structure, though of course someone=E2=80=99s going=
+ to say, =E2=80=9Csee, look how much boilerplate Go=E2=80=99s error handlin=
+g introduces!=E2=80=9D And that=E2=80=99s true =E2=80=93 the Python code is=
+ very neat. In a little script that would be fine, and that=E2=80=99s where=
+ Python excels.</p>
+
+<p>However, in production code, or in a hardened command-line utility, you=
+=E2=80=99d want to catch errors around the stat call, and perhaps ignore pe=
+rmission errors, or log them. The Go code makes explicit the fact that erro=
+rs can occur, and would easily allow you to add logging or nicer error mess=
+ages.</p>
+
+<h2 id=3D"higher-level-tree-walking">Higher-level tree walking</h2>
+
+<p>In addition, both languages have higher-level functions for recursively =
+walking a directory tree. In Python, that=E2=80=99s <a href=3D"https://docs=
+.python.org/3/library/os.html#os.walk"><code class=3D"language-plaintext hi=
+ghlighter-rouge">os.walk</code></a>. The beauty of <code class=3D"language-=
+plaintext highlighter-rouge">scandir</code> in Python is that the signature=
+ of <code class=3D"language-plaintext highlighter-rouge">os.walk</code> did=
+n=E2=80=99t need to change, so all existing users of <code class=3D"languag=
+e-plaintext highlighter-rouge">os.walk</code> (of which there are many) got=
+ the speed-up automatically.</p>
+
+<p>For example, to print all the non-dot file paths in a directory tree usi=
+ng <code class=3D"language-plaintext highlighter-rouge">os.walk</code>:</p>
+
+<div class=3D"language-python highlighter-rouge"><div class=3D"highlight"><=
+pre class=3D"highlight"><code><span class=3D"k">def</span> <span class=3D"n=
+f">list_non_dot</span><span class=3D"p">(</span><span class=3D"n">path</spa=
+n><span class=3D"p">):</span>
+    <span class=3D"n">paths</span> <span class=3D"o">=3D</span> <span class=
+=3D"p">[]</span>
+    <span class=3D"k">for</span> <span class=3D"n">root</span><span class=
+=3D"p">,</span> <span class=3D"n">dirs</span><span class=3D"p">,</span> <sp=
+an class=3D"n">files</span> <span class=3D"ow">in</span> <span class=3D"n">=
+os</span><span class=3D"p">.</span><span class=3D"n">walk</span><span class=
+=3D"p">(</span><span class=3D"n">path</span><span class=3D"p">):</span>
+        <span class=3D"c1"># Modify dirs to skip directories starting with =
+'.'
+</span>        <span class=3D"n">dirs</span><span class=3D"p">[:]</span> <s=
+pan class=3D"o">=3D</span> <span class=3D"p">[</span><span class=3D"n">d</s=
+pan> <span class=3D"k">for</span> <span class=3D"n">d</span> <span class=3D=
+"ow">in</span> <span class=3D"n">dirs</span> <span class=3D"k">if</span> <s=
+pan class=3D"ow">not</span> <span class=3D"n">d</span><span class=3D"p">.</=
+span><span class=3D"n">startswith</span><span class=3D"p">(</span><span cla=
+ss=3D"s">'.'</span><span class=3D"p">)]</span>
+        <span class=3D"k">for</span> <span class=3D"n">f</span> <span class=
+=3D"ow">in</span> <span class=3D"n">files</span><span class=3D"p">:</span>
+            <span class=3D"k">if</span> <span class=3D"n">f</span><span cla=
+ss=3D"p">.</span><span class=3D"n">startswith</span><span class=3D"p">(</sp=
+an><span class=3D"s">'.'</span><span class=3D"p">):</span>
+                <span class=3D"k">continue</span>
+            <span class=3D"n">paths</span><span class=3D"p">.</span><span c=
+lass=3D"n">append</span><span class=3D"p">(</span><span class=3D"n">os</spa=
+n><span class=3D"p">.</span><span class=3D"n">path</span><span class=3D"p">=
+.</span><span class=3D"n">join</span><span class=3D"p">(</span><span class=
+=3D"n">root</span><span class=3D"p">,</span> <span class=3D"n">f</span><spa=
+n class=3D"p">))</span>
+    <span class=3D"k">return</span> <span class=3D"nb">sorted</span><span c=
+lass=3D"p">(</span><span class=3D"n">paths</span><span class=3D"p">)</span>
+</code></pre></div></div>
+
+<p>As of Python 3.5, where <code class=3D"language-plaintext highlighter-ro=
+uge">os.walk</code> uses <code class=3D"language-plaintext highlighter-roug=
+e">scandir</code> instead of <code class=3D"language-plaintext highlighter-=
+rouge">listdir</code> under the hood, this will magically be from 1.5 to 20=
+ times as fast, depending on operating system and file system.</p>
+
+<p>Go (pre-1.16) has a similar function, <a href=3D"https://golang.org/pkg/=
+path/filepath/#Walk"><code class=3D"language-plaintext highlighter-rouge">f=
+ilepath.Walk</code></a>, but unfortunately the <a href=3D"https://golang.or=
+g/pkg/os/#FileInfo"><code class=3D"language-plaintext highlighter-rouge">Fi=
+leInfo</code></a> interface wasn=E2=80=99t designed to allow errors to be r=
+eported from its various method calls. As we=E2=80=99ve seen, these can som=
+etimes perform system calls =E2=80=93 for example, the stat information lik=
+e <code class=3D"language-plaintext highlighter-rouge">Size</code> will alw=
+ays require a system call on Linux. So in Go, the methods need to return an=
+ error (in Python they raise an exception).</p>
+
+<p>Is was tempting to wave error handling away to try to reuse the <code cl=
+ass=3D"language-plaintext highlighter-rouge">FileInfo</code> interface, so =
+that existing code would get a magical speed-up. In fact, <a href=3D"https:=
+//github.com/golang/go/issues/41188">issue 41188</a> is a proposal from Rus=
+s Cox suggesting just that (with some <a href=3D"https://github.com/golang/=
+go/issues/41188#issuecomment-690879673">data</a> to show that it=E2=80=99s =
+not as terrible an idea as it sounds). However, <code class=3D"language-pla=
+intext highlighter-rouge">stat</code> can and does return errors, so there =
+was potential for things like a file size being returned as 0 on error. As =
+a result, there was significant push-back against trying to wedge it into t=
+he existing API, and Russ eventually <a href=3D"https://github.com/golang/g=
+o/issues/41188#issuecomment-694596908">acknowledged</a> the lack of consens=
+us and proposed the <code class=3D"language-plaintext highlighter-rouge">Di=
+rEntry</code> interface instead.</p>
+
+<p>What this means is that, to get the performance gain, <code class=3D"lan=
+guage-plaintext highlighter-rouge">filepath.Walk</code> calls need to be ch=
+anged to <a href=3D"https://tip.golang.org/pkg/path/filepath/#WalkDir"><cod=
+e class=3D"language-plaintext highlighter-rouge">filepath.WalkDir</code></a=
+> =E2=80=93 very similar, but the walk function receives a <code class=3D"l=
+anguage-plaintext highlighter-rouge">DirEntry</code> instead of a <code cla=
+ss=3D"language-plaintext highlighter-rouge">FileInfo</code>.</p>
+
+<p>Here=E2=80=99s what a Go version of <code class=3D"language-plaintext hi=
+ghlighter-rouge">list_non_dot</code> would look like with the existing <cod=
+e class=3D"language-plaintext highlighter-rouge">filepath.Walk</code> funct=
+ion:</p>
+
+<div class=3D"language-go highlighter-rouge"><div class=3D"highlight"><pre =
+class=3D"highlight"><code><span class=3D"k">func</span> <span class=3D"n">L=
+istNonDot</span><span class=3D"p">(</span><span class=3D"n">path</span> <sp=
+an class=3D"kt">string</span><span class=3D"p">)</span> <span class=3D"p">(=
+[]</span><span class=3D"kt">string</span><span class=3D"p">,</span> <span c=
+lass=3D"kt">error</span><span class=3D"p">)</span> <span class=3D"p">{</spa=
+n>
+    <span class=3D"k">var</span> <span class=3D"n">paths</span> <span class=
+=3D"p">[]</span><span class=3D"kt">string</span>
+    <span class=3D"n">err</span> <span class=3D"o">:=3D</span> <span class=
+=3D"n">filepath</span><span class=3D"o">.</span><span class=3D"n">Walk</spa=
+n><span class=3D"p">(</span><span class=3D"n">path</span><span class=3D"p">=
+,</span> <span class=3D"k">func</span><span class=3D"p">(</span><span class=
+=3D"n">p</span> <span class=3D"kt">string</span><span class=3D"p">,</span> =
+<span class=3D"n">info</span> <span class=3D"n">os</span><span class=3D"o">=
+.</span><span class=3D"n">FileInfo</span><span class=3D"p">,</span>
+                                    <span class=3D"n">err</span> <span clas=
+s=3D"kt">error</span><span class=3D"p">)</span> <span class=3D"kt">error</s=
+pan> <span class=3D"p">{</span>
+        <span class=3D"k">if</span> <span class=3D"n">strings</span><span c=
+lass=3D"o">.</span><span class=3D"n">HasPrefix</span><span class=3D"p">(</s=
+pan><span class=3D"n">info</span><span class=3D"o">.</span><span class=3D"n=
+">Name</span><span class=3D"p">(),</span> <span class=3D"s">"."</span><span=
+ class=3D"p">)</span> <span class=3D"p">{</span>
+            <span class=3D"k">if</span> <span class=3D"n">info</span><span =
+class=3D"o">.</span><span class=3D"n">IsDir</span><span class=3D"p">()</spa=
+n> <span class=3D"p">{</span>
+                <span class=3D"k">return</span> <span class=3D"n">filepath<=
+/span><span class=3D"o">.</span><span class=3D"n">SkipDir</span>
+            <span class=3D"p">}</span>
+            <span class=3D"k">return</span> <span class=3D"n">err</span>
+        <span class=3D"p">}</span>
+        <span class=3D"k">if</span> <span class=3D"o">!</span><span class=
+=3D"n">info</span><span class=3D"o">.</span><span class=3D"n">IsDir</span><=
+span class=3D"p">()</span> <span class=3D"p">{</span>
+            <span class=3D"n">paths</span> <span class=3D"o">=3D</span> <sp=
+an class=3D"nb">append</span><span class=3D"p">(</span><span class=3D"n">pa=
+ths</span><span class=3D"p">,</span> <span class=3D"n">p</span><span class=
+=3D"p">)</span>
+        <span class=3D"p">}</span>
+        <span class=3D"k">return</span> <span class=3D"n">err</span>
+    <span class=3D"p">})</span>
+    <span class=3D"k">return</span> <span class=3D"n">paths</span><span cla=
+ss=3D"p">,</span> <span class=3D"n">err</span>
+<span class=3D"p">}</span>
+</code></pre></div></div>
+
+<p>This will keep working in Go 1.16, of course, but if you want the perfor=
+mance benefits you=E2=80=99ll have to make some very small changes =E2=80=
+=93 in this case just changing <code class=3D"language-plaintext highlighte=
+r-rouge">Walk</code> to <code class=3D"language-plaintext highlighter-rouge=
+">WalkDir</code>, and changing <code class=3D"language-plaintext highlighte=
+r-rouge">os.FileInfo</code> to <code class=3D"language-plaintext highlighte=
+r-rouge">os.DirEntry</code>:</p>
+
+<div class=3D"language-go highlighter-rouge"><div class=3D"highlight"><pre =
+class=3D"highlight"><code>    <span class=3D"n">err</span> <span class=3D"o=
+">:=3D</span> <span class=3D"n">filepath</span><span class=3D"o">.</span><s=
+pan class=3D"n">WalkDir</span><span class=3D"p">(</span><span class=3D"n">p=
+ath</span><span class=3D"p">,</span> <span class=3D"k">func</span><span cla=
+ss=3D"p">(</span><span class=3D"n">p</span> <span class=3D"kt">string</span=
+><span class=3D"p">,</span> <span class=3D"n">info</span> <span class=3D"n"=
+>os</span><span class=3D"o">.</span><span class=3D"n">DirEntry</span><span =
+class=3D"p">,</span>
+</code></pre></div></div>
+
+<p>For what it=E2=80=99s worth, running the first function on my home direc=
+tory on Linux, once cached, takes about 580ms. The new version using Go 1.1=
+6 takes about 370ms =E2=80=93 roughly 1.5x as fast. Not a huge difference, =
+but worth it =E2=80=93 and you get much larger speed-ups on networked file =
+systems and on Windows.</p>
+
+<h2 id=3D"summary">Summary</h2>
+
+<p>The new <code class=3D"language-plaintext highlighter-rouge">ReadDir</co=
+de> API is easy to use, and integrates nicely with the new file system inte=
+rface via <code class=3D"language-plaintext highlighter-rouge">fs.ReadDir</=
+code>. And to speed up your existing <code class=3D"language-plaintext high=
+lighter-rouge">Walk</code> calls, the tweaks you=E2=80=99ll need to make to=
+ switch to <code class=3D"language-plaintext highlighter-rouge">WalkDir</co=
+de> are trivial.</p>
+
+<p>API design is hard. Cross-platform, OS-related API design is even harder=
+. Be sure to get this right when designing your next programming language=
+=E2=80=99s standard library! :-)</p>
+
+<p>In any case, I=E2=80=99m glad that Go=E2=80=99s support for reading dire=
+ctories will no longer be lagging behind =E2=80=93 or <em>walking</em> behi=
+nd =E2=80=93 Python.</p>
+
+</div>
+
+</div>
+
+
+
+
+
+</body></html>
+------MultipartBoundary--PM9wztnVn36n1fkOFfqXaFXPaBleixO17D1iDMgprm----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-87b24398-e62c-43f2-ab8a-2d23329445a4@mhtml.blink
+
+@charset "utf-8";
+
+body { background: white; color: rgb(48, 24, 0); font-family: Georgia, "Bit=
+stream Charter", "Times New Roman", serif; font-size: 17px; line-height: 1.=
+6; word-spacing: 0.1em; margin: 0px auto; max-width: 1000px; }
+
+#menu { margin: 0px auto; width: 92.5%; height: 5.5em; border-bottom: 1px s=
+olid rgb(208, 200, 192); }
+
+#menu .site-title { float: left; font-size: 225%; color: rgb(208, 200, 192)=
+; letter-spacing: 0.15em; padding: 0.45em 0px; text-transform: uppercase; m=
+argin-left: -0.05em; }
+
+#menu .site-title a, #menu .site-title a:hover { color: rgb(208, 200, 192);=
+ text-decoration: none; }
+
+#menu ul.links { float: right; list-style-type: none; font-size: 80%; margi=
+n-top: 2.8em; }
+
+#menu ul.links li { display: inline; margin: 0px 0px 0px 0.5em; padding: 0p=
+x; }
+
+#menu a { border: none; color: rgb(192, 64, 0); }
+
+#menu a:hover { border-bottom: 1px solid; }
+
+#content { margin: 2em auto; width: 92.5%; max-width: 700px; }
+
+h1, h2, p, ul, details { margin: 1em 0px; }
+
+p.gap { margin-top: 1.8em; }
+
+p.subtitle { margin-top: 0px; font-style: italic; }
+
+a { text-decoration: none; border-bottom: 1px dotted; }
+
+a:hover { border-bottom: 1px solid; }
+
+a:link { color: rgb(232, 112, 0); }
+
+a:visited { color: rgb(192, 64, 0); }
+
+h1 a, h2 a { border-bottom: none; }
+
+h1 a:hover, h1 a:link, h1 a:visited, h2 a:hover, h2 a:link, h2 a:visited { =
+color: rgb(48, 24, 0); }
+
+h1, h2 { font-weight: normal; letter-spacing: 0.02em; }
+
+h2 { font-variant: small-caps; }
+
+h1 { margin: 0px 0px 0px -0.05em; font-size: 200%; }
+
+h2 { margin: 1.8em 0px -0.2em; font-size: 160%; }
+
+h3 { margin: 1.5em 0px -0.5em; font-size: 100%; }
+
+ul { padding: 0px; list-style-type: disc; }
+
+li { padding: 0px; margin-left: 1.2em; margin-bottom: 0.5em; }
+
+ol li { margin-left: -0.7em; }
+
+blockquote { font-size: 90%; margin: 2em 0px; padding: 0px 1.5em; border-le=
+ft: 1px dotted rgb(48, 24, 0); }
+
+.smallcaps { font-variant: small-caps; }
+
+pre { overflow-x: auto; }
+
+code { font-size: 92.5%; word-spacing: 0px; }
+
+.print-only { display: none; }
+
+img { max-width: 100%; }
+
+img.right { float: right; width: 40%; margin: 1.5em 0px 1.5em 2em; }
+
+img.screenshot { box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-=
+radius: 5px; }
+
+.right-callout { float: right; width: 13em; font-size: 75%; font-style: ita=
+lic; padding: 0.5em 0px 0.5em 1.5em; border-left: 1px dotted rgb(48, 24, 0)=
+; margin-left: 1.5em; }
+
+table { border-collapse: collapse; }
+
+th { text-align: left; padding-right: 2rem; }
+
+td { padding-right: 2em; }
+
+@media (max-width: 750px) {
+  body { font-size: 15px; }
+  #menu ul.links { font-size: 75%; }
+}
+
+@media (max-width: 615px) {
+  body { font-size: 13px; }
+  #menu { height: 7.5em; }
+  #menu .site-title { float: none; }
+  #menu ul.links { float: none; margin: -0.5em 0px 0px -0.8em; }
+  h1 { }
+}
+
+@media print {
+  .no-print { display: none; }
+  .print-only { display: block; }
+  a:link, a:visited { color: rgb(48, 24, 0); }
+}
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+div.highlight { margin: 1em 0px; }
+
+pre.highlight { background: rgb(248, 248, 248); padding: 0.3em 0.6em; margi=
+n: 0px; }
+
+.highlight .c { color: rgb(170, 170, 170); font-style: italic; }
+
+.highlight .k { color: rgb(0, 0, 170); }
+
+.highlight .ch { color: rgb(170, 170, 170); font-style: italic; }
+
+.highlight .cm { color: rgb(170, 170, 170); font-style: italic; }
+
+.highlight .cp { color: rgb(76, 131, 23); }
+
+.highlight .cpf { color: rgb(170, 170, 170); font-style: italic; }
+
+.highlight .c1 { color: rgb(170, 170, 170); font-style: italic; }
+
+.highlight .cs { color: rgb(0, 0, 170); font-style: italic; }
+
+.highlight .gd { color: rgb(170, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gr { color: rgb(170, 0, 0); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 170, 0); }
+
+.highlight .go { color: rgb(136, 136, 136); }
+
+.highlight .gp { color: rgb(85, 85, 85); }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(170, 0, 0); }
+
+.highlight .kc { color: rgb(0, 0, 170); }
+
+.highlight .kd { color: rgb(0, 0, 170); }
+
+.highlight .kn { color: rgb(0, 0, 170); }
+
+.highlight .kp { color: rgb(0, 0, 170); }
+
+.highlight .kr { color: rgb(0, 0, 170); }
+
+.highlight .kt { color: rgb(0, 170, 170); }
+
+.highlight .m { color: rgb(0, 153, 153); }
+
+.highlight .s { color: rgb(170, 85, 0); }
+
+.highlight .na { color: rgb(30, 144, 255); }
+
+.highlight .nb { color: rgb(0, 170, 170); }
+
+.highlight .nc { color: rgb(0, 170, 0); }
+
+.highlight .no { color: rgb(170, 0, 0); }
+
+.highlight .nd { color: rgb(136, 136, 136); }
+
+.highlight .ni { color: rgb(136, 0, 0); font-weight: bold; }
+
+.highlight .nf { color: rgb(0, 170, 0); }
+
+.highlight .nn { color: rgb(0, 170, 170); }
+
+.highlight .nt { color: rgb(30, 144, 255); font-weight: bold; }
+
+.highlight .nv { color: rgb(170, 0, 0); }
+
+.highlight .ow { color: rgb(0, 0, 170); }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mb { color: rgb(0, 153, 153); }
+
+.highlight .mf { color: rgb(0, 153, 153); }
+
+.highlight .mh { color: rgb(0, 153, 153); }
+
+.highlight .mi { color: rgb(0, 153, 153); }
+
+.highlight .mo { color: rgb(0, 153, 153); }
+
+.highlight .sa { color: rgb(170, 85, 0); }
+
+.highlight .sb { color: rgb(170, 85, 0); }
+
+.highlight .sc { color: rgb(170, 85, 0); }
+
+.highlight .dl { color: rgb(170, 85, 0); }
+
+.highlight .sd { color: rgb(170, 85, 0); }
+
+.highlight .s2 { color: rgb(170, 85, 0); }
+
+.highlight .se { color: rgb(170, 85, 0); }
+
+.highlight .sh { color: rgb(170, 85, 0); }
+
+.highlight .si { color: rgb(170, 85, 0); }
+
+.highlight .sx { color: rgb(170, 85, 0); }
+
+.highlight .sr { color: rgb(0, 153, 153); }
+
+.highlight .s1 { color: rgb(170, 85, 0); }
+
+.highlight .ss { color: rgb(0, 0, 170); }
+
+.highlight .bp { color: rgb(0, 170, 170); }
+
+.highlight .fm { color: rgb(0, 170, 0); }
+
+.highlight .vc { color: rgb(170, 0, 0); }
+
+.highlight .vg { color: rgb(170, 0, 0); }
+
+.highlight .vi { color: rgb(170, 0, 0); }
+
+.highlight .vm { color: rgb(170, 0, 0); }
+
+.highlight .il { color: rgb(0, 153, 153); }
+------MultipartBoundary--PM9wztnVn36n1fkOFfqXaFXPaBleixO17D1iDMgprm------
