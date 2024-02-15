@@ -70,3 +70,5 @@
 
 ## Photos
 * [iPad、iPhone向Mac传照片的3个高效方法](https://zhuanlan.zhihu.com/p/467381778)
+* [iPhone的大量照片如何无损转移到电脑里，并且iPhone内存批量删除已经转移到电脑里的照片?](https://www.zhihu.com/question/451735214/answer/3058475406)
+* [转移照片图库以节省 Mac 上的空间](https://support.apple.com/zh-cn/108345)
