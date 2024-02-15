@@ -73,3 +73,4 @@
 * [iPhone的大量照片如何无损转移到电脑里，并且iPhone内存批量删除已经转移到电脑里的照片?](https://www.zhihu.com/question/451735214/answer/3058475406)
 * [转移照片图库以节省 Mac 上的空间](https://support.apple.com/zh-cn/108345)
 * [在“照片”中指定“系统照片图库”](https://support.apple.com/zh-cn/104946)
+* [Image Capture Date Problems](https://discussions.apple.com/thread/254299771?sortBy=best)
