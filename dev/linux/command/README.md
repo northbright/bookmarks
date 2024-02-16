@@ -18,3 +18,6 @@
 
 ## Touch
 * [9 Useful Examples of Touch Command in Linux](https://linuxhandbook.com/touch-command/)
+
+## cp
+* [Difference between cp -r and cp -R (copy command)](https://unix.stackexchange.com/questions/18712/difference-between-cp-r-and-cp-r-copy-command)
