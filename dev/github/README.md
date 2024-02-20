@@ -80,3 +80,4 @@
 ## Cache Dependencies
 * [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows)
 * [Caching dependency files and build outputs](https://github.com/actions/setup-go#caching-dependency-files-and-build-outputs)
+* [Caching dependencies](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go#caching-dependencies)
