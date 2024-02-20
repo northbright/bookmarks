@@ -74,3 +74,6 @@
 * [转移照片图库以节省 Mac 上的空间](https://support.apple.com/zh-cn/108345)
 * [在“照片”中指定“系统照片图库”](https://support.apple.com/zh-cn/104946)
 * [Image Capture Date Problems](https://discussions.apple.com/thread/254299771?sortBy=best)
+
+## Sync
+* [在 Mac 和 iPhone、iPad 或 iPod touch 之间同步内容](https://support.apple.com/zh-cn/guide/mac-help/mchlde9a31f1/mac)
