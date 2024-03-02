@@ -80,6 +80,7 @@
 * [Embed](embed/README.md)
 * [go generate](go-generate/README.md)
 * [Benchmark](benchmark/README.md)
+* [fs](fs/README.md)
 
 ## Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
