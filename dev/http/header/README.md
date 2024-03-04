@@ -11,3 +11,6 @@
 
 ## Etag and If-None-Match
 * [Etag与HTTP缓存机制](http://blog.csdn.net/kikikind/article/details/6266101)
+
+## Content-Length
+* [Why do some downloading files not know their own size?](https://superuser.com/questions/617327/why-do-some-downloading-files-not-know-their-own-size)
