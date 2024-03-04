@@ -9,5 +9,5 @@
 * [X-Content-Type-Options](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Content-Type-Options)
 * [一文带你了解 HTTP 黑科技](https://mp.weixin.qq.com/s/lNLlolE5F6FiFlHj40CPIg)
 
-#### Etag and If-None-Match
+## Etag and If-None-Match
 * [Etag与HTTP缓存机制](http://blog.csdn.net/kikikind/article/details/6266101)
