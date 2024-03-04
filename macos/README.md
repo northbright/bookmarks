@@ -40,6 +40,7 @@
 
 ## Power Management
 * [How to prevent your Mac to sleep when closing lid](https://yama-mac.com/en/prevent_sleep_when_lid_close/)
+* [设定 Mac 的睡眠和唤醒设置](https://support.apple.com/zh-cn/guide/mac-help/mchle41a6ccd/mac)
 
 ## Install
 * [在不受支持的 Mac 上安装 macOS Big Sur 11 正式版](https://sysin.org/blog/install-macos-11-on-unsupported-mac/)
