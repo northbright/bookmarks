@@ -5,6 +5,7 @@
 * [golang -- 字符串操作](http://my.oschina.net/1123581321/blog/192971)
 * [Gopher Go! - Bytes & Strings](https://vluxe.io/golang-bytes.html)
 * [GO Bytes to String Conversion Best Practices [5 Methods]](https://www.golinuxcloud.com/go-bytes-to-string/)
+* [Go1.18 new features: efficient copy, strings, bytes standard library new Clone API](https://www.sobyte.net/post/2022-03/go-string-bytes-clone/)
 
 ## Stringer
 * [Understanding Stringer Interface In Golang](https://www.abilityrush.com/understanding-stringer-interface-in-golang/)
