@@ -4,6 +4,9 @@
 * [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 * [Setting your email in Git](https://help.github.com/articles/setting-your-email-in-git/)
 
+## Security
+* [Generating a new set of recovery codes](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods#generating-a-new-set-of-recovery-codes)
+
 ## Naming Convention
 * [Is there a naming convention for git repositories?](http://stackoverflow.com/questions/11947587/is-there-a-naming-convention-for-git-repositories)
 
