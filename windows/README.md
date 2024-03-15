@@ -13,6 +13,7 @@
 * [记一次蓝屏的解决，错误代码IRQL_NOT_LESS_OR_EQUAL](https://blog.csdn.net/aoqiao7983/article/details/101112985)
 * [记一次定位 IRQL_NOT_LESS_OR_EQUAL 蓝屏](https://zhuanlan.zhihu.com/p/503362554)
 * [如果很不幸——蓝屏了怎么办？记一次奇怪的蓝屏IRQL_NOT_LESS_OR_EQUAL](https://www.cnblogs.com/uniprog/p/8483921.html)
+* [Windows 10 22h2 security update [KB5034441] fails to install with code: 0x80070643](https://answers.microsoft.com/en-us/windows/forum/all/windows-10-22h2-security-update-kb5034441-fails-to/0848f288-d781-44cc-acf5-dcd8fc6eff27)
 
 ## ISO
 * [Windows 10 business 和 consumer 中的专业版有什么不同？](https://www.zhihu.com/question/379426445)
