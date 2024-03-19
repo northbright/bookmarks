@@ -33,3 +33,4 @@
 
 ## Install
 * [How to Install Windows 11 Without a Microsoft Account](https://www.tomshardware.com/how-to/install-windows-11-without-microsoft-account)
+* [Windows 10: Can I safely remove WINRE or RECOVERY partitions?](https://superuser.com/questions/1019217/windows-10-can-i-safely-remove-winre-or-recovery-partitions)
