@@ -139,3 +139,4 @@
   * [超人眼极限 尼康D3S十万ISO全黑环境实拍](https://dc.pconline.com.cn/pingce/smdfpcysr/0912/1960666_all.html)
   * [尼康50 1.8D｜D3:“这机身盖有点厚啊！”](https://www.bilibili.com/video/BV1s8411u7kX)
   * [朝花夕拾：尼康 D3/D3S 还值得买吗？](https://zhuanlan.zhihu.com/p/683295940)
+  * [巅峰上的新起点!全幅数码单反尼康D3深入评测](https://dc.pconline.com.cn/pingce/smdfpcysr/0712/1190489_all.html)
