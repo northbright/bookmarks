@@ -6,7 +6,9 @@
 * [这座和上海互相“嫌弃”的岛，其实超适合周末来遛娃！](https://zhuanlan.zhihu.com/p/417159249)
 * [上海可以抓螃蟹赶海的9大宝藏地，遛娃必去](https://zhuanlan.zhihu.com/p/542302884)
 * [上海174个郊游地合集](https://zhuanlan.zhihu.com/p/522085658)
-* [上生·新所：一座具有「沉浸感」的街区是如何养成的？](https://zhuanlan.zhihu.com/p/467467318)
+* 上生新所
+  * [上生·新所：一座具有「沉浸感」的街区是如何养成的？](https://zhuanlan.zhihu.com/p/467467318)
+  * [理想之地——快去打卡上生新所！修缮后的孙科别墅迎来新开放](https://zhuanlan.zhihu.com/p/296622630)
 
 ## 新疆
 * [分享新疆旅行故事](https://www.zhihu.com/people/xin-jiang-ding-zhi-lu-xing)
