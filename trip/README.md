@@ -9,6 +9,8 @@
 * 上生新所
   * [上生·新所：一座具有「沉浸感」的街区是如何养成的？](https://zhuanlan.zhihu.com/p/467467318)
   * [理想之地——快去打卡上生新所！修缮后的孙科别墅迎来新开放](https://zhuanlan.zhihu.com/p/296622630)
+* 杨浦滨江
+  * [遛娃好去处，打卡杨浦滨江](https://zhuanlan.zhihu.com/p/144087763)
 
 ## 新疆
 * [分享新疆旅行故事](https://www.zhihu.com/people/xin-jiang-ding-zhi-lu-xing)
