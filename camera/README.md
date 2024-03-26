@@ -140,3 +140,5 @@
   * [尼康50 1.8D｜D3:“这机身盖有点厚啊！”](https://www.bilibili.com/video/BV1s8411u7kX)
   * [朝花夕拾：尼康 D3/D3S 还值得买吗？](https://zhuanlan.zhihu.com/p/683295940)
   * [巅峰上的新起点!全幅数码单反尼康D3深入评测](https://dc.pconline.com.cn/pingce/smdfpcysr/0712/1190489_all.html)
+* 85mm / f1.4D
+  * [1950块的人像镜皇！尼康85mmf1.4D使用分享](https://www.bilibili.com/video/BV1AG411o7k1/)
