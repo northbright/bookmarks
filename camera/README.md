@@ -130,6 +130,8 @@
 * 85mm / f1.4D
   * [1950块的人像镜皇！尼康85mmf1.4D使用分享](https://www.bilibili.com/video/BV1AG411o7k1/)
   * [我心中的尼康人像镜皇——AF 85mm F1.4D](https://www.bilibili.com/video/BV1WG411j7JB/)
+* AF 50 / f1.4D
+  * [很普通，但跟随了我很多年——尼康AF 50mm F1.4 D](https://www.chiphell.com/thread-2561537-1-1.html)
 * D700
   * [【穷玩摄影】1100元入手十年前全画幅相机D700！尼康捡垃圾，都是好兄弟](https://www.bilibili.com/video/BV1tT4y1y7tG/)
 * D3
