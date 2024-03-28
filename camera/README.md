@@ -127,7 +127,7 @@
 * [二手尼康数码单反相机推荐](https://zhuanlan.zhihu.com/p/634612235)
 * 105mm / f1.4E
   * [性能怪兽尼康D850配玄学105 1.4E？谢谢，有被燃到！](https://www.bilibili.com/video/BV1DF41127QU/)
-* 85mm / f1.4D
+* AF 85 / f1.4D
   * [1950块的人像镜皇！尼康85mmf1.4D使用分享](https://www.bilibili.com/video/BV1AG411o7k1/)
   * [我心中的尼康人像镜皇——AF 85mm F1.4D](https://www.bilibili.com/video/BV1WG411j7JB/)
 * AF 50 / f1.4D
