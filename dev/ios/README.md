@@ -28,3 +28,6 @@
 * [Playing Video with AVPlayer in SwiftUI](https://benoitpasquier.com/playing-video-avplayer-swiftui/)
 * [iOS音视频播放指南（一）](https://zhuanlan.zhihu.com/p/335087516)
 * [iOS音视频播放指南（二）](https://zhuanlan.zhihu.com/p/335956344)
+
+## 收款
+* [开发者 App Store 收款的科学姿势](https://juejin.cn/post/6844903709470638094)
