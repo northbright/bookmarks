@@ -31,3 +31,4 @@
 
 ## 收款
 * [开发者 App Store 收款的科学姿势](https://juejin.cn/post/6844903709470638094)
+* [appstore开发者收入超过5万刀后怎么收款?](https://www.zhihu.com/question/280290897)
