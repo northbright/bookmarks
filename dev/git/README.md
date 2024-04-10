@@ -49,3 +49,6 @@
 
 ## Submodule
 * [How To Add and Update Git Submodules](https://devconnected.com/how-to-add-and-update-git-submodules/)
+
+## Detached Head
+* [Git 提交时的 Detached HEAD 问题](https://juejin.cn/post/7102429431133634568)
