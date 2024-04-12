@@ -16,3 +16,4 @@
 * [Go Modules: v2 and Beyond](https://go.dev/blog/v2-go-modules)
 * [cmd/go, x/mod: "invalid go version" message mentions old version format #61888](https://github.com/golang/go/issues/61888)
 * [Call your code from another module](https://go.dev/doc/tutorial/call-module-code)
+* [Organizing a Go module](https://go.dev/doc/modules/layout)
