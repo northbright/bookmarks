@@ -7,3 +7,4 @@
 * [errors: errorString JSON marshaled #10748](https://github.com/golang/go/issues/10748)
 * [JSON and dealing with unexported fields](https://stackoverflow.com/questions/11126793/json-and-dealing-with-unexported-fields)
 * [Custom JSON Marshalling in Go](https://choly.ca/post/go-json-marshalling/)
+* [JSON Tricks: "Slightly" Custom Marshaling](https://boldlygo.tech/posts/2019-12-09-slightly-custom-marshaler/)
