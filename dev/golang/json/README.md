@@ -6,3 +6,4 @@
 * [Best Practices for Speeding Up JSON Encoding and Decoding in Go](https://yalantis.com/blog/speed-up-json-encoding-decoding/)
 * [errors: errorString JSON marshaled #10748](https://github.com/golang/go/issues/10748)
 * [JSON and dealing with unexported fields](https://stackoverflow.com/questions/11126793/json-and-dealing-with-unexported-fields)
+* [Custom JSON Marshalling in Go](https://choly.ca/post/go-json-marshalling/)

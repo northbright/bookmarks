@@ -1,0 +1,878 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://choly.ca/post/go-json-marshalling/
+Subject: =?utf-8?Q?Custom=20JSON=20Marshalling=20in=20Go=20=C2=B7=20Choly's=20Blog?=
+Date: Sat, 13 Apr 2024 06:19:08 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--NcBQjtt3e7djAKEOrbheiksqvXShzTePTjyglf0Aax----"
+
+
+------MultipartBoundary--NcBQjtt3e7djAKEOrbheiksqvXShzTePTjyglf0Aax----
+Content-Type: text/html
+Content-ID: <frame-564978ADEF71FD80765F801EB2FBC0DD@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://choly.ca/post/go-json-marshalling/
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xml:lang=3D"en-=
+us" lang=3D"en-us"><head><meta http-equiv=3D"Content-Type" content=3D"text/=
+html; charset=3DUTF-8">
+  <link href=3D"https://gmpg.org/xfn/11" rel=3D"profile">
+ =20
+  <meta name=3D"generator" content=3D"Hugo 0.123.7">
+
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0">
+
+  <title>Custom JSON Marshalling in Go =C2=B7 Choly's Blog</title>
+  <meta name=3D"description" content=3D"">
+
+ =20
+  <link type=3D"text/css" rel=3D"stylesheet" href=3D"https://choly.ca/css/p=
+rint.css" media=3D"print">
+  <link type=3D"text/css" rel=3D"stylesheet" href=3D"https://choly.ca/css/p=
+oole.css">
+  <link type=3D"text/css" rel=3D"stylesheet" href=3D"https://choly.ca/css/s=
+yntax.css">
+  <link type=3D"text/css" rel=3D"stylesheet" href=3D"https://choly.ca/css/h=
+yde.css">
+    <link rel=3D"stylesheet" href=3D"https://fonts.googleapis.com/css?famil=
+y=3DAbril+Fatface|PT+Sans:400,400i,700">
+
+
+ =20
+  <link rel=3D"apple-touch-icon-precomposed" sizes=3D"144x144" href=3D"http=
+s://choly.ca/apple-touch-icon-144-precomposed.png">
+  <link rel=3D"shortcut icon" href=3D"https://choly.ca/favicon.png">
+
+ =20
+ =20
+</head>
+
+  <body class=3D" ">
+  <aside class=3D"sidebar">
+  <div class=3D"container sidebar-sticky">
+    <div class=3D"sidebar-about">
+      <a href=3D"https://choly.ca/"><h1>Choly's Blog</h1></a>
+      <p class=3D"lead">
+       Documented Procrastination=20
+      </p>
+    </div>
+
+    <nav>
+      <ul class=3D"sidebar-nav">
+        <li><a href=3D"https://choly.ca/">Home</a> </li>
+        <li><a href=3D"https://github.com/icholy"> Github </a></li><li><a h=
+ref=3D"https://stackoverflow.com/users/215969/ilia-choly"> Stack Overflow <=
+/a></li>
+      </ul>
+    </nav>
+
+    <p>=C2=A9 2024. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class=3D"content container">
+    <div class=3D"post">
+  <h1>Custom JSON Marshalling in Go</h1>
+  <time datetime=3D"2015-04-10T12:54:44-0400" class=3D"post-date">Fri, Apr =
+10, 2015</time>
+  <p>Go=E2=80=99s <code>encoding/json</code> package makes it really easy t=
+o marshal <code>struct</code>s to JSON data.</p>
+<div class=3D"highlight"><pre tabindex=3D"0" style=3D"background-color:#f8f=
+8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class=3D"language-go" =
+data-lang=3D"go"><span style=3D"display:flex;"><span><span style=3D"color:#=
+204a87;font-weight:bold">package</span> <span style=3D"color:#000">main</sp=
+an>
+</span></span><span style=3D"display:flex;"><span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#204=
+a87;font-weight:bold">import</span> <span style=3D"color:#000;font-weight:b=
+old">(</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#4e=
+9a06">"encoding/json"</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#4e=
+9a06">"os"</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#4e=
+9a06">"time"</span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#000=
+;font-weight:bold">)</span>
+</span></span><span style=3D"display:flex;"><span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#204=
+a87;font-weight:bold">type</span> <span style=3D"color:#000">MyUser</span> =
+<span style=3D"color:#204a87;font-weight:bold">struct</span> <span style=3D=
+"color:#000;font-weight:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0">ID</span>       <span style=3D"color:#204a87;font-weight:bold">int64</sp=
+an>     <span style=3D"color:#4e9a06">`json:"id"`</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0">Name</span>     <span style=3D"color:#204a87;font-weight:bold">string</s=
+pan>    <span style=3D"color:#4e9a06">`json:"name"`</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0">LastSeen</span> <span style=3D"color:#000">time</span><span style=3D"col=
+or:#000;font-weight:bold">.</span><span style=3D"color:#000">Time</span> <s=
+pan style=3D"color:#4e9a06">`json:"lastSeen"`</span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#000=
+;font-weight:bold">}</span>
+</span></span><span style=3D"display:flex;"><span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#204=
+a87;font-weight:bold">func</span> <span style=3D"color:#000">main</span><sp=
+an style=3D"color:#000;font-weight:bold">()</span> <span style=3D"color:#00=
+0;font-weight:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0">_</span> <span style=3D"color:#000;font-weight:bold">=3D</span> <span st=
+yle=3D"color:#000">json</span><span style=3D"color:#000;font-weight:bold">.=
+</span><span style=3D"color:#000">NewEncoder</span><span style=3D"color:#00=
+0;font-weight:bold">(</span><span style=3D"color:#000">os</span><span style=
+=3D"color:#000;font-weight:bold">.</span><span style=3D"color:#000">Stdout<=
+/span><span style=3D"color:#000;font-weight:bold">).</span><span style=3D"c=
+olor:#000">Encode</span><span style=3D"color:#000;font-weight:bold">(</span=
+>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#c=
+e5c00;font-weight:bold">&amp;</span><span style=3D"color:#000">MyUser</span=
+><span style=3D"color:#000;font-weight:bold">{</span><span style=3D"color:#=
+0000cf;font-weight:bold">1</span><span style=3D"color:#000;font-weight:bold=
+">,</span> <span style=3D"color:#4e9a06">"Ken"</span><span style=3D"color:#=
+000;font-weight:bold">,</span> <span style=3D"color:#000">time</span><span =
+style=3D"color:#000;font-weight:bold">.</span><span style=3D"color:#000">No=
+w</span><span style=3D"color:#000;font-weight:bold">()},</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">)</span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#000=
+;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Output:</p>
+<div class=3D"highlight"><pre tabindex=3D"0" style=3D"background-color:#f8f=
+8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class=3D"language-json=
+" data-lang=3D"json"><span style=3D"display:flex;"><span><span style=3D"col=
+or:#000;font-weight:bold">{</span><span style=3D"color:#204a87;font-weight:=
+bold">"id"</span><span style=3D"color:#000;font-weight:bold">:</span><span =
+style=3D"color:#0000cf;font-weight:bold">1</span><span style=3D"color:#000;=
+font-weight:bold">,</span><span style=3D"color:#204a87;font-weight:bold">"n=
+ame"</span><span style=3D"color:#000;font-weight:bold">:</span><span style=
+=3D"color:#4e9a06">"Ken"</span><span style=3D"color:#000;font-weight:bold">=
+,</span><span style=3D"color:#204a87;font-weight:bold">"lastSeen"</span><sp=
+an style=3D"color:#000;font-weight:bold">:</span><span style=3D"color:#4e9a=
+06">"2009-11-10T23:00:00Z"</span><span style=3D"color:#000;font-weight:bold=
+">}</span>
+</span></span></code></pre></div><p>But what if we want to change how one o=
+f the field values are displayed? For example, say I wanted <code>LastSeen<=
+/code> to be a unix timestamp.</p>
+<p>The simple solution is to introduce another auxiliary <code>struct</code=
+> and populate it with the correctly formatted values in the <code>MarshalJ=
+SON</code> method.</p>
+<div class=3D"highlight"><pre tabindex=3D"0" style=3D"background-color:#f8f=
+8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class=3D"language-go" =
+data-lang=3D"go"><span style=3D"display:flex;"><span><span style=3D"color:#=
+204a87;font-weight:bold">func</span> <span style=3D"color:#000;font-weight:=
+bold">(</span><span style=3D"color:#000">u</span> <span style=3D"color:#ce5=
+c00;font-weight:bold">*</span><span style=3D"color:#000">MyUser</span><span=
+ style=3D"color:#000;font-weight:bold">)</span> <span style=3D"color:#000">=
+MarshalJSON</span><span style=3D"color:#000;font-weight:bold">()</span> <sp=
+an style=3D"color:#000;font-weight:bold">([]</span><span style=3D"color:#20=
+4a87;font-weight:bold">byte</span><span style=3D"color:#000;font-weight:bol=
+d">,</span> <span style=3D"color:#204a87;font-weight:bold">error</span><spa=
+n style=3D"color:#000;font-weight:bold">)</span> <span style=3D"color:#000;=
+font-weight:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#20=
+4a87;font-weight:bold">return</span> <span style=3D"color:#000">json</span>=
+<span style=3D"color:#000;font-weight:bold">.</span><span style=3D"color:#0=
+00">Marshal</span><span style=3D"color:#000;font-weight:bold">(</span><span=
+ style=3D"color:#ce5c00;font-weight:bold">&amp;</span><span style=3D"color:=
+#204a87;font-weight:bold">struct</span> <span style=3D"color:#000;font-weig=
+ht:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">ID</span>       <span style=3D"color:#204a87;font-weight:bold">int64</s=
+pan>  <span style=3D"color:#4e9a06">`json:"id"`</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">Name</span>     <span style=3D"color:#204a87;font-weight:bold">string</=
+span> <span style=3D"color:#4e9a06">`json:"name"`</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">LastSeen</span> <span style=3D"color:#204a87;font-weight:bold">int64</s=
+pan>  <span style=3D"color:#4e9a06">`json:"lastSeen"`</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">}{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">ID</span><span style=3D"color:#000;font-weight:bold">:</span>       <sp=
+an style=3D"color:#000">u</span><span style=3D"color:#000;font-weight:bold"=
+>.</span><span style=3D"color:#000">ID</span><span style=3D"color:#000;font=
+-weight:bold">,</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">Name</span><span style=3D"color:#000;font-weight:bold">:</span>     <sp=
+an style=3D"color:#000">u</span><span style=3D"color:#000;font-weight:bold"=
+>.</span><span style=3D"color:#000">Name</span><span style=3D"color:#000;fo=
+nt-weight:bold">,</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">LastSeen</span><span style=3D"color:#000;font-weight:bold">:</span> <sp=
+an style=3D"color:#000">u</span><span style=3D"color:#000;font-weight:bold"=
+>.</span><span style=3D"color:#000">LastSeen</span><span style=3D"color:#00=
+0;font-weight:bold">.</span><span style=3D"color:#000">Unix</span><span sty=
+le=3D"color:#000;font-weight:bold">(),</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">})</span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#000=
+;font-weight:bold">}</span>
+</span></span></code></pre></div><p>This works, but it can get cumbersome w=
+hen there are lots of fields.
+It would be nice if we could embed the original <code>struct</code> into th=
+e auxiliary <code>struct</code> and have it inherit all the fields that do =
+not need to be changed.</p>
+<div class=3D"highlight"><pre tabindex=3D"0" style=3D"background-color:#f8f=
+8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class=3D"language-go" =
+data-lang=3D"go"><span style=3D"display:flex;"><span><span style=3D"color:#=
+204a87;font-weight:bold">func</span> <span style=3D"color:#000;font-weight:=
+bold">(</span><span style=3D"color:#000">u</span> <span style=3D"color:#ce5=
+c00;font-weight:bold">*</span><span style=3D"color:#000">MyUser</span><span=
+ style=3D"color:#000;font-weight:bold">)</span> <span style=3D"color:#000">=
+MarshalJSON</span><span style=3D"color:#000;font-weight:bold">()</span> <sp=
+an style=3D"color:#000;font-weight:bold">([]</span><span style=3D"color:#20=
+4a87;font-weight:bold">byte</span><span style=3D"color:#000;font-weight:bol=
+d">,</span> <span style=3D"color:#204a87;font-weight:bold">error</span><spa=
+n style=3D"color:#000;font-weight:bold">)</span> <span style=3D"color:#000;=
+font-weight:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#20=
+4a87;font-weight:bold">return</span> <span style=3D"color:#000">json</span>=
+<span style=3D"color:#000;font-weight:bold">.</span><span style=3D"color:#0=
+00">Marshal</span><span style=3D"color:#000;font-weight:bold">(</span><span=
+ style=3D"color:#ce5c00;font-weight:bold">&amp;</span><span style=3D"color:=
+#204a87;font-weight:bold">struct</span> <span style=3D"color:#000;font-weig=
+ht:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">LastSeen</span> <span style=3D"color:#204a87;font-weight:bold">int64</s=
+pan> <span style=3D"color:#4e9a06">`json:"lastSeen"`</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#c=
+e5c00;font-weight:bold">*</span><span style=3D"color:#000">MyUser</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">}{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">LastSeen</span><span style=3D"color:#000;font-weight:bold">:</span> <sp=
+an style=3D"color:#000">u</span><span style=3D"color:#000;font-weight:bold"=
+>.</span><span style=3D"color:#000">LastSeen</span><span style=3D"color:#00=
+0;font-weight:bold">.</span><span style=3D"color:#000">Unix</span><span sty=
+le=3D"color:#000;font-weight:bold">(),</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">MyUser</span><span style=3D"color:#000;font-weight:bold">:</span>   <sp=
+an style=3D"color:#000">u</span><span style=3D"color:#000;font-weight:bold"=
+>,</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">})</span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#000=
+;font-weight:bold">}</span>
+</span></span></code></pre></div><p>The problem here is that the auxiliary =
+<code>struct</code> will also inherit the original=E2=80=99s <code>MarshalJ=
+SON</code> method, causing it to go into an infinite loop. The solution is =
+to alias the original type. This alias will have all the same fields, but n=
+one of the methods.</p>
+<div class=3D"highlight"><pre tabindex=3D"0" style=3D"background-color:#f8f=
+8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class=3D"language-go" =
+data-lang=3D"go"><span style=3D"display:flex;"><span><span style=3D"color:#=
+204a87;font-weight:bold">func</span> <span style=3D"color:#000;font-weight:=
+bold">(</span><span style=3D"color:#000">u</span> <span style=3D"color:#ce5=
+c00;font-weight:bold">*</span><span style=3D"color:#000">MyUser</span><span=
+ style=3D"color:#000;font-weight:bold">)</span> <span style=3D"color:#000">=
+MarshalJSON</span><span style=3D"color:#000;font-weight:bold">()</span> <sp=
+an style=3D"color:#000;font-weight:bold">([]</span><span style=3D"color:#20=
+4a87;font-weight:bold">byte</span><span style=3D"color:#000;font-weight:bol=
+d">,</span> <span style=3D"color:#204a87;font-weight:bold">error</span><spa=
+n style=3D"color:#000;font-weight:bold">)</span> <span style=3D"color:#000;=
+font-weight:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#20=
+4a87;font-weight:bold">type</span> <span style=3D"color:#000">Alias</span> =
+<span style=3D"color:#000">MyUser</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#20=
+4a87;font-weight:bold">return</span> <span style=3D"color:#000">json</span>=
+<span style=3D"color:#000;font-weight:bold">.</span><span style=3D"color:#0=
+00">Marshal</span><span style=3D"color:#000;font-weight:bold">(</span><span=
+ style=3D"color:#ce5c00;font-weight:bold">&amp;</span><span style=3D"color:=
+#204a87;font-weight:bold">struct</span> <span style=3D"color:#000;font-weig=
+ht:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">LastSeen</span> <span style=3D"color:#204a87;font-weight:bold">int64</s=
+pan> <span style=3D"color:#4e9a06">`json:"lastSeen"`</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#c=
+e5c00;font-weight:bold">*</span><span style=3D"color:#000">Alias</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">}{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">LastSeen</span><span style=3D"color:#000;font-weight:bold">:</span> <sp=
+an style=3D"color:#000">u</span><span style=3D"color:#000;font-weight:bold"=
+>.</span><span style=3D"color:#000">LastSeen</span><span style=3D"color:#00=
+0;font-weight:bold">.</span><span style=3D"color:#000">Unix</span><span sty=
+le=3D"color:#000;font-weight:bold">(),</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">Alias</span><span style=3D"color:#000;font-weight:bold">:</span>    <sp=
+an style=3D"color:#000;font-weight:bold">(</span><span style=3D"color:#ce5c=
+00;font-weight:bold">*</span><span style=3D"color:#000">Alias</span><span s=
+tyle=3D"color:#000;font-weight:bold">)(</span><span style=3D"color:#000">u<=
+/span><span style=3D"color:#000;font-weight:bold">),</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">})</span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#000=
+;font-weight:bold">}</span>
+</span></span></code></pre></div><p>The same technique can be used for impl=
+ementing an <code>UnmarshalJSON</code> method.</p>
+<div class=3D"highlight"><pre tabindex=3D"0" style=3D"background-color:#f8f=
+8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class=3D"language-go" =
+data-lang=3D"go"><span style=3D"display:flex;"><span><span style=3D"color:#=
+204a87;font-weight:bold">func</span> <span style=3D"color:#000;font-weight:=
+bold">(</span><span style=3D"color:#000">u</span> <span style=3D"color:#ce5=
+c00;font-weight:bold">*</span><span style=3D"color:#000">MyUser</span><span=
+ style=3D"color:#000;font-weight:bold">)</span> <span style=3D"color:#000">=
+UnmarshalJSON</span><span style=3D"color:#000;font-weight:bold">(</span><sp=
+an style=3D"color:#000">data</span> <span style=3D"color:#000;font-weight:b=
+old">[]</span><span style=3D"color:#204a87;font-weight:bold">byte</span><sp=
+an style=3D"color:#000;font-weight:bold">)</span> <span style=3D"color:#204=
+a87;font-weight:bold">error</span> <span style=3D"color:#000;font-weight:bo=
+ld">{</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#20=
+4a87;font-weight:bold">type</span> <span style=3D"color:#000">Alias</span> =
+<span style=3D"color:#000">MyUser</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0">aux</span> <span style=3D"color:#ce5c00;font-weight:bold">:=3D</span> <s=
+pan style=3D"color:#ce5c00;font-weight:bold">&amp;</span><span style=3D"col=
+or:#204a87;font-weight:bold">struct</span> <span style=3D"color:#000;font-w=
+eight:bold">{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">LastSeen</span> <span style=3D"color:#204a87;font-weight:bold">int64</s=
+pan> <span style=3D"color:#4e9a06">`json:"lastSeen"`</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#c=
+e5c00;font-weight:bold">*</span><span style=3D"color:#000">Alias</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">}{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#0=
+00">Alias</span><span style=3D"color:#000;font-weight:bold">:</span> <span =
+style=3D"color:#000;font-weight:bold">(</span><span style=3D"color:#ce5c00;=
+font-weight:bold">*</span><span style=3D"color:#000">Alias</span><span styl=
+e=3D"color:#000;font-weight:bold">)(</span><span style=3D"color:#000">u</sp=
+an><span style=3D"color:#000;font-weight:bold">),</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">}</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#20=
+4a87;font-weight:bold">if</span> <span style=3D"color:#000">err</span> <spa=
+n style=3D"color:#ce5c00;font-weight:bold">:=3D</span> <span style=3D"color=
+:#000">json</span><span style=3D"color:#000;font-weight:bold">.</span><span=
+ style=3D"color:#000">Unmarshal</span><span style=3D"color:#000;font-weight=
+:bold">(</span><span style=3D"color:#000">data</span><span style=3D"color:#=
+000;font-weight:bold">,</span> <span style=3D"color:#ce5c00;font-weight:bol=
+d">&amp;</span><span style=3D"color:#000">aux</span><span style=3D"color:#0=
+00;font-weight:bold">);</span> <span style=3D"color:#000">err</span> <span =
+style=3D"color:#ce5c00;font-weight:bold">!=3D</span> <span style=3D"color:#=
+204a87;font-weight:bold">nil</span> <span style=3D"color:#000;font-weight:b=
+old">{</span>
+</span></span><span style=3D"display:flex;"><span>		<span style=3D"color:#2=
+04a87;font-weight:bold">return</span> <span style=3D"color:#000">err</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0;font-weight:bold">}</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#00=
+0">u</span><span style=3D"color:#000;font-weight:bold">.</span><span style=
+=3D"color:#000">LastSeen</span> <span style=3D"color:#000;font-weight:bold"=
+>=3D</span> <span style=3D"color:#000">time</span><span style=3D"color:#000=
+;font-weight:bold">.</span><span style=3D"color:#000">Unix</span><span styl=
+e=3D"color:#000;font-weight:bold">(</span><span style=3D"color:#000">aux</s=
+pan><span style=3D"color:#000;font-weight:bold">.</span><span style=3D"colo=
+r:#000">LastSeen</span><span style=3D"color:#000;font-weight:bold">,</span>=
+ <span style=3D"color:#0000cf;font-weight:bold">0</span><span style=3D"colo=
+r:#000;font-weight:bold">)</span>
+</span></span><span style=3D"display:flex;"><span>	<span style=3D"color:#20=
+4a87;font-weight:bold">return</span> <span style=3D"color:#204a87;font-weig=
+ht:bold">nil</span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#000=
+;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+    </main>
+
+   =20
+     =20
+
+   =20
+ =20
+
+</body></html>
+------MultipartBoundary--NcBQjtt3e7djAKEOrbheiksqvXShzTePTjyglf0Aax----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://choly.ca/css/print.css
+
+@charset "utf-8";
+
+.sidebar { display: none !important; }
+
+.content { margin: 0px auto; width: 100%; float: none; display: initial; }
+
+.container { width: 100%; float: none; display: initial; padding-left: 1rem=
+; padding-right: 1rem; margin: 0px auto; }
+------MultipartBoundary--NcBQjtt3e7djAKEOrbheiksqvXShzTePTjyglf0Aax----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://choly.ca/css/poole.css
+
+@charset "utf-8";
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0px; padding: 0px; }
+
+html { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-si=
+ze: 16px; line-height: 1.5; }
+
+@media (min-width: 38em) {
+  html { font-size: 20px; }
+}
+
+body { color: rgb(81, 81, 81); background-color: rgb(255, 255, 255); text-s=
+ize-adjust: 100%; }
+
+a { color: rgb(34, 123, 185); text-decoration: none; }
+
+a:hover, a:focus { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5rem; font-weight: bold; line-hei=
+ght: 1.25; color: rgb(49, 49, 49); text-rendering: optimizelegibility; }
+
+h1 { font-size: 2rem; }
+
+h2 { margin-top: 1rem; font-size: 1.5rem; }
+
+h3 { margin-top: 1.5rem; font-size: 1.25rem; }
+
+h4, h5, h6 { margin-top: 1rem; font-size: 1rem; }
+
+p { margin-top: 0px; margin-bottom: 1rem; }
+
+strong { color: rgb(48, 48, 48); }
+
+ul, ol, dl { margin-top: 0px; margin-bottom: 1rem; }
+
+dt { font-weight: bold; }
+
+dd { margin-bottom: 0.5rem; }
+
+hr { position: relative; margin: 1.5rem 0px; border-width: 1px 0px; border-=
+right-style: initial; border-left-style: initial; border-right-color: initi=
+al; border-left-color: initial; border-image: initial; border-top-style: so=
+lid; border-top-color: rgb(238, 238, 238); border-bottom-style: solid; bord=
+er-bottom-color: rgb(255, 255, 255); }
+
+abbr { font-size: 85%; font-weight: bold; color: rgb(85, 85, 85); text-tran=
+sform: uppercase; }
+
+abbr[title] { cursor: help; border-bottom: 1px dotted rgb(229, 229, 229); }
+
+code, pre { font-family: Menlo, Monaco, "Courier New", monospace; }
+
+code { padding: 0.25em 0.5em; font-size: 85%; color: rgb(179, 85, 94); back=
+ground-color: rgb(249, 249, 249); border-radius: 3px; }
+
+pre { display: block; margin-top: 0px; margin-bottom: 1rem; padding: 1rem; =
+font-size: 0.8rem; line-height: 1.4; white-space: pre-wrap; word-break: bre=
+ak-all; overflow-wrap: break-word; background-color: rgb(249, 249, 249); }
+
+pre code { padding: 0px; font-size: 100%; color: inherit; background-color:=
+ transparent; }
+
+.highlight { margin-bottom: 1rem; border-radius: 4px; }
+
+.highlight pre { margin-bottom: 0px; }
+
+blockquote { padding: 0.5rem 1rem; margin: 0.8rem 0px; color: rgb(122, 122,=
+ 122); border-left: 0.25rem solid rgb(229, 229, 229); }
+
+blockquote p:last-child { margin-bottom: 0px; }
+
+@media (min-width: 30em) {
+  blockquote { padding-right: 5rem; padding-left: 1.25rem; }
+}
+
+img { display: block; margin: 0px 0px 1rem; border-radius: 5px; max-width: =
+100%; }
+
+table { margin-bottom: 1rem; width: 100%; border: 1px solid rgb(229, 229, 2=
+29); border-collapse: collapse; }
+
+td, th { padding: 0.25rem 0.5rem; border: 1px solid rgb(229, 229, 229); }
+
+tbody tr:nth-child(2n+1) td, tbody tr:nth-child(2n+1) th { background-color=
+: rgb(249, 249, 249); }
+
+.lead { font-size: 1.25rem; font-weight: 300; }
+
+.message { margin-bottom: 1rem; padding: 1rem; color: rgb(113, 113, 113); b=
+ackground-color: rgb(249, 249, 249); }
+
+.container { max-width: 38rem; padding-left: 1rem; padding-right: 1rem; mar=
+gin-left: auto; margin-right: auto; }
+
+.masthead { padding-top: 1rem; padding-bottom: 1rem; margin-bottom: 3rem; }
+
+.masthead-title { margin-top: 0px; margin-bottom: 0px; color: rgb(80, 80, 8=
+0); }
+
+.masthead-title a { color: rgb(80, 80, 80); }
+
+.masthead-title small { font-size: 75%; font-weight: 400; color: rgb(192, 1=
+92, 192); letter-spacing: 0px; }
+
+.page, .post { margin-bottom: 4em; }
+
+.page-title, .post-title, .post-title a { color: rgb(48, 48, 48); }
+
+.page-title, .post-title { margin-top: 0px; }
+
+.post-date { display: block; margin-top: -0.5rem; margin-bottom: 1rem; colo=
+r: rgb(117, 117, 117); }
+
+.related { padding-top: 2rem; padding-bottom: 2rem; border-top: 1px solid r=
+gb(238, 238, 238); }
+
+.related-posts { padding-left: 0px; list-style: none; }
+
+.related-posts h3 { margin-top: 0px; }
+
+.related-posts li small { font-size: 75%; color: rgb(153, 153, 153); }
+
+.related-posts li a:hover { color: rgb(34, 123, 185); text-decoration: none=
+; }
+
+.related-posts li a:hover small { color: inherit; }
+
+.pagination { overflow: hidden; margin-left: -1rem; margin-right: -1rem; fo=
+nt-family: "PT Sans", Helvetica, Arial, sans-serif; color: rgb(204, 204, 20=
+4); text-align: center; }
+
+.pagination-item { display: block; padding: 1rem; border: 1px solid rgb(238=
+, 238, 238); }
+
+.pagination-item:first-child { margin-bottom: -1px; }
+
+a.pagination-item:hover { background-color: rgb(245, 245, 245); }
+
+@media (min-width: 30em) {
+  .pagination { margin: 3rem 0px; }
+  .pagination-item { float: left; width: 50%; }
+  .pagination-item:first-child { margin-bottom: 0px; border-top-left-radius=
+: 4px; border-bottom-left-radius: 4px; }
+  .pagination-item:last-child { margin-left: -1px; border-top-right-radius:=
+ 4px; border-bottom-right-radius: 4px; }
+}
+------MultipartBoundary--NcBQjtt3e7djAKEOrbheiksqvXShzTePTjyglf0Aax----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://choly.ca/css/syntax.css
+
+@charset "utf-8";
+
+.hll { background-color: rgb(255, 255, 204); }
+
+.c { color: rgb(153, 153, 153); }
+
+.err { color: rgb(170, 0, 0); background-color: rgb(255, 170, 170); }
+
+.k { color: rgb(0, 102, 153); }
+
+.o { color: rgb(85, 85, 85); }
+
+.cm { color: rgb(0, 153, 255); font-style: italic; }
+
+.cp { color: rgb(0, 153, 153); }
+
+.c1 { color: rgb(153, 153, 153); }
+
+.cs { color: rgb(153, 153, 153); }
+
+.gd { background-color: rgb(255, 204, 204); border: 1px solid rgb(204, 0, 0=
+); }
+
+.ge { font-style: italic; }
+
+.gr { color: rgb(255, 0, 0); }
+
+.gh { color: rgb(0, 51, 0); }
+
+.gi { background-color: rgb(204, 255, 204); border: 1px solid rgb(0, 204, 0=
+); }
+
+.go { color: rgb(170, 170, 170); }
+
+.gp { color: rgb(0, 0, 153); }
+
+.gs { }
+
+.gu { color: rgb(0, 51, 0); }
+
+.gt { color: rgb(153, 204, 102); }
+
+.kc { color: rgb(0, 102, 153); }
+
+.kd { color: rgb(0, 102, 153); }
+
+.kn { color: rgb(0, 102, 153); }
+
+.kp { color: rgb(0, 102, 153); }
+
+.kr { color: rgb(0, 102, 153); }
+
+.kt { color: rgb(0, 119, 136); }
+
+.m { color: rgb(255, 102, 0); }
+
+.s { color: rgb(212, 73, 80); }
+
+.na { color: rgb(79, 159, 207); }
+
+.nb { color: rgb(51, 102, 102); }
+
+.nc { color: rgb(0, 170, 136); }
+
+.no { color: rgb(51, 102, 0); }
+
+.nd { color: rgb(153, 153, 255); }
+
+.ni { color: rgb(153, 153, 153); }
+
+.ne { color: rgb(204, 0, 0); }
+
+.nf { color: rgb(204, 0, 255); }
+
+.nl { color: rgb(153, 153, 255); }
+
+.nn { color: rgb(0, 204, 255); }
+
+.nt { color: rgb(47, 111, 159); }
+
+.nv { color: rgb(0, 51, 51); }
+
+.ow { color: rgb(0, 0, 0); }
+
+.w { color: rgb(187, 187, 187); }
+
+.mf { color: rgb(255, 102, 0); }
+
+.mh { color: rgb(255, 102, 0); }
+
+.mi { color: rgb(255, 102, 0); }
+
+.mo { color: rgb(255, 102, 0); }
+
+.sb { color: rgb(204, 51, 0); }
+
+.sc { color: rgb(204, 51, 0); }
+
+.sd { color: rgb(204, 51, 0); font-style: italic; }
+
+.s2 { color: rgb(204, 51, 0); }
+
+.se { color: rgb(204, 51, 0); }
+
+.sh { color: rgb(204, 51, 0); }
+
+.si { color: rgb(170, 0, 0); }
+
+.sx { color: rgb(204, 51, 0); }
+
+.sr { color: rgb(51, 170, 170); }
+
+.s1 { color: rgb(204, 51, 0); }
+
+.ss { color: rgb(255, 204, 51); }
+
+.bp { color: rgb(51, 102, 102); }
+
+.vc { color: rgb(0, 51, 51); }
+
+.vg { color: rgb(0, 51, 51); }
+
+.vi { color: rgb(0, 51, 51); }
+
+.il { color: rgb(255, 102, 0); }
+
+.css .o, .css .o + .nt, .css .nt + .nt { color: rgb(153, 153, 153); }
+------MultipartBoundary--NcBQjtt3e7djAKEOrbheiksqvXShzTePTjyglf0Aax----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://choly.ca/css/hyde.css
+
+@charset "utf-8";
+
+html { font-family: "PT Sans", Helvetica, Arial, sans-serif; }
+
+@media (min-width: 48em) {
+  html { font-size: 16px; }
+}
+
+@media (min-width: 58em) {
+  html { font-size: 20px; }
+}
+
+.sidebar { text-align: center; padding: 2rem 1rem; color: rgba(255, 255, 25=
+5, 0.5); background-color: rgb(32, 32, 32); }
+
+@media (min-width: 48em) {
+  .sidebar { position: fixed; top: 0px; left: 0px; bottom: 0px; width: 18re=
+m; text-align: left; }
+}
+
+.sidebar a { color: rgb(255, 255, 255); }
+
+.sidebar-about h1 { color: rgb(255, 255, 255); margin-top: 0px; font-family=
+: "Abril Fatface", serif; font-size: 3.25rem; }
+
+.sidebar-nav { padding-left: 0px; list-style: none; }
+
+.sidebar-nav-item { display: block; }
+
+a.sidebar-nav-item:hover, a.sidebar-nav-item:focus { text-decoration: under=
+line; }
+
+.sidebar-nav-item.active { font-weight: bold; }
+
+@media (min-width: 48em) {
+  .sidebar-sticky { position: absolute; right: 1rem; bottom: 1rem; left: 1r=
+em; }
+}
+
+.content { padding-top: 4rem; padding-bottom: 4rem; }
+
+@media (min-width: 48em) {
+  .content { max-width: 38rem; margin-left: 20rem; margin-right: 2rem; }
+}
+
+@media (min-width: 64em) {
+  .content { margin-left: 22rem; margin-right: 4rem; }
+}
+
+@media (min-width: 48em) {
+  .layout-reverse .sidebar { left: auto; right: 0px; }
+  .layout-reverse .content { margin-left: 2rem; margin-right: 20rem; }
+}
+
+@media (min-width: 64em) {
+  .layout-reverse .content { margin-left: 4rem; margin-right: 22rem; }
+}
+
+.theme-base-08 .sidebar { background-color: rgb(172, 65, 66); }
+
+.theme-base-08 .content a, .theme-base-08 .related-posts li a:hover { color=
+: rgb(172, 65, 66); }
+
+.theme-base-09 .sidebar { background-color: rgb(210, 132, 69); }
+
+.theme-base-09 .content a, .theme-base-09 .related-posts li a:hover { color=
+: rgb(210, 132, 69); }
+
+.theme-base-0a .sidebar { background-color: rgb(244, 191, 117); }
+
+.theme-base-0a .content a, .theme-base-0a .related-posts li a:hover { color=
+: rgb(244, 191, 117); }
+
+.theme-base-0b .sidebar { background-color: rgb(144, 169, 89); }
+
+.theme-base-0b .content a, .theme-base-0b .related-posts li a:hover { color=
+: rgb(144, 169, 89); }
+
+.theme-base-0c .sidebar { background-color: rgb(117, 181, 170); }
+
+.theme-base-0c .content a, .theme-base-0c .related-posts li a:hover { color=
+: rgb(117, 181, 170); }
+
+.theme-base-0d .sidebar { background-color: rgb(106, 159, 181); }
+
+.theme-base-0d .content a, .theme-base-0d .related-posts li a:hover { color=
+: rgb(106, 159, 181); }
+
+.theme-base-0e .sidebar { background-color: rgb(170, 117, 159); }
+
+.theme-base-0e .content a, .theme-base-0e .related-posts li a:hover { color=
+: rgb(170, 117, 159); }
+
+.theme-base-0f .sidebar { background-color: rgb(143, 85, 54); }
+
+.theme-base-0f .content a, .theme-base-0f .related-posts li a:hover { color=
+: rgb(143, 85, 54); }
+------MultipartBoundary--NcBQjtt3e7djAKEOrbheiksqvXShzTePTjyglf0Aax----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700
+
+@charset "utf-8";
+
+@font-face { font-family: "Abril Fatface"; font-style: normal; font-weight:=
+ 400; src: url("https://fonts.gstatic.com/s/abrilfatface/v23/zOL64pLDlL1D99=
+S8g8PtiKchq-lmjcDidBeT5g.woff2") format("woff2"); unicode-range: U+100-2AF,=
+ U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD=
+-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Abril Fatface"; font-style: normal; font-weight:=
+ 400; src: url("https://fonts.gstatic.com/s/abrilfatface/v23/zOL64pLDlL1D99=
+S8g8PtiKchq-dmjcDidBc.woff2") format("woff2"); unicode-range: U+0-FF, U+131=
+, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-20=
+6F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;=
+ }
+
+@font-face { font-family: "PT Sans"; font-style: italic; font-weight: 400; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizYRExUiTo99u79D0e0ysmIAj=
+cQ-woy.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20=
+B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "PT Sans"; font-style: italic; font-weight: 400; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizYRExUiTo99u79D0e0w8mIAj=
+cQ-woy.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491,=
+ U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "PT Sans"; font-style: italic; font-weight: 400; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizYRExUiTo99u79D0e0ycmIAj=
+cQ-woy.woff2") format("woff2"); unicode-range: U+100-2AF, U+304, U+308, U+3=
+29, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2=
+C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "PT Sans"; font-style: italic; font-weight: 400; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizYRExUiTo99u79D0e0x8mIAj=
+cQ-w.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2B=
+B-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20A=
+C, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 400; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0-ExcOPID=
+Ug-g.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4=
+, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 400; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0aExcOPID=
+Ug-g.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U=
++4B0-4B1, U+2116; }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 400; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0yExcOPID=
+Ug-g.woff2") format("woff2"); unicode-range: U+100-2AF, U+304, U+308, U+329=
+, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C6=
+0-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 400; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0KExcOPID=
+U.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2=
+BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, =
+U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 700; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OOtLR=
+8a8zILig.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+=
+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 700; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OqtLR=
+8a8zILig.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-49=
+1, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 700; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OCtLR=
+8a8zILig.woff2") format("woff2"); unicode-range: U+100-2AF, U+304, U+308, U=
++329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U=
++2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 700; =
+src: url("https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0O6tLR=
+8a8zI.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2=
+BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20=
+AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--NcBQjtt3e7djAKEOrbheiksqvXShzTePTjyglf0Aax------
