@@ -131,6 +131,7 @@
 * [15 Useful ‘FFmpeg’ Commands for Video, Audio and Image Conversion in Linux – Part 2](https://www.tecmint.com/ffmpeg-commands-for-video-audio-and-image-conversion-in-linux/)
 * [使用ffmpeg对视频指定时间点加入指定音频和gif动图 实现水印旋转](https://blog.csdn.net/qq_39962403/article/details/114946422)
 * [ffmpeg 给视频添加字幕，在视频的某个时间段加入声音特效和动画](https://blog.csdn.net/qq_39962403/article/details/114897352)
+* [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
 
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
