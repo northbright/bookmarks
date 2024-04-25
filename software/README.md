@@ -134,6 +134,7 @@
 * [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
 * [How to Embed Subtitles into a Video Using FFmpeg](https://www.baeldung.com/linux/subtitles-ffmpeg)
 * [A simple guide to using FFmpeg to convert images to video](https://www.plainlyvideos.com/blog/ffmpeg-convert-images-to-video)
+* [Add Fade In and Fade Out Effects With ffmpeg!](https://dev.to/dak425/add-fade-in-and-fade-out-effects-with-ffmpeg-2bj7)
 
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
