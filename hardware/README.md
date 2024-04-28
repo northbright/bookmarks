@@ -143,6 +143,8 @@
 * [铁打的面板，跳水的金刚。2K165hz电竞小金刚戴尔S2721DGF评测](https://zhuanlan.zhihu.com/p/416922459)
 * [2K为什么是1440p，4K为什么是2160p?](https://www.zhihu.com/question/345308612)
 * [MacBook Pro 如何选择 4K 显示器？](https://www.zhihu.com/tardis/bd/ans/2644924839)
+#### 墨水屏
+* [最让我感受到科技的进步的产品 - 大上Paperlike Color 25.3寸彩色墨水屏显示器](https://www.chiphell.com/thread-2601611-1-1.html)
 
 ## Hikvision（海康威视）
 * [HiTools](https://www.hikvision.com/en/support/tools/hitools/)
