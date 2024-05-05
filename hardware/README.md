@@ -153,6 +153,7 @@
 ## IP PBX and IP Phone
 * [国威官网文档下载](https://www.gwtx.com.cn/download.html)
 * [国威HB100/HB1910/HB1930/HB1960配置文档下载](https://cdn055.yun-img.com/static/upload/guoweidz/download/20230520165902_66819.pdf)
+* [国威HB1930-HB1960-查询分机号-转接-呼叫转移等-代码大全](http://gwtx.com.cn/newsdetail_3114109.html)
 
 ## MSI
 * [聊聊微星主板的M.2/Optane Genie功能](https://zhuanlan.zhihu.com/p/568030208)
