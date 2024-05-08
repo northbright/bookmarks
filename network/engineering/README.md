@@ -6,3 +6,4 @@
 * [2020年再谈家庭网络布线（入户光纤延长，预埋光纤及其他）](https://www.zhihu.com/tardis/bd/art/270243321)
 * [网络搭建指南一—家用网络搭建（总篇）](https://zhuanlan.zhihu.com/p/654656832)
 * [家用ac+ap怎么选，华为还是tplink好？](https://www.zhihu.com/tardis/bd/ans/1818807474)
+* [电信光猫有必要改桥接模式吗，用光猫拨号和用路由器拨号对网络影响有多大？](https://www.zhihu.com/question/349498420)
