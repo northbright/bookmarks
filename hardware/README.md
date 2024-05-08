@@ -144,6 +144,7 @@
 * [2K为什么是1440p，4K为什么是2160p?](https://www.zhihu.com/question/345308612)
 * [MacBook Pro 如何选择 4K 显示器？](https://www.zhihu.com/tardis/bd/ans/2644924839)
 * [【24年5月显示器推荐】爆肝30多天，史上最强的显示器推荐！用实测数据告诉你，显示器应该怎么选？覆盖全品类，游戏电竞/办公/设计等！超高性价比推荐](https://www.bilibili.com/video/BV1NT421C7n1/)
+* [仅售1299！降价后的它，能否大杀四方？HKC MG27Q 评测报告！](https://www.bilibili.com/video/BV1iK421Y76w)
 #### 墨水屏
 * [最让我感受到科技的进步的产品 - 大上Paperlike Color 25.3寸彩色墨水屏显示器](https://www.chiphell.com/thread-2601611-1-1.html)
 
