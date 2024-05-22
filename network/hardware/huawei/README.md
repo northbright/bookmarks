@@ -13,3 +13,4 @@
 * [CloudEngine S5700, S6700系列交换机 典型配置案例（V600版本）](https://support.huawei.com/enterprise/zh/doc/EDOC1100278287/43b427f7)
 * [三层交换机与路由器对接上网配置示例](https://support.huawei.com/enterprise/zh/doc/EDOC1000069579/b18e74dc)
 * [华为设备组网：企业级路由器+核心交换机+AC控制器+无线AP的配置](https://szbeta.cn/network/377.html)
+* [华为交换机清理接口地址池IP冲突](https://blog.csdn.net/h106140873/article/details/117087043)
