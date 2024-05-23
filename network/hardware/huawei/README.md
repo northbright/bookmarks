@@ -14,3 +14,4 @@
 * [交换机与路由器通过VLANIF接口实现三层互联](https://support.huawei.com/enterprise/zh/doc/EDOC1100277021/c1fe051b)
 * [华为设备组网：企业级路由器+核心交换机+AC控制器+无线AP的配置](https://szbeta.cn/network/377.html)
 * [华为交换机清理接口地址池IP冲突](https://blog.csdn.net/h106140873/article/details/117087043)
+* [如何限制外网用户访问WEB网管](https://support.huawei.com/enterprise/zh/doc/EDOC1100112344/27b23597)
