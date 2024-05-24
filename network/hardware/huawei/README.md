@@ -15,3 +15,4 @@
 * [华为设备组网：企业级路由器+核心交换机+AC控制器+无线AP的配置](https://szbeta.cn/network/377.html)
 * [华为交换机清理接口地址池IP冲突](https://blog.csdn.net/h106140873/article/details/117087043)
 * [如何限制外网用户访问WEB网管](https://support.huawei.com/enterprise/zh/doc/EDOC1100112344/27b23597)
+* [(多媒体) S系列交换机如何批量配置交换机的端口](https://support.huawei.com/enterprise/zh/doc/EDOC1000081930)
