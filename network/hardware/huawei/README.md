@@ -7,6 +7,7 @@
 * [网络搭建指南一—家用网络搭建（华为篇）](https://www.zhihu.com/tardis/bd/art/660571949)
 * [（多媒体）华为乾坤云管理网络-AP上线（华为乾坤APP）](https://support.huawei.com/enterprise/zh/doc/EDOC1100268006?idPath=24030814%7C250382819%7C250382820%7C255370227)
 * [企业级Wi-Fi 6 Leader AP 快速配置指南](https://support.huawei.com/enterprise/zh/doc/EDOC1100219391)
+* [AC(V2R19C00版本)基础组网示例汇总(Web)](https://forum.huawei.com/enterprise/zh/thread/580936616158052352)
 
 ## Switch and Router
 * [华为 路由器交换机配置课程（86集）](https://www.bilibili.com/video/BV1Kt4y1Q7MJ/)
