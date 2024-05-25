@@ -9,6 +9,7 @@
 * [企业级Wi-Fi 6 Leader AP 快速配置指南](https://support.huawei.com/enterprise/zh/doc/EDOC1100219391)
 * [AC(V2R19C00版本)基础组网示例汇总(Web)](https://forum.huawei.com/enterprise/zh/thread/580936616158052352)
 * [WLAN管理报文和业务报文的转发流程](https://forum.huawei.com/enterprise/zh/thread/580934581824143360)
+* [Web示例(V2R19C00版本)：旁挂二层组网直接转发【AP+L3+旁挂AC+出口网关】](https://forum.huawei.com/enterprise/zh/thread/580934502589546496)
 
 ## Switch and Router
 * [华为 路由器交换机配置课程（86集）](https://www.bilibili.com/video/BV1Kt4y1Q7MJ/)
