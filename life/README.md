@@ -113,3 +113,6 @@
 * [⭐️老赵厨单（二）：炒锅选购攻略！熟铁、生铁、不锈钢等哪个材质好？附品牌炒锅推荐清单-2023.01更新](https://zhuanlan.zhihu.com/p/353443019)
 * [那口让你颠覆三观的假铁锅skeppshult又出来了！](https://zhuanlan.zhihu.com/p/38950226)
 * [PFOA——不粘锅涂层中的活性剂，毒性极大，可引发肿瘤](https://zhuanlan.zhihu.com/p/91553747)
+
+## 装修
+* [隔音不好的房子，在装修时该如何「彻底解决隔音问题」？](https://www.zhihu.com/question/532990865/answer/2491127596)
