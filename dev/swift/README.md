@@ -46,6 +46,7 @@
 * [How to use C libraries in Swift?](https://theswiftdev.com/how-to-use-c-libraries-in-swift/)
 * [Linking to C libraries](https://forums.swift.org/t/linking-to-c-libraries/55651)
 * [Making a C library available in Swift using the Swift Package Manager](https://rderik.com/blog/making-a-c-library-available-in-swift-using-the-swift-package/)
+* <https://github.com/tid-kijyun/Kanna>
 
 ## C++
 * [Mixing Swift and C++](https://www.swift.org/documentation/cxx-interop/)
