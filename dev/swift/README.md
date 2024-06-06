@@ -44,6 +44,7 @@
 * [How to use instance method as callback for function which takes only func or literal closure](https://stackoverflow.com/questions/33260808/how-to-use-instance-method-as-callback-for-function-which-takes-only-func-or-lit/33262376#33262376)
 * [Swift 2 - UnsafeMutablePointer<Void> to object](https://stackoverflow.com/questions/30786883/swift-2-unsafemutablepointervoid-to-object/30788165#30788165)
 * [How to use C libraries in Swift?](https://theswiftdev.com/how-to-use-c-libraries-in-swift/)
+* [Linking to C libraries](https://forums.swift.org/t/linking-to-c-libraries/55651)
 
 ## C++
 * [Mixing Swift and C++](https://www.swift.org/documentation/cxx-interop/)
