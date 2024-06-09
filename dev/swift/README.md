@@ -71,3 +71,6 @@
 
 ## String
 * [UTF-8 String](https://www.swift.org/blog/utf8-string/)
+
+## Pointer
+* [Unsafe memory pointers in Swift](https://theswiftdev.com/unsafe-memory-pointers-in-swift/)
