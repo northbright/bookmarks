@@ -21,3 +21,4 @@
 ## Permissions
 * [Hiding samba share from browse list for unauthorised users](https://serverfault.com/questions/144339/hiding-samba-share-from-browse-list-for-unauthorised-users)
 * [Show specific samba shares only to some users](https://unix.stackexchange.com/questions/245785/show-specific-samba-shares-only-to-some-users)
+* [can I bind to specific interface for different samba shares?](https://unix.stackexchange.com/questions/670347/can-i-bind-to-specific-interface-for-different-samba-shares)
