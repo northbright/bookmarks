@@ -15,3 +15,4 @@
 * [阿里云 Ubuntu20.04 配置单机多公网IP访问外部服务](https://zhuanlan.zhihu.com/p/552611105)
 * [Netplan with 2 NICs each connected to a different gateway](https://serverfault.com/questions/939922/netplan-with-2-nics-each-connected-to-a-different-gateway)
 * [How to use netplan to create two separate routing tables?](https://askubuntu.com/questions/1169002/how-to-use-netplan-to-create-two-separate-routing-tables)
+* [Undestanding the output of route -n](https://unix.stackexchange.com/questions/76379/undestanding-the-output-of-route-n)
