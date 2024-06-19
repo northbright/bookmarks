@@ -12,6 +12,7 @@
 * [Web示例(V2R19C00版本)：旁挂二层组网直接转发【AP+L3+旁挂AC+出口网关】](https://forum.huawei.com/enterprise/zh/thread/580934502589546496)
 * [AirEngine 9700-射频资源管理（SmartRadio）](https://support.huawei.com/enterprise/zh/doc/EDOC1100278107/c349ef2)
 * [无线AP下行丢包太高重传太高怎么进行细节优化 WLAN调优手册有出入啊！！](https://forum.huawei.com/enterprise/zh/thread/798286334354350080)
+* [WLAN网络优化](https://support.huawei.com/enterprise/zh/doc/EDOC1100260922)
 
 ## Switch and Router
 * [华为 路由器交换机配置课程（86集）](https://www.bilibili.com/video/BV1Kt4y1Q7MJ/)
