@@ -79,3 +79,6 @@
 
 ## Sync
 * [在 Mac 和 iPhone、iPad 或 iPod touch 之间同步内容](https://support.apple.com/zh-cn/guide/mac-help/mchlde9a31f1/mac)
+
+## Burn DVD
+* [在 Mac 上将信息储存在 CD 和 DVD 光盘上](https://support.apple.com/zh-cn/guide/mac-help/mchl8addfd95/14.0/mac/14.0)
