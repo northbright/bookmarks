@@ -11,3 +11,4 @@
 
 ## Video Tutorials
 * [quasar教程第一季，最好的vue3框架,一套代码可以构建出手机App，桌面应用，ssr等全平台的应用](https://www.bilibili.com/video/BV1pA4y197Zc)
+* [quasar入门教程第二季](https://space.bilibili.com/285906918/channel/collectiondetail?sid=401218&ctype=0)
