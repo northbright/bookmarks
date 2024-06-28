@@ -165,6 +165,7 @@
 * [电脑开机显示GIGABYTE-UEFI DualBIOS怎么办？](https://www.zhihu.com/question/48330250)
 * [电脑开机显示GIGABYTE-UEFI DUaIBIOS解决](https://www.bilibili.com/read/cv22598111/)
 * [技嘉主板进不去bios](https://zhidao.baidu.com/question/1869987118502412667.html)
+* [[GUIDE] Forcing backup BIOS on Gigabyte motherboards.](https://www.overclockers.com/forums/threads/guide-forcing-backup-bios-on-gigabyte-motherboards.697533/)
 
 ## vPro
 * [开源 vs. Intel官方控制台：使用AMT/vPro无线带外管理的几种姿势（下篇）](https://zhuanlan.zhihu.com/p/106000423)
