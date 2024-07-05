@@ -94,3 +94,4 @@
 * [Vue3语法糖setup（二）](https://juejin.cn/post/7087442636142804999)
 * [vue3 setup中watch监听的使用方法](https://www.jianshu.com/p/a1807d6ed9e8)
 * [B站讲的最好的Vue3+TS从入门到精通](https://www.bilibili.com/video/BV1CK411u75G/)
+* [【Vue3】保姆级ref详解，看完不会来找我！！](https://juejin.cn/post/7208508980162592828)
