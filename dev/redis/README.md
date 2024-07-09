@@ -15,6 +15,7 @@
 ## Install
 * [How to Install Redis Server on CentOS 7](https://linoxide.com/storage/install-redis-server-centos-7/)
 * [CentOs 7: Systemd & PID File #3716](https://github.com/antirez/redis/issues/3716)
+* [Running Redis on Windows via WSL: Port Forwarding Redis from Ubuntu 22.04 on WSL2 to it's Windows 11 host](https://anjanesh.dev/running-redis-on-windows-via-wsl)
 
 ## Partitioning
 * [Partitioning: how to split data among multiple Redis instances.](http://redis.io/topics/partitioning)
