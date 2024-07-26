@@ -9,3 +9,4 @@
 * [Custom JSON Marshalling in Go](https://choly.ca/post/go-json-marshalling/)
 * [JSON Tricks: "Slightly" Custom Marshaling](https://boldlygo.tech/posts/2019-12-09-slightly-custom-marshaler/)
 * [JSON Tricks: Extending an Embedded Marshaler](https://boldlygo.tech/posts/2020-06-26-go-json-tricks-embedded-marshaler/)
+* [Golang: JSON Marshalling empty slices as empty arrays instead of null](https://apoorvam.github.io/blog/2017/golang-json-marshal-slice-as-empty-array-not-null/)
