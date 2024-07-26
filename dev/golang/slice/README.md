@@ -7,3 +7,4 @@
 * [Filtering without allocating](https://github.com/golang/go/wiki/SliceTricks#filtering-without-allocating)
 * [Copy an array or slice in Go (Golang)](https://golangbyexample.com/copy-an-array-or-slice-golang/)
 * [How to Create Constant Maps, Slices, & Arrays in Golang](https://blog.boot.dev/golang/golang-constant-maps-slices/)
+* [How to best clear a slice: empty vs. nil](https://yourbasic.org/golang/clear-slice/)
