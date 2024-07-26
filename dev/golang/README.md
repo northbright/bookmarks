@@ -10,6 +10,7 @@
 * [Installation](installation/README.md)
 * [Editor](editor/README.md)
 * [Builtin](builtin/README.md)
+* [Image](image/README.md)
 * [HTTP](http/README.md)
 * [Captcha](captcha/README.md)
 * [WeChat（微信开发）](wechat/README.md)
