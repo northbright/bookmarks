@@ -54,6 +54,7 @@
 * [Apple ID 被盗取、支付宝被盗刷，谁应为免密支付担责？如何有效避免此类问题发生
 ？](https://www.zhihu.com/question/298321122/answer/511277148)
 * [适用于儿童的“家人共享”和 Apple ID](https://support.apple.com/zh-cn/HT201084)
+* [为你的孩子创建 Apple ID](https://support.apple.com/zh-cn/102617)
 * [Use parental controls on your child's iPhone, iPad, and iPod touch](https://support.apple.com/en-us/HT201304)
 
 ## iOS
