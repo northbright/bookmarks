@@ -203,3 +203,6 @@
 
 ## FIO
 * [How fast are your disks? Find out the open source way, with fio](https://arstechnica.com/gadgets/2020/02/how-fast-are-your-disks-find-out-the-open-source-way-with-fio/)
+
+## Infuse
+* [也许是 Apple 平台最全能的视频播放 App：Infuse](https://sspai.com/post/68706)
