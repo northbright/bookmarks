@@ -57,6 +57,7 @@
 * [为你的孩子创建 Apple ID](https://support.apple.com/zh-cn/102617)
 * [把你的苹果设备送给孩子前，先帮ta创建一个儿童帐户吧](https://www.bilibili.com/video/BV1VP411t76b/)
 * [Use parental controls on your child's iPhone, iPad, and iPod touch](https://support.apple.com/en-us/HT201304)
+* [【2024最新】美区Apple ID 注册方法，操作简单，不用信用卡！！！](https://www.bilibili.com/video/BV17x421C73Z/)
 
 ## iOS
 * MDM
