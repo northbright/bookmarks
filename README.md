@@ -6,6 +6,7 @@ Bookmarks of development and more...
 * [Windows](windows/README.md)
 * [MacOS](macos/README.md)
 * [iOS](ios/README.md)
+* [iPadOS](ipados/README.md)
 * [Apple TV](apple-tv/README.md)
 * [Software(软件)](software/README.md)
 * [Sports(运动)](sports/README.md)

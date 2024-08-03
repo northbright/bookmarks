@@ -39,9 +39,6 @@
 * [Use parental controls on your child's iPhone, iPad, and iPod touch](https://support.apple.com/en-us/HT201304)
 * [【2024最新】美区Apple ID 注册方法，操作简单，不用信用卡！！！](https://www.bilibili.com/video/BV17x421C73Z/)
 
-## iPad OS
-* [iPad版，怎么把图片批量做成PDF文件？](https://www.zhihu.com/question/380949981)
-
 ## 隔空投送
 * [在 Mac 上使用“隔空投送”](https://support.apple.com/zh-cn/HT203106)
 
