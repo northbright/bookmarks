@@ -94,3 +94,6 @@
 
 ## Rar
 * [教你如何在Mac系统下解压rar,zip等各种格式文件](https://zhuanlan.zhihu.com/p/103473716)
+
+## AirDrop
+* [在 Mac 上使用“隔空投送”](https://support.apple.com/zh-cn/HT203106)
