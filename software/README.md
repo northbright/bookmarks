@@ -39,17 +39,6 @@
 * [Use parental controls on your child's iPhone, iPad, and iPod touch](https://support.apple.com/en-us/HT201304)
 * [【2024最新】美区Apple ID 注册方法，操作简单，不用信用卡！！！](https://www.bilibili.com/video/BV17x421C73Z/)
 
-## iOS
-* MDM
-    * [用MDM远程管理iPhone和iPad](https://www.jianshu.com/p/a9d2891cbb9c)
-* [如何禁止 iOS 安装描述文件？访问限制里找不到这个设置…](https://www.v2ex.com/t/288436)
-* [iOS 平台有哪些优秀的拼图应用？各自的使用体验如何？](https://www.zhihu.com/question/20939600/answer/16665161)
-* [如果您忘记了您的 iPad 密码，或者您的 iPad 已停用](https://support.apple.com/zh-cn/HT211078)
-* [使用您孩子的 iPhone、iPad 和 iPod touch 上的“家长控制”](https://support.apple.com/zh-cn/HT201304)
-* [iPhone 上最好的生日提醒 app 是哪款？](https://www.zhihu.com/question/20916221/answer/16903072)
-* [强制重新启动 iPhone](https://support.apple.com/zh-cn/guide/iphone/iph8903c3ee6/ios)
-* [如何将iphone靠近任何已连接的wifi的手机来访问不知道密码的wifi？](https://www.zhihu.com/question/67564189)
-
 ## iPad OS
 * [iPad版，怎么把图片批量做成PDF文件？](https://www.zhihu.com/question/380949981)
 
