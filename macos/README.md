@@ -7,6 +7,7 @@
 * [How-To: Remap Windows keyboards to match the Mac keyboard layout](https://9to5mac.com/2016/03/17/how-to-remap-windows-keyboard-buttons-match-mac-layout/)
 * [Mac系统切换机械键盘win和alt键](https://www.jianshu.com/p/66922b2bc8c3)
 * [技巧：在 macOS 上也可以用 Tab 键切换对话框的焦点](https://zhuanlan.zhihu.com/p/27586949)
+* [Keyboard mappings using a PC keyboard on a Macintosh](https://support.microsoft.com/en-us/kb/970299)
 
 ## Command Line Tools
 * [Install Command Line Tools (no Xcode) in Mac OS X](https://developpaper.com/install-command-line-tools-no-xcode-in-mac-os-x/)
@@ -16,6 +17,7 @@
 * [macOS 10.15 Catalina无法打开app，提示“因为无法确认开发者身份”问题的解决方法
 ](https://heipg.cn/tutorial/solution-for-macos-10-15-catalina-cant-run-apps.html)
 * [Notarizing macOS Software Before Distribution](https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution)
+* [What is AEServer and why is it requesting macOS Accessibility permissions?](https://apple.stackexchange.com/questions/403109/what-is-aeserver-and-why-is-it-requesting-macos-accessibility-permissions)
 
 ## Shell
 * [Environment variables in Mac OS X](https://stackoverflow.com/questions/603785/environment-variables-in-mac-os-x)
@@ -44,6 +46,7 @@
 * [在 Mac 台式电脑上更改“节能”设置](https://support.apple.com/zh-cn/guide/mac-help/mchlp1168/14.0/mac/14.0)
 
 ## Install
+* [如何安装 macOS](https://support.apple.com/zh-cn/HT204904)
 * [在不受支持的 Mac 上安装 macOS Big Sur 11 正式版](https://sysin.org/blog/install-macos-11-on-unsupported-mac/)
 * [在不受支持的 Mac 上安装 macOS Monterey 12](https://sysin.org/blog/install-macos-12-on-unsupported-mac/)
 * [How to install Monterey on an unsupported Mac](https://www.macworld.com/article/672461/how-to-install-macos-monterey-on-an-older-mac.html)
@@ -58,10 +61,13 @@
 
 ## Remote Desktop
 * [共享另一台 Mac 的屏幕](https://support.apple.com/zh-cn/guide/mac-help/mh14066/12.0/mac/12.0)
+* [Microsoft Remote Desktop now available outside the App Store](https://community.spiceworks.com/topic/2123651-microsoft-remote-desktop-now-available-outside-the-app-store)
 
-## ssh
+## SSH
 * [How to Turn On SSH on Mac](https://osxdaily.com/2022/07/08/turn-on-ssh-mac/)
 * [OS X: how to keep the computer from sleeping during a ssh session](https://unix.stackexchange.com/questions/1786/os-x-how-to-keep-the-computer-from-sleeping-during-a-ssh-session)
+* [Mac OS X 平台有哪些好用的 SSH 客户端？](https://www.zhihu.com/question/20541129)
+* [How can I copy on select in the OS X Terminal like PuTTY does?](http://superuser.com/questions/62609/how-can-i-copy-on-select-in-the-os-x-terminal-like-putty-does)
 
 ## Finder
 * [在 Mac 上的“访达”中排序和排列项目](https://support.apple.com/zh-cn/guide/mac-help/mchlp1745/mac)
@@ -82,3 +88,9 @@
 
 ## Burn DVD
 * [在 Mac 上将信息储存在 CD 和 DVD 光盘上](https://support.apple.com/zh-cn/guide/mac-help/mchl8addfd95/14.0/mac/14.0)
+
+## Microsoft Mac Downloads
+* [Microsoft Mac Downloads](https://macadmins.software/)
+
+## Rar
+* [教你如何在Mac系统下解压rar,zip等各种格式文件](https://zhuanlan.zhihu.com/p/103473716)
