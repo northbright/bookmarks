@@ -15,6 +15,7 @@
 * [WLAN网络优化](https://support.huawei.com/enterprise/zh/doc/EDOC1100260922)
 * [无线射频优化](https://support.huawei.com/enterprise/zh/doc/EDOC1000051014/41ca86ba)
 * [智能园区SOHO解决方案 典型配置案例：网关+AP组网案例，S380本地整网开局](https://support.huawei.com/enterprise/zh/doc/EDOC1100343345)
+* [华为AC+AP全屋WIFI，测速OK， 完美交付](https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_3260502514985421872)
 
 ## Switch and Router
 * [华为 路由器交换机配置课程（86集）](https://www.bilibili.com/video/BV1Kt4y1Q7MJ/)
