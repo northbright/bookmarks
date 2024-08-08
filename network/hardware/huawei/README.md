@@ -14,6 +14,7 @@
 * [无线AP下行丢包太高重传太高怎么进行细节优化 WLAN调优手册有出入啊！！](https://forum.huawei.com/enterprise/zh/thread/798286334354350080)
 * [WLAN网络优化](https://support.huawei.com/enterprise/zh/doc/EDOC1100260922)
 * [无线射频优化](https://support.huawei.com/enterprise/zh/doc/EDOC1000051014/41ca86ba)
+* [智能园区SOHO解决方案 典型配置案例：网关+AP组网案例，S380本地整网开局](https://support.huawei.com/enterprise/zh/doc/EDOC1100343345)
 
 ## Switch and Router
 * [华为 路由器交换机配置课程（86集）](https://www.bilibili.com/video/BV1Kt4y1Q7MJ/)
