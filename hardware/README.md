@@ -137,6 +137,9 @@
 * [RAM upgrade for Optiplex SFF Plus 7010](https://www.dell.com/community/Optiplex-Desktops/RAM-upgrade-for-Optiplex-SFF-Plus-7010/td-p/8381425)
 * [Precision 3450 Small Form Factor Service Manual - System-diagnostic lights](https://www.dell.com/support/manuals/zh-cn/precision-3450-workstation/prec_3450_sm/%E7%B3%BB%E7%BB%9F%E8%AF%8A%E6%96%AD%E6%8C%87%E7%A4%BA%E7%81%AF?guid=guid-07853ede-4844-43b1-8f55-6d1a070dd898&lang=en-us)
 
+#### HP
+* [HP Z240 Workstation Maintenance and Service Guide](http://h10032.www1.hp.com/ctg/Manual/c04897695.pdf)
+
 ## 显示器
 * [想买一个戴尔27寸同时比较护眼的显示器，U2722DX和U2720QM怎么选？](https://www.zhihu.com/question/496077439)
 * [护眼显示器怎么选?](https://www.zhihu.com/question/539205763/answer/2542303375)
