@@ -72,6 +72,9 @@
 * macOS and iOS
   * [Building swift packages with github actions](https://rhonabwy.com/2020/05/09/continuous-integration-with-github-actions-for-macos-and-ios-projects/)
 
+#### Create Github Actions
+* [Creating a JavaScript action](https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-javascript-action)
+
 ## Private Repo
 * [GitHub: How to make a fork of public repository private?](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
 
