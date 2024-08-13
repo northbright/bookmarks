@@ -52,6 +52,7 @@
 * [How do you cite a Github repository?](https://academia.stackexchange.com/questions/14010/how-do-you-cite-a-github-repository)
 
 ## Github Actions
+* [GitHub Actions Runner Images](https://github.com/actions/runner-images)
 * [GitHub Actions for Go Projects](https://tutorialedge.net/golang/github-actions-for-go-projects/)
 * [使用GitHub Actions实现前端自动化打包、部署](https://www.jianshu.com/p/e9d7ec90483c)
 * [How to deploy using Github action?](https://www.digitalocean.com/community/questions/how-to-deploy-using-github-action)
