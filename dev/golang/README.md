@@ -8,6 +8,7 @@
 
 ## Category
 * [Installation](installation/README.md)
+* [Doc](doc/README.md)
 * [Editor](editor/README.md)
 * [Builtin](builtin/README.md)
 * [Image](image/README.md)
