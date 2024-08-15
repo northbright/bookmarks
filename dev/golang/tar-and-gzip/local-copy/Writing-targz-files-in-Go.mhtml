@@ -1,0 +1,597 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://www.arthurkoziel.com/writing-tar-gz-files-in-go/
+Subject: Writing tar.gz files in Go
+Date: Thu, 15 Aug 2024 04:08:23 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--vap02r2QT0YKfBNluCQqZBFkJ1IQ7rkdC129iPgVU8----"
+
+
+------MultipartBoundary--vap02r2QT0YKfBNluCQqZBFkJ1IQ7rkdC129iPgVU8----
+Content-Type: text/html
+Content-ID: <frame-82395F76325E53313ECED590C9CCC27F@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.arthurkoziel.com/writing-tar-gz-files-in-go/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/=
+css" href=3D"cid:css-e3f042b5-1c11-4a0f-b5dc-963d681ea435@mhtml.blink" />
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <meta name=3D"author" content=3D"Arthur Koziel">
+  <title>Writing tar.gz files in Go</title>
+  <link rel=3D"alternate" type=3D"application/rss+xml" title=3D"RSS" href=
+=3D"https://www.arthurkoziel.com/feed.xml">
+ =20
+</head>
+<body>
+<nav>
+  <p>
+    <a href=3D"https://www.arthurkoziel.com/">Home</a> |
+    <a href=3D"https://www.arthurkoziel.com/blog/">Blog</a>
+  </p>
+</nav>
+
+
+<article>
+  <header>
+    <h1 class=3D"title">Writing tar.gz files in Go</h1>
+    <div id=3D"date">
+      <time class=3D"date" datetime=3D"2020-04-12">April 12, 2020</time>
+   =20
+    </div>
+  </header>
+
+  <p>In this blog post I'm going to explain how to use the Go <code>archive=
+/tar</code> and <code>compress/gzip</code> packages to create a tar archive=
+ and compress it with gzip.</p>
+<p>Below is the full example code and after that there's an explanation of =
+the parts.</p>
+<h2 id=3D"full-code">Full Code</h2>
+<pre data-lang=3D"go" style=3D"background-color:#282a36;color:#f8f8f2;" cla=
+ss=3D"language-go "><code class=3D"language-go" data-lang=3D"go"><span styl=
+e=3D"color:#ff79c6;">package </span><span style=3D"color:#ffffff;">main
+</span><span>
+</span><span style=3D"color:#ff79c6;">import </span><span>(
+</span><span>	</span><span style=3D"color:#f1fa8c;">"io"
+</span><span>	</span><span style=3D"color:#f1fa8c;">"archive/tar"
+</span><span>	</span><span style=3D"color:#f1fa8c;">"compress/gzip"
+</span><span>	</span><span style=3D"color:#f1fa8c;">"log"
+</span><span>	</span><span style=3D"color:#f1fa8c;">"fmt"
+</span><span>	</span><span style=3D"color:#f1fa8c;">"os"
+</span><span>)
+</span><span>
+</span><span style=3D"font-style:italic;color:#8be9fd;">func </span><span s=
+tyle=3D"color:#50fa7b;">main</span><span>() {
+</span><span>	</span><span style=3D"color:#6272a4;">// Files which to inclu=
+de in the tar.gz archive
+</span><span>	files </span><span style=3D"color:#ff79c6;">:=3D </span><span=
+>[]</span><span style=3D"font-style:italic;color:#66d9ef;">string</span><sp=
+an>{</span><span style=3D"color:#f1fa8c;">"example.txt"</span><span>, </spa=
+n><span style=3D"color:#f1fa8c;">"test/test.txt"</span><span>}
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Create output file
+</span><span>	out, err </span><span style=3D"color:#ff79c6;">:=3D </span><s=
+pan style=3D"color:#ffffff;">os</span><span style=3D"color:#ff79c6;">.</spa=
+n><span style=3D"color:#50fa7b;">Create</span><span>(</span><span style=3D"=
+color:#f1fa8c;">"output.tar.gz"</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ffffff;">log</span><span style=
+=3D"color:#ff79c6;">.</span><span style=3D"color:#50fa7b;">Fatalln</span><s=
+pan>(</span><span style=3D"color:#f1fa8c;">"Error writing archive:"</span><=
+span>, </span><span style=3D"color:#ffffff;">err</span><span>)
+</span><span>	}
+</span><span>	</span><span style=3D"color:#ff79c6;">defer </span><span styl=
+e=3D"color:#ffffff;">out</span><span style=3D"color:#ff79c6;">.</span><span=
+ style=3D"color:#50fa7b;">Close</span><span>()
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Create the archive a=
+nd write the output to the "out" Writer
+</span><span>	</span><span style=3D"color:#ffffff;">err </span><span style=
+=3D"color:#ff79c6;">=3D </span><span style=3D"color:#50fa7b;">createArchive=
+</span><span>(</span><span style=3D"color:#ffffff;">files</span><span>, </s=
+pan><span style=3D"color:#ffffff;">out</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ffffff;">log</span><span style=
+=3D"color:#ff79c6;">.</span><span style=3D"color:#50fa7b;">Fatalln</span><s=
+pan>(</span><span style=3D"color:#f1fa8c;">"Error creating archive:"</span>=
+<span>, </span><span style=3D"color:#ffffff;">err</span><span>)
+</span><span>	}
+</span><span>
+</span><span>	</span><span style=3D"color:#ffffff;">fmt</span><span style=
+=3D"color:#ff79c6;">.</span><span style=3D"color:#50fa7b;">Println</span><s=
+pan>(</span><span style=3D"color:#f1fa8c;">"Archive created successfully"</=
+span><span>)
+</span><span>}
+</span><span>
+</span><span style=3D"font-style:italic;color:#8be9fd;">func </span><span s=
+tyle=3D"color:#50fa7b;">createArchive</span><span>(</span><span style=3D"fo=
+nt-style:italic;color:#ffb86c;">files </span><span>[]</span><span style=3D"=
+font-style:italic;color:#66d9ef;">string</span><span>, </span><span style=
+=3D"font-style:italic;color:#ffb86c;">buf </span><span style=3D"color:#ffff=
+ff;">io</span><span style=3D"color:#ff79c6;">.</span><span style=3D"font-st=
+yle:italic;color:#8be9fd;">Writer</span><span>) </span><span style=3D"font-=
+style:italic;color:#66d9ef;">error </span><span>{
+</span><span>	</span><span style=3D"color:#6272a4;">// Create new Writers f=
+or gzip and tar
+</span><span>	</span><span style=3D"color:#6272a4;">// These writers are ch=
+ained. Writing to the tar writer will
+</span><span>	</span><span style=3D"color:#6272a4;">// write to the gzip wr=
+iter which in turn will write to
+</span><span>	</span><span style=3D"color:#6272a4;">// the "buf" writer
+</span><span>	gw </span><span style=3D"color:#ff79c6;">:=3D </span><span st=
+yle=3D"color:#ffffff;">gzip</span><span style=3D"color:#ff79c6;">.</span><s=
+pan style=3D"color:#50fa7b;">NewWriter</span><span>(</span><span style=3D"c=
+olor:#ffffff;">buf</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">defer </span><span styl=
+e=3D"color:#ffffff;">gw</span><span style=3D"color:#ff79c6;">.</span><span =
+style=3D"color:#50fa7b;">Close</span><span>()
+</span><span>	tw </span><span style=3D"color:#ff79c6;">:=3D </span><span st=
+yle=3D"color:#ffffff;">tar</span><span style=3D"color:#ff79c6;">.</span><sp=
+an style=3D"color:#50fa7b;">NewWriter</span><span>(</span><span style=3D"co=
+lor:#ffffff;">gw</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">defer </span><span styl=
+e=3D"color:#ffffff;">tw</span><span style=3D"color:#ff79c6;">.</span><span =
+style=3D"color:#50fa7b;">Close</span><span>()
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Iterate over files a=
+nd add them to the tar archive
+</span><span>	</span><span style=3D"color:#ff79c6;">for </span><span style=
+=3D"color:#bd93f9;">_</span><span>, file </span><span style=3D"color:#ff79c=
+6;">:=3D range </span><span style=3D"color:#ffffff;">files </span><span>{
+</span><span>		err </span><span style=3D"color:#ff79c6;">:=3D </span><span =
+style=3D"color:#50fa7b;">addToArchive</span><span>(</span><span style=3D"co=
+lor:#ffffff;">tw</span><span>, </span><span style=3D"color:#ffffff;">file</=
+span><span>)
+</span><span>		</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>			</span><span style=3D"color:#ff79c6;">return </span><span s=
+tyle=3D"color:#ffffff;">err
+</span><span>		}
+</span><span>	}
+</span><span>
+</span><span>	</span><span style=3D"color:#ff79c6;">return </span><span sty=
+le=3D"color:#bd93f9;">nil
+</span><span>}
+</span><span>
+</span><span style=3D"font-style:italic;color:#8be9fd;">func </span><span s=
+tyle=3D"color:#50fa7b;">addToArchive</span><span>(</span><span style=3D"fon=
+t-style:italic;color:#ffb86c;">tw </span><span style=3D"color:#ff79c6;">*</=
+span><span style=3D"color:#ffffff;">tar</span><span style=3D"color:#ff79c6;=
+">.</span><span style=3D"font-style:italic;color:#8be9fd;">Writer</span><sp=
+an>, </span><span style=3D"font-style:italic;color:#ffb86c;">filename </spa=
+n><span style=3D"font-style:italic;color:#66d9ef;">string</span><span>) </s=
+pan><span style=3D"font-style:italic;color:#66d9ef;">error </span><span>{
+</span><span>	</span><span style=3D"color:#6272a4;">// Open the file which =
+will be written into the archive
+</span><span>	file, err </span><span style=3D"color:#ff79c6;">:=3D </span><=
+span style=3D"color:#ffffff;">os</span><span style=3D"color:#ff79c6;">.</sp=
+an><span style=3D"color:#50fa7b;">Open</span><span>(</span><span style=3D"c=
+olor:#ffffff;">filename</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ff79c6;">return </span><span st=
+yle=3D"color:#ffffff;">err
+</span><span>	}
+</span><span>	</span><span style=3D"color:#ff79c6;">defer </span><span styl=
+e=3D"color:#ffffff;">file</span><span style=3D"color:#ff79c6;">.</span><spa=
+n style=3D"color:#50fa7b;">Close</span><span>()
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Get FileInfo about o=
+ur file providing file size, mode, etc.
+</span><span>	info, err </span><span style=3D"color:#ff79c6;">:=3D </span><=
+span style=3D"color:#ffffff;">file</span><span style=3D"color:#ff79c6;">.</=
+span><span style=3D"color:#50fa7b;">Stat</span><span>()
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ff79c6;">return </span><span st=
+yle=3D"color:#ffffff;">err
+</span><span>	}
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Create a tar Header =
+from the FileInfo data
+</span><span>	header, err </span><span style=3D"color:#ff79c6;">:=3D </span=
+><span style=3D"color:#ffffff;">tar</span><span style=3D"color:#ff79c6;">.<=
+/span><span style=3D"color:#50fa7b;">FileInfoHeader</span><span>(</span><sp=
+an style=3D"color:#ffffff;">info</span><span>, </span><span style=3D"color:=
+#ffffff;">info</span><span style=3D"color:#ff79c6;">.</span><span style=3D"=
+color:#50fa7b;">Name</span><span>())
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ff79c6;">return </span><span st=
+yle=3D"color:#ffffff;">err
+</span><span>	}
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Use full path as nam=
+e (FileInfoHeader only takes the basename)
+</span><span>	</span><span style=3D"color:#6272a4;">// If we don't do this =
+the directory strucuture would
+</span><span>	</span><span style=3D"color:#6272a4;">// not be preserved
+</span><span>	</span><span style=3D"color:#6272a4;">// https://golang.org/s=
+rc/archive/tar/common.go?#L626
+</span><span>	</span><span style=3D"color:#ffffff;">header</span><span styl=
+e=3D"color:#ff79c6;">.</span><span style=3D"color:#ffffff;">Name </span><sp=
+an style=3D"color:#ff79c6;">=3D </span><span style=3D"color:#ffffff;">filen=
+ame
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Write file header to=
+ the tar archive
+</span><span>	</span><span style=3D"color:#ffffff;">err </span><span style=
+=3D"color:#ff79c6;">=3D </span><span style=3D"color:#ffffff;">tw</span><spa=
+n style=3D"color:#ff79c6;">.</span><span style=3D"color:#50fa7b;">WriteHead=
+er</span><span>(</span><span style=3D"color:#ffffff;">header</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ff79c6;">return </span><span st=
+yle=3D"color:#ffffff;">err
+</span><span>	}
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Copy file content to=
+ tar archive
+</span><span>	</span><span style=3D"color:#bd93f9;">_</span><span>, </span>=
+<span style=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">=
+=3D </span><span style=3D"color:#ffffff;">io</span><span style=3D"color:#ff=
+79c6;">.</span><span style=3D"color:#50fa7b;">Copy</span><span>(</span><spa=
+n style=3D"color:#ffffff;">tw</span><span>, </span><span style=3D"color:#ff=
+ffff;">file</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ff79c6;">return </span><span st=
+yle=3D"color:#ffffff;">err
+</span><span>	}
+</span><span>
+</span><span>	</span><span style=3D"color:#ff79c6;">return </span><span sty=
+le=3D"color:#bd93f9;">nil
+</span><span>}
+</span></code></pre>
+<h2 id=3D"explanation">Explanation</h2>
+<p>In the main function we first declare <code>files</code> as a string sli=
+ce. It contains the paths of the files that will be included in the archive=
+.</p>
+<p>For this example I've created two text files. I placed one of them in th=
+e same directory as the <code>main.go</code> file and the other one in a su=
+bdirectory. The purpose of this is to test that the directory structure wil=
+l be correctly restored after extraction.</p>
+<p>We then create the output file with <a href=3D"https://golang.org/pkg/os=
+/#Create">os.Create()</a> and pass it to the <code>createArchive</code> fun=
+ction along with our file paths.</p>
+<pre data-lang=3D"go" style=3D"background-color:#282a36;color:#f8f8f2;" cla=
+ss=3D"language-go "><code class=3D"language-go" data-lang=3D"go"><span styl=
+e=3D"font-style:italic;color:#8be9fd;">func </span><span style=3D"color:#50=
+fa7b;">main</span><span>() {
+</span><span>	</span><span style=3D"color:#6272a4;">// Files which to inclu=
+de in the tar.gz archive
+</span><span>	files </span><span style=3D"color:#ff79c6;">:=3D </span><span=
+>[]</span><span style=3D"font-style:italic;color:#66d9ef;">string</span><sp=
+an>{</span><span style=3D"color:#f1fa8c;">"example.txt"</span><span>, </spa=
+n><span style=3D"color:#f1fa8c;">"test/test.txt"</span><span>}
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Create output file
+</span><span>	out, err </span><span style=3D"color:#ff79c6;">:=3D </span><s=
+pan style=3D"color:#ffffff;">os</span><span style=3D"color:#ff79c6;">.</spa=
+n><span style=3D"color:#50fa7b;">Create</span><span>(</span><span style=3D"=
+color:#f1fa8c;">"output.tar.gz"</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ffffff;">log</span><span style=
+=3D"color:#ff79c6;">.</span><span style=3D"color:#50fa7b;">Fatalln</span><s=
+pan>(</span><span style=3D"color:#f1fa8c;">"Error writing archive:"</span><=
+span>, </span><span style=3D"color:#ffffff;">err</span><span>)
+</span><span>	}
+</span><span>	</span><span style=3D"color:#ff79c6;">defer </span><span styl=
+e=3D"color:#ffffff;">out</span><span style=3D"color:#ff79c6;">.</span><span=
+ style=3D"color:#50fa7b;">Close</span><span>()
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Create the archive a=
+nd write the output to the "out" Writer
+</span><span>	</span><span style=3D"color:#ffffff;">err </span><span style=
+=3D"color:#ff79c6;">=3D </span><span style=3D"color:#50fa7b;">createArchive=
+</span><span>(</span><span style=3D"color:#ffffff;">files</span><span>, </s=
+pan><span style=3D"color:#ffffff;">out</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>		</span><span style=3D"color:#ffffff;">log</span><span style=
+=3D"color:#ff79c6;">.</span><span style=3D"color:#50fa7b;">Fatalln</span><s=
+pan>(</span><span style=3D"color:#f1fa8c;">"Error creating archive:"</span>=
+<span>, </span><span style=3D"color:#ffffff;">err</span><span>)
+</span><span>	}
+</span><span>
+</span><span>	</span><span style=3D"color:#ffffff;">fmt</span><span style=
+=3D"color:#ff79c6;">.</span><span style=3D"color:#50fa7b;">Println</span><s=
+pan>(</span><span style=3D"color:#f1fa8c;">"Archive created successfully"</=
+span><span>)
+</span><span>}
+</span></code></pre>
+<p>The <code>createArchive</code> function creates two Writer: The <a href=
+=3D"https://golang.org/pkg/archive/tar/#NewWriter">tar Writer</a> and the <=
+a href=3D"https://golang.org/pkg/compress/gzip/#NewWriter">gzip Writer</a>.=
+ Both implement the <a href=3D"https://golang.org/pkg/io/#Writer">io.Writer=
+</a> interface.</p>
+<p>The Writers are chained which means that bytes written to the tar Writer=
+ <code>tw</code> will simultaneously be written to the gzip Writer <code>gw=
+</code>.</p>
+<p>We will then iterate over the files in the <code>files</code> slice and =
+call the <code>addToArchive</code> function for each of them with the filen=
+ame and the tar Writer as arguments.</p>
+<pre data-lang=3D"go" style=3D"background-color:#282a36;color:#f8f8f2;" cla=
+ss=3D"language-go "><code class=3D"language-go" data-lang=3D"go"><span styl=
+e=3D"font-style:italic;color:#8be9fd;">func </span><span style=3D"color:#50=
+fa7b;">createArchive</span><span>(</span><span style=3D"font-style:italic;c=
+olor:#ffb86c;">files </span><span>[]</span><span style=3D"font-style:italic=
+;color:#66d9ef;">string</span><span>, </span><span style=3D"font-style:ital=
+ic;color:#ffb86c;">buf </span><span style=3D"color:#ffffff;">io</span><span=
+ style=3D"color:#ff79c6;">.</span><span style=3D"font-style:italic;color:#8=
+be9fd;">Writer</span><span>) </span><span style=3D"font-style:italic;color:=
+#66d9ef;">error </span><span>{
+</span><span>	</span><span style=3D"color:#6272a4;">// Create new Writers f=
+or gzip and tar
+</span><span>	</span><span style=3D"color:#6272a4;">// These writers are ch=
+ained. Writing to the tar Writer will
+</span><span>	</span><span style=3D"color:#6272a4;">// write to the gzip wr=
+iter which in turn will write to
+</span><span>	</span><span style=3D"color:#6272a4;">// the "buf" writer
+</span><span>	gw </span><span style=3D"color:#ff79c6;">:=3D </span><span st=
+yle=3D"color:#ffffff;">gzip</span><span style=3D"color:#ff79c6;">.</span><s=
+pan style=3D"color:#50fa7b;">NewWriter</span><span>(</span><span style=3D"c=
+olor:#ffffff;">buf</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">defer </span><span styl=
+e=3D"color:#ffffff;">gw</span><span style=3D"color:#ff79c6;">.</span><span =
+style=3D"color:#50fa7b;">Close</span><span>()
+</span><span>	tw </span><span style=3D"color:#ff79c6;">:=3D </span><span st=
+yle=3D"color:#ffffff;">tar</span><span style=3D"color:#ff79c6;">.</span><sp=
+an style=3D"color:#50fa7b;">NewWriter</span><span>(</span><span style=3D"co=
+lor:#ffffff;">gw</span><span>)
+</span><span>	</span><span style=3D"color:#ff79c6;">defer </span><span styl=
+e=3D"color:#ffffff;">tw</span><span style=3D"color:#ff79c6;">.</span><span =
+style=3D"color:#50fa7b;">Close</span><span>()
+</span><span>
+</span><span>	</span><span style=3D"color:#6272a4;">// Iterate over files a=
+nd and add them to the tar archive
+</span><span>	</span><span style=3D"color:#ff79c6;">for </span><span style=
+=3D"color:#bd93f9;">_</span><span>, file </span><span style=3D"color:#ff79c=
+6;">:=3D range </span><span style=3D"color:#ffffff;">files </span><span>{
+</span><span>		err </span><span style=3D"color:#ff79c6;">:=3D </span><span =
+style=3D"color:#50fa7b;">addToArchive</span><span>(</span><span style=3D"co=
+lor:#ffffff;">tw</span><span>, </span><span style=3D"color:#ffffff;">file</=
+span><span>)
+</span><span>		</span><span style=3D"color:#ff79c6;">if </span><span style=
+=3D"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">!=3D </span><=
+span style=3D"color:#bd93f9;">nil </span><span>{
+</span><span>			</span><span style=3D"color:#ff79c6;">return </span><span s=
+tyle=3D"color:#ffffff;">err
+</span><span>		}
+</span><span>	}
+</span><span>
+</span><span>	</span><span style=3D"color:#ff79c6;">return </span><span sty=
+le=3D"color:#bd93f9;">nil
+</span><span>}
+</span></code></pre>
+<p>Inside the <code>addToArchive</code> function we open the file and get a=
+ <a href=3D"https://golang.org/pkg/os/#FileInfo">FileInfo</a>. The FileInfo=
+ contains information such as the file name, size or mode which is necessar=
+y for the next step.</p>
+<pre data-lang=3D"go" style=3D"background-color:#282a36;color:#f8f8f2;" cla=
+ss=3D"language-go "><code class=3D"language-go" data-lang=3D"go"><span styl=
+e=3D"color:#6272a4;">// Open the file which will be written into the archiv=
+e
+</span><span>file, err </span><span style=3D"color:#ff79c6;">:=3D </span><s=
+pan style=3D"color:#ffffff;">os</span><span style=3D"color:#ff79c6;">.</spa=
+n><span style=3D"color:#50fa7b;">Open</span><span>(</span><span style=3D"co=
+lor:#ffffff;">filename</span><span>)
+</span><span style=3D"color:#ff79c6;">if </span><span style=3D"color:#fffff=
+f;">err </span><span style=3D"color:#ff79c6;">!=3D </span><span style=3D"co=
+lor:#bd93f9;">nil </span><span>{
+</span><span>    </span><span style=3D"color:#ff79c6;">return </span><span =
+style=3D"color:#ffffff;">err
+</span><span>}
+</span><span style=3D"color:#ff79c6;">defer </span><span style=3D"color:#ff=
+ffff;">file</span><span style=3D"color:#ff79c6;">.</span><span style=3D"col=
+or:#50fa7b;">Close</span><span>()
+</span><span>
+</span><span style=3D"color:#6272a4;">// Get FileInfo about our file provid=
+ing file size, mode, etc.
+</span><span>info, err </span><span style=3D"color:#ff79c6;">:=3D </span><s=
+pan style=3D"color:#ffffff;">file</span><span style=3D"color:#ff79c6;">.</s=
+pan><span style=3D"color:#50fa7b;">Stat</span><span>()
+</span><span style=3D"color:#ff79c6;">if </span><span style=3D"color:#fffff=
+f;">err </span><span style=3D"color:#ff79c6;">!=3D </span><span style=3D"co=
+lor:#bd93f9;">nil </span><span>{
+</span><span>    </span><span style=3D"color:#ff79c6;">return </span><span =
+style=3D"color:#ffffff;">err
+</span><span>}
+</span></code></pre>
+<p>Each file in a tar archive has a <a href=3D"https://golang.org/pkg/archi=
+ve/tar/#Header">header</a> containing metadata about the file followed by t=
+he file content. In this step we create the header by calling <a href=3D"ht=
+tps://golang.org/pkg/archive/tar/#FileInfoHeader">FileInfoHeader</a> which =
+will take our FileInfo <code>info</code> and generate a valid tar Header fr=
+om it.</p>
+<p>The os.FileInfo <code>info</code> only stores the base name of the file.=
+ For example if we pass in <code>test/test.txt</code> it will only store th=
+e filename <code>test.txt</code>. This is a problem when creating the tar a=
+rchive as it would omit the directory structure of our files. To fix this w=
+e have to set <code>header.Name</code> to the full file path.</p>
+<pre data-lang=3D"go" style=3D"background-color:#282a36;color:#f8f8f2;" cla=
+ss=3D"language-go "><code class=3D"language-go" data-lang=3D"go"><span styl=
+e=3D"color:#6272a4;">// Create a tar Header from the FileInfo data
+</span><span>header, err </span><span style=3D"color:#ff79c6;">:=3D </span>=
+<span style=3D"color:#ffffff;">tar</span><span style=3D"color:#ff79c6;">.</=
+span><span style=3D"color:#50fa7b;">FileInfoHeader</span><span>(</span><spa=
+n style=3D"color:#ffffff;">info</span><span>, </span><span style=3D"color:#=
+ffffff;">info</span><span style=3D"color:#ff79c6;">.</span><span style=3D"c=
+olor:#50fa7b;">Name</span><span>())
+</span><span style=3D"color:#ff79c6;">if </span><span style=3D"color:#fffff=
+f;">err </span><span style=3D"color:#ff79c6;">!=3D </span><span style=3D"co=
+lor:#bd93f9;">nil </span><span>{
+</span><span>    </span><span style=3D"color:#ff79c6;">return </span><span =
+style=3D"color:#ffffff;">err
+</span><span>}
+</span><span>
+</span><span style=3D"color:#6272a4;">// Use full path as name (FileInfoHea=
+der only takes the basename)
+</span><span style=3D"color:#6272a4;">// If we don't do this the directory =
+strucuture would
+</span><span style=3D"color:#6272a4;">// not be preserved
+</span><span style=3D"color:#6272a4;">// https://golang.org/src/archive/tar=
+/common.go?#L626
+</span><span style=3D"color:#ffffff;">header</span><span style=3D"color:#ff=
+79c6;">.</span><span style=3D"color:#ffffff;">Name </span><span style=3D"co=
+lor:#ff79c6;">=3D </span><span style=3D"color:#ffffff;">filename
+</span></code></pre>
+<p>Now we can write the header and the file content to the Writer.</p>
+<pre data-lang=3D"go" style=3D"background-color:#282a36;color:#f8f8f2;" cla=
+ss=3D"language-go "><code class=3D"language-go" data-lang=3D"go"><span styl=
+e=3D"color:#6272a4;">// Write file header to the tar archive
+</span><span style=3D"color:#ffffff;">err </span><span style=3D"color:#ff79=
+c6;">=3D </span><span style=3D"color:#ffffff;">tw</span><span style=3D"colo=
+r:#ff79c6;">.</span><span style=3D"color:#50fa7b;">WriteHeader</span><span>=
+(</span><span style=3D"color:#ffffff;">header</span><span>)
+</span><span style=3D"color:#ff79c6;">if </span><span style=3D"color:#fffff=
+f;">err </span><span style=3D"color:#ff79c6;">!=3D </span><span style=3D"co=
+lor:#bd93f9;">nil </span><span>{
+</span><span>    </span><span style=3D"color:#ff79c6;">return </span><span =
+style=3D"color:#ffffff;">err
+</span><span>}
+</span><span>
+</span><span style=3D"color:#6272a4;">// Copy file content to tar archive
+</span><span style=3D"color:#bd93f9;">_</span><span>, </span><span style=3D=
+"color:#ffffff;">err </span><span style=3D"color:#ff79c6;">=3D </span><span=
+ style=3D"color:#ffffff;">io</span><span style=3D"color:#ff79c6;">.</span><=
+span style=3D"color:#50fa7b;">Copy</span><span>(</span><span style=3D"color=
+:#ffffff;">tw</span><span>, </span><span style=3D"color:#ffffff;">file</spa=
+n><span>)
+</span><span style=3D"color:#ff79c6;">if </span><span style=3D"color:#fffff=
+f;">err </span><span style=3D"color:#ff79c6;">!=3D </span><span style=3D"co=
+lor:#bd93f9;">nil </span><span>{
+</span><span>    </span><span style=3D"color:#ff79c6;">return </span><span =
+style=3D"color:#ffffff;">err
+</span><span>}
+</span></code></pre>
+<h2 id=3D"run-the-program">Run the program</h2>
+<p>We can now run our program and check that the files can be extracted.</p=
+>
+<pre style=3D"background-color:#282a36;color:#f8f8f2;"><code><span>$ go run=
+ main.go
+</span><span>Archive created successfully
+</span><span>
+</span><span>$ tar xzfv output.tar.gz
+</span><span>x example.txt
+</span><span>x test/test.txt
+</span><span>
+</span><span>$ exa --tree
+</span><span>.
+</span><span>=E2=94=9C=E2=94=80=E2=94=80 example.txt
+</span><span>=E2=94=9C=E2=94=80=E2=94=80 output.tar.gz
+</span><span>=E2=94=94=E2=94=80=E2=94=80 test
+</span><span>   =E2=94=94=E2=94=80=E2=94=80 test.txt
+</span></code></pre>
+<p>Both files have been extracted successfully.</p>
+
+</article>
+
+
+
+
+</body></html>
+------MultipartBoundary--vap02r2QT0YKfBNluCQqZBFkJ1IQ7rkdC129iPgVU8----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-e3f042b5-1c11-4a0f-b5dc-963d681ea435@mhtml.blink
+
+@charset "utf-8";
+
+body { font-family: Helvetica, Arial, "Liberation Sans", sans-serif; font-w=
+eight: 400; font-size: 1rem; line-height: 1.25; max-width: 630px; margin: 0=
+px 15px 50px; background-color: rgb(255, 255, 255); color: rgb(11, 12, 12);=
+ -webkit-font-smoothing: antialiased; text-transform: none; overflow-wrap: =
+break-word; }
+
+a { color: rgb(29, 112, 184); }
+
+a:hover { color: rgb(0, 48, 120); }
+
+nav { margin-bottom: 30px; }
+
+h1, h2, h3 { color: rgb(32, 33, 36); font-weight: 700; margin-top: 0px; }
+
+h1 { font-size: 2rem; line-height: 1.09; margin-bottom: 30px; }
+
+h2 { font-size: 1.5rem; line-height: 1.05; margin-bottom: 20px; }
+
+h3 { font-size: 1.125rem; line-height: 1.11; margin-bottom: 15px; }
+
+#date { color: rgb(80, 90, 95); font-weight: 400; margin-top: 0px; margin-b=
+ottom: 15px; }
+
+img { height: auto; max-width: 100%; vertical-align: middle; }
+
+code, pre { font-size: 0.9rem; }
+
+pre { padding: 1rem; overflow: auto; margin: 25px 0px; }
+
+article > p > code, article > ul > li > code { font-weight: 700; color: rgb=
+(32, 33, 36); }
+
+table { border-collapse: collapse; margin: 18px 0px; }
+
+table tr { vertical-align: top; }
+
+table td { border-bottom: 1px solid rgb(119, 119, 119); padding: 0.5em 0px;=
+ }
+
+table tr:last-child td { border-bottom: 0px; }
+
+table td:nth-child(1) { width: 25%; padding-right: 1em; color: rgb(119, 119=
+, 119); }
+
+ul, ol { font-size: 1rem; line-height: 1.25; margin-bottom: 15px; padding-l=
+eft: 20px; }
+
+ul > li, ol > li { margin-bottom: 1em; }
+
+ul#blog-archive { font-size: 1rem; margin: 0px; padding: 0px; }
+
+ul#blog-archive li { list-style: none; margin-top: 20px; margin-bottom: 0px=
+; padding-top: 10px; border-top: 1px solid rgb(177, 180, 182); }
+
+ul#blog-archive li a { font-weight: 700; }
+
+ul#blog-archive li p { margin: 5px 0px; color: rgb(80, 90, 95); }
+
+@media (min-width: 48em) {
+  body { font-size: 1.1875rem; line-height: 1.31; margin-right: auto; margi=
+n-left: auto; }
+  h1 { font-size: 3rem; line-height: 1.04; }
+  h2 { font-size: 2.25rem; line-height: 1.11; margin-bottom: 30px; }
+  h3 { font-size: 1.5rem; line-height: 1.25; margin-bottom: 20px; }
+  ol, ul { font-size: 1.1875rem; line-height: 1.31; margin-bottom: 20px; }
+  ul#blog-archive { font-size: 1.1875rem; line-height: 1.31; }
+  ul#blog-archive li p { font-size: 1rem; line-height: 1.5; }
+  code, pre { font-size: 1rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background-color: rgb(32, 33, 36); color: rgb(189, 193, 198); }
+  h1, h2, h3 { color: rgb(232, 234, 237); }
+  #date, ul#blog-archive li p { color: rgb(189, 193, 198); }
+  article > p > code, article > ul > li > code { color: rgb(189, 193, 198);=
+ }
+  a { color: rgb(138, 180, 248); }
+  a:hover { color: rgb(255, 255, 255); }
+  li::marker { color: rgb(232, 234, 237); }
+}
+------MultipartBoundary--vap02r2QT0YKfBNluCQqZBFkJ1IQ7rkdC129iPgVU8------
