@@ -10,3 +10,4 @@
 
 ## Makefile
 * [Creating a Golang Makefile](https://earthly.dev/blog/golang-makefile/)
+* [Quick tip: A time-saving Makefile for your Go projects](https://www.alexedwards.net/blog/a-time-saving-makefile-for-your-go-projects)
