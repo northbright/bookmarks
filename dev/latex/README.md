@@ -62,6 +62,7 @@
 * [minted environment not working in overleaf](https://tex.stackexchange.com/questions/531738/minted-environment-not-working-in-overleaf)
 * [LaTeX Minted package using custom output-directory=build](https://tex.stackexchange.com/questions/339931/latex-minted-package-using-custom-output-directory-build)
 * [outputdir alternative? #264](https://github.com/gpoore/minted/issues/264)
+* [xelatex: Minted code block represents tabs as ^^I](https://tex.stackexchange.com/questions/264461/xelatex-minted-code-block-represents-tabs-as-i)
 
 ## Synctex
 * [What exactly is SyncTeX?](https://tex.stackexchange.com/questions/118489/what-exactly-is-synctex)
