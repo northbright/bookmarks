@@ -17,3 +17,6 @@
 * [cmd/go, x/mod: "invalid go version" message mentions old version format #61888](https://github.com/golang/go/issues/61888)
 * [Call your code from another module](https://go.dev/doc/tutorial/call-module-code)
 * [Organizing a Go module](https://go.dev/doc/modules/layout)
+
+## pkg.go.dev
+* [How to update version's cache of your package in pkg.go.dev?](https://dev.to/koddr/how-to-update-version-s-cache-of-your-package-in-pkg-go-dev-39ij)
