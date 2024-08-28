@@ -20,3 +20,4 @@
 
 ## pkg.go.dev
 * [How to update version's cache of your package in pkg.go.dev?](https://dev.to/koddr/how-to-update-version-s-cache-of-your-package-in-pkg-go-dev-39ij)
+* [Go proxy warming](https://github.com/marketplace/actions/go-proxy-warming)
