@@ -21,3 +21,6 @@
 ## pkg.go.dev
 * [How to update version's cache of your package in pkg.go.dev?](https://dev.to/koddr/how-to-update-version-s-cache-of-your-package-in-pkg-go-dev-39ij)
 * [Go proxy warming](https://github.com/marketplace/actions/go-proxy-warming)
+
+## Private Module
+* [A mini-guide - Go Modules and Private Repositories](https://dev.to/johanlejdung/a-mini-guide-go-modules-and-private-repositories-4c7o)
