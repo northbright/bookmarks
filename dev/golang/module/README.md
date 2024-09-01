@@ -26,3 +26,4 @@
 * [A mini-guide - Go Modules and Private Repositories](https://dev.to/johanlejdung/a-mini-guide-go-modules-and-private-repositories-4c7o)
 * [How to Use a Private Go Module in Your Own Project](https://www.digitalocean.com/community/tutorials/how-to-use-a-private-go-module-in-your-own-project)
 * [How to use Go Modules with Private Git repository](https://dev.to/gopher/how-to-use-go-modules-with-private-git-repository-53b4)
+* [Using Go Modules with private repositories at Github](https://curiousstuff.eu/post/using-go-modules-with-private-repositories-at-github/)
