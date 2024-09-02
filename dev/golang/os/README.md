@@ -13,6 +13,7 @@
   * [Coming in Go 1.16: ReadDir and DirEntry](https://benhoyt.com/writings/go-readdir/)
   * [os: add ReadDir method for lightweight directory reading #41467](https://github.com/golang/go/issues/41467)
 * [Golang : Copy directory - including sub-directories and files](https://www.socketloop.com/tutorials/golang-copy-directory-including-sub-directories-files)
+* [How to create a hidden file in Windows, macOS and Linux (Go)](https://freshman.tech/snippets/go/create-hidden-files/)
 
 ## Signal
 * [Go进阶13:signal处理和优雅退出守护进程](https://mojotv.cn/2019/01/17/golang-signal-restart-deamom)
