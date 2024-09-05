@@ -69,3 +69,4 @@
 
 ## Github Action
 * [Latex with Github Actions](https://dev.to/mrturkmen/latex-with-github-actions-4580)
+* [latex-action](https://github.com/xu-cheng/latex-action)
