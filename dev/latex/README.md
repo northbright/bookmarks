@@ -66,3 +66,6 @@
 
 ## Synctex
 * [What exactly is SyncTeX?](https://tex.stackexchange.com/questions/118489/what-exactly-is-synctex)
+
+## Github Action
+* [Latex with Github Actions](https://dev.to/mrturkmen/latex-with-github-actions-4580)
