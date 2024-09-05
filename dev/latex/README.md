@@ -71,3 +71,4 @@
 * [Latex with Github Actions](https://dev.to/mrturkmen/latex-with-github-actions-4580)
 * [latex-action](https://github.com/xu-cheng/latex-action)
 * [Issue with Chinese Font Detection in Quarto GitHub Action for PDF Output #103](https://github.com/quarto-dev/quarto-actions/issues/103)
+* [New Mac cannot find fonts Kaiti SC #540](https://github.com/CTeX-org/ctex-kit/issues/540)
