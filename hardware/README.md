@@ -139,6 +139,7 @@
 
 #### HP
 * [HP Z240 Workstation Maintenance and Service Guide](http://h10032.www1.hp.com/ctg/Manual/c04897695.pdf)
+* [HPE Gen10 Plus 开箱和使用](https://www.chiphell.com/thread-2429660-1-1.html)
 
 ## 显示器
 * [想买一个戴尔27寸同时比较护眼的显示器，U2722DX和U2720QM怎么选？](https://www.zhihu.com/question/496077439)
