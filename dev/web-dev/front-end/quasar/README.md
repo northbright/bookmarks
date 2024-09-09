@@ -15,3 +15,7 @@
 
 ## pinia
 * [State management with Pinia](https://quasar.dev/quasar-cli-vite/state-management-with-pinia/)
+
+## Components
+#### QImg
+* [Unable to Render QImg in Original Size #16704](https://github.com/quasarframework/quasar/discussions/16704)
