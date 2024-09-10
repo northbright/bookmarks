@@ -17,5 +17,8 @@
 * [State management with Pinia](https://quasar.dev/quasar-cli-vite/state-management-with-pinia/)
 
 ## Components
+#### Layout
+* [How to make a q-page-container child use full height and width dynamically #16284](https://github.com/quasarframework/quasar/discussions/16284)
+
 #### QImg
 * [Unable to Render QImg in Original Size #16704](https://github.com/quasarframework/quasar/discussions/16704)
