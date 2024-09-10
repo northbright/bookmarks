@@ -7,3 +7,6 @@
 
 ## Border Image
 * [border-image-slice](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice)
+
+## Image
+* [Image decorations for “object-fit”](https://fvsch.com/object-fit-decoration)
