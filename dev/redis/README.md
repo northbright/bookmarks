@@ -120,3 +120,6 @@
 ## Memory（内存）
 * [【面试官】有遇到Redis内存过高的线上问题吗？为什么Redis删除数据后也无效？](https://zhuanlan.zhihu.com/p/363080080)
 * [运维排查篇 | Redis占用内存过高怎么办？](https://zhuanlan.zhihu.com/p/566570612)
+
+## RegExp
+* [Feature: scan keys and return keys with pattern of any regex #5997](https://github.com/redis/redis/issues/5997)
