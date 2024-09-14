@@ -9,6 +9,7 @@
 ## Category
 * [Installation](installation/README.md)
 * [Doc](doc/README.md)
+* [Convention and Style](convention-and-style/README.md)
 * [Editor](editor/README.md)
 * [Builtin](builtin/README.md)
 * [Image](image/README.md)
