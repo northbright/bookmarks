@@ -26,6 +26,7 @@
 * [Golang开启http服务的三种方式](https://www.jianshu.com/p/fe502c586034)
 * [A Recap of Request Handling in Go](https://www.alexedwards.net/blog/a-recap-of-request-handling)
 * [Only accept HTTP connections from Localhost in Go?](https://stackoverflow.com/questions/41028709/only-accept-http-connections-from-localhost-in-go)
+* [Go upload file](https://www.jianshu.com/p/3e0c0609d419)
 
 ## HTTPS
   * [Golang - TLS with selfsigned certificate](http://stackoverflow.com/questions/22666163/golang-tls-with-selfsigned-certificate)
