@@ -7,3 +7,4 @@
 * [Peek into Conn without reading in go](https://stackoverflow.com/questions/26196813/peek-into-conn-without-reading-in-go)
 * [Asynchronously Split an io.Reader in Go (golang)](https://rodaine.com/2015/04/async-split-io-reader-in-golang/) [local-copy](local-copy/Asynchronously-Split-an-io-Reader-in-Go.html)
 * [progress](https://github.com/machinebox/progress)
+* [CANCEL COPY OF HUGE FILE IN GO](https://ixday.github.io/post/golang-cancel-copy/)

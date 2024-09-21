@@ -1,0 +1,602 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://ixday.github.io/post/golang-cancel-copy/
+Subject: Not today... - Cancel copy of huge file in Go
+Date: Sat, 21 Sep 2024 06:51:20 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--jgcHr7iDtVfu7Vuy9vc9cwEX77NtLx7gTy6xeq0BFv----"
+
+
+------MultipartBoundary--jgcHr7iDtVfu7Vuy9vc9cwEX77NtLx7gTy6xeq0BFv----
+Content-Type: text/html
+Content-ID: <frame-4011F0D7CA03AFF245400E761770CFD8@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ixday.github.io/post/golang-cancel-copy/
+
+<!DOCTYPE html><html lang=3D"en-us"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8">
+ =20
+  <meta name=3D"generator" content=3D"Hugo 0.111.3">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0, maximum-scale=3D1">
+
+  <link rel=3D"stylesheet" id=3D"oswald-css" href=3D"https://fonts.googleap=
+is.com/css?family=3DOswald&amp;ver=3D3.3.2" type=3D"text/css" media=3D"all"=
+>
+  <link rel=3D"stylesheet" href=3D"https://ixday.github.io/css/style.css" t=
+ype=3D"text/css" media=3D"all">
+  <link rel=3D"stylesheet" href=3D"https://ixday.github.io/css/pygment.css"=
+ type=3D"text/css" media=3D"all">
+ =20
+  <title>Not today... - Cancel copy of huge file in Go</title>
+  <meta property=3D"og:title" content=3D"Cancel copy of huge file in Go - N=
+ot today...">
+  <meta property=3D"og:type" content=3D"article">
+ =20
+
+</head>
+
+  <body>
+    <div class=3D"container">
+    <header>
+  <h1 id=3D"site-title"><a href=3D"https://ixday.github.io/">Not today...</=
+a></h1>
+  <nav id=3D"menu">
+    <ul>
+     =20
+       =20
+          <li><a href=3D"https://github.com/IxDay">github</a></li>
+       =20
+     =20
+     =20
+     =20
+      <li><a href=3D"https://ixday.github.io/categories/os">os</a></li>
+     =20
+      <li><a href=3D"https://ixday.github.io/categories/project">project</a=
+></li>
+     =20
+      <li><a href=3D"https://ixday.github.io/categories/snippet">snippet</a=
+></li>
+     =20
+      <li><a href=3D"https://ixday.github.io/categories/tuto">tuto</a></li>
+     =20
+     =20
+    </ul>
+  </nav>
+</header>
+
+   =20
+    <div class=3D"contents">
+     =20
+<article>
+  <div class=3D"meta">
+  <time class=3D"date">
+   =20
+    Mon Feb 12 2018
+   =20
+  </time>
+  <div class=3D"comments">
+    <span class=3D"remark42__counter" data-url=3D"https://ixday.github.io/p=
+ost/golang-cancel-copy/"></span>
+    comments
+  </div>
+  <p class=3D"categories">
+ =20
+  <a href=3D"https://ixday.github.io/categories/snippet">Snippet</a>
+ =20
+  </p>
+</div>
+
+  <div class=3D"caption">
+    <header>
+      <h2>Cancel copy of huge file in Go</h2>
+
+     =20
+      <p class=3D"tags">
+      <strong>Tagged</strong>
+      <a href=3D"https://ixday.github.io/tags/dev">dev</a>
+, <a href=3D"https://ixday.github.io/tags/golang">golang</a>
+
+      </p>
+     =20
+
+    </header>
+    <p>I recently came across <a href=3D"https://www.youtube.com/watch?v=3D=
+xyDkyFjzFVc">this video</a> on Golang programming.
+I think this was the moment I finally fully understood the power of Go.
+It is smart, simple and elegant, I love it.</p>
+<p>Then, a few days later, I was coding on a <a href=3D"https://github.com/=
+IxDay/antfarm">toy project</a>
+and I was doing some stuff around the <a href=3D"https://golang.org/pkg/io/=
+">io package</a> to
+copy huge files. I wanted to achieve copy cancelation during the processing=
+, basically, being able to interrupt.</p>
+<p>The first idea was to replicate the source code of golang <a href=3D"htt=
+ps://golang.org/pkg/io/#Copy">io.Copy</a>
+and insert a <code>context</code> argument, then find a place to interrupt =
+the copy
+when looping over the file, when context got canceled.</p>
+<p>This brings some issues:</p>
+<ul>
+<li>I had to copy/paste code from a standard lib, which will force me to ma=
+intain it.</li>
+<li>The code was not relevant to what I was doing. Basically, I copied low =
+level
+code in order to insert hooks.</li>
+<li>I had to test code which was already tested.</li>
+</ul>
+<p>But in Go, extends is done through interfacing, and the copy function us=
+es
+interfaces as arguments. I can sneak in this! Here is how I achieved this:<=
+/p>
+<div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-go" data-lang=3D"go"><span class=3D"line"><span class=3D"cl"><=
+span class=3D"kn">import</span> <span class=3D"p">(</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"s">"i=
+o"</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"s">"c=
+ontext"</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">)</=
+span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1">//=
+ here is some syntaxic sugar inspired by the Tomas Senart's video,
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1">// it allows me to inline the Reader interface
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span><span class=3D"kd">type</span> <span class=3D"nx">readerFunc</s=
+pan> <span class=3D"kd">func</span><span class=3D"p">(</span><span class=3D=
+"nx">p</span> <span class=3D"p">[]</span><span class=3D"kt">byte</span><spa=
+n class=3D"p">)</span> <span class=3D"p">(</span><span class=3D"nx">n</span=
+> <span class=3D"kt">int</span><span class=3D"p">,</span> <span class=3D"nx=
+">err</span> <span class=3D"kt">error</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"kd">fu=
+nc</span> <span class=3D"p">(</span><span class=3D"nx">rf</span> <span clas=
+s=3D"nx">readerFunc</span><span class=3D"p">)</span> <span class=3D"nf">Rea=
+d</span><span class=3D"p">(</span><span class=3D"nx">p</span> <span class=
+=3D"p">[]</span><span class=3D"kt">byte</span><span class=3D"p">)</span> <s=
+pan class=3D"p">(</span><span class=3D"nx">n</span> <span class=3D"kt">int<=
+/span><span class=3D"p">,</span> <span class=3D"nx">err</span> <span class=
+=3D"kt">error</span><span class=3D"p">)</span> <span class=3D"p">{</span> <=
+span class=3D"k">return</span> <span class=3D"nf">rf</span><span class=3D"p=
+">(</span><span class=3D"nx">p</span><span class=3D"p">)</span> <span class=
+=3D"p">}</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1">//=
+ slightly modified function signature:
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1">// - context has been added in order to propagate cancelation
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1">// - I do not return the number of bytes written, has it is not useful=
+ in my use case
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span><span class=3D"kd">func</span> <span class=3D"nf">Copy</span><s=
+pan class=3D"p">(</span><span class=3D"nx">ctx</span> <span class=3D"nx">co=
+ntext</span><span class=3D"p">.</span><span class=3D"nx">Context</span><spa=
+n class=3D"p">,</span> <span class=3D"nx">dst</span> <span class=3D"nx">io<=
+/span><span class=3D"p">.</span><span class=3D"nx">Writer</span><span class=
+=3D"p">,</span> <span class=3D"nx">src</span> <span class=3D"nx">io</span><=
+span class=3D"p">.</span><span class=3D"nx">Reader</span><span class=3D"p">=
+)</span> <span class=3D"kt">error</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"c1">/=
+/ Copy will call the Reader and Writer interface multiple time, in order
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>	<span class=3D"c1">// to copy by chunk (avoiding loading the w=
+hole file in memory).
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>	<span class=3D"c1">// I insert the ability to cancel before re=
+ad time as it is the earliest
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>	<span class=3D"c1">// possible in the call process.
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>	<span class=3D"nx">_</span><span class=3D"p">,</span> <span cl=
+ass=3D"nx">err</span> <span class=3D"o">:=3D</span> <span class=3D"nx">io</=
+span><span class=3D"p">.</span><span class=3D"nf">Copy</span><span class=3D=
+"p">(</span><span class=3D"nx">out</span><span class=3D"p">,</span> <span c=
+lass=3D"nf">readerFunc</span><span class=3D"p">(</span><span class=3D"kd">f=
+unc</span><span class=3D"p">(</span><span class=3D"nx">p</span> <span class=
+=3D"p">[]</span><span class=3D"kt">byte</span><span class=3D"p">)</span> <s=
+pan class=3D"p">(</span><span class=3D"kt">int</span><span class=3D"p">,</s=
+pan> <span class=3D"kt">error</span><span class=3D"p">)</span> <span class=
+=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"c1">=
+// golang non-blocking channel: https://gobyexample.com/non-blocking-channe=
+l-operations
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>		<span class=3D"k">select</span> <span class=3D"p">{</span>
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"c1">=
+// if context has been canceled
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>		<span class=3D"k">case</span> <span class=3D"o">&lt;-</span><=
+span class=3D"nx">ctx</span><span class=3D"p">.</span><span class=3D"nf">Do=
+ne</span><span class=3D"p">():</span>
+</span></span><span class=3D"line"><span class=3D"cl">			<span class=3D"c1"=
+>// stop process and propagate "context canceled" error
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>			<span class=3D"k">return</span> <span class=3D"mi">0</span><=
+span class=3D"p">,</span> <span class=3D"nx">ctx</span><span class=3D"p">.<=
+/span><span class=3D"nf">Err</span><span class=3D"p">()</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"k">d=
+efault</span><span class=3D"p">:</span>
+</span></span><span class=3D"line"><span class=3D"cl">			<span class=3D"c1"=
+>// otherwise just run default io.Reader implementation
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span>			<span class=3D"k">return</span> <span class=3D"nx">in</span>=
+<span class=3D"p">.</span><span class=3D"nf">Read</span><span class=3D"p">(=
+</span><span class=3D"nx">p</span><span class=3D"p">)</span>
+</span></span><span class=3D"line"><span class=3D"cl">		<span class=3D"p">}=
+</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"p">})=
+)</span>
+</span></span><span class=3D"line"><span class=3D"cl">	<span class=3D"k">re=
+turn</span> <span class=3D"nx">err</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">}</=
+span>
+</span></span></code></pre></div><p>There is a huge topic in Go community a=
+round the use of context. Should all the
+standard lib use contexts in order to be able to cancel some calls. I think
+interfaces can be the start of a solution. Allowing you to extend what is n=
+eeded
+and leave the stdlib as simple as possible. This is a good example, hope it
+can help some people to better understand how Golang interfaces can be used=
+.</p>
+
+  </div>
+</article>
+
+  <div id=3D"remark42"></div>
+
+
+    </div>
+   =20
+
+ =20
+ =20
+
+
+
+
+
+
+    <footer id=3D"footer">
+	<p>=C2=A9 2022 IxDay</p>
+	<p>Done with love... and beer</p>
+  <p>Powered by <a href=3D"http://gohugo.io/" target=3D"_blank">Hugo</a>,</=
+p>
+</footer>
+
+    </div>
+   =20
+
+ =20
+
+</body></html>
+------MultipartBoundary--jgcHr7iDtVfu7Vuy9vc9cwEX77NtLx7gTy6xeq0BFv----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Oswald&ver=3.3.2
+
+@charset "utf-8";
+
+@font-face { font-family: Oswald; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1=
+_FvsUtiYySUhiCXABTV.woff") format("woff"); unicode-range: U+460-52F, U+1C80=
+-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Oswald; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1=
+_FvsUJiYySUhiCXABTV.woff") format("woff"); unicode-range: U+301, U+400-45F,=
+ U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Oswald; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1=
+_FvsUliYySUhiCXABTV.woff") format("woff"); unicode-range: U+102-103, U+110-=
+111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+30=
+8-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Oswald; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1=
+_FvsUhiYySUhiCXABTV.woff") format("woff"); unicode-range: U+100-2AF, U+304,=
+ U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, =
+U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Oswald; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1=
+_FvsUZiYySUhiCXAA.woff") format("woff"); unicode-range: U+0-FF, U+131, U+15=
+2-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+=
+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--jgcHr7iDtVfu7Vuy9vc9cwEX77NtLx7gTy6xeq0BFv----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ixday.github.io/css/style.css
+
+@charset "utf-8";
+
+* { margin: 0px; }
+
+body { color: rgb(85, 85, 85); height: auto; background-color: rgb(245, 245=
+, 245); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-s=
+ize: 15px; text-rendering: optimizelegibility; }
+
+.container { width: 65%; margin: 0px auto; height: auto !important; }
+
+.hidden { display: none; }
+
+img { margin: 15px; }
+
+a, .tags a:visited { color: rgb(0, 0, 0); }
+
+a:visited { color: rgb(3, 137, 120); }
+
+#menu a, .categories a, .caption h2 a, #menu a:visited, .categories a:visit=
+ed, .caption h2 a:visited { color: rgb(102, 102, 102); text-decoration: non=
+e; cursor: pointer; }
+
+a:hover, #site-title a:hover, #menu a:hover, .categories a:hover, .caption =
+h2 a:hover, .tags a:hover { color: rgb(54, 188, 171); }
+
+h1, h2 { font-family: Oswald, Helvetica, Arial, sans-serif; text-transform:=
+ uppercase; }
+
+h1 { font-size: 80px; margin: 70px 0px 50px; text-align: center; }
+
+h2 { font-size: 25px; line-height: 38px; margin: 20px 0px 15px; }
+
+h2.taxonomy-title { font-size: 18px; background: rgb(51, 51, 51); color: rg=
+b(238, 238, 238); text-align: center; }
+
+h2.caption-title { margin: 5px 0px 15px; }
+
+h2.not-found { font-size: 65px; background: rgb(51, 51, 51); color: rgb(238=
+, 238, 238); text-align: center; line-height: normal; }
+
+h3 { margin: 10px 0px 5px; }
+
+h4 { margin: 5px 0px; }
+
+#site-title a { color: rgb(0, 0, 0); letter-spacing: 1px; text-decoration: =
+none; }
+
+#menu { border-bottom: 1px solid rgb(221, 221, 221); border-top: 1px solid =
+rgb(221, 221, 221); margin-bottom: 25px; padding: 10px; text-align: right; =
+}
+
+#menu ul { list-style: none; margin: 0px; padding-left: 0px; }
+
+#menu li { float: right; position: relative; }
+
+#menu ul::after { clear: both; content: " "; display: block; }
+
+#menu a { font-family: Oswald, Helvetica, Arial, sans-serif; font-size: 18p=
+x; margin: 0px 10px; padding: 4px 0px; text-transform: uppercase; }
+
+footer#footer { border-top: 1px solid rgb(221, 221, 221); font-size: 11px; =
+font-weight: bold; margin: 50px 0px 30px; padding-top: 25px; text-align: ce=
+nter; }
+
+footer#footer p { margin: 0.5em 0px; }
+
+footer#footer a { text-decoration: none; }
+
+.contents { border-left: 1px solid rgb(221, 221, 221); margin-left: 300px; =
+}
+
+article { border-bottom: 1px dashed rgb(221, 221, 221); }
+
+article:last-child { border: none; }
+
+article .meta { font-family: Oswald, Helvetica, Arial, sans-serif; font-wei=
+ght: bold; float: left; margin: 35px 0px 0px -300px; text-align: right; tex=
+t-transform: uppercase; width: 290px; }
+
+article .meta time { color: rgb(0, 0, 0); font-size: 25px; }
+
+article .meta .comments a { color: rgb(54, 188, 171); font-size: 22px; text=
+-decoration: none; }
+
+article .meta .categories { font-size: 16px; margin-top: 10px; }
+
+article .caption { padding: 30px 5px 15px 15px; line-height: 175%; }
+
+article .caption > p { margin: 1em 0px 0.2em; }
+
+article .tags strong { background: rgb(238, 238, 238); border-radius: 3px; =
+color: rgb(102, 102, 102); padding: 3px 6px; margin-right: 4px; font-weight=
+: normal; }
+
+article::after { clear: both; content: " "; display: block; }
+
+article header { margin-bottom: 40px; border-bottom: 1px solid rgb(221, 221=
+, 221); padding: 8px 5px 15px 15px; text-align: center; }
+
+article header h2 { font-size: 40px; color: rgb(0, 0, 0); }
+
+.pagination { font-family: Oswald, Helvetica, Arial, sans-serif; font-size:=
+ 18px; padding: 60px 0px 0px; }
+
+.pagination a { color: rgb(238, 238, 238); background: rgb(51, 51, 51); pad=
+ding: 5px 30px 5px 35px; text-decoration: none; }
+
+.pagination a:first-child { float: left; }
+
+.pagination a:last-child { float: right; }
+
+.pagination::after { clear: both; content: " "; display: block; }
+
+#remark42 { margin: 30px 5px 15px 15px; }
+
+@media (max-width: 90rem) {
+  .container { width: 80%; }
+  .contents { margin-left: 200px; }
+  article .meta { margin-left: -200px; width: 190px; }
+}
+
+@media (max-width: 50rem) {
+  .container { width: 100%; }
+  .contents { border: none; margin-left: 0px; }
+  article .meta { display: none; }
+}
+------MultipartBoundary--jgcHr7iDtVfu7Vuy9vc9cwEX77NtLx7gTy6xeq0BFv----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ixday.github.io/css/pygment.css
+
+@charset "utf-8";
+
+pre { margin: 0px; font-size: 12px; line-height: 150%; }
+
+code { background-color: rgb(255, 255, 255); color: rgb(3, 137, 120); font-=
+size: 12px; padding: 2px 5px; }
+
+table.highlighttable tr td { padding: 0px; }
+
+table.highlighttable { border-collapse: collapse; border-spacing: 0px; }
+
+.linenos { padding: 0px; background-color: rgb(255, 255, 255); width: 1%; w=
+hite-space: nowrap; }
+
+.linenos pre { display: inline-block; border-width: 1px 0px 1px 1px; border=
+-style: solid; border-color: rgb(216, 216, 216); border-image: initial; col=
+or: rgb(142, 144, 140); }
+
+.linenos a { color: rgb(77, 77, 76); text-decoration: none; }
+
+.highlight { background: rgb(255, 255, 255); color: rgb(77, 77, 76); border=
+: 1px solid rgb(216, 216, 216); overflow: auto; }
+
+.highlight pre { padding: 10px; }
+
+.highlight code { color: rgb(77, 77, 76); padding: 0px; }
+
+.highlight .hll { background-color: rgb(214, 214, 214); }
+
+.highlight .c { color: rgb(142, 144, 140); }
+
+.highlight .err { color: rgb(200, 40, 41); }
+
+.highlight .k { color: rgb(137, 89, 168); }
+
+.highlight .l { color: rgb(245, 135, 31); }
+
+.highlight .n { color: rgb(77, 77, 76); }
+
+.highlight .o { color: rgb(62, 153, 159); }
+
+.highlight .p { color: rgb(77, 77, 76); }
+
+.highlight .cm { color: rgb(142, 144, 140); }
+
+.highlight .cp { color: rgb(142, 144, 140); }
+
+.highlight .c1 { color: rgb(142, 144, 140); }
+
+.highlight .cs { color: rgb(142, 144, 140); }
+
+.highlight .gd { color: rgb(200, 40, 41); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gh { color: rgb(77, 77, 76); font-weight: bold; }
+
+.highlight .gi { color: rgb(113, 140, 0); }
+
+.highlight .gp { color: rgb(142, 144, 140); font-weight: bold; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(62, 153, 159); font-weight: bold; }
+
+.highlight .kc { color: rgb(137, 89, 168); }
+
+.highlight .kd { color: rgb(137, 89, 168); }
+
+.highlight .kn { color: rgb(62, 153, 159); }
+
+.highlight .kp { color: rgb(137, 89, 168); }
+
+.highlight .kr { color: rgb(137, 89, 168); }
+
+.highlight .kt { color: rgb(234, 183, 0); }
+
+.highlight .ld { color: rgb(113, 140, 0); }
+
+.highlight .m { color: rgb(245, 135, 31); }
+
+.highlight .s { color: rgb(113, 140, 0); }
+
+.highlight .na { color: rgb(66, 113, 174); }
+
+.highlight .nb { color: rgb(77, 77, 76); }
+
+.highlight .nc { color: rgb(234, 183, 0); }
+
+.highlight .no { color: rgb(200, 40, 41); }
+
+.highlight .nd { color: rgb(62, 153, 159); }
+
+.highlight .ni { color: rgb(77, 77, 76); }
+
+.highlight .ne { color: rgb(200, 40, 41); }
+
+.highlight .nf { color: rgb(66, 113, 174); }
+
+.highlight .nl { color: rgb(77, 77, 76); }
+
+.highlight .nn { color: rgb(234, 183, 0); }
+
+.highlight .nx { color: rgb(66, 113, 174); }
+
+.highlight .py { color: rgb(77, 77, 76); }
+
+.highlight .nt { color: rgb(62, 153, 159); }
+
+.highlight .nv { color: rgb(200, 40, 41); }
+
+.highlight .ow { color: rgb(62, 153, 159); }
+
+.highlight .w { color: rgb(77, 77, 76); }
+
+.highlight .mf { color: rgb(245, 135, 31); }
+
+.highlight .mh { color: rgb(245, 135, 31); }
+
+.highlight .mi { color: rgb(245, 135, 31); }
+
+.highlight .mo { color: rgb(245, 135, 31); }
+
+.highlight .sb { color: rgb(113, 140, 0); }
+
+.highlight .sc { color: rgb(77, 77, 76); }
+
+.highlight .sd { color: rgb(142, 144, 140); }
+
+.highlight .s2 { color: rgb(113, 140, 0); }
+
+.highlight .se { color: rgb(245, 135, 31); }
+
+.highlight .sh { color: rgb(113, 140, 0); }
+
+.highlight .si { color: rgb(245, 135, 31); }
+
+.highlight .sx { color: rgb(113, 140, 0); }
+
+.highlight .sr { color: rgb(113, 140, 0); }
+
+.highlight .s1 { color: rgb(113, 140, 0); }
+
+.highlight .ss { color: rgb(113, 140, 0); }
+
+.highlight .bp { color: rgb(77, 77, 76); }
+
+.highlight .vc { color: rgb(200, 40, 41); }
+
+.highlight .vg { color: rgb(200, 40, 41); }
+
+.highlight .vi { color: rgb(200, 40, 41); }
+
+.highlight .il { color: rgb(245, 135, 31); }
+------MultipartBoundary--jgcHr7iDtVfu7Vuy9vc9cwEX77NtLx7gTy6xeq0BFv------
