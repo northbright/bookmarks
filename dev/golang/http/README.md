@@ -27,6 +27,7 @@
 * [A Recap of Request Handling in Go](https://www.alexedwards.net/blog/a-recap-of-request-handling)
 * [Only accept HTTP connections from Localhost in Go?](https://stackoverflow.com/questions/41028709/only-accept-http-connections-from-localhost-in-go)
 * [Go upload file](https://www.jianshu.com/p/3e0c0609d419)
+* [How to Redirect to a URL in Go](https://freshman.tech/snippets/go/http-redirect/)
 
 ## HTTPS
   * [Golang - TLS with selfsigned certificate](http://stackoverflow.com/questions/22666163/golang-tls-with-selfsigned-certificate)
