@@ -46,6 +46,8 @@
 
 
 ## Authentication and Authorization
+* [How to Implement Authentication and Authorization in Golang.](https://dev.to/tanmayvaish/how-to-implement-authentication-and-authorization-in-golang-20of#)
+
 #### Basic Auth
 * [Go语言HTTP Basic Authorization 实现例子](https://www.jianshu.com/p/a09f1402c285)
 * [How to correctly use Basic Authentication in Go](https://www.alexedwards.net/blog/basic-authentication-in-go)
