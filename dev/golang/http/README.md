@@ -45,9 +45,9 @@
 ## Sanitizer
 * [bluemonday](https://github.com/microcosm-cc/bluemonday)
 
-
 ## Authentication and Authorization
 * [How to Implement Authentication and Authorization in Golang.](https://dev.to/tanmayvaish/how-to-implement-authentication-and-authorization-in-golang-20of#)
+* [Session Cookie Authentication in Golang (With Complete Examples)](https://www.sohamkamani.com/golang/session-cookie-authentication/)
 
 #### Basic Auth
 * [Go语言HTTP Basic Authorization 实现例子](https://www.jianshu.com/p/a09f1402c285)
