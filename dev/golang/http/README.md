@@ -29,6 +29,7 @@
 * [Go upload file](https://www.jianshu.com/p/3e0c0609d419)
 * [How to Redirect to a URL in Go](https://freshman.tech/snippets/go/http-redirect/)
 * [How to process file uploads in Go](https://freshman.tech/file-upload-golang/)
+* [Uploading and downloading files using multipart/form-data](https://www.sobyte.net/post/2022-03/go-multipart-form-data/)
 
 ## HTTPS
   * [Golang - TLS with selfsigned certificate](http://stackoverflow.com/questions/22666163/golang-tls-with-selfsigned-certificate)
