@@ -148,3 +148,6 @@
 
 ## Renaming Tool（重命名工具）
 * [F2](https://github.com/ayoisaiah/f2)
+
+## SIPS
+* [How to Use macOS SIPS to Batch Resize Images](https://havecamerawilltravel.com/macos-sips-batch-resize-images/)
