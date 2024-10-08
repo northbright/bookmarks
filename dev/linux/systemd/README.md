@@ -10,3 +10,4 @@
 
 ## Logs
 * [How To Use Journalctl to View and Manipulate Systemd Logs](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs)
+* [Beginner's Guide to Analyzing Logs in Linux With journalctl Command](https://linuxhandbook.com/journalctl-command/)
