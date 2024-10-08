@@ -7,3 +7,6 @@
 
 ## systemd Timers
 * [Replacing Cron Jobs With systemd Timers](https://mjanja.ch/2015/06/replacing-cron-jobs-with-systemd-timers/)
+
+## Logs
+* [How To Use Journalctl to View and Manipulate Systemd Logs](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs)
