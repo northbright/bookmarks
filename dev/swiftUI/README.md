@@ -26,6 +26,7 @@
 * [深度解读 Observation —— SwiftUI 性能提升的新途径](https://zhuanlan.zhihu.com/p/638059164)
 * [打造可适配多平台的 SwiftUI 应用](https://zhuanlan.zhihu.com/p/624659481)
 * [What’s New in SwiftUI for iOS 18](https://www.appcoda.com/swiftui-ios-18/)
+* [几个常见的关于 SwiftUI 的误解](https://fatbobman.com/zh/posts/common-misconceptions-about-swiftui/)
 
 ## Task
 * [How to run an asynchronous task when a view is shown](https://www.hackingwithswift.com/quick-start/swiftui/how-to-run-an-asynchronous-task-when-a-view-is-shown)
