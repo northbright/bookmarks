@@ -3,6 +3,7 @@
 #### Category
 * [Basics](basics/README.md)
 * [Debug](debug/README.md)
+* [Log](log/README.md)
 * [Pipe](pipe/README.md)
 * [VIM](vim/README.md)
 * [systemd](systemd/README.md)
