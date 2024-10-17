@@ -8,3 +8,7 @@
 
 ## Command Line Tools
 * [macOS, the command line developer tool missing after updated to Monterey 12.6](https://superuser.com/questions/1742439/macos-the-command-line-developer-tool-missing-after-updated-to-monterey-12-6)
+
+## File System
+#### APFS
+* [Apple File System Reference](https://developer.apple.com/support/downloads/Apple-File-System-Reference.pdf)
