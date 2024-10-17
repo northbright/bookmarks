@@ -157,4 +157,5 @@
 * [How to Recover Data on Mac When Using a APFS](https://www.cleverfiles.com/howto/apfs-data-recovery.html)
 * [TestDisk](https://www.cgsecurity.org/wiki/TestDisk)
   * [Github Repo](https://github.com/cgsecurity/testdisk)
+  * [恢复 Linux 系统下被删除的文件](https://zhuanlan.zhihu.com/p/593538508)
 * [PhotoRec](https://www.cgsecurity.org/wiki/PhotoRec)
