@@ -168,6 +168,7 @@
 
 #### drat
 * [drat](https://github.com/jivanpal/drat/)
+* [How to recover apparently missing directory and data from APFS volume? `found zeroed-out block`](https://apple.stackexchange.com/questions/373718/how-to-recover-apparently-missing-directory-and-data-from-apfs-volume-found-ze)
 
 #### Jonathan Levin's closed-source fsleuth tool
 * [fsleuth](https://newosxbook.com/tools/fsleuth)
