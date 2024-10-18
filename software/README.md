@@ -168,3 +168,6 @@
 
 #### drat
 * [drat](https://github.com/jivanpal/drat/)
+
+#### Jonathan Levin's closed-source fsleuth tool
+* [fsleuth](https://newosxbook.com/tools/fsleuth)
