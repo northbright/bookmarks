@@ -172,3 +172,6 @@
 
 #### Jonathan Levin's closed-source fsleuth tool
 * [fsleuth](https://newosxbook.com/tools/fsleuth)
+
+#### apfs-fuse
+* [apfs-fuse](https://github.com/sgan81/apfs-fuse)
