@@ -107,5 +107,8 @@
 * [fsleuth](https://newosxbook.com/tools/fsleuth)
 * [Vido of Jonathan Levin demonstrated in this lecture](http://docs.macsysadmin.se/2018/video/Day4Session2.mp4)
 
+#### apfs-fuse
+* [Mounting APFS Partition on Linux](https://www.baeldung.com/linux/apfs-partition-mount)
+
 ## macOS Internals
 * [http://www.newosxbook.com/](http://www.newosxbook.com/home.html)
