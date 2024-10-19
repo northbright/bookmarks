@@ -48,3 +48,6 @@
 
 ## HTTPS
 * [基于HTTPS的用户注册页面是否应该将密码明文发送给后端？](https://www.zhihu.com/question/428006826)
+
+## Tools
+* [安全专业人士最爱的 19 个 GitHub 开源项目](https://www.oschina.net/news/72909/19-top-love-open-source)
