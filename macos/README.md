@@ -106,3 +106,6 @@
 #### Jonathan Levin's closed-source fsleuth tool
 * [fsleuth](https://newosxbook.com/tools/fsleuth)
 * [Vido of Jonathan Levin demonstrated in this lecture](http://docs.macsysadmin.se/2018/video/Day4Session2.mp4)
+
+## macOS Internals
+* [http://www.newosxbook.com/](http://www.newosxbook.com/home.html)
