@@ -110,5 +110,6 @@
 #### apfs-fuse
 * [Mounting APFS Partition on Linux](https://www.baeldung.com/linux/apfs-partition-mount)
 
-## macOS Internals
+## macOS & iOS Internals
 * [http://www.newosxbook.com/](http://www.newosxbook.com/home.html)
+* [iOS Write ups(PDF, books)](https://github.com/writeups/iOS)
