@@ -1,0 +1,3512 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://nickdesaulniers.github.io/blog/2016/11/20/static-and-dynamic-libraries/
+Subject: Static and Dynamic Libraries
+Date: Sat, 19 Oct 2024 05:32:22 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8----"
+
+
+------MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8----
+Content-Type: text/html
+Content-ID: <frame-A258886E6A02DCDA0C8F00E6541E992B@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://nickdesaulniers.github.io/blog/2016/11/20/static-and-dynamic-libraries/
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xml:lang=3D"en"=
+ lang=3D"en-us"><head><meta http-equiv=3D"Content-Type" content=3D"text/htm=
+l; charset=3DUTF-8"><meta name=3D"viewport" content=3D"width=3Ddevice-width=
+,minimum-scale=3D1,maximum-scale=3D1"><link href=3D"http://nickdesaulniers.=
+github.io/css/fonts.css" rel=3D"stylesheet" type=3D"text/css"><title>Static=
+ and Dynamic Libraries</title><link rel=3D"stylesheet" href=3D"http://nickd=
+esaulniers.github.io/css/hugo-octopress.css"><link rel=3D"stylesheet" href=
+=3D"https://nickdesaulniers.github.io/css/custom.css"><link rel=3D"styleshe=
+et" href=3D"http://nickdesaulniers.github.io/css/fork-awesome.min.css"><lin=
+k href=3D"https://nickdesaulniers.github.io/favicon.ico" rel=3D"icon"><meta=
+ name=3D"description" content=3D""><meta name=3D"keywords" content=3D""><me=
+ta name=3D"author" content=3D"Nick Desaulniers"><meta name=3D"generator" co=
+ntent=3D"Hugo 0.109.0"></head><body><header role=3D"banner"><hgroup><h1><a =
+href=3D"https://nickdesaulniers.github.io/">Nick Desaulniers</a></h1><h2>Th=
+e enemy's gate is down</h2></hgroup></header><nav role=3D"navigation"><fiel=
+dset class=3D"mobile-nav"><select><option value=3D"">Navigate=E2=80=A6</opt=
+ion><option value=3D"https://nickdesaulniers.github.io/about/">=C2=BB About=
+</option><option value=3D"https://nickdesaulniers.github.io/blog/archives/"=
+>=C2=BB Archives</option><option value=3D"https://nickdesaulniers.github.io=
+/">=C2=BB Blog</option><option value=3D"https://nickdesaulniers.github.io/p=
+ublications/">=C2=BB Publications</option><option value=3D"https://nickdesa=
+ulniers.github.io/talks/">=C2=BB Talks</option></select></fieldset><ul clas=
+s=3D"main-navigation"><li><a href=3D"https://nickdesaulniers.github.io/abou=
+t/" title=3D"About" rel=3D"noopener noreferrer">About</a></li><li><a href=
+=3D"https://nickdesaulniers.github.io/blog/archives/" title=3D"Archives" re=
+l=3D"noopener noreferrer">Archives</a></li><li><a href=3D"https://nickdesau=
+lniers.github.io/" title=3D"Blog">Blog</a></li><li><a href=3D"https://nickd=
+esaulniers.github.io/publications/" title=3D"Publications" rel=3D"noopener =
+noreferrer">Publications</a></li><li><a href=3D"https://nickdesaulniers.git=
+hub.io/talks/" title=3D"Talks" rel=3D"noopener noreferrer">Talks</a></li></=
+ul><ul class=3D"subscription"><a href=3D"https://nickdesaulniers.github.io/=
+index.xml" target=3D"_blank" type=3D"application/rss+xml" title=3D"RSS" rel=
+=3D"noopener noreferrer"><i class=3D"fa fa-rss-square fa-lg"></i></a></ul><=
+form action=3D"https://www.google.com/search" method=3D"get" target=3D"_bla=
+nk" rel=3D"noopener noreferrer"><fieldset role=3D"search"><input class=3D"s=
+earch" type=3D"text" name=3D"q" results=3D"0" placeholder=3D"Search">
+</fieldset></form></nav><div id=3D"main"><div id=3D"content"><div><article =
+class=3D"hentry" role=3D"article"><header><p class=3D"meta">Nov 20, 2016
+- 12 minute read
+- <a href=3D"https://nickdesaulniers.github.io/blog/2016/11/20/static-and-d=
+ynamic-libraries/#disqus_thread">Comments</a>
+- <a class=3D"label" href=3D"https://nickdesaulniers.github.io/categories/c=
+/">C </a><a class=3D"label" href=3D"https://nickdesaulniers.github.io/categ=
+ories/c++/">C++ </a><a class=3D"label" href=3D"https://nickdesaulniers.gith=
+ub.io/categories/library/">library </a><a class=3D"label" href=3D"https://n=
+ickdesaulniers.github.io/categories/linkage/">linkage</a></p><h1 class=3D"e=
+ntry-title">Static and Dynamic Libraries</h1></header><div class=3D"entry-c=
+ontent"><p>This is the second post in a series on memory segmentation. It c=
+overs working
+with static and dynamic libraries in Linux and OSX. Make sure to check out =
+the
+<a href=3D"http://nickdesaulniers.github.io/blog/2016/08/13/object-files-an=
+d-symbols/">first on object files and symbols</a>.</p><p>Let=E2=80=99s say =
+we wanted to reuse some of the code from our previous project in our
+next one. We could continue to copy around object files, but let=E2=80=99s =
+say we have
+a bunch and it=E2=80=99s hard to keep track of all of them. Let=E2=80=99s c=
+ombine multiple
+object files into an archive or static library. Similar to a more conventio=
+nal
+zip file or =E2=80=9Ccompressed archive,=E2=80=9D our static library will b=
+e an uncompressed
+archive.</p><p>We can use the <code>ar</code> command to create and manipul=
+ate a static archive.</p><div class=3D"highlight"><pre tabindex=3D"0" style=
+=3D"color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;ta=
+b-size:4"><code class=3D"language-sh" data-lang=3D"sh"><span style=3D"displ=
+ay:flex"><span>$ clang -c x.c y.c
+</span></span><span style=3D"display:flex"><span>$ ar -rv libhello.a x.o y.=
+o
+</span></span></code></pre></div><p>The <code>-r</code> flag will create th=
+e archive named <code>libhello.a</code> and add the files
+<code>x.o</code> and <code>y.o</code> to its index. I like to add the <code=
+>-v</code> flag for verbose output.
+Then we can use the familiar <code>nm</code> tool I introduced in the
+<a href=3D"http://nickdesaulniers.github.io/blog/2016/08/13/object-files-an=
+d-symbols/">previous post</a>
+to examine the content of the archives and their symbols.</p><div class=3D"=
+highlight"><pre tabindex=3D"0" style=3D"color:#93a1a1;background-color:#002=
+b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class=3D"language-sh" d=
+ata-lang=3D"sh"><span style=3D"display:flex"><span>$ file libhello.a
+</span></span><span style=3D"display:flex"><span>libhello.a: current ar arc=
+hive random library
+</span></span><span style=3D"display:flex"><span>$ nm libhello.a
+</span></span><span style=3D"display:flex"><span>libhello.a<span style=3D"c=
+olor:#719e07">(</span>x.o<span style=3D"color:#719e07">)</span>:
+</span></span><span style=3D"display:flex"><span>                 U _puts
+</span></span><span style=3D"display:flex"><span><span style=3D"color:#2aa1=
+98">0000000000000000</span> T _x
+</span></span><span style=3D"display:flex"><span>
+</span></span><span style=3D"display:flex"><span>
+</span></span><span style=3D"display:flex"><span>libhello.a<span style=3D"c=
+olor:#719e07">(</span>y.o<span style=3D"color:#719e07">)</span>:
+</span></span><span style=3D"display:flex"><span>                 U _puts
+</span></span><span style=3D"display:flex"><span><span style=3D"color:#2aa1=
+98">0000000000000000</span> T _y
+</span></span></code></pre></div><p>Some other useful flags for <code>ar</c=
+ode> are <code>-d</code> to delete an object file, ex. <code>ar -d libhello=
+.a y.o</code> and <code>-u</code> to update existing members of the archive=
+ when their
+source and object files are updated. Not only can we run <code>nm</code> on=
+ our archive,
+<code>otool</code> and <code>objdump</code> both work.</p><p>Now that we ha=
+ve our static library, we can statically link it to our program
+and see the resulting symbols. The <code>.a</code> suffix is typical on bot=
+h OSX and
+Linux for archive files.</p><div class=3D"highlight"><pre tabindex=3D"0" st=
+yle=3D"color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4=
+;tab-size:4"><code class=3D"language-sh" data-lang=3D"sh"><span style=3D"di=
+splay:flex"><span>$ clang main.o libhello.a
+</span></span><span style=3D"display:flex"><span>$ nm a.out
+</span></span><span style=3D"display:flex"><span>0000000100000f30 T _main
+</span></span><span style=3D"display:flex"><span>                 U _puts
+</span></span><span style=3D"display:flex"><span>0000000100000f50 T _x
+</span></span><span style=3D"display:flex"><span>0000000100000f70 T _y
+</span></span></code></pre></div><p>Our compiler understands how to index i=
+nto archive files and pull out the
+functions it needs to combine into the final executable. If we use a static
+library to statically link all functions required, we can have one binary w=
+ith
+no dependencies. This can make deployment of binaries simple, but also grea=
+tly
+increase their size. Upgrading large binaries incrementally becomes more
+costly in terms of space.</p><p>While static libraries allowed us to reuse =
+source code, static linkage does not
+allow us to reuse memory for executable code between different processes. I
+really want to put off talking about memory benefits until the next post, b=
+ut
+know that the solution to this problem lies in =E2=80=9Cdynamic libraries.=
+=E2=80=9D</p><p>While having a single binary file keeps things simple, it c=
+an really hamper
+memory sharing and incremental relinking. For example, if you have multiple
+executables that are all built with the same static library, unless your OS=
+ is
+really smart about copy-on-write page sharing, then you=E2=80=99re likely l=
+oading
+multiple copies of the same exact code into memory! What a waste! Also, whe=
+n
+you want to rebuild or update your binary, you spend time performing reloca=
+tion
+again and again with static libraries. What if we could set aside object fi=
+les
+that we could share amongst multiple instances of the same or even differen=
+t
+processes, and perform relocation at runtime?</p><p>The solution is known a=
+s dynamic libraries. If static libraries and static
+linkage were Atari controllers, dynamic libraries and dynamic linkage are S=
+teel
+Battalion controllers. We=E2=80=99ll show how to work with them in the rest=
+ of this
+post, but I=E2=80=99ll prove how memory is saved in a later post.</p><p>Let=
+=E2=80=99s say we want to created a shared version of libhello. Dynamic lib=
+raries
+typically have different suffixes per OS since each OS has it=E2=80=99s pre=
+ferred
+object file format. On Linux the .so suffix is common, .dylib on OSX, and .=
+dll
+on Windows.</p><div class=3D"highlight"><pre tabindex=3D"0" style=3D"color:=
+#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">=
+<code class=3D"language-sh" data-lang=3D"sh"><span style=3D"display:flex"><=
+span>$ clang -shared -fpic x.c y.c -o libhello.dylib
+</span></span><span style=3D"display:flex"><span>$ file libhello.dylib
+</span></span><span style=3D"display:flex"><span>libhello.dylib: Mach-O 64-=
+bit dynamically linked shared library x86_64
+</span></span><span style=3D"display:flex"><span>$ nm libhello.dylib
+</span></span><span style=3D"display:flex"><span>                 U _puts
+</span></span><span style=3D"display:flex"><span>0000000000000f50 T _x
+</span></span><span style=3D"display:flex"><span>0000000000000f70 T _y
+</span></span></code></pre></div><p>The <code>-shared</code> flag tells the=
+ linker to create a special file called a shared
+library. The <code>-fpic</code> option converts absolute addresses to relat=
+ive addresses,
+which allows for different processes to load the library at different virtu=
+al
+addresses and share memory.</p><p>Now that we have our shared library, let=
+=E2=80=99s dynamically link it into our
+executable.</p><div class=3D"highlight"><pre tabindex=3D"0" style=3D"color:=
+#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">=
+<code class=3D"language-sh" data-lang=3D"sh"><span style=3D"display:flex"><=
+span>$ clang main.c libhello.dylib
+</span></span><span style=3D"display:flex"><span>$ ./a.out
+</span></span><span style=3D"display:flex"><span>x
+</span></span><span style=3D"display:flex"><span>y
+</span></span></code></pre></div><p>The dynamic linker essential produces a=
+n incomplete binary. You can verify
+with <code>nm</code>. At runtime, we=E2=80=99ll delay start up to perform s=
+ome memory mapping
+early on in the process start (performed by the dynamic linker) and pay sli=
+ght
+costs for trampolining into position independent code.</p><p>Let=E2=80=99s =
+say we want to know what dynamic libraries a binary is using. You can
+either query the executable (most executable object file formats contain a
+header the dynamic linker will parse and pull in libs) or observe the
+executable while running it. Because each major OS has its own object file
+format, they each have their own tools for these two checks. Note that
+statically linked libraries won=E2=80=99t show up here, since their object =
+code has
+already been linked in and thus we=E2=80=99re not able to differentiate bet=
+ween object
+code that came from our first party code vs third party static libraries.</=
+p><p>On OSX, we can use <code>otool -L &lt;bin&gt;</code> to check which .d=
+ylibs will get pulled in.</p><div class=3D"highlight"><pre tabindex=3D"0" s=
+tyle=3D"color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:=
+4;tab-size:4"><code class=3D"language-sh" data-lang=3D"sh"><span style=3D"d=
+isplay:flex"><span>$ otool -L a.out
+</span></span><span style=3D"display:flex"><span>a.out:
+</span></span><span style=3D"display:flex"><span>           libhello.dylib =
+<span style=3D"color:#719e07">(</span>compatibility version 0.0.0, current =
+version 0.0.0<span style=3D"color:#719e07">)</span>
+</span></span><span style=3D"display:flex"><span>           /usr/lib/libSys=
+tem.B.dylib <span style=3D"color:#719e07">(</span>compatibility version 1.0=
+.0, current version 1226.10.1<span style=3D"color:#719e07">)</span>
+</span></span></code></pre></div><p>So we can see that <code>a.out</code> d=
+epends on <code>libhello.dylib</code> (and expects to find it
+in the same directory as <code>a.out</code>). It also depends on shared lib=
+rary called
+libSystem.B.dylib. If you run <code>otool -L</code> on libSystem itself, yo=
+u=E2=80=99ll see it
+depends on a bunch of other libraries including a C runtime, malloc
+implementation, pthreads implementation, and more. Let=E2=80=99s say you wa=
+nt to find
+the final resting place of where a symbol is defined, without digging with =
+<code>nm</code>
+and <code>otool</code>, you can fire up your trusty debugger and ask it.</p=
+><div class=3D"highlight"><pre tabindex=3D"0" style=3D"color:#93a1a1;backgr=
+ound-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class=3D=
+"language-sh" data-lang=3D"sh"><span style=3D"display:flex"><span>$ lldb a.=
+out
+</span></span><span style=3D"display:flex"><span>...
+</span></span><span style=3D"display:flex"><span><span style=3D"color:#719e=
+07">(</span>lldb<span style=3D"color:#719e07">)</span> image lookup -r -s p=
+uts
+</span></span><span style=3D"display:flex"><span>...
+</span></span><span style=3D"display:flex"><span>        Summary: libsystem=
+_c.dylib<span style=3D"color:#586e75">`</span>puts        Address: libsyste=
+m_c.dylib<span style=3D"color:#719e07">[</span>0x0000000000085c30<span styl=
+e=3D"color:#719e07">]</span> <span style=3D"color:#719e07">(</span>libsyste=
+m_c.dylib.__TEXT.__stubs + 3216<span style=3D"color:#719e07">)</span>
+</span></span></code></pre></div><p>You=E2=80=99ll see a lot of output sinc=
+e <code>puts</code> is treated as a regex. You=E2=80=99re looking
+for the Summary line that has an address and is <strong>not</strong> a symb=
+ol stub. You can
+then check your work with <code>otool</code> and <code>nm</code>.</p><p>If =
+we want to observe the dynamic linker in action on OSX, we can use <code>dt=
+russ</code>:</p><div class=3D"highlight"><pre tabindex=3D"0" style=3D"color=
+:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"=
+><code class=3D"language-sh" data-lang=3D"sh"><span style=3D"display:flex">=
+<span>$ sudo dtruss ./a.out
+</span></span><span style=3D"display:flex"><span>...
+</span></span><span style=3D"display:flex"><span>stat64<span style=3D"color=
+:#719e07">(</span><span style=3D"color:#2aa198">"libhello.dylib\0"</span>, =
+0x7FFF50CEAC68, 0x1<span style=3D"color:#719e07">)</span>         <span sty=
+le=3D"color:#719e07">=3D</span> <span style=3D"color:#2aa198">0</span> <spa=
+n style=3D"color:#2aa198">0</span>
+</span></span><span style=3D"display:flex"><span>open<span style=3D"color:#=
+719e07">(</span><span style=3D"color:#2aa198">"libhello.dylib\0"</span>, 0x=
+0, 0x0<span style=3D"color:#719e07">)</span>              <span style=3D"co=
+lor:#719e07">=3D</span> <span style=3D"color:#2aa198">3</span> <span style=
+=3D"color:#2aa198">0</span>
+</span></span><span style=3D"display:flex"><span>...
+</span></span><span style=3D"display:flex"><span>mmap<span style=3D"color:#=
+719e07">(</span>0x10EF27000, 0x1000, 0x5, 0x12, 0x3, 0x0<span style=3D"colo=
+r:#719e07">)</span>          <span style=3D"color:#719e07">=3D</span> 0x10E=
+F27000 <span style=3D"color:#2aa198">0</span>
+</span></span><span style=3D"display:flex"><span>mmap<span style=3D"color:#=
+719e07">(</span>0x10EF28000, 0x1000, 0x3, 0x12, 0x3, 0x1000<span style=3D"c=
+olor:#719e07">)</span>               <span style=3D"color:#719e07">=3D</spa=
+n> 0x10EF28000 <span style=3D"color:#2aa198">0</span>
+</span></span><span style=3D"display:flex"><span>mmap<span style=3D"color:#=
+719e07">(</span>0x10EF29000, 0xC0, 0x1, 0x12, 0x3, 0x2000<span style=3D"col=
+or:#719e07">)</span>         <span style=3D"color:#719e07">=3D</span> 0x10E=
+F29000 <span style=3D"color:#2aa198">0</span>
+</span></span><span style=3D"display:flex"><span>...
+</span></span><span style=3D"display:flex"><span>close<span style=3D"color:=
+#719e07">(</span>0x3<span style=3D"color:#719e07">)</span>              <sp=
+an style=3D"color:#719e07">=3D</span> <span style=3D"color:#2aa198">0</span=
+> <span style=3D"color:#2aa198">0</span>
+</span></span><span style=3D"display:flex"><span>...
+</span></span></code></pre></div><p>On Linux, we can simply use <code>ldd</=
+code> or <code>readelf -d</code> to query an executable for a
+list of its dynamic libraries.</p><div class=3D"highlight"><pre tabindex=3D=
+"0" style=3D"color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-=
+size:4;tab-size:4"><code class=3D"language-sh" data-lang=3D"sh"><span style=
+=3D"display:flex"><span>$ clang -shared -fpic x.c y.c -o libhello.so
+</span></span><span style=3D"display:flex"><span>$ clang main.c libhello.so
+</span></span><span style=3D"display:flex"><span>$ ldd a.out
+</span></span><span style=3D"display:flex"><span>           linux-vdso.so.1=
+ <span style=3D"color:#719e07">=3D</span>&gt;  <span style=3D"color:#719e07=
+">(</span>0x00007fff95d43000<span style=3D"color:#719e07">)</span>
+</span></span><span style=3D"display:flex"><span>           libhello.so <sp=
+an style=3D"color:#719e07">=3D</span>&gt; not found
+</span></span><span style=3D"display:flex"><span>           libc.so.6 <span=
+ style=3D"color:#719e07">=3D</span>&gt; /lib/x86_64-linux-gnu/libc.so.6 <sp=
+an style=3D"color:#719e07">(</span>0x00007fcc98c5f000<span style=3D"color:#=
+719e07">)</span>
+</span></span><span style=3D"display:flex"><span>           /lib64/ld-linux=
+-x86-64.so.2 <span style=3D"color:#719e07">(</span>0x0000555993852000<span =
+style=3D"color:#719e07">)</span>
+</span></span><span style=3D"display:flex"><span>$ readelf -d a.out
+</span></span><span style=3D"display:flex"><span>Dynamic section at offset =
+0xe18 contains <span style=3D"color:#2aa198">25</span> entries:
+</span></span><span style=3D"display:flex"><span>  Tag        Type         =
+                Name/Value
+</span></span><span style=3D"display:flex"><span> 0x0000000000000001 <span =
+style=3D"color:#719e07">(</span>NEEDED<span style=3D"color:#719e07">)</span=
+>             Shared library: <span style=3D"color:#719e07">[</span>libhell=
+o.so<span style=3D"color:#719e07">]</span>
+</span></span><span style=3D"display:flex"><span> 0x0000000000000001 <span =
+style=3D"color:#719e07">(</span>NEEDED<span style=3D"color:#719e07">)</span=
+>             Shared library: <span style=3D"color:#719e07">[</span>libc.so=
+.6<span style=3D"color:#719e07">]</span>
+</span></span><span style=3D"display:flex"><span>...
+</span></span></code></pre></div><p>We can then use <code>strace</code> to =
+observe the dynamic linker in action on Linux:</p><div class=3D"highlight">=
+<pre tabindex=3D"0" style=3D"color:#93a1a1;background-color:#002b36;-moz-ta=
+b-size:4;-o-tab-size:4;tab-size:4"><code class=3D"language-sh" data-lang=3D=
+"sh"><span style=3D"display:flex"><span>$ <span style=3D"color:#268bd2">LD_=
+LIBRARY_PATH</span><span style=3D"color:#719e07">=3D</span>. strace ./a.out
+</span></span><span style=3D"display:flex"><span>...
+</span></span><span style=3D"display:flex"><span>open<span style=3D"color:#=
+719e07">(</span><span style=3D"color:#2aa198">"./libhello.so"</span>, O_RDO=
+NLY|O_CLOEXEC<span style=3D"color:#719e07">)</span> <span style=3D"color:#7=
+19e07">=3D</span> <span style=3D"color:#2aa198">3</span>
+</span></span><span style=3D"display:flex"><span>...
+</span></span><span style=3D"display:flex"><span>read<span style=3D"color:#=
+719e07">(</span>3, <span style=3D"color:#2aa198">"\177ELF\2\1\1\0\0\0\0\0\0=
+\0\0\0\3\0&gt;\0\1\0\0\0\260\5\0\0\0\0\0\0"</span>..., 832<span style=3D"co=
+lor:#719e07">)</span> <span style=3D"color:#719e07">=3D</span> <span style=
+=3D"color:#2aa198">832</span>
+</span></span><span style=3D"display:flex"><span>fstat<span style=3D"color:=
+#719e07">(</span>3, <span style=3D"color:#719e07">{</span><span style=3D"co=
+lor:#268bd2">st_mode</span><span style=3D"color:#719e07">=3D</span>S_IFREG|=
+0755, <span style=3D"color:#268bd2">st_size</span><span style=3D"color:#719=
+e07">=3D</span>8216, ...<span style=3D"color:#719e07">})</span> <span style=
+=3D"color:#719e07">=3D</span> <span style=3D"color:#2aa198">0</span>
+</span></span><span style=3D"display:flex"><span>close<span style=3D"color:=
+#719e07">(</span>3<span style=3D"color:#719e07">)</span>                   =
+             <span style=3D"color:#719e07">=3D</span> <span style=3D"color:=
+#2aa198">0</span>
+</span></span><span style=3D"display:flex"><span>...
+</span></span></code></pre></div><p>What=E2=80=99s this <code>LD_LIBRARY_PA=
+TH</code> thing? That=E2=80=99s shell syntax for setting an
+environmental variable just for the duration of that command (as opposed to
+exporting it so it stays set for multiple commands). As opposed to OSX=E2=
+=80=99s
+dynamic linker, which was happy to look in the cwd for libhello.dylib, on L=
+inux
+we must supply the cwd if the dynamic library we want to link in is not in =
+the
+standard search path.</p><p>But what is the standard search path? Well, the=
+re=E2=80=99s another environmental
+variable we can set to see this, <code>LD_DEBUG</code>. For example, on OSX=
+:</p><div class=3D"highlight"><pre tabindex=3D"0" style=3D"color:#93a1a1;ba=
+ckground-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code clas=
+s=3D"language-sh" data-lang=3D"sh"><span style=3D"display:flex"><span>$ <sp=
+an style=3D"color:#268bd2">LD_DEBUG</span><span style=3D"color:#719e07">=3D=
+</span>libs <span style=3D"color:#268bd2">LD_LIBRARY_PATH</span><span style=
+=3D"color:#719e07">=3D</span>. ./a.out
+</span></span><span style=3D"display:flex"><span>     15828:        find <s=
+pan style=3D"color:#268bd2">library</span><span style=3D"color:#719e07">=3D=
+</span>libhello.so <span style=3D"color:#719e07">[</span>0<span style=3D"co=
+lor:#719e07">]</span>; searching
+</span></span><span style=3D"display:flex"><span>     15828:         search=
+ <span style=3D"color:#268bd2">path</span><span style=3D"color:#719e07">=3D=
+</span>./tls/x86_64:./tls:./x86_64:.             <span style=3D"color:#719e=
+07">(</span>LD_LIBRARY_PATH<span style=3D"color:#719e07">)</span>
+</span></span><span style=3D"display:flex"><span>     15828:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>./tls/x86_64/libhello.so
+</span></span><span style=3D"display:flex"><span>     15828:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>./tls/libhello.so
+</span></span><span style=3D"display:flex"><span>     15828:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>./x86_64/libhello.so
+</span></span><span style=3D"display:flex"><span>     15828:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>./libhello.so
+</span></span><span style=3D"display:flex"><span>     15828:
+</span></span><span style=3D"display:flex"><span>     15828:        find <s=
+pan style=3D"color:#268bd2">library</span><span style=3D"color:#719e07">=3D=
+</span>libc.so.6 <span style=3D"color:#719e07">[</span>0<span style=3D"colo=
+r:#719e07">]</span>; searching
+</span></span><span style=3D"display:flex"><span>     15828:         search=
+ <span style=3D"color:#268bd2">path</span><span style=3D"color:#719e07">=3D=
+</span>./tls/x86_64:./tls:./x86_64:.             <span style=3D"color:#719e=
+07">(</span>LD_LIBRARY_PATH<span style=3D"color:#719e07">)</span>
+</span></span><span style=3D"display:flex"><span>     15828:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>./tls/x86_64/libc.so.6
+</span></span><span style=3D"display:flex"><span>     1earc:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>./tls/libc.so.6
+</span></span><span style=3D"display:flex"><span>     15828:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>./x86_64/libc.so.6
+</span></span><span style=3D"display:flex"><span>     15828:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>./libc.so.6
+</span></span><span style=3D"display:flex"><span>     15828:         search=
+ <span style=3D"color:#268bd2">cache</span><span style=3D"color:#719e07">=
+=3D</span>/etc/ld.so.cache
+</span></span><span style=3D"display:flex"><span>     15828:          tryin=
+g <span style=3D"color:#268bd2">file</span><span style=3D"color:#719e07">=
+=3D</span>/lib/x86_64-linux-gnu/libc.so.6
+</span></span><span style=3D"display:flex"><span>     15828:        calling=
+ init: /lib/x86_64-linux-gnu/libc.so.6
+</span></span><span style=3D"display:flex"><span>     15828:        calling=
+ init: ./libhello.so
+</span></span><span style=3D"display:flex"><span>     15828:        initial=
+ize program: ./a.out
+</span></span><span style=3D"display:flex"><span>     15828:        transfe=
+rring control: ./a.out
+</span></span><span style=3D"display:flex"><span>x
+</span></span><span style=3D"display:flex"><span>y
+</span></span><span style=3D"display:flex"><span>     15828:        calling=
+ fini: ./a.out <span style=3D"color:#719e07">[</span>0<span style=3D"color:=
+#719e07">]</span>
+</span></span><span style=3D"display:flex"><span>     15828:        calling=
+ fini: ./libhello.so <span style=3D"color:#719e07">[</span>0<span style=3D"=
+color:#719e07">]</span>
+</span></span></code></pre></div><p><code>LD_DEBUG</code> is pretty useful.=
+ Try:</p><div class=3D"highlight"><pre tabindex=3D"0" style=3D"color:#93a1a=
+1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code =
+class=3D"language-sh" data-lang=3D"sh"><span style=3D"display:flex"><span>$=
+ <span style=3D"color:#268bd2">LD_DEBUG</span><span style=3D"color:#719e07"=
+>=3D</span><span style=3D"color:#b58900">help</span> ./a.out
+</span></span><span style=3D"display:flex"><span>Valid options <span style=
+=3D"color:#719e07">for</span> the LD_DEBUG environment variable are:
+</span></span><span style=3D"display:flex"><span>
+</span></span><span style=3D"display:flex"><span>
+</span></span><span style=3D"display:flex"><span>  libs        display libr=
+ary search paths
+</span></span><span style=3D"display:flex"><span>  reloc       display relo=
+cation processing
+</span></span><span style=3D"display:flex"><span>  files       display prog=
+ress <span style=3D"color:#719e07">for</span> input file
+</span></span><span style=3D"display:flex"><span>  symbols     display symb=
+ol table processing
+</span></span><span style=3D"display:flex"><span>  bindings    display info=
+rmation about symbol binding
+</span></span><span style=3D"display:flex"><span>  versions    display vers=
+ion dependencies
+</span></span><span style=3D"display:flex"><span>  scopes      display scop=
+e information
+</span></span><span style=3D"display:flex"><span>  all         all previous=
+ options combined
+</span></span><span style=3D"display:flex"><span>  statistics  display relo=
+cation statistics
+</span></span><span style=3D"display:flex"><span>  unused      determined u=
+nused DSOs
+</span></span><span style=3D"display:flex"><span>  <span style=3D"color:#b5=
+8900">help</span>        display this <span style=3D"color:#b58900">help</s=
+pan> message and <span style=3D"color:#b58900">exit</span>
+</span></span><span style=3D"display:flex"><span>
+</span></span><span style=3D"display:flex"><span>
+</span></span><span style=3D"display:flex"><span>To direct the debugging ou=
+tput into a file instead of standard output
+</span></span><span style=3D"display:flex"><span>a filename can be specifie=
+d using the LD_DEBUG_OUTPUT environment variable.
+</span></span></code></pre></div><p>For some cool stuff, I recommend checki=
+ng out <code>LD_DEBUG=3Dsymbols</code> and
+<code>LD_DEBUG=3Dstatistics</code>.</p><p>Going back to <code>LD_LIBRARY_PA=
+TH</code>, usually libraries you create and want to reuse
+between projects go into /usr/local/lib and the headers into
+/usr/local/include. I think of the convention as:</p><div class=3D"highligh=
+t"><pre tabindex=3D"0" style=3D"color:#93a1a1;background-color:#002b36;-moz=
+-tab-size:4;-o-tab-size:4;tab-size:4"><code class=3D"language-sh" data-lang=
+=3D"sh"><span style=3D"display:flex"><span>$ tree -L <span style=3D"color:#=
+2aa198">2</span> /usr/
+</span></span><span style=3D"display:flex"><span>/usr
+</span></span><span style=3D"display:flex"><span>=E2=94=9C=E2=94=80=E2=94=
+=80 bin <span style=3D"color:#586e75"># system installed binaries like nm, =
+gcc</span>
+</span></span><span style=3D"display:flex"><span>=E2=94=9C=E2=94=80=E2=94=
+=80 include <span style=3D"color:#586e75"># system installed headers like s=
+tdio.h</span>
+</span></span><span style=3D"display:flex"><span>=E2=94=9C=E2=94=80=E2=94=
+=80 lib <span style=3D"color:#586e75"># system installed libraries, both st=
+atic and dynamic</span>
+</span></span><span style=3D"display:flex"><span>=E2=94=94=E2=94=80=E2=94=
+=80 <span style=3D"color:#b58900">local</span>
+</span></span><span style=3D"display:flex"><span>    =E2=94=9C=E2=94=80=E2=
+=94=80 bin <span style=3D"color:#586e75"># user installed binaries like rus=
+tc</span>
+</span></span><span style=3D"display:flex"><span>    =E2=94=9C=E2=94=80=E2=
+=94=80 include <span style=3D"color:#586e75"># user installed headers</span=
+>
+</span></span><span style=3D"display:flex"><span>    =E2=94=94=E2=94=80=E2=
+=94=80 lib <span style=3D"color:#586e75"># user installed</span>
+</span></span></code></pre></div><p>Unfortunately, it=E2=80=99s a loose con=
+vention that=E2=80=99s broken down over the years and
+things are scattered all over the place. You can also run into dependency a=
+nd
+versioning issues, that I don=E2=80=99t want to get into here, by placing l=
+ibraries
+here instead of keeping them in-tree or out-of-tree of the source code of a
+project. Just know when you see a library like <code>libc.so.6</code> that =
+the numeric
+suffix is a major version number that follows semantic versioning. For more
+information, you should read Michael Kerrisk=E2=80=99s excellent book <em>T=
+he Linux
+Programming Interface</em>. This post is based on his chapter=E2=80=99s 41 =
+&amp; 42 (but with
+more info on tooling and OSX).</p><p>If we were to place our libhello.so in=
+to /usr/local/lib (on Linux you need to
+then run <code>sudo ldconfig</code>) and move x.h and y.h to /usr/local/inc=
+lude, then we
+could then compile with:</p><div class=3D"highlight"><pre tabindex=3D"0" st=
+yle=3D"color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4=
+;tab-size:4"><code class=3D"language-sh" data-lang=3D"sh"><span style=3D"di=
+splay:flex"><span>$ clang main.c -lhello
+</span></span></code></pre></div><p>Note that rather than give a full path =
+to our library, we can use the <code>-l</code> flag
+followed by the name of our library with the lib prefix and .so suffix remo=
+ved.</p><p>When working with shared libraries and external code, three flag=
+s I use pretty
+often:</p><pre tabindex=3D"0"><code>* -l&lt;libname to link, no lib prefix =
+or file extension; ex: -lnanomsg to link libnanomsg.so&gt;
+* -L &lt;path to search for lib if in non standard directory&gt;
+* -I &lt;path to headers for that library, if in non standard directory&gt;
+</code></pre><p>For finding specific flags needed for compilation where dyn=
+amic linkage is
+required, a tool called <code>pkg-config</code> can be used for finding app=
+ropriate flags.
+I=E2=80=99ve had less than stellar experiences with the tool as it puts the=
+ onus on the
+library author to maintain the .pc files, and the user to have them install=
+ed
+in the right place that <code>pkg-config</code> looks. When they do exist a=
+nd are
+installed properly, the tool works well:</p><div class=3D"highlight"><pre t=
+abindex=3D"0" style=3D"color:#93a1a1;background-color:#002b36;-moz-tab-size=
+:4;-o-tab-size:4;tab-size:4"><code class=3D"language-sh" data-lang=3D"sh"><=
+span style=3D"display:flex"><span>$ sudo apt-get install libpng12-dev
+</span></span><span style=3D"display:flex"><span>$ pkg-config --libs --cfla=
+gs libpng12
+</span></span><span style=3D"display:flex"><span>-I/usr/include/libpng12  -=
+lpng12
+</span></span><span style=3D"display:flex"><span>$ clang program.c <span st=
+yle=3D"color:#586e75">`</span>!!<span style=3D"color:#586e75">`</span>
+</span></span></code></pre></div><p>Using another neat environmental variab=
+le, we can hook into the dynamic linkage
+process and inject our own shared libraries to be linked instead of the
+expected libraries. Let=E2=80=99s say libgood.so and libmalicous.so both de=
+fine a
+symbol for a function (the same symbol name and function signature). We can
+get a binary that links in libgood.so=E2=80=99s function to instead call
+libmalicous.so=E2=80=99s version:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" style=3D"color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-t=
+ab-size:4;tab-size:4"><code class=3D"language-sh" data-lang=3D"sh"><span st=
+yle=3D"display:flex"><span>$ ./a.out
+</span></span><span style=3D"display:flex"><span>hello from libgood
+</span></span><span style=3D"display:flex"><span>$ <span style=3D"color:#26=
+8bd2">LD_PRELOAD</span><span style=3D"color:#719e07">=3D</span>./libmalicio=
+us.so ./a.out
+</span></span><span style=3D"display:flex"><span>hello from libmalicious
+</span></span></code></pre></div><p>LD_PRELOAD is not available on OSX, ins=
+tead you can use
+<code>DYLD_INSERT_LIBRARIES</code>, <code>DYLD_LIBRARY_PATH</code>, and rec=
+ompile the original
+executable with <code>-flat_namespace</code>. Having to recompile the origi=
+nal executable
+is less than ideal for hooking an existing binary, but I could not hook lib=
+c
+as in the previous libmalicious example. I would be interested to know if y=
+ou
+can though!</p><p>Manually invoking the dynamic linker from our code,
+<a href=3D"https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tri=
+cks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/" ta=
+rget=3D"_blank" rel=3D"noopener">we can even man in the middle library call=
+s (call our hooked function first, then invoke the original target)</a>.
+We=E2=80=99ll see more of this in the next post on using the dynamic linker=
+.</p><p>As you can guess, readjusting the search paths for dynamic librarie=
+s is a
+security concern as it let=E2=80=99s good and bad folks change the expected=
+ execution
+paths. Guarding against the use of these env vars becomes a rabbit hole tha=
+t
+gets pretty tricky to solve without the heavy handed use of statically link=
+ing
+dependencies.</p><p>In the the previous post, I alluded to undefined symbol=
+s like <code>puts</code>. <code>puts</code>
+is part of libc, which is probably the most shared dynamic library on most
+computing devices since most every program makes use of the C runtime. (I
+think of a =E2=80=9Cruntime=E2=80=9D as implicit code that runs in your pro=
+gram that you didn=E2=80=99t
+necessarily write yourself. Usually a runtime is provided as a library that
+gets implicitly linked into your executable when you compile.) You can
+statically link against libc with the <code>-static</code> flag, on Linux a=
+t least (OSX
+makes this difficult,
+<a href=3D"https://developer.apple.com/library/content/qa/qa1118/_index.htm=
+l" target=3D"_blank" rel=3D"noopener">=E2=80=9CApple does not support stati=
+cally linked binaries on Mac OS X=E2=80=9D</a>).</p><p>I=E2=80=99m not sure=
+ what the benefit would be to mixing static and dynamic linking,
+but after searching the search paths from LD_DEBUG=3Dlibs for shared versio=
+ns of
+a library, if any static ones are found, they will get linked in.</p><p>The=
+re=E2=80=99s also an interesting form of library called a =E2=80=9Cvirtual =
+dynamic shared
+object=E2=80=9D on Linux. I haven=E2=80=99t covered memory mapping yet, but=
+ know it exists, is
+usually hidden for libc, and that you can read more about it via <code>man =
+7 vdso</code>.</p><p>One thing I find interesting and don=E2=80=99t quite u=
+nderstand how to recreate is that
+somehow glibc on Linux is also executable:</p><div class=3D"highlight"><pre=
+ tabindex=3D"0" style=3D"color:#93a1a1;background-color:#002b36;-moz-tab-si=
+ze:4;-o-tab-size:4;tab-size:4"><code class=3D"language-sh" data-lang=3D"sh"=
+><span style=3D"display:flex"><span>$ /lib/x86_64-linux-gnu/libc.so.6
+</span></span><span style=3D"display:flex"><span>GNU C Library <span style=
+=3D"color:#719e07">(</span>Ubuntu GLIBC 2.24-3ubuntu1<span style=3D"color:#=
+719e07">)</span> stable release version 2.24, by Roland McGrath et al.
+</span></span><span style=3D"display:flex"><span>Copyright <span style=3D"c=
+olor:#719e07">(</span>C<span style=3D"color:#719e07">)</span> <span style=
+=3D"color:#2aa198">2016</span> Free Software Foundation, Inc.
+</span></span><span style=3D"display:flex"><span>This is free software; see=
+ the <span style=3D"color:#b58900">source</span> <span style=3D"color:#719e=
+07">for</span> copying conditions.
+</span></span><span style=3D"display:flex"><span>There is NO warranty; not =
+even <span style=3D"color:#719e07">for</span> MERCHANTABILITY or FITNESS FO=
+R A
+</span></span><span style=3D"display:flex"><span>PARTICULAR PURPOSE.
+</span></span><span style=3D"display:flex"><span>Compiled by GNU CC version=
+ 6.2.0 20161005.
+</span></span><span style=3D"display:flex"><span>Available extensions:
+</span></span><span style=3D"display:flex"><span>    crypt add-on version 2=
+.1 by Michael Glad and others
+</span></span><span style=3D"display:flex"><span>    GNU Libidn by Simon Jo=
+sefsson
+</span></span><span style=3D"display:flex"><span>    Native POSIX Threads L=
+ibrary by Ulrich Drepper et al
+</span></span><span style=3D"display:flex"><span>    BIND-8.2.3-T5B
+</span></span><span style=3D"display:flex"><span>libc ABIs: UNIQUE IFUNC
+</span></span><span style=3D"display:flex"><span>For bug reporting instruct=
+ions, please see:
+</span></span><span style=3D"display:flex"><span>&lt;https://bugs.launchpad=
+.net/ubuntu/+source/glibc/+bugs&gt;.
+</span></span></code></pre></div><p>Also, note that linking against third p=
+arty code has licensing implications (of
+course) of particular interest when it=E2=80=99s GPL or LGPL.
+<a href=3D"http://stackoverflow.com/a/10179181/1027966" target=3D"_blank" r=
+el=3D"noopener">Here is a good overview</a>
+which I=E2=80=99d summarize as: code that <em>statically</em> links against=
+ LGPL code must
+also be LGPL, while any form of linkage against GPL code must be GPL=E2=80=
+=99d.</p><p>Ok, that was a lot. In the previous post, we covered
+<a href=3D"http://nickdesaulniers.github.io/blog/2016/08/13/object-files-an=
+d-symbols/">Object Files and Symbols</a>.
+In this post we covered hacking around with static and dynamic linkage. In =
+the
+next post, I hope to talk about manually invoking the dynamic linker at
+runtime.</p><ul><li><a href=3D"http://nickdesaulniers.github.io/blog/2016/0=
+8/13/object-files-and-symbols/">Part 1 - Object Files and Symbols</a></li><=
+li><a href=3D"http://nickdesaulniers.github.io/blog/2016/11/20/static-and-d=
+ynamic-libraries/">Part 2 - Static and Dynamic Libraries</a></li></ul></div=
+><footer><p class=3D"meta"><span class=3D"byline author vcard">Posted by <s=
+pan class=3D"fn">Nick Desaulniers</span></span>
+<time>Nov 20, 2016</time></p><p class=3D"meta"><a class=3D"basic-alignment =
+left" href=3D"https://nickdesaulniers.github.io/blog/2016/08/13/object-file=
+s-and-symbols/" title=3D"Object Files and Symbols">Object Files and Symbols=
+</a>
+<a class=3D"basic-alignment right" href=3D"https://nickdesaulniers.github.i=
+o/blog/2017/05/16/submitting-your-first-patch-to-the-linux-kernel-and-respo=
+nding-to-feedback/" title=3D"Submitting Your First Patch to the Linux Kerne=
+l and Responding to Feedback">Submitting Your First Patch to the Linux Kern=
+el and Responding to Feedback</a></p><div id=3D"disqus_thread"></div><a hre=
+f=3D"https://disqus.com/" class=3D"dsq-brlink">comments powered by <span cl=
+ass=3D"logo-disqus">Disqus</span></a></footer></article></div><aside class=
+=3D"sidebar thirds"><section class=3D"first odd"><p></p></section><ul class=
+=3D"sidebar-nav"><li class=3D"sidebar-nav-item"><a target=3D"_blank" rel=3D=
+"noopener noreferrer" href=3D"https://github.com/nickdesaulniers" title=3D"=
+https://github.com/nickdesaulniers"><i class=3D"fa fa-github fa-3x"></i></a=
+>
+<a target=3D"_blank" rel=3D"me noopener noreferrer" href=3D"https://fosstod=
+on.org/@llvm" title=3D"https://fosstodon.org/@llvm"><i class=3D"fa fa-masto=
+don fa-3x"></i></a>
+<a target=3D"_blank" rel=3D"noopener noreferrer" href=3D"https://www.linked=
+in.com/in/nick-desaulniers-75520334" title=3D"https://www.linkedin.com/in/n=
+ick-desaulniers-75520334"><i class=3D"fa fa-linkedin fa-3x"></i></a>
+<a target=3D"_blank" rel=3D"noopener noreferrer" href=3D"https://www.youtub=
+e.com/channel/UC68vgKSuS1Xjg9wpdvShfSQ" title=3D"https://www.youtube.com/ch=
+annel/UC68vgKSuS1Xjg9wpdvShfSQ"><i class=3D"fa fa-youtube fa-3x"></i></a></=
+li></ul><section class=3D"even"><h1>Recent Posts</h1><ul id=3D"recent_posts=
+"><li class=3D"post"><a href=3D"http://nickdesaulniers.github.io/blog/2023/=
+03/10/usps-as-an-isp/">USPS as an ISP</a></li><li class=3D"post"><a href=3D=
+"http://nickdesaulniers.github.io/blog/2023/03/10/disambiguating-arm/">Disa=
+mbiguating Arm, Arm ARM, Armv9, ARM9, ARM64, AArch64, A64, A78, ...</a></li=
+><li class=3D"post"><a href=3D"http://nickdesaulniers.github.io/blog/2023/0=
+2/01/forking-is-not-free-the-hidden-costs/">Forking is not free; the hidden=
+ costs</a></li><li class=3D"post"><a href=3D"http://nickdesaulniers.github.=
+io/blog/2023/01/27/critical-edge-splitting/">Critical Edge Splitting</a></l=
+i></ul></section></aside></div></div><footer role=3D"contentinfo"><p>Copyri=
+ght =C2=A9 2023 Nick Desaulniers - <a href=3D"https://nickdesaulniers.githu=
+b.io/license/">License</a> -
+<span class=3D"credit">Powered by <a target=3D"_blank" href=3D"https://gohu=
+go.io/" rel=3D"noopener noreferrer">Hugo</a> and <a target=3D"_blank" href=
+=3D"https://github.com/parsiya/hugo-octopress/" rel=3D"noopener noreferrer"=
+>Hugo-Octopress</a> theme.</span></p></footer></body></html>
+------MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://nickdesaulniers.github.io/css/fonts.css
+
+@charset "utf-8";
+
+@font-face { font-family: "PT Serif"; font-style: normal; font-weight: 400;=
+ src: local("PT Serif"), local("PTSerif-Regular"), url("../fonts/pt-serif-v=
+9-latin-regular.woff2") format("woff2"), url("../fonts/pt-serif-v9-latin-re=
+gular.woff") format("woff"); }
+
+@font-face { font-family: "PT Serif"; font-style: italic; font-weight: 400;=
+ src: local("PT Serif Italic"), local("PTSerif-Italic"), url("../fonts/pt-s=
+erif-v9-latin-italic.woff2") format("woff2"), url("../fonts/pt-serif-v9-lat=
+in-italic.woff") format("woff"); }
+
+@font-face { font-family: "PT Serif"; font-style: normal; font-weight: 700;=
+ src: local("PT Serif Bold"), local("PTSerif-Bold"), url("../fonts/pt-serif=
+-v9-latin-700.woff2") format("woff2"), url("../fonts/pt-serif-v9-latin-700.=
+woff") format("woff"); }
+
+@font-face { font-family: "PT Serif"; font-style: italic; font-weight: 700;=
+ src: local("PT Serif Bold Italic"), local("PTSerif-BoldItalic"), url("../f=
+onts/pt-serif-v9-latin-700italic.woff2") format("woff2"), url("../fonts/pt-=
+serif-v9-latin-700italic.woff") format("woff"); }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 400; =
+src: local("PT Sans"), local("PTSans-Regular"), url("../fonts/pt-sans-v9-la=
+tin-regular.woff2") format("woff2"), url("../fonts/pt-sans-v9-latin-regular=
+.woff") format("woff"); }
+
+@font-face { font-family: "PT Sans"; font-style: italic; font-weight: 400; =
+src: local("PT Sans Italic"), local("PTSans-Italic"), url("../fonts/pt-sans=
+-v9-latin-italic.woff2") format("woff2"), url("../fonts/pt-sans-v9-latin-it=
+alic.woff") format("woff"); }
+
+@font-face { font-family: "PT Sans"; font-style: normal; font-weight: 700; =
+src: local("PT Sans Bold"), local("PTSans-Bold"), url("../fonts/pt-sans-v9-=
+latin-700.woff2") format("woff2"), url("../fonts/pt-sans-v9-latin-700.woff"=
+) format("woff"); }
+
+@font-face { font-family: "PT Sans"; font-style: italic; font-weight: 700; =
+src: local("PT Sans Bold Italic"), local("PTSans-BoldItalic"), url("../font=
+s/pt-sans-v9-latin-700italic.woff2") format("woff2"), url("../fonts/pt-sans=
+-v9-latin-700italic.woff") format("woff"); }
+------MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://nickdesaulniers.github.io/css/hugo-octopress.css
+
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, b=
+lockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, i=
+mg, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i=
+, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, cap=
+tion, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, emb=
+ed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, se=
+ction, summary, time, mark, audio, video { margin: 0px; padding: 0px; borde=
+r: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; f=
+ont-stretch: inherit; line-height: inherit; font-optical-sizing: inherit; f=
+ont-kerning: inherit; font-feature-settings: inherit; font-variation-settin=
+gs: inherit; font-size: 100%; vertical-align: baseline; font-family: "PT Se=
+rif", Georgia, Times, "Times New Roman", serif; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0px; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: mi=
+ddle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: none;=
+ }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, =
+nav, section, summary { display: block; }
+
+a { color: rgb(24, 99, 161); }
+
+a:visited { color: rgb(117, 21, 144); }
+
+a:focus { color: rgb(1, 129, 235); }
+
+a:hover { color: rgb(1, 129, 235); }
+
+a:active { color: rgb(1, 87, 159); }
+
+aside.sidebar a { color: rgb(34, 34, 34); }
+
+aside.sidebar a:focus { color: rgb(1, 129, 235); }
+
+aside.sidebar a:hover { color: rgb(1, 129, 235); }
+
+aside.sidebar a:active { color: rgb(1, 87, 159); }
+
+a { transition: color 0.3s ease 0s; }
+
+html { background: left top rgb(37, 37, 37); }
+
+body > div { background: left top rgb(242, 242, 242); border-bottom: 1px so=
+lid rgb(191, 191, 191); }
+
+body > div > div { background: left top rgb(248, 248, 248); border-right: 1=
+px solid rgb(224, 224, 224); }
+
+.sans, body > header h2, article header p.meta, article > footer, #content =
+.blog-index footer, #blog-archives a.category, #blog-archives time, aside.s=
+idebar section, body > footer { font-family: "PT Sans", "Helvetica Neue", A=
+rial, sans-serif; }
+
+.serif, body, #content .blog-index a[rel=3D"full-article"] { }
+
+.mono, pre, code, tt, p code, li code { font-family: Menlo, Monaco, "Andale=
+ Mono", "lucida console", "Courier New", monospace; }
+
+body > header h1 { font-size: 2.2em; font-family: "PT Serif", Georgia, "Hel=
+vetica Neue", Arial, sans-serif; font-weight: normal; line-height: 1.2em; m=
+argin-bottom: 0.6667em; }
+
+body > header h2 { font-family: "PT Serif", Georgia, "Helvetica Neue", Aria=
+l, sans-serif; }
+
+body { line-height: 1.5em; color: rgb(34, 34, 34); }
+
+h1 { font-size: 2.2em; line-height: 1.2em; }
+
+h1, h2, h3, h4, h5, h6 { text-rendering: optimizelegibility; margin-bottom:=
+ 1em; font-weight: bold; margin-top: 1em; }
+
+h2, section h1 { font-size: 1.5em; }
+
+h3, section h2, section section h1 { font-size: 1.3em; }
+
+h4, section h3, section section h2, section section section h1 { font-size:=
+ 1em; }
+
+h5, section h4, section section h3 { font-size: 0.9em; }
+
+h6, section h5, section section h4, section section section h3 { font-size:=
+ 0.8em; }
+
+p, article blockquote, ul, ol { margin-bottom: 0.8em; }
+
+ul { list-style-type: disc; }
+
+ul ul { list-style-type: circle; margin-bottom: 0px; }
+
+ul ul ul { list-style-type: square; margin-bottom: 0px; }
+
+ol { list-style-type: decimal; }
+
+ol ol { list-style-type: lower-alpha; margin-bottom: 0px; }
+
+ol ol ol { list-style-type: lower-roman; margin-bottom: 0px; }
+
+ul, ul ul, ul ol, ol, ol ul, ol ol { margin-left: 1.3em; }
+
+ul ul, ul ol, ol ul, ol ol { margin-bottom: 0em; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+sup, sub { font-size: 0.75em; position: relative; display: inline-block; pa=
+dding: 0px 0.2em; line-height: 0.8em; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.5em; }
+
+a[rev=3D"footnote"] { font-size: 0.75em; padding: 0px 0.3em; line-height: 1=
+; }
+
+q { font-style: italic; }
+
+q::before { content: "=E2=80=9C"; }
+
+q::after { content: "=E2=80=9D"; }
+
+em, dfn { font-style: italic; }
+
+strong, dfn { font-weight: bold; }
+
+del, s { text-decoration: line-through; }
+
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+
+hr { margin-bottom: 0.2em; }
+
+small { font-size: 0.8em; }
+
+big { font-size: 1.2em; }
+
+article blockquote { font-style: italic; position: relative; font-size: 1em=
+; line-height: 1.5em; padding-left: 1em; border-left: 4px solid rgba(170, 1=
+70, 170, 0.5); }
+
+article blockquote cite { font-style: italic; }
+
+article blockquote cite a { overflow-wrap: break-word; color: rgb(170, 170,=
+ 170) !important; }
+
+article blockquote cite::before { content: "=E2=80=94"; padding-right: 0.3e=
+m; padding-left: 0.3em; color: rgb(170, 170, 170); }
+
+@media only screen and (min-width: 992px) {
+  article blockquote { padding-left: 1.5em; border-left-width: 4px; }
+}
+
+.pullquote-right::before, .pullquote-left::before { padding: 0px; border: n=
+one; content: attr(data-pullquote); float: right; width: 45%; margin: 0.5em=
+ 0px 1em 1.5em; position: relative; top: 7px; font-size: 1.4em; line-height=
+: 1.45em; }
+
+.pullquote-left::before { float: left; margin: 0.5em 1.5em 1em 0px; }
+
+.force-wrap, article a, aside.sidebar a { white-space: pre-wrap; overflow-w=
+rap: break-word; }
+
+.group, body > header, body > nav, body > footer, body #content > article, =
+body #content > div > article, body #content > div > section, body div.pagi=
+nation, aside.sidebar, #main, #content, .sidebar { }
+
+.group::after, body > header::after, body > nav::after, body > footer::afte=
+r, body #content > article::after, body #content > div > section::after, bo=
+dy div.pagination::after, #main::after, #content::after, .sidebar::after { =
+content: ""; display: table; clear: both; }
+
+body { text-size-adjust: none; max-width: 1200px; position: relative; margi=
+n: 0px auto; font-size: 110%; }
+
+body > header, body > nav, body > footer, body #content > article, body #co=
+ntent > div > article, body #content > div > section { padding-left: 18px; =
+padding-right: 18px; }
+
+@media only screen and (min-width: 480px) {
+  body > header, body > nav, body > footer, body #content > article, body #=
+content > div > article, body #content > div > section { padding-left: 25px=
+; padding-right: 25px; }
+}
+
+@media only screen and (min-width: 768px) {
+  body > header, body > nav, body > footer, body #content > article, body #=
+content > div > article, body #content > div > section { padding-left: 35px=
+; padding-right: 35px; }
+}
+
+@media only screen and (min-width: 992px) {
+  body > header, body > nav, body > footer, body #content > article, body #=
+content > div > article, body #content > div > section { padding-left: 40px=
+; padding-right: 40px; }
+}
+
+body div.pagination { margin-left: 18px; margin-right: 18px; }
+
+@media only screen and (min-width: 480px) {
+  body div.pagination { margin-left: 25px; margin-right: 25px; }
+}
+
+@media only screen and (min-width: 768px) {
+  body div.pagination { margin-left: 35px; margin-right: 35px; }
+}
+
+@media only screen and (min-width: 992px) {
+  body div.pagination { margin-left: 55px; margin-right: 55px; }
+}
+
+body > header { font-size: 1em; padding-top: 1.5em; padding-bottom: 1.5em; =
+}
+
+#content { overflow: hidden; }
+
+#content > div, #content > article { width: 100%; }
+
+aside.sidebar { float: none; padding: 0px 18px 1px; background-color: rgb(2=
+47, 247, 247); border-top: 1px solid rgb(224, 224, 224); }
+
+.flex-content, article img, article video, article .flash-video, article .c=
+aption-wrapper, aside.sidebar img { max-width: 100%; height: auto; }
+
+.basic-alignment.left, article img.left, article video.left, article .left.=
+flash-video, article .left.caption-wrapper, aside.sidebar img.left { float:=
+ left; margin-right: 1.5em; }
+
+.basic-alignment.right, article img.right, article video.right, article .ri=
+ght.flash-video, article .right.caption-wrapper, aside.sidebar img.right { =
+float: right; margin-left: 1.5em; }
+
+.basic-alignment.center, article img.center, article video.center, article =
+.center.flash-video, article .center.caption-wrapper, aside.sidebar img.cen=
+ter { display: block; margin: 0px auto 1.5em; }
+
+.basic-alignment.left, article img.left, article video.left, article .left.=
+flash-video, article .left.caption-wrapper, aside.sidebar img.left, .basic-=
+alignment.right, article img.right, article video.right, article .right.fla=
+sh-video, article .right.caption-wrapper, aside.sidebar img.right { margin-=
+bottom: 0.8em; }
+
+.toggle-sidebar, .no-sidebar .toggle-sidebar { display: none; }
+
+@media only screen and (min-width: 750px) {
+  body.sidebar-footer aside.sidebar { float: none; width: auto; clear: left=
+; margin: 0px; padding: 0px 35px 1px; background-color: rgb(247, 247, 247);=
+ border-top: 1px solid rgb(234, 234, 234); }
+  body.sidebar-footer aside.sidebar section.odd, body.sidebar-footer aside.=
+sidebar section.even { float: left; width: 48%; }
+  body.sidebar-footer aside.sidebar section.odd { margin-left: 0px; }
+  body.sidebar-footer aside.sidebar section.even { margin-left: 4%; }
+  body.sidebar-footer aside.sidebar.thirds section { width: 30%; margin-lef=
+t: 5%; }
+  body.sidebar-footer aside.sidebar.thirds section.first { margin-left: 0px=
+; clear: both; }
+}
+
+body.sidebar-footer #content { margin-right: 0px; }
+
+body.sidebar-footer .toggle-sidebar { display: none; }
+
+@media only screen and (min-width: 550px) {
+  body > header { font-size: 1em; }
+}
+
+@media only screen and (min-width: 750px) {
+  aside.sidebar { float: none; width: auto; clear: left; margin: 0px; paddi=
+ng: 0px 35px 1px; background-color: rgb(247, 247, 247); border-top: 1px sol=
+id rgb(234, 234, 234); }
+  aside.sidebar section.odd, aside.sidebar section.even { float: left; widt=
+h: 48%; }
+  aside.sidebar section.odd { margin-left: 0px; }
+  aside.sidebar section.even { margin-left: 4%; }
+  aside.sidebar.thirds section { width: 30%; margin-left: 5%; }
+  aside.sidebar.thirds section.first { margin-left: 0px; clear: both; }
+}
+
+@media only screen and (min-width: 768px) {
+  body { text-size-adjust: auto; }
+  body > header { font-size: 1.2em; }
+  #main { padding: 0px; margin: 0px auto; }
+  #content { overflow: visible; margin-right: 240px; position: relative; }
+  .no-sidebar #content { margin-right: 0px; border-right: 0px; }
+  .collapse-sidebar #content { margin-right: 20px; }
+  #content > div, #content > article { padding-top: 17.5px; padding-bottom:=
+ 17.5px; float: left; }
+  aside.sidebar { width: 210px; padding: 0px 15px 15px; background: none; c=
+lear: none; float: left; margin: 0px -100% 0px 0px; }
+  aside.sidebar section { width: auto; margin-left: 0px; }
+  aside.sidebar section.odd, aside.sidebar section.even { float: none; widt=
+h: auto; margin-left: 0px; }
+  .collapse-sidebar aside.sidebar { float: none; width: auto; clear: left; =
+margin: 0px; padding: 0px 35px 1px; background-color: rgb(247, 247, 247); b=
+order-top: 1px solid rgb(234, 234, 234); }
+  .collapse-sidebar aside.sidebar section.odd, .collapse-sidebar aside.side=
+bar section.even { float: left; width: 48%; }
+  .collapse-sidebar aside.sidebar section.odd { margin-left: 0px; }
+  .collapse-sidebar aside.sidebar section.even { margin-left: 4%; }
+  .collapse-sidebar aside.sidebar.thirds section { width: 30%; margin-left:=
+ 5%; }
+  .collapse-sidebar aside.sidebar.thirds section.first { margin-left: 0px; =
+clear: both; }
+}
+
+@media only screen and (min-width: 992px) {
+  body > header { font-size: 1.3em; }
+  #content { margin-right: 320px; }
+  #content > div, #content > article { padding-top: 0.5em; padding-bottom: =
+0.5em; }
+  aside.sidebar { width: 280px; padding: 0em 20px 20px; }
+  .collapse-sidebar aside.sidebar { padding-left: 55px; padding-right: 55px=
+; }
+}
+
+body > header { background: rgb(51, 51, 51); }
+
+body > header h1 { display: inline-block; margin: 0px; }
+
+body > header h1 a, body > header h1 a:visited, body > header h1 a:hover { =
+color: rgb(242, 242, 242); text-decoration: none; }
+
+body > header h2 { margin: 0.2em 0px 0px; font-size: 1em; color: rgb(170, 1=
+70, 170); font-weight: normal; }
+
+body > nav { position: relative; background: linear-gradient(rgb(224, 224, =
+224), rgb(204, 204, 204), rgb(176, 176, 176)); border-top: 1px solid rgb(24=
+2, 242, 242); border-bottom: 1px solid rgb(140, 140, 140); padding-top: 0.3=
+5em; padding-bottom: 0.35em; }
+
+body > nav form { background-clip: padding-box; margin: 0px; padding: 0px; =
+}
+
+body > nav form .search { padding: 0.3em 0.5em 0px; font-size: 0.85em; font=
+-family: "PT Sans", "Helvetica Neue", Arial, sans-serif; line-height: 1.1em=
+; width: 95%; border-radius: 0.5em; background-clip: padding-box; box-shado=
+w: rgb(209, 209, 209) 0px 1px; background-color: rgb(242, 242, 242); border=
+: 1px solid rgb(179, 179, 179); color: rgb(136, 136, 136); }
+
+body > nav form .search:focus { color: rgb(68, 68, 68); border-color: rgb(1=
+28, 177, 223); box-shadow: rgb(128, 177, 223) 0px 0px 4px, rgb(128, 177, 22=
+3) 0px 0px 3px inset; background-color: rgb(255, 255, 255); outline: none; =
+}
+
+body > nav fieldset[role=3D"search"] { float: right; width: 48%; }
+
+body > nav fieldset.mobile-nav { float: left; width: 48%; }
+
+body > nav fieldset.mobile-nav select { width: 100%; font-size: 0.8em; bord=
+er: 1px solid rgb(136, 136, 136); }
+
+body > nav ul { display: none; }
+
+@media only screen and (min-width: 550px) {
+  body > nav { font-size: 0.9em; }
+  body > nav ul { margin: 0px; padding: 0.15em 0px 0px; border: 0px; overfl=
+ow: hidden; float: left; display: block; }
+  body > nav ul li { list-style-image: none; list-style-type: none; margin-=
+left: 0px; white-space: nowrap; display: inline; float: left; padding-left:=
+ 0px; padding-right: 0px; }
+  body > nav ul li:first-child, body > nav ul li.first { padding-left: 0px;=
+ }
+  body > nav ul li:last-child { padding-right: 0px; }
+  body > nav ul li.last { padding-right: 0px; }
+  body > nav ul.subscription { margin-left: 0.8em; float: right; }
+  body > nav ul.subscription li:last-child a { padding-right: 0px; }
+  body > nav ul li { margin: 0px; }
+  body > nav a { color: rgb(107, 107, 107); font-family: "PT Sans", "Helvet=
+ica Neue", Arial, sans-serif; text-shadow: rgb(235, 235, 235) 0px 1px; floa=
+t: left; text-decoration: none; font-size: 1.1em; padding: 0.1em 0px; line-=
+height: 1.5em; }
+  body > nav a:visited { color: rgb(107, 107, 107); }
+  body > nav a:hover { color: rgb(43, 43, 43); }
+  body > nav li + li { border-left: 1px solid rgb(176, 176, 176); margin-le=
+ft: 0.8em; }
+  body > nav li + li a { padding-left: 0.8em; border-left: 1px solid rgb(22=
+2, 222, 222); }
+  body > nav form { float: right; text-align: left; padding-left: 0.8em; wi=
+dth: 175px; }
+  body > nav form .search { width: 93%; font-size: 0.95em; line-height: 1.2=
+em; }
+  body > nav ul[data-subscription$=3D"email"] + form { width: 97px; }
+  body > nav ul[data-subscription$=3D"email"] + form .search { width: 91%; =
+}
+  body > nav fieldset.mobile-nav { display: none; }
+  body > nav fieldset[role=3D"search"] { width: 99%; }
+}
+
+@media only screen and (min-width: 992px) {
+  body > nav form { width: 215px; }
+  body > nav ul[data-subscription$=3D"email"] + form { width: 147px; }
+}
+
+.no-placeholder body > nav .search { background: 0.3em 0.25em no-repeat rgb=
+(242, 242, 242); text-indent: 1.3em; }
+
+@media only screen and (min-width: 550px) {
+  .maskImage body > nav ul[data-subscription$=3D"email"] + form { width: 12=
+3px; }
+}
+
+@media only screen and (min-width: 992px) {
+  .maskImage body > nav ul[data-subscription$=3D"email"] + form { width: 17=
+3px; }
+}
+
+.maskImage ul.subscription { position: relative; top: 0.2em; }
+
+.maskImage ul.subscription li, .maskImage ul.subscription a { border: 0px; =
+padding: 0px; }
+
+.maskImage a[rel=3D"subscribe-rss"] { position: relative; top: 0px; text-in=
+dent: -999999em; background-color: rgb(222, 222, 222); border: 0px; padding=
+: 0px; }
+
+.maskImage a[rel=3D"subscribe-rss"], .maskImage a[rel=3D"subscribe-rss"]::a=
+fter { -webkit-mask-repeat: no-repeat; width: 22px; height: 22px; }
+
+.maskImage a[rel=3D"subscribe-rss"]::after { content: ""; position: absolut=
+e; top: -1px; left: 0px; background-color: rgb(171, 171, 171); }
+
+.maskImage a[rel=3D"subscribe-rss"]:hover::after { background-color: rgb(15=
+8, 158, 158); }
+
+.maskImage a[rel=3D"subscribe-email"] { position: relative; top: 0px; text-=
+indent: -999999em; background-color: rgb(222, 222, 222); border: 0px; paddi=
+ng: 0px; }
+
+.maskImage a[rel=3D"subscribe-email"], .maskImage a[rel=3D"subscribe-email"=
+]::after { -webkit-mask-repeat: no-repeat; width: 28px; height: 22px; }
+
+.maskImage a[rel=3D"subscribe-email"]::after { content: ""; position: absol=
+ute; top: -1px; left: 0px; background-color: rgb(171, 171, 171); }
+
+.maskImage a[rel=3D"subscribe-email"]:hover::after { background-color: rgb(=
+158, 158, 158); }
+
+article { padding-top: 1em; }
+
+article header { position: relative; padding-bottom: 1em; margin-bottom: 1e=
+m; }
+
+article header h1 { margin: 0.15em 0px 0px; }
+
+article header h1 a { text-decoration: none; }
+
+article header h1 a:hover { text-decoration: underline; }
+
+article header p { font-size: 0.9em; color: rgb(170, 170, 170); margin: 0px=
+; }
+
+article header p.meta { text-transform: uppercase; top: 0px; }
+
+@media only screen and (min-width: 768px) {
+  article header { margin-bottom: 1.5em; padding-bottom: 1em; }
+}
+
+.entry-content article h2:first-child, article header + h2 { padding-top: 0=
+px; }
+
+article h2:first-child, article header + h2 { background: none; }
+
+article .feature { padding-top: 0.5em; margin-bottom: 1em; padding-bottom: =
+1em; font-size: 2em; font-style: italic; line-height: 1.3em; }
+
+article img, article video, article .flash-video, article .caption-wrapper =
+{ border-radius: 0.3em; box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px; box-si=
+zing: border-box; border: 0.5em solid rgb(255, 255, 255); }
+
+article img.caption, article video.caption, article .flash-video.caption, a=
+rticle .caption-wrapper.caption { border-radius: 0px; box-sizing: border-bo=
+x; border: 0px; }
+
+article .caption-wrapper { display: inline-block; margin-bottom: 1em; }
+
+article .caption-wrapper .caption-text { background: rgb(255, 255, 255); te=
+xt-align: center; font-size: 0.8em; color: rgb(102, 102, 102); display: blo=
+ck; }
+
+article video, article .flash-video { margin: 0px auto 1.5em; }
+
+article video { display: block; width: 100%; }
+
+article .flash-video > div { position: relative; display: block; padding-bo=
+ttom: 56.25%; padding-top: 1px; height: 0px; overflow: hidden; }
+
+article .flash-video > div iframe, article .flash-video > div object, artic=
+le .flash-video > div embed { position: absolute; top: 0px; left: 0px; widt=
+h: 100%; height: 100%; }
+
+article > footer { padding-bottom: 0.3em; margin-top: 0.3em; }
+
+article > footer p.meta { margin-bottom: 0.8em; font-size: 0.85em; clear: b=
+oth; overflow: hidden; }
+
+#content .blog-index { padding-top: 0px; padding-bottom: 0px; }
+
+#content .blog-index article { padding-top: 2em; font-family: "PT Serif", G=
+eorgia, Times, "Times New Roman", serif; }
+
+#content .blog-index article header { background: none; padding-bottom: 0px=
+; }
+
+#content .blog-index article h1 { font-size: 2.2em; }
+
+#content .blog-index article h1 a { color: inherit; }
+
+#content .blog-index article h1 a:hover { color: rgb(1, 129, 235); }
+
+#content .blog-index a[rel=3D"full-article"] { background: rgb(235, 235, 23=
+5); display: inline-block; padding: 0.4em 0.8em; margin-right: 0.5em; text-=
+decoration: none; color: rgb(102, 102, 102); transition: background-color 0=
+.5s ease 0s; }
+
+#content .blog-index a[rel=3D"full-article"]:hover { background: rgb(1, 129=
+, 235); text-shadow: none; color: rgb(248, 248, 248); }
+
+#content .blog-index footer { margin-top: 1em; }
+
+.separator, article > footer .byline + time::before, article > footer time =
++ time::before, article > footer .comments::before, article > footer .bylin=
+e ~ .categories::before { content: "=E2=80=A2"; padding: 0px 0.4em 0px 0.2e=
+m; display: inline-block; }
+
+#content div.pagination { text-align: center; font-size: 0.95em; position: =
+relative; padding-top: 1.5em; padding-bottom: 1.5em; }
+
+#content div.pagination a { text-decoration: none; color: rgb(0, 0, 0); pad=
+ding-left: 0.4em; }
+
+#content div.pagination a:hover { color: rgb(1, 129, 235); }
+
+p.meta + .sharing { padding-top: 1em; padding-left: 0px; }
+
+#fb-root { display: none; }
+
+pre { background: left top rgb(0, 43, 54); border-radius: 0em; line-height:=
+ 1.45em; margin-bottom: 0.8em; padding: 0em; color: rgb(147, 161, 161); fon=
+t-size: 80%; }
+
+h3.filename + pre { border-top-left-radius: 0px; border-top-right-radius: 0=
+px; }
+
+p code, li code { display: inline-block; background: rgb(255, 255, 255); fo=
+nt-size: 0.8em; line-height: 1.5em; color: rgb(85, 85, 85); border: 1px sol=
+id rgb(221, 221, 221); border-radius: 0.4em; padding: 0px 0.3em; margin: -1=
+px 0px; }
+
+p pre code, li pre code { background: none; border: none; color: rgb(147, 1=
+61, 161); font-size: 1em !important; }
+
+div.highlight > pre > code, pre > code { overflow-y: hidden; display: block=
+; }
+
+td > div.highlight > pre > code, div.linenodiv > pre > code { overflow: scr=
+oll hidden; display: inline; }
+
+pre::-webkit-scrollbar, .highlighttable::-webkit-scrollbar, .gist-highlight=
+table::-webkit-scrollbar { height: 0.5em; background: rgba(255, 255, 255, 0=
+.15); }
+
+pre::-webkit-scrollbar-thumb:horizontal, .highlighttable::-webkit-scrollbar=
+-thumb:horizontal, .gist-highlighttable::-webkit-scrollbar-thumb:horizontal=
+ { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
+
+figure.code { background: none; padding: 0px; border: 0px; margin-bottom: 0=
+.8em; }
+
+figure.code pre { margin-bottom: 0px; }
+
+figure.code figcaption { position: relative; }
+
+figure.code .highlighttable { margin-bottom: 0px; table-layout: fixed; widt=
+h: 100%; }
+
+.code-title, h3.filename, figure.code figcaption { text-align: center; line=
+-height: 2em; text-shadow: rgb(203, 204, 204) 0px 1px 0px; color: rgb(71, 7=
+1, 71); font-weight: normal; margin-bottom: 0px; border-top-left-radius: 5p=
+x; border-top-right-radius: 5px; background: center top repeat-x rgb(170, 1=
+70, 170); border-width: 1px 1px 0px; border-top-style: solid; border-right-=
+style: solid; border-left-style: solid; border-image: initial; border-top-c=
+olor: rgb(203, 203, 203); border-left-color: rgb(165, 165, 165); border-rig=
+ht-color: rgb(165, 165, 165); border-bottom-style: initial; border-bottom-c=
+olor: initial; font-size: 90%; }
+
+.download-source, figure.code figcaption a { position: absolute; right: 0.8=
+em; text-decoration: none; z-index: 1; font-size: 13px; text-shadow: rgb(20=
+3, 204, 204) 0px 1px 0px; padding-left: 3em; color: rgb(102, 102, 102) !imp=
+ortant; }
+
+.download-source:hover, figure.code figcaption a:hover { text-decoration: u=
+nderline; }
+
+#archive #content > div, #archive #content > div > article { padding-top: 0=
+px; }
+
+#blog-archives { color: rgb(170, 170, 170); }
+
+#blog-archives article { padding: 1em 0px; position: relative; }
+
+#blog-archives article:last-child { background: none; }
+
+#blog-archives article footer { padding: 0px; margin: 0px; }
+
+#blog-archives h1 { color: rgb(34, 34, 34); margin-bottom: 0.3em; }
+
+#blog-archives h2 { display: none; }
+
+#blog-archives h1 { font-size: 1.5em; }
+
+#blog-archives h1 a { text-decoration: none; color: inherit; font-weight: n=
+ormal; display: inline-block; }
+
+#blog-archives h1 a:hover { text-decoration: underline; }
+
+#blog-archives h1 a:hover { color: rgb(1, 129, 235); }
+
+#blog-archives a.category, #blog-archives time { color: rgb(170, 170, 170);=
+ }
+
+#blog-archives .entry-content { display: none; }
+
+#blog-archives time { font-size: 0.9em; line-height: 1.2em; }
+
+#blog-archives time .month, #blog-archives time .day { display: inline-bloc=
+k; }
+
+#blog-archives time .month { text-transform: uppercase; }
+
+#blog-archives p { margin-bottom: 1em; }
+
+#blog-archives a, #blog-archives .entry-content a { color: inherit; }
+
+#blog-archives a:hover, #blog-archives .entry-content a:hover { color: rgb(=
+1, 129, 235); }
+
+#blog-archives a:hover { color: rgb(1, 129, 235); }
+
+@media only screen and (min-width: 550px) {
+  #blog-archives article { margin-left: 5em; }
+  #blog-archives h2 { margin-bottom: 0.3em; font-weight: normal; display: i=
+nline-block; position: relative; top: -1px; float: left; margin-top: 1.7em;=
+ }
+  #blog-archives time { position: absolute; text-align: right; left: 0em; t=
+op: 3em; font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif; }
+  #blog-archives article { padding-left: 4.5em; padding-bottom: 0.7em; }
+  #blog-archives a.category { line-height: 1.1em; }
+}
+
+#content > .category article { margin-left: 0px; padding-left: 6.8em; }
+
+#content > .category .year { display: inline; }
+
+.side-shadow-border, aside.sidebar section h1, aside.sidebar li { box-shado=
+w: rgb(255, 255, 255) 0px 1px; }
+
+aside.sidebar { overflow: hidden; color: rgb(75, 75, 75); text-shadow: rgb(=
+255, 255, 255) 0px 1px; }
+
+aside.sidebar section { font-size: 0.9em; line-height: 1.4em; margin-bottom=
+: 0.5em; }
+
+aside.sidebar section h1 { margin: 0.5em 0px 0px; padding-bottom: 0.2em; bo=
+rder-bottom: 1px solid rgb(224, 224, 224); }
+
+aside.sidebar section h1 + p { padding-top: 0.4em; }
+
+aside.sidebar img { border-radius: 0.3em; box-shadow: rgba(0, 0, 0, 0.15) 0=
+px 1px 4px; box-sizing: border-box; border: 0.3em solid rgb(255, 255, 255);=
+ }
+
+aside.sidebar ul { margin-bottom: 0.5em; margin-left: 0px; }
+
+aside.sidebar li { list-style: none; padding: 0.5em 0px; margin: 0px; borde=
+r-bottom: 1px solid rgb(224, 224, 224); }
+
+aside.sidebar li p:last-child { margin-bottom: 0px; }
+
+aside.sidebar a { color: inherit; transition: color 0.5s ease 0s; }
+
+aside.sidebar:hover a { color: rgb(34, 34, 34); }
+
+aside.sidebar:hover a:hover { color: rgb(1, 129, 235); }
+
+@media only screen and (min-width: 768px) {
+  .toggle-sidebar { outline: none; position: absolute; right: -10px; top: 0=
+px; bottom: 0px; display: inline-block; text-decoration: none; color: rgb(2=
+06, 206, 206); width: 9px; cursor: pointer; }
+  .toggle-sidebar:hover { background: -webkit-linear-gradient(left, rgba(22=
+4, 224, 224, 0.5), rgba(224, 224, 224, 0)); }
+  .toggle-sidebar::after { position: absolute; right: -11px; top: 0px; widt=
+h: 20px; font-size: 1.2em; line-height: 1.1em; padding-bottom: 0.15em; bord=
+er-bottom-right-radius: 0.3em; text-align: center; border-bottom: 1px solid=
+ rgb(224, 224, 224); border-right: 1px solid rgb(224, 224, 224); content: "=
+=C2=BB"; text-indent: -1px; }
+  .collapse-sidebar .toggle-sidebar { text-indent: 0px; right: -20px; width=
+: 19px; }
+  .collapse-sidebar .toggle-sidebar:hover { background: rgb(233, 233, 233);=
+ }
+  .collapse-sidebar .toggle-sidebar::after { text-shadow: rgb(255, 255, 255=
+) 0px 1px; content: "=C2=AB"; left: 0px; right: 0px; text-align: center; te=
+xt-indent: 0px; border: 0px; background: none; }
+}
+
+body > footer { font-size: 1em; color: rgb(136, 136, 136); text-shadow: rgb=
+(217, 217, 217) 0px 1px; background: linear-gradient(rgb(224, 224, 224), rg=
+b(204, 204, 204), rgb(176, 176, 176)); border-top: 1px solid rgb(242, 242, =
+242); position: relative; padding-top: 1em; padding-bottom: 1em; margin-bot=
+tom: 3em; border-bottom-left-radius: 0.4em; border-bottom-right-radius: 0.4=
+em; z-index: 1; }
+
+body > footer a { color: rgb(107, 107, 107); }
+
+body > footer a:visited { color: rgb(107, 107, 107); }
+
+body > footer a:hover { color: rgb(72, 72, 72); }
+
+body > footer p:last-child { margin-bottom: 0px; }
+
+table, th, td { border: 1px solid black; padding: 3px; }
+
+th { font-weight: bold; text-align: center; }
+
+.label { display: inline; padding: 0.2em 0.6em 0.3em; font-size: 80%; font-=
+weight: bold; line-height: 1; color: rgb(255, 255, 255); text-align: center=
+; vertical-align: baseline; border-radius: 0.25em; }
+
+a.label:hover, a.label:focus { color: rgb(255, 255, 255); text-decoration: =
+none; cursor: pointer; }
+
+.label:empty { display: none; }
+
+a.label:visited { color: rgb(255, 255, 255); }
+
+.label { margin: 0px 0.25em; background-color: rgb(49, 49, 49); }
+
+.posts a.label, .post-date a.label { color: rgb(255, 255, 255); text-decora=
+tion: none; cursor: pointer; }
+
+.linenodiv { background-color: rgb(0, 43, 54) !important; }
+
+pre span { font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Co=
+urier New", monospace; }
+
+td.code { width: 95%; }
+
+div.codewrapper { overflow: auto hidden; background-color: rgb(0, 43, 54); =
+}
+
+div.entry-content > div.highlight { border-color: rgb(0, 43, 54); overflow:=
+ auto hidden; margin-bottom: 0.4em; }
+
+div.entry-content > h1 { font-size: 1.7em; }
+
+div.entry-content > h2 { font-size: 1.5em; }
+
+div.entry-content > h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5em; margin-t=
+op: 0.8em; }
+
+.sidebar { padding: 2rem 1rem; color: rgba(255, 255, 255, 0.5); background-=
+color: rgb(32, 32, 32); }
+
+@media (min-width: 48em) {
+  .sidebar-sticky { position: absolute; right: 1rem; bottom: 1rem; left: 1r=
+em; }
+}
+
+.gist .gist-meta { border-top-left-radius: 0px; border-top-right-radius: 0p=
+x; font-size: 90% !important; color: rgb(88, 96, 105) !important; border: 1=
+px solid rgb(165, 165, 165) !important; background: center top repeat-x rgb=
+(170, 170, 170) !important; border-bottom-left-radius: 5px !important; bord=
+er-bottom-right-radius: 5px !important; }
+
+.gist .blob-num { font-size: 0.938em !important; }
+
+.gist .highlight, .gist .blob-code-inner { font-size: 0.938em !important; f=
+ont-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", =
+monospace !important; line-height: 1.25em !important; }
+
+.gist .pl-c1, .gist .pl-s .pl-v { color: rgb(113, 158, 7) !important; }
+
+.gist .gist-meta { background-color: rgb(7, 54, 66) !important; color: rgb(=
+147, 161, 161) !important; }
+
+.gist .gist-meta a { color: rgb(38, 139, 210) !important; }
+
+.gist .gist-data, .gist .highlight { background-color: rgb(0, 43, 54) !impo=
+rtant; color: rgb(147, 161, 161) !important; }
+
+.gist .pl-smi, .gist .pl-s .pl-s1, .gist .blob-code-inner, .gist .blob-num =
+{ color: rgb(147, 161, 161) !important; }
+
+.gist .pl-k { color: rgb(113, 158, 7) !important; }
+
+.gist .pl-e, .gist .pl-en { color: rgb(203, 75, 22) !important; }
+
+.gist .pl-s, .gist .pl-pds, .gist .pl-s .pl-pse .pl-s1, .gist .pl-sr, .gist=
+ .pl-sr .pl-cce, .gist .pl-sr .pl-sre, .gist .pl-sr .pl-sra { color: rgb(42=
+, 161, 152) !important; }
+
+.gist .pl-s, .gist .pl-pds, .gist .pl-s .pl-pse .pl-s1, .gist .pl-sr, .gist=
+ .pl-sr .pl-cce, .gist .pl-sr .pl-sre, .gist .pl-sr .pl-sra, .gist .pl-e, .=
+gist .pl-en, .gist .pl-k, .gist .pl-smi, .gist .pl-s .pl-s1, .gist .blob-co=
+de-inner, .gist .blob-num, .gist .gist-data, .gist .highlight, .gist .pl-c1=
+, .gist .pl-s .pl-v, .gist .pl-c { font-family: Menlo, Monaco, "Andale Mono=
+", "lucida console", "Courier New", monospace !important; }
+
+figure figcaption { background: rgb(255, 255, 255); text-align: center; fon=
+t-size: 1em; color: rgb(102, 102, 102); display: block; }
+
+figure { color: rgb(102, 102, 102); }
+
+figure a { color: rgb(102, 102, 102); text-align: center; text-decoration: =
+none; display: inline-block; white-space: nowrap; }
+------MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://nickdesaulniers.github.io/css/custom.css
+
+@charset "utf-8";
+
+html { background: url("/images/line-tile.png") rgb(27, 168, 95); }
+
+body > header { background: rgb(38, 38, 38); }
+
+body > nav { background: url("/images/noise.png?1494914961"), linear-gradie=
+nt(rgb(33, 203, 115), rgb(27, 168, 95), rgb(19, 120, 68)); border-bottom: 1=
+px solid rgb(9, 58, 33); border-top: 1px solid rgb(50, 222, 133); }
+
+body > nav a { color: rgb(248, 248, 248); text-shadow: rgb(36, 220, 125) 0p=
+x 1px; }
+
+body > nav a:visited { color: rgb(248, 248, 248); }
+
+body > nav a:hover { color: rgb(184, 184, 184); }
+
+figure.float_right { float: right; padding-left: 15px; }
+
+figure.float_left { float: left; padding-right: 15px; }
+
+figure.float_left > img { width: 130px; }
+
+div.entry-content > p > img { display: block; margin: 0px auto; }
+------MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://nickdesaulniers.github.io/images/line-tile.png
+
+iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAb1BMVEUAAAAdHR0eHR4eHh4eHh8f
+Hx8gICAhISEiISIiIiIjIyMkJCQlJCUlJSUmJSYmJiYnJycoKCgpKCkqKisqKywrKywsKy0sLC0t
+LC4tLS4tLS8uLi8uLjAvLzAwLzEAAAAAAAAAAAAAAAAAAAAAAADZ8HsjAAAAJXRSTlMAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQMGCw4PcEyLoAAAAZdJREFUaN7tmFlvwkAQg4cSoClH
+QsvRAmkyXv7/b6w3BFH15EjmAc2DX2xZn6IIsmvZV6KhrAWIQKUMKhXt6hhFG7V9jC5sXNO5uCEm
+FDWgSDCgXPsuL2qICUUNKBIMKLf8xs5uiAkFBpQb/5XOa8j9UGBAaeFr8X9DTCilAUWCAaWlr/jf
+DTGhVAYU2RtQWjxd/d4QE4rFs8jegNLyqffnhphQ1IAiwYDSwW3ke0NMKGpA6eb+9qUh90OBAaW7
+e/WnhphQSgOKBANKt3vH6ZhqQCkNKBIMKN3vUKdjascUg03tdEz15c6XO1/ufLnz5c6XO1/ufLnz
+5c6XO1/ufLnz5c6XO1/ufLnz5c6Xu+6Xu4QaAekQmjBIGPSioq1IGPVpP0Q1dkr1gMEjNKXdpz2g
+htFW9BlFO20aA5kzeKbGQJ5DMwY5gwk1pZ0rsgx4oj2hprTntV03ZrNDY0w7o6I9YYNRtKdNQ6od
+gw31AhQFtGDwymBNFbS3itUaWNB+o5a0l7RjtKD9Dt01jV3T2Ci2WyDaq0PjAzgEkrGstE8ZAAAA
+AElFTkSuQmCC
+
+------MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://nickdesaulniers.github.io/images/noise.png?1494914961
+
+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
+DWz8AAAAAElFTkSuQmCC
+
+------MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://nickdesaulniers.github.io/css/fork-awesome.min.css
+
+@charset "utf-8";
+
+@font-face { font-family: ForkAwesome; src: url("../fonts/forkawesome-webfo=
+nt.woff2?v=3D1.0.11") format("woff2"), url("../fonts/forkawesome-webfont.wo=
+ff?v=3D1.0.11") format("woff"), url("../fonts/forkawesome-webfont.ttf?v=3D1=
+.0.11") format("truetype"); font-weight: 400; font-style: normal; }
+
+.fa { display: inline-block; font-style: normal; font-variant: normal; font=
+-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; f=
+ont-variation-settings: normal; font-weight: normal; font-stretch: normal; =
+line-height: 1; font-family: ForkAwesome; font-size: inherit; text-renderin=
+g: auto; -webkit-font-smoothing: antialiased; }
+
+.fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+
+.fa-2x { font-size: 2em; }
+
+.fa-3x { font-size: 3em; }
+
+.fa-4x { font-size: 4em; }
+
+.fa-5x { font-size: 5em; }
+
+.fa-fw { width: 1.28571em; text-align: center; }
+
+.fa-ul { padding-left: 0px; margin-left: 2.14286em; list-style-type: none; =
+}
+
+.fa-ul > li { position: relative; }
+
+.fa-li { position: absolute; left: -2.14286em; width: 2.14286em; top: 0.142=
+857em; text-align: center; }
+
+.fa-li.fa-lg { left: -1.85714em; }
+
+.fa-border { padding: 0.2em 0.25em 0.15em; border: 0.08em solid rgb(238, 23=
+8, 238); border-radius: 0.1em; }
+
+.fa-pull-left { float: left; }
+
+.fa-pull-right { float: right; }
+
+.fa.fa-pull-left { margin-right: 0.3em; }
+
+.fa.fa-pull-right { margin-left: 0.3em; }
+
+.pull-right { float: right; }
+
+.pull-left { float: left; }
+
+.fa.pull-left { margin-right: 0.3em; }
+
+.fa.pull-right { margin-left: 0.3em; }
+
+.fa-spin { animation: 2s linear 0s infinite normal none running fa-spin; }
+
+.fa-pulse { animation: 1s steps(8) 0s infinite normal none running fa-spin;=
+ }
+
+@-webkit-keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+@keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+.fa-rotate-90 { transform: rotate(90deg); }
+
+.fa-rotate-180 { transform: rotate(180deg); }
+
+.fa-rotate-270 { transform: rotate(270deg); }
+
+.fa-flip-horizontal { transform: scale(-1, 1); }
+
+.fa-flip-vertical { transform: scale(1, -1); }
+
+:root .fa-flip-horizontal, :root .fa-flip-vertical, :root .fa-rotate-180, :=
+root .fa-rotate-270, :root .fa-rotate-90 { filter: none; }
+
+.fa-stack { position: relative; display: inline-block; width: 2em; height: =
+2em; line-height: 2em; vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x { position: absolute; left: 0px; width: 100%; te=
+xt-align: center; }
+
+.fa-stack-1x { line-height: inherit; }
+
+.fa-stack-2x { font-size: 2em; }
+
+.fa-inverse { color: rgb(255, 255, 255); }
+
+.fa-glass::before { content: "=EF=80=80"; }
+
+.fa-music::before { content: "=EF=80=81"; }
+
+.fa-search::before { content: "=EF=80=82"; }
+
+.fa-envelope-o::before { content: "=EF=80=83"; }
+
+.fa-heart::before { content: "=EF=80=84"; }
+
+.fa-star::before { content: "=EF=80=85"; }
+
+.fa-star-o::before { content: "=EF=80=86"; }
+
+.fa-user::before { content: "=EF=80=87"; }
+
+.fa-film::before { content: "=EF=80=88"; }
+
+.fa-th-large::before { content: "=EF=80=89"; }
+
+.fa-th::before { content: "=EF=80=8A"; }
+
+.fa-th-list::before { content: "=EF=80=8B"; }
+
+.fa-check::before { content: "=EF=80=8C"; }
+
+.fa-close::before, .fa-remove::before, .fa-times::before { content: "=EF=80=
+=8D"; }
+
+.fa-search-plus::before { content: "=EF=80=8E"; }
+
+.fa-search-minus::before { content: "=EF=80=90"; }
+
+.fa-power-off::before { content: "=EF=80=91"; }
+
+.fa-signal::before { content: "=EF=80=92"; }
+
+.fa-cog::before, .fa-gear::before { content: "=EF=80=93"; }
+
+.fa-trash-o::before { content: "=EF=80=94"; }
+
+.fa-home::before { content: "=EF=80=95"; }
+
+.fa-file-o::before { content: "=EF=80=96"; }
+
+.fa-clock-o::before { content: "=EF=80=97"; }
+
+.fa-road::before { content: "=EF=80=98"; }
+
+.fa-download::before { content: "=EF=80=99"; }
+
+.fa-arrow-circle-o-down::before { content: "=EF=80=9A"; }
+
+.fa-arrow-circle-o-up::before { content: "=EF=80=9B"; }
+
+.fa-inbox::before { content: "=EF=80=9C"; }
+
+.fa-play-circle-o::before { content: "=EF=80=9D"; }
+
+.fa-repeat::before, .fa-rotate-right::before { content: "=EF=80=9E"; }
+
+.fa-refresh::before { content: "=EF=80=A1"; }
+
+.fa-list-alt::before { content: "=EF=80=A2"; }
+
+.fa-lock::before { content: "=EF=80=A3"; }
+
+.fa-flag::before { content: "=EF=80=A4"; }
+
+.fa-headphones::before { content: "=EF=80=A5"; }
+
+.fa-volume-off::before { content: "=EF=80=A6"; }
+
+.fa-volume-down::before { content: "=EF=80=A7"; }
+
+.fa-volume-up::before { content: "=EF=80=A8"; }
+
+.fa-qrcode::before { content: "=EF=80=A9"; }
+
+.fa-barcode::before { content: "=EF=80=AA"; }
+
+.fa-tag::before { content: "=EF=80=AB"; }
+
+.fa-tags::before { content: "=EF=80=AC"; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.fa-bookmark::before { content: "=EF=80=AE"; }
+
+.fa-print::before { content: "=EF=80=AF"; }
+
+.fa-camera::before { content: "=EF=80=B0"; }
+
+.fa-font::before { content: "=EF=80=B1"; }
+
+.fa-bold::before { content: "=EF=80=B2"; }
+
+.fa-italic::before { content: "=EF=80=B3"; }
+
+.fa-text-height::before { content: "=EF=80=B4"; }
+
+.fa-text-width::before { content: "=EF=80=B5"; }
+
+.fa-align-left::before { content: "=EF=80=B6"; }
+
+.fa-align-center::before { content: "=EF=80=B7"; }
+
+.fa-align-right::before { content: "=EF=80=B8"; }
+
+.fa-align-justify::before { content: "=EF=80=B9"; }
+
+.fa-list::before { content: "=EF=80=BA"; }
+
+.fa-dedent::before, .fa-outdent::before { content: "=EF=80=BB"; }
+
+.fa-indent::before { content: "=EF=80=BC"; }
+
+.fa-video-camera::before { content: "=EF=80=BD"; }
+
+.fa-image::before, .fa-photo::before, .fa-picture-o::before { content: "=EF=
+=80=BE"; }
+
+.fa-pencil::before { content: "=EF=81=80"; }
+
+.fa-map-marker::before { content: "=EF=81=81"; }
+
+.fa-adjust::before { content: "=EF=81=82"; }
+
+.fa-tint::before { content: "=EF=81=83"; }
+
+.fa-edit::before, .fa-pencil-square-o::before { content: "=EF=81=84"; }
+
+.fa-share-square-o::before { content: "=EF=81=85"; }
+
+.fa-check-square-o::before { content: "=EF=81=86"; }
+
+.fa-arrows::before { content: "=EF=81=87"; }
+
+.fa-step-backward::before { content: "=EF=81=88"; }
+
+.fa-fast-backward::before { content: "=EF=81=89"; }
+
+.fa-backward::before { content: "=EF=81=8A"; }
+
+.fa-play::before { content: "=EF=81=8B"; }
+
+.fa-pause::before { content: "=EF=81=8C"; }
+
+.fa-stop::before { content: "=EF=81=8D"; }
+
+.fa-forward::before { content: "=EF=81=8E"; }
+
+.fa-fast-forward::before { content: "=EF=81=90"; }
+
+.fa-step-forward::before { content: "=EF=81=91"; }
+
+.fa-eject::before { content: "=EF=81=92"; }
+
+.fa-chevron-left::before { content: "=EF=81=93"; }
+
+.fa-chevron-right::before { content: "=EF=81=94"; }
+
+.fa-plus-circle::before { content: "=EF=81=95"; }
+
+.fa-minus-circle::before { content: "=EF=81=96"; }
+
+.fa-times-circle::before { content: "=EF=81=97"; }
+
+.fa-check-circle::before { content: "=EF=81=98"; }
+
+.fa-question-circle::before { content: "=EF=81=99"; }
+
+.fa-info-circle::before { content: "=EF=81=9A"; }
+
+.fa-crosshairs::before { content: "=EF=81=9B"; }
+
+.fa-times-circle-o::before { content: "=EF=81=9C"; }
+
+.fa-check-circle-o::before { content: "=EF=81=9D"; }
+
+.fa-ban::before { content: "=EF=81=9E"; }
+
+.fa-arrow-left::before { content: "=EF=81=A0"; }
+
+.fa-arrow-right::before { content: "=EF=81=A1"; }
+
+.fa-arrow-up::before { content: "=EF=81=A2"; }
+
+.fa-arrow-down::before { content: "=EF=81=A3"; }
+
+.fa-mail-forward::before, .fa-share::before { content: "=EF=81=A4"; }
+
+.fa-expand::before { content: "=EF=81=A5"; }
+
+.fa-compress::before { content: "=EF=81=A6"; }
+
+.fa-plus::before { content: "=EF=81=A7"; }
+
+.fa-minus::before { content: "=EF=81=A8"; }
+
+.fa-asterisk::before { content: "=EF=81=A9"; }
+
+.fa-exclamation-circle::before { content: "=EF=81=AA"; }
+
+.fa-gift::before { content: "=EF=81=AB"; }
+
+.fa-leaf::before { content: "=EF=81=AC"; }
+
+.fa-fire::before { content: "=EF=81=AD"; }
+
+.fa-eye::before { content: "=EF=81=AE"; }
+
+.fa-eye-slash::before { content: "=EF=81=B0"; }
+
+.fa-exclamation-triangle::before, .fa-warning::before { content: "=EF=81=B1=
+"; }
+
+.fa-plane::before { content: "=EF=81=B2"; }
+
+.fa-calendar::before { content: "=EF=81=B3"; }
+
+.fa-random::before { content: "=EF=81=B4"; }
+
+.fa-comment::before { content: "=EF=81=B5"; }
+
+.fa-magnet::before { content: "=EF=81=B6"; }
+
+.fa-chevron-up::before { content: "=EF=81=B7"; }
+
+.fa-chevron-down::before { content: "=EF=81=B8"; }
+
+.fa-retweet::before { content: "=EF=81=B9"; }
+
+.fa-shopping-cart::before { content: "=EF=81=BA"; }
+
+.fa-folder::before { content: "=EF=81=BB"; }
+
+.fa-folder-open::before { content: "=EF=81=BC"; }
+
+.fa-arrows-v::before { content: "=EF=81=BD"; }
+
+.fa-arrows-h::before { content: "=EF=81=BE"; }
+
+.fa-bar-chart-o::before, .fa-bar-chart::before { content: "=EF=82=80"; }
+
+.fa-twitter-square::before { content: "=EF=82=81"; }
+
+.fa-facebook-square::before { content: "=EF=82=82"; }
+
+.fa-camera-retro::before { content: "=EF=82=83"; }
+
+.fa-key::before { content: "=EF=82=84"; }
+
+.fa-cogs::before, .fa-gears::before { content: "=EF=82=85"; }
+
+.fa-comments::before { content: "=EF=82=86"; }
+
+.fa-thumbs-o-up::before { content: "=EF=82=87"; }
+
+.fa-thumbs-o-down::before { content: "=EF=82=88"; }
+
+.fa-star-half::before { content: "=EF=82=89"; }
+
+.fa-heart-o::before { content: "=EF=82=8A"; }
+
+.fa-sign-out::before { content: "=EF=82=8B"; }
+
+.fa-linkedin-square::before { content: "=EF=82=8C"; }
+
+.fa-thumb-tack::before { content: "=EF=82=8D"; }
+
+.fa-external-link::before { content: "=EF=82=8E"; }
+
+.fa-sign-in::before { content: "=EF=82=90"; }
+
+.fa-trophy::before { content: "=EF=82=91"; }
+
+.fa-github-square::before { content: "=EF=82=92"; }
+
+.fa-upload::before { content: "=EF=82=93"; }
+
+.fa-lemon-o::before { content: "=EF=82=94"; }
+
+.fa-phone::before { content: "=EF=82=95"; }
+
+.fa-square-o::before { content: "=EF=82=96"; }
+
+.fa-bookmark-o::before { content: "=EF=82=97"; }
+
+.fa-phone-square::before { content: "=EF=82=98"; }
+
+.fa-twitter::before { content: "=EF=82=99"; }
+
+.fa-facebook-f::before, .fa-facebook::before { content: "=EF=82=9A"; }
+
+.fa-github::before { content: "=EF=82=9B"; }
+
+.fa-unlock::before { content: "=EF=82=9C"; }
+
+.fa-credit-card::before { content: "=EF=82=9D"; }
+
+.fa-feed::before, .fa-rss::before { content: "=EF=82=9E"; }
+
+.fa-hdd-o::before { content: "=EF=82=A0"; }
+
+.fa-bullhorn::before { content: "=EF=82=A1"; }
+
+.fa-bell::before { content: "=EF=83=B3"; }
+
+.fa-certificate::before { content: "=EF=82=A3"; }
+
+.fa-hand-o-right::before { content: "=EF=82=A4"; }
+
+.fa-hand-o-left::before { content: "=EF=82=A5"; }
+
+.fa-hand-o-up::before { content: "=EF=82=A6"; }
+
+.fa-hand-o-down::before { content: "=EF=82=A7"; }
+
+.fa-arrow-circle-left::before { content: "=EF=82=A8"; }
+
+.fa-arrow-circle-right::before { content: "=EF=82=A9"; }
+
+.fa-arrow-circle-up::before { content: "=EF=82=AA"; }
+
+.fa-arrow-circle-down::before { content: "=EF=82=AB"; }
+
+.fa-globe::before { content: "=EF=82=AC"; }
+
+.fa-wrench::before { content: "=EF=82=AD"; }
+
+.fa-tasks::before { content: "=EF=82=AE"; }
+
+.fa-filter::before { content: "=EF=82=B0"; }
+
+.fa-briefcase::before { content: "=EF=82=B1"; }
+
+.fa-arrows-alt::before { content: "=EF=82=B2"; }
+
+.fa-community::before, .fa-group::before, .fa-users::before { content: "=EF=
+=83=80"; }
+
+.fa-chain::before, .fa-link::before { content: "=EF=83=81"; }
+
+.fa-cloud::before { content: "=EF=83=82"; }
+
+.fa-flask::before { content: "=EF=83=83"; }
+
+.fa-cut::before, .fa-scissors::before { content: "=EF=83=84"; }
+
+.fa-copy::before, .fa-files-o::before { content: "=EF=83=85"; }
+
+.fa-paperclip::before { content: "=EF=83=86"; }
+
+.fa-floppy-o::before, .fa-save::before { content: "=EF=83=87"; }
+
+.fa-square::before { content: "=EF=83=88"; }
+
+.fa-bars::before, .fa-navicon::before, .fa-reorder::before { content: "=EF=
+=83=89"; }
+
+.fa-list-ul::before { content: "=EF=83=8A"; }
+
+.fa-list-ol::before { content: "=EF=83=8B"; }
+
+.fa-strikethrough::before { content: "=EF=83=8C"; }
+
+.fa-underline::before { content: "=EF=83=8D"; }
+
+.fa-table::before { content: "=EF=83=8E"; }
+
+.fa-magic::before { content: "=EF=83=90"; }
+
+.fa-truck::before { content: "=EF=83=91"; }
+
+.fa-pinterest::before { content: "=EF=83=92"; }
+
+.fa-pinterest-square::before { content: "=EF=83=93"; }
+
+.fa-google-plus-square::before { content: "=EF=83=94"; }
+
+.fa-google-plus::before { content: "=EF=83=95"; }
+
+.fa-money::before { content: "=EF=83=96"; }
+
+.fa-caret-down::before { content: "=EF=83=97"; }
+
+.fa-caret-up::before { content: "=EF=83=98"; }
+
+.fa-caret-left::before { content: "=EF=83=99"; }
+
+.fa-caret-right::before { content: "=EF=83=9A"; }
+
+.fa-columns::before { content: "=EF=83=9B"; }
+
+.fa-sort::before, .fa-unsorted::before { content: "=EF=83=9C"; }
+
+.fa-sort-desc::before, .fa-sort-down::before { content: "=EF=83=9D"; }
+
+.fa-sort-asc::before, .fa-sort-up::before { content: "=EF=83=9E"; }
+
+.fa-envelope::before { content: "=EF=83=A0"; }
+
+.fa-linkedin::before { content: "=EF=83=A1"; }
+
+.fa-rotate-left::before, .fa-undo::before { content: "=EF=83=A2"; }
+
+.fa-gavel::before, .fa-legal::before { content: "=EF=83=A3"; }
+
+.fa-dashboard::before, .fa-tachometer::before { content: "=EF=83=A4"; }
+
+.fa-comment-o::before { content: "=EF=83=A5"; }
+
+.fa-comments-o::before { content: "=EF=83=A6"; }
+
+.fa-bolt::before, .fa-flash::before { content: "=EF=83=A7"; }
+
+.fa-sitemap::before { content: "=EF=83=A8"; }
+
+.fa-umbrella::before { content: "=EF=83=A9"; }
+
+.fa-clipboard::before, .fa-paste::before { content: "=EF=83=AA"; }
+
+.fa-lightbulb-o::before { content: "=EF=83=AB"; }
+
+.fa-exchange::before { content: "=EF=83=AC"; }
+
+.fa-cloud-download::before { content: "=EF=83=AD"; }
+
+.fa-cloud-upload::before { content: "=EF=83=AE"; }
+
+.fa-user-md::before { content: "=EF=83=B0"; }
+
+.fa-stethoscope::before { content: "=EF=83=B1"; }
+
+.fa-suitcase::before { content: "=EF=83=B2"; }
+
+.fa-bell-o::before { content: "=EF=82=A2"; }
+
+.fa-coffee::before { content: "=EF=83=B4"; }
+
+.fa-cutlery::before { content: "=EF=83=B5"; }
+
+.fa-file-text-o::before { content: "=EF=83=B6"; }
+
+.fa-building-o::before { content: "=EF=83=B7"; }
+
+.fa-hospital-o::before { content: "=EF=83=B8"; }
+
+.fa-ambulance::before { content: "=EF=83=B9"; }
+
+.fa-medkit::before { content: "=EF=83=BA"; }
+
+.fa-fighter-jet::before { content: "=EF=83=BB"; }
+
+.fa-beer::before { content: "=EF=83=BC"; }
+
+.fa-h-square::before { content: "=EF=83=BD"; }
+
+.fa-plus-square::before { content: "=EF=83=BE"; }
+
+.fa-angle-double-left::before { content: "=EF=84=80"; }
+
+.fa-angle-double-right::before { content: "=EF=84=81"; }
+
+.fa-angle-double-up::before { content: "=EF=84=82"; }
+
+.fa-angle-double-down::before { content: "=EF=84=83"; }
+
+.fa-angle-left::before { content: "=EF=84=84"; }
+
+.fa-angle-right::before { content: "=EF=84=85"; }
+
+.fa-angle-up::before { content: "=EF=84=86"; }
+
+.fa-angle-down::before { content: "=EF=84=87"; }
+
+.fa-desktop::before { content: "=EF=84=88"; }
+
+.fa-laptop::before { content: "=EF=84=89"; }
+
+.fa-tablet::before { content: "=EF=84=8A"; }
+
+.fa-mobile-phone::before, .fa-mobile::before { content: "=EF=84=8B"; }
+
+.fa-circle-o::before { content: "=EF=84=8C"; }
+
+.fa-quote-left::before { content: "=EF=84=8D"; }
+
+.fa-quote-right::before { content: "=EF=84=8E"; }
+
+.fa-spinner::before { content: "=EF=84=90"; }
+
+.fa-circle::before { content: "=EF=84=91"; }
+
+.fa-mail-reply::before, .fa-reply::before { content: "=EF=84=92"; }
+
+.fa-github-alt::before { content: "=EF=84=93"; }
+
+.fa-folder-o::before { content: "=EF=84=94"; }
+
+.fa-folder-open-o::before { content: "=EF=84=95"; }
+
+.fa-smile-o::before { content: "=EF=84=98"; }
+
+.fa-frown-o::before { content: "=EF=84=99"; }
+
+.fa-meh-o::before { content: "=EF=84=9A"; }
+
+.fa-gamepad::before { content: "=EF=84=9B"; }
+
+.fa-keyboard-o::before { content: "=EF=84=9C"; }
+
+.fa-flag-o::before { content: "=EF=84=9D"; }
+
+.fa-flag-checkered::before { content: "=EF=84=9E"; }
+
+.fa-terminal::before { content: "=EF=84=A0"; }
+
+.fa-code::before { content: "=EF=84=A1"; }
+
+.fa-mail-reply-all::before, .fa-reply-all::before { content: "=EF=84=A2"; }
+
+.fa-star-half-empty::before, .fa-star-half-full::before, .fa-star-half-o::b=
+efore { content: "=EF=84=A3"; }
+
+.fa-location-arrow::before { content: "=EF=84=A4"; }
+
+.fa-crop::before { content: "=EF=84=A5"; }
+
+.fa-code-fork::before { content: "=EF=84=A6"; }
+
+.fa-chain-broken::before, .fa-unlink::before { content: "=EF=84=A7"; }
+
+.fa-question::before { content: "=EF=84=A8"; }
+
+.fa-info::before { content: "=EF=84=A9"; }
+
+.fa-exclamation::before { content: "=EF=84=AA"; }
+
+.fa-superscript::before { content: "=EF=84=AB"; }
+
+.fa-subscript::before { content: "=EF=84=AC"; }
+
+.fa-eraser::before { content: "=EF=84=AD"; }
+
+.fa-puzzle-piece::before { content: "=EF=84=AE"; }
+
+.fa-microphone::before { content: "=EF=84=B0"; }
+
+.fa-microphone-slash::before { content: "=EF=84=B1"; }
+
+.fa-shield::before { content: "=EF=84=B2"; }
+
+.fa-calendar-o::before { content: "=EF=84=B3"; }
+
+.fa-fire-extinguisher::before { content: "=EF=84=B4"; }
+
+.fa-rocket::before { content: "=EF=84=B5"; }
+
+.fa-maxcdn::before { content: "=EF=84=B6"; }
+
+.fa-chevron-circle-left::before { content: "=EF=84=B7"; }
+
+.fa-chevron-circle-right::before { content: "=EF=84=B8"; }
+
+.fa-chevron-circle-up::before { content: "=EF=84=B9"; }
+
+.fa-chevron-circle-down::before { content: "=EF=84=BA"; }
+
+.fa-html5::before { content: "=EF=84=BB"; }
+
+.fa-css3::before { content: "=EF=84=BC"; }
+
+.fa-anchor::before { content: "=EF=84=BD"; }
+
+.fa-unlock-alt::before { content: "=EF=84=BE"; }
+
+.fa-bullseye::before { content: "=EF=85=80"; }
+
+.fa-ellipsis-h::before { content: "=EF=85=81"; }
+
+.fa-ellipsis-v::before { content: "=EF=85=82"; }
+
+.fa-rss-square::before { content: "=EF=85=83"; }
+
+.fa-play-circle::before { content: "=EF=85=84"; }
+
+.fa-ticket::before { content: "=EF=85=85"; }
+
+.fa-minus-square::before { content: "=EF=85=86"; }
+
+.fa-minus-square-o::before { content: "=EF=85=87"; }
+
+.fa-level-up::before { content: "=EF=85=88"; }
+
+.fa-level-down::before { content: "=EF=85=89"; }
+
+.fa-check-square::before { content: "=EF=85=8A"; }
+
+.fa-pencil-square::before { content: "=EF=85=8B"; }
+
+.fa-external-link-square::before { content: "=EF=85=8C"; }
+
+.fa-share-square::before { content: "=EF=85=8D"; }
+
+.fa-compass::before { content: "=EF=85=8E"; }
+
+.fa-caret-square-o-down::before, .fa-toggle-down::before { content: "=EF=85=
+=90"; }
+
+.fa-caret-square-o-up::before, .fa-toggle-up::before { content: "=EF=85=91"=
+; }
+
+.fa-caret-square-o-right::before, .fa-toggle-right::before { content: "=EF=
+=85=92"; }
+
+.fa-eur::before, .fa-euro::before { content: "=EF=85=93"; }
+
+.fa-gbp::before { content: "=EF=85=94"; }
+
+.fa-dollar::before, .fa-usd::before { content: "=EF=85=95"; }
+
+.fa-inr::before, .fa-rupee::before { content: "=EF=85=96"; }
+
+.fa-cny::before, .fa-jpy::before, .fa-rmb::before, .fa-yen::before { conten=
+t: "=EF=85=97"; }
+
+.fa-rouble::before, .fa-rub::before, .fa-ruble::before { content: "=EF=85=
+=98"; }
+
+.fa-krw::before, .fa-won::before { content: "=EF=85=99"; }
+
+.fa-bitcoin::before, .fa-btc::before { content: "=EF=85=9A"; }
+
+.fa-file::before { content: "=EF=85=9B"; }
+
+.fa-file-text::before { content: "=EF=85=9C"; }
+
+.fa-sort-alpha-asc::before { content: "=EF=85=9D"; }
+
+.fa-sort-alpha-desc::before { content: "=EF=85=9E"; }
+
+.fa-sort-amount-asc::before { content: "=EF=85=A0"; }
+
+.fa-sort-amount-desc::before { content: "=EF=85=A1"; }
+
+.fa-sort-numeric-asc::before { content: "=EF=85=A2"; }
+
+.fa-sort-numeric-desc::before { content: "=EF=85=A3"; }
+
+.fa-thumbs-up::before { content: "=EF=85=A4"; }
+
+.fa-thumbs-down::before { content: "=EF=85=A5"; }
+
+.fa-youtube-square::before { content: "=EF=85=A6"; }
+
+.fa-youtube::before { content: "=EF=85=A7"; }
+
+.fa-xing::before { content: "=EF=85=A8"; }
+
+.fa-xing-square::before { content: "=EF=85=A9"; }
+
+.fa-youtube-play::before { content: "=EF=85=AA"; }
+
+.fa-dropbox::before { content: "=EF=85=AB"; }
+
+.fa-stack-overflow::before { content: "=EF=85=AC"; }
+
+.fa-instagram::before { content: "=EF=85=AD"; }
+
+.fa-flickr::before { content: "=EF=85=AE"; }
+
+.fa-adn::before { content: "=EF=85=B0"; }
+
+.fa-bitbucket::before { content: "=EF=85=B1"; }
+
+.fa-bitbucket-square::before { content: "=EF=85=B2"; }
+
+.fa-tumblr::before { content: "=EF=85=B3"; }
+
+.fa-tumblr-square::before { content: "=EF=85=B4"; }
+
+.fa-long-arrow-down::before { content: "=EF=85=B5"; }
+
+.fa-long-arrow-up::before { content: "=EF=85=B6"; }
+
+.fa-long-arrow-left::before { content: "=EF=85=B7"; }
+
+.fa-long-arrow-right::before { content: "=EF=85=B8"; }
+
+.fa-apple::before { content: "=EF=85=B9"; }
+
+.fa-windows::before { content: "=EF=85=BA"; }
+
+.fa-android::before { content: "=EF=85=BB"; }
+
+.fa-linux::before { content: "=EF=85=BC"; }
+
+.fa-dribbble::before { content: "=EF=85=BD"; }
+
+.fa-skype::before { content: "=EF=85=BE"; }
+
+.fa-foursquare::before { content: "=EF=86=80"; }
+
+.fa-trello::before { content: "=EF=86=81"; }
+
+.fa-female::before { content: "=EF=86=82"; }
+
+.fa-male::before { content: "=EF=86=83"; }
+
+.fa-gittip::before, .fa-gratipay::before { content: "=EF=86=84"; }
+
+.fa-sun-o::before { content: "=EF=86=85"; }
+
+.fa-moon-o::before { content: "=EF=86=86"; }
+
+.fa-archive::before { content: "=EF=86=87"; }
+
+.fa-bug::before { content: "=EF=86=88"; }
+
+.fa-vk::before { content: "=EF=86=89"; }
+
+.fa-weibo::before { content: "=EF=86=8A"; }
+
+.fa-renren::before { content: "=EF=86=8B"; }
+
+.fa-pagelines::before { content: "=EF=86=8C"; }
+
+.fa-stack-exchange::before { content: "=EF=86=8D"; }
+
+.fa-arrow-circle-o-right::before { content: "=EF=86=8E"; }
+
+.fa-arrow-circle-o-left::before { content: "=EF=86=90"; }
+
+.fa-caret-square-o-left::before, .fa-toggle-left::before { content: "=EF=86=
+=91"; }
+
+.fa-dot-circle-o::before { content: "=EF=86=92"; }
+
+.fa-wheelchair::before { content: "=EF=86=93"; }
+
+.fa-vimeo-square::before { content: "=EF=86=94"; }
+
+.fa-try::before, .fa-turkish-lira::before { content: "=EF=86=95"; }
+
+.fa-plus-square-o::before { content: "=EF=86=96"; }
+
+.fa-space-shuttle::before { content: "=EF=86=97"; }
+
+.fa-slack::before { content: "=EF=86=98"; }
+
+.fa-envelope-square::before { content: "=EF=86=99"; }
+
+.fa-wordpress::before { content: "=EF=86=9A"; }
+
+.fa-openid::before { content: "=EF=86=9B"; }
+
+.fa-bank::before, .fa-institution::before, .fa-university::before { content=
+: "=EF=86=9C"; }
+
+.fa-graduation-cap::before, .fa-mortar-board::before { content: "=EF=86=9D"=
+; }
+
+.fa-yahoo::before { content: "=EF=86=9E"; }
+
+.fa-google::before { content: "=EF=86=A0"; }
+
+.fa-reddit::before { content: "=EF=86=A1"; }
+
+.fa-reddit-square::before { content: "=EF=86=A2"; }
+
+.fa-stumbleupon-circle::before { content: "=EF=86=A3"; }
+
+.fa-stumbleupon::before { content: "=EF=86=A4"; }
+
+.fa-delicious::before { content: "=EF=86=A5"; }
+
+.fa-digg::before { content: "=EF=86=A6"; }
+
+.fa-drupal::before { content: "=EF=86=A9"; }
+
+.fa-joomla::before { content: "=EF=86=AA"; }
+
+.fa-language::before { content: "=EF=86=AB"; }
+
+.fa-fax::before { content: "=EF=86=AC"; }
+
+.fa-building::before { content: "=EF=86=AD"; }
+
+.fa-child::before { content: "=EF=86=AE"; }
+
+.fa-paw::before { content: "=EF=86=B0"; }
+
+.fa-spoon::before { content: "=EF=86=B1"; }
+
+.fa-cube::before { content: "=EF=86=B2"; }
+
+.fa-cubes::before { content: "=EF=86=B3"; }
+
+.fa-behance::before { content: "=EF=86=B4"; }
+
+.fa-behance-square::before { content: "=EF=86=B5"; }
+
+.fa-steam::before { content: "=EF=86=B6"; }
+
+.fa-steam-square::before { content: "=EF=86=B7"; }
+
+.fa-recycle::before { content: "=EF=86=B8"; }
+
+.fa-automobile::before, .fa-car::before { content: "=EF=86=B9"; }
+
+.fa-cab::before, .fa-taxi::before { content: "=EF=86=BA"; }
+
+.fa-tree::before { content: "=EF=86=BB"; }
+
+.fa-spotify::before { content: "=EF=86=BC"; }
+
+.fa-deviantart::before { content: "=EF=86=BD"; }
+
+.fa-soundcloud::before { content: "=EF=86=BE"; }
+
+.fa-database::before { content: "=EF=87=80"; }
+
+.fa-file-pdf-o::before { content: "=EF=87=81"; }
+
+.fa-file-word-o::before { content: "=EF=87=82"; }
+
+.fa-file-excel-o::before { content: "=EF=87=83"; }
+
+.fa-file-powerpoint-o::before { content: "=EF=87=84"; }
+
+.fa-file-image-o::before, .fa-file-photo-o::before, .fa-file-picture-o::bef=
+ore { content: "=EF=87=85"; }
+
+.fa-file-archive-o::before, .fa-file-zip-o::before { content: "=EF=87=86"; =
+}
+
+.fa-file-audio-o::before, .fa-file-sound-o::before { content: "=EF=87=87"; =
+}
+
+.fa-file-movie-o::before, .fa-file-video-o::before { content: "=EF=87=88"; =
+}
+
+.fa-file-code-o::before { content: "=EF=87=89"; }
+
+.fa-vine::before { content: "=EF=87=8A"; }
+
+.fa-codepen::before { content: "=EF=87=8B"; }
+
+.fa-jsfiddle::before { content: "=EF=87=8C"; }
+
+.fa-life-bouy::before, .fa-life-buoy::before, .fa-life-ring::before, .fa-li=
+fe-saver::before, .fa-support::before { content: "=EF=87=8D"; }
+
+.fa-circle-o-notch::before { content: "=EF=87=8E"; }
+
+.fa-ra::before, .fa-rebel::before, .fa-resistance::before { content: "=EF=
+=87=90"; }
+
+.fa-empire::before, .fa-ge::before { content: "=EF=87=91"; }
+
+.fa-git-square::before { content: "=EF=87=92"; }
+
+.fa-git::before { content: "=EF=87=93"; }
+
+.fa-hacker-news::before, .fa-y-combinator-square::before, .fa-yc-square::be=
+fore { content: "=EF=87=94"; }
+
+.fa-tencent-weibo::before { content: "=EF=87=95"; }
+
+.fa-qq::before { content: "=EF=87=96"; }
+
+.fa-wechat::before, .fa-weixin::before { content: "=EF=87=97"; }
+
+.fa-paper-plane::before, .fa-send::before { content: "=EF=87=98"; }
+
+.fa-paper-plane-o::before, .fa-send-o::before { content: "=EF=87=99"; }
+
+.fa-history::before { content: "=EF=87=9A"; }
+
+.fa-circle-thin::before { content: "=EF=87=9B"; }
+
+.fa-header::before { content: "=EF=87=9C"; }
+
+.fa-paragraph::before { content: "=EF=87=9D"; }
+
+.fa-sliders::before { content: "=EF=87=9E"; }
+
+.fa-share-alt::before { content: "=EF=87=A0"; }
+
+.fa-share-alt-square::before { content: "=EF=87=A1"; }
+
+.fa-bomb::before { content: "=EF=87=A2"; }
+
+.fa-futbol-o::before, .fa-soccer-ball-o::before { content: "=EF=87=A3"; }
+
+.fa-tty::before { content: "=EF=87=A4"; }
+
+.fa-binoculars::before { content: "=EF=87=A5"; }
+
+.fa-plug::before { content: "=EF=87=A6"; }
+
+.fa-slideshare::before { content: "=EF=87=A7"; }
+
+.fa-twitch::before { content: "=EF=87=A8"; }
+
+.fa-yelp::before { content: "=EF=87=A9"; }
+
+.fa-newspaper-o::before { content: "=EF=87=AA"; }
+
+.fa-wifi::before { content: "=EF=87=AB"; }
+
+.fa-calculator::before { content: "=EF=87=AC"; }
+
+.fa-paypal::before { content: "=EF=87=AD"; }
+
+.fa-google-wallet::before { content: "=EF=87=AE"; }
+
+.fa-cc-visa::before { content: "=EF=87=B0"; }
+
+.fa-cc-mastercard::before { content: "=EF=87=B1"; }
+
+.fa-cc-discover::before { content: "=EF=87=B2"; }
+
+.fa-cc-amex::before { content: "=EF=87=B3"; }
+
+.fa-cc-paypal::before { content: "=EF=87=B4"; }
+
+.fa-cc-stripe::before { content: "=EF=87=B5"; }
+
+.fa-bell-slash::before { content: "=EF=87=B6"; }
+
+.fa-bell-slash-o::before { content: "=EF=87=B7"; }
+
+.fa-trash::before { content: "=EF=87=B8"; }
+
+.fa-copyright::before { content: "=EF=87=B9"; }
+
+.fa-at::before { content: "=EF=87=BA"; }
+
+.fa-eyedropper::before { content: "=EF=87=BB"; }
+
+.fa-paint-brush::before { content: "=EF=87=BC"; }
+
+.fa-birthday-cake::before { content: "=EF=87=BD"; }
+
+.fa-area-chart::before { content: "=EF=87=BE"; }
+
+.fa-pie-chart::before { content: "=EF=88=80"; }
+
+.fa-line-chart::before { content: "=EF=88=81"; }
+
+.fa-lastfm::before { content: "=EF=88=82"; }
+
+.fa-lastfm-square::before { content: "=EF=88=83"; }
+
+.fa-toggle-off::before { content: "=EF=88=84"; }
+
+.fa-toggle-on::before { content: "=EF=88=85"; }
+
+.fa-bicycle::before { content: "=EF=88=86"; }
+
+.fa-bus::before { content: "=EF=88=87"; }
+
+.fa-ioxhost::before { content: "=EF=88=88"; }
+
+.fa-angellist::before { content: "=EF=88=89"; }
+
+.fa-cc::before { content: "=EF=88=8A"; }
+
+.fa-ils::before, .fa-shekel::before, .fa-sheqel::before { content: "=EF=88=
+=8B"; }
+
+.fa-meanpath::before { content: "=EF=88=8C"; }
+
+.fa-buysellads::before { content: "=EF=88=8D"; }
+
+.fa-connectdevelop::before { content: "=EF=88=8E"; }
+
+.fa-dashcube::before { content: "=EF=88=90"; }
+
+.fa-forumbee::before { content: "=EF=88=91"; }
+
+.fa-leanpub::before { content: "=EF=88=92"; }
+
+.fa-sellsy::before { content: "=EF=88=93"; }
+
+.fa-shirtsinbulk::before { content: "=EF=88=94"; }
+
+.fa-simplybuilt::before { content: "=EF=88=95"; }
+
+.fa-skyatlas::before { content: "=EF=88=96"; }
+
+.fa-cart-plus::before { content: "=EF=88=97"; }
+
+.fa-cart-arrow-down::before { content: "=EF=88=98"; }
+
+.fa-diamond::before { content: "=EF=88=99"; }
+
+.fa-ship::before { content: "=EF=88=9A"; }
+
+.fa-user-secret::before { content: "=EF=88=9B"; }
+
+.fa-motorcycle::before { content: "=EF=88=9C"; }
+
+.fa-street-view::before { content: "=EF=88=9D"; }
+
+.fa-heartbeat::before { content: "=EF=88=9E"; }
+
+.fa-venus::before { content: "=EF=88=A1"; }
+
+.fa-mars::before { content: "=EF=88=A2"; }
+
+.fa-mercury::before { content: "=EF=88=A3"; }
+
+.fa-intersex::before, .fa-transgender::before { content: "=EF=88=A4"; }
+
+.fa-transgender-alt::before { content: "=EF=88=A5"; }
+
+.fa-venus-double::before { content: "=EF=88=A6"; }
+
+.fa-mars-double::before { content: "=EF=88=A7"; }
+
+.fa-venus-mars::before { content: "=EF=88=A8"; }
+
+.fa-mars-stroke::before { content: "=EF=88=A9"; }
+
+.fa-mars-stroke-v::before { content: "=EF=88=AA"; }
+
+.fa-mars-stroke-h::before { content: "=EF=88=AB"; }
+
+.fa-neuter::before { content: "=EF=88=AC"; }
+
+.fa-genderless::before { content: "=EF=88=AD"; }
+
+.fa-facebook-official::before { content: "=EF=88=B0"; }
+
+.fa-pinterest-p::before { content: "=EF=88=B1"; }
+
+.fa-whatsapp::before { content: "=EF=88=B2"; }
+
+.fa-server::before { content: "=EF=88=B3"; }
+
+.fa-user-plus::before { content: "=EF=88=B4"; }
+
+.fa-user-times::before { content: "=EF=88=B5"; }
+
+.fa-bed::before, .fa-hotel::before { content: "=EF=88=B6"; }
+
+.fa-viacoin::before { content: "=EF=88=B7"; }
+
+.fa-train::before { content: "=EF=88=B8"; }
+
+.fa-subway::before { content: "=EF=88=B9"; }
+
+.fa-medium::before { content: "=EF=88=BA"; }
+
+.fa-medium-square::before { content: "=EF=8B=B8"; }
+
+.fa-y-combinator::before, .fa-yc::before { content: "=EF=88=BB"; }
+
+.fa-optin-monster::before { content: "=EF=88=BC"; }
+
+.fa-opencart::before { content: "=EF=88=BD"; }
+
+.fa-expeditedssl::before { content: "=EF=88=BE"; }
+
+.fa-battery-4::before, .fa-battery-full::before, .fa-battery::before { cont=
+ent: "=EF=89=80"; }
+
+.fa-battery-3::before, .fa-battery-three-quarters::before { content: "=EF=
+=89=81"; }
+
+.fa-battery-2::before, .fa-battery-half::before { content: "=EF=89=82"; }
+
+.fa-battery-1::before, .fa-battery-quarter::before { content: "=EF=89=83"; =
+}
+
+.fa-battery-0::before, .fa-battery-empty::before { content: "=EF=89=84"; }
+
+.fa-mouse-pointer::before { content: "=EF=89=85"; }
+
+.fa-i-cursor::before { content: "=EF=89=86"; }
+
+.fa-object-group::before { content: "=EF=89=87"; }
+
+.fa-object-ungroup::before { content: "=EF=89=88"; }
+
+.fa-sticky-note::before { content: "=EF=89=89"; }
+
+.fa-sticky-note-o::before { content: "=EF=89=8A"; }
+
+.fa-cc-jcb::before { content: "=EF=89=8B"; }
+
+.fa-cc-diners-club::before { content: "=EF=89=8C"; }
+
+.fa-clone::before { content: "=EF=89=8D"; }
+
+.fa-balance-scale::before { content: "=EF=89=8E"; }
+
+.fa-hourglass-o::before { content: "=EF=89=90"; }
+
+.fa-hourglass-1::before, .fa-hourglass-start::before { content: "=EF=89=91"=
+; }
+
+.fa-hourglass-2::before, .fa-hourglass-half::before { content: "=EF=89=92";=
+ }
+
+.fa-hourglass-3::before, .fa-hourglass-end::before { content: "=EF=89=93"; =
+}
+
+.fa-hourglass::before { content: "=EF=89=94"; }
+
+.fa-hand-grab-o::before, .fa-hand-rock-o::before { content: "=EF=89=95"; }
+
+.fa-hand-paper-o::before, .fa-hand-stop-o::before { content: "=EF=89=96"; }
+
+.fa-hand-scissors-o::before { content: "=EF=89=97"; }
+
+.fa-hand-lizard-o::before { content: "=EF=89=98"; }
+
+.fa-hand-spock-o::before { content: "=EF=89=99"; }
+
+.fa-hand-pointer-o::before { content: "=EF=89=9A"; }
+
+.fa-hand-peace-o::before { content: "=EF=89=9B"; }
+
+.fa-trademark::before { content: "=EF=89=9C"; }
+
+.fa-registered::before { content: "=EF=89=9D"; }
+
+.fa-creative-commons::before { content: "=EF=89=9E"; }
+
+.fa-gg::before { content: "=EF=89=A0"; }
+
+.fa-gg-circle::before { content: "=EF=89=A1"; }
+
+.fa-tripadvisor::before { content: "=EF=89=A2"; }
+
+.fa-odnoklassniki::before { content: "=EF=89=A3"; }
+
+.fa-odnoklassniki-square::before { content: "=EF=89=A4"; }
+
+.fa-get-pocket::before { content: "=EF=89=A5"; }
+
+.fa-wikipedia-w::before { content: "=EF=89=A6"; }
+
+.fa-safari::before { content: "=EF=89=A7"; }
+
+.fa-chrome::before { content: "=EF=89=A8"; }
+
+.fa-firefox::before { content: "=EF=89=A9"; }
+
+.fa-opera::before { content: "=EF=89=AA"; }
+
+.fa-internet-explorer::before { content: "=EF=89=AB"; }
+
+.fa-television::before, .fa-tv::before { content: "=EF=89=AC"; }
+
+.fa-contao::before { content: "=EF=89=AD"; }
+
+.fa-500px::before { content: "=EF=89=AE"; }
+
+.fa-amazon::before { content: "=EF=89=B0"; }
+
+.fa-calendar-plus-o::before { content: "=EF=89=B1"; }
+
+.fa-calendar-minus-o::before { content: "=EF=89=B2"; }
+
+.fa-calendar-times-o::before { content: "=EF=89=B3"; }
+
+.fa-calendar-check-o::before { content: "=EF=89=B4"; }
+
+.fa-industry::before { content: "=EF=89=B5"; }
+
+.fa-map-pin::before { content: "=EF=89=B6"; }
+
+.fa-map-signs::before { content: "=EF=89=B7"; }
+
+.fa-map-o::before { content: "=EF=89=B8"; }
+
+.fa-map::before { content: "=EF=89=B9"; }
+
+.fa-commenting::before { content: "=EF=89=BA"; }
+
+.fa-commenting-o::before { content: "=EF=89=BB"; }
+
+.fa-houzz::before { content: "=EF=89=BC"; }
+
+.fa-vimeo::before { content: "=EF=89=BD"; }
+
+.fa-black-tie::before { content: "=EF=89=BE"; }
+
+.fa-fonticons::before { content: "=EF=8A=80"; }
+
+.fa-reddit-alien::before { content: "=EF=8A=81"; }
+
+.fa-edge::before { content: "=EF=8A=82"; }
+
+.fa-credit-card-alt::before { content: "=EF=8A=83"; }
+
+.fa-codiepie::before { content: "=EF=8A=84"; }
+
+.fa-modx::before { content: "=EF=8A=85"; }
+
+.fa-fort-awesome::before { content: "=EF=8A=86"; }
+
+.fa-usb::before { content: "=EF=8A=87"; }
+
+.fa-product-hunt::before { content: "=EF=8A=88"; }
+
+.fa-mixcloud::before { content: "=EF=8A=89"; }
+
+.fa-scribd::before { content: "=EF=8A=8A"; }
+
+.fa-pause-circle::before { content: "=EF=8A=8B"; }
+
+.fa-pause-circle-o::before { content: "=EF=8A=8C"; }
+
+.fa-stop-circle::before { content: "=EF=8A=8D"; }
+
+.fa-stop-circle-o::before { content: "=EF=8A=8E"; }
+
+.fa-shopping-bag::before { content: "=EF=8A=90"; }
+
+.fa-shopping-basket::before { content: "=EF=8A=91"; }
+
+.fa-hashtag::before { content: "=EF=8A=92"; }
+
+.fa-bluetooth::before { content: "=EF=8A=93"; }
+
+.fa-bluetooth-b::before { content: "=EF=8A=94"; }
+
+.fa-percent::before { content: "=EF=8A=95"; }
+
+.fa-gitlab::before { content: "=EF=8A=96"; }
+
+.fa-wpbeginner::before { content: "=EF=8A=97"; }
+
+.fa-wpforms::before { content: "=EF=8A=98"; }
+
+.fa-envira::before { content: "=EF=8A=99"; }
+
+.fa-universal-access::before { content: "=EF=8A=9A"; }
+
+.fa-wheelchair-alt::before { content: "=EF=8A=9B"; }
+
+.fa-question-circle-o::before { content: "=EF=8A=9C"; }
+
+.fa-blind::before { content: "=EF=8A=9D"; }
+
+.fa-audio-description::before { content: "=EF=8A=9E"; }
+
+.fa-volume-control-phone::before { content: "=EF=8A=A0"; }
+
+.fa-braille::before { content: "=EF=8A=A1"; }
+
+.fa-assistive-listening-systems::before { content: "=EF=8A=A2"; }
+
+.fa-american-sign-language-interpreting::before, .fa-asl-interpreting::befo=
+re { content: "=EF=8A=A3"; }
+
+.fa-deaf::before, .fa-deafness::before, .fa-hard-of-hearing::before { conte=
+nt: "=EF=8A=A4"; }
+
+.fa-glide::before { content: "=EF=8A=A5"; }
+
+.fa-glide-g::before { content: "=EF=8A=A6"; }
+
+.fa-sign-language::before, .fa-signing::before { content: "=EF=8A=A7"; }
+
+.fa-low-vision::before { content: "=EF=8A=A8"; }
+
+.fa-viadeo::before { content: "=EF=8A=A9"; }
+
+.fa-viadeo-square::before { content: "=EF=8A=AA"; }
+
+.fa-snapchat::before { content: "=EF=8A=AB"; }
+
+.fa-snapchat-ghost::before { content: "=EF=8A=AC"; }
+
+.fa-snapchat-square::before { content: "=EF=8A=AD"; }
+
+.fa-first-order::before { content: "=EF=8A=B0"; }
+
+.fa-yoast::before { content: "=EF=8A=B1"; }
+
+.fa-themeisle::before { content: "=EF=8A=B2"; }
+
+.fa-google-plus-circle::before, .fa-google-plus-official::before { content:=
+ "=EF=8A=B3"; }
+
+.fa-fa::before, .fa-font-awesome::before { content: "=EF=8A=B4"; }
+
+.fa-handshake-o::before { content: "=EF=8A=B5"; }
+
+.fa-envelope-open::before { content: "=EF=8A=B6"; }
+
+.fa-envelope-open-o::before { content: "=EF=8A=B7"; }
+
+.fa-linode::before { content: "=EF=8A=B8"; }
+
+.fa-address-book::before { content: "=EF=8A=B9"; }
+
+.fa-address-book-o::before { content: "=EF=8A=BA"; }
+
+.fa-address-card::before, .fa-vcard::before { content: "=EF=8A=BB"; }
+
+.fa-address-card-o::before, .fa-vcard-o::before { content: "=EF=8A=BC"; }
+
+.fa-user-circle::before { content: "=EF=8A=BD"; }
+
+.fa-user-circle-o::before { content: "=EF=8A=BE"; }
+
+.fa-user-o::before { content: "=EF=8B=80"; }
+
+.fa-id-badge::before { content: "=EF=8B=81"; }
+
+.fa-drivers-license::before, .fa-id-card::before { content: "=EF=8B=82"; }
+
+.fa-drivers-license-o::before, .fa-id-card-o::before { content: "=EF=8B=83"=
+; }
+
+.fa-quora::before { content: "=EF=8B=84"; }
+
+.fa-free-code-camp::before { content: "=EF=8B=85"; }
+
+.fa-telegram::before { content: "=EF=8B=86"; }
+
+.fa-thermometer-4::before, .fa-thermometer-full::before, .fa-thermometer::b=
+efore { content: "=EF=8B=87"; }
+
+.fa-thermometer-3::before, .fa-thermometer-three-quarters::before { content=
+: "=EF=8B=88"; }
+
+.fa-thermometer-2::before, .fa-thermometer-half::before { content: "=EF=8B=
+=89"; }
+
+.fa-thermometer-1::before, .fa-thermometer-quarter::before { content: "=EF=
+=8B=8A"; }
+
+.fa-thermometer-0::before, .fa-thermometer-empty::before { content: "=EF=8B=
+=8B"; }
+
+.fa-shower::before { content: "=EF=8B=8C"; }
+
+.fa-bath::before, .fa-bathtub::before, .fa-s15::before { content: "=EF=8B=
+=8D"; }
+
+.fa-podcast::before { content: "=EF=8B=8E"; }
+
+.fa-window-maximize::before { content: "=EF=8B=90"; }
+
+.fa-window-minimize::before { content: "=EF=8B=91"; }
+
+.fa-window-restore::before { content: "=EF=8B=92"; }
+
+.fa-times-rectangle::before, .fa-window-close::before { content: "=EF=8B=93=
+"; }
+
+.fa-times-rectangle-o::before, .fa-window-close-o::before { content: "=EF=
+=8B=94"; }
+
+.fa-bandcamp::before { content: "=EF=8B=95"; }
+
+.fa-grav::before { content: "=EF=8B=96"; }
+
+.fa-etsy::before { content: "=EF=8B=97"; }
+
+.fa-imdb::before { content: "=EF=8B=98"; }
+
+.fa-ravelry::before { content: "=EF=8B=99"; }
+
+.fa-eercast::before { content: "=EF=8B=9A"; }
+
+.fa-microchip::before { content: "=EF=8B=9B"; }
+
+.fa-snowflake-o::before { content: "=EF=8B=9C"; }
+
+.fa-superpowers::before { content: "=EF=8B=9D"; }
+
+.fa-wpexplorer::before { content: "=EF=8B=9E"; }
+
+.fa-meetup::before { content: "=EF=8B=A0"; }
+
+.fa-mastodon::before { content: "=EF=8B=A1"; }
+
+.fa-mastodon-alt::before { content: "=EF=8B=A2"; }
+
+.fa-fork-awesome::before, .fa-fork-circle::before { content: "=EF=8B=A3"; }
+
+.fa-peertube::before { content: "=EF=8B=A4"; }
+
+.fa-diaspora::before { content: "=EF=8B=A5"; }
+
+.fa-friendica::before { content: "=EF=8B=A6"; }
+
+.fa-gnu-social::before { content: "=EF=8B=A7"; }
+
+.fa-liberapay-square::before { content: "=EF=8B=A8"; }
+
+.fa-liberapay::before { content: "=EF=8B=A9"; }
+
+.fa-scuttlebutt::before, .fa-ssb::before { content: "=EF=8B=AA"; }
+
+.fa-hubzilla::before { content: "=EF=8B=AB"; }
+
+.fa-social-home::before { content: "=EF=8B=AC"; }
+
+.fa-artstation::before { content: "=EF=8B=AD"; }
+
+.fa-discord::before { content: "=EF=8B=AE"; }
+
+.fa-discord-alt::before { content: "=EF=8B=AF"; }
+
+.fa-patreon::before { content: "=EF=8B=B0"; }
+
+.fa-snowdrift::before { content: "=EF=8B=B1"; }
+
+.fa-activitypub::before { content: "=EF=8B=B2"; }
+
+.fa-ethereum::before { content: "=EF=8B=B3"; }
+
+.fa-keybase::before { content: "=EF=8B=B4"; }
+
+.fa-shaarli::before { content: "=EF=8B=B5"; }
+
+.fa-shaarli-o::before { content: "=EF=8B=B6"; }
+
+.fa-cut-key::before, .fa-key-modern::before { content: "=EF=8B=B7"; }
+
+.fa-xmpp::before { content: "=EF=8B=B9"; }
+
+.fa-archive-org::before { content: "=EF=8B=BC"; }
+
+.fa-freedombox::before { content: "=EF=8B=BD"; }
+
+.fa-facebook-messenger::before { content: "=EF=8B=BE"; }
+
+.fa-debian::before { content: "=EF=8B=BF"; }
+
+.fa-mastodon-square::before { content: "=EF=8C=80"; }
+
+.fa-tipeee::before { content: "=EF=8C=81"; }
+
+.fa-react::before { content: "=EF=8C=82"; }
+
+.fa-dogmazic::before { content: "=EF=8C=83"; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0px; margi=
+n: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); border: 0px; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus { position: static; wid=
+th: auto; height: auto; margin: 0px; overflow: visible; clip: auto; }
+------MultipartBoundary--Nb9MIV0FMi8dKS3UXpC1L9FznGSx8HTh7vf9OCF3p8------

@@ -27,3 +27,4 @@
 * [Rsync](rsync/README.md)
 * [LogRotate](logrotate/README.md)
 * [User](user/README.md)
+* [Object Files and Symbols](object-files-and-symbols/README.md)
