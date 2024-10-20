@@ -111,6 +111,10 @@
 * [Mounting APFS Partition on Linux](https://www.baeldung.com/linux/apfs-partition-mount)
 * [APFS FUSE Driver for Linux](https://github.com/sgan81/apfs-fuse)
 
+#### go-apfs
+* [go-apfs](https://github.com/blacktop/go-apfs)
+
 ## macOS & iOS Internals
 * [http://www.newosxbook.com/](http://www.newosxbook.com/home.html)
 * [iOS Write ups(PDF, books)](https://github.com/writeups/iOS)
+
