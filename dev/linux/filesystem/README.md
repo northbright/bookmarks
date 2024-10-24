@@ -17,3 +17,6 @@
 
 ## LVM
 * [在 Linux 中创建 LVM 分区的分步指南 | Linux 中国](https://zhuanlan.zhihu.com/p/574697807)
+
+## Resource Busy
+* [Troubleshooting "Device or Resource Busy" in Linux: Causes, Fixes](https://developnsolve.com/troubleshooting-device-or-resource-busy-in-linux-causes-fixes)
