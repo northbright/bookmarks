@@ -165,6 +165,7 @@
 * [Does TestDisk support apfs? #138](https://github.com/cgsecurity/testdisk/issues/138)
 * [PhotoRec](https://www.cgsecurity.org/wiki/PhotoRec)
 * [PhotoRec Review](https://www.handyrecovery.com/photorec-review/)
+* [How PhotoRec works](https://www.cgsecurity.org/wiki/PhotoRec)
 
 #### drat
 * [drat](https://github.com/jivanpal/drat/)
