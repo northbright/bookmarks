@@ -177,3 +177,6 @@
 
 #### apfs-fuse
 * [apfs-fuse](https://github.com/sgan81/apfs-fuse)
+
+#### The Sleuth Kit
+* [The Sleuth Kit](https://github.com/sleuthkit/sleuthkit)
