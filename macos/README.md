@@ -114,8 +114,8 @@
 #### go-apfs
 * [go-apfs](https://github.com/blacktop/go-apfs)
 
-#### sleuthkit
-* [sleuthkit](https://github.com/sleuthkit/sleuthkit)
+#### The Sleuth Kit
+* [The Sleuth Kit](https://github.com/sleuthkit/sleuthkit)
 
 ## macOS & iOS Internals
 * [http://www.newosxbook.com/](http://www.newosxbook.com/home.html)
