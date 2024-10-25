@@ -119,6 +119,8 @@
   * [TestDisk](https://github.com/cgsecurity/testdisk)
   * [Does TestDisk support apfs? #138](https://github.com/cgsecurity/testdisk/issues/138)
 
+* [afro](https://github.com/cugu/afro)
+
 ## macOS & iOS Internals
 * [http://www.newosxbook.com/](http://www.newosxbook.com/home.html)
 * [iOS Write ups(PDF, books)](https://github.com/writeups/iOS)
