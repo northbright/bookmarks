@@ -122,6 +122,8 @@
 * [afro](https://github.com/cugu/afro)
 * [tienex/apfs](https://github.com/tienex/apfs/)
 
+* [Apple File System for Linux](https://github.com/linux-apfs/linux-apfs-rw)
+
 ## macOS & iOS Internals
 * [http://www.newosxbook.com/](http://www.newosxbook.com/home.html)
 * [iOS Write ups(PDF, books)](https://github.com/writeups/iOS)
