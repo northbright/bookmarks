@@ -183,3 +183,6 @@
 
 ## RAR
 * [为什么 Mac 不支持 RAR 格式压缩？](https://www.zhihu.com/question/651098969)
+
+## ExifTool
+* [How to modify image EXIF metadata - Date Created / Date Modified [Command line tool]](https://yarnaudov.com/modify-image-exif-metadata-dates.html)
