@@ -25,3 +25,4 @@
 * [华为交换机清理接口地址池IP冲突](https://blog.csdn.net/h106140873/article/details/117087043)
 * [如何限制外网用户访问WEB网管](https://support.huawei.com/enterprise/zh/doc/EDOC1100112344/27b23597)
 * [(多媒体) S系列交换机如何批量配置交换机的端口](https://support.huawei.com/enterprise/zh/doc/EDOC1000081930)
+* [S380 产品文档](https://support.huawei.com/hedex/hdx.do?docid=EDOC1100409534&tocURL=resources%2Fhedex-homepage.html)
