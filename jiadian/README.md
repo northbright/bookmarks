@@ -24,3 +24,6 @@
 
 ## 空气开关
 * [断路器外壳上常见的技术参数，到底都代表什么意思？](https://www.zhihu.com/question/583324255/answer/2889009388)
+
+## 电池
+* [19款7号电池大横评！谁是最强7号电池？谁性价比最高？](https://www.chiphell.com/thread-2657439-1-1.html)
