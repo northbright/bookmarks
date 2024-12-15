@@ -44,3 +44,4 @@ Bookmarks of development and more...
 * [Science（科学）](science/README.md)
 * [Trip（旅游）](trip/README.md)
 * [Food（美食）](food/README.md)
+* [Journal（手帐）](journal/README.md)
