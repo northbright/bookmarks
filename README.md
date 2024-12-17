@@ -32,6 +32,7 @@ Bookmarks of development and more...
 * [Anime and Comic（动漫）](anime-and-comic/README.md)
 * [Comic（漫画）](comic/README.md)
 * [房产](house/README.md)
+* [卫浴](bathroom/README.md)
 * [Cloud(云)](cloud/README.md)
 * [Metaverse（元宇宙）](metaverse/README.md)
 * [Financing（理财）](financing/README.md)
