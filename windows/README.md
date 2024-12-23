@@ -1,5 +1,8 @@
 # Windows
 
+## Activation
+* [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
+
 ## Security
 * [Customer Guidance for WannaCrypt attacks](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/)
 * [Use Cipher.exe to overwrite deleted data in Windows Server 2003](https://docs.microsoft.com/en-us/troubleshoot/windows-server/windows-security/use-cipher-to-overwrite-deleted-data)
