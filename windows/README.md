@@ -2,6 +2,7 @@
 
 ## Activation
 * [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
+  * [FAQ](https://massgrave.dev/faq)
 
 ## Security
 * [Customer Guidance for WannaCrypt attacks](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/)
