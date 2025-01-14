@@ -44,3 +44,4 @@
 * [新组网的ubnt两个ap为什会慢？](https://tieba.baidu.com/p/8330345414)
 * [请问内行人分析一下，Ubnt的U6-Pro与U6-Lr具体差别，?](https://www.zhihu.com/question/524323767)
 * [Updating and Installing Self-Hosted UniFi Network Servers (Linux)](https://help.ui.com/hc/en-us/articles/220066768-Updating-and-Installing-Self-Hosted-UniFi-Network-Servers-Linux)
+* [Install UniFi Controller (Network Application) on Ubuntu 20.04](https://computingforgeeks.com/install-unifi-controller-network-application-on-ubuntu/)
