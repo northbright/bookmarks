@@ -37,6 +37,8 @@
 
 ## Networks
 * [If you’re still using ifconfig, you’re living in the past](https://ubuntu.com/blog/if-youre-still-using-ifconfig-youre-living-in-the-past)
+* [Cannot connect to Wi-Fi Ubuntu 20.04 server](https://askubuntu.com/questions/1263111/cannot-connect-to-wi-fi-ubuntu-20-04-server)
+* [Ubuntu server 24.04配置无线网WiFi](https://www.cnblogs.com/luk/p/18624859)
 
 ## Boot
 * ACPI Errors
