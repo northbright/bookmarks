@@ -36,6 +36,7 @@
 ## 保险
 * [在微信公众号续保车险和在工作人员买哪里一样吗?](https://www.zhihu.com/question/437811357)
 * [车险话术之T30车险续保话术](https://zhuanlan.zhihu.com/p/521552848)
+* [谁拿走了财险500亿利润：52家综合成本率过100%，超半数利润负增长](https://zhuanlan.zhihu.com/p/4833564273)
 
 ## 刹车片
 * [聊聊刹车片的选择与更换（毕竟比换油重要多了）](https://zhuanlan.zhihu.com/p/23485089)
