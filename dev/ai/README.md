@@ -5,3 +5,4 @@
 
 ## DeepSeek
 * [告别ChatGPT，本地免费部署DeepSeek？（自测可用）](https://zhuanlan.zhihu.com/p/20999187883)
+* [如何在本地部署DeepSeek-R1模型？](https://www.zhihu.com/question/10630134422)
