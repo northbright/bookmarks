@@ -7,6 +7,7 @@
 * [拍毕业照集体照是广角定焦好用还是广角变焦好用？](https://www.zhihu.com/question/441837509)
 * [东京行摄 7天6晚](https://www.chiphell.com/thread-2550802-1-1.html)
 * [A9+50/1.2GM，拍娃与扫街](https://forum.xitek.com/thread-1974542-1-1.html)
+* [太甜啦](https://www.chiphell.com/thread-2670634-1-1.html)
 
 ## PPI and DPI
 * [别乱用dpi，ppi才是图像分辨率单位，很多人都搞错了](https://zhuanlan.zhihu.com/p/146713168)
