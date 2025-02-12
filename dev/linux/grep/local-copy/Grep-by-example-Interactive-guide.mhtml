@@ -1,0 +1,2335 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://antonz.org/grep-by-example/
+Subject: Grep by example: Interactive guide
+Date: Wed, 12 Feb 2025 07:14:39 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--v2vmxzwudCrjTh7xrb1BDZ5bwJFKm9zHNc1c8eGn1k----"
+
+
+------MultipartBoundary--v2vmxzwudCrjTh7xrb1BDZ5bwJFKm9zHNc1c8eGn1k----
+Content-Type: text/html
+Content-ID: <frame-4DCD24437F68F8919486C9B41D63D021@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/grep-by-example/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"wid=
+th=3Ddevice-width,initial-scale=3D1,maximum-scale=3D1"><title>Grep by examp=
+le: Interactive guide</title>
+<meta name=3D"description" content=3D"Interactive introduction to grep with=
+ real-world use cases."><meta name=3D"robots" content=3D"index, follow"><li=
+nk rel=3D"stylesheet" type=3D"text/css" href=3D"https://antonz.org/assets/c=
+ss/style.ab5b07a3b8460dd96d9aa8eef3fcde58195fdd8aeae66b56e0428d9bc3c4a9f6.c=
+ss"><link rel=3D"icon" href=3D"https://antonz.org/assets/favicon/favicon.ic=
+o" sizes=3D"any"><link rel=3D"icon" type=3D"image/svg+xml" href=3D"https://=
+antonz.org/assets/favicon/favicon.svg"><link rel=3D"apple-touch-icon" href=
+=3D"https://antonz.org/assets/favicon/apple-touch-icon.png"><link rel=3D"ma=
+nifest" href=3D"https://antonz.org/assets/favicon/manifest.json"><link rel=
+=3D"canonical" href=3D"https://antonz.org/grep-by-example/"><meta name=3D"a=
+uthor" content=3D"Anton Zhiyanov"><meta property=3D"og:type" content=3D"art=
+icle"><meta property=3D"og:title" content=3D"Grep by example: Interactive g=
+uide"><meta property=3D"og:description" content=3D"Interactive introduction=
+ to grep with real-world use cases."><meta property=3D"og:url" content=3D"h=
+ttps://antonz.org/grep-by-example/"><meta property=3D"og:image" content=3D"=
+https://antonz.org/grep-by-example/cover.png"><meta name=3D"twitter:card" c=
+ontent=3D"summary_large_image"><meta name=3D"twitter:title" content=3D"Grep=
+ by example: Interactive guide"><meta name=3D"twitter:description" content=
+=3D"Interactive introduction to grep with real-world use cases."><meta name=
+=3D"twitter:url" content=3D"https://antonz.org/grep-by-example/"><meta name=
+=3D"twitter:site" content=3D"@ohmypy"><meta name=3D"twitter:image" content=
+=3D"https://antonz.org/grep-by-example/cover.png"></head><body><div class=
+=3D"header"><div class=3D"container"><div class=3D"row"><div class=3D"col-x=
+s-6 col-sm-3"><a class=3D"img-link" href=3D"https://antonz.org/"><img src=
+=3D"https://antonz.org/assets/logo.svg" class=3D"header-icon">
+</a>&nbsp;
+<a href=3D"https://antonz.org/"><strong>Anton Zhiyanov</strong></a></div><d=
+iv class=3D"col-xs-12 col-sm-6 col-md-4 hidden-mobile"><a class=3D"menu__li=
+nk" href=3D"https://antonz.org/#projects"><span>projects</span>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/#books"><span>books<=
+/span>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/all/"><span>blog</sp=
+an>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/#about"><span>about<=
+/span></a></div><div class=3D"col-xs-6 col-sm-3"><div class=3D"search-modul=
+e"><form action=3D"https://duckduckgo.com/">
+
+
+
+
+
+<input type=3D"search" name=3D"q" autocomplete=3D"off" placeholder=3D"Searc=
+h" aria-label=3D"Search"></form></div></div></div></div></div><div class=3D=
+"storey"><div class=3D"container"><article class=3D"post" data-namespace=3D=
+""><div class=3D"row"><div class=3D"col-xs-12 col-md-10 article"><header><h=
+1>Grep by example: Interactive guide</h1></header><p>grep is the ultimate t=
+ext search tool available on virtually all Linux machines. While there are =
+now better alternatives (such as <a href=3D"https://codapi.org/try/ripgrep/=
+">ripgrep</a>), you will still often find yourself on a server where grep i=
+s the only search tool available. So it's nice to have a working knowledge =
+of it.</p><p>That's why is I've created this interactive step-by-step guide=
+ to grep operations. You can read it from start to finish to (hopefully) le=
+arn more about grep, or jump to a specific use case that interests you.</p>=
+<p>Feel free to experiment with the examples by changing the commands and c=
+licking <em>Run</em>.</p><p><a href=3D"https://antonz.org/grep-by-example/#=
+basics">Basics</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#recursive-search">Recursive =
+search</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#search-options">Search optio=
+ns</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#output-options">Output optio=
+ns</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#final-thoughts">Final though=
+ts</a></p><p>This guide is also available in other formats:</p><div class=
+=3D"row"><div class=3D"col-xs-6 col-sm-4"><figure><a href=3D"https://github=
+.com/nalgeon/grep-by-example" class=3D"img-link"><img alt=3D"Minibook" src=
+=3D"https://antonz.org/grep-by-example/ebook.png"></a><figcaption><a href=
+=3D"https://github.com/nalgeon/grep-by-example">PDF minibook</a></figcaptio=
+n></figure></div><div class=3D"col-xs-6 col-sm-4"><figure><a href=3D"https:=
+//codapi.org/grep/" class=3D"img-link"><img alt=3D"Playground" src=3D"https=
+://antonz.org/grep-by-example/playground.png"></a><figcaption><a href=3D"ht=
+tps://codapi.org/grep/">Playground</a></figcaption></figure></div></div><h2=
+ id=3D"basics">Basics</h2><p>Basically, grep works like this:</p><ul><li>Yo=
+u give it a search pattern and a file.</li><li>grep reads the file line by =
+line, printing the lines that match the pattern and ignoring others.</li></=
+ul><p>Let's look at an example. We'll search the <a href=3D"https://github.=
+com/rednafi/httpurr">httpurr</a> source code, which I've already downloaded=
+ to the <code>/opt/httpurr</code> directory like this:</p><div class=3D"hig=
+hlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell"=
+ data-lang=3D"shell"><span class=3D"line"><span class=3D"cl"><span class=3D=
+"nb">cd</span> /opt
+</span></span><span class=3D"line"><span class=3D"cl">curl -OL https://gith=
+ub.com/rednafi/httpurr/archive/refs/tags/v0.1.2.tar.gz
+</span></span><span class=3D"line"><span class=3D"cl">tar xvzf v0.1.2.tar.g=
+z
+</span></span><span class=3D"line"><span class=3D"cl">mv httpurr-0.1.2 http=
+urr
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"nb">cd=
+</span> httpurr
+</span></span></code></pre></div><p><a href=3D"https://antonz.org/grep-by-e=
+xample/#search-in-file">Search in file</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#matches">Matches</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#regular-expressions">Regular=
+ expressions</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#fixed-strings">Fixed strings=
+</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#multiple-patterns">Multiple =
+patterns</a></p><h3 id=3D"search-in-file">Search in file</h3><p>Let's find =
+all occurrences of the word <code>codes</code> in <code>README.md</code>:</=
+p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=
+=3D"false"><span class=3D"line"><span class=3D"cl">grep -n codes README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>grep read the contents of <code>README.md</code>, and f=
+or each line that contained <code>codes</code>, grep printed it to the term=
+inal.</p><p>grep also included the line number for each line, thanks to the=
+ <code>-n</code> (<code>--line-number</code>) option.</p><blockquote><p>Not=
+ all grep versions support the long option syntax (e.g. <code>--line-number=
+</code>). If you get an error using the long version, try the short one (e.=
+g. <code>-n</code>) =E2=80=94 it may work fine.</p></blockquote><h3 id=3D"m=
+atches">Matches</h3><p>grep uses <em>partial matches</em> by default:</p><d=
+iv class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"=
+language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"=
+false"><span class=3D"line"><span class=3D"cl">grep -n descr README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The word <code>description</code> matches the <code>des=
+cr</code> search pattern.</p><p>To search for <em>whole words</em> instead,=
+ use the <code>-w</code> (<code>--word-regexp</code>) option:</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><=
+span class=3D"line"><span class=3D"cl">grep -n --word-regexp code README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>grep found strings containing the word <code>code</code=
+>, but not <code>codes</code>. Try removing <code>--word-regexp</code> and =
+see how the results change.</p><blockquote><p>When using multiple short opt=
+ions, you can combine them like this: <code>grep -nw code README.md</code>.=
+ This gives exactly the same result as using the separate options (<code>-n=
+ -w</code>).</p></blockquote><p>To search for <em>whole lines</em> instead =
+of partial matches of whole words, use the <code>-x</code> (<code>--line-re=
+gexp</code>) option:</p><div class=3D"highlight"><pre tabindex=3D"0" class=
+=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedita=
+ble=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">g=
+rep -n --line-regexp end httpurr.rb
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Try removing <code>--line-regexp</code> and see how the=
+ results change.</p><h3 id=3D"regular-expressions">Regular expressions</h3>=
+<p>To make grep use regular expressions (<em>Perl-compatible regular expres=
+sions</em> in grep terminology), use the <code>-P</code> (<code>--perl-rege=
+xp</code>) option.</p><p>Let's find all lines with a word that contains <co=
+de>res</code> followed by other letters:</p><div class=3D"highlight"><pre t=
+abindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"=
+shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><=
+span class=3D"cl">grep -Pn <span class=3D"s1">'res\w+'</span> README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p><code>\w+</code> means "one or more word-like character=
+s" (e.g. letters like <code>p</code> or <code>o</code>, but not punctuation=
+ like <code>.</code> or <code>!</code>), so <code>response</code>, <code>re=
+source</code>, and <code>rest</code> all match.</p><div class=3D"boxed"><h3=
+>Regular expression dialects in grep</h3><p>Without <code>--perl-regexp</co=
+de>, grep treats the search pattern as something called a <em>basic regular=
+ expression</em>. While regular expressions are quite common in the softwar=
+e world, the <em>basic</em> dialect is really weird, so it's better not to =
+use it at all.</p><p>Another dialect supported by grep is <a href=3D"https:=
+//www.gnu.org/software/grep/manual/grep.html#Regular-Expressions">extended<=
+/a> regular expressions. You can use the <code>-E</code> (<code>--extended-=
+regexp</code>) option to enable them. Extended regular expressions are <em>=
+almost</em> like normal regular expressions, but not quite. So I wouldn't u=
+se them either.</p><p>Some grep versions do not support <code>--perl-regexp=
+</code>. For those, <code>--extended-regexp</code> is the best you can get.=
+</p></div><p>Suppose we are only interested in 4 letter words starting with=
+ <code>res</code>:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D=
+"chroma"><code class=3D"language-shell" data-lang=3D"shell" contenteditable=
+=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">grep=
+ -Pn <span class=3D"s1">'res\w\b'</span> README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p><code>\b</code> means "word boundary" (e.g. a space, a =
+punctuation character, or the end of a line), so <code>rest</code> matches,=
+ but <code>response</code> and <code>resource</code> don't.</p><p>Finally, =
+let's search for 3-digit numbers (showing first 10 matches with <code>head<=
+/code>):</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><=
+code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" =
+spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">grep -Pn <span=
+ class=3D"s1">'\d\d\d'</span> README.md <span class=3D"p">|</span> head
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>A full tutorial on regular expressions is beyond the sc=
+ope of this guide, but grep's "Perl-compatible" syntax is documented in the=
+ <a href=3D"https://www.pcre.org/current/doc/html/pcre2syntax.html">PCRE2 m=
+anual</a>.</p><h3 id=3D"fixed-strings">Fixed strings</h3><p>What if we want=
+ to search for a <em>literal</em> string instead of a regular expression? S=
+uppose we are interested in a word <code>code</code> followed by a dot:</p>=
+<div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=
+=3D"false"><span class=3D"line"><span class=3D"cl">grep -Pn <span class=3D"=
+s1">'code.'</span> src/data.go <span class=3D"p">|</span> head
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Since <code>.</code> means "any character" in regular e=
+xpressions, our pattern also matches <code>code&nbsp;</code>, <code>codes</=
+code> and other cases we are not interested in.</p><p>To treat the pattern =
+as a literal string, use the <code>-F</code> (<code>--fixed-strings</code>)=
+ option:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><=
+code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" =
+spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">grep -Fn <span=
+ class=3D"s1">'code.'</span> src/data.go
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Much better!</p><h3 id=3D"multiple-patterns">Multiple p=
+atterns</h3><p>To search for multiple patterns, list them with the <code>-e=
+</code> (<code>--regexp</code>) option. grep will output lines matching at =
+least one of the specified patterns.</p><p>For example, search for <code>ma=
+ke</code> or <code>run</code>:</p><div class=3D"highlight"><pre tabindex=3D=
+"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" con=
+tenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=
+=3D"cl">grep -En -e make -e run README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><blockquote><p>Unfortunately, grep can't use Perl-compatib=
+le regular expressions (<code>-P</code>) with multiple patterns. So we are =
+stuck with the extended (<code>-E</code>) dialect.</p></blockquote><p>If yo=
+u have many patterns, it may be easier to put them in a file and point grep=
+ to it with <code>-f</code> (<code>--file</code>):</p><div class=3D"highlig=
+ht"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" dat=
+a-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=
+=3D"line"><span class=3D"cl"><span class=3D"nb">echo</span> <span class=3D"=
+s1">'install'</span> &gt; /tmp/patterns.txt
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"nb">ec=
+ho</span> <span class=3D"s1">'make'</span> &gt;&gt; /tmp/patterns.txt
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"nb">ec=
+ho</span> <span class=3D"s1">'run'</span> &gt;&gt; /tmp/patterns.txt
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl">grep -En --file<span =
+class=3D"o">=3D</span>/tmp/patterns.txt README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h2 id=3D"recursive-search">Recursive search</h2><p>grep s=
+earches directories recursively when called with the <code>-r</code> (<code=
+>--recursive</code>) option.</p><p><a href=3D"https://antonz.org/grep-by-ex=
+ample/#search-in-directory">Search in directory</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#file-globs">File globs</a> =
+=C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#binary-files">Binary files</=
+a></p><h3 id=3D"search-in-directory">Search in directory</h3><p>Let's find =
+all unexported functions (they start with a lowercase letter):</p><div clas=
+s=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"languag=
+e-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false">=
+<span class=3D"line"><span class=3D"cl">grep -Pnr <span class=3D"s1">'func =
+[a-z]\w+'</span> .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>This search returned matches from both the <code>cmd</c=
+ode> and <code>src</code> directories. If you are only interested in <code>=
+cmd</code>, specify it instead of <code>.</code>:</p><div class=3D"highligh=
+t"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data=
+-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=
+=3D"line"><span class=3D"cl">grep -Pnr <span class=3D"s1">'func [a-z]\w+'</=
+span> cmd
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>To search multiple directories, list them all like this=
+:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code cl=
+ass=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellch=
+eck=3D"false"><span class=3D"line"><span class=3D"cl">grep -Pnr <span class=
+=3D"s1">'func [a-z]\w+'</span> cmd src
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"file-globs">File globs</h3><p>Let's search for <=
+code>httpurr</code>:</p><div class=3D"highlight"><pre tabindex=3D"0" class=
+=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedita=
+ble=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">g=
+rep -Pnr --max-count<span class=3D"o">=3D</span><span class=3D"m">5</span> =
+httpurr .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Note that I have limited the number of results per file=
+ to 5 with the <code>-m</code> (<code>--max-count</code>) option to keep th=
+e results readable in case there are many matches.</p><p>Quite a lot of res=
+ults. Let's narrow it down by searching only in <code>.go</code> files:</p>=
+<div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=
+=3D"false"><span class=3D"line"><span class=3D"cl">grep -Pnr --include<span=
+ class=3D"o">=3D</span><span class=3D"s1">'*.go'</span> httpurr .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The <code>--include</code> option (there is no short ve=
+rsion) takes a <em>glob</em> (filename pattern), typically containing a fix=
+ed part (<code>.go</code> in our example) and a wildcard <code>*</code> ("a=
+nything but the path separator").</p><p>Another example =E2=80=94 search in=
+ files named <code>http</code>-something:</p><div class=3D"highlight"><pre =
+tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D=
+"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line">=
+<span class=3D"cl">grep -Pnr --include<span class=3D"o">=3D</span><span cla=
+ss=3D"s1">'http*'</span> httpurr .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>To <em>negate</em> the glob, use the <code>--exclude</c=
+ode> option. For example, search everywhere except the <code>.go</code> fil=
+es:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code =
+class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spell=
+check=3D"false"><span class=3D"line"><span class=3D"cl">grep -Pnr --exclude=
+ <span class=3D"s1">'*.go'</span> def .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>To apply multiple filters, specify multiple glob option=
+s. For example, find all functions except those in test files:</p><div clas=
+s=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"languag=
+e-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false">=
+<span class=3D"line"><span class=3D"cl">grep -Pnr --include <span class=3D"=
+s1">'*.go'</span> --exclude <span class=3D"s1">'*_test.go'</span> <span cla=
+ss=3D"s1">'func '</span> .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"binary-files">Binary files</h3><p>By default, gr=
+ep does not ignore binary files:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">grep -Pnr aha .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"binary.sh" output=3D"" state=3D"unkno=
+wn">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Most of the time, this is probably not what you want. I=
+f you're searching in a directory that might contain binary files, it's bet=
+ter to ignore them altogether with the <code>-I</code> (<code>--binary-file=
+s=3Dwithout-match</code>) option:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">grep -Pnr --binary-files<span class=3D"o">=3D</span>without-matc=
+h aha .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"binary.sh" output=3D"" state=3D"unkno=
+wn">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>If for some reason you want grep to search binary files=
+ and print the actual matches (as it does with text files), use the <code>-=
+a</code> (<code>--text</code>) option.</p><h2 id=3D"search-options">Search =
+options</h2><p>grep supports a couple of additional search options you may =
+find handy.</p><p><a href=3D"https://antonz.org/grep-by-example/#ignore-cas=
+e">Ignore case</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#inverse-matching">Inverse ma=
+tching</a></p><h3 id=3D"ignore-case">Ignore case</h3><p>Let's find all occu=
+rrences of the word <code>codes</code> in <code>README.md</code>:</p><div c=
+lass=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"lang=
+uage-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"fals=
+e"><span class=3D"line"><span class=3D"cl">grep -Pnr codes README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>It returns <code>codes</code> matches, but not <code>Co=
+des</code> because grep is case-sensitive by default. To change this, use <=
+code>-i</code> (<code>--ignore-case</code>):</p><div class=3D"highlight"><p=
+re tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=
+=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"lin=
+e"><span class=3D"cl">grep -Pnr --ignore-case codes README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"inverse-matching">Inverse matching</h3><p>To fin=
+d lines that <em>do not</em> contain the pattern, use <code>-v</code> (<cod=
+e>--invert-match</code>). For example, find the non-empty lines without the=
+ <code>@</code> symbol:</p><div class=3D"highlight"><pre tabindex=3D"0" cla=
+ss=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedi=
+table=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl"=
+>grep -Enr --invert-match -e <span class=3D"s1">'@'</span> -e <span class=
+=3D"s1">'^$'</span> Makefile
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h2 id=3D"output-options">Output options</h2><p>grep suppo=
+rts a number of additional output options you may find handy.</p><p><a href=
+=3D"https://antonz.org/grep-by-example/#count-matches">Count matches</a> =
+=C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#limit-matches">Limit matches=
+</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#show-matches-only">Show matc=
+hes only</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#show-files-only">Show files =
+only</a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#show-context">Show context</=
+a> =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#silent-mode">Silent mode</a>=
+ =C2=B7
+<a href=3D"https://antonz.org/grep-by-example/#colors">Colors</a></p><h3 id=
+=3D"count-matches">Count matches</h3><p>To count the number of matched line=
+s (per file), use <code>-c</code> (<code>--count</code>). For example, coun=
+t the number of functions in each <code>.go</code> file:</p><div class=3D"h=
+ighlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shel=
+l" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span =
+class=3D"line"><span class=3D"cl">grep -Pnr --count --include <span class=
+=3D"s1">'*.go'</span> <span class=3D"s1">'func '</span> .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Note that <code>--count</code> counts the number of <em=
+>lines</em>, not the number of matches. For example, there are 6 words <cod=
+e>string</code> in <code>src/cli.go</code>, but two of them are on the same=
+ line, so <code>--count</code> reports 5:</p><div class=3D"highlight"><pre =
+tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D=
+"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line">=
+<span class=3D"cl">grep -nrw --count string src/cli.go
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"limit-matches">Limit matches</h3><p>To limit the=
+ number of matching lines per file, use the <code>-m</code> (<code>--max-co=
+unt</code>) option:</p><div class=3D"highlight"><pre tabindex=3D"0" class=
+=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedita=
+ble=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">g=
+rep -Pnrw --max-count<span class=3D"o">=3D</span><span class=3D"m">5</span>=
+ func .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>With <code>--max-count=3DN</code>, grep stops searching=
+ the file after finding the first N matching lines (or non-matching lines i=
+f used with <code>--invert-match</code>).</p><h3 id=3D"show-matches-only">S=
+how matches only</h3><p>By default, grep prints the entire line containing =
+the match. To show only the matching part, use <code>-o</code> (<code>--onl=
+y-matching</code>).</p><p>Suppose we want to find functions named <code>pri=
+nt</code>-something:</p><div class=3D"highlight"><pre tabindex=3D"0" class=
+=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedita=
+ble=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">g=
+rep -Pnr --only-matching --include <span class=3D"s1">'*.go'</span> <span c=
+lass=3D"s1">'func print\w+'</span> .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The results are much cleaner than without <code>--only-=
+matching</code> (try removing the option in the above command and see for y=
+ourself).</p><h3 id=3D"show-files-only">Show files only</h3><p>If there are=
+ too many matches, you may prefer to show only the files where the matches =
+occurred. Use <code>-l</code> (<code>--files-with-matches</code>) to do thi=
+s:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code c=
+lass=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellc=
+heck=3D"false"><span class=3D"line"><span class=3D"cl">grep -Pnr --files-wi=
+th-matches <span class=3D"s1">'httpurr'</span> .
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"show-context">Show context</h3><p>Let's search f=
+or GitHub action jobs:</p><div class=3D"highlight"><pre tabindex=3D"0" clas=
+s=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedit=
+able=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">=
+grep -Pnr <span class=3D"s1">'jobs:'</span> .github/workflows
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>These results are kind of useless, because they don't r=
+eturn the actual job name (which is on the next line after <code>jobs</code=
+>). To fix this, let's use <code>-C</code> (<code>--context</code>), which =
+shows <code>N</code> lines around each match:</p><div class=3D"highlight"><=
+pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lan=
+g=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"li=
+ne"><span class=3D"cl">grep -Pnr --context<span class=3D"o">=3D</span><span=
+ class=3D"m">1</span> <span class=3D"s1">'jobs:'</span> .github/workflows
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>It might be even better to show only the <em>next</em> =
+line after the match, since we are not interested in the previous one. Use =
+<code>-A</code> (<code>--after-context</code>) for this:</p><div class=3D"h=
+ighlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shel=
+l" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span =
+class=3D"line"><span class=3D"cl">grep -Pnr --after-context<span class=3D"o=
+">=3D</span><span class=3D"m">1</span> <span class=3D"s1">'jobs:'</span> .g=
+ithub/workflows
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><blockquote><p>There is also <code>-B</code> (<code>--befo=
+re-context</code>) for showing N lines <em>before</em> the match.</p></bloc=
+kquote><p>Nice!</p><h3 id=3D"silent-mode">Silent mode</h3><p>Sometimes you =
+just want to know if a file contains a certain string; you don't care about=
+ the number or positions of the matches.</p><p>To make grep quit immediatel=
+y after the first match and not print anything, use the <code>-q</code> (<c=
+ode>--quiet</code> or <code>--silent</code>) option. Use the return code (<=
+code>$?</code>) to see if grep found anything (0 =E2=80=94 found, 1 =E2=80=
+=94 not found):</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"ch=
+roma"><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D=
+"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">grep -P=
+nrw --quiet main cmd/httpurr/main.go
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"k">if<=
+/span> <span class=3D"o">[</span> <span class=3D"nv">$?</span> <span class=
+=3D"o">=3D</span> <span class=3D"s2">"0"</span> <span class=3D"o">]</span><=
+span class=3D"p">;</span> <span class=3D"k">then</span> <span class=3D"nb">=
+echo</span> <span class=3D"s2">"found!"</span><span class=3D"p">;</span> <s=
+pan class=3D"k">else</span> <span class=3D"nb">echo</span> <span class=3D"s=
+2">"not found"</span><span class=3D"p">;</span> <span class=3D"k">fi</span>
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Try changing the search pattern from <code>main</code> =
+to <code>Main</code> and see how the results change.</p><p>When searching i=
+n multiple files with <code>--quiet</code>, grep stops after the first matc=
+h in any file and does not check other files:</p><div class=3D"highlight"><=
+pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lan=
+g=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"li=
+ne"><span class=3D"cl">grep -Pnrw --quiet main .
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"k">if<=
+/span> <span class=3D"o">[</span> <span class=3D"nv">$?</span> <span class=
+=3D"o">=3D</span> <span class=3D"s2">"0"</span> <span class=3D"o">]</span><=
+span class=3D"p">;</span> <span class=3D"k">then</span> <span class=3D"nb">=
+echo</span> <span class=3D"s2">"found!"</span><span class=3D"p">;</span> <s=
+pan class=3D"k">else</span> <span class=3D"nb">echo</span> <span class=3D"s=
+2">"not found"</span><span class=3D"p">;</span> <span class=3D"k">fi</span>
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"run" editor=3D"basic" template=3D"httpurr.sh" output=3D"" state=3D"unkn=
+own">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"colors">Colors</h3><p>To highlight matches and l=
+ine numbers, use the <code>--color=3Dalways</code> option:</p><div class=3D=
+"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-sh=
+ell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><spa=
+n class=3D"line"><span class=3D"cl">grep -Pnr --color<span class=3D"o">=3D<=
+/span>always codes README.md
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" command=
+=3D"aha" editor=3D"basic" template=3D"httpurr.sh" output-mode=3D"html" outp=
+ut=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/grep-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Use <code>--color=3Dauto</code> to let grep decide whet=
+her to use colors based on your terminal. Use <code>--color=3Dnever</code> =
+to force no-color mode.</p><h2 id=3D"final-thoughts">Final thoughts</h2><p>=
+That's it! We've covered just about everything grep can do. Unfortunately, =
+it doesn't support replacing text, reading options from a configuration fil=
+e, or other fancy features provided by grep alternatives like <code>ack</co=
+de> or <code>ripgrep</code>. But grep is still quite powerful, as you can p=
+robably see now.</p><p>Use <code>grep --help</code> to quickly see all supp=
+orted options and see the <a href=3D"https://www.gnu.org/software/grep/manu=
+al/grep.html">official guide</a> for option descriptions.</p><p>Have fun gr=
+epping!</p><p>=E2=94=80=E2=94=80</p><p>P.S. Interactive examples in this po=
+st are powered by <a href=3D"https://codapi.org/">codapi</a> =E2=80=94 an o=
+pen source tool I'm building. Use it to embed live code snippets into your =
+product docs, online course or blog.</p><p><a href=3D"https://antonz.org/su=
+bscribe/">=E2=98=85&nbsp;Subscribe</a> to keep up with new posts.</p></div>=
+</div><footer class=3D"post__footer"><div class=3D"row"><div class=3D"col-x=
+s-12"><div class=3D"post__date"><time datetime=3D"2024-03-23 11:30:00 +0000=
+ UTC">23 Mar, 2024</time></div><div class=3D"post__tags"><a href=3D"https:/=
+/antonz.org/tags/software/">software</a>&nbsp;</div></div></div></footer></=
+article><aside class=3D"post__related"><div class=3D"post__nav article"><di=
+v class=3D"row"><div class=3D"col-xs-12 col-sm-6"><p>=E2=86=90&nbsp;<a href=
+=3D"https://antonz.org/git-by-example/">Git by example: Interactive guide</=
+a></p></div><div class=3D"col-xs-12 col-sm-6"><p><a href=3D"https://antonz.=
+org/sqlite-strict-tables/">Modern SQLite: STRICT tables</a>&nbsp;=E2=86=92<=
+/p></div></div></div><div class=3D"article"><div class=3D"row"><div class=
+=3D"col-xs-12 col-sm-8 col-md-6"><h3>See also</h3><p><a href=3D"https://ant=
+onz.org/git-by-example/">Git by example: Interactive guide</a></p><p><a hre=
+f=3D"https://antonz.org/stupid/">I'm a programmer and I'm stupid</a></p><p>=
+<a href=3D"https://antonz.org/try-x-in-y-minutes/">Try X in Y minutes</a></=
+p></div></div></div></aside></div></div><footer class=3D"container footer">=
+<ul class=3D"naked-list"><li class=3D"footer__item">Subscribe:
+<a href=3D"https://buttondown.email/antonz" class=3D"footer__social-link"><=
+i class=3D"fas fa-envelope"></i><span>Newsletter</span>
+</a><a href=3D"https://twitter.com/ohmypy" class=3D"footer__social-link"><i=
+ class=3D"fab fa-twitter-1"></i><span>Twitter</span>
+</a><a href=3D"https://c.im/@antonz" class=3D"footer__social-link"><svg cla=
+ss=3D"icon" viewBox=3D"0 0 16 16" role=3D"img"><path fill=3D"currentcolor" =
+d=3D"M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.=
+339.0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027.0h-.05C5.92.=
+017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 =
+1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1=
+.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-=
+.156-3.215-1.928a3.614 3.614.0 01-.033-.496s1.424.346 3.228.428c1.103.05 2.=
+137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.=
+804.0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541=
+-.727.0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.45=
+6-.505 1.052-.764 1.793-.764.856.0 1.504.328 1.933.983L8 4.39l.417-.695c.42=
+9-.655 1.077-.983 1.934-.983.74.0 1.336.259 1.791.764.442.505.661 1.187.661=
+ 2.046v4.203z"></path></svg>
+</a><a href=3D"https://www.linkedin.com/in/nalgeon/" class=3D"footer__socia=
+l-link"><i class=3D"fab fa-linkedin-2"></i><span>LinkedIn</span>
+</a><a href=3D"https://github.com/nalgeon" class=3D"footer__social-link"><i=
+ class=3D"fab fa-github-1"></i><span>GitHub</span>
+</a><a href=3D"https://antonz.org/index.xml" class=3D"footer__social-link">=
+<i class=3D"fas fa-rss"></i><span>RSS</span></a></li><li class=3D"footer__i=
+tem">Email: <a href=3D"mailto:m@antonz.org">m@antonz.org</a></li></ul></foo=
+ter></body></html>
+------MultipartBoundary--v2vmxzwudCrjTh7xrb1BDZ5bwJFKm9zHNc1c8eGn1k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/assets/css/style.ab5b07a3b8460dd96d9aa8eef3fcde58195fdd8aeae66b56e0428d9bc3c4a9f6.css
+
+@charset "utf-8";
+
+html { line-height: 1.15; text-size-adjust: 100%; }
+
+body { margin: 0px; }
+
+hr { height: 0px; color: inherit; }
+
+abbr[title] { text-decoration: underline dotted; }
+
+b, strong { font-weight: bolder; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 60%; line-height: 0; position: relative; }
+
+table { text-indent: 0px; border-color: inherit; }
+
+button, input, optgroup, select, textarea { font-family: inherit; font-size=
+: 100%; line-height: 1.15; margin: 0px; }
+
+button, select { text-transform: none; }
+
+button, [type=3D"button"], [type=3D"reset"], [type=3D"submit"] { appearance=
+: button; }
+
+legend { padding: 0px; }
+
+progress { vertical-align: baseline; }
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; }
+
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+::-webkit-search-decoration { appearance: none; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+summary { display: list-item; }
+
+.container-fluid { margin-right: auto; margin-left: auto; padding-right: 2r=
+em; padding-left: 2rem; }
+
+.row { box-sizing: border-box; display: flex; flex: 0 1 auto; flex-flow: wr=
+ap; margin-right: -0.5rem; margin-left: -0.5rem; }
+
+.row.reverse { flex-direction: row-reverse; }
+
+.col.reverse { flex-direction: column-reverse; }
+
+.col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, =
+.col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-x=
+s-offset-1, .col-xs-offset-2, .col-xs-offset-3, .col-xs-offset-4, .col-xs-o=
+ffset-5, .col-xs-offset-6, .col-xs-offset-7, .col-xs-offset-8, .col-xs-offs=
+et-9, .col-xs-offset-10, .col-xs-offset-11, .col-xs-offset-12 { box-sizing:=
+ border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem; }
+
+.col-xs { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+
+.col-xs-1 { flex-basis: 8.333%; max-width: 8.333%; }
+
+.col-xs-2 { flex-basis: 16.667%; max-width: 16.667%; }
+
+.col-xs-3 { flex-basis: 25%; max-width: 25%; }
+
+.col-xs-4 { flex-basis: 33.333%; max-width: 33.333%; }
+
+.col-xs-5 { flex-basis: 41.667%; max-width: 41.667%; }
+
+.col-xs-6 { flex-basis: 50%; max-width: 50%; }
+
+.col-xs-7 { flex-basis: 58.333%; max-width: 58.333%; }
+
+.col-xs-8 { flex-basis: 66.667%; max-width: 66.667%; }
+
+.col-xs-9 { flex-basis: 75%; max-width: 75%; }
+
+.col-xs-10 { flex-basis: 83.333%; max-width: 83.333%; }
+
+.col-xs-11 { flex-basis: 91.667%; max-width: 91.667%; }
+
+.col-xs-12 { flex-basis: 100%; max-width: 100%; }
+
+.col-xs-offset-1 { margin-left: 8.333%; }
+
+.col-xs-offset-2 { margin-left: 16.667%; }
+
+.col-xs-offset-3 { margin-left: 25%; }
+
+.col-xs-offset-4 { margin-left: 33.333%; }
+
+.col-xs-offset-5 { margin-left: 41.667%; }
+
+.col-xs-offset-6 { margin-left: 50%; }
+
+.col-xs-offset-7 { margin-left: 58.333%; }
+
+.col-xs-offset-8 { margin-left: 66.667%; }
+
+.col-xs-offset-9 { margin-left: 75%; }
+
+.col-xs-offset-10 { margin-left: 83.333%; }
+
+.col-xs-offset-11 { margin-left: 91.667%; }
+
+.start-xs { justify-content: flex-start; text-align: start; }
+
+.center-xs { justify-content: center; text-align: center; }
+
+.end-xs { justify-content: flex-end; text-align: end; }
+
+.top-xs { align-items: flex-start; }
+
+.middle-xs { align-items: center; }
+
+.bottom-xs { align-items: flex-end; }
+
+.around-xs { justify-content: space-around; }
+
+.between-xs { justify-content: space-between; }
+
+.first-xs { order: -1; }
+
+.last-xs { order: 1; }
+
+@media only screen and (min-width: 48em) {
+  .container { width: 46rem; }
+  .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6=
+, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col=
+-sm-offset-1, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm=
+-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-of=
+fset-9, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-sm { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-sm-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-sm-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-sm-3 { flex-basis: 25%; max-width: 25%; }
+  .col-sm-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-sm-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-sm-6 { flex-basis: 50%; max-width: 50%; }
+  .col-sm-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-sm-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-sm-9 { flex-basis: 75%; max-width: 75%; }
+  .col-sm-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-sm-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-sm-12 { flex-basis: 100%; max-width: 100%; }
+  .col-sm-offset-0 { margin-left: 0px; }
+  .col-sm-offset-1 { margin-left: 8.333%; }
+  .col-sm-offset-2 { margin-left: 16.667%; }
+  .col-sm-offset-3 { margin-left: 25%; }
+  .col-sm-offset-4 { margin-left: 33.333%; }
+  .col-sm-offset-5 { margin-left: 41.667%; }
+  .col-sm-offset-6 { margin-left: 50%; }
+  .col-sm-offset-7 { margin-left: 58.333%; }
+  .col-sm-offset-8 { margin-left: 66.667%; }
+  .col-sm-offset-9 { margin-left: 75%; }
+  .col-sm-offset-10 { margin-left: 83.333%; }
+  .col-sm-offset-11 { margin-left: 91.667%; }
+  .start-sm { justify-content: flex-start; text-align: start; }
+  .center-sm { justify-content: center; text-align: center; }
+  .end-sm { justify-content: flex-end; text-align: end; }
+  .top-sm { align-items: flex-start; }
+  .middle-sm { align-items: center; }
+  .bottom-sm { align-items: flex-end; }
+  .around-sm { justify-content: space-around; }
+  .between-sm { justify-content: space-between; }
+  .first-sm { order: -1; }
+  .last-sm { order: 1; }
+}
+
+@media only screen and (min-width: 62em) {
+  .container { width: 61rem; }
+  .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6=
+, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col=
+-md-offset-1, .col-md-offset-2, .col-md-offset-3, .col-md-offset-4, .col-md=
+-offset-5, .col-md-offset-6, .col-md-offset-7, .col-md-offset-8, .col-md-of=
+fset-9, .col-md-offset-10, .col-md-offset-11, .col-md-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-md { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-md-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-md-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-md-3 { flex-basis: 25%; max-width: 25%; }
+  .col-md-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-md-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-md-6 { flex-basis: 50%; max-width: 50%; }
+  .col-md-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-md-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-md-9 { flex-basis: 75%; max-width: 75%; }
+  .col-md-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-md-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-md-12 { flex-basis: 100%; max-width: 100%; }
+  .col-md-offset-1 { margin-left: 8.333%; }
+  .col-md-offset-2 { margin-left: 16.667%; }
+  .col-md-offset-3 { margin-left: 25%; }
+  .col-md-offset-4 { margin-left: 33.333%; }
+  .col-md-offset-5 { margin-left: 41.667%; }
+  .col-md-offset-6 { margin-left: 50%; }
+  .col-md-offset-7 { margin-left: 58.333%; }
+  .col-md-offset-8 { margin-left: 66.667%; }
+  .col-md-offset-9 { margin-left: 75%; }
+  .col-md-offset-10 { margin-left: 83.333%; }
+  .col-md-offset-11 { margin-left: 91.667%; }
+  .start-md { justify-content: flex-start; text-align: start; }
+  .center-md { justify-content: center; text-align: center; }
+  .end-md { justify-content: flex-end; text-align: end; }
+  .top-md { align-items: flex-start; }
+  .middle-md { align-items: center; }
+  .bottom-md { align-items: flex-end; }
+  .around-md { justify-content: space-around; }
+  .between-md { justify-content: space-between; }
+  .first-md { order: -1; }
+  .last-md { order: 1; }
+}
+
+@media only screen and (min-width: 75em) {
+  .container { width: 71rem; }
+  .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6=
+, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col=
+-lg-offset-1, .col-lg-offset-2, .col-lg-offset-3, .col-lg-offset-4, .col-lg=
+-offset-5, .col-lg-offset-6, .col-lg-offset-7, .col-lg-offset-8, .col-lg-of=
+fset-9, .col-lg-offset-10, .col-lg-offset-11, .col-lg-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-lg { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-lg-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-lg-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-lg-3 { flex-basis: 25%; max-width: 25%; }
+  .col-lg-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-lg-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-lg-6 { flex-basis: 50%; max-width: 50%; }
+  .col-lg-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-lg-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-lg-9 { flex-basis: 75%; max-width: 75%; }
+  .col-lg-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-lg-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-lg-12 { flex-basis: 100%; max-width: 100%; }
+  .col-lg-offset-1 { margin-left: 8.333%; }
+  .col-lg-offset-2 { margin-left: 16.667%; }
+  .col-lg-offset-3 { margin-left: 25%; }
+  .col-lg-offset-4 { margin-left: 33.333%; }
+  .col-lg-offset-5 { margin-left: 41.667%; }
+  .col-lg-offset-6 { margin-left: 50%; }
+  .col-lg-offset-7 { margin-left: 58.333%; }
+  .col-lg-offset-8 { margin-left: 66.667%; }
+  .col-lg-offset-9 { margin-left: 75%; }
+  .col-lg-offset-10 { margin-left: 83.333%; }
+  .col-lg-offset-11 { margin-left: 91.667%; }
+  .start-lg { justify-content: flex-start; text-align: start; }
+  .center-lg { justify-content: center; text-align: center; }
+  .end-lg { justify-content: flex-end; text-align: end; }
+  .top-lg { align-items: flex-start; }
+  .middle-lg { align-items: center; }
+  .bottom-lg { align-items: flex-end; }
+  .around-lg { justify-content: space-around; }
+  .between-lg { justify-content: space-between; }
+  .first-lg { order: -1; }
+  .last-lg { order: 1; }
+}
+
+:root { --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helveti=
+ca, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol=
+"; --font-serif: "PT Serif", Georgia, serif; --font-monospace: ui-monospace=
+, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+        "Liberation Mono", monospace; --color-text: #000; --color-blue: #00=
+8bf5; --color-gray: #555; --color-red: #ed7647; --color-yellow: #fdd000; --=
+color-pre: #f5f5f5; --color-box: #eaeaea; --color-bg: #fff; --color-code-ke=
+yword: #a90d91; --color-code-type: #a90d91; --color-code-string: #c41a16; -=
+-color-code-comment: #177500; --font-size-large: 1.2rem; --font-size-x-larg=
+e: 1.2rem; }
+
+html { box-sizing: border-box; }
+
+*, ::before, ::after { box-sizing: inherit; }
+
+[hidden] { display: none !important; }
+
+body { color: var(--color-text); font-size: 16px; font-family: var(--font-s=
+ans); font-weight: normal; line-height: 1.35; background: var(--color-bg); =
+-webkit-font-smoothing: antialiased; }
+
+h1, h2, h3 { font-weight: normal; }
+
+h1, h2 { line-height: 1; }
+
+.container { padding-left: 1em; padding-right: 1em; width: 100%; }
+
+@media only screen and (min-width: 48em) {
+  .container { padding-left: 3em; padding-right: 3em; }
+}
+
+@media only screen and (min-width: 62em) {
+  .container { max-width: 960px; margin-left: auto; margin-right: auto; pad=
+ding-left: 0px; padding-right: 0px; }
+}
+
+a { color: var(--color-blue); border-bottom: 1px solid rgba(0, 139, 245, 0.=
+2); text-decoration: none; }
+
+a:active, a:hover, a:visited:active, a:visited:hover { color: rgb(92, 184, =
+255); border-bottom-color: rgba(92, 184, 255, 0.2); }
+
+a:visited { color: rgb(85, 26, 139); border-bottom-color: rgba(85, 26, 139,=
+ 0.2); }
+
+a[href^=3D"#"] { border-bottom-style: dashed; }
+
+a.link--black { color: var(--color-text); border-bottom-color: var(--color-=
+text); }
+
+blockquote { margin: 0px; padding: 0px; }
+
+code, pre { font-family: var(--font-monospace); }
+
+pre { margin: 0px 0px 0.8em; background: var(--color-pre); overflow-x: auto=
+; white-space: pre; line-height: 1.2; tab-size: 4; }
+
+pre > code { display: block; padding: 1.5em; font-size: 80%; }
+
+p > code, li > code, td > code, p > a > code, li > a > code { background: v=
+ar(--color-pre); font-size: 80%; padding: 0.125em 0.25em; }
+
+p { margin: 0px 0px 0.8em; }
+
+p:last-child { margin-bottom: 0px; }
+
+img { display: block; height: auto; max-width: 100%; width: auto; }
+
+video { display: block; height: auto; max-width: 100%; width: auto; margin-=
+bottom: 0.8em; }
+
+abbr::after { display: inline-block; margin-left: 0.25em; margin-right: 0.2=
+5em; vertical-align: text-bottom; font-size: 80%; content: "=E2=93=98"; }
+
+details { margin-bottom: 0.8em; }
+
+details summary { color: var(--color-blue); cursor: pointer; }
+
+details summary.summary-ai::marker { content: "=F0=9F=A4=96 "; }
+
+form input[type=3D"email"], form input[type=3D"password"], form input[type=
+=3D"search"], form input[type=3D"text"], form input[type=3D"url"], form sel=
+ect, form textarea { border-radius: 0.125em; border: solid 1px var(--color-=
+gray); background-color: var(--color-bg); color: var(--color-text); cursor:=
+ text; display: block; padding: 0.5em; appearance: none; }
+
+form input.error, form select.error, form textarea.error { border-color: va=
+r(--color-red); }
+
+.button, button, input[type=3D"button"], input[type=3D"reset"], input[type=
+=3D"submit"] { background: var(--color-blue); border: 0px; border-radius: 0=
+.125em; color: var(--color-bg); cursor: pointer; display: inline-block; ver=
+tical-align: middle; outline: 0px; overflow: hidden; padding: 0.5em 1em; po=
+sition: relative; text-decoration: none; text-align: center; appearance: no=
+ne; }
+
+.button:hover, button:hover, input[type=3D"button"]:hover, input[type=3D"re=
+set"]:hover, input[type=3D"submit"]:hover { background-color: rgb(0, 123, 2=
+21); border-bottom: none; color: var(--color-bg); }
+
+.button:visited, .button:visited:hover { border-bottom: none; color: var(--=
+color-bg); }
+
+button:disabled, input[type=3D"button"]:disabled, input[type=3D"reset"]:dis=
+abled, input[type=3D"submit"]:disabled { opacity: 0.4; pointer-events: none=
+; cursor: default; }
+
+.button--black { background: var(--color-text); }
+
+abbr[title] { text-decoration: none; }
+
+mark { background: var(--color-yellow); padding: 0px 0.25em; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --color-text: #fff; --color-blue: #008bf5; --color-gray: #6c7986;=
+ --color-red: #ff8a65; --color-yellow: #ffdf80; --color-pre: #151b23; --col=
+or-box: #1e242b; --color-bg: #000; --color-code-keyword: #fc5fa3; --color-c=
+ode-type: #fc5fa3; --color-code-string: #fc6a5d; --color-code-comment: #6c7=
+986; }
+  a { border-bottom: 1px solid var(--color-blue); }
+  a:active, a:hover, a:visited:active, a:visited:hover { border-bottom: non=
+e; }
+  a:visited { color: var(--color-blue); border-bottom: 1px solid var(--colo=
+r-blue); }
+  img { opacity: 0.75; transition: opacity 0.3s ease-in-out 0s; }
+  img:hover { opacity: 1; }
+}
+
+.hljs-keyword { color: var(--color-code-keyword); }
+
+.hljs-type { color: var(--color-code-type); }
+
+.hljs-string { color: var(--color-code-string); }
+
+.hljs-comment { color: var(--color-code-comment); }
+
+.bg { background-color: var(--color-pre); }
+
+.chroma { background-color: var(--color-pre); }
+
+.chroma .x { }
+
+.chroma .err { color: var(--color-text); }
+
+.chroma .cl { }
+
+.chroma .lnlinks { outline: none; text-decoration: none; color: inherit; }
+
+.chroma .lntd { vertical-align: top; padding: 0px; margin: 0px; border: 0px=
+; }
+
+.chroma .lntable { border-spacing: 0px; padding: 0px; margin: 0px; border: =
+0px; }
+
+.chroma .hl { background-color: var(--color-pre); }
+
+.chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; pa=
+dding: 0px 0.4em; color: var(--color-code-comment); }
+
+.chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; pad=
+ding: 0px 0.4em; color: var(--color-code-comment); }
+
+.chroma .line { display: flex; }
+
+.chroma .k { color: var(--color-code-keyword); }
+
+.chroma .kc { color: var(--color-code-keyword); }
+
+.chroma .kd { color: var(--color-code-keyword); }
+
+.chroma .kn { color: var(--color-code-keyword); }
+
+.chroma .kp { color: var(--color-code-keyword); }
+
+.chroma .kr { color: var(--color-code-keyword); }
+
+.chroma .kt { color: var(--color-code-keyword); }
+
+.chroma .n { color: var(--color-text); }
+
+.chroma .na { color: var(--color-code-keyword); }
+
+.chroma .nb { color: var(--color-code-keyword); }
+
+.chroma .bp { color: var(--color-code-keyword); }
+
+.chroma .nc { color: var(--color-code-keyword); }
+
+.chroma .no { color: var(--color-text); }
+
+.chroma .nd { color: var(--color-text); }
+
+.chroma .ni { color: var(--color-text); }
+
+.chroma .ne { color: var(--color-text); }
+
+.chroma .nf { color: var(--color-text); }
+
+.chroma .fm { color: var(--color-text); }
+
+.chroma .nl { color: var(--color-text); }
+
+.chroma .nn { color: var(--color-text); }
+
+.chroma .nx { color: var(--color-text); }
+
+.chroma .py { color: var(--color-text); }
+
+.chroma .nt { color: var(--color-text); }
+
+.chroma .nv { color: var(--color-text); }
+
+.chroma .vc { color: var(--color-text); }
+
+.chroma .vg { color: var(--color-text); }
+
+.chroma .vi { color: var(--color-text); }
+
+.chroma .vm { color: var(--color-text); }
+
+.chroma .l { color: var(--color-code-string); }
+
+.chroma .ld { color: var(--color-code-string); }
+
+.chroma .s { color: var(--color-code-string); }
+
+.chroma .sa { color: var(--color-code-string); }
+
+.chroma .sb { color: var(--color-code-string); }
+
+.chroma .sc { color: var(--color-code-string); }
+
+.chroma .dl { color: var(--color-code-string); }
+
+.chroma .sd { color: var(--color-code-string); }
+
+.chroma .s2 { color: var(--color-code-string); }
+
+.chroma .se { color: var(--color-code-string); }
+
+.chroma .sh { color: var(--color-code-string); }
+
+.chroma .si { color: var(--color-code-string); }
+
+.chroma .sx { color: var(--color-code-string); }
+
+.chroma .sr { color: var(--color-code-string); }
+
+.chroma .s1 { color: var(--color-code-string); }
+
+.chroma .ss { color: var(--color-code-string); }
+
+.chroma .m { color: var(--color-code-string); }
+
+.chroma .mb { color: var(--color-code-string); }
+
+.chroma .mf { color: var(--color-code-string); }
+
+.chroma .mh { color: var(--color-code-string); }
+
+.chroma .mi { color: var(--color-code-string); }
+
+.chroma .il { color: var(--color-code-string); }
+
+.chroma .mo { color: var(--color-code-string); }
+
+.chroma .o { color: var(--color-text); }
+
+.chroma .ow { color: var(--color-text); }
+
+.chroma .p { }
+
+.chroma .c { color: var(--color-code-comment); }
+
+.chroma .ch { color: var(--color-code-comment); }
+
+.chroma .cm { color: var(--color-code-comment); }
+
+.chroma .c1 { color: var(--color-code-comment); }
+
+.chroma .cs { color: var(--color-code-comment); }
+
+.chroma .cp { color: var(--color-code-string); }
+
+.chroma .cpf { color: var(--color-code-string); }
+
+.chroma .g { }
+
+.chroma .gd { }
+
+.chroma .ge { }
+
+.chroma .gr { }
+
+.chroma .gh { }
+
+.chroma .gi { }
+
+.chroma .go { }
+
+.chroma .gp { }
+
+.chroma .gs { }
+
+.chroma .gu { }
+
+.chroma .gt { }
+
+.chroma .gl { }
+
+.chroma .w { }
+
+@font-face { font-family: fa-brands; font-style: normal; font-weight: 400; =
+font-display: block; src: url("../fonts/fa-brands-400.woff2") format("woff2=
+"); }
+
+@font-face { font-family: "Font Awesome"; font-style: normal; font-weight: =
+400; font-display: block; src: url("../fonts/fa-regular-400.woff2") format(=
+"woff2"); }
+
+@font-face { font-family: "Font Awesome"; font-style: normal; font-weight: =
+900; font-display: block; src: url("../fonts/fa-solid-900.woff2") format("w=
+off2"); }
+
+.fa, .fab, .far, .fas { -webkit-font-smoothing: antialiased; display: inlin=
+e-block; font-style: normal; font-variant: normal; text-rendering: auto; li=
+ne-height: 1; }
+
+.fab { font-family: fa-brands; font-weight: 400; }
+
+.far { font-family: "Font Awesome"; font-weight: 400; }
+
+.fas { font-family: "Font Awesome"; font-weight: 900; }
+
+.fa-arrow-alt-circle-down::before { content: "=EF=8D=98"; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.fa-chalkboard-teacher::before { content: "=EF=94=9C"; }
+
+.fa-cloud::before { content: "=EF=83=82"; }
+
+.fa-code::before { content: "=EF=84=A1"; }
+
+.fa-cube::before { content: "=EF=86=B2"; }
+
+.fa-database::before { content: "=EF=87=80"; }
+
+.fa-dot-circle::before { content: "=EF=86=92"; }
+
+.fa-envelope::before { content: "=EF=83=A0"; }
+
+.fa-file::before { content: "=EF=85=9B"; }
+
+.fa-kiwi-bird::before { content: "=EF=94=B5"; }
+
+.fa-microphone::before { content: "=EF=84=B0"; }
+
+.fa-play::before { content: "=EF=85=84"; }
+
+.fa-robot::before { content: "=EF=95=84"; }
+
+.fa-rss::before { content: "=EF=82=9E"; }
+
+.fa-star::before { content: "=EF=80=85"; }
+
+.fa-telegram-plane::before { content: "=EF=8F=BE"; }
+
+.fa-terminal::before { content: "=EF=84=A0"; }
+
+.fa-user::before { content: "=EF=80=87"; }
+
+.fa-discord::before { content: "=EE=A0=80"; }
+
+.fa-facebook-1::before { content: "=EE=A0=81"; }
+
+.fa-facebook-2::before { content: "=EE=A0=82"; }
+
+.fa-facebook-3::before { content: "=EE=A0=83"; }
+
+.fa-github-1::before { content: "=EE=A0=84"; }
+
+.fa-github-2::before { content: "=EE=A0=85"; }
+
+.fa-github-3::before { content: "=EE=A0=86"; }
+
+.fa-instagram::before { content: "=EE=A0=87"; }
+
+.fa-linkedin-1::before { content: "=EE=A0=88"; }
+
+.fa-linkedin-2::before { content: "=EE=A0=8A"; }
+
+.fa-telegram::before { content: "=EE=A0=89"; }
+
+.fa-twitter-1::before { content: "=EE=A0=8B"; }
+
+.fa-twitter-2::before { content: "=EE=A0=8C"; }
+
+.fa-youtube::before { content: "=EE=A0=8D"; }
+
+.icon { display: inline-block; vertical-align: middle; width: 1em; height: =
+auto; }
+
+.icon--rounded { border-radius: 50%; }
+
+body { display: flex; flex-direction: column; min-height: 100vh; }
+
+.storey { padding-top: 4em; padding-bottom: 4em; }
+
+.storey--notop { padding-top: 0px; }
+
+.storey__header { font-size: 1.5em; font-weight: 700; margin: 0px 0px 0.75e=
+m; }
+
+.flex { display: flex; }
+
+.article { font-size: 1.1rem; }
+
+@media only screen and (min-width: 48em) {
+  .article { font-size: var(--font-size-large); }
+}
+
+@media only screen and (min-width: 62em) {
+  .article { font-size: 1.35rem; }
+  pre { font-size: var(--font-size-large); }
+}
+
+.article h1 { font-size: 1.8em; font-weight: 700; margin: 0px 0px 0.5em; }
+
+.article h2 { font-size: 1.4em; font-weight: 600; line-height: 1.35; margin=
+: 1em 0px 0.5em; }
+
+.article h2:first-child { margin-top: 0px; }
+
+.article h2 .anchor { visibility: hidden; position: absolute; margin-left: =
+-1em; width: 1em; cursor: pointer; border-bottom: none; }
+
+.article h3 { font-size: 1em; font-weight: 600; margin: 1em 0px 0.5em; }
+
+.article h3:first-child { margin-top: 0px; }
+
+.article ul, .article ol { padding-left: 2.5em; padding-right: 2.5em; margi=
+n: 0px 0px 0.8em; }
+
+.article ul li { list-style: none; }
+
+.article ol li { list-style: outside decimal; }
+
+.article li { margin: 0px 0px 0.4em; }
+
+.article figure { margin: 0px 0px 0.8em; }
+
+.article figcaption, .article .figcaption { color: var(--color-gray); font-=
+size: 90%; margin-top: 0.2em; }
+
+.article figcaption a, .article .figcaption a { color: var(--color-gray); b=
+order-color: var(--color-gray); }
+
+.article blockquote { border-left: 0.3em solid var(--color-gray); color: va=
+r(--color-gray); margin-bottom: 0.8em; padding: 0px 1em; }
+
+.article .big { font-size: 1.5em; margin: 0px 0px 0.8em; }
+
+.article blockquote.big { border: none; color: var(--color-gray); font-fami=
+ly: var(--font-serif); font-style: italic; padding: 0px 1.5em; }
+
+@media only screen and (min-width: 48em) {
+  .article blockquote.big { padding: 0px 3em; }
+}
+
+.article .boxed { margin-bottom: 0.8em; border: 0.25em solid var(--color-bo=
+x); padding: 1.5em; font-size: 90%; }
+
+.article .boxed > p:last-child { margin-bottom: 0px; }
+
+.article .boxed--blue { border: 1em solid var(--color-blue); }
+
+@media only screen and (min-width: 48em) {
+  .article .boxed { padding: 2em; }
+}
+
+.article table { width: 100%; margin: 0px 0px 0.8em; overflow-x: auto; vert=
+ical-align: top; border: 1px solid rgb(234, 234, 234); border-spacing: 0px;=
+ border-collapse: collapse; text-align: left; font-size: 0.9em; }
+
+.article table td, .article table th { padding: 0.4em; vertical-align: top;=
+ border-bottom: 1px solid rgb(234, 234, 234); }
+
+.article table tr:last-child td { border-bottom: none; }
+
+pre { line-height: 1.2; background: var(--color-pre) !important; }
+
+pre + p, pre + blockquote { margin-top: 0.8em; }
+
+pre + pre { margin-top: 1px; }
+
+pre > code { padding: 1.5rem; }
+
+.highlight + p, .highlight + blockquote { margin-top: 0.8em; }
+
+.highlight + pre { margin-top: 1px; }
+
+.footnotes { margin: 1em 0px; }
+
+.footnotes hr { display: none; }
+
+.footnotes ol { padding-left: 1.5em; padding-right: 1.5em; font-size: 80%; =
+}
+
+a.footnote-ref { border: none; }
+
+a.footnote-ref::before { content: "["; }
+
+a.footnote-ref::after { content: "]"; }
+
+a.footnote-backref { font-family: monospace; border-bottom: none; }
+
+@media only screen and (min-width: 48em) {
+  .longread .article h2 { position: sticky; top: 0px; z-index: 1; backgroun=
+d: var(--color-bg); }
+  .article h2:hover .anchor { visibility: visible; }
+  .footnotes ol { columns: 2; }
+}
+
+@media only screen and (min-width: 62em) {
+  .footnotes ol { columns: 3; }
+}
+
+codapi-snippet { display: block; margin-bottom: 0.8em; background: var(--co=
+lor-pre); }
+
+div.highlight + codapi-snippet, pre + codapi-snippet { margin-top: -0.8em; =
+}
+
+codapi-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: =
+1em; margin-bottom: 0px; padding: 0px 1.5em 1em; font-size: 1rem; }
+
+codapi-toolbar button { padding: 0px; border: none; background: none; line-=
+height: 1.35; color: var(--color-blue); }
+
+codapi-toolbar button::after { content: " =E2=96=B6"; }
+
+codapi-toolbar button:hover { background: none; color: rgb(92, 184, 255); }
+
+codapi-toolbar a { border: none !important; }
+
+codapi-status { display: block; white-space: nowrap; }
+
+codapi-status svg { width: 1em; height: 1em; }
+
+codapi-output { display: block; margin-bottom: 0.8em; border-top: 1px solid=
+ var(--color-bg); }
+
+codapi-output[hidden] { display: none; }
+
+codapi-output a[href=3D"#close"] { display: none; }
+
+codapi-output pre { margin-bottom: 0px; }
+
+codapi-output pre > code { margin-bottom: 0px; padding: 1em 1.5em; }
+
+div.highlight + div.highlight { margin-top: -0.8em; border-top: 1px solid v=
+ar(--color-bg); }
+
+.utterances { margin-left: 0px !important; }
+
+.footer { color: var(--color-gray); padding-top: 1em; padding-bottom: 1em; =
+}
+
+.footer__item { margin-left: 2em; }
+
+.footer__link { border-bottom-color: rgba(153, 153, 153, 0.4); color: inher=
+it; text-decoration: none; }
+
+.footer__link:visited { border-bottom-color: rgba(153, 153, 153, 0.4); colo=
+r: inherit; }
+
+.footer__social-link { color: rgb(33, 150, 243); display: inline-block; hei=
+ght: 1.5em; line-height: 1.5em; text-align: center; text-decoration: none; =
+width: 2em; border: none !important; }
+
+.footer__social-link:visited { color: rgb(33, 150, 243); }
+
+.footer__social-link:hover, .footer__social-link:visited:hover { color: rgb=
+(92, 184, 255); }
+
+.footer__social-link span { display: none; }
+
+.header { padding-top: 1em; }
+
+.header-icon { border-radius: 10%; display: inline-block; height: 1.5em; ve=
+rtical-align: middle; width: 1.5em; }
+
+.color-red { color: var(--color-red); }
+
+.color-gray { color: var(--color-gray); }
+
+.color-gray a, .color-gray a:visited { border-color: rgba(0, 0, 0, 0.14); c=
+olor: var(--color-gray); }
+
+.color-gray a:hover { border-bottom: none; }
+
+.color-sin { color: var(--color-yellow); }
+
+.color-grayscale { filter: grayscale(100%); }
+
+.highlight { background-color: rgb(255, 245, 157); }
+
+.align-left { text-align: left; }
+
+.align-center { text-align: center; }
+
+.align-right { text-align: right; }
+
+.valign-middle { vertical-align: middle; }
+
+.img-inline { vertical-align: middle; display: inline !important; }
+
+.img-link { display: inline-block; border: none !important; }
+
+.img-link:hover { border: none !important; }
+
+.img-bordered { border: 0.2em solid var(--color-box); }
+
+.img-bordered-thin { border: 1px solid var(--color-box); }
+
+.img-rounded { border-radius: 0.5em; }
+
+.naked-list { list-style: none; margin: 0px; padding: 0px; }
+
+.naked-list li { display: inline-block; }
+
+.naked-list li:first-child { margin-left: 0px; }
+
+@media only screen and (max-width: 48em) {
+  .naked-list { display: inline-block; margin: auto; text-align: left; }
+  .naked-list .footer__item { display: block; margin: 0.25em 0px 0.5em !imp=
+ortant; }
+}
+
+.col-tile { padding-bottom: 0.5rem; }
+
+.nowrap { white-space: nowrap; }
+
+a.disabled { pointer-events: none; color: var(--color-gray); border-bottom-=
+color: rgba(0, 0, 0, 0.14); }
+
+@media only screen and (max-width: 767px) {
+  .hidden-mobile { display: none !important; }
+}
+
+@media only screen and (min-width: 768px) {
+  .only-mobile { display: none; }
+}
+
+@media only screen and (max-width: 991px) {
+  .hidden-md { display: none !important; }
+}
+
+.home { background: linear-gradient(rgb(255, 255, 255), rgb(247, 248, 252))=
+; }
+
+.home__block { font-size: var(--font-size-large); }
+
+.home__row > div { margin-bottom: 1.5em; }
+
+.menu__link { display: inline-block; margin-right: 1em; border: none !impor=
+tant; }
+
+.menu__link:last-child { margin-right: 0px; }
+
+.menu__link i { color: rgb(51, 51, 51); }
+
+.menu__link span, .menu__link:visited span { color: var(--color-blue); bord=
+er-bottom: 1px solid rgba(0, 139, 245, 0.2); }
+
+.menu__link:active span, .menu__link:hover span { color: rgb(92, 184, 255);=
+ border-bottom-color: rgba(92, 184, 255, 0.2); }
+
+.menu__link:active i, .menu__link:hover i { color: rgb(92, 184, 255); }
+
+.post-stub { margin-bottom: 1.5em; }
+
+.post-stub__header { position: relative; margin: 0px; }
+
+.post-stub__title { margin-right: 0.5rem; }
+
+.post-stub__star { display: none; width: 1.2em; color: var(--color-yellow);=
+ }
+
+.post-stub__date { white-space: nowrap; color: var(--color-gray); font-size=
+: 0.8em; }
+
+.post-stub__description { margin: 0.2em 0px 0px; }
+
+@media only screen and (min-width: 48em) {
+  .post-stub__star { position: absolute; display: inline-block; left: -1.3e=
+m; top: 0.2em; }
+}
+
+.post__date { color: var(--color-gray); display: inline-block; margin-right=
+: 1em; }
+
+.post__footer { margin-top: 1em; }
+
+.post__related { margin-top: 4em; margin-bottom: 2em; }
+
+.post__nav p { margin-bottom: 0.8em; }
+
+.post__tags { color: var(--color-gray); display: inline-block; }
+
+.post__tags a { border-bottom-color: rgba(0, 0, 0, 0.1); color: currentcolo=
+r; }
+
+.article + .posts { margin-top: 1.5em; }
+
+@media only screen and (min-width: 48em) {
+  .posts { font-size: var(--font-size-large); }
+}
+
+a.portfolio-thumb { border: none; display: inline-block; }
+
+img.portfolio-thumb--raised { border-top: 1px solid rgb(234, 234, 234); box=
+-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.4) 0px =
+2px 3px 0px; }
+
+img.portfolio-thumb { margin: 0px 0px 0.5em; }
+
+.project-section-header { margin-bottom: 0.5em; padding-left: 1.5em; font-s=
+ize: 1em; font-weight: 700; }
+
+.project-block { position: relative; width: 100%; margin-bottom: 1em; borde=
+r: 1px solid rgb(234, 234, 234); border-radius: 0.25em; padding: 1em 1.5em;=
+ }
+
+.project-block--highlight { border-color: var(--color-blue); }
+
+.project-block--highlight::after { position: absolute; top: 0px; right: 0px=
+; display: inline-block; width: 1.5rem; height: 1.5rem; background: var(--c=
+olor-blue); border-bottom-left-radius: 0.25em; text-align: center; color: r=
+gb(255, 255, 255); content: "=E2=98=85"; }
+
+.project-block--noborder { border: none; }
+
+.project-block p { margin: 0px 0px 0.5em; }
+
+.project-block p:last-child { margin-bottom: 0px; }
+
+.project-book { margin: 1em 2em 1em 0px; }
+
+@media (prefers-color-scheme: dark) {
+  img.portfolio-thumb--raised { border: 1px solid var(--color-gray); box-sh=
+adow: none; }
+}
+
+.search-module input[type=3D"search"] { width: 100%; outline-style: none; f=
+ont-size: 12px; }
+
+.sqlime-example { margin: 0px 0px 0.8em; font-family: var(--font-monospace)=
+; line-height: 1; }
+
+.sqlime-example div:nth-child(1) { margin: 0px 0px 0.8em; font-size: 0.8em;=
+ }
+
+.sqlime-example button { border: 1px solid var(--color-blue); background: n=
+one; color: var(--color-blue); }
+
+.sqlime-example button:hover { background: var(--color-blue); color: var(--=
+color-bg); }
+
+.sqlime-example sqlime-output { padding: 1.5em; background-color: var(--col=
+or-pre); font-size: 0.8em; }
+
+.sqlime-example table { display: inline-block; width: auto; max-width: 100%=
+; margin-bottom: 0px; border-top: 1px solid var(--color-text); border-right=
+: none; border-bottom: 1px solid var(--color-text); border-left: 1px solid =
+var(--color-text); line-height: 1; font-size: 1em; }
+
+.sqlime-example table th { vertical-align: top; padding: 0.6em 1em; border-=
+top: none; border-right: 1px solid var(--color-text); border-bottom: 1px so=
+lid var(--color-text); border-left: none; font-weight: normal; line-height:=
+ 1; }
+
+.sqlime-example table td { vertical-align: top; padding: 0.2em 1em; border-=
+right: 1px solid var(--color-text); border-bottom: none; line-height: 1; }
+
+.sqlime-example table tr:first-child td { padding-top: 0.8em; }
+
+.sqlime-example table tr:last-child td { padding-bottom: 0.8em; }
+
+@media only screen and (min-width: 62em) {
+  .sqlime-example { font-size: var(--font-size-large); }
+}
+
+.subscribe-block { margin-bottom: 2rem; }
+
+.subscribe-block a { border: none; display: inline-block; }
+
+.subscribe-form { font-size: 1rem; }
+
+.subscribe-form input[type=3D"email"] { display: inline-block; vertical-ali=
+gn: middle; }
+
+.subscribe-form button[type=3D"submit"] { border: 1px solid var(--color-blu=
+e); }
+
+@media only screen and (max-width: 62em) {
+  .subscribe-form input[type=3D"email"] { width: 10rem; }
+}
+------MultipartBoundary--v2vmxzwudCrjTh7xrb1BDZ5bwJFKm9zHNc1c8eGn1k----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/assets/logo.svg
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<!-- Generated by Pixelmator Pro 2.4.3 -->
+<svg width=3D"1024" height=3D"1024" viewBox=3D"0 0 1024 1024" xmlns=3D"http=
+://www.w3.org/2000/svg" xmlns:xlink=3D"http://www.w3.org/1999/xlink">
+    <path id=3D"Rectangle" fill=3D"#000000" fill-rule=3D"evenodd" stroke=3D=
+"none" d=3D"M 0 1024 L 1024 1024 L 1024 0 L 0 0 Z"/>
+    <path id=3D"a" fill=3D"#ffffff" fill-rule=3D"evenodd" stroke=3D"none" d=
+=3D"M 683.42926 590.483032 C 683.42926 606.237 685.595337 617.658447 689.92=
+7673 624.747681 C 694.26001 631.836914 701.283569 637.219482 710.998474 640=
+.895386 L 685.398438 722.81543 C 660.717285 720.452271 639.909302 715.00415=
+ 622.973816 706.470764 C 606.038391 697.937378 592.713379 685.006226 582.99=
+8474 667.67688 C 566.981995 686.844238 546.502197 701.088135 521.558472 710=
+.409241 C 496.614746 719.730347 471.146271 724.390747 445.152313 724.390747=
+ C 402.091583 724.390747 367.761658 712.116028 342.16153 687.566162 C 316.5=
+61401 663.016296 303.761536 631.443237 303.761536 592.846191 C 303.761536 5=
+47.422363 321.550079 512.370361 357.127686 487.689209 C 392.705292 463.0080=
+57 442.78891 450.667664 507.380005 450.667664 L 563.700012 450.667664 L 563=
+.700012 434.913818 C 563.700012 392.115662 536.131042 370.716919 480.99231 =
+370.716919 C 467.601471 370.716919 450.403687 372.620483 429.398468 376.427=
+673 C 408.393219 380.234863 387.388306 385.683044 366.383087 392.772278 L 3=
+37.632294 310.064636 C 364.676544 299.824585 392.836273 292.078979 422.1123=
+05 286.827698 C 451.388367 281.576355 477.578857 278.950745 500.684601 278.=
+950745 C 562.912598 278.950745 608.926514 291.619385 638.727722 316.956909 =
+C 668.52887 342.294495 683.42926 378.856201 683.42926 426.643066 Z M 488.08=
+1543 635.381531 C 501.472382 635.381531 515.519409 631.377441 530.223083 62=
+3.369263 C 544.926758 615.360962 556.085632 604.005188 563.700012 589.30151=
+4 L 563.700012 521.559998 L 532.97998 521.559998 C 498.32135 521.559998 472=
+.852905 526.876831 456.573853 537.510742 C 440.2948 548.144653 432.155396 5=
+63.701416 432.155396 584.181519 C 432.155396 600.197998 437.0784 612.735352=
+ 446.924622 621.793823 C 456.770813 630.852356 470.489655 635.381531 488.08=
+1543 635.381531 Z"/>
+</svg>=0A
+------MultipartBoundary--v2vmxzwudCrjTh7xrb1BDZ5bwJFKm9zHNc1c8eGn1k----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://antonz.org/grep-by-example/ebook.png
+
+iVBORw0KGgoAAAANSUhEUgAAAlgAAAMgCAIAAABwAouTAABBKklEQVR42u3d91sT2QOo8fsH3SvY
+1lXXrbr7laKIveuqayH0poAIiooFsQv2XhEVewEUC6CIioAiKEV67y1l7gMjw0iSoYWivnk+P+xi
+SBlIXmZyzpn/M8RuIgAAP6z/wyYAABBCAAAIIQAAhBAAAEIIAAAhBACAEAIAQAgBACCEAAAQQgAA
+CCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIAAAghAACEEAAAQggAACEEAIAQAgBACAEAIIQA
+ABBCAAAIYZf9vxX/8AMDgG/U/13+NyEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBACA
+EAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIAAAghAACEEAAAQggA
+ACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBAC
+AEAIAQAghAAAEEIAAAghAACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAh
+BACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIAAAghAACEEAAA
+QggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBACAEAIAQAgBACCEAAAQQgAAIWQr
+AAAIIQAAhBAAAEIIAAAhBACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAg
+hAAAEEIAAAghAACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBACAEAIA
+QAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIAAAghAACEEAAAQggAACEE
+AIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAI
+AQAghAAAEEIAAAghAACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBACA
+EAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBAC35xRLlMW7HDzOrk98FJI0JXD28MPb7p4
+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
+AEIIAAAhBACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIAAAgh
+AACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBAAQQgAACCEAAIQQAABC
+CAAAIQQAgBACAEAIAQAghAAAEEIAAAghAACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAA
+hBAAAEIIAAAhBACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIA
+AAghAACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBACAEAIAQAgBACCE
+AAAQQgAACCEAAIQQAEAI2QQAAEIIAAAhBACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQA
+gBACAEAIAQAghAAAEEIAAAghAACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEII
+AAAhBACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIAAAghAACE
+EAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBACAEAIACCFbAQBACAEAIIQA
+ABBCAAAIIQAAhBAAAEIIAAAhBACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAI
+AQAghAAAEEIAAAghAACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBACA
+EAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIAAAghAACEEAAAQggA
+ACEEAIAQAgBACAEAIIQAABBCAAAhBACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBAC
+AEAIAQAghAAAEEIAAAghAACEEAAAQggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAh
+BACAEAIAQAgBACCEAAAQQgAACCEAAIQQAABCCAAAIQQAgBACAEAIAQAghAAAEEIAAAghAACEEAAA
+QggAACEEAIAQAgBACAEAIIQAABBCAAAIIQAAhBAAAEIIAAAhBACAEAIAQAgBAISQrQAAIIQAABBC
+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
+
+------MultipartBoundary--v2vmxzwudCrjTh7xrb1BDZ5bwJFKm9zHNc1c8eGn1k----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://antonz.org/grep-by-example/playground.png
+
+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
+
+------MultipartBoundary--v2vmxzwudCrjTh7xrb1BDZ5bwJFKm9zHNc1c8eGn1k------
