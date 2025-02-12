@@ -117,6 +117,7 @@
 * [spf13 Google -->](https://spf13.com/p/spf13-google/)
 * [ 31个！Golang常用工具来啦（建议收藏） ](https://mp.weixin.qq.com/s/br1LgsL-4YFL5lRVwvnqZQ)
 * [Go语言设计和工具链核心团队成员介绍](https://zhuanlan.zhihu.com/p/75373075)
+* [Go 1.24引爆升级：新特性全解析！](https://www.bilibili.com/video/BV1JDFdejETc/)
 
 
 ## Effective Go
