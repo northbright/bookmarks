@@ -1,0 +1,3806 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://antonz.org/git-by-example/
+Subject: Git by example: Interactive guide
+Date: Wed, 12 Feb 2025 06:22:22 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--fP6mXKaRwJjI3j8jpAiAa2zk6FyfcQ3l6EM3p2mMUE----"
+
+
+------MultipartBoundary--fP6mXKaRwJjI3j8jpAiAa2zk6FyfcQ3l6EM3p2mMUE----
+Content-Type: text/html
+Content-ID: <frame-9F08C2728098277806967EF6DAD9301B@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/git-by-example/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"wid=
+th=3Ddevice-width,initial-scale=3D1,maximum-scale=3D1"><title>Git by exampl=
+e: Interactive guide</title>
+<meta name=3D"description" content=3D"Interactive introduction to Git with =
+real-world use cases."><meta name=3D"robots" content=3D"index, follow"><lin=
+k rel=3D"stylesheet" type=3D"text/css" href=3D"https://antonz.org/assets/cs=
+s/style.ab5b07a3b8460dd96d9aa8eef3fcde58195fdd8aeae66b56e0428d9bc3c4a9f6.cs=
+s"><link rel=3D"icon" href=3D"https://antonz.org/assets/favicon/favicon.ico=
+" sizes=3D"any"><link rel=3D"icon" type=3D"image/svg+xml" href=3D"https://a=
+ntonz.org/assets/favicon/favicon.svg"><link rel=3D"apple-touch-icon" href=
+=3D"https://antonz.org/assets/favicon/apple-touch-icon.png"><link rel=3D"ma=
+nifest" href=3D"https://antonz.org/assets/favicon/manifest.json"><link rel=
+=3D"canonical" href=3D"https://antonz.org/git-by-example/"><meta name=3D"au=
+thor" content=3D"Anton Zhiyanov"><meta property=3D"og:type" content=3D"arti=
+cle"><meta property=3D"og:title" content=3D"Git by example: Interactive gui=
+de"><meta property=3D"og:description" content=3D"Interactive introduction t=
+o Git with real-world use cases."><meta property=3D"og:url" content=3D"http=
+s://antonz.org/git-by-example/"><meta property=3D"og:image" content=3D"http=
+s://antonz.org/git-by-example/cover.png"><meta name=3D"twitter:card" conten=
+t=3D"summary_large_image"><meta name=3D"twitter:title" content=3D"Git by ex=
+ample: Interactive guide"><meta name=3D"twitter:description" content=3D"Int=
+eractive introduction to Git with real-world use cases."><meta name=3D"twit=
+ter:url" content=3D"https://antonz.org/git-by-example/"><meta name=3D"twitt=
+er:site" content=3D"@ohmypy"><meta name=3D"twitter:image" content=3D"https:=
+//antonz.org/git-by-example/cover.png"></head><body><div class=3D"header"><=
+div class=3D"container"><div class=3D"row"><div class=3D"col-xs-6 col-sm-3"=
+><a class=3D"img-link" href=3D"https://antonz.org/"><img src=3D"https://ant=
+onz.org/assets/logo.svg" class=3D"header-icon">
+</a>&nbsp;
+<a href=3D"https://antonz.org/"><strong>Anton Zhiyanov</strong></a></div><d=
+iv class=3D"col-xs-12 col-sm-6 col-md-4 hidden-mobile"><a class=3D"menu__li=
+nk" href=3D"https://antonz.org/#projects"><span>projects</span>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/#books"><span>books<=
+/span>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/all/"><span>blog</sp=
+an>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/#about"><span>about<=
+/span></a></div><div class=3D"col-xs-6 col-sm-3"><div class=3D"search-modul=
+e"><form action=3D"https://duckduckgo.com/">
+
+
+
+
+
+<input type=3D"search" name=3D"q" autocomplete=3D"off" placeholder=3D"Searc=
+h" aria-label=3D"Search"></form></div></div></div></div></div><div class=3D=
+"storey"><div class=3D"container"><article class=3D"post" data-namespace=3D=
+""><div class=3D"row"><div class=3D"col-xs-12 col-md-10 article"><header><h=
+1>Git by example: Interactive guide</h1></header><p>Git is <em>the</em> dis=
+tributed version control system used in software development today. It's ve=
+ry powerful, but also known for its not-so-obvious syntax.</p><p>I got tire=
+d of googling the same Git commands over and over again. So I created an in=
+teractive step-by-step guide to Git operations, from basic to advanced. You=
+ can read it from start to finish to (hopefully) learn more about Git, or j=
+ump to a specific use case that interests you.</p><p>Feel free to experimen=
+t with the examples by changing the commands and clicking <em>Run</em>.</p>=
+<p><a href=3D"https://antonz.org/git-by-example/#concepts">Concepts</a> =E2=
+=80=A2
+<a href=3D"https://antonz.org/git-by-example/#basics">Basics</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#branch-and-merge">Branch &amp=
+; merge</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#local-and-remote">Local &amp;=
+ remote</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#undo">Undo</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#advanced-stuff">Advanced</a> =
+=E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#final-thoughts">Final thought=
+s</a></p><p>This guide is also available in other formats:</p><div class=3D=
+"row"><div class=3D"col-xs-6 col-sm-4"><figure><a href=3D"https://github.co=
+m/nalgeon/git-by-example" class=3D"img-link"><img alt=3D"Minibook" src=3D"h=
+ttps://antonz.org/git-by-example/ebook.png"></a><figcaption><a href=3D"http=
+s://github.com/nalgeon/git-by-example">PDF minibook</a></figcaption></figur=
+e></div><div class=3D"col-xs-6 col-sm-4"><figure><a href=3D"https://codapi.=
+org/git/" class=3D"img-link"><img alt=3D"Playground" src=3D"https://antonz.=
+org/git-by-example/playground.png"></a><figcaption><a href=3D"https://codap=
+i.org/git/">Playground</a></figcaption></figure></div></div><h2 id=3D"conce=
+pts">Concepts</h2><p>This is the only piece of theory in the guide. I'll ke=
+ep it short and simplified to the <span class=3D"nowrap">=CF=80 =3D=3D 3</s=
+pan> level. Please don't judge me if you're a Git master.</p><h3 id=3D"work=
+ing-tree-staging-area-repository">Working tree, staging area, repository</h=
+3><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-text" data-lang=3D"text"><span class=3D"line"><span class=3D"c=
+l">=E2=94=8C=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90   =
+      =E2=94=8C=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 local      =
+  =E2=94=82 push =E2=94=80&gt; =E2=94=82 remote       =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 repo       =
+  =E2=94=82 &lt;- pull =E2=94=82 repo         =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98         =E2=94=94=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span><span class=3D"line"><span class=3D"cl">check =E2=94=82  =E2=
+=86=91=E2=86=93 commit / reset
+</span></span><span class=3D"line"><span class=3D"cl">out   =E2=94=82 =E2=
+=94=8C=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">      =E2=94=82 =E2=
+=94=82 staging area =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">      =E2=94=82 =E2=
+=94=94=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span><span class=3D"line"><span class=3D"cl">      =E2=96=BD  =E2=
+=86=91=E2=86=93 add / restore
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=8C=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 working tre=
+e =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 .          =
+  =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 =E2=94=9C=
+=E2=94=80=E2=94=80 go.mod   =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 =E2=94=94=
+=E2=94=80=E2=94=80 main.go  =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span></code></pre></div><p>A <em>working tree</em> is the slice of=
+ the project at any given moment (usually it's the current moment). When yo=
+u add or edit code, you change the working tree.</p><p>A <em>staging area</=
+em> is where you stage the changes from the working tree before making them=
+ permanent.</p><p>A <em>repo</em> (repository) is the collection of permane=
+nt changes (<em>commits</em>) made throughout the history of the project. T=
+ypically, there is a single <em>remote</em> repo (managed by GitHub/GitLab/=
+etc) and many <em>local</em> repos =E2=80=94 one for each developer involve=
+d in a project.</p><p>When you make a change in the staging area permanent,=
+ it is removed from the staging area and <em>committed</em> to the local re=
+po. A commit is the permanent record of that change. The repo contains all =
+the commits that have been made.</p><p>When you <em>checkout</em> a specifi=
+c commit, the working tree is updated to reflect the project state at the t=
+ime of that commit.</p><p>Local and remote repos are frequently synchronize=
+d so that all repos contain all commits from all developers.</p><h3 id=3D"b=
+ranch-tag-head">Branch, tag, HEAD</h3><div class=3D"highlight"><pre tabinde=
+x=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text"><=
+span class=3D"line"><span class=3D"cl">      main             =E2=97=8B v1.=
+1
+</span></span><span class=3D"line"><span class=3D"cl">feat-2 =E2=94=82     =
+          =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">      =E2=95=B2=E2=94=
+=82               =E2=80=A2
+</span></span><span class=3D"line"><span class=3D"cl">       =E2=94=82 feat=
+-1        =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">       =E2=94=82=E2=
+=95=B1              =E2=97=8B v1.0
+</span></span><span class=3D"line"><span class=3D"cl">       =E2=94=82     =
+          =E2=94=82
+</span></span></code></pre></div><p>A <em>branch</em> is an alternate versi=
+on of the project reality. Typically, there is a main branch, and separate =
+branches for features under development. When work on a feature branch is c=
+omplete, it is merged into the main branch (or discarded).</p><p>A <em>tag<=
+/em> is a named state of the project. Typically, tags are created on the ma=
+in branch for important milestones such as releases.</p><p>The currently ch=
+ecked-out commit (usually the latest commit in a branch) is referenced as <=
+em>HEAD</em>.</p><p>Now that the boring stuff is out of the way, let's get =
+to the recipes!</p><h2 id=3D"basics">Basics</h2><p>Let's start with basic G=
+it operations on a local repo.</p><p><a href=3D"https://antonz.org/git-by-e=
+xample/#init-repo">init repo</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#add-file">add file</a> =E2=80=
+=A2
+<a href=3D"https://antonz.org/git-by-example/#edit-file">edit file</a> =E2=
+=80=A2
+<a href=3D"https://antonz.org/git-by-example/#rename-file">rename file</a> =
+=E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#delete-file">delete file</a> =
+=E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#show-current-status">show sta=
+tus</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#show-commit-log">show log</a>=
+ =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#show-specific-commit">show co=
+mmit</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#search-repo">search</a></p><h=
+3 id=3D"init-repo">Init repo</h3><p>Create an empty repo:</p><div class=3D"=
+highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-she=
+ll" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span=
+ class=3D"line"><span class=3D"cl">git init
+</span></span></code></pre></div><codapi-snippet id=3D"init-1" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"init.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Set user name and email for the repo (they are required=
+):</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code c=
+lass=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellc=
+heck=3D"false"><span class=3D"line"><span class=3D"cl">git config user.emai=
+l alice@example.com
+</span></span><span class=3D"line"><span class=3D"cl">git config user.name =
+<span class=3D"s2">"Alice Zakas"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"init-2" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"init.sh" depends-on=3D"init-1" output-ta=
+il=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Use the <code>--global</code> flag to set the name and =
+email at the OS user level instead of the repo level.</p><p>Show user and r=
+epo configs:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chrom=
+a"><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"tr=
+ue" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">git config=
+ --list --show-origin
+</span></span></code></pre></div><codapi-snippet id=3D"init-3" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"init.sh" depends-on=3D"init-2" output-ta=
+il=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"add-file">Add file</h3><p>Create a file and add =
+it to the staging area:</p><div class=3D"highlight"><pre tabindex=3D"0" cla=
+ss=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedi=
+table=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl"=
+><span class=3D"nb">echo</span> <span class=3D"s2">"git is awesom"</span> &=
+gt; message.txt
+</span></span><span class=3D"line"><span class=3D"cl">git add message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"add-1" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"add.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>View changes in the staging area:</p><div class=3D"high=
+light"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" =
+data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span cla=
+ss=3D"line"><span class=3D"cl">git diff --cached
+</span></span></code></pre></div><codapi-snippet id=3D"add-2" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"add.sh" depends-on=3D"add-1" output-tail=
+=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Commit to the local repo:</p><div class=3D"highlight"><=
+pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lan=
+g=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"li=
+ne"><span class=3D"cl">git commit -m <span class=3D"s2">"add message"</span=
+>
+</span></span></code></pre></div><codapi-snippet id=3D"add-3" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"add.sh" depends-on=3D"add-1" output-tail=
+=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"edit-file">Edit file</h3><p>Edit the previously =
+committed file:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"ch=
+roma"><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D=
+"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl"><span c=
+lass=3D"nb">echo</span> <span class=3D"s2">"git is awesome"</span> &gt; mes=
+sage.txt
+</span></span></code></pre></div><codapi-snippet id=3D"edit-1" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"edit.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>View local changes:</p><div class=3D"highlight"><pre ta=
+bindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"s=
+hell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><s=
+pan class=3D"cl">git diff
+</span></span></code></pre></div><codapi-snippet id=3D"edit-2" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"edit.sh" depends-on=3D"edit-1" output-ta=
+il=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Add modified files and commit in one command:</p><div c=
+lass=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"lang=
+uage-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"fals=
+e"><span class=3D"line"><span class=3D"cl">git commit -am <span class=3D"s2=
+">"edit message"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"edit-3" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"edit.sh" depends-on=3D"edit-1" output-ta=
+il=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Note that <code>-a</code> does not add new files, only =
+changes to the already committed files.</p><h3 id=3D"rename-file">Rename fi=
+le</h3><p>Rename the previously committed file:</p><div class=3D"highlight"=
+><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-l=
+ang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"=
+line"><span class=3D"cl">git mv message.txt praise.txt
+</span></span></code></pre></div><codapi-snippet id=3D"mv-1" sandbox=3D"she=
+ll" editor=3D"basic" template=3D"mv.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The change is already in the staging area, so <code>git=
+ diff</code> won't show it. Use <code>--cached</code>:</p><div class=3D"hig=
+hlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell"=
+ data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span cl=
+ass=3D"line"><span class=3D"cl">git diff --cached
+</span></span></code></pre></div><codapi-snippet id=3D"mv-2" sandbox=3D"she=
+ll" editor=3D"basic" template=3D"mv.sh" depends-on=3D"mv-1" output-tail=3D"=
+" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Commit the change:</p><div class=3D"highlight"><pre tab=
+index=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"sh=
+ell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><sp=
+an class=3D"cl">git commit -m <span class=3D"s2">"rename message.txt"</span=
+>
+</span></span></code></pre></div><codapi-snippet id=3D"mv-3" sandbox=3D"she=
+ll" editor=3D"basic" template=3D"mv.sh" depends-on=3D"mv-1" output-tail=3D"=
+" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"delete-file">Delete file</h3><p>Delete the previ=
+ously committed file:</p><div class=3D"highlight"><pre tabindex=3D"0" class=
+=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedita=
+ble=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">g=
+it rm message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"rm-1" sandbox=3D"she=
+ll" editor=3D"basic" template=3D"rm.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The change is already in the staging area, so <code>git=
+ diff</code> won't show it. Use <code>--cached</code>:</p><div class=3D"hig=
+hlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell"=
+ data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span cl=
+ass=3D"line"><span class=3D"cl">git diff --cached
+</span></span></code></pre></div><codapi-snippet id=3D"rm-2" sandbox=3D"she=
+ll" editor=3D"basic" template=3D"rm.sh" depends-on=3D"rm-1" output-tail=3D"=
+" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Commit the change:</p><div class=3D"highlight"><pre tab=
+index=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"sh=
+ell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><sp=
+an class=3D"cl">git commit -m <span class=3D"s2">"delete message.txt"</span=
+>
+</span></span></code></pre></div><codapi-snippet id=3D"rm-3" sandbox=3D"she=
+ll" editor=3D"basic" template=3D"rm.sh" depends-on=3D"rm-1" output-tail=3D"=
+" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"show-current-status">Show current status</h3><p>=
+Edit the previously committed file and add the changes to the staging area:=
+</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code cla=
+ss=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellche=
+ck=3D"false"><span class=3D"line"><span class=3D"cl"><span class=3D"nb">ech=
+o</span> <span class=3D"s2">"git is awesome"</span> &gt; message.txt
+</span></span><span class=3D"line"><span class=3D"cl">git add message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"status-1" sandbox=3D=
+"shell" editor=3D"basic" template=3D"status.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Create a new file:</p><div class=3D"highlight"><pre tab=
+index=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"sh=
+ell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><sp=
+an class=3D"cl"><span class=3D"nb">echo</span> <span class=3D"s2">"git is g=
+reat"</span> &gt; praise.txt
+</span></span></code></pre></div><codapi-snippet id=3D"status-2" sandbox=3D=
+"shell" editor=3D"basic" template=3D"status.sh" depends-on=3D"status-1" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show the working tree status:</p><div class=3D"highligh=
+t"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data=
+-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=
+=3D"line"><span class=3D"cl">git status
+</span></span></code></pre></div><codapi-snippet id=3D"status-3" sandbox=3D=
+"shell" editor=3D"basic" template=3D"status.sh" depends-on=3D"status-2" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Note that <code>message.txt</code> is in the staging ar=
+ea, while <code>praise.txt</code> is not tracked.</p><h3 id=3D"show-commit-=
+log">Show commit log</h3><p>Show commits:</p><div class=3D"highlight"><pre =
+tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D=
+"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line">=
+<span class=3D"cl">git log
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"log.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show only the commit message and the short hash:</p><di=
+v class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"l=
+anguage-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"f=
+alse"><span class=3D"line"><span class=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"log.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show commits as an ASCII graph:</p><div class=3D"highli=
+ght"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" da=
+ta-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=
+=3D"line"><span class=3D"cl">git log --graph
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"log.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show compact ASCII graph:</p><div class=3D"highlight"><=
+pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lan=
+g=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"li=
+ne"><span class=3D"cl">git log --oneline --graph
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"log.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"show-specific-commit">Show specific commit</h3><=
+p>Show the last commit contents:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">git show HEAD
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"show.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show the second-to-last commit:</p><div class=3D"highli=
+ght"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" da=
+ta-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=
+=3D"line"><span class=3D"cl">git show HEAD~1
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"show.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Use <code>HEAD~n</code> to show the nth-before-last com=
+mit or use the specific commit hash instead of <code>HEAD~n</code>.</p><h3 =
+id=3D"search-repo">Search repo</h3><p>There are 3 commits, each adding a ne=
+w line to <code>message.txt</code>:</p><div class=3D"highlight"><pre tabind=
+ex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell=
+" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span =
+class=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"grep.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The current <code>message.txt</code> state:</p><div cla=
+ss=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"langua=
+ge-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"=
+><span class=3D"line"><span class=3D"cl">cat message.txt
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"grep.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Search in working tree (current state):</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><=
+span class=3D"line"><span class=3D"cl">git grep <span class=3D"s2">"debate"=
+</span>
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"grep.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Search the project as of the second-to-last commit:</p>=
+<div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=
+=3D"false"><span class=3D"line"><span class=3D"cl">git grep <span class=3D"=
+s2">"great"</span> HEAD~1
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"grep.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>You can use the specific commit hash instead of <code>H=
+EAD~n</code>.</p><h2 id=3D"branch-and-merge">Branch and merge</h2><p>Let's =
+dive into the wondrous world of merging.</p><p><a href=3D"https://antonz.or=
+g/git-by-example/#branch">branch</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#merge">merge</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#rebase">rebase</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#squash">squash</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#cherry-pick">cherry-pick</a><=
+/p><h3 id=3D"branch">Branch</h3><p>Show branches (there is only <code>main<=
+/code> now):</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chrom=
+a"><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"tr=
+ue" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">git branch
+</span></span></code></pre></div><codapi-snippet id=3D"branch-1" sandbox=3D=
+"shell" editor=3D"basic" template=3D"branch.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Create and switch to a new branch:</p><div class=3D"hig=
+hlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell"=
+ data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span cl=
+ass=3D"line"><span class=3D"cl">git branch ohmypy
+</span></span><span class=3D"line"><span class=3D"cl">git switch ohmypy
+</span></span></code></pre></div><codapi-snippet id=3D"branch-2" sandbox=3D=
+"shell" editor=3D"basic" template=3D"branch.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show branches (the current one is <code>ohmypy</code>):=
+</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code cla=
+ss=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellche=
+ck=3D"false"><span class=3D"line"><span class=3D"cl">git branch
+</span></span></code></pre></div><codapi-snippet id=3D"branch-3" sandbox=3D=
+"shell" editor=3D"basic" template=3D"branch.sh" depends-on=3D"branch-2" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Add and commit a file:</p><div class=3D"highlight"><pre=
+ tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=
+=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"lin=
+e"><span class=3D"cl"><span class=3D"nb">echo</span> <span class=3D"s2">"pr=
+int('git is awesome')"</span> &gt; ohmy.py
+</span></span><span class=3D"line"><span class=3D"cl">git add ohmy.py
+</span></span><span class=3D"line"><span class=3D"cl">git commit -m <span c=
+lass=3D"s2">"ohmy.py"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"branch-4" sandbox=3D=
+"shell" editor=3D"basic" template=3D"branch.sh" depends-on=3D"branch-2" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show only commits from the <code>ohmypy</code> branch:<=
+/p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code clas=
+s=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellchec=
+k=3D"false"><span class=3D"line"><span class=3D"cl">git log --oneline main.=
+.ohmypy
+</span></span></code></pre></div><codapi-snippet id=3D"branch-5" sandbox=3D=
+"shell" editor=3D"basic" template=3D"branch.sh" depends-on=3D"branch-4" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"merge">Merge</h3><p>Show commits from all branch=
+es (two commits in <code>main</code>, one in <code>ohmypy</code>):</p><div =
+class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"lan=
+guage-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"fal=
+se"><span class=3D"line"><span class=3D"cl">git log --all --oneline --graph
+</span></span></code></pre></div><codapi-snippet id=3D"merge-1" sandbox=3D"=
+shell" editor=3D"basic" template=3D"merge.sh" output=3D"" state=3D"unknown"=
+>
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>We are now on the <code>main</code> branch, let's merge=
+ the <code>ohmypy</code> branch back into main:</p><div class=3D"highlight"=
+><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-l=
+ang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"=
+line"><span class=3D"cl">git merge ohmypy
+</span></span></code></pre></div><codapi-snippet id=3D"merge-2" sandbox=3D"=
+shell" editor=3D"basic" template=3D"merge.sh" output=3D"" state=3D"unknown"=
+>
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>There are no conflicts, so git commits automatically. S=
+how the new commit history:</p><div class=3D"highlight"><pre tabindex=3D"0"=
+ class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" conten=
+teditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D=
+"cl">git log --all --oneline --graph
+</span></span></code></pre></div><codapi-snippet id=3D"merge-3" sandbox=3D"=
+shell" editor=3D"basic" template=3D"merge.sh" depends-on=3D"merge-2" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"rebase">Rebase</h3><p>Show commits from all bran=
+ches (two commits in <code>main</code>, one in <code>ohmypy</code>):</p><di=
+v class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"l=
+anguage-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"f=
+alse"><span class=3D"line"><span class=3D"cl">git log --all --oneline --gra=
+ph
+</span></span></code></pre></div><codapi-snippet id=3D"rebase-1" sandbox=3D=
+"shell" editor=3D"basic" template=3D"rebase.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>We are now on the <code>main</code> branch, let's rebas=
+e the <code>ohmypy</code> branch back into main:</p><div class=3D"highlight=
+"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-=
+lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D=
+"line"><span class=3D"cl">git rebase ohmypy
+</span></span></code></pre></div><codapi-snippet id=3D"rebase-2" sandbox=3D=
+"shell" editor=3D"basic" template=3D"rebase.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Note that the new commit history is linear, unlike when=
+ we do a <code>git merge ohmypy</code>:</p><div class=3D"highlight"><pre ta=
+bindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"s=
+hell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><s=
+pan class=3D"cl">git log --all --oneline --graph
+</span></span></code></pre></div><codapi-snippet id=3D"rebase-3" sandbox=3D=
+"shell" editor=3D"basic" template=3D"rebase.sh" depends-on=3D"rebase-2" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Rebasing rewrites history. So it's better not to rebase=
+ branches that have already been pushed to remote.</p><h3 id=3D"squash">Squ=
+ash</h3><p>Show commits from all branches (two commits in <code>main</code>=
+, three in <code>ohmypy</code>):</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">git log --all --oneline --graph
+</span></span></code></pre></div><codapi-snippet id=3D"squash-1" sandbox=3D=
+"shell" editor=3D"basic" template=3D"squash.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>If we do <code>git merge ohmypy</code> to merge the <co=
+de>ohmypy</code> branch into <code>main</code>, the main branch will receiv=
+e all three commits from ohmypy.</p><p>Sometimes we prefer to "squash" all =
+the branch commits into a single commit, and then merge it into main. Let's=
+ do it.</p><p>Switch to the <code>ohmypy</code> branch:</p><div class=3D"hi=
+ghlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell=
+" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span c=
+lass=3D"line"><span class=3D"cl">git switch ohmypy
+</span></span></code></pre></div><codapi-snippet id=3D"squash-2" sandbox=3D=
+"shell" editor=3D"basic" template=3D"squash.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Combine all <code>ohmypy</code> changes into a single c=
+ommit in the working directory:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">git merge --squash main
+</span></span></code></pre></div><codapi-snippet id=3D"squash-3" sandbox=3D=
+"shell" editor=3D"basic" template=3D"squash.sh" depends-on=3D"squash-2" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Commit the combined changes:</p><div class=3D"highlight=
+"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-=
+lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D=
+"line"><span class=3D"cl">git commit -m <span class=3D"s2">"ohmy[py,sh,lua]=
+"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"squash-4" sandbox=3D=
+"shell" editor=3D"basic" template=3D"squash.sh" depends-on=3D"squash-3" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Switch back to the <code>main</code> branch:</p><div cl=
+ass=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"langu=
+age-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false=
+"><span class=3D"line"><span class=3D"cl">git switch main
+</span></span></code></pre></div><codapi-snippet id=3D"squash-5" sandbox=3D=
+"shell" editor=3D"basic" template=3D"squash.sh" depends-on=3D"squash-4" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Merge the <code>ohmypy</code> branch into <code>main</c=
+ode>:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><cod=
+e class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spe=
+llcheck=3D"false"><span class=3D"line"><span class=3D"cl">git merge --no-ff=
+ ohmypy -m <span class=3D"s2">"ohmy[py,sh,lua]"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"squash-6" sandbox=3D=
+"shell" editor=3D"basic" template=3D"squash.sh" depends-on=3D"squash-5" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Note the single commit in <code>main</code> made of thr=
+ee commits in <code>ohmypy</code>:</p><div class=3D"highlight"><pre tabinde=
+x=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell"=
+ contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span c=
+lass=3D"cl">git log --all --oneline --graph
+</span></span></code></pre></div><codapi-snippet id=3D"squash-7" sandbox=3D=
+"shell" editor=3D"basic" template=3D"squash.sh" depends-on=3D"squash-6" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"cherry-pick">Cherry-pick</h3><p>I have a typo in=
+ <code>message.txt</code>:</p><div class=3D"highlight"><pre tabindex=3D"0" =
+class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" content=
+editable=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"=
+cl">cat message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"cherry-1" sandbox=3D=
+"shell" editor=3D"basic" template=3D"cherry.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>And I accidentally fixed it in the <code>ohmypy</code> =
+branch instead of <code>main</code>:</p><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shel=
+l" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span=
+ class=3D"cl">git log --all --oneline --graph --decorate
+</span></span></code></pre></div><codapi-snippet id=3D"cherry-2" sandbox=3D=
+"shell" editor=3D"basic" template=3D"cherry.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>I'm not ready to merge the entire <code>ohmypy</code> b=
+ranch, so I will cherry-pick the commit:</p><div class=3D"highlight"><pre t=
+abindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"=
+shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><=
+span class=3D"cl">git cherry-pick cbb09c6
+</span></span></code></pre></div><codapi-snippet id=3D"cherry-3" sandbox=3D=
+"shell" editor=3D"basic" template=3D"cherry.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p><code>cherry-pick</code> applied the comment to the <co=
+de>main</code> branch:</p><div class=3D"highlight"><pre tabindex=3D"0" clas=
+s=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedit=
+able=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">=
+git log --all --oneline --graph --decorate
+</span></span></code></pre></div><codapi-snippet id=3D"cherry-4" sandbox=3D=
+"shell" editor=3D"basic" template=3D"cherry.sh" depends-on=3D"cherry-3" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The typo is fixed:</p><div class=3D"highlight"><pre tab=
+index=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"sh=
+ell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><sp=
+an class=3D"cl">cat message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"cherry-5" sandbox=3D=
+"shell" editor=3D"basic" template=3D"cherry.sh" depends-on=3D"cherry-3" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h2 id=3D"local-and-remote">Local and remote</h2><p>Workin=
+g with a local repo is fun, but adding a remote repo is even funnier.</p><p=
+><a href=3D"https://antonz.org/git-by-example/#push">push</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#pull">pull</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#resolve-conflict">resolve</a>=
+ =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#push-branch">push branch</a> =
+=E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#fetch-branch">fetch branch</a=
+> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#tags">tags</a></p><h3 id=3D"p=
+ush">Push</h3><p>Alice wants to clone our repo and make some changes.</p><p=
+>Clone the remote repo:</p><div class=3D"highlight"><pre tabindex=3D"0" cla=
+ss=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedi=
+table=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl"=
+>git clone /tmp/remote.git /tmp/alice
+</span></span></code></pre></div><codapi-snippet id=3D"push-1" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"push.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Normally you'd see a GitHub/GitLab/etc URL here, but ou=
+r "remote" repo is on the same machine in <code>/tmp/remote.git</code>.</p>=
+<p>Set user name and email:</p><div class=3D"highlight"><pre tabindex=3D"0"=
+ class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" conten=
+teditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D=
+"cl"><span class=3D"nb">cd</span> /tmp/alice
+</span></span><span class=3D"line"><span class=3D"cl">git config user.email=
+ alice@example.com
+</span></span><span class=3D"line"><span class=3D"cl">git config user.name =
+<span class=3D"s2">"Alice Zakas"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"push-2" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"push.sh" depends-on=3D"push-1" output-ta=
+il=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Make some changes and commit:</p><div class=3D"highligh=
+t"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data=
+-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=
+=3D"line"><span class=3D"cl"><span class=3D"nb">echo</span> <span class=3D"=
+s2">"Git is awesome!"</span> &gt; message.txt
+</span></span><span class=3D"line"><span class=3D"cl">git commit -am <span =
+class=3D"s2">"edit from alice"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"push-3" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"push.sh" depends-on=3D"push-2" output-ta=
+il=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Push locally committed changes to the remote repo:</p><=
+div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D=
+"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D=
+"false"><span class=3D"line"><span class=3D"cl">git push
+</span></span></code></pre></div><codapi-snippet id=3D"push-4" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"push.sh" depends-on=3D"push-3" output-ta=
+il=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"pull">Pull</h3><p>I want to pull Alice's changes=
+ to the local repo.</p><p>No commits from Alice yet:</p><div class=3D"highl=
+ight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" d=
+ata-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span clas=
+s=3D"line"><span class=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"pull-1" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"pull.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Pull the latest changes from the remote repo:</p><div c=
+lass=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"lang=
+uage-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"fals=
+e"><span class=3D"line"><span class=3D"cl">git pull
+</span></span></code></pre></div><codapi-snippet id=3D"pull-2" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"pull.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The local repo now contains commits from Alice:</p><div=
+ class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"la=
+nguage-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"fa=
+lse"><span class=3D"line"><span class=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"pull-3" sandbox=3D"s=
+hell" editor=3D"basic" template=3D"pull.sh" depends-on=3D"pull-2" output-ta=
+il=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"resolve-conflict">Resolve conflict</h3><p>I have=
+ a local commit (not yet pushed to the remote) that conflicts with Alice's =
+changes (already pushed to the remote), so I need to resolve it.</p><p>Pull=
+ the changes from the remote repo:</p><div class=3D"highlight"><pre tabinde=
+x=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell"=
+ contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span c=
+lass=3D"cl">git pull
+</span></span></code></pre></div><codapi-snippet id=3D"conflict-1" sandbox=
+=3D"shell" editor=3D"basic" template=3D"conflict.sh" output=3D"" state=3D"u=
+nknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>There is a conflict in <code>message.txt</code>! Let's =
+show it:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><=
+code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" =
+spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">cat message.tx=
+t
+</span></span></code></pre></div><codapi-snippet id=3D"conflict-2" sandbox=
+=3D"shell" editor=3D"basic" template=3D"conflict.sh" depends-on=3D"conflict=
+-1" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>I like Alice's version better, so let's choose it:</p><=
+div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D=
+"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D=
+"false"><span class=3D"line"><span class=3D"cl">git checkout --theirs -- me=
+ssage.txt
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1"># =
+to choose our version, use --ours</span>
+</span></span></code></pre></div><codapi-snippet id=3D"conflict-3" sandbox=
+=3D"shell" editor=3D"basic" template=3D"conflict.sh" depends-on=3D"conflict=
+-1" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Add the resolved file to the staging area and complete =
+the merge:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"=
+><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true=
+" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">git add mess=
+age.txt
+</span></span><span class=3D"line"><span class=3D"cl">git commit -m <span c=
+lass=3D"s2">"merge alice"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"conflict-4" sandbox=
+=3D"shell" editor=3D"basic" template=3D"conflict.sh" depends-on=3D"conflict=
+-3" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"push-branch">Push branch</h3><p>Create the local=
+ <code>ohmypy</code> branch:</p><div class=3D"highlight"><pre tabindex=3D"0=
+" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" conte=
+nteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=
+=3D"cl">git branch ohmypy
+</span></span><span class=3D"line"><span class=3D"cl">git switch ohmypy
+</span></span></code></pre></div><codapi-snippet id=3D"push-branch-1" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"push-branch.sh" output=3D"" state=
+=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Add and commit a file:</p><div class=3D"highlight"><pre=
+ tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=
+=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"lin=
+e"><span class=3D"cl"><span class=3D"nb">echo</span> <span class=3D"s2">"pr=
+int('git is awesome')"</span> &gt; ohmy.py
+</span></span><span class=3D"line"><span class=3D"cl">git add ohmy.py
+</span></span><span class=3D"line"><span class=3D"cl">git commit -m <span c=
+lass=3D"s2">"ohmy.py"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"push-branch-2" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"push-branch.sh" depends-on=3D"pus=
+h-branch-1" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Push the local branch to remote:</p><div class=3D"highl=
+ight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" d=
+ata-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span clas=
+s=3D"line"><span class=3D"cl">git push -u origin ohmypy
+</span></span></code></pre></div><codapi-snippet id=3D"push-branch-3" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"push-branch.sh" depends-on=3D"pus=
+h-branch-2" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show both local and remote branches:</p><div class=3D"h=
+ighlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shel=
+l" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span =
+class=3D"line"><span class=3D"cl">git branch --all
+</span></span></code></pre></div><codapi-snippet id=3D"push-branch-4" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"push-branch.sh" depends-on=3D"pus=
+h-branch-3" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"fetch-branch">Fetch branch</h3><p>Fetch remote b=
+ranches:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><=
+code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" =
+spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">git fetch
+</span></span></code></pre></div><codapi-snippet id=3D"fetch-1" sandbox=3D"=
+shell" editor=3D"basic" template=3D"fetch.sh" output=3D"" state=3D"unknown"=
+>
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Remote has the <code>ohmypy</code> branch, but it's not=
+ checked out locally:</p><div class=3D"highlight"><pre tabindex=3D"0" class=
+=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedita=
+ble=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">g=
+it branch
+</span></span></code></pre></div><codapi-snippet id=3D"fetch-2" sandbox=3D"=
+shell" editor=3D"basic" template=3D"fetch.sh" depends-on=3D"fetch-1" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Checkout the <code>ohmypy</code> branch:</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><=
+span class=3D"line"><span class=3D"cl">git switch ohmypy
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1"># =
+or: git checkout ohmypy</span>
+</span></span></code></pre></div><codapi-snippet id=3D"fetch-3" sandbox=3D"=
+shell" editor=3D"basic" template=3D"fetch.sh" depends-on=3D"fetch-1" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show branches:</p><div class=3D"highlight"><pre tabinde=
+x=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell"=
+ contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span c=
+lass=3D"cl">git branch
+</span></span></code></pre></div><codapi-snippet id=3D"fetch-4" sandbox=3D"=
+shell" editor=3D"basic" template=3D"fetch.sh" depends-on=3D"fetch-3" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"tags">Tags</h3><p>Create a tag for the latest co=
+mmit:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><cod=
+e class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spe=
+llcheck=3D"false"><span class=3D"line"><span class=3D"cl">git tag 0.1.0 HEA=
+D
+</span></span></code></pre></div><codapi-snippet id=3D"tag-1" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"tag.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Create a tag for the nth-before-last commit:</p><div cl=
+ass=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"langu=
+age-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false=
+"><span class=3D"line"><span class=3D"cl">git tag 0.1.0-alpha HEAD~1
+</span></span></code></pre></div><codapi-snippet id=3D"tag-2" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"tag.sh" depends-on=3D"tag-1" output-tail=
+=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>You can use the commit hash instead of <code>HEAD~n</co=
+de>.</p><p>Show tags:</p><div class=3D"highlight"><pre tabindex=3D"0" class=
+=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedita=
+ble=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">g=
+it tag -l
+</span></span></code></pre></div><codapi-snippet id=3D"tag-3" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"tag.sh" depends-on=3D"tag-2" output-tail=
+=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show compact log with tags:</p><div class=3D"highlight"=
+><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-l=
+ang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"=
+line"><span class=3D"cl">git log --decorate --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"tag-4" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"tag.sh" depends-on=3D"tag-2" output-tail=
+=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Delete tag:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">git tag -d 0.1.0-alpha
+</span></span></code></pre></div><codapi-snippet id=3D"tag-5" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"tag.sh" depends-on=3D"tag-2" output-tail=
+=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Push tags to the remote:</p><div class=3D"highlight"><p=
+re tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=
+=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"lin=
+e"><span class=3D"cl">git push --tags
+</span></span></code></pre></div><codapi-snippet id=3D"tag-6" sandbox=3D"sh=
+ell" editor=3D"basic" template=3D"tag.sh" depends-on=3D"tag-5" output-tail=
+=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h2 id=3D"undo">Undo</h2><p>"Damn, how do I undo what I ju=
+st did?" =E2=80=94 is the eternal Git question. Let's answer it once and fo=
+r all.</p><p><a href=3D"https://antonz.org/git-by-example/#amend-commit">am=
+end commit</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#undo-uncommitted-changes">und=
+o uncommitted</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#undo-local-commit">undo local=
+</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#undo-remote-commit">undo remo=
+te</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#rewind-history">rewind histor=
+y</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#stash-changes">stash changes<=
+/a></p><h3 id=3D"amend-commit">Amend commit</h3><p>Edit a file and commit:<=
+/p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code clas=
+s=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellchec=
+k=3D"false"><span class=3D"line"><span class=3D"cl"><span class=3D"nb">echo=
+</span> <span class=3D"s2">"git is awesome"</span> &gt; message.txt
+</span></span><span class=3D"line"><span class=3D"cl">git commit -am <span =
+class=3D"s2">"edit nessage"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"amend-1" sandbox=3D"=
+shell" editor=3D"basic" template=3D"amend.sh" output=3D"" state=3D"unknown"=
+>
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show commits:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"amend-2" sandbox=3D"=
+shell" editor=3D"basic" template=3D"amend.sh" depends-on=3D"amend-1" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>I made a typo, so I want to change the commit message:<=
+/p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code clas=
+s=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellchec=
+k=3D"false"><span class=3D"line"><span class=3D"cl">git commit --amend -m <=
+span class=3D"s2">"edit message"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"amend-3" sandbox=3D"=
+shell" editor=3D"basic" template=3D"amend.sh" depends-on=3D"amend-1" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Git has replaced the last commit:</p><div class=3D"high=
+light"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" =
+data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span cla=
+ss=3D"line"><span class=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"amend-4" sandbox=3D"=
+shell" editor=3D"basic" template=3D"amend.sh" depends-on=3D"amend-3" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>To change the commit message for one of the last <code>=
+n</code> commits, use <code>git rebase -i HEAD~n</code> (interactive) and f=
+ollow the instructions on the screen.</p><p>Amend only works if the commit =
+has not yet been pushed to the remote repo!</p><h3 id=3D"undo-uncommitted-c=
+hanges">Undo uncommitted changes</h3><p>Edit the previously committed file =
+and add the changes to the staging area:</p><div class=3D"highlight"><pre t=
+abindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"=
+shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><=
+span class=3D"cl"><span class=3D"nb">echo</span> <span class=3D"s2">"git is=
+ awesome"</span> &gt; message.txt
+</span></span><span class=3D"line"><span class=3D"cl">git add message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"undo-local-1" sandbo=
+x=3D"shell" editor=3D"basic" template=3D"undo-local.sh" output=3D"" state=
+=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show the working tree status:</p><div class=3D"highligh=
+t"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data=
+-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=
+=3D"line"><span class=3D"cl">git status
+</span></span></code></pre></div><codapi-snippet id=3D"undo-local-2" sandbo=
+x=3D"shell" editor=3D"basic" template=3D"undo-local.sh" depends-on=3D"undo-=
+local-1" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Remove the changes from the staging area:</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><=
+span class=3D"line"><span class=3D"cl">git restore --staged message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"undo-local-3" sandbo=
+x=3D"shell" editor=3D"basic" template=3D"undo-local.sh" depends-on=3D"undo-=
+local-1" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The local file is still modified, but it's not staged f=
+or commit:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"=
+><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true=
+" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">git status
+</span></span></code></pre></div><codapi-snippet id=3D"undo-local-4" sandbo=
+x=3D"shell" editor=3D"basic" template=3D"undo-local.sh" depends-on=3D"undo-=
+local-3" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Now let's discard the changes altogether:</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><=
+span class=3D"line"><span class=3D"cl">git restore message.txt
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1"># =
+or: git checkout message.txt</span>
+</span></span></code></pre></div><codapi-snippet id=3D"undo-local-5" sandbo=
+x=3D"shell" editor=3D"basic" template=3D"undo-local.sh" depends-on=3D"undo-=
+local-3" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show the file contents:</p><div class=3D"highlight"><pr=
+e tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=
+=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"lin=
+e"><span class=3D"cl">cat message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"undo-local-6" sandbo=
+x=3D"shell" editor=3D"basic" template=3D"undo-local.sh" depends-on=3D"undo-=
+local-5" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The changes are gone.</p><h3 id=3D"undo-local-commit">U=
+ndo local commit</h3><p>I changed my mind about the last commit and I want =
+to undo it.</p><p>Show commits:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"undo-commit-1" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-commit.sh" output=3D"" state=
+=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Undo the last one:</p><div class=3D"highlight"><pre tab=
+index=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"sh=
+ell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><sp=
+an class=3D"cl">git reset --soft HEAD~
+</span></span></code></pre></div><codapi-snippet id=3D"undo-commit-2" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-commit.sh" output=3D"" state=
+=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The commit is gone:</p><div class=3D"highlight"><pre ta=
+bindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"s=
+hell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><s=
+pan class=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"undo-commit-3" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-commit.sh" depends-on=3D"und=
+o-commit-2" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>But the changes are still in the staged area:</p><div c=
+lass=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"lang=
+uage-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"fals=
+e"><span class=3D"line"><span class=3D"cl">git status
+</span></span></code></pre></div><codapi-snippet id=3D"undo-commit-4" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-commit.sh" depends-on=3D"und=
+o-commit-2" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>To remove both the commit and the local changes, use <c=
+ode>--hard</code> instead of <code>--soft</code>:</p><div class=3D"highligh=
+t"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data=
+-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=
+=3D"line"><span class=3D"cl">git reset --hard HEAD~
+</span></span><span class=3D"line"><span class=3D"cl">git status
+</span></span></code></pre></div><codapi-snippet id=3D"undo-commit-5" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-commit.sh" output=3D"" state=
+=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Reset only works if the commit has not yet been pushed =
+to the remote repo!</p><h3 id=3D"undo-remote-commit">Undo remote commit</h3=
+><p>I changed my mind about the last commit and I want to undo it, but the =
+commit is already pushed to the remote repo.</p><p>Show commits:</p><div cl=
+ass=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"langu=
+age-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false=
+"><span class=3D"line"><span class=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"undo-remote-1" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-remote.sh" output=3D"" state=
+=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Undo the last one:</p><div class=3D"highlight"><pre tab=
+index=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"sh=
+ell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><sp=
+an class=3D"cl">git revert HEAD --no-edit
+</span></span></code></pre></div><codapi-snippet id=3D"undo-remote-2" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-remote.sh" output=3D"" state=
+=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>You can revert to nth-before-last commit by using <code=
+>HEAD~n</code> or use the specific commit hash instead of <code>HEAD~n</cod=
+e>.</p><p>Since the commit has already been pushed, git can't delete it. In=
+stead it creates an "undo" commit:</p><div class=3D"highlight"><pre tabinde=
+x=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell"=
+ contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span c=
+lass=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"undo-remote-3" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-remote.sh" depends-on=3D"und=
+o-remote-2" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Push the "undo" commit to the remote:</p><div class=3D"=
+highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-she=
+ll" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span=
+ class=3D"line"><span class=3D"cl">git push
+</span></span></code></pre></div><codapi-snippet id=3D"undo-remote-4" sandb=
+ox=3D"shell" editor=3D"basic" template=3D"undo-remote.sh" depends-on=3D"und=
+o-remote-2" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"rewind-history">Rewind history</h3><p>Show commi=
+ts:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code =
+class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spell=
+check=3D"false"><span class=3D"line"><span class=3D"cl">git log --oneline -=
+-graph
+</span></span></code></pre></div><codapi-snippet id=3D"reflog-1" sandbox=3D=
+"shell" editor=3D"basic" template=3D"reflog.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show all repo states in reverse chronological order:</p=
+><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=
+=3D"false"><span class=3D"line"><span class=3D"cl">git reflog
+</span></span></code></pre></div><codapi-snippet id=3D"reflog-2" sandbox=3D=
+"shell" editor=3D"basic" template=3D"reflog.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Suppose I want to go back to <code>HEAD@{3}</code>:</p>=
+<div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=
+=3D"false"><span class=3D"line"><span class=3D"cl">git reset --hard HEAD@<s=
+pan class=3D"o">{</span>3<span class=3D"o">}</span>
+</span></span></code></pre></div><codapi-snippet id=3D"reflog-3" sandbox=3D=
+"shell" editor=3D"basic" template=3D"reflog.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>This resets the entire repo and the working tree to the=
+ moment of <code>HEAD@{3}</code>:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" =
+contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span cl=
+ass=3D"cl">git log --oneline --graph
+</span></span></code></pre></div><codapi-snippet id=3D"reflog-4" sandbox=3D=
+"shell" editor=3D"basic" template=3D"reflog.sh" depends-on=3D"reflog-3" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"stash-changes">Stash changes</h3><p>Edit the pre=
+viously committed file:</p><div class=3D"highlight"><pre tabindex=3D"0" cla=
+ss=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedi=
+table=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl"=
+><span class=3D"nb">echo</span> <span class=3D"s2">"git is awesome"</span> =
+&gt; message.txt
+</span></span><span class=3D"line"><span class=3D"cl">git add message.txt
+</span></span></code></pre></div><codapi-snippet id=3D"stash-1" sandbox=3D"=
+shell" editor=3D"basic" template=3D"stash.sh" output=3D"" state=3D"unknown"=
+>
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Let's say we need to switch to another branch, but we d=
+on't want to commit the changes yet.</p><p>Stash the local changes (i.e. sa=
+ve them in "drafts"):</p><div class=3D"highlight"><pre tabindex=3D"0" class=
+=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedita=
+ble=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">g=
+it stash
+</span></span></code></pre></div><codapi-snippet id=3D"stash-2" sandbox=3D"=
+shell" editor=3D"basic" template=3D"stash.sh" depends-on=3D"stash-1" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Stash is a stack, so you can push multiple changes onto=
+ it:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code=
+ class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spel=
+lcheck=3D"false"><span class=3D"line"><span class=3D"cl"><span class=3D"nb"=
+>echo</span> <span class=3D"s2">"Git is awesome!"</span> &gt; message.txt
+</span></span><span class=3D"line"><span class=3D"cl">git stash
+</span></span></code></pre></div><codapi-snippet id=3D"stash-3" sandbox=3D"=
+shell" editor=3D"basic" template=3D"stash.sh" depends-on=3D"stash-2" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Show stash contents:</p><div class=3D"highlight"><pre t=
+abindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"=
+shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><=
+span class=3D"cl">git stash list
+</span></span></code></pre></div><codapi-snippet id=3D"stash-4" sandbox=3D"=
+shell" editor=3D"basic" template=3D"stash.sh" depends-on=3D"stash-3" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Now we can switch to another branch and do something:</=
+p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-text" data-lang=3D"text"><span class=3D"line"><span class=3D"c=
+l">...(omitted for brevity)...
+</span></span></code></pre></div><p>Switch back to the main branch and re-a=
+pply the latest changes from the stash:</p><div class=3D"highlight"><pre ta=
+bindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"s=
+hell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><s=
+pan class=3D"cl">git switch main
+</span></span><span class=3D"line"><span class=3D"cl">git stash pop
+</span></span></code></pre></div><codapi-snippet id=3D"stash-5" sandbox=3D"=
+shell" editor=3D"basic" template=3D"stash.sh" depends-on=3D"stash-3" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p><code>pop</code> returns changes from the stack in "las=
+t in, first out" order.</p><p>Clear the stash:</p><div class=3D"highlight">=
+<pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-la=
+ng=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"l=
+ine"><span class=3D"cl">git stash clear
+</span></span></code></pre></div><codapi-snippet id=3D"stash-6" sandbox=3D"=
+shell" editor=3D"basic" template=3D"stash.sh" depends-on=3D"stash-5" output=
+-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h2 id=3D"advanced-stuff">Advanced stuff</h2><p>While git =
+gurus probably know all about these features, most developers have never he=
+ard of them. Let's fix that.</p><p><a href=3D"https://antonz.org/git-by-exa=
+mple/#log-summary">log summary</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#worktree">worktree</a> =E2=80=
+=A2
+<a href=3D"https://antonz.org/git-by-example/#bisect">bisect</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#partial-checkout">partial che=
+ckout</a> =E2=80=A2
+<a href=3D"https://antonz.org/git-by-example/#partial-clone">partial clone<=
+/a></p><h3 id=3D"log-summary">Log summary</h3><p>Since the 1.0 release (tag=
+ <code>v1.0</code>), we have 6 commits from 3 contributors:</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-text" data-lang=3D"text" contenteditable=3D"true" spellcheck=3D"false"><sp=
+an class=3D"line"><span class=3D"cl">git log --pretty=3Dformat:'%h %an %s %=
+d'
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"shortlog.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Note the <code>--pretty</code> option which customizes =
+the log fields:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"ch=
+roma"><code class=3D"language-text" data-lang=3D"text"><span class=3D"line"=
+><span class=3D"cl">%h   commit hash
+</span></span><span class=3D"line"><span class=3D"cl">%an  author
+</span></span><span class=3D"line"><span class=3D"cl">%s   message
+</span></span><span class=3D"line"><span class=3D"cl">%d   decoration (e.g.=
+ branch name or tag)
+</span></span></code></pre></div><p>List the commits grouped by contributor=
+s:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code c=
+lass=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellc=
+heck=3D"false"><span class=3D"line"><span class=3D"cl">git shortlog v1.0..
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"shortlog.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>A couple of useful options:</p><ul><li><code>-n</code> =
+(<code>--numbered</code>) sorts the output by descending number of commits =
+per contributor.</li><li><code>-s</code> (<code>--summary</code>) omits com=
+mit descriptions and prints only counts.</li></ul><p>List contributors alon=
+g with the number of commits they have authored:</p><div class=3D"highlight=
+"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-=
+lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D=
+"line"><span class=3D"cl">git shortlog -ns v1.0..
+</span></span></code></pre></div><codapi-snippet sandbox=3D"shell" editor=
+=3D"basic" template=3D"shortlog.sh" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><h3 id=3D"worktree">Worktree</h3><p>I'm in the middle of s=
+omething important in the <code>ohmypy</code> branch:</p><div class=3D"high=
+light"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" =
+data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span cla=
+ss=3D"line"><span class=3D"cl"><span class=3D"nb">echo</span> <span class=
+=3D"s2">"-- pwd --"</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"nb">pw=
+d</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"nb">ec=
+ho</span> <span class=3D"s2">"-- branches --"</span>
+</span></span><span class=3D"line"><span class=3D"cl">git branch
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"nb">ec=
+ho</span> <span class=3D"s2">"-- status --"</span>
+</span></span><span class=3D"line"><span class=3D"cl">git status
+</span></span></code></pre></div><codapi-snippet id=3D"worktree-1" sandbox=
+=3D"shell" editor=3D"basic" template=3D"worktree.sh" output=3D"" state=3D"u=
+nknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Suddenly I need to fix an annoying typo in the <code>ma=
+in</code> branch. I can stash the local changes with <code>git stash</code>=
+, or I can checkout multiple branches at the same time with <code>git workt=
+ree</code>.</p><p>Checkout the main branch into <code>/tmp/hotfix</code>:</=
+p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=
+=3D"false"><span class=3D"line"><span class=3D"cl">git worktree add -b hotf=
+ix /tmp/hotfix main
+</span></span></code></pre></div><codapi-snippet id=3D"worktree-2" sandbox=
+=3D"shell" editor=3D"basic" template=3D"worktree.sh" output=3D"" state=3D"u=
+nknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Fix the typo and commit:</p><div class=3D"highlight"><p=
+re tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=
+=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"lin=
+e"><span class=3D"cl"><span class=3D"nb">cd</span> /tmp/hotfix
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"nb">ec=
+ho</span> <span class=3D"s2">"git is awesome"</span> &gt; message.txt
+</span></span><span class=3D"line"><span class=3D"cl">git commit -am <span =
+class=3D"s2">"fix typo"</span>
+</span></span></code></pre></div><codapi-snippet id=3D"worktree-3" sandbox=
+=3D"shell" editor=3D"basic" template=3D"worktree.sh" depends-on=3D"worktree=
+-2" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Push to remote main:</p><div class=3D"highlight"><pre t=
+abindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"=
+shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><=
+span class=3D"cl">git push --set-upstream origin main
+</span></span></code></pre></div><codapi-snippet id=3D"worktree-4" sandbox=
+=3D"shell" editor=3D"basic" template=3D"worktree.sh" depends-on=3D"worktree=
+-3" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Now I can return to <code>/tmp/repo</code> and continue=
+ working on the <code>ohmypy</code> branch.</p><h3 id=3D"bisect">Bisect</h3=
+><p>I have 5 poorly named commits:</p><div class=3D"highlight"><pre tabinde=
+x=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell"=
+ contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><span c=
+lass=3D"cl">git log --oneline
+</span></span></code></pre></div><codapi-snippet id=3D"bisect-1" sandbox=3D=
+"shell" editor=3D"basic" template=3D"bisect.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>And a failing test:</p><div class=3D"highlight"><pre ta=
+bindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"s=
+hell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><s=
+pan class=3D"cl">sh test.sh
+</span></span></code></pre></div><codapi-snippet id=3D"bisect-2" sandbox=3D=
+"shell" editor=3D"basic" template=3D"bisect.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>I will use the bisection algorithm to find the commit t=
+hat introduced the bug:</p><div class=3D"highlight"><pre tabindex=3D"0" cla=
+ss=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell" contentedi=
+table=3D"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl"=
+>git bisect start
+</span></span></code></pre></div><codapi-snippet id=3D"bisect-3" sandbox=3D=
+"shell" editor=3D"basic" template=3D"bisect.sh" output=3D"" state=3D"unknow=
+n">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The current state is obviously buggy, but I'm pretty su=
+re the first "main.sh" commit was good:</p><div class=3D"highlight"><pre ta=
+bindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"s=
+hell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"line"><s=
+pan class=3D"cl">git bisect bad HEAD
+</span></span><span class=3D"line"><span class=3D"cl">git bisect good HEAD~=
+4
+</span></span></code></pre></div><codapi-snippet id=3D"bisect-4" sandbox=3D=
+"shell" editor=3D"basic" template=3D"bisect.sh" depends-on=3D"bisect-3" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Git has automatically checked out the middle commit. Le=
+t's test it:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chrom=
+a"><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"tr=
+ue" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">sh test.sh
+</span></span></code></pre></div><codapi-snippet id=3D"bisect-5" sandbox=3D=
+"shell" editor=3D"basic" template=3D"bisect.sh" depends-on=3D"bisect-4" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The test passes. Mark the commit as good:</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><=
+span class=3D"line"><span class=3D"cl">git bisect good
+</span></span></code></pre></div><codapi-snippet id=3D"bisect-6" sandbox=3D=
+"shell" editor=3D"basic" template=3D"bisect.sh" depends-on=3D"bisect-5" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Git has automatically checked out the middle commit. Le=
+t's test it:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chrom=
+a"><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"tr=
+ue" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">sh test.sh
+</span></span></code></pre></div><codapi-snippet id=3D"bisect-7" sandbox=3D=
+"shell" editor=3D"basic" template=3D"bisect.sh" depends-on=3D"bisect-6" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The test fails. Show the commit details:</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><=
+span class=3D"line"><span class=3D"cl">git show
+</span></span></code></pre></div><codapi-snippet id=3D"bisect-8" sandbox=3D=
+"shell" editor=3D"basic" template=3D"bisect.sh" depends-on=3D"bisect-7" out=
+put-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>This is the commit that introduced the bug (subtraction=
+ instead of addition)!</p><h3 id=3D"partial-checkout">Partial checkout</h3>=
+<p>The remote repo looks like this:</p><div class=3D"highlight"><pre tabind=
+ex=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text">=
+<span class=3D"line"><span class=3D"cl">.
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80 go.mod
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80 main.go
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80 products
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82   =E2=94=94=
+=E2=94=80=E2=94=80 products.go
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80 users
+</span></span><span class=3D"line"><span class=3D"cl">    =E2=94=94=E2=94=
+=80=E2=94=80 users.go
+</span></span></code></pre></div><p>We will selectively checkout only some =
+of the directories.</p><p>Clone the repo, but do not checkout the working t=
+ree:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code=
+ class=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spel=
+lcheck=3D"false"><span class=3D"line"><span class=3D"cl">git clone --no-che=
+ckout /tmp/remote.git /tmp/repo
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"nb">cd=
+</span> /tmp/repo
+</span></span></code></pre></div><codapi-snippet id=3D"sparse-checkout-1" s=
+andbox=3D"shell" editor=3D"basic" template=3D"sparse-checkout.sh" output=3D=
+"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Tell git to checkout only the root and <code>users</cod=
+e> directories:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"ch=
+roma"><code class=3D"language-shell" data-lang=3D"shell" contenteditable=3D=
+"true" spellcheck=3D"false"><span class=3D"line"><span class=3D"cl">git spa=
+rse-checkout init --cone
+</span></span><span class=3D"line"><span class=3D"cl">git sparse-checkout <=
+span class=3D"nb">set</span> users
+</span></span></code></pre></div><codapi-snippet id=3D"sparse-checkout-2" s=
+andbox=3D"shell" editor=3D"basic" template=3D"sparse-checkout.sh" depends-o=
+n=3D"sparse-checkout-1" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Checkout the directories:</p><div class=3D"highlight"><=
+pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lan=
+g=3D"shell" contenteditable=3D"true" spellcheck=3D"false"><span class=3D"li=
+ne"><span class=3D"cl">git checkout main
+</span></span></code></pre></div><codapi-snippet id=3D"sparse-checkout-3" s=
+andbox=3D"shell" editor=3D"basic" template=3D"sparse-checkout.sh" depends-o=
+n=3D"sparse-checkout-2" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>Only the root and users directories are checked out:</p=
+><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-shell" data-lang=3D"shell" contenteditable=3D"true" spellcheck=
+=3D"false"><span class=3D"line"><span class=3D"cl">tree
+</span></span></code></pre></div><codapi-snippet id=3D"sparse-checkout-4" s=
+andbox=3D"shell" editor=3D"basic" template=3D"sparse-checkout.sh" depends-o=
+n=3D"sparse-checkout-3" output-tail=3D"" output=3D"" state=3D"unknown">
+<codapi-toolbar>
+<button>Run</button>
+<a href=3D"https://antonz.org/git-by-example/#edit">Edit</a>
+<codapi-status></codapi-status>
+</codapi-toolbar>
+
+</codapi-snippet><p>The <code>products</code> directory was not checked out=
+.</p><h3 id=3D"partial-clone">Partial clone</h3><p>The partial checkout app=
+roach we tried earlier still clones the entire repo. So if the repo itself =
+is huge (which is often the case if it has a long history or large binary f=
+iles), the clone step can be slow and traffic-intensive.</p><p>To reduce th=
+e amount of data downloaded during cloning, use <em>partial clone</em> with=
+ one of the following commands:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-shell" data-lang=3D"shell">=
+<span class=3D"line"><span class=3D"cl"><span class=3D"c1"># Download commi=
+ts and trees (directories),</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1"># =
+but not blobs (file contents):</span>
+</span></span><span class=3D"line"><span class=3D"cl">git clone --filter<sp=
+an class=3D"o">=3D</span>blob:none file:///tmp/remote.git
+</span></span><span class=3D"line"><span class=3D"cl">
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1"># =
+Download commits only, without trees (directories)</span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"c1"># =
+or blobs (file contents):</span>
+</span></span><span class=3D"line"><span class=3D"cl">git clone --filter<sp=
+an class=3D"o">=3D</span>tree:0 file:///tmp/remote.git
+</span></span></code></pre></div><p>In both cases, git will lazily fetch th=
+e missing data later when needed.</p><p>Note that for this to work, the rem=
+ote server should support partial cloning (GitHub does).</p><h2 id=3D"final=
+-thoughts">Final thoughts</h2><p>We've covered important Git operations, fr=
+om basic editing to branching and merging, remote syncing, undoing changes,=
+ and performing some moderate magic.</p><p>To learn more about Git, check o=
+ut the <a href=3D"https://git-scm.com/docs">reference manual</a> and the <a=
+ href=3D"https://git-scm.com/book">Pro Git</a> book by Scott Chacon and Ben=
+ Straub.</p><p>And may Git be with you!</p><p>=E2=94=80=E2=94=80</p><p>P.S.=
+ Interactive examples in this post are powered by <a href=3D"https://codapi=
+.org/">codapi</a> =E2=80=94 an open source tool I'm building. Use it to emb=
+ed live code snippets into your product docs, online course or blog.</p><p>=
+<a href=3D"https://antonz.org/subscribe/">=E2=98=85&nbsp;Subscribe</a> to k=
+eep up with new posts.</p></div></div><footer class=3D"post__footer"><div c=
+lass=3D"row"><div class=3D"col-xs-12"><div class=3D"post__date"><time datet=
+ime=3D"2024-03-14 10:30:00 +0000 UTC">14 Mar, 2024</time></div><div class=
+=3D"post__tags"><a href=3D"https://antonz.org/tags/software/">software</a>&=
+nbsp;</div></div></div></footer></article><aside class=3D"post__related"><d=
+iv class=3D"post__nav article"><div class=3D"row"><div class=3D"col-xs-12 c=
+ol-sm-6"><p>=E2=86=90&nbsp;<a href=3D"https://antonz.org/self-promo/">Banne=
+d for self-promo</a></p></div><div class=3D"col-xs-12 col-sm-6"><p><a href=
+=3D"https://antonz.org/grep-by-example/">Grep by example: Interactive guide=
+</a>&nbsp;=E2=86=92</p></div></div></div><div class=3D"article"><div class=
+=3D"row"><div class=3D"col-xs-12 col-sm-8 col-md-6"><h3>See also</h3><p><a =
+href=3D"https://antonz.org/stupid/">I'm a programmer and I'm stupid</a></p>=
+<p><a href=3D"https://antonz.org/try-x-in-y-minutes/">Try X in Y minutes</a=
+></p><p><a href=3D"https://antonz.org/playground-visualizations/">Code play=
+ground visualizations</a></p></div></div></div></aside></div></div><footer =
+class=3D"container footer"><ul class=3D"naked-list"><li class=3D"footer__it=
+em">Subscribe:
+<a href=3D"https://buttondown.email/antonz" class=3D"footer__social-link"><=
+i class=3D"fas fa-envelope"></i><span>Newsletter</span>
+</a><a href=3D"https://twitter.com/ohmypy" class=3D"footer__social-link"><i=
+ class=3D"fab fa-twitter-1"></i><span>Twitter</span>
+</a><a href=3D"https://c.im/@antonz" class=3D"footer__social-link"><svg cla=
+ss=3D"icon" viewBox=3D"0 0 16 16" role=3D"img"><path fill=3D"currentcolor" =
+d=3D"M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.=
+339.0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027.0h-.05C5.92.=
+017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 =
+1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1=
+.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-=
+.156-3.215-1.928a3.614 3.614.0 01-.033-.496s1.424.346 3.228.428c1.103.05 2.=
+137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.=
+804.0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541=
+-.727.0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.45=
+6-.505 1.052-.764 1.793-.764.856.0 1.504.328 1.933.983L8 4.39l.417-.695c.42=
+9-.655 1.077-.983 1.934-.983.74.0 1.336.259 1.791.764.442.505.661 1.187.661=
+ 2.046v4.203z"></path></svg>
+</a><a href=3D"https://www.linkedin.com/in/nalgeon/" class=3D"footer__socia=
+l-link"><i class=3D"fab fa-linkedin-2"></i><span>LinkedIn</span>
+</a><a href=3D"https://github.com/nalgeon" class=3D"footer__social-link"><i=
+ class=3D"fab fa-github-1"></i><span>GitHub</span>
+</a><a href=3D"https://antonz.org/index.xml" class=3D"footer__social-link">=
+<i class=3D"fas fa-rss"></i><span>RSS</span></a></li><li class=3D"footer__i=
+tem">Email: <a href=3D"mailto:m@antonz.org">m@antonz.org</a></li></ul></foo=
+ter></body></html>
+------MultipartBoundary--fP6mXKaRwJjI3j8jpAiAa2zk6FyfcQ3l6EM3p2mMUE----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/assets/css/style.ab5b07a3b8460dd96d9aa8eef3fcde58195fdd8aeae66b56e0428d9bc3c4a9f6.css
+
+@charset "utf-8";
+
+html { line-height: 1.15; text-size-adjust: 100%; }
+
+body { margin: 0px; }
+
+hr { height: 0px; color: inherit; }
+
+abbr[title] { text-decoration: underline dotted; }
+
+b, strong { font-weight: bolder; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 60%; line-height: 0; position: relative; }
+
+table { text-indent: 0px; border-color: inherit; }
+
+button, input, optgroup, select, textarea { font-family: inherit; font-size=
+: 100%; line-height: 1.15; margin: 0px; }
+
+button, select { text-transform: none; }
+
+button, [type=3D"button"], [type=3D"reset"], [type=3D"submit"] { appearance=
+: button; }
+
+legend { padding: 0px; }
+
+progress { vertical-align: baseline; }
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; }
+
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+::-webkit-search-decoration { appearance: none; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+summary { display: list-item; }
+
+.container-fluid { margin-right: auto; margin-left: auto; padding-right: 2r=
+em; padding-left: 2rem; }
+
+.row { box-sizing: border-box; display: flex; flex: 0 1 auto; flex-flow: wr=
+ap; margin-right: -0.5rem; margin-left: -0.5rem; }
+
+.row.reverse { flex-direction: row-reverse; }
+
+.col.reverse { flex-direction: column-reverse; }
+
+.col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, =
+.col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-x=
+s-offset-1, .col-xs-offset-2, .col-xs-offset-3, .col-xs-offset-4, .col-xs-o=
+ffset-5, .col-xs-offset-6, .col-xs-offset-7, .col-xs-offset-8, .col-xs-offs=
+et-9, .col-xs-offset-10, .col-xs-offset-11, .col-xs-offset-12 { box-sizing:=
+ border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem; }
+
+.col-xs { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+
+.col-xs-1 { flex-basis: 8.333%; max-width: 8.333%; }
+
+.col-xs-2 { flex-basis: 16.667%; max-width: 16.667%; }
+
+.col-xs-3 { flex-basis: 25%; max-width: 25%; }
+
+.col-xs-4 { flex-basis: 33.333%; max-width: 33.333%; }
+
+.col-xs-5 { flex-basis: 41.667%; max-width: 41.667%; }
+
+.col-xs-6 { flex-basis: 50%; max-width: 50%; }
+
+.col-xs-7 { flex-basis: 58.333%; max-width: 58.333%; }
+
+.col-xs-8 { flex-basis: 66.667%; max-width: 66.667%; }
+
+.col-xs-9 { flex-basis: 75%; max-width: 75%; }
+
+.col-xs-10 { flex-basis: 83.333%; max-width: 83.333%; }
+
+.col-xs-11 { flex-basis: 91.667%; max-width: 91.667%; }
+
+.col-xs-12 { flex-basis: 100%; max-width: 100%; }
+
+.col-xs-offset-1 { margin-left: 8.333%; }
+
+.col-xs-offset-2 { margin-left: 16.667%; }
+
+.col-xs-offset-3 { margin-left: 25%; }
+
+.col-xs-offset-4 { margin-left: 33.333%; }
+
+.col-xs-offset-5 { margin-left: 41.667%; }
+
+.col-xs-offset-6 { margin-left: 50%; }
+
+.col-xs-offset-7 { margin-left: 58.333%; }
+
+.col-xs-offset-8 { margin-left: 66.667%; }
+
+.col-xs-offset-9 { margin-left: 75%; }
+
+.col-xs-offset-10 { margin-left: 83.333%; }
+
+.col-xs-offset-11 { margin-left: 91.667%; }
+
+.start-xs { justify-content: flex-start; text-align: start; }
+
+.center-xs { justify-content: center; text-align: center; }
+
+.end-xs { justify-content: flex-end; text-align: end; }
+
+.top-xs { align-items: flex-start; }
+
+.middle-xs { align-items: center; }
+
+.bottom-xs { align-items: flex-end; }
+
+.around-xs { justify-content: space-around; }
+
+.between-xs { justify-content: space-between; }
+
+.first-xs { order: -1; }
+
+.last-xs { order: 1; }
+
+@media only screen and (min-width: 48em) {
+  .container { width: 46rem; }
+  .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6=
+, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col=
+-sm-offset-1, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm=
+-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-of=
+fset-9, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-sm { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-sm-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-sm-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-sm-3 { flex-basis: 25%; max-width: 25%; }
+  .col-sm-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-sm-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-sm-6 { flex-basis: 50%; max-width: 50%; }
+  .col-sm-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-sm-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-sm-9 { flex-basis: 75%; max-width: 75%; }
+  .col-sm-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-sm-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-sm-12 { flex-basis: 100%; max-width: 100%; }
+  .col-sm-offset-0 { margin-left: 0px; }
+  .col-sm-offset-1 { margin-left: 8.333%; }
+  .col-sm-offset-2 { margin-left: 16.667%; }
+  .col-sm-offset-3 { margin-left: 25%; }
+  .col-sm-offset-4 { margin-left: 33.333%; }
+  .col-sm-offset-5 { margin-left: 41.667%; }
+  .col-sm-offset-6 { margin-left: 50%; }
+  .col-sm-offset-7 { margin-left: 58.333%; }
+  .col-sm-offset-8 { margin-left: 66.667%; }
+  .col-sm-offset-9 { margin-left: 75%; }
+  .col-sm-offset-10 { margin-left: 83.333%; }
+  .col-sm-offset-11 { margin-left: 91.667%; }
+  .start-sm { justify-content: flex-start; text-align: start; }
+  .center-sm { justify-content: center; text-align: center; }
+  .end-sm { justify-content: flex-end; text-align: end; }
+  .top-sm { align-items: flex-start; }
+  .middle-sm { align-items: center; }
+  .bottom-sm { align-items: flex-end; }
+  .around-sm { justify-content: space-around; }
+  .between-sm { justify-content: space-between; }
+  .first-sm { order: -1; }
+  .last-sm { order: 1; }
+}
+
+@media only screen and (min-width: 62em) {
+  .container { width: 61rem; }
+  .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6=
+, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col=
+-md-offset-1, .col-md-offset-2, .col-md-offset-3, .col-md-offset-4, .col-md=
+-offset-5, .col-md-offset-6, .col-md-offset-7, .col-md-offset-8, .col-md-of=
+fset-9, .col-md-offset-10, .col-md-offset-11, .col-md-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-md { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-md-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-md-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-md-3 { flex-basis: 25%; max-width: 25%; }
+  .col-md-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-md-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-md-6 { flex-basis: 50%; max-width: 50%; }
+  .col-md-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-md-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-md-9 { flex-basis: 75%; max-width: 75%; }
+  .col-md-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-md-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-md-12 { flex-basis: 100%; max-width: 100%; }
+  .col-md-offset-1 { margin-left: 8.333%; }
+  .col-md-offset-2 { margin-left: 16.667%; }
+  .col-md-offset-3 { margin-left: 25%; }
+  .col-md-offset-4 { margin-left: 33.333%; }
+  .col-md-offset-5 { margin-left: 41.667%; }
+  .col-md-offset-6 { margin-left: 50%; }
+  .col-md-offset-7 { margin-left: 58.333%; }
+  .col-md-offset-8 { margin-left: 66.667%; }
+  .col-md-offset-9 { margin-left: 75%; }
+  .col-md-offset-10 { margin-left: 83.333%; }
+  .col-md-offset-11 { margin-left: 91.667%; }
+  .start-md { justify-content: flex-start; text-align: start; }
+  .center-md { justify-content: center; text-align: center; }
+  .end-md { justify-content: flex-end; text-align: end; }
+  .top-md { align-items: flex-start; }
+  .middle-md { align-items: center; }
+  .bottom-md { align-items: flex-end; }
+  .around-md { justify-content: space-around; }
+  .between-md { justify-content: space-between; }
+  .first-md { order: -1; }
+  .last-md { order: 1; }
+}
+
+@media only screen and (min-width: 75em) {
+  .container { width: 71rem; }
+  .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6=
+, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col=
+-lg-offset-1, .col-lg-offset-2, .col-lg-offset-3, .col-lg-offset-4, .col-lg=
+-offset-5, .col-lg-offset-6, .col-lg-offset-7, .col-lg-offset-8, .col-lg-of=
+fset-9, .col-lg-offset-10, .col-lg-offset-11, .col-lg-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-lg { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-lg-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-lg-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-lg-3 { flex-basis: 25%; max-width: 25%; }
+  .col-lg-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-lg-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-lg-6 { flex-basis: 50%; max-width: 50%; }
+  .col-lg-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-lg-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-lg-9 { flex-basis: 75%; max-width: 75%; }
+  .col-lg-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-lg-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-lg-12 { flex-basis: 100%; max-width: 100%; }
+  .col-lg-offset-1 { margin-left: 8.333%; }
+  .col-lg-offset-2 { margin-left: 16.667%; }
+  .col-lg-offset-3 { margin-left: 25%; }
+  .col-lg-offset-4 { margin-left: 33.333%; }
+  .col-lg-offset-5 { margin-left: 41.667%; }
+  .col-lg-offset-6 { margin-left: 50%; }
+  .col-lg-offset-7 { margin-left: 58.333%; }
+  .col-lg-offset-8 { margin-left: 66.667%; }
+  .col-lg-offset-9 { margin-left: 75%; }
+  .col-lg-offset-10 { margin-left: 83.333%; }
+  .col-lg-offset-11 { margin-left: 91.667%; }
+  .start-lg { justify-content: flex-start; text-align: start; }
+  .center-lg { justify-content: center; text-align: center; }
+  .end-lg { justify-content: flex-end; text-align: end; }
+  .top-lg { align-items: flex-start; }
+  .middle-lg { align-items: center; }
+  .bottom-lg { align-items: flex-end; }
+  .around-lg { justify-content: space-around; }
+  .between-lg { justify-content: space-between; }
+  .first-lg { order: -1; }
+  .last-lg { order: 1; }
+}
+
+:root { --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helveti=
+ca, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol=
+"; --font-serif: "PT Serif", Georgia, serif; --font-monospace: ui-monospace=
+, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+        "Liberation Mono", monospace; --color-text: #000; --color-blue: #00=
+8bf5; --color-gray: #555; --color-red: #ed7647; --color-yellow: #fdd000; --=
+color-pre: #f5f5f5; --color-box: #eaeaea; --color-bg: #fff; --color-code-ke=
+yword: #a90d91; --color-code-type: #a90d91; --color-code-string: #c41a16; -=
+-color-code-comment: #177500; --font-size-large: 1.2rem; --font-size-x-larg=
+e: 1.2rem; }
+
+html { box-sizing: border-box; }
+
+*, ::before, ::after { box-sizing: inherit; }
+
+[hidden] { display: none !important; }
+
+body { color: var(--color-text); font-size: 16px; font-family: var(--font-s=
+ans); font-weight: normal; line-height: 1.35; background: var(--color-bg); =
+-webkit-font-smoothing: antialiased; }
+
+h1, h2, h3 { font-weight: normal; }
+
+h1, h2 { line-height: 1; }
+
+.container { padding-left: 1em; padding-right: 1em; width: 100%; }
+
+@media only screen and (min-width: 48em) {
+  .container { padding-left: 3em; padding-right: 3em; }
+}
+
+@media only screen and (min-width: 62em) {
+  .container { max-width: 960px; margin-left: auto; margin-right: auto; pad=
+ding-left: 0px; padding-right: 0px; }
+}
+
+a { color: var(--color-blue); border-bottom: 1px solid rgba(0, 139, 245, 0.=
+2); text-decoration: none; }
+
+a:active, a:hover, a:visited:active, a:visited:hover { color: rgb(92, 184, =
+255); border-bottom-color: rgba(92, 184, 255, 0.2); }
+
+a:visited { color: rgb(85, 26, 139); border-bottom-color: rgba(85, 26, 139,=
+ 0.2); }
+
+a[href^=3D"#"] { border-bottom-style: dashed; }
+
+a.link--black { color: var(--color-text); border-bottom-color: var(--color-=
+text); }
+
+blockquote { margin: 0px; padding: 0px; }
+
+code, pre { font-family: var(--font-monospace); }
+
+pre { margin: 0px 0px 0.8em; background: var(--color-pre); overflow-x: auto=
+; white-space: pre; line-height: 1.2; tab-size: 4; }
+
+pre > code { display: block; padding: 1.5em; font-size: 80%; }
+
+p > code, li > code, td > code, p > a > code, li > a > code { background: v=
+ar(--color-pre); font-size: 80%; padding: 0.125em 0.25em; }
+
+p { margin: 0px 0px 0.8em; }
+
+p:last-child { margin-bottom: 0px; }
+
+img { display: block; height: auto; max-width: 100%; width: auto; }
+
+video { display: block; height: auto; max-width: 100%; width: auto; margin-=
+bottom: 0.8em; }
+
+abbr::after { display: inline-block; margin-left: 0.25em; margin-right: 0.2=
+5em; vertical-align: text-bottom; font-size: 80%; content: "=E2=93=98"; }
+
+details { margin-bottom: 0.8em; }
+
+details summary { color: var(--color-blue); cursor: pointer; }
+
+details summary.summary-ai::marker { content: "=F0=9F=A4=96 "; }
+
+form input[type=3D"email"], form input[type=3D"password"], form input[type=
+=3D"search"], form input[type=3D"text"], form input[type=3D"url"], form sel=
+ect, form textarea { border-radius: 0.125em; border: solid 1px var(--color-=
+gray); background-color: var(--color-bg); color: var(--color-text); cursor:=
+ text; display: block; padding: 0.5em; appearance: none; }
+
+form input.error, form select.error, form textarea.error { border-color: va=
+r(--color-red); }
+
+.button, button, input[type=3D"button"], input[type=3D"reset"], input[type=
+=3D"submit"] { background: var(--color-blue); border: 0px; border-radius: 0=
+.125em; color: var(--color-bg); cursor: pointer; display: inline-block; ver=
+tical-align: middle; outline: 0px; overflow: hidden; padding: 0.5em 1em; po=
+sition: relative; text-decoration: none; text-align: center; appearance: no=
+ne; }
+
+.button:hover, button:hover, input[type=3D"button"]:hover, input[type=3D"re=
+set"]:hover, input[type=3D"submit"]:hover { background-color: rgb(0, 123, 2=
+21); border-bottom: none; color: var(--color-bg); }
+
+.button:visited, .button:visited:hover { border-bottom: none; color: var(--=
+color-bg); }
+
+button:disabled, input[type=3D"button"]:disabled, input[type=3D"reset"]:dis=
+abled, input[type=3D"submit"]:disabled { opacity: 0.4; pointer-events: none=
+; cursor: default; }
+
+.button--black { background: var(--color-text); }
+
+abbr[title] { text-decoration: none; }
+
+mark { background: var(--color-yellow); padding: 0px 0.25em; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --color-text: #fff; --color-blue: #008bf5; --color-gray: #6c7986;=
+ --color-red: #ff8a65; --color-yellow: #ffdf80; --color-pre: #151b23; --col=
+or-box: #1e242b; --color-bg: #000; --color-code-keyword: #fc5fa3; --color-c=
+ode-type: #fc5fa3; --color-code-string: #fc6a5d; --color-code-comment: #6c7=
+986; }
+  a { border-bottom: 1px solid var(--color-blue); }
+  a:active, a:hover, a:visited:active, a:visited:hover { border-bottom: non=
+e; }
+  a:visited { color: var(--color-blue); border-bottom: 1px solid var(--colo=
+r-blue); }
+  img { opacity: 0.75; transition: opacity 0.3s ease-in-out 0s; }
+  img:hover { opacity: 1; }
+}
+
+.hljs-keyword { color: var(--color-code-keyword); }
+
+.hljs-type { color: var(--color-code-type); }
+
+.hljs-string { color: var(--color-code-string); }
+
+.hljs-comment { color: var(--color-code-comment); }
+
+.bg { background-color: var(--color-pre); }
+
+.chroma { background-color: var(--color-pre); }
+
+.chroma .x { }
+
+.chroma .err { color: var(--color-text); }
+
+.chroma .cl { }
+
+.chroma .lnlinks { outline: none; text-decoration: none; color: inherit; }
+
+.chroma .lntd { vertical-align: top; padding: 0px; margin: 0px; border: 0px=
+; }
+
+.chroma .lntable { border-spacing: 0px; padding: 0px; margin: 0px; border: =
+0px; }
+
+.chroma .hl { background-color: var(--color-pre); }
+
+.chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; pa=
+dding: 0px 0.4em; color: var(--color-code-comment); }
+
+.chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; pad=
+ding: 0px 0.4em; color: var(--color-code-comment); }
+
+.chroma .line { display: flex; }
+
+.chroma .k { color: var(--color-code-keyword); }
+
+.chroma .kc { color: var(--color-code-keyword); }
+
+.chroma .kd { color: var(--color-code-keyword); }
+
+.chroma .kn { color: var(--color-code-keyword); }
+
+.chroma .kp { color: var(--color-code-keyword); }
+
+.chroma .kr { color: var(--color-code-keyword); }
+
+.chroma .kt { color: var(--color-code-keyword); }
+
+.chroma .n { color: var(--color-text); }
+
+.chroma .na { color: var(--color-code-keyword); }
+
+.chroma .nb { color: var(--color-code-keyword); }
+
+.chroma .bp { color: var(--color-code-keyword); }
+
+.chroma .nc { color: var(--color-code-keyword); }
+
+.chroma .no { color: var(--color-text); }
+
+.chroma .nd { color: var(--color-text); }
+
+.chroma .ni { color: var(--color-text); }
+
+.chroma .ne { color: var(--color-text); }
+
+.chroma .nf { color: var(--color-text); }
+
+.chroma .fm { color: var(--color-text); }
+
+.chroma .nl { color: var(--color-text); }
+
+.chroma .nn { color: var(--color-text); }
+
+.chroma .nx { color: var(--color-text); }
+
+.chroma .py { color: var(--color-text); }
+
+.chroma .nt { color: var(--color-text); }
+
+.chroma .nv { color: var(--color-text); }
+
+.chroma .vc { color: var(--color-text); }
+
+.chroma .vg { color: var(--color-text); }
+
+.chroma .vi { color: var(--color-text); }
+
+.chroma .vm { color: var(--color-text); }
+
+.chroma .l { color: var(--color-code-string); }
+
+.chroma .ld { color: var(--color-code-string); }
+
+.chroma .s { color: var(--color-code-string); }
+
+.chroma .sa { color: var(--color-code-string); }
+
+.chroma .sb { color: var(--color-code-string); }
+
+.chroma .sc { color: var(--color-code-string); }
+
+.chroma .dl { color: var(--color-code-string); }
+
+.chroma .sd { color: var(--color-code-string); }
+
+.chroma .s2 { color: var(--color-code-string); }
+
+.chroma .se { color: var(--color-code-string); }
+
+.chroma .sh { color: var(--color-code-string); }
+
+.chroma .si { color: var(--color-code-string); }
+
+.chroma .sx { color: var(--color-code-string); }
+
+.chroma .sr { color: var(--color-code-string); }
+
+.chroma .s1 { color: var(--color-code-string); }
+
+.chroma .ss { color: var(--color-code-string); }
+
+.chroma .m { color: var(--color-code-string); }
+
+.chroma .mb { color: var(--color-code-string); }
+
+.chroma .mf { color: var(--color-code-string); }
+
+.chroma .mh { color: var(--color-code-string); }
+
+.chroma .mi { color: var(--color-code-string); }
+
+.chroma .il { color: var(--color-code-string); }
+
+.chroma .mo { color: var(--color-code-string); }
+
+.chroma .o { color: var(--color-text); }
+
+.chroma .ow { color: var(--color-text); }
+
+.chroma .p { }
+
+.chroma .c { color: var(--color-code-comment); }
+
+.chroma .ch { color: var(--color-code-comment); }
+
+.chroma .cm { color: var(--color-code-comment); }
+
+.chroma .c1 { color: var(--color-code-comment); }
+
+.chroma .cs { color: var(--color-code-comment); }
+
+.chroma .cp { color: var(--color-code-string); }
+
+.chroma .cpf { color: var(--color-code-string); }
+
+.chroma .g { }
+
+.chroma .gd { }
+
+.chroma .ge { }
+
+.chroma .gr { }
+
+.chroma .gh { }
+
+.chroma .gi { }
+
+.chroma .go { }
+
+.chroma .gp { }
+
+.chroma .gs { }
+
+.chroma .gu { }
+
+.chroma .gt { }
+
+.chroma .gl { }
+
+.chroma .w { }
+
+@font-face { font-family: fa-brands; font-style: normal; font-weight: 400; =
+font-display: block; src: url("../fonts/fa-brands-400.woff2") format("woff2=
+"); }
+
+@font-face { font-family: "Font Awesome"; font-style: normal; font-weight: =
+400; font-display: block; src: url("../fonts/fa-regular-400.woff2") format(=
+"woff2"); }
+
+@font-face { font-family: "Font Awesome"; font-style: normal; font-weight: =
+900; font-display: block; src: url("../fonts/fa-solid-900.woff2") format("w=
+off2"); }
+
+.fa, .fab, .far, .fas { -webkit-font-smoothing: antialiased; display: inlin=
+e-block; font-style: normal; font-variant: normal; text-rendering: auto; li=
+ne-height: 1; }
+
+.fab { font-family: fa-brands; font-weight: 400; }
+
+.far { font-family: "Font Awesome"; font-weight: 400; }
+
+.fas { font-family: "Font Awesome"; font-weight: 900; }
+
+.fa-arrow-alt-circle-down::before { content: "=EF=8D=98"; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.fa-chalkboard-teacher::before { content: "=EF=94=9C"; }
+
+.fa-cloud::before { content: "=EF=83=82"; }
+
+.fa-code::before { content: "=EF=84=A1"; }
+
+.fa-cube::before { content: "=EF=86=B2"; }
+
+.fa-database::before { content: "=EF=87=80"; }
+
+.fa-dot-circle::before { content: "=EF=86=92"; }
+
+.fa-envelope::before { content: "=EF=83=A0"; }
+
+.fa-file::before { content: "=EF=85=9B"; }
+
+.fa-kiwi-bird::before { content: "=EF=94=B5"; }
+
+.fa-microphone::before { content: "=EF=84=B0"; }
+
+.fa-play::before { content: "=EF=85=84"; }
+
+.fa-robot::before { content: "=EF=95=84"; }
+
+.fa-rss::before { content: "=EF=82=9E"; }
+
+.fa-star::before { content: "=EF=80=85"; }
+
+.fa-telegram-plane::before { content: "=EF=8F=BE"; }
+
+.fa-terminal::before { content: "=EF=84=A0"; }
+
+.fa-user::before { content: "=EF=80=87"; }
+
+.fa-discord::before { content: "=EE=A0=80"; }
+
+.fa-facebook-1::before { content: "=EE=A0=81"; }
+
+.fa-facebook-2::before { content: "=EE=A0=82"; }
+
+.fa-facebook-3::before { content: "=EE=A0=83"; }
+
+.fa-github-1::before { content: "=EE=A0=84"; }
+
+.fa-github-2::before { content: "=EE=A0=85"; }
+
+.fa-github-3::before { content: "=EE=A0=86"; }
+
+.fa-instagram::before { content: "=EE=A0=87"; }
+
+.fa-linkedin-1::before { content: "=EE=A0=88"; }
+
+.fa-linkedin-2::before { content: "=EE=A0=8A"; }
+
+.fa-telegram::before { content: "=EE=A0=89"; }
+
+.fa-twitter-1::before { content: "=EE=A0=8B"; }
+
+.fa-twitter-2::before { content: "=EE=A0=8C"; }
+
+.fa-youtube::before { content: "=EE=A0=8D"; }
+
+.icon { display: inline-block; vertical-align: middle; width: 1em; height: =
+auto; }
+
+.icon--rounded { border-radius: 50%; }
+
+body { display: flex; flex-direction: column; min-height: 100vh; }
+
+.storey { padding-top: 4em; padding-bottom: 4em; }
+
+.storey--notop { padding-top: 0px; }
+
+.storey__header { font-size: 1.5em; font-weight: 700; margin: 0px 0px 0.75e=
+m; }
+
+.flex { display: flex; }
+
+.article { font-size: 1.1rem; }
+
+@media only screen and (min-width: 48em) {
+  .article { font-size: var(--font-size-large); }
+}
+
+@media only screen and (min-width: 62em) {
+  .article { font-size: 1.35rem; }
+  pre { font-size: var(--font-size-large); }
+}
+
+.article h1 { font-size: 1.8em; font-weight: 700; margin: 0px 0px 0.5em; }
+
+.article h2 { font-size: 1.4em; font-weight: 600; line-height: 1.35; margin=
+: 1em 0px 0.5em; }
+
+.article h2:first-child { margin-top: 0px; }
+
+.article h2 .anchor { visibility: hidden; position: absolute; margin-left: =
+-1em; width: 1em; cursor: pointer; border-bottom: none; }
+
+.article h3 { font-size: 1em; font-weight: 600; margin: 1em 0px 0.5em; }
+
+.article h3:first-child { margin-top: 0px; }
+
+.article ul, .article ol { padding-left: 2.5em; padding-right: 2.5em; margi=
+n: 0px 0px 0.8em; }
+
+.article ul li { list-style: none; }
+
+.article ol li { list-style: outside decimal; }
+
+.article li { margin: 0px 0px 0.4em; }
+
+.article figure { margin: 0px 0px 0.8em; }
+
+.article figcaption, .article .figcaption { color: var(--color-gray); font-=
+size: 90%; margin-top: 0.2em; }
+
+.article figcaption a, .article .figcaption a { color: var(--color-gray); b=
+order-color: var(--color-gray); }
+
+.article blockquote { border-left: 0.3em solid var(--color-gray); color: va=
+r(--color-gray); margin-bottom: 0.8em; padding: 0px 1em; }
+
+.article .big { font-size: 1.5em; margin: 0px 0px 0.8em; }
+
+.article blockquote.big { border: none; color: var(--color-gray); font-fami=
+ly: var(--font-serif); font-style: italic; padding: 0px 1.5em; }
+
+@media only screen and (min-width: 48em) {
+  .article blockquote.big { padding: 0px 3em; }
+}
+
+.article .boxed { margin-bottom: 0.8em; border: 0.25em solid var(--color-bo=
+x); padding: 1.5em; font-size: 90%; }
+
+.article .boxed > p:last-child { margin-bottom: 0px; }
+
+.article .boxed--blue { border: 1em solid var(--color-blue); }
+
+@media only screen and (min-width: 48em) {
+  .article .boxed { padding: 2em; }
+}
+
+.article table { width: 100%; margin: 0px 0px 0.8em; overflow-x: auto; vert=
+ical-align: top; border: 1px solid rgb(234, 234, 234); border-spacing: 0px;=
+ border-collapse: collapse; text-align: left; font-size: 0.9em; }
+
+.article table td, .article table th { padding: 0.4em; vertical-align: top;=
+ border-bottom: 1px solid rgb(234, 234, 234); }
+
+.article table tr:last-child td { border-bottom: none; }
+
+pre { line-height: 1.2; background: var(--color-pre) !important; }
+
+pre + p, pre + blockquote { margin-top: 0.8em; }
+
+pre + pre { margin-top: 1px; }
+
+pre > code { padding: 1.5rem; }
+
+.highlight + p, .highlight + blockquote { margin-top: 0.8em; }
+
+.highlight + pre { margin-top: 1px; }
+
+.footnotes { margin: 1em 0px; }
+
+.footnotes hr { display: none; }
+
+.footnotes ol { padding-left: 1.5em; padding-right: 1.5em; font-size: 80%; =
+}
+
+a.footnote-ref { border: none; }
+
+a.footnote-ref::before { content: "["; }
+
+a.footnote-ref::after { content: "]"; }
+
+a.footnote-backref { font-family: monospace; border-bottom: none; }
+
+@media only screen and (min-width: 48em) {
+  .longread .article h2 { position: sticky; top: 0px; z-index: 1; backgroun=
+d: var(--color-bg); }
+  .article h2:hover .anchor { visibility: visible; }
+  .footnotes ol { columns: 2; }
+}
+
+@media only screen and (min-width: 62em) {
+  .footnotes ol { columns: 3; }
+}
+
+codapi-snippet { display: block; margin-bottom: 0.8em; background: var(--co=
+lor-pre); }
+
+div.highlight + codapi-snippet, pre + codapi-snippet { margin-top: -0.8em; =
+}
+
+codapi-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: =
+1em; margin-bottom: 0px; padding: 0px 1.5em 1em; font-size: 1rem; }
+
+codapi-toolbar button { padding: 0px; border: none; background: none; line-=
+height: 1.35; color: var(--color-blue); }
+
+codapi-toolbar button::after { content: " =E2=96=B6"; }
+
+codapi-toolbar button:hover { background: none; color: rgb(92, 184, 255); }
+
+codapi-toolbar a { border: none !important; }
+
+codapi-status { display: block; white-space: nowrap; }
+
+codapi-status svg { width: 1em; height: 1em; }
+
+codapi-output { display: block; margin-bottom: 0.8em; border-top: 1px solid=
+ var(--color-bg); }
+
+codapi-output[hidden] { display: none; }
+
+codapi-output a[href=3D"#close"] { display: none; }
+
+codapi-output pre { margin-bottom: 0px; }
+
+codapi-output pre > code { margin-bottom: 0px; padding: 1em 1.5em; }
+
+div.highlight + div.highlight { margin-top: -0.8em; border-top: 1px solid v=
+ar(--color-bg); }
+
+.utterances { margin-left: 0px !important; }
+
+.footer { color: var(--color-gray); padding-top: 1em; padding-bottom: 1em; =
+}
+
+.footer__item { margin-left: 2em; }
+
+.footer__link { border-bottom-color: rgba(153, 153, 153, 0.4); color: inher=
+it; text-decoration: none; }
+
+.footer__link:visited { border-bottom-color: rgba(153, 153, 153, 0.4); colo=
+r: inherit; }
+
+.footer__social-link { color: rgb(33, 150, 243); display: inline-block; hei=
+ght: 1.5em; line-height: 1.5em; text-align: center; text-decoration: none; =
+width: 2em; border: none !important; }
+
+.footer__social-link:visited { color: rgb(33, 150, 243); }
+
+.footer__social-link:hover, .footer__social-link:visited:hover { color: rgb=
+(92, 184, 255); }
+
+.footer__social-link span { display: none; }
+
+.header { padding-top: 1em; }
+
+.header-icon { border-radius: 10%; display: inline-block; height: 1.5em; ve=
+rtical-align: middle; width: 1.5em; }
+
+.color-red { color: var(--color-red); }
+
+.color-gray { color: var(--color-gray); }
+
+.color-gray a, .color-gray a:visited { border-color: rgba(0, 0, 0, 0.14); c=
+olor: var(--color-gray); }
+
+.color-gray a:hover { border-bottom: none; }
+
+.color-sin { color: var(--color-yellow); }
+
+.color-grayscale { filter: grayscale(100%); }
+
+.highlight { background-color: rgb(255, 245, 157); }
+
+.align-left { text-align: left; }
+
+.align-center { text-align: center; }
+
+.align-right { text-align: right; }
+
+.valign-middle { vertical-align: middle; }
+
+.img-inline { vertical-align: middle; display: inline !important; }
+
+.img-link { display: inline-block; border: none !important; }
+
+.img-link:hover { border: none !important; }
+
+.img-bordered { border: 0.2em solid var(--color-box); }
+
+.img-bordered-thin { border: 1px solid var(--color-box); }
+
+.img-rounded { border-radius: 0.5em; }
+
+.naked-list { list-style: none; margin: 0px; padding: 0px; }
+
+.naked-list li { display: inline-block; }
+
+.naked-list li:first-child { margin-left: 0px; }
+
+@media only screen and (max-width: 48em) {
+  .naked-list { display: inline-block; margin: auto; text-align: left; }
+  .naked-list .footer__item { display: block; margin: 0.25em 0px 0.5em !imp=
+ortant; }
+}
+
+.col-tile { padding-bottom: 0.5rem; }
+
+.nowrap { white-space: nowrap; }
+
+a.disabled { pointer-events: none; color: var(--color-gray); border-bottom-=
+color: rgba(0, 0, 0, 0.14); }
+
+@media only screen and (max-width: 767px) {
+  .hidden-mobile { display: none !important; }
+}
+
+@media only screen and (min-width: 768px) {
+  .only-mobile { display: none; }
+}
+
+@media only screen and (max-width: 991px) {
+  .hidden-md { display: none !important; }
+}
+
+.home { background: linear-gradient(rgb(255, 255, 255), rgb(247, 248, 252))=
+; }
+
+.home__block { font-size: var(--font-size-large); }
+
+.home__row > div { margin-bottom: 1.5em; }
+
+.menu__link { display: inline-block; margin-right: 1em; border: none !impor=
+tant; }
+
+.menu__link:last-child { margin-right: 0px; }
+
+.menu__link i { color: rgb(51, 51, 51); }
+
+.menu__link span, .menu__link:visited span { color: var(--color-blue); bord=
+er-bottom: 1px solid rgba(0, 139, 245, 0.2); }
+
+.menu__link:active span, .menu__link:hover span { color: rgb(92, 184, 255);=
+ border-bottom-color: rgba(92, 184, 255, 0.2); }
+
+.menu__link:active i, .menu__link:hover i { color: rgb(92, 184, 255); }
+
+.post-stub { margin-bottom: 1.5em; }
+
+.post-stub__header { position: relative; margin: 0px; }
+
+.post-stub__title { margin-right: 0.5rem; }
+
+.post-stub__star { display: none; width: 1.2em; color: var(--color-yellow);=
+ }
+
+.post-stub__date { white-space: nowrap; color: var(--color-gray); font-size=
+: 0.8em; }
+
+.post-stub__description { margin: 0.2em 0px 0px; }
+
+@media only screen and (min-width: 48em) {
+  .post-stub__star { position: absolute; display: inline-block; left: -1.3e=
+m; top: 0.2em; }
+}
+
+.post__date { color: var(--color-gray); display: inline-block; margin-right=
+: 1em; }
+
+.post__footer { margin-top: 1em; }
+
+.post__related { margin-top: 4em; margin-bottom: 2em; }
+
+.post__nav p { margin-bottom: 0.8em; }
+
+.post__tags { color: var(--color-gray); display: inline-block; }
+
+.post__tags a { border-bottom-color: rgba(0, 0, 0, 0.1); color: currentcolo=
+r; }
+
+.article + .posts { margin-top: 1.5em; }
+
+@media only screen and (min-width: 48em) {
+  .posts { font-size: var(--font-size-large); }
+}
+
+a.portfolio-thumb { border: none; display: inline-block; }
+
+img.portfolio-thumb--raised { border-top: 1px solid rgb(234, 234, 234); box=
+-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.4) 0px =
+2px 3px 0px; }
+
+img.portfolio-thumb { margin: 0px 0px 0.5em; }
+
+.project-section-header { margin-bottom: 0.5em; padding-left: 1.5em; font-s=
+ize: 1em; font-weight: 700; }
+
+.project-block { position: relative; width: 100%; margin-bottom: 1em; borde=
+r: 1px solid rgb(234, 234, 234); border-radius: 0.25em; padding: 1em 1.5em;=
+ }
+
+.project-block--highlight { border-color: var(--color-blue); }
+
+.project-block--highlight::after { position: absolute; top: 0px; right: 0px=
+; display: inline-block; width: 1.5rem; height: 1.5rem; background: var(--c=
+olor-blue); border-bottom-left-radius: 0.25em; text-align: center; color: r=
+gb(255, 255, 255); content: "=E2=98=85"; }
+
+.project-block--noborder { border: none; }
+
+.project-block p { margin: 0px 0px 0.5em; }
+
+.project-block p:last-child { margin-bottom: 0px; }
+
+.project-book { margin: 1em 2em 1em 0px; }
+
+@media (prefers-color-scheme: dark) {
+  img.portfolio-thumb--raised { border: 1px solid var(--color-gray); box-sh=
+adow: none; }
+}
+
+.search-module input[type=3D"search"] { width: 100%; outline-style: none; f=
+ont-size: 12px; }
+
+.sqlime-example { margin: 0px 0px 0.8em; font-family: var(--font-monospace)=
+; line-height: 1; }
+
+.sqlime-example div:nth-child(1) { margin: 0px 0px 0.8em; font-size: 0.8em;=
+ }
+
+.sqlime-example button { border: 1px solid var(--color-blue); background: n=
+one; color: var(--color-blue); }
+
+.sqlime-example button:hover { background: var(--color-blue); color: var(--=
+color-bg); }
+
+.sqlime-example sqlime-output { padding: 1.5em; background-color: var(--col=
+or-pre); font-size: 0.8em; }
+
+.sqlime-example table { display: inline-block; width: auto; max-width: 100%=
+; margin-bottom: 0px; border-top: 1px solid var(--color-text); border-right=
+: none; border-bottom: 1px solid var(--color-text); border-left: 1px solid =
+var(--color-text); line-height: 1; font-size: 1em; }
+
+.sqlime-example table th { vertical-align: top; padding: 0.6em 1em; border-=
+top: none; border-right: 1px solid var(--color-text); border-bottom: 1px so=
+lid var(--color-text); border-left: none; font-weight: normal; line-height:=
+ 1; }
+
+.sqlime-example table td { vertical-align: top; padding: 0.2em 1em; border-=
+right: 1px solid var(--color-text); border-bottom: none; line-height: 1; }
+
+.sqlime-example table tr:first-child td { padding-top: 0.8em; }
+
+.sqlime-example table tr:last-child td { padding-bottom: 0.8em; }
+
+@media only screen and (min-width: 62em) {
+  .sqlime-example { font-size: var(--font-size-large); }
+}
+
+.subscribe-block { margin-bottom: 2rem; }
+
+.subscribe-block a { border: none; display: inline-block; }
+
+.subscribe-form { font-size: 1rem; }
+
+.subscribe-form input[type=3D"email"] { display: inline-block; vertical-ali=
+gn: middle; }
+
+.subscribe-form button[type=3D"submit"] { border: 1px solid var(--color-blu=
+e); }
+
+@media only screen and (max-width: 62em) {
+  .subscribe-form input[type=3D"email"] { width: 10rem; }
+}
+------MultipartBoundary--fP6mXKaRwJjI3j8jpAiAa2zk6FyfcQ3l6EM3p2mMUE----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/assets/logo.svg
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<!-- Generated by Pixelmator Pro 2.4.3 -->
+<svg width=3D"1024" height=3D"1024" viewBox=3D"0 0 1024 1024" xmlns=3D"http=
+://www.w3.org/2000/svg" xmlns:xlink=3D"http://www.w3.org/1999/xlink">
+    <path id=3D"Rectangle" fill=3D"#000000" fill-rule=3D"evenodd" stroke=3D=
+"none" d=3D"M 0 1024 L 1024 1024 L 1024 0 L 0 0 Z"/>
+    <path id=3D"a" fill=3D"#ffffff" fill-rule=3D"evenodd" stroke=3D"none" d=
+=3D"M 683.42926 590.483032 C 683.42926 606.237 685.595337 617.658447 689.92=
+7673 624.747681 C 694.26001 631.836914 701.283569 637.219482 710.998474 640=
+.895386 L 685.398438 722.81543 C 660.717285 720.452271 639.909302 715.00415=
+ 622.973816 706.470764 C 606.038391 697.937378 592.713379 685.006226 582.99=
+8474 667.67688 C 566.981995 686.844238 546.502197 701.088135 521.558472 710=
+.409241 C 496.614746 719.730347 471.146271 724.390747 445.152313 724.390747=
+ C 402.091583 724.390747 367.761658 712.116028 342.16153 687.566162 C 316.5=
+61401 663.016296 303.761536 631.443237 303.761536 592.846191 C 303.761536 5=
+47.422363 321.550079 512.370361 357.127686 487.689209 C 392.705292 463.0080=
+57 442.78891 450.667664 507.380005 450.667664 L 563.700012 450.667664 L 563=
+.700012 434.913818 C 563.700012 392.115662 536.131042 370.716919 480.99231 =
+370.716919 C 467.601471 370.716919 450.403687 372.620483 429.398468 376.427=
+673 C 408.393219 380.234863 387.388306 385.683044 366.383087 392.772278 L 3=
+37.632294 310.064636 C 364.676544 299.824585 392.836273 292.078979 422.1123=
+05 286.827698 C 451.388367 281.576355 477.578857 278.950745 500.684601 278.=
+950745 C 562.912598 278.950745 608.926514 291.619385 638.727722 316.956909 =
+C 668.52887 342.294495 683.42926 378.856201 683.42926 426.643066 Z M 488.08=
+1543 635.381531 C 501.472382 635.381531 515.519409 631.377441 530.223083 62=
+3.369263 C 544.926758 615.360962 556.085632 604.005188 563.700012 589.30151=
+4 L 563.700012 521.559998 L 532.97998 521.559998 C 498.32135 521.559998 472=
+.852905 526.876831 456.573853 537.510742 C 440.2948 548.144653 432.155396 5=
+63.701416 432.155396 584.181519 C 432.155396 600.197998 437.0784 612.735352=
+ 446.924622 621.793823 C 456.770813 630.852356 470.489655 635.381531 488.08=
+1543 635.381531 Z"/>
+</svg>=0A
+------MultipartBoundary--fP6mXKaRwJjI3j8jpAiAa2zk6FyfcQ3l6EM3p2mMUE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://antonz.org/git-by-example/ebook.png
+
+iVBORw0KGgoAAAANSUhEUgAAAlgAAAMgCAIAAABwAouTAABsMklEQVR42uzdd1hT5+M//J4skhCm
+TJkyVFAQcOJEBYvirnUgraOKKApuauvEWlddOOunbtxb696IEyeogEwREJAlmyx+19Vzfc+TB0hI
+QoKA79d/7RXJyX2S+33u/d13AAAA3wwNDQ0Gg4FyAAAABCEAAACCEAAAAEEIAACAIAQAAEAQAgAA
+IAgBQF2I/yj6fwAAQQjQHCJQQ0ODy+VyOBw6nU7+TyaTyf0Pk8kk/w+dTudwOFwuV0NDA3EIgCAE
+aD7odDqXy9X8D4vFIqORzWaT/4fNZpOxx2KxyP/D5XKpvAQABCFAk0ej0aggJNt/tQYhk8mkgpBG
+o6HcABCEAM0Hg8Fgs9ksFovq86TRaBr/oTKPIAgWi8Vms/FDBUAQAgAAIAgBAAAQhAAAAAhCAAAA
+BCEAAACCEAAAAEEIAACAIAQAAEAQAgAAIAgBAAAQhAAAAAhCAAAABCEAAACCEAAAAEEIAACAIAQA
+AEAQAgAAIAgBAABBiCAEAAAEIQAAAIIQAAAAQQgAAIAgBAAAQBACAAAgCAEAABCEAAAACEIAAAAE
+IQAAAIIQAAAAQQgAAIAgBAAAQBACAAAgCAEAABCEAAAACEIAAAAEIQAAAIIQAAAAQQgAAIAgBAAA
+QBACAAAgCAEAABCEAAAACEIAAAAEIQAAAIIQAAAAQQgAAIAgBAAAQBACAAAgCAEAABCEAAAACEIA
+AAAEIQAAAIIQAAAAQQgAAIAgBAAAQBACAAAgCAEAABCEAAAACEIAAAAEIQAAAIIQAAAAQQgAAIAg
+BAAAQBACAAAgCAEAABCEAAAACEIAAAAEIQAAAIIQAAAAQQgAAAhCBCEAACAIAQAAEIQAAAAIQgAA
+AAQhAAAAghAAAABBCAAAgCAEAABAEAIAACAIAQAAEIQAAAAIQgAAAAQhAAAAghAAAABBCAAAgCAE
+AABAEAIAACAIAQAAEIQAAAAIQgAAAAQhAAAAghAAAABBCAAAgCAEAABAEAIAACAIAQAAEIQAAAAI
+QgAAAAQhAAAAghAAAABBCAAAgCAEAABAEAIAACAIAQAAEIQAAAAIQgAAAAQhAAAAghAAAABBCAAA
+gCAEAABAEAIAACAIAQAAEIQAAAAIQgAAAAQhAAAAghAAAABBCAAAgCAEAABAEAIAACAIAQAAEIQA
+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
+/Kc69wQCwbRp09Txwd3c3KiqMDIy0s/PLywsLCYmprCwUPY2Znl5ecuXL5dz0y8ej3fixAnqUSA6
+OnrVqlWSC9eKioqGDBkif9uCRqN16dLl7t27Nde2i8XiysrKsrIyyZQtKCiQNug7YMAAaoGEtCDU
+0dGhNrqrqqq6du1arVN/ydWBVLl9/vzZxcWl1jfV09OjNsUWCASrV6+WJwhNTU2pZyORSLR161Zp
+M5C7dOlCfTNTU1P79OlT68vMzc2pZ4j09PT+/fuvXr362bNnBQUFlZWVtW6xRsXwzp07pS1xAQQh
+NNUg/OOPP6hfvpznEero6Lx69UryFENp8WlsbEx1avH5/KlTp8qu9Ol0+rRp06haPjMzUx0LJ777
+7rs+ffpQMSD8j4zwE4lEZWVlaWlpp0+f/v777xXa48bZ2Tk1NZXKKsl5RgKB4J9//pF/HhCdTvf0
+9Hz+/LnkTM7i4uKYmJh9+/b5+/t7eHiMGDFC8taUlpb27Nmz1r/m7e1NRbK0INTQ0JDcivbu3bu1
+zqplsVhLliyh9ksrKyvz9PSs9U319fWPHDlCBeGaNWvkCUJDQ8NTp06R/0osFp88eVLafJmePXtS
+c4XS0tL69+9f68vat29PlaFQKJT96EPuaZeRkXH16tUffvgBx10hCKEZBuGKFSuoSuHBgwe1Lnqr
+hslkXrx4kaopoqOjpbUAmEzm4cOHqQply5YtslcT6uvrh4eHk20asVh88eJFNdU7np6eVI0pDZ/P
+LygoiImJOXbsWEhISK9eveTZO7Rmei1evLjmUJNYLI6OjpZ/py4yBV+9ekXdrPLy8oiIiFmzZrVp
+04bKZhsbG6oXkZwPWetWNd99952Pjw9VAtKCkMFgSC4zffjwYa3L+MhFh9R8Ij6fP2bMGGn39/jx
+41QQrlu3Tp7VpQYGBlTDmlyqKG0MUnLFTnp6urSJyp06dapzT1GBQPDly5fY2NgzZ84sXbrU09NT
+xoaCgCCEph2ES5YsoerWyMjIOrdnrLkM//379926dZP292fOnEm18K5fvy77ZJzOnTtTg1Ll5eVB
+QUFq+uADBgyotrMaWYMXFRWlpaVFRkbu2bNn7ty5AwcOdHR0NDAwqM/6DXt7+2vXrkn2WJLTbRYv
+Xizn8CdBEO7u7m/fvqXuVElJydatW9u1a1ftF2tlZXXr1i3JTyRtzu3gwYPrDEI6nb5hwwbJzXRq
+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
+AUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIARBCIQRACAFA
+CAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFA
+CAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFA
+CAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAEQQiEEQAgBQAgBQAgBQAgBQAgBQAgB
+QAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgB
+QAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgBQAgB
+QAgBQAgBQAgBQAgBQAgBQAgBEEIhBEAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAI
+AUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAI
+AUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAIAUAI
+AUAIARBCIQRACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFA
+CAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFA
+CAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAFACAEQQiEEQAhtBwCEEACE
+EACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACE
+EACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEACE
+EACEEACEEACEEACEEACEEACEEACEEACEEACEEACEEAAhFEIAhBAAhBD4tb+fi4uL69evHwqFbA0Q
+Qvh1y8nJadWq1VFHHVW/fv3v+Wbu16/f7Nmzn3zyyUMPPdQGBCGEX7FQKNSrV6+VK1d+8sknPXv2
+/D57eA0aNHjuuecSiUQkErnsssvsFIIQ8ivzhz/84ZVXXnnzzTdnzZp1+OGH//Tf7Pr16zdq1KhW
+rVq/qJdZo0aNG2+88c29ePnllzt06BCEsF+/fvF4fMOGDb169fo+VcvNzb3jjjvWr1+/YsWKrl27
++o0CIeTXJCMj4+GHH04kEslksrKycsCAATVq1PjRawuHwz169JgzZ86HH354wgkn/NJe6YQJEyp2
+E4vFksnkli1bunfv/uNCuN9++xUUFBx//PGHH374T9l6IITwf6CoqGjJkiXl5eVffPFFPB6fNGlS
+vXr1fspe18UXX7x169ZvvvmmZ8+ev6hXGgqFjjrqqFP+pwsuuODLL79MJpOffvppcHrvx4UQEEJ+
+lUKh0BlnnBGJRN5666077rgjmUx+/PHHRx555C7LNGjQoHHjxjVr1gyFQkVFRWedddbAgQO7deuW
+nZ2dvr/VqFGjAw88cPDgwdu2bdu+fXu/fv2Kv9W4cePdD5OGQqHCwsJevXoNHjz4/PPPP+SQQ3bZ
+lwqFQvn5+cXFxQUFBfvtt19eXl6PHj0GDBjQq1ev4JGfLjMz87rrrovH49u2bRswYEBmZmbwffv2
+7ZsKYUZGRvv27fv373/hhRc2a9ZslzXUqVOnqKioOE3dunV3aWd2dnZxcXFRUdEuGyEcDterV6+4
+uLhhw4ap1x5slpNPPvnKK68cOHDgGWec0bBhw9033f7775/6Xrm5uT169LjiiitOP/303NzcPb7S
+hg0b9unTZ9CgQeedd16LFi3SN3VqbYWFheFwOP1/ZWVlNWzYsLi4OD8/35sFIaR6qlWr1sSJE6PR
+6Lhx44499tjNmzeXlpb27ds3/QMxOzt7/vz527Zt69+//y233LJ27dpIJJJIJHbu3Pnoo482aNAg
+WKxVq1YlJSXRaDQ40phMJmOxWPRby5cv79SpU/r3zc/PHzRo0KpVq2LfisfjW7du/ec//9m6detU
+RXJzc+++++6dO3c+//zzf/rTnz766KPKysp4PB6Lxd57773DDjvsJ772cDj829/+dunSpYlE4qmn
+nioqKkqFIQjhpk2b7rjjjueee66ioiIajSYSibKysksuuSQrKyvV/iFDhmzfvj3636qqqkaOHJla
+INCmTZs1a9bs3Lnz2muvTX+8adOmr776aiQSmTRpUvAnRVZW1ujRo8vLy1ObJR6Pb968+c477yws
+LEz/iUydOrWiouLxxx+/8sorly9fXlVVFSz8/vvvt2/fPr3EDRo0uPnmm9evXx9sung8XlZWNmbM
+mCZNmqS2w3XXXVdRUbFmzZqjjjoqPZCnnHLK2rVrd+zYcc4553izIIRUTwcffHBJScmWLVv69++f
+n5//yiuvRKPRBx54IH1XLzs7+6233orH48uWLVu1atW4ceOGDh06e/bs4CP1tNNOS33gDh8+/KGH
+Hnr99derqqoikciLL744bty4hx56aNiwYem7NdnZ2UOHDt2+ffvWrVunTZt20003PfTQQ19++WUs
+FnvxxRcPPPDAVAjvueeeSCSyadOmZcuWPf300zfccMP48ePLysri8fijjz66S29+qKKiomeeeSYa
+jZaUlHTu3DkVj1QIq6qqNmzYMH/+/GHDho0cOXLZsmWJRGLRokWtW7dOJaRHjx5jxoyZMGHCM888
+U15enkgk7r777po1a+7y18YLL7yQSCReeuml9A17wgknfPXVVzt37uzdu3dqhYMGDXrppZdGjx59
+8803jxgxYt68eVVVVdu2bbv66qtTq83Ozn766acTicTGjRtXrlw5ceLEG2+88Yknnti2bVs0Gr33
+3ntzcnKCJevWrTty5MhIJFJeXj516tSbb7754YcfXr9+fSQSefLJJ/fff/9gsfbt269evToajV5z
+zTWp7ZCZmXnrrbdWVVUtWbKkuLjYmwUhpBoKh8PnnXdeRUVFSUnJscceGw6HBw8eHI/HFy1a1Lhx
+411CmEwmN2zYcPrpp9euXTsjI6Ndu3YbNmyIxWJDhw5NrS0nJycvL+/yyy8PzhH26tUr91vZ2dnp
+mfmv//qvlStXRqPRxx57rEmTJhkZGXl5eVddddXWrVu3b99+xRVXBG+MVAirqqqGDx9eWFhYo0aN
+Jk2azJw5M5lMfvTRR9/zIr+9vfbrr79+x44d27dv79u37y6HCoMQxmKxZ5999rDDDsvMzMzNzb39
+9tuj0eiaNWuCMTWpg4e1v3XMMccsWbJkjyHcb7/9rrrqqoqKio0bN6auMgyFQoMHD45EIp9++mlq
+rzo4AlxYWJiTk5ORkVGzZs1DDz30vffeSyQSM2bMSP0xEYQwmUyWlZVde+219erVq1GjRuvWrRcu
+XJhIJGbOnBksGQqFunfvXlJSEo/Hx44dW1hYmJGRkZ+ff/3112/btq2ysrJv377BzyU/P3/atGmJ
+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
+
+------MultipartBoundary--fP6mXKaRwJjI3j8jpAiAa2zk6FyfcQ3l6EM3p2mMUE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://antonz.org/git-by-example/playground.png
+
+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
+
+------MultipartBoundary--fP6mXKaRwJjI3j8jpAiAa2zk6FyfcQ3l6EM3p2mMUE------

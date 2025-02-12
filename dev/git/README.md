@@ -27,6 +27,7 @@
 ## Books
 * [Git Book](https://git-scm.com/book/zh/v2)
 * [Tutorials](https://www.atlassian.com/git/tutorials)
+* [Git by example: Interactive guide](https://antonz.org/git-by-example/)
 
 ## Case-sensitive Filename Change
 * [How do I commit case-sensitive only filename changes in Git?](https://stackoverflow.com/questions/17683458/how-do-i-commit-case-sensitive-only-filename-changes-in-git)
