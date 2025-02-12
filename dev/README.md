@@ -103,6 +103,7 @@
 * [LaTeX](latex/README.md)
 * [WebDAV](webdav/README.md)
 * [MongoDB](mongodb/README.md)
+* [SQLite](sqlite/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)

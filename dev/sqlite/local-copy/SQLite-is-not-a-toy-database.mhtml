@@ -1,0 +1,2282 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://antonz.org/sqlite-is-not-a-toy-database/
+Subject: SQLite is not a toy database
+Date: Wed, 12 Feb 2025 06:13:37 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--sb013FZrtXuy0E0dLuzIF6vEwoKtGR8dygJr88mzL2----"
+
+
+------MultipartBoundary--sb013FZrtXuy0E0dLuzIF6vEwoKtGR8dygJr88mzL2----
+Content-Type: text/html
+Content-ID: <frame-DAE56E88DB5A5AC5663B8788BD0633BB@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/sqlite-is-not-a-toy-database/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"wid=
+th=3Ddevice-width,initial-scale=3D1,maximum-scale=3D1"><title>SQLite is not=
+ a toy database</title>
+<meta name=3D"description" content=3D"Here is why SQLite is a perfect tool =
+for you - whether you are a developer, data analyst, or geek."><meta name=
+=3D"robots" content=3D"index, follow"><link rel=3D"stylesheet" type=3D"text=
+/css" href=3D"https://antonz.org/assets/css/style.ab5b07a3b8460dd96d9aa8eef=
+3fcde58195fdd8aeae66b56e0428d9bc3c4a9f6.css"><link rel=3D"icon" href=3D"htt=
+ps://antonz.org/assets/favicon/favicon.ico" sizes=3D"any"><link rel=3D"icon=
+" type=3D"image/svg+xml" href=3D"https://antonz.org/assets/favicon/favicon.=
+svg"><link rel=3D"apple-touch-icon" href=3D"https://antonz.org/assets/favic=
+on/apple-touch-icon.png"><link rel=3D"manifest" href=3D"https://antonz.org/=
+assets/favicon/manifest.json"><link rel=3D"canonical" href=3D"https://anton=
+z.org/sqlite-is-not-a-toy-database/"><meta name=3D"author" content=3D"Anton=
+ Zhiyanov"><meta property=3D"og:type" content=3D"article"><meta property=3D=
+"og:title" content=3D"SQLite is not a toy database"><meta property=3D"og:de=
+scription" content=3D"Here is why SQLite is a perfect tool for you - whethe=
+r you are a developer, data analyst, or geek."><meta property=3D"og:url" co=
+ntent=3D"https://antonz.org/sqlite-is-not-a-toy-database/"><meta property=
+=3D"og:image" content=3D"https://antonz.org/sqlite-is-not-a-toy-database/co=
+ver.png"><meta name=3D"twitter:card" content=3D"summary_large_image"><meta =
+name=3D"twitter:title" content=3D"SQLite is not a toy database"><meta name=
+=3D"twitter:description" content=3D"Here is why SQLite is a perfect tool fo=
+r you - whether you are a developer, data analyst, or geek."><meta name=3D"=
+twitter:url" content=3D"https://antonz.org/sqlite-is-not-a-toy-database/"><=
+meta name=3D"twitter:site" content=3D"@ohmypy"><meta name=3D"twitter:image"=
+ content=3D"https://antonz.org/sqlite-is-not-a-toy-database/cover.png"></he=
+ad><body><div class=3D"header"><div class=3D"container"><div class=3D"row">=
+<div class=3D"col-xs-6 col-sm-3"><a class=3D"img-link" href=3D"https://anto=
+nz.org/"><img src=3D"https://antonz.org/assets/logo.svg" class=3D"header-ic=
+on">
+</a>&nbsp;
+<a href=3D"https://antonz.org/"><strong>Anton Zhiyanov</strong></a></div><d=
+iv class=3D"col-xs-12 col-sm-6 col-md-4 hidden-mobile"><a class=3D"menu__li=
+nk" href=3D"https://antonz.org/#projects"><span>projects</span>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/#books"><span>books<=
+/span>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/all/"><span>blog</sp=
+an>
+</a><a class=3D"menu__link" href=3D"https://antonz.org/#about"><span>about<=
+/span></a></div><div class=3D"col-xs-6 col-sm-3"><div class=3D"search-modul=
+e"><form action=3D"https://duckduckgo.com/">
+
+
+
+
+
+<input type=3D"search" name=3D"q" autocomplete=3D"off" placeholder=3D"Searc=
+h" aria-label=3D"Search"></form></div></div></div></div></div><div class=3D=
+"storey"><div class=3D"container"><article class=3D"post" data-namespace=3D=
+""><div class=3D"row"><div class=3D"col-xs-12 col-md-10 article"><header><h=
+1>SQLite is not a toy database</h1></header><p><em>English =E2=80=A2 <a hre=
+f=3D"https://habr.com/ru/post/547448/">Russian</a> =E2=80=A2 <a href=3D"htt=
+ps://sysarmy.com/blog/posts/sqlite-no-es-una-base-de-datos-de-juguete/">Spa=
+nish</a></em></p><p>Whether you are a developer, data analyst, QA engineer,=
+ DevOps person, or product manager - SQLite is a perfect tool for you. Here=
+ is why.</p><p>A few well-known facts to get started:</p><ul><li>SQLite is =
+the most common DBMS in the world, shipped with all popular operating syste=
+ms.</li><li>SQLite is serverless.</li><li>For developers, SQLite is embedde=
+d directly into the app.</li><li>For everyone else, there is a convenient d=
+atabase console (REPL), provided as a single file (sqlite3.exe on Windows, =
+sqlite3 on Linux / macOS).</li></ul><p><a href=3D"https://antonz.org/sqlite=
+-is-not-a-toy-database/#console-import-and-export">Console, import, and exp=
+ort</a> =E2=80=A2
+<a href=3D"https://antonz.org/sqlite-is-not-a-toy-database/#native-json">Na=
+tive JSON</a> =E2=80=A2
+<a href=3D"https://antonz.org/sqlite-is-not-a-toy-database/#ctes-and-set-op=
+erations">CTEs and set operations</a> =E2=80=A2
+<a href=3D"https://antonz.org/sqlite-is-not-a-toy-database/#math-statistics=
+">Math statistics</a> =E2=80=A2
+<a href=3D"https://antonz.org/sqlite-is-not-a-toy-database/#performance">Pe=
+rformance</a> =E2=80=A2
+<a href=3D"https://antonz.org/sqlite-is-not-a-toy-database/#documents-graph=
+s-and-search">Documents, graphs, and search</a> =E2=80=A2
+<a href=3D"https://antonz.org/sqlite-is-not-a-toy-database/#and-so-much-mor=
+e">And so much more</a></p><h2 id=3D"console-import-and-export">Console, im=
+port, and export</h2><p>The console is a killer SQLite feature for data ana=
+lysis: more powerful than Excel and more simple than <code>pandas</code>. O=
+ne can import CSV data with a single command, the table is created automati=
+cally:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><co=
+de class=3D"language-sql" data-lang=3D"sql"><span class=3D"line"><span clas=
+s=3D"cl"><span class=3D"p">.</span><span class=3D"n">import</span><span cla=
+ss=3D"w"> </span><span class=3D"c1">--csv city.csv city
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1"></span><span class=3D"k">select</span><span class=3D"w"> </span><span =
+class=3D"k">count</span><span class=3D"p">(</span><span class=3D"o">*</span=
+><span class=3D"p">)</span><span class=3D"w"> </span><span class=3D"k">from=
+</span><span class=3D"w"> </span><span class=3D"n">city</span><span class=
+=3D"p">;</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"c1">-- 1117
+</span></span></span></code></pre></div><p>The console supports basic SQL f=
+eatures and shows query results in a nice ASCII-drawn table. Advanced SQL f=
+eatures are also supported, but more on that later.</p><div class=3D"highli=
+ght"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-sql" data=
+-lang=3D"sql"><span class=3D"line"><span class=3D"cl"><span class=3D"k">sel=
+ect</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">century</span><span class=3D"w"> </span><spa=
+n class=3D"o">||</span><span class=3D"w"> </span><span class=3D"s1">' centu=
+ry'</span><span class=3D"w"> </span><span class=3D"k">as</span><span class=
+=3D"w"> </span><span class=3D"n">dates</span><span class=3D"p">,</span><spa=
+n class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">count</span><span class=3D"p">(</span><span =
+class=3D"o">*</span><span class=3D"p">)</span><span class=3D"w"> </span><sp=
+an class=3D"k">as</span><span class=3D"w"> </span><span class=3D"n">city_co=
+unt</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w"> </span><span cla=
+ss=3D"n">history</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">group</span><span class=3D"w"> </span><span cl=
+ass=3D"k">by</span><span class=3D"w"> </span><span class=3D"n">century</spa=
+n><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">order</span><span class=3D"w"> </span><span cl=
+ass=3D"k">by</span><span class=3D"w"> </span><span class=3D"n">century</spa=
+n><span class=3D"w"> </span><span class=3D"k">desc</span><span class=3D"p">=
+;</span><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text"=
+><span class=3D"line"><span class=3D"cl">=E2=94=8C=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82   dates    =
+=E2=94=82 city_count =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=A4
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 21 century =
+=E2=94=82 1          =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 20 century =
+=E2=94=82 263        =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 19 century =
+=E2=94=82 189        =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 18 century =
+=E2=94=82 191        =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 17 century =
+=E2=94=82 137        =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 ...        =
+=E2=94=82 ...        =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span></code></pre></div><p>Data could be exported as SQL, CSV, JSO=
+N, even Markdown and HTML. Takes just a couple of commands:</p><div class=
+=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language=
+-sql" data-lang=3D"sql"><span class=3D"line"><span class=3D"cl"><span class=
+=3D"p">.</span><span class=3D"k">mode</span><span class=3D"w"> </span><span=
+ class=3D"n">json</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"p">.</span><span class=3D"k">output</span><span c=
+lass=3D"w"> </span><span class=3D"n">city</span><span class=3D"p">.</span><=
+span class=3D"n">json</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w"> </span><span c=
+lass=3D"n">city</span><span class=3D"p">,</span><span class=3D"w"> </span><=
+span class=3D"n">foundation_year</span><span class=3D"p">,</span><span clas=
+s=3D"w"> </span><span class=3D"n">timezone</span><span class=3D"w"> </span>=
+<span class=3D"k">from</span><span class=3D"w"> </span><span class=3D"n">ci=
+ty</span><span class=3D"w"> </span><span class=3D"k">limit</span><span clas=
+s=3D"w"> </span><span class=3D"mi">10</span><span class=3D"p">;</span><span=
+ class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"p">.</span><span class=3D"n">shell</span><span cl=
+ass=3D"w"> </span><span class=3D"n">cat</span><span class=3D"w"> </span><sp=
+an class=3D"n">city</span><span class=3D"p">.</span><span class=3D"n">json<=
+/span><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-json" data-lang=3D"json"=
+><span class=3D"line"><span class=3D"cl"><span class=3D"p">[</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Amsterdam"</span><span class=3D"p">,</span> <span class=3D"nt=
+">"foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">130=
+0</span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><spa=
+n class=3D"p">:</span> <span class=3D"s2">"UTC+1"</span> <span class=3D"p">=
+},</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Berlin"</span><span class=3D"p">,</span> <span class=3D"nt">"=
+foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">1237</=
+span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><span c=
+lass=3D"p">:</span> <span class=3D"s2">"UTC+1"</span> <span class=3D"p">},<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Helsinki"</span><span class=3D"p">,</span> <span class=3D"nt"=
+>"foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">1548=
+</span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><span=
+ class=3D"p">:</span> <span class=3D"s2">"UTC+2"</span> <span class=3D"p">}=
+,</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Monaco"</span><span class=3D"p">,</span> <span class=3D"nt">"=
+foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">1215</=
+span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><span c=
+lass=3D"p">:</span> <span class=3D"s2">"UTC+1"</span> <span class=3D"p">},<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Moscow"</span><span class=3D"p">,</span> <span class=3D"nt">"=
+foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">1147</=
+span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><span c=
+lass=3D"p">:</span> <span class=3D"s2">"UTC+3"</span> <span class=3D"p">},<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Reykjavik"</span><span class=3D"p">,</span> <span class=3D"nt=
+">"foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">874=
+</span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><span=
+ class=3D"p">:</span> <span class=3D"s2">"UTC"</span> <span class=3D"p">},<=
+/span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Sarajevo"</span><span class=3D"p">,</span> <span class=3D"nt"=
+>"foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">1461=
+</span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><span=
+ class=3D"p">:</span> <span class=3D"s2">"UTC+1"</span> <span class=3D"p">}=
+,</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Stockholm"</span><span class=3D"p">,</span> <span class=3D"nt=
+">"foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">125=
+2</span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><spa=
+n class=3D"p">:</span> <span class=3D"s2">"UTC+1"</span> <span class=3D"p">=
+},</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Tallinn"</span><span class=3D"p">,</span> <span class=3D"nt">=
+"foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">1219<=
+/span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><span =
+class=3D"p">:</span> <span class=3D"s2">"UTC+2"</span> <span class=3D"p">},=
+</span>
+</span></span><span class=3D"line"><span class=3D"cl">    <span class=3D"p"=
+>{</span> <span class=3D"nt">"city"</span><span class=3D"p">:</span> <span =
+class=3D"s2">"Zagreb"</span><span class=3D"p">,</span> <span class=3D"nt">"=
+foundation_year"</span><span class=3D"p">:</span> <span class=3D"mi">1094</=
+span><span class=3D"p">,</span> <span class=3D"nt">"timezone"</span><span c=
+lass=3D"p">:</span> <span class=3D"s2">"UTC+1"</span> <span class=3D"p">}</=
+span>
+</span></span><span class=3D"line"><span class=3D"cl"><span class=3D"p">]</=
+span>
+</span></span></code></pre></div><p>If you are more of a BI than a console =
+person - popular data exploration tools like <a href=3D"https://www.metabas=
+e.com/">Metabase</a> or <a href=3D"https://superset.apache.org/">Superset</=
+a> support SQLite.</p><h2 id=3D"native-json">Native JSON</h2><p>There is no=
+thing more convenient than SQLite for analyzing and transforming JSON. You =
+can select data directly from a file as if it were a regular table. Or impo=
+rt data into the table and select from there.</p><div class=3D"highlight"><=
+pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-sql" data-lang=
+=3D"sql"><span class=3D"line"><span class=3D"cl"><span class=3D"k">select</=
+span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">json_extract</span><span class=3D"p">(</span=
+><span class=3D"n">value</span><span class=3D"p">,</span><span class=3D"w">=
+ </span><span class=3D"s1">'$.iso.code'</span><span class=3D"p">)</span><sp=
+an class=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span=
+><span class=3D"n">code</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">json_extract</span><span class=3D"p">(</span=
+><span class=3D"n">value</span><span class=3D"p">,</span><span class=3D"w">=
+ </span><span class=3D"s1">'$.iso.number'</span><span class=3D"p">)</span><=
+span class=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </sp=
+an><span class=3D"n">num</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">json_extract</span><span class=3D"p">(</span=
+><span class=3D"n">value</span><span class=3D"p">,</span><span class=3D"w">=
+ </span><span class=3D"s1">'$.name'</span><span class=3D"p">)</span><span c=
+lass=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><sp=
+an class=3D"n">name</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">json_extract</span><span class=3D"p">(</span=
+><span class=3D"n">value</span><span class=3D"p">,</span><span class=3D"w">=
+ </span><span class=3D"s1">'$.units.major.name'</span><span class=3D"p">)</=
+span><span class=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"=
+> </span><span class=3D"n">unit</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">json_each</span><span class=3D"p">(</span><s=
+pan class=3D"n">readfile</span><span class=3D"p">(</span><span class=3D"s1"=
+>'currency.sample.json'</span><span class=3D"p">));</span><span class=3D"w"=
+>
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text"=
+><span class=3D"line"><span class=3D"cl">=E2=94=8C=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 code =E2=94=
+=82 num =E2=94=82      name       =E2=94=82   unit   =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=A4
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 ARS  =E2=94=
+=82 032 =E2=94=82 Argentine peso  | peso     =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 CHF  =E2=94=
+=82 756 =E2=94=82 Swiss Franc     =E2=94=82 franc    =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 EUR  =E2=94=
+=82 978 =E2=94=82 Euro            =E2=94=82 euro     =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 GBP  =E2=94=
+=82 826 =E2=94=82 British Pound   =E2=94=82 pound    =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 INR  =E2=94=
+=82 356 =E2=94=82 Indian Rupee    =E2=94=82 rupee    =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 JPY  =E2=94=
+=82 392 =E2=94=82 Japanese yen    =E2=94=82 yen      =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 MAD  =E2=94=
+=82 504 =E2=94=82 Moroccan Dirham =E2=94=82 dirham   =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 RUR  =E2=94=
+=82 643 =E2=94=82 Russian Rouble  =E2=94=82 rouble   =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 SOS  =E2=94=
+=82 706 =E2=94=82 Somali Shilling =E2=94=82 shilling =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 USD  =E2=94=
+=82 840 =E2=94=82 US Dollar       =E2=94=82 dollar   =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span></code></pre></div><p>Doesn't matter how deep the JSON is - y=
+ou can extract any nested object:</p><div class=3D"highlight"><pre tabindex=
+=3D"0" class=3D"chroma"><code class=3D"language-sql" data-lang=3D"sql"><spa=
+n class=3D"line"><span class=3D"cl"><span class=3D"k">select</span><span cl=
+ass=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">json_extract</span><span class=3D"p">(</span=
+><span class=3D"n">value</span><span class=3D"p">,</span><span class=3D"w">=
+ </span><span class=3D"s1">'$.id'</span><span class=3D"p">)</span><span cla=
+ss=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span=
+ class=3D"n">id</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">json_extract</span><span class=3D"p">(</span=
+><span class=3D"n">value</span><span class=3D"p">,</span><span class=3D"w">=
+ </span><span class=3D"s1">'$.name'</span><span class=3D"p">)</span><span c=
+lass=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><sp=
+an class=3D"n">name</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">json_tree</span><span class=3D"p">(</span><s=
+pan class=3D"n">readfile</span><span class=3D"p">(</span><span class=3D"s1"=
+>'industry.sample.json'</span><span class=3D"p">))</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">where</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">path</span><span class=3D"w"> </span><span c=
+lass=3D"k">like</span><span class=3D"w"> </span><span class=3D"s1">'$[%].in=
+dustries'</span><span class=3D"p">;</span><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text"=
+><span class=3D"line"><span class=3D"cl">=E2=94=8C=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82   id   =E2=
+=94=82         name         =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=A4
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 7.538  =E2=
+=94=82 Internet provider    =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 7.539  =E2=
+=94=82 IT consulting        =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 7.540  =E2=
+=94=82 Software development =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 9.399  =E2=
+=94=82 Mobile communication =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 9.400  =E2=
+=94=82 Fixed communication  =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 9.401  =E2=
+=94=82 Fiber-optics         =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 43.641 =E2=
+=94=82 Audit                =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 43.646 =E2=
+=94=82 Insurance            =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 43.647 =E2=
+=94=82 Bank                 =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span></code></pre></div><h2 id=3D"ctes-and-set-operations">CTEs an=
+d set operations</h2><p>Of course, SQLite supports <a href=3D"https://anton=
+z.org/cte/">Common Table Expressions</a> (<code>WITH</code> clause) and <a =
+href=3D"https://antonz.org/sql-join/">joins</a>, I won't even give examples=
+ here. If the data is hierarchical (the table refers to itself through a co=
+lumn like <code>parent_id</code>) - <code>WITH RECURSIVE</code> will come i=
+n handy. Any hierarchy, no matter how deep, can be 'unrolled' with a single=
+ query.</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><c=
+ode class=3D"language-sql" data-lang=3D"sql"><span class=3D"line"><span cla=
+ss=3D"cl"><span class=3D"k">with</span><span class=3D"w"> </span><span clas=
+s=3D"k">recursive</span><span class=3D"w"> </span><span class=3D"n">tmp</sp=
+an><span class=3D"p">(</span><span class=3D"n">id</span><span class=3D"p">,=
+</span><span class=3D"w"> </span><span class=3D"n">name</span><span class=
+=3D"p">,</span><span class=3D"w"> </span><span class=3D"k">level</span><spa=
+n class=3D"p">)</span><span class=3D"w"> </span><span class=3D"k">as</span>=
+<span class=3D"w"> </span><span class=3D"p">(</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">select</span><span class=3D"w"> </span><span=
+ class=3D"n">id</span><span class=3D"p">,</span><span class=3D"w"> </span><=
+span class=3D"n">name</span><span class=3D"p">,</span><span class=3D"w"> </=
+span><span class=3D"mi">1</span><span class=3D"w"> </span><span class=3D"k"=
+>as</span><span class=3D"w"> </span><span class=3D"k">level</span><span cla=
+ss=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">from</span><span class=3D"w"> </span><span c=
+lass=3D"n">area</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">where</span><span class=3D"w"> </span><span =
+class=3D"n">parent_id</span><span class=3D"w"> </span><span class=3D"k">is<=
+/span><span class=3D"w"> </span><span class=3D"k">null</span><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">union</span><span class=3D"w"> </span><span =
+class=3D"k">all</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">select</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">area</span><span class=3D"p">.</span><span=
+ class=3D"n">id</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">tmp</span><span class=3D"p">.</span><span =
+class=3D"n">name</span><span class=3D"w"> </span><span class=3D"o">||</span=
+><span class=3D"w"> </span><span class=3D"s1">', '</span><span class=3D"w">=
+ </span><span class=3D"o">||</span><span class=3D"w"> </span><span class=3D=
+"n">area</span><span class=3D"p">.</span><span class=3D"n">name</span><span=
+ class=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><=
+span class=3D"n">name</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">tmp</span><span class=3D"p">.</span><span =
+class=3D"k">level</span><span class=3D"w"> </span><span class=3D"o">+</span=
+><span class=3D"w"> </span><span class=3D"mi">1</span><span class=3D"w"> </=
+span><span class=3D"k">as</span><span class=3D"w"> </span><span class=3D"k"=
+>level</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">from</span><span class=3D"w"> </span><span c=
+lass=3D"n">area</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"k">join</span><span class=3D"w"> </span><span=
+ class=3D"n">tmp</span><span class=3D"w"> </span><span class=3D"k">on</span=
+><span class=3D"w"> </span><span class=3D"n">area</span><span class=3D"p">.=
+</span><span class=3D"n">parent_id</span><span class=3D"w"> </span><span cl=
+ass=3D"o">=3D</span><span class=3D"w"> </span><span class=3D"n">tmp</span><=
+span class=3D"p">.</span><span class=3D"n">id</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"p">)</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w"> </span><span c=
+lass=3D"o">*</span><span class=3D"w"> </span><span class=3D"k">from</span><=
+span class=3D"w"> </span><span class=3D"n">tmp</span><span class=3D"p">;</s=
+pan><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text"=
+><span class=3D"line"><span class=3D"cl">=E2=94=8C=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82  id  =E2=94=
+=82           name           =E2=94=82 level =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=A4
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 93   =E2=94=
+=82 US                       =E2=94=82 1     =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 768  =E2=94=
+=82 US, Washington DC        =E2=94=82 2     =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 1833 =E2=94=
+=82 US, Washington           =E2=94=82 2     =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 2987 =E2=94=
+=82 US, Washington, Bellevue =E2=94=82 3     =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 3021 =E2=94=
+=82 US, Washington, Everett  =E2=94=82 3     =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 3039 =E2=94=
+=82 US, Washington, Kent     =E2=94=82 3     =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 ...  =E2=94=
+=82 ...                      =E2=94=82 ...   =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span></code></pre></div><p>Sets? No problem: <code>UNION</code>, <=
+code>INTERSECT</code>, <code>EXCEPT</code> are at your service.</p><div cla=
+ss=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"langua=
+ge-sql" data-lang=3D"sql"><span class=3D"line"><span class=3D"cl"><span cla=
+ss=3D"k">select</span><span class=3D"w"> </span><span class=3D"n">employer_=
+id</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w"> </span><span cla=
+ss=3D"n">employer_area</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">where</span><span class=3D"w"> </span><span cl=
+ass=3D"n">area_id</span><span class=3D"w"> </span><span class=3D"o">=3D</sp=
+an><span class=3D"w"> </span><span class=3D"mi">1</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">except</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w"> </span><span c=
+lass=3D"n">employer_id</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w"> </span><span cla=
+ss=3D"n">employer_area</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">where</span><span class=3D"w"> </span><span cl=
+ass=3D"n">area_id</span><span class=3D"w"> </span><span class=3D"o">=3D</sp=
+an><span class=3D"w"> </span><span class=3D"mi">2</span><span class=3D"p">;=
+</span><span class=3D"w">
+</span></span></span></code></pre></div><p>Calculate one column based on se=
+veral others? Enter <a href=3D"https://antonz.org/generated-columns/">gener=
+ated columns</a>:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"=
+chroma"><code class=3D"language-sql" data-lang=3D"sql"><span class=3D"line"=
+><span class=3D"cl"><span class=3D"k">alter</span><span class=3D"w"> </span=
+><span class=3D"k">table</span><span class=3D"w"> </span><span class=3D"n">=
+vacancy</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">add</span><span class=3D"w"> </span><span clas=
+s=3D"k">column</span><span class=3D"w"> </span><span class=3D"n">salary_net=
+</span><span class=3D"w"> </span><span class=3D"nb">integer</span><span cla=
+ss=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span=
+ class=3D"p">(</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">case</span><span class=3D"w"> </span><span c=
+lass=3D"k">when</span><span class=3D"w"> </span><span class=3D"n">salary_gr=
+oss</span><span class=3D"w"> </span><span class=3D"o">=3D</span><span class=
+=3D"w"> </span><span class=3D"k">true</span><span class=3D"w"> </span><span=
+ class=3D"k">then</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">round</span><span class=3D"p">(</span><spa=
+n class=3D"n">salary_from</span><span class=3D"o">/</span><span class=3D"mi=
+">1</span><span class=3D"p">.</span><span class=3D"mi">04</span><span class=
+=3D"p">)</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">else</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">salary_from</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">end</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"p">);</span><span class=3D"w">
+</span></span></span></code></pre></div><p>Generated columns can be queried=
+ in the same way as 'normal' ones:</p><div class=3D"highlight"><pre tabinde=
+x=3D"0" class=3D"chroma"><code class=3D"language-sql" data-lang=3D"sql"><sp=
+an class=3D"line"><span class=3D"cl"><span class=3D"k">select</span><span c=
+lass=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">substr</span><span class=3D"p">(</span><span=
+ class=3D"n">name</span><span class=3D"p">,</span><span class=3D"w"> </span=
+><span class=3D"mi">1</span><span class=3D"p">,</span><span class=3D"w"> </=
+span><span class=3D"mi">40</span><span class=3D"p">)</span><span class=3D"w=
+"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span class=
+=3D"n">name</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">salary_net</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w"> </span><span cla=
+ss=3D"n">vacancy</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">where</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">salary_currency</span><span class=3D"w"> </s=
+pan><span class=3D"o">=3D</span><span class=3D"w"> </span><span class=3D"s1=
+">'JPY'</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">and</span><span class=3D"w"> </span><span cl=
+ass=3D"n">salary_net</span><span class=3D"w"> </span><span class=3D"k">is</=
+span><span class=3D"w"> </span><span class=3D"k">not</span><span class=3D"w=
+"> </span><span class=3D"k">null</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">limit</span><span class=3D"w"> </span><span cl=
+ass=3D"mi">10</span><span class=3D"p">;</span><span class=3D"w">
+</span></span></span></code></pre></div><h2 id=3D"math-statistics">Math sta=
+tistics</h2><p>Descriptive statistics? Easy: mean, median, percentiles, sta=
+ndard deviation, you name it. You'll have to load an extension, but it's al=
+so a single command (and a single file).</p><div class=3D"highlight"><pre t=
+abindex=3D"0" class=3D"chroma"><code class=3D"language-sql" data-lang=3D"sq=
+l"><span class=3D"line"><span class=3D"cl"><span class=3D"p">.</span><span =
+class=3D"k">load</span><span class=3D"w"> </span><span class=3D"n">sqlean</=
+span><span class=3D"o">/</span><span class=3D"n">stats</span><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">count</span><span class=3D"p">(</span><span =
+class=3D"o">*</span><span class=3D"p">)</span><span class=3D"w"> </span><sp=
+an class=3D"k">as</span><span class=3D"w"> </span><span class=3D"n">book_co=
+unt</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">cast</span><span class=3D"p">(</span><span c=
+lass=3D"k">avg</span><span class=3D"p">(</span><span class=3D"n">num_pages<=
+/span><span class=3D"p">)</span><span class=3D"w"> </span><span class=3D"k"=
+>as</span><span class=3D"w"> </span><span class=3D"nb">integer</span><span =
+class=3D"p">)</span><span class=3D"w"> </span><span class=3D"k">as</span><s=
+pan class=3D"w"> </span><span class=3D"n">mean</span><span class=3D"p">,</s=
+pan><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">cast</span><span class=3D"p">(</span><span c=
+lass=3D"n">median</span><span class=3D"p">(</span><span class=3D"n">num_pag=
+es</span><span class=3D"p">)</span><span class=3D"w"> </span><span class=3D=
+"k">as</span><span class=3D"w"> </span><span class=3D"nb">integer</span><sp=
+an class=3D"p">)</span><span class=3D"w"> </span><span class=3D"k">as</span=
+><span class=3D"w"> </span><span class=3D"n">median</span><span class=3D"p"=
+>,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">mode</span><span class=3D"p">(</span><span c=
+lass=3D"n">num_pages</span><span class=3D"p">)</span><span class=3D"w"> </s=
+pan><span class=3D"k">as</span><span class=3D"w"> </span><span class=3D"k">=
+mode</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">percentile_90</span><span class=3D"p">(</spa=
+n><span class=3D"n">num_pages</span><span class=3D"p">)</span><span class=
+=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span c=
+lass=3D"n">p90</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">percentile_95</span><span class=3D"p">(</spa=
+n><span class=3D"n">num_pages</span><span class=3D"p">)</span><span class=
+=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span c=
+lass=3D"n">p95</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">percentile_99</span><span class=3D"p">(</spa=
+n><span class=3D"n">num_pages</span><span class=3D"p">)</span><span class=
+=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span c=
+lass=3D"n">p99</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w"> </span><span cla=
+ss=3D"n">books</span><span class=3D"p">;</span><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text"=
+><span class=3D"line"><span class=3D"cl">=E2=94=8C=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 book_count =
+=E2=94=82 mean =E2=94=82 median =E2=94=82 mode =E2=94=82 p90 =E2=94=82 p95 =
+=E2=94=82 p99  =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=A4
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 1483       =
+=E2=94=82 349  =E2=94=82 295    =E2=94=82 256  =E2=94=82 640 =E2=94=82 817 =
+=E2=94=82 1199 =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span></code></pre></div><blockquote><p><strong>Note on extensions<=
+/strong>. SQLite is missing a lot of functions compared to other DBMSs like=
+ PostgreSQL. But they are easy to add, which is what people do - so it turn=
+s out quite a mess.</p><p>Therefore, I decided to make a consistent set of =
+extensions, divided by domain area and compiled for major operating systems=
+. Check it out:</p><p><a href=3D"https://antonz.org/sqlean/">sqlean</a></p>=
+</blockquote><p>More fun with statistics. You can plot the data distributio=
+n right in the console. Look how cute it is:</p><div class=3D"highlight"><p=
+re tabindex=3D"0" class=3D"chroma"><code class=3D"language-sql" data-lang=
+=3D"sql"><span class=3D"line"><span class=3D"cl"><span class=3D"k">with</sp=
+an><span class=3D"w"> </span><span class=3D"n">slots</span><span class=3D"w=
+"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span class=
+=3D"p">(</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">select</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">num_pages</span><span class=3D"o">/</span>=
+<span class=3D"mi">100</span><span class=3D"w"> </span><span class=3D"k">as=
+</span><span class=3D"w"> </span><span class=3D"n">slot</span><span class=
+=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"k">count</span><span class=3D"p">(</span><spa=
+n class=3D"o">*</span><span class=3D"p">)</span><span class=3D"w"> </span><=
+span class=3D"k">as</span><span class=3D"w"> </span><span class=3D"n">book_=
+count</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">from</span><span class=3D"w"> </span><span c=
+lass=3D"n">books</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">group</span><span class=3D"w"> </span><span =
+class=3D"k">by</span><span class=3D"w"> </span><span class=3D"n">slot</span=
+><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"p">),</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">max</span><span class=3D"w"> </span><span clas=
+s=3D"k">as</span><span class=3D"w"> </span><span class=3D"p">(</span><span =
+class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">select</span><span class=3D"w"> </span><span=
+ class=3D"k">max</span><span class=3D"p">(</span><span class=3D"n">book_cou=
+nt</span><span class=3D"p">)</span><span class=3D"w"> </span><span class=3D=
+"k">as</span><span class=3D"w"> </span><span class=3D"n">value</span><span =
+class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"k">from</span><span class=3D"w"> </span><span c=
+lass=3D"n">slots</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"p">)</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">slot</span><span class=3D"p">,</span><span c=
+lass=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">book_count</span><span class=3D"p">,</span><=
+span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">printf</span><span class=3D"p">(</span><span=
+ class=3D"s1">'%.'</span><span class=3D"w"> </span><span class=3D"o">||</sp=
+an><span class=3D"w"> </span><span class=3D"p">(</span><span class=3D"n">bo=
+ok_count</span><span class=3D"w"> </span><span class=3D"o">*</span><span cl=
+ass=3D"w"> </span><span class=3D"mi">30</span><span class=3D"w"> </span><sp=
+an class=3D"o">/</span><span class=3D"w"> </span><span class=3D"k">max</spa=
+n><span class=3D"p">.</span><span class=3D"n">value</span><span class=3D"p"=
+>)</span><span class=3D"w"> </span><span class=3D"o">||</span><span class=
+=3D"w"> </span><span class=3D"s1">'c'</span><span class=3D"p">,</span><span=
+ class=3D"w"> </span><span class=3D"s1">'*'</span><span class=3D"p">)</span=
+><span class=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </=
+span><span class=3D"n">bar</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w"> </span><span cla=
+ss=3D"n">slots</span><span class=3D"p">,</span><span class=3D"w"> </span><s=
+pan class=3D"k">max</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">order</span><span class=3D"w"> </span><span cl=
+ass=3D"k">by</span><span class=3D"w"> </span><span class=3D"n">slot</span><=
+span class=3D"p">;</span><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text"=
+><span class=3D"line"><span class=3D"cl">=E2=94=8C=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 slot =E2=94=
+=82 book_count =E2=94=82              bar               =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=A4
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 0    =E2=94=
+=82 116        =E2=94=82 *********                      =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 1    =E2=94=
+=82 254        =E2=94=82 ********************           =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 2    =E2=94=
+=82 376        =E2=94=82 ****************************** =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 3    =E2=94=
+=82 285        =E2=94=82 **********************         =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 4    =E2=94=
+=82 184        =E2=94=82 **************                 =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 5    =E2=94=
+=82 90         =E2=94=82 *******                        =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 6    =E2=94=
+=82 54         =E2=94=82 ****                           =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 7    =E2=94=
+=82 41         =E2=94=82 ***                            =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 8    =E2=94=
+=82 31         =E2=94=82 **                             =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 9    =E2=94=
+=82 15         =E2=94=82 *                              =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 10   =E2=94=
+=82 11         =E2=94=82 *                              =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 11   =E2=94=
+=82 12         =E2=94=82 *                              =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 12   =E2=94=
+=82 2          =E2=94=82 *                              =E2=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=98
+</span></span></code></pre></div><h2 id=3D"performance">Performance</h2><p>=
+SQLite works with hundreds of millions of records just fine. Regular <code>=
+INSERT</code>s show about 240K records per second on my laptop. And if you =
+connect the CSV file as a virtual table (there is an extension for that) - =
+inserts become 2 times faster.</p><div class=3D"highlight"><pre tabindex=3D=
+"0" class=3D"chroma"><code class=3D"language-sql" data-lang=3D"sql"><span c=
+lass=3D"line"><span class=3D"cl"><span class=3D"p">.</span><span class=3D"k=
+">load</span><span class=3D"w"> </span><span class=3D"n">sqlean</span><span=
+ class=3D"o">/</span><span class=3D"n">vsv</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">create</span><span class=3D"w"> </span><span c=
+lass=3D"n">virtual</span><span class=3D"w"> </span><span class=3D"k">table<=
+/span><span class=3D"w"> </span><span class=3D"n">temp</span><span class=3D=
+"p">.</span><span class=3D"n">blocks_csv</span><span class=3D"w"> </span><s=
+pan class=3D"k">using</span><span class=3D"w"> </span><span class=3D"n">vsv=
+</span><span class=3D"p">(</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">filename</span><span class=3D"o">=3D</span=
+><span class=3D"s2">"ipblocks.csv"</span><span class=3D"p">,</span><span cl=
+ass=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"k">schema</span><span class=3D"o">=3D</span><=
+span class=3D"s2">"create table x(network text, geoname_id integer, registe=
+red_country_geoname_id integer, represented_country_geoname_id integer, is_=
+anonymous_proxy integer, is_satellite_provider integer, postal_code text, l=
+atitude real, longitude real, accuracy_radius integer)"</span><span class=
+=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">columns</span><span class=3D"o">=3D</span>=
+<span class=3D"mi">10</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">header</span><span class=3D"o">=3D</span><=
+span class=3D"k">on</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">    </span><span class=3D"n">nulls</span><span class=3D"o">=3D</span><s=
+pan class=3D"k">on</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"p">);</span><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-sql" data-lang=3D"sql"><=
+span class=3D"line"><span class=3D"cl"><span class=3D"p">.</span><span clas=
+s=3D"n">timer</span><span class=3D"w"> </span><span class=3D"k">on</span><s=
+pan class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">insert</span><span class=3D"w"> </span><span c=
+lass=3D"k">into</span><span class=3D"w"> </span><span class=3D"n">blocks</s=
+pan><span class=3D"w"> </span><span class=3D"k">select</span><span class=3D=
+"w"> </span><span class=3D"o">*</span><span class=3D"w"> </span><span class=
+=3D"k">from</span><span class=3D"w"> </span><span class=3D"n">blocks_csv</s=
+pan><span class=3D"p">;</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"c1">-- Run Time: real 5.176 user 4.716420 sys 0.4=
+03866
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-sql" data-lang=3D"sql"><=
+span class=3D"line"><span class=3D"cl"><span class=3D"k">select</span><span=
+ class=3D"w"> </span><span class=3D"k">count</span><span class=3D"p">(</spa=
+n><span class=3D"o">*</span><span class=3D"p">)</span><span class=3D"w"> </=
+span><span class=3D"k">from</span><span class=3D"w"> </span><span class=3D"=
+n">blocks</span><span class=3D"p">;</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"c1">-- 3386629
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"c1">-- Run Time: real 0.095 user 0.021972 sys 0.063716
+</span></span></span></code></pre></div><p>There is a popular opinion among=
+ developers that SQLite is not suitable for the web, because it doesn't sup=
+port concurrent access. This is a myth. In the write-ahead log mode (availa=
+ble since long ago), there can be as many concurrent readers as you want. T=
+here can be only one concurrent writer, but often one is enough.</p><p>SQLi=
+te is a perfect fit for small websites and applications. <a href=3D"https:/=
+/sqlite.org/">sqlite.org</a> uses SQLite as a database, not bothering with =
+optimization (=E2=89=88200 requests per page). It handles 700K visits per m=
+onth and serves pages faster than 95% of websites I've seen.</p><h2 id=3D"d=
+ocuments-graphs-and-search">Documents, graphs, and search</h2><p>SQLite sup=
+ports partial indexes and indexes on expressions, as 'big' DBMSs do. You ca=
+n build indexes on generated columns and even turn SQLite into a <a href=3D=
+"https://antonz.org/json-virtual-columns/">document database</a>. Just stor=
+e raw JSON and build indexes on <code>json_extract()</code>-ed columns:</p>=
+<div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code class=
+=3D"language-sql" data-lang=3D"sql"><span class=3D"line"><span class=3D"cl"=
+><span class=3D"k">create</span><span class=3D"w"> </span><span class=3D"k"=
+>table</span><span class=3D"w"> </span><span class=3D"n">currency</span><sp=
+an class=3D"p">(</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">body</span><span class=3D"w"> </span><span c=
+lass=3D"nb">text</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">code</span><span class=3D"w"> </span><span c=
+lass=3D"nb">text</span><span class=3D"w"> </span><span class=3D"k">as</span=
+><span class=3D"w"> </span><span class=3D"p">(</span><span class=3D"n">json=
+_extract</span><span class=3D"p">(</span><span class=3D"n">body</span><span=
+ class=3D"p">,</span><span class=3D"w"> </span><span class=3D"s1">'$.code'<=
+/span><span class=3D"p">)),</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">name</span><span class=3D"w"> </span><span c=
+lass=3D"nb">text</span><span class=3D"w"> </span><span class=3D"k">as</span=
+><span class=3D"w"> </span><span class=3D"p">(</span><span class=3D"n">json=
+_extract</span><span class=3D"p">(</span><span class=3D"n">body</span><span=
+ class=3D"p">,</span><span class=3D"w"> </span><span class=3D"s1">'$.name'<=
+/span><span class=3D"p">))</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"p">);</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">create</span><span class=3D"w"> </span><span c=
+lass=3D"k">index</span><span class=3D"w"> </span><span class=3D"n">currency=
+_code_idx</span><span class=3D"w"> </span><span class=3D"k">on</span><span =
+class=3D"w"> </span><span class=3D"n">currency</span><span class=3D"p">(</s=
+pan><span class=3D"n">code</span><span class=3D"p">);</span><span class=3D"=
+w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">insert</span><span class=3D"w"> </span><span c=
+lass=3D"k">into</span><span class=3D"w"> </span><span class=3D"n">currency<=
+/span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w"> </span><span c=
+lass=3D"n">value</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w"> </span><span cla=
+ss=3D"n">json_each</span><span class=3D"p">(</span><span class=3D"n">readfi=
+le</span><span class=3D"p">(</span><span class=3D"s1">'currency.sample.json=
+'</span><span class=3D"p">));</span><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-sql" data-lang=3D"sql"><=
+span class=3D"line"><span class=3D"cl"><span class=3D"k">explain</span><spa=
+n class=3D"w"> </span><span class=3D"n">query</span><span class=3D"w"> </sp=
+an><span class=3D"n">plan</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w"> </span><span c=
+lass=3D"n">name</span><span class=3D"w"> </span><span class=3D"k">from</spa=
+n><span class=3D"w"> </span><span class=3D"n">currency</span><span class=3D=
+"w"> </span><span class=3D"k">where</span><span class=3D"w"> </span><span c=
+lass=3D"n">code</span><span class=3D"w"> </span><span class=3D"o">=3D</span=
+><span class=3D"w"> </span><span class=3D"s1">'EUR'</span><span class=3D"p"=
+>;</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"n">QUERY</span><span class=3D"w"> </span><span cl=
+ass=3D"n">PLAN</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"o">`</span><span class=3D"c1">--SEARCH TABLE curr=
+ency USING INDEX currency_code_idx (code=3D?)
+</span></span></span></code></pre></div><blockquote><p><strong>Note</strong=
+>. You can also use SQLite as a graph database. A bunch of complex <code>WI=
+TH RECURSIVE</code> will do the trick, or maybe you'll prefer to add a bit =
+of Python:</p><p><a href=3D"https://github.com/dpapathanasiou/simple-graph"=
+>simple-graph</a></p></blockquote><p>Full-text search works out of the box:=
+</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"><code cla=
+ss=3D"language-sql" data-lang=3D"sql"><span class=3D"line"><span class=3D"c=
+l"><span class=3D"k">create</span><span class=3D"w"> </span><span class=3D"=
+n">virtual</span><span class=3D"w"> </span><span class=3D"k">table</span><s=
+pan class=3D"w"> </span><span class=3D"n">books_fts</span><span class=3D"w"=
+>
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">using</span><span class=3D"w"> </span><span cl=
+ass=3D"n">fts5</span><span class=3D"p">(</span><span class=3D"n">title</spa=
+n><span class=3D"p">,</span><span class=3D"w"> </span><span class=3D"n">aut=
+hor</span><span class=3D"p">,</span><span class=3D"w"> </span><span class=
+=3D"n">publisher</span><span class=3D"p">);</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">insert</span><span class=3D"w"> </span><span c=
+lass=3D"k">into</span><span class=3D"w"> </span><span class=3D"n">books_fts=
+</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w"> </span><span c=
+lass=3D"n">title</span><span class=3D"p">,</span><span class=3D"w"> </span>=
+<span class=3D"n">author</span><span class=3D"p">,</span><span class=3D"w">=
+ </span><span class=3D"n">publisher</span><span class=3D"w"> </span><span c=
+lass=3D"k">from</span><span class=3D"w"> </span><span class=3D"n">books</sp=
+an><span class=3D"p">;</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">select</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">author</span><span class=3D"p">,</span><span=
+ class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">substr</span><span class=3D"p">(</span><span=
+ class=3D"n">title</span><span class=3D"p">,</span><span class=3D"w"> </spa=
+n><span class=3D"mi">1</span><span class=3D"p">,</span><span class=3D"w"> <=
+/span><span class=3D"mi">30</span><span class=3D"p">)</span><span class=3D"=
+w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span class=
+=3D"n">title</span><span class=3D"p">,</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w">  </span><span class=3D"n">substr</span><span class=3D"p">(</span><span=
+ class=3D"n">publisher</span><span class=3D"p">,</span><span class=3D"w"> <=
+/span><span class=3D"mi">1</span><span class=3D"p">,</span><span class=3D"w=
+"> </span><span class=3D"mi">10</span><span class=3D"p">)</span><span class=
+=3D"w"> </span><span class=3D"k">as</span><span class=3D"w"> </span><span c=
+lass=3D"n">publisher</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">from</span><span class=3D"w"> </span><span cla=
+ss=3D"n">books_fts</span><span class=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">where</span><span class=3D"w"> </span><span cl=
+ass=3D"n">books_fts</span><span class=3D"w"> </span><span class=3D"k">match=
+</span><span class=3D"w"> </span><span class=3D"s1">'ann'</span><span class=
+=3D"w">
+</span></span></span><span class=3D"line"><span class=3D"cl"><span class=3D=
+"w"></span><span class=3D"k">limit</span><span class=3D"w"> </span><span cl=
+ass=3D"mi">5</span><span class=3D"p">;</span><span class=3D"w">
+</span></span></span></code></pre></div><div class=3D"highlight"><pre tabin=
+dex=3D"0" class=3D"chroma"><code class=3D"language-text" data-lang=3D"text"=
+><span class=3D"line"><span class=3D"cl">=E2=94=8C=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=AC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=90
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82       autho=
+r        =E2=94=82             title              =E2=94=82 publisher  =E2=
+=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=9C=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=BC=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=A4
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 Ruby Ann Bo=
+xcar     =E2=94=82 Ruby Ann's Down Home Trailer P =E2=94=82 Citadel    =E2=
+=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 Ruby Ann Bo=
+xcar     =E2=94=82 Ruby Ann's Down Home Trailer P =E2=94=82 Citadel    =E2=
+=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 Lynne Ann D=
+eSpelder =E2=94=82 The Last Dance: Encountering D =E2=94=82 McGraw-Hil =E2=
+=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 Daniel Defo=
+e        =E2=94=82 Robinson Crusoe                =E2=94=82 Ann Arbor  =E2=
+=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=82 Ann Thwaite=
+         =E2=94=82 Waiting for the Party: The Lif =E2=94=82 David R. G =E2=
+=94=82
+</span></span><span class=3D"line"><span class=3D"cl">=E2=94=94=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=
+=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=
+=94=80=E2=94=80=E2=94=80=E2=94=B4=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=
+=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=80=E2=94=98
+</span></span></code></pre></div><p>Maybe you need an in-memory database fo=
+r intermediate computations? Single line of python code:</p><div class=3D"h=
+ighlight"><pre tabindex=3D"0" class=3D"chroma"><code class=3D"language-pyth=
+on" data-lang=3D"python"><span class=3D"line"><span class=3D"cl"><span clas=
+s=3D"n">db</span> <span class=3D"o">=3D</span> <span class=3D"n">sqlite3</s=
+pan><span class=3D"o">.</span><span class=3D"n">connect</span><span class=
+=3D"p">(</span><span class=3D"s2">":memory:"</span><span class=3D"p">)</spa=
+n>
+</span></span></code></pre></div><p>You can even access it from multiple co=
+nnections:</p><div class=3D"highlight"><pre tabindex=3D"0" class=3D"chroma"=
+><code class=3D"language-python" data-lang=3D"python"><span class=3D"line">=
+<span class=3D"cl"><span class=3D"n">db</span> <span class=3D"o">=3D</span>=
+ <span class=3D"n">sqlite3</span><span class=3D"o">.</span><span class=3D"n=
+">connect</span><span class=3D"p">(</span><span class=3D"s2">"file::memory:=
+?cache=3Dshared"</span><span class=3D"p">)</span>
+</span></span></code></pre></div><h2 id=3D"and-so-much-more">And so much mo=
+re</h2><p>There are fancy <a href=3D"https://antonz.org/sql-window-function=
+s-book">window functions</a>. <a href=3D"https://antonz.org/sql-upsert/">Up=
+sert</a>, <a href=3D"https://sqlite.org/lang_update.html#update_from">updat=
+e from</a> and <a href=3D"https://sqlite.org/rtree.html">R-tree indexes</a>=
+. <a href=3D"https://antonz.org/sqlean-regexp/">Regular expressions</a>, <a=
+ href=3D"https://github.com/nalgeon/sqlean/blob/main/docs/fuzzy.md">fuzzy s=
+earch</a> and <a href=3D"https://antonz.org/sqlean-define/">dynamic SQL</a>=
+. In terms of features, SQLite can compete with any 'big' DBMS.</p><p>I hop=
+e this article will inspire you to try SQLite. Thanks for reading!</p><p>=
+=E2=94=80=E2=94=80</p><p>P.S. Interested in learning advanced SQLite featur=
+es? Check out my book =E2=80=94 <a href=3D"https://antonz.org/sql-window-fu=
+nctions-book">SQL&nbsp;Window&nbsp;Functions&nbsp;Explained</a></p><p><a hr=
+ef=3D"https://antonz.org/subscribe/">=E2=98=85&nbsp;Subscribe</a> to keep u=
+p with new posts.</p></div></div><footer class=3D"post__footer"><div class=
+=3D"row"><div class=3D"col-xs-12"><div class=3D"post__date"><time datetime=
+=3D"2021-03-25 09:00:00 +0000 UTC">25 Mar, 2021</time></div><div class=3D"p=
+ost__tags"><a href=3D"https://antonz.org/tags/sqlite/">sqlite</a>&nbsp;</di=
+v></div></div></footer></article><aside class=3D"post__related"><div class=
+=3D"post__nav article"><div class=3D"row"><div class=3D"col-xs-12 col-sm-6"=
+><p>=E2=86=90&nbsp;<a href=3D"https://antonz.org/random-table/">How to crea=
+te a 1M record table with a single query</a></p></div><div class=3D"col-xs-=
+12 col-sm-6"><p><a href=3D"https://antonz.org/python-packaging/">How to mak=
+e an awesome Python package</a>&nbsp;=E2=86=92</p></div></div></div><div cl=
+ass=3D"article"><div class=3D"row"><div class=3D"col-xs-12 col-sm-8 col-md-=
+6"><h3>See also</h3><p><a href=3D"https://antonz.org/random-table/">How to =
+create a 1M record table with a single query</a></p><p><a href=3D"https://a=
+ntonz.org/sqlite-is-not-so-easy-to-compile/">SQLite is not so easy to compi=
+le</a></p><p><a href=3D"https://antonz.org/sqlite-3-35/">What's new in SQLi=
+te 3.35</a></p></div></div></div></aside></div></div><footer class=3D"conta=
+iner footer"><ul class=3D"naked-list"><li class=3D"footer__item">Subscribe:
+<a href=3D"https://buttondown.email/antonz" class=3D"footer__social-link"><=
+i class=3D"fas fa-envelope"></i><span>Newsletter</span>
+</a><a href=3D"https://twitter.com/ohmypy" class=3D"footer__social-link"><i=
+ class=3D"fab fa-twitter-1"></i><span>Twitter</span>
+</a><a href=3D"https://c.im/@antonz" class=3D"footer__social-link"><svg cla=
+ss=3D"icon" viewBox=3D"0 0 16 16" role=3D"img"><path fill=3D"currentcolor" =
+d=3D"M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.=
+339.0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027.0h-.05C5.92.=
+017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 =
+1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1=
+.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-=
+.156-3.215-1.928a3.614 3.614.0 01-.033-.496s1.424.346 3.228.428c1.103.05 2.=
+137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.=
+804.0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541=
+-.727.0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.45=
+6-.505 1.052-.764 1.793-.764.856.0 1.504.328 1.933.983L8 4.39l.417-.695c.42=
+9-.655 1.077-.983 1.934-.983.74.0 1.336.259 1.791.764.442.505.661 1.187.661=
+ 2.046v4.203z"></path></svg>
+</a><a href=3D"https://www.linkedin.com/in/nalgeon/" class=3D"footer__socia=
+l-link"><i class=3D"fab fa-linkedin-2"></i><span>LinkedIn</span>
+</a><a href=3D"https://github.com/nalgeon" class=3D"footer__social-link"><i=
+ class=3D"fab fa-github-1"></i><span>GitHub</span>
+</a><a href=3D"https://antonz.org/index.xml" class=3D"footer__social-link">=
+<i class=3D"fas fa-rss"></i><span>RSS</span></a></li><li class=3D"footer__i=
+tem">Email: <a href=3D"mailto:m@antonz.org">m@antonz.org</a></li></ul></foo=
+ter></body></html>
+------MultipartBoundary--sb013FZrtXuy0E0dLuzIF6vEwoKtGR8dygJr88mzL2----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/assets/css/style.ab5b07a3b8460dd96d9aa8eef3fcde58195fdd8aeae66b56e0428d9bc3c4a9f6.css
+
+@charset "utf-8";
+
+html { line-height: 1.15; text-size-adjust: 100%; }
+
+body { margin: 0px; }
+
+hr { height: 0px; color: inherit; }
+
+abbr[title] { text-decoration: underline dotted; }
+
+b, strong { font-weight: bolder; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 60%; line-height: 0; position: relative; }
+
+table { text-indent: 0px; border-color: inherit; }
+
+button, input, optgroup, select, textarea { font-family: inherit; font-size=
+: 100%; line-height: 1.15; margin: 0px; }
+
+button, select { text-transform: none; }
+
+button, [type=3D"button"], [type=3D"reset"], [type=3D"submit"] { appearance=
+: button; }
+
+legend { padding: 0px; }
+
+progress { vertical-align: baseline; }
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; }
+
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+::-webkit-search-decoration { appearance: none; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+summary { display: list-item; }
+
+.container-fluid { margin-right: auto; margin-left: auto; padding-right: 2r=
+em; padding-left: 2rem; }
+
+.row { box-sizing: border-box; display: flex; flex: 0 1 auto; flex-flow: wr=
+ap; margin-right: -0.5rem; margin-left: -0.5rem; }
+
+.row.reverse { flex-direction: row-reverse; }
+
+.col.reverse { flex-direction: column-reverse; }
+
+.col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, =
+.col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-x=
+s-offset-1, .col-xs-offset-2, .col-xs-offset-3, .col-xs-offset-4, .col-xs-o=
+ffset-5, .col-xs-offset-6, .col-xs-offset-7, .col-xs-offset-8, .col-xs-offs=
+et-9, .col-xs-offset-10, .col-xs-offset-11, .col-xs-offset-12 { box-sizing:=
+ border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem; }
+
+.col-xs { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+
+.col-xs-1 { flex-basis: 8.333%; max-width: 8.333%; }
+
+.col-xs-2 { flex-basis: 16.667%; max-width: 16.667%; }
+
+.col-xs-3 { flex-basis: 25%; max-width: 25%; }
+
+.col-xs-4 { flex-basis: 33.333%; max-width: 33.333%; }
+
+.col-xs-5 { flex-basis: 41.667%; max-width: 41.667%; }
+
+.col-xs-6 { flex-basis: 50%; max-width: 50%; }
+
+.col-xs-7 { flex-basis: 58.333%; max-width: 58.333%; }
+
+.col-xs-8 { flex-basis: 66.667%; max-width: 66.667%; }
+
+.col-xs-9 { flex-basis: 75%; max-width: 75%; }
+
+.col-xs-10 { flex-basis: 83.333%; max-width: 83.333%; }
+
+.col-xs-11 { flex-basis: 91.667%; max-width: 91.667%; }
+
+.col-xs-12 { flex-basis: 100%; max-width: 100%; }
+
+.col-xs-offset-1 { margin-left: 8.333%; }
+
+.col-xs-offset-2 { margin-left: 16.667%; }
+
+.col-xs-offset-3 { margin-left: 25%; }
+
+.col-xs-offset-4 { margin-left: 33.333%; }
+
+.col-xs-offset-5 { margin-left: 41.667%; }
+
+.col-xs-offset-6 { margin-left: 50%; }
+
+.col-xs-offset-7 { margin-left: 58.333%; }
+
+.col-xs-offset-8 { margin-left: 66.667%; }
+
+.col-xs-offset-9 { margin-left: 75%; }
+
+.col-xs-offset-10 { margin-left: 83.333%; }
+
+.col-xs-offset-11 { margin-left: 91.667%; }
+
+.start-xs { justify-content: flex-start; text-align: start; }
+
+.center-xs { justify-content: center; text-align: center; }
+
+.end-xs { justify-content: flex-end; text-align: end; }
+
+.top-xs { align-items: flex-start; }
+
+.middle-xs { align-items: center; }
+
+.bottom-xs { align-items: flex-end; }
+
+.around-xs { justify-content: space-around; }
+
+.between-xs { justify-content: space-between; }
+
+.first-xs { order: -1; }
+
+.last-xs { order: 1; }
+
+@media only screen and (min-width: 48em) {
+  .container { width: 46rem; }
+  .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6=
+, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col=
+-sm-offset-1, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm=
+-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-of=
+fset-9, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-sm { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-sm-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-sm-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-sm-3 { flex-basis: 25%; max-width: 25%; }
+  .col-sm-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-sm-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-sm-6 { flex-basis: 50%; max-width: 50%; }
+  .col-sm-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-sm-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-sm-9 { flex-basis: 75%; max-width: 75%; }
+  .col-sm-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-sm-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-sm-12 { flex-basis: 100%; max-width: 100%; }
+  .col-sm-offset-0 { margin-left: 0px; }
+  .col-sm-offset-1 { margin-left: 8.333%; }
+  .col-sm-offset-2 { margin-left: 16.667%; }
+  .col-sm-offset-3 { margin-left: 25%; }
+  .col-sm-offset-4 { margin-left: 33.333%; }
+  .col-sm-offset-5 { margin-left: 41.667%; }
+  .col-sm-offset-6 { margin-left: 50%; }
+  .col-sm-offset-7 { margin-left: 58.333%; }
+  .col-sm-offset-8 { margin-left: 66.667%; }
+  .col-sm-offset-9 { margin-left: 75%; }
+  .col-sm-offset-10 { margin-left: 83.333%; }
+  .col-sm-offset-11 { margin-left: 91.667%; }
+  .start-sm { justify-content: flex-start; text-align: start; }
+  .center-sm { justify-content: center; text-align: center; }
+  .end-sm { justify-content: flex-end; text-align: end; }
+  .top-sm { align-items: flex-start; }
+  .middle-sm { align-items: center; }
+  .bottom-sm { align-items: flex-end; }
+  .around-sm { justify-content: space-around; }
+  .between-sm { justify-content: space-between; }
+  .first-sm { order: -1; }
+  .last-sm { order: 1; }
+}
+
+@media only screen and (min-width: 62em) {
+  .container { width: 61rem; }
+  .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6=
+, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col=
+-md-offset-1, .col-md-offset-2, .col-md-offset-3, .col-md-offset-4, .col-md=
+-offset-5, .col-md-offset-6, .col-md-offset-7, .col-md-offset-8, .col-md-of=
+fset-9, .col-md-offset-10, .col-md-offset-11, .col-md-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-md { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-md-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-md-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-md-3 { flex-basis: 25%; max-width: 25%; }
+  .col-md-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-md-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-md-6 { flex-basis: 50%; max-width: 50%; }
+  .col-md-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-md-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-md-9 { flex-basis: 75%; max-width: 75%; }
+  .col-md-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-md-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-md-12 { flex-basis: 100%; max-width: 100%; }
+  .col-md-offset-1 { margin-left: 8.333%; }
+  .col-md-offset-2 { margin-left: 16.667%; }
+  .col-md-offset-3 { margin-left: 25%; }
+  .col-md-offset-4 { margin-left: 33.333%; }
+  .col-md-offset-5 { margin-left: 41.667%; }
+  .col-md-offset-6 { margin-left: 50%; }
+  .col-md-offset-7 { margin-left: 58.333%; }
+  .col-md-offset-8 { margin-left: 66.667%; }
+  .col-md-offset-9 { margin-left: 75%; }
+  .col-md-offset-10 { margin-left: 83.333%; }
+  .col-md-offset-11 { margin-left: 91.667%; }
+  .start-md { justify-content: flex-start; text-align: start; }
+  .center-md { justify-content: center; text-align: center; }
+  .end-md { justify-content: flex-end; text-align: end; }
+  .top-md { align-items: flex-start; }
+  .middle-md { align-items: center; }
+  .bottom-md { align-items: flex-end; }
+  .around-md { justify-content: space-around; }
+  .between-md { justify-content: space-between; }
+  .first-md { order: -1; }
+  .last-md { order: 1; }
+}
+
+@media only screen and (min-width: 75em) {
+  .container { width: 71rem; }
+  .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6=
+, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col=
+-lg-offset-1, .col-lg-offset-2, .col-lg-offset-3, .col-lg-offset-4, .col-lg=
+-offset-5, .col-lg-offset-6, .col-lg-offset-7, .col-lg-offset-8, .col-lg-of=
+fset-9, .col-lg-offset-10, .col-lg-offset-11, .col-lg-offset-12 { box-sizin=
+g: border-box; flex: 0 0 auto; padding-right: 0.5rem; padding-left: 0.5rem;=
+ }
+  .col-lg { flex-grow: 1; flex-basis: 0px; max-width: 100%; }
+  .col-lg-1 { flex-basis: 8.333%; max-width: 8.333%; }
+  .col-lg-2 { flex-basis: 16.667%; max-width: 16.667%; }
+  .col-lg-3 { flex-basis: 25%; max-width: 25%; }
+  .col-lg-4 { flex-basis: 33.333%; max-width: 33.333%; }
+  .col-lg-5 { flex-basis: 41.667%; max-width: 41.667%; }
+  .col-lg-6 { flex-basis: 50%; max-width: 50%; }
+  .col-lg-7 { flex-basis: 58.333%; max-width: 58.333%; }
+  .col-lg-8 { flex-basis: 66.667%; max-width: 66.667%; }
+  .col-lg-9 { flex-basis: 75%; max-width: 75%; }
+  .col-lg-10 { flex-basis: 83.333%; max-width: 83.333%; }
+  .col-lg-11 { flex-basis: 91.667%; max-width: 91.667%; }
+  .col-lg-12 { flex-basis: 100%; max-width: 100%; }
+  .col-lg-offset-1 { margin-left: 8.333%; }
+  .col-lg-offset-2 { margin-left: 16.667%; }
+  .col-lg-offset-3 { margin-left: 25%; }
+  .col-lg-offset-4 { margin-left: 33.333%; }
+  .col-lg-offset-5 { margin-left: 41.667%; }
+  .col-lg-offset-6 { margin-left: 50%; }
+  .col-lg-offset-7 { margin-left: 58.333%; }
+  .col-lg-offset-8 { margin-left: 66.667%; }
+  .col-lg-offset-9 { margin-left: 75%; }
+  .col-lg-offset-10 { margin-left: 83.333%; }
+  .col-lg-offset-11 { margin-left: 91.667%; }
+  .start-lg { justify-content: flex-start; text-align: start; }
+  .center-lg { justify-content: center; text-align: center; }
+  .end-lg { justify-content: flex-end; text-align: end; }
+  .top-lg { align-items: flex-start; }
+  .middle-lg { align-items: center; }
+  .bottom-lg { align-items: flex-end; }
+  .around-lg { justify-content: space-around; }
+  .between-lg { justify-content: space-between; }
+  .first-lg { order: -1; }
+  .last-lg { order: 1; }
+}
+
+:root { --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helveti=
+ca, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol=
+"; --font-serif: "PT Serif", Georgia, serif; --font-monospace: ui-monospace=
+, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+        "Liberation Mono", monospace; --color-text: #000; --color-blue: #00=
+8bf5; --color-gray: #555; --color-red: #ed7647; --color-yellow: #fdd000; --=
+color-pre: #f5f5f5; --color-box: #eaeaea; --color-bg: #fff; --color-code-ke=
+yword: #a90d91; --color-code-type: #a90d91; --color-code-string: #c41a16; -=
+-color-code-comment: #177500; --font-size-large: 1.2rem; --font-size-x-larg=
+e: 1.2rem; }
+
+html { box-sizing: border-box; }
+
+*, ::before, ::after { box-sizing: inherit; }
+
+[hidden] { display: none !important; }
+
+body { color: var(--color-text); font-size: 16px; font-family: var(--font-s=
+ans); font-weight: normal; line-height: 1.35; background: var(--color-bg); =
+-webkit-font-smoothing: antialiased; }
+
+h1, h2, h3 { font-weight: normal; }
+
+h1, h2 { line-height: 1; }
+
+.container { padding-left: 1em; padding-right: 1em; width: 100%; }
+
+@media only screen and (min-width: 48em) {
+  .container { padding-left: 3em; padding-right: 3em; }
+}
+
+@media only screen and (min-width: 62em) {
+  .container { max-width: 960px; margin-left: auto; margin-right: auto; pad=
+ding-left: 0px; padding-right: 0px; }
+}
+
+a { color: var(--color-blue); border-bottom: 1px solid rgba(0, 139, 245, 0.=
+2); text-decoration: none; }
+
+a:active, a:hover, a:visited:active, a:visited:hover { color: rgb(92, 184, =
+255); border-bottom-color: rgba(92, 184, 255, 0.2); }
+
+a:visited { color: rgb(85, 26, 139); border-bottom-color: rgba(85, 26, 139,=
+ 0.2); }
+
+a[href^=3D"#"] { border-bottom-style: dashed; }
+
+a.link--black { color: var(--color-text); border-bottom-color: var(--color-=
+text); }
+
+blockquote { margin: 0px; padding: 0px; }
+
+code, pre { font-family: var(--font-monospace); }
+
+pre { margin: 0px 0px 0.8em; background: var(--color-pre); overflow-x: auto=
+; white-space: pre; line-height: 1.2; tab-size: 4; }
+
+pre > code { display: block; padding: 1.5em; font-size: 80%; }
+
+p > code, li > code, td > code, p > a > code, li > a > code { background: v=
+ar(--color-pre); font-size: 80%; padding: 0.125em 0.25em; }
+
+p { margin: 0px 0px 0.8em; }
+
+p:last-child { margin-bottom: 0px; }
+
+img { display: block; height: auto; max-width: 100%; width: auto; }
+
+video { display: block; height: auto; max-width: 100%; width: auto; margin-=
+bottom: 0.8em; }
+
+abbr::after { display: inline-block; margin-left: 0.25em; margin-right: 0.2=
+5em; vertical-align: text-bottom; font-size: 80%; content: "=E2=93=98"; }
+
+details { margin-bottom: 0.8em; }
+
+details summary { color: var(--color-blue); cursor: pointer; }
+
+details summary.summary-ai::marker { content: "=F0=9F=A4=96 "; }
+
+form input[type=3D"email"], form input[type=3D"password"], form input[type=
+=3D"search"], form input[type=3D"text"], form input[type=3D"url"], form sel=
+ect, form textarea { border-radius: 0.125em; border: solid 1px var(--color-=
+gray); background-color: var(--color-bg); color: var(--color-text); cursor:=
+ text; display: block; padding: 0.5em; appearance: none; }
+
+form input.error, form select.error, form textarea.error { border-color: va=
+r(--color-red); }
+
+.button, button, input[type=3D"button"], input[type=3D"reset"], input[type=
+=3D"submit"] { background: var(--color-blue); border: 0px; border-radius: 0=
+.125em; color: var(--color-bg); cursor: pointer; display: inline-block; ver=
+tical-align: middle; outline: 0px; overflow: hidden; padding: 0.5em 1em; po=
+sition: relative; text-decoration: none; text-align: center; appearance: no=
+ne; }
+
+.button:hover, button:hover, input[type=3D"button"]:hover, input[type=3D"re=
+set"]:hover, input[type=3D"submit"]:hover { background-color: rgb(0, 123, 2=
+21); border-bottom: none; color: var(--color-bg); }
+
+.button:visited, .button:visited:hover { border-bottom: none; color: var(--=
+color-bg); }
+
+button:disabled, input[type=3D"button"]:disabled, input[type=3D"reset"]:dis=
+abled, input[type=3D"submit"]:disabled { opacity: 0.4; pointer-events: none=
+; cursor: default; }
+
+.button--black { background: var(--color-text); }
+
+abbr[title] { text-decoration: none; }
+
+mark { background: var(--color-yellow); padding: 0px 0.25em; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --color-text: #fff; --color-blue: #008bf5; --color-gray: #6c7986;=
+ --color-red: #ff8a65; --color-yellow: #ffdf80; --color-pre: #151b23; --col=
+or-box: #1e242b; --color-bg: #000; --color-code-keyword: #fc5fa3; --color-c=
+ode-type: #fc5fa3; --color-code-string: #fc6a5d; --color-code-comment: #6c7=
+986; }
+  a { border-bottom: 1px solid var(--color-blue); }
+  a:active, a:hover, a:visited:active, a:visited:hover { border-bottom: non=
+e; }
+  a:visited { color: var(--color-blue); border-bottom: 1px solid var(--colo=
+r-blue); }
+  img { opacity: 0.75; transition: opacity 0.3s ease-in-out 0s; }
+  img:hover { opacity: 1; }
+}
+
+.hljs-keyword { color: var(--color-code-keyword); }
+
+.hljs-type { color: var(--color-code-type); }
+
+.hljs-string { color: var(--color-code-string); }
+
+.hljs-comment { color: var(--color-code-comment); }
+
+.bg { background-color: var(--color-pre); }
+
+.chroma { background-color: var(--color-pre); }
+
+.chroma .x { }
+
+.chroma .err { color: var(--color-text); }
+
+.chroma .cl { }
+
+.chroma .lnlinks { outline: none; text-decoration: none; color: inherit; }
+
+.chroma .lntd { vertical-align: top; padding: 0px; margin: 0px; border: 0px=
+; }
+
+.chroma .lntable { border-spacing: 0px; padding: 0px; margin: 0px; border: =
+0px; }
+
+.chroma .hl { background-color: var(--color-pre); }
+
+.chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; pa=
+dding: 0px 0.4em; color: var(--color-code-comment); }
+
+.chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; pad=
+ding: 0px 0.4em; color: var(--color-code-comment); }
+
+.chroma .line { display: flex; }
+
+.chroma .k { color: var(--color-code-keyword); }
+
+.chroma .kc { color: var(--color-code-keyword); }
+
+.chroma .kd { color: var(--color-code-keyword); }
+
+.chroma .kn { color: var(--color-code-keyword); }
+
+.chroma .kp { color: var(--color-code-keyword); }
+
+.chroma .kr { color: var(--color-code-keyword); }
+
+.chroma .kt { color: var(--color-code-keyword); }
+
+.chroma .n { color: var(--color-text); }
+
+.chroma .na { color: var(--color-code-keyword); }
+
+.chroma .nb { color: var(--color-code-keyword); }
+
+.chroma .bp { color: var(--color-code-keyword); }
+
+.chroma .nc { color: var(--color-code-keyword); }
+
+.chroma .no { color: var(--color-text); }
+
+.chroma .nd { color: var(--color-text); }
+
+.chroma .ni { color: var(--color-text); }
+
+.chroma .ne { color: var(--color-text); }
+
+.chroma .nf { color: var(--color-text); }
+
+.chroma .fm { color: var(--color-text); }
+
+.chroma .nl { color: var(--color-text); }
+
+.chroma .nn { color: var(--color-text); }
+
+.chroma .nx { color: var(--color-text); }
+
+.chroma .py { color: var(--color-text); }
+
+.chroma .nt { color: var(--color-text); }
+
+.chroma .nv { color: var(--color-text); }
+
+.chroma .vc { color: var(--color-text); }
+
+.chroma .vg { color: var(--color-text); }
+
+.chroma .vi { color: var(--color-text); }
+
+.chroma .vm { color: var(--color-text); }
+
+.chroma .l { color: var(--color-code-string); }
+
+.chroma .ld { color: var(--color-code-string); }
+
+.chroma .s { color: var(--color-code-string); }
+
+.chroma .sa { color: var(--color-code-string); }
+
+.chroma .sb { color: var(--color-code-string); }
+
+.chroma .sc { color: var(--color-code-string); }
+
+.chroma .dl { color: var(--color-code-string); }
+
+.chroma .sd { color: var(--color-code-string); }
+
+.chroma .s2 { color: var(--color-code-string); }
+
+.chroma .se { color: var(--color-code-string); }
+
+.chroma .sh { color: var(--color-code-string); }
+
+.chroma .si { color: var(--color-code-string); }
+
+.chroma .sx { color: var(--color-code-string); }
+
+.chroma .sr { color: var(--color-code-string); }
+
+.chroma .s1 { color: var(--color-code-string); }
+
+.chroma .ss { color: var(--color-code-string); }
+
+.chroma .m { color: var(--color-code-string); }
+
+.chroma .mb { color: var(--color-code-string); }
+
+.chroma .mf { color: var(--color-code-string); }
+
+.chroma .mh { color: var(--color-code-string); }
+
+.chroma .mi { color: var(--color-code-string); }
+
+.chroma .il { color: var(--color-code-string); }
+
+.chroma .mo { color: var(--color-code-string); }
+
+.chroma .o { color: var(--color-text); }
+
+.chroma .ow { color: var(--color-text); }
+
+.chroma .p { }
+
+.chroma .c { color: var(--color-code-comment); }
+
+.chroma .ch { color: var(--color-code-comment); }
+
+.chroma .cm { color: var(--color-code-comment); }
+
+.chroma .c1 { color: var(--color-code-comment); }
+
+.chroma .cs { color: var(--color-code-comment); }
+
+.chroma .cp { color: var(--color-code-string); }
+
+.chroma .cpf { color: var(--color-code-string); }
+
+.chroma .g { }
+
+.chroma .gd { }
+
+.chroma .ge { }
+
+.chroma .gr { }
+
+.chroma .gh { }
+
+.chroma .gi { }
+
+.chroma .go { }
+
+.chroma .gp { }
+
+.chroma .gs { }
+
+.chroma .gu { }
+
+.chroma .gt { }
+
+.chroma .gl { }
+
+.chroma .w { }
+
+@font-face { font-family: fa-brands; font-style: normal; font-weight: 400; =
+font-display: block; src: url("../fonts/fa-brands-400.woff2") format("woff2=
+"); }
+
+@font-face { font-family: "Font Awesome"; font-style: normal; font-weight: =
+400; font-display: block; src: url("../fonts/fa-regular-400.woff2") format(=
+"woff2"); }
+
+@font-face { font-family: "Font Awesome"; font-style: normal; font-weight: =
+900; font-display: block; src: url("../fonts/fa-solid-900.woff2") format("w=
+off2"); }
+
+.fa, .fab, .far, .fas { -webkit-font-smoothing: antialiased; display: inlin=
+e-block; font-style: normal; font-variant: normal; text-rendering: auto; li=
+ne-height: 1; }
+
+.fab { font-family: fa-brands; font-weight: 400; }
+
+.far { font-family: "Font Awesome"; font-weight: 400; }
+
+.fas { font-family: "Font Awesome"; font-weight: 900; }
+
+.fa-arrow-alt-circle-down::before { content: "=EF=8D=98"; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.fa-chalkboard-teacher::before { content: "=EF=94=9C"; }
+
+.fa-cloud::before { content: "=EF=83=82"; }
+
+.fa-code::before { content: "=EF=84=A1"; }
+
+.fa-cube::before { content: "=EF=86=B2"; }
+
+.fa-database::before { content: "=EF=87=80"; }
+
+.fa-dot-circle::before { content: "=EF=86=92"; }
+
+.fa-envelope::before { content: "=EF=83=A0"; }
+
+.fa-file::before { content: "=EF=85=9B"; }
+
+.fa-kiwi-bird::before { content: "=EF=94=B5"; }
+
+.fa-microphone::before { content: "=EF=84=B0"; }
+
+.fa-play::before { content: "=EF=85=84"; }
+
+.fa-robot::before { content: "=EF=95=84"; }
+
+.fa-rss::before { content: "=EF=82=9E"; }
+
+.fa-star::before { content: "=EF=80=85"; }
+
+.fa-telegram-plane::before { content: "=EF=8F=BE"; }
+
+.fa-terminal::before { content: "=EF=84=A0"; }
+
+.fa-user::before { content: "=EF=80=87"; }
+
+.fa-discord::before { content: "=EE=A0=80"; }
+
+.fa-facebook-1::before { content: "=EE=A0=81"; }
+
+.fa-facebook-2::before { content: "=EE=A0=82"; }
+
+.fa-facebook-3::before { content: "=EE=A0=83"; }
+
+.fa-github-1::before { content: "=EE=A0=84"; }
+
+.fa-github-2::before { content: "=EE=A0=85"; }
+
+.fa-github-3::before { content: "=EE=A0=86"; }
+
+.fa-instagram::before { content: "=EE=A0=87"; }
+
+.fa-linkedin-1::before { content: "=EE=A0=88"; }
+
+.fa-linkedin-2::before { content: "=EE=A0=8A"; }
+
+.fa-telegram::before { content: "=EE=A0=89"; }
+
+.fa-twitter-1::before { content: "=EE=A0=8B"; }
+
+.fa-twitter-2::before { content: "=EE=A0=8C"; }
+
+.fa-youtube::before { content: "=EE=A0=8D"; }
+
+.icon { display: inline-block; vertical-align: middle; width: 1em; height: =
+auto; }
+
+.icon--rounded { border-radius: 50%; }
+
+body { display: flex; flex-direction: column; min-height: 100vh; }
+
+.storey { padding-top: 4em; padding-bottom: 4em; }
+
+.storey--notop { padding-top: 0px; }
+
+.storey__header { font-size: 1.5em; font-weight: 700; margin: 0px 0px 0.75e=
+m; }
+
+.flex { display: flex; }
+
+.article { font-size: 1.1rem; }
+
+@media only screen and (min-width: 48em) {
+  .article { font-size: var(--font-size-large); }
+}
+
+@media only screen and (min-width: 62em) {
+  .article { font-size: 1.35rem; }
+  pre { font-size: var(--font-size-large); }
+}
+
+.article h1 { font-size: 1.8em; font-weight: 700; margin: 0px 0px 0.5em; }
+
+.article h2 { font-size: 1.4em; font-weight: 600; line-height: 1.35; margin=
+: 1em 0px 0.5em; }
+
+.article h2:first-child { margin-top: 0px; }
+
+.article h2 .anchor { visibility: hidden; position: absolute; margin-left: =
+-1em; width: 1em; cursor: pointer; border-bottom: none; }
+
+.article h3 { font-size: 1em; font-weight: 600; margin: 1em 0px 0.5em; }
+
+.article h3:first-child { margin-top: 0px; }
+
+.article ul, .article ol { padding-left: 2.5em; padding-right: 2.5em; margi=
+n: 0px 0px 0.8em; }
+
+.article ul li { list-style: none; }
+
+.article ol li { list-style: outside decimal; }
+
+.article li { margin: 0px 0px 0.4em; }
+
+.article figure { margin: 0px 0px 0.8em; }
+
+.article figcaption, .article .figcaption { color: var(--color-gray); font-=
+size: 90%; margin-top: 0.2em; }
+
+.article figcaption a, .article .figcaption a { color: var(--color-gray); b=
+order-color: var(--color-gray); }
+
+.article blockquote { border-left: 0.3em solid var(--color-gray); color: va=
+r(--color-gray); margin-bottom: 0.8em; padding: 0px 1em; }
+
+.article .big { font-size: 1.5em; margin: 0px 0px 0.8em; }
+
+.article blockquote.big { border: none; color: var(--color-gray); font-fami=
+ly: var(--font-serif); font-style: italic; padding: 0px 1.5em; }
+
+@media only screen and (min-width: 48em) {
+  .article blockquote.big { padding: 0px 3em; }
+}
+
+.article .boxed { margin-bottom: 0.8em; border: 0.25em solid var(--color-bo=
+x); padding: 1.5em; font-size: 90%; }
+
+.article .boxed > p:last-child { margin-bottom: 0px; }
+
+.article .boxed--blue { border: 1em solid var(--color-blue); }
+
+@media only screen and (min-width: 48em) {
+  .article .boxed { padding: 2em; }
+}
+
+.article table { width: 100%; margin: 0px 0px 0.8em; overflow-x: auto; vert=
+ical-align: top; border: 1px solid rgb(234, 234, 234); border-spacing: 0px;=
+ border-collapse: collapse; text-align: left; font-size: 0.9em; }
+
+.article table td, .article table th { padding: 0.4em; vertical-align: top;=
+ border-bottom: 1px solid rgb(234, 234, 234); }
+
+.article table tr:last-child td { border-bottom: none; }
+
+pre { line-height: 1.2; background: var(--color-pre) !important; }
+
+pre + p, pre + blockquote { margin-top: 0.8em; }
+
+pre + pre { margin-top: 1px; }
+
+pre > code { padding: 1.5rem; }
+
+.highlight + p, .highlight + blockquote { margin-top: 0.8em; }
+
+.highlight + pre { margin-top: 1px; }
+
+.footnotes { margin: 1em 0px; }
+
+.footnotes hr { display: none; }
+
+.footnotes ol { padding-left: 1.5em; padding-right: 1.5em; font-size: 80%; =
+}
+
+a.footnote-ref { border: none; }
+
+a.footnote-ref::before { content: "["; }
+
+a.footnote-ref::after { content: "]"; }
+
+a.footnote-backref { font-family: monospace; border-bottom: none; }
+
+@media only screen and (min-width: 48em) {
+  .longread .article h2 { position: sticky; top: 0px; z-index: 1; backgroun=
+d: var(--color-bg); }
+  .article h2:hover .anchor { visibility: visible; }
+  .footnotes ol { columns: 2; }
+}
+
+@media only screen and (min-width: 62em) {
+  .footnotes ol { columns: 3; }
+}
+
+codapi-snippet { display: block; margin-bottom: 0.8em; background: var(--co=
+lor-pre); }
+
+div.highlight + codapi-snippet, pre + codapi-snippet { margin-top: -0.8em; =
+}
+
+codapi-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: =
+1em; margin-bottom: 0px; padding: 0px 1.5em 1em; font-size: 1rem; }
+
+codapi-toolbar button { padding: 0px; border: none; background: none; line-=
+height: 1.35; color: var(--color-blue); }
+
+codapi-toolbar button::after { content: " =E2=96=B6"; }
+
+codapi-toolbar button:hover { background: none; color: rgb(92, 184, 255); }
+
+codapi-toolbar a { border: none !important; }
+
+codapi-status { display: block; white-space: nowrap; }
+
+codapi-status svg { width: 1em; height: 1em; }
+
+codapi-output { display: block; margin-bottom: 0.8em; border-top: 1px solid=
+ var(--color-bg); }
+
+codapi-output[hidden] { display: none; }
+
+codapi-output a[href=3D"#close"] { display: none; }
+
+codapi-output pre { margin-bottom: 0px; }
+
+codapi-output pre > code { margin-bottom: 0px; padding: 1em 1.5em; }
+
+div.highlight + div.highlight { margin-top: -0.8em; border-top: 1px solid v=
+ar(--color-bg); }
+
+.utterances { margin-left: 0px !important; }
+
+.footer { color: var(--color-gray); padding-top: 1em; padding-bottom: 1em; =
+}
+
+.footer__item { margin-left: 2em; }
+
+.footer__link { border-bottom-color: rgba(153, 153, 153, 0.4); color: inher=
+it; text-decoration: none; }
+
+.footer__link:visited { border-bottom-color: rgba(153, 153, 153, 0.4); colo=
+r: inherit; }
+
+.footer__social-link { color: rgb(33, 150, 243); display: inline-block; hei=
+ght: 1.5em; line-height: 1.5em; text-align: center; text-decoration: none; =
+width: 2em; border: none !important; }
+
+.footer__social-link:visited { color: rgb(33, 150, 243); }
+
+.footer__social-link:hover, .footer__social-link:visited:hover { color: rgb=
+(92, 184, 255); }
+
+.footer__social-link span { display: none; }
+
+.header { padding-top: 1em; }
+
+.header-icon { border-radius: 10%; display: inline-block; height: 1.5em; ve=
+rtical-align: middle; width: 1.5em; }
+
+.color-red { color: var(--color-red); }
+
+.color-gray { color: var(--color-gray); }
+
+.color-gray a, .color-gray a:visited { border-color: rgba(0, 0, 0, 0.14); c=
+olor: var(--color-gray); }
+
+.color-gray a:hover { border-bottom: none; }
+
+.color-sin { color: var(--color-yellow); }
+
+.color-grayscale { filter: grayscale(100%); }
+
+.highlight { background-color: rgb(255, 245, 157); }
+
+.align-left { text-align: left; }
+
+.align-center { text-align: center; }
+
+.align-right { text-align: right; }
+
+.valign-middle { vertical-align: middle; }
+
+.img-inline { vertical-align: middle; display: inline !important; }
+
+.img-link { display: inline-block; border: none !important; }
+
+.img-link:hover { border: none !important; }
+
+.img-bordered { border: 0.2em solid var(--color-box); }
+
+.img-bordered-thin { border: 1px solid var(--color-box); }
+
+.img-rounded { border-radius: 0.5em; }
+
+.naked-list { list-style: none; margin: 0px; padding: 0px; }
+
+.naked-list li { display: inline-block; }
+
+.naked-list li:first-child { margin-left: 0px; }
+
+@media only screen and (max-width: 48em) {
+  .naked-list { display: inline-block; margin: auto; text-align: left; }
+  .naked-list .footer__item { display: block; margin: 0.25em 0px 0.5em !imp=
+ortant; }
+}
+
+.col-tile { padding-bottom: 0.5rem; }
+
+.nowrap { white-space: nowrap; }
+
+a.disabled { pointer-events: none; color: var(--color-gray); border-bottom-=
+color: rgba(0, 0, 0, 0.14); }
+
+@media only screen and (max-width: 767px) {
+  .hidden-mobile { display: none !important; }
+}
+
+@media only screen and (min-width: 768px) {
+  .only-mobile { display: none; }
+}
+
+@media only screen and (max-width: 991px) {
+  .hidden-md { display: none !important; }
+}
+
+.home { background: linear-gradient(rgb(255, 255, 255), rgb(247, 248, 252))=
+; }
+
+.home__block { font-size: var(--font-size-large); }
+
+.home__row > div { margin-bottom: 1.5em; }
+
+.menu__link { display: inline-block; margin-right: 1em; border: none !impor=
+tant; }
+
+.menu__link:last-child { margin-right: 0px; }
+
+.menu__link i { color: rgb(51, 51, 51); }
+
+.menu__link span, .menu__link:visited span { color: var(--color-blue); bord=
+er-bottom: 1px solid rgba(0, 139, 245, 0.2); }
+
+.menu__link:active span, .menu__link:hover span { color: rgb(92, 184, 255);=
+ border-bottom-color: rgba(92, 184, 255, 0.2); }
+
+.menu__link:active i, .menu__link:hover i { color: rgb(92, 184, 255); }
+
+.post-stub { margin-bottom: 1.5em; }
+
+.post-stub__header { position: relative; margin: 0px; }
+
+.post-stub__title { margin-right: 0.5rem; }
+
+.post-stub__star { display: none; width: 1.2em; color: var(--color-yellow);=
+ }
+
+.post-stub__date { white-space: nowrap; color: var(--color-gray); font-size=
+: 0.8em; }
+
+.post-stub__description { margin: 0.2em 0px 0px; }
+
+@media only screen and (min-width: 48em) {
+  .post-stub__star { position: absolute; display: inline-block; left: -1.3e=
+m; top: 0.2em; }
+}
+
+.post__date { color: var(--color-gray); display: inline-block; margin-right=
+: 1em; }
+
+.post__footer { margin-top: 1em; }
+
+.post__related { margin-top: 4em; margin-bottom: 2em; }
+
+.post__nav p { margin-bottom: 0.8em; }
+
+.post__tags { color: var(--color-gray); display: inline-block; }
+
+.post__tags a { border-bottom-color: rgba(0, 0, 0, 0.1); color: currentcolo=
+r; }
+
+.article + .posts { margin-top: 1.5em; }
+
+@media only screen and (min-width: 48em) {
+  .posts { font-size: var(--font-size-large); }
+}
+
+a.portfolio-thumb { border: none; display: inline-block; }
+
+img.portfolio-thumb--raised { border-top: 1px solid rgb(234, 234, 234); box=
+-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.4) 0px =
+2px 3px 0px; }
+
+img.portfolio-thumb { margin: 0px 0px 0.5em; }
+
+.project-section-header { margin-bottom: 0.5em; padding-left: 1.5em; font-s=
+ize: 1em; font-weight: 700; }
+
+.project-block { position: relative; width: 100%; margin-bottom: 1em; borde=
+r: 1px solid rgb(234, 234, 234); border-radius: 0.25em; padding: 1em 1.5em;=
+ }
+
+.project-block--highlight { border-color: var(--color-blue); }
+
+.project-block--highlight::after { position: absolute; top: 0px; right: 0px=
+; display: inline-block; width: 1.5rem; height: 1.5rem; background: var(--c=
+olor-blue); border-bottom-left-radius: 0.25em; text-align: center; color: r=
+gb(255, 255, 255); content: "=E2=98=85"; }
+
+.project-block--noborder { border: none; }
+
+.project-block p { margin: 0px 0px 0.5em; }
+
+.project-block p:last-child { margin-bottom: 0px; }
+
+.project-book { margin: 1em 2em 1em 0px; }
+
+@media (prefers-color-scheme: dark) {
+  img.portfolio-thumb--raised { border: 1px solid var(--color-gray); box-sh=
+adow: none; }
+}
+
+.search-module input[type=3D"search"] { width: 100%; outline-style: none; f=
+ont-size: 12px; }
+
+.sqlime-example { margin: 0px 0px 0.8em; font-family: var(--font-monospace)=
+; line-height: 1; }
+
+.sqlime-example div:nth-child(1) { margin: 0px 0px 0.8em; font-size: 0.8em;=
+ }
+
+.sqlime-example button { border: 1px solid var(--color-blue); background: n=
+one; color: var(--color-blue); }
+
+.sqlime-example button:hover { background: var(--color-blue); color: var(--=
+color-bg); }
+
+.sqlime-example sqlime-output { padding: 1.5em; background-color: var(--col=
+or-pre); font-size: 0.8em; }
+
+.sqlime-example table { display: inline-block; width: auto; max-width: 100%=
+; margin-bottom: 0px; border-top: 1px solid var(--color-text); border-right=
+: none; border-bottom: 1px solid var(--color-text); border-left: 1px solid =
+var(--color-text); line-height: 1; font-size: 1em; }
+
+.sqlime-example table th { vertical-align: top; padding: 0.6em 1em; border-=
+top: none; border-right: 1px solid var(--color-text); border-bottom: 1px so=
+lid var(--color-text); border-left: none; font-weight: normal; line-height:=
+ 1; }
+
+.sqlime-example table td { vertical-align: top; padding: 0.2em 1em; border-=
+right: 1px solid var(--color-text); border-bottom: none; line-height: 1; }
+
+.sqlime-example table tr:first-child td { padding-top: 0.8em; }
+
+.sqlime-example table tr:last-child td { padding-bottom: 0.8em; }
+
+@media only screen and (min-width: 62em) {
+  .sqlime-example { font-size: var(--font-size-large); }
+}
+
+.subscribe-block { margin-bottom: 2rem; }
+
+.subscribe-block a { border: none; display: inline-block; }
+
+.subscribe-form { font-size: 1rem; }
+
+.subscribe-form input[type=3D"email"] { display: inline-block; vertical-ali=
+gn: middle; }
+
+.subscribe-form button[type=3D"submit"] { border: 1px solid var(--color-blu=
+e); }
+
+@media only screen and (max-width: 62em) {
+  .subscribe-form input[type=3D"email"] { width: 10rem; }
+}
+------MultipartBoundary--sb013FZrtXuy0E0dLuzIF6vEwoKtGR8dygJr88mzL2----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://antonz.org/assets/logo.svg
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<!-- Generated by Pixelmator Pro 2.4.3 -->
+<svg width=3D"1024" height=3D"1024" viewBox=3D"0 0 1024 1024" xmlns=3D"http=
+://www.w3.org/2000/svg" xmlns:xlink=3D"http://www.w3.org/1999/xlink">
+    <path id=3D"Rectangle" fill=3D"#000000" fill-rule=3D"evenodd" stroke=3D=
+"none" d=3D"M 0 1024 L 1024 1024 L 1024 0 L 0 0 Z"/>
+    <path id=3D"a" fill=3D"#ffffff" fill-rule=3D"evenodd" stroke=3D"none" d=
+=3D"M 683.42926 590.483032 C 683.42926 606.237 685.595337 617.658447 689.92=
+7673 624.747681 C 694.26001 631.836914 701.283569 637.219482 710.998474 640=
+.895386 L 685.398438 722.81543 C 660.717285 720.452271 639.909302 715.00415=
+ 622.973816 706.470764 C 606.038391 697.937378 592.713379 685.006226 582.99=
+8474 667.67688 C 566.981995 686.844238 546.502197 701.088135 521.558472 710=
+.409241 C 496.614746 719.730347 471.146271 724.390747 445.152313 724.390747=
+ C 402.091583 724.390747 367.761658 712.116028 342.16153 687.566162 C 316.5=
+61401 663.016296 303.761536 631.443237 303.761536 592.846191 C 303.761536 5=
+47.422363 321.550079 512.370361 357.127686 487.689209 C 392.705292 463.0080=
+57 442.78891 450.667664 507.380005 450.667664 L 563.700012 450.667664 L 563=
+.700012 434.913818 C 563.700012 392.115662 536.131042 370.716919 480.99231 =
+370.716919 C 467.601471 370.716919 450.403687 372.620483 429.398468 376.427=
+673 C 408.393219 380.234863 387.388306 385.683044 366.383087 392.772278 L 3=
+37.632294 310.064636 C 364.676544 299.824585 392.836273 292.078979 422.1123=
+05 286.827698 C 451.388367 281.576355 477.578857 278.950745 500.684601 278.=
+950745 C 562.912598 278.950745 608.926514 291.619385 638.727722 316.956909 =
+C 668.52887 342.294495 683.42926 378.856201 683.42926 426.643066 Z M 488.08=
+1543 635.381531 C 501.472382 635.381531 515.519409 631.377441 530.223083 62=
+3.369263 C 544.926758 615.360962 556.085632 604.005188 563.700012 589.30151=
+4 L 563.700012 521.559998 L 532.97998 521.559998 C 498.32135 521.559998 472=
+.852905 526.876831 456.573853 537.510742 C 440.2948 548.144653 432.155396 5=
+63.701416 432.155396 584.181519 C 432.155396 600.197998 437.0784 612.735352=
+ 446.924622 621.793823 C 456.770813 630.852356 470.489655 635.381531 488.08=
+1543 635.381531 Z"/>
+</svg>=0A
+------MultipartBoundary--sb013FZrtXuy0E0dLuzIF6vEwoKtGR8dygJr88mzL2------
