@@ -89,6 +89,7 @@
 * [Interface](interface/README.md)
 * [tar and gzip](tar-and-gzip/README.md)
 * [PDF](pdf/README.md)
+* [MIME](mime/README.md)
 
 ## Issues
 * [html/template: bad quotes in second "div"](https://github.com/golang/go/issues/12149)
