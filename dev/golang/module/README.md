@@ -13,7 +13,6 @@
 * [Module retraction](https://go.dev/blog/go116-module-changes#module-retraction)
 * [How To Upgrade To A Major Version In Go](https://golang.cafe/blog/how-to-upgrade-to-a-major-version-in-go.html)
 * [Semantic Import Versioning](https://github.com/golang/go/wiki/Modules#semantic-import-versioning)
-* [Go Modules: v2 and Beyond](https://go.dev/blog/v2-go-modules)
 * [cmd/go, x/mod: "invalid go version" message mentions old version format #61888](https://github.com/golang/go/issues/61888)
 * [Call your code from another module](https://go.dev/doc/tutorial/call-module-code)
 * [Organizing a Go module](https://go.dev/doc/modules/layout)
@@ -27,3 +26,6 @@
 * [How to Use a Private Go Module in Your Own Project](https://www.digitalocean.com/community/tutorials/how-to-use-a-private-go-module-in-your-own-project)
 * [How to use Go Modules with Private Git repository](https://dev.to/gopher/how-to-use-go-modules-with-private-git-repository-53b4)
 * [Using Go Modules with private repositories at Github](https://curiousstuff.eu/post/using-go-modules-with-private-repositories-at-github/)
+
+## V2
+* [Go Modules: v2 and Beyond](https://go.dev/blog/v2-go-modules)
