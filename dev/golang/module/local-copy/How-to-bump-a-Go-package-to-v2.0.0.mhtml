@@ -1,0 +1,1652 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://therootcompany.com/blog/bump-go-package-to-v2/
+Subject: How to bump a Go package to v2.0.0 | Root
+Date: Fri, 28 Feb 2025 06:26:06 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--dw7PI0qZx75pBvG71VSIuFF0kJ5M6MHzAxvajZzY8e----"
+
+
+------MultipartBoundary--dw7PI0qZx75pBvG71VSIuFF0kJ5M6MHzAxvajZzY8e----
+Content-Type: text/html
+Content-ID: <frame-1E8A7D91751AC8E690D9F2AFF16E5513@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://therootcompany.com/blog/bump-go-package-to-v2/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+    <link rel=3D"stylesheet" href=3D"https://therootcompany.com/style.ac85a=
+8696621b85b88b4.css">
+    <link href=3D"https://fonts.googleapis.com/css2?family=3DCabin:ital,wgh=
+t@0,400;0,500;0,700;1,400&amp;display=3Dswap" rel=3D"stylesheet">
+    <title>How to bump a Go package to v2.0.0 | Root</title>
+    <link rel=3D"canonical" href=3D"https://therootcompany.com/blog/bump-go=
+-package-to-v2/">
+  </head>
+  <body>
+    <div class=3D"main">
+      <header class=3D"header">
+        <div class=3D"brand content">
+          <h1>
+            <a href=3D"https://therootcompany.com/">
+              <img src=3D"https://therootcompany.com/root-logo.svg" alt=3D"=
+Root">
+            </a>
+          </h1>
+        </div>
+        <nav class=3D"navbar style-desktop">
+          <ul>
+            <li><a href=3D"https://therootcompany.com/#hub">Hub</a></li>
+            <li><a href=3D"https://therootcompany.com/#apps">Apps</a></li>
+            <li><a href=3D"https://therootcompany.com/#team">Team</a></li>
+            <li><a href=3D"https://therootcompany.com/jobs/">Jobs</a></li>
+            <li><a href=3D"https://therootcompany.com/blog/">Blog</a></li>
+            <li><a href=3D"https://therootcompany.com/contact/" class=3D"la=
+st">Contact</a></li>
+          <li class=3D"revealer"><a>Menu</a></li></ul>
+        </nav>
+      </header>
+      <section class=3D"section default-single">
+        <div class=3D"container">
+          <div class=3D"content">
+            <div class=3D"postmeta-head">
+              <p>
+                <span class=3D"author">
+                  <img class=3D"gravatar" src=3D"https://www.gravatar.com/a=
+vatar/0a8b345ddcfc5401f578c850442f1e1b?s=3D64&amp;d=3Didenticon">
+                  <span class=3D"name">AJ ONeal</span>
+                </span>
+                <span class=3D"date">October 11, 2020</span>
+              </p>
+            </div>
+            <div class=3D"single-title">
+              <h1 class=3D"title"><a href=3D"https://therootcompany.com/blo=
+g/bump-go-package-to-v2/">How to bump a Go package to v2.0.0</a></h1>
+            </div>
+            <p>Go has a strong emphasis on =E2=80=9Cdon=E2=80=99t break thi=
+ngs=E2=80=9D and so they somewhat discourage the idea of a =E2=80=9Cv2=E2=
+=80=9D. However, sometimes you legitimately need to make a breaking change =
+to your API even though it=E2=80=99s hit production.</p>
+            <p>Here=E2=80=99s what you need to know to not have a bad time:=
+</p>
+            <h2 id=3D"go-version-bumping-cheat-sheet">Go Version Bumping Ch=
+eat Sheet</h2>
+            <ol>
+              <li>
+                <p>Update the package name in <code>go.mod</code> to have a=
+ <code>/v2</code> (or <code>/v3</code>, <code>v4</code>, etc) suffix, and c=
+ommit it.</p>
+                <div class=3D"highlight">
+                  <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-c=
+olor: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=
+=3D"language-txt" data-lang=3D"txt"><span style=3D"display:flex;"><span>mod=
+ule github.com/example/project/v2
+</span></span><span style=3D"display:flex;"><span>
+</span></span><span style=3D"display:flex;"><span>go 1.12
+</span></span></code></pre>
+                </div>
+              </li>
+              <li>
+                <p>Start with <code>v2.0.0-pre.1</code>. If you get everyth=
+ing right on the first try you can delete it and retag it as <code>v2.0.0</=
+code> without any problems.</p>
+                <div class=3D"highlight">
+                  <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-c=
+olor: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=
+=3D"language-bash" data-lang=3D"bash"><span style=3D"display:flex;"><span><=
+span style=3D"color:#75715e"># add the git tag</span>
+</span></span><span style=3D"display:flex;"><span>git tag v2.0.0-pre.1
+</span></span><span style=3D"display:flex;"><span>git push --tags
+</span></span><span style=3D"display:flex;"><span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#757=
+15e"># remove it</span>
+</span></span><span style=3D"display:flex;"><span>git tag -d v2.0.0-pre.1
+</span></span><span style=3D"display:flex;"><span>git push origin :v2.0.0-p=
+re.1
+</span></span><span style=3D"display:flex;"><span>
+</span></span><span style=3D"display:flex;"><span><span style=3D"color:#757=
+15e"># add the v2.0.0 proper when you're ready</span>
+</span></span><span style=3D"display:flex;"><span>git tag v2.0.0
+</span></span><span style=3D"display:flex;"><span>git push --tags
+</span></span></code></pre>
+                </div>
+              </li>
+              <li>
+                <p>Fetch your package from a dependency. Use <code>@&lt;tag=
+&gt;</code> or <code>@master</code>, not <code>@latest</code>.</p>
+                <div class=3D"highlight">
+                  <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-c=
+olor: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=
+=3D"language-bash" data-lang=3D"bash"><span style=3D"display:flex;"><span>e=
+xport GO111MODULE<span style=3D"color:#f92672">=3D</span>on
+</span></span><span style=3D"display:flex;"><span>go get -u github.com/exam=
+ple/project/v2@v2.0.0-pre.1
+</span></span></code></pre>
+                </div>
+              </li>
+              <li>
+                <p>Update import paths in your depedencies, README, GoDoc l=
+inks, and other documentation.</p>
+                <div class=3D"highlight">
+                  <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-c=
+olor: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=
+=3D"language-go" data-lang=3D"go"><span style=3D"display:flex;"><span><span=
+ style=3D"color:#f92672">import</span> (
+</span></span><span style=3D"display:flex;"><span>   <span style=3D"color:#=
+e6db74">"github.com/example/project/v2"</span>
+</span></span><span style=3D"display:flex;"><span>)
+</span></span></code></pre>
+                </div>
+                <p>(note that the import name stays the same)</p>
+                <div class=3D"highlight">
+                  <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-c=
+olor: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=
+=3D"language-md" data-lang=3D"md"><span style=3D"display:flex;"><span>[<spa=
+n style=3D"color:#f92672">GoDoc</span>](<span style=3D"color:#a6e22e">https=
+://pkg.go.dev/github.com/example/project/v2</span>)
+</span></span></code></pre>
+                </div>
+                <p>I recommend using <a href=3D"https://webinstall.dev/sd">=
+sd</a> to do this, because it makes it a snap:</p>
+                <div class=3D"highlight">
+                  <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-c=
+olor: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=
+=3D"language-bash" data-lang=3D"bash"><span style=3D"display:flex;"><span>s=
+d <span style=3D"color:#e6db74">'github.com/example/project'</span> <span s=
+tyle=3D"color:#e6db74">'github.com/example/project/v2'</span> go.* *.go */*=
+.go */*/*.go
+</span></span><span style=3D"display:flex;"><span>sd <span style=3D"color:#=
+e6db74">'github.com/example/project'</span> <span style=3D"color:#e6db74">'=
+github.com/example/project/v2'</span> */*/*/*.go */*/*/*.go
+</span></span></code></pre>
+                </div>
+              </li>
+              <li>
+                <p>Run <code>go mod tidy</code> to be sure no lingering non=
+-v2 references remain.</p>
+              </li>
+            </ol>
+            <p>More details below, including cache-busting and tag / versio=
+n debugging, if you need it.</p>
+            <p>Have a nice day! :D</p>
+            <h3 id=3D"start-with-v200-pre1">Start with v2.0.0-pre.1</h3>
+            <p>That=E2=80=99s called a <a href=3D"https://golang.org/ref/mo=
+d#pseudo-versions">=E2=80=9Cpsuedo-version=E2=80=9D</a>.</p>
+            <p>Typically before you push straight into a backwards-compatib=
+ility guaranteed v2.0.0, you want a little wiggle room to play around and m=
+ake sure everything works. Using a psuedo-version is a good way to do this.=
+</p>
+            <h2 id=3D"latest-caches-master-does-not">@latest caches, @maste=
+r does not</h2>
+            <p>Even after you=E2=80=99ve updated your project correctly, a =
+<code>go get</code> like this may still fail for a while due to caching.</p=
+>
+            <div class=3D"highlight">
+              <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-color=
+: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=3D"la=
+nguage-bash" data-lang=3D"bash"><span style=3D"display:flex;"><span>go get =
+-u github.com/example/project/v2@latest
+</span></span></code></pre>
+            </div>
+            <p>If you <code>go get</code> like this, the current <code>mast=
+er</code> will be force-checked and you=E2=80=99ll get the expected (or at =
+least accurate) results.</p>
+            <div class=3D"highlight">
+              <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-color=
+: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=3D"la=
+nguage-bash" data-lang=3D"bash"><span style=3D"display:flex;"><span>go get =
+-u github.com/example/project/v2@master
+</span></span></code></pre>
+            </div>
+            <p>Additionally, if you find that <code>@v2.0.0-pre.1</code> is=
+n=E2=80=99t working for you, it may have been negatively cached. Bump to <c=
+ode>@v2.0.0-pre.2</code> and try again. Remember: You=E2=80=99ll never run =
+out of psuedo-versions and you can always delete them once you publish the =
+real, working <code>v2.0.0</code>. :D</p>
+            <h2 id=3D"debugging-listing-versions">Debugging: Listing versio=
+ns</h2>
+            <p>Sometimes you just need to know what Go is seeing. Here=E2=
+=80=99s how you can do that:</p>
+            <div class=3D"highlight">
+              <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-color=
+: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=3D"la=
+nguage-bash" data-lang=3D"bash"><span style=3D"display:flex;"><span>go list=
+ -m -json git.rootprojects.org/root/go-gitver/v2@master
+</span></span></code></pre>
+            </div>
+            <div class=3D"highlight">
+              <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-color=
+: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=3D"la=
+nguage-json" data-lang=3D"json"><span style=3D"display:flex;"><span>{
+</span></span><span style=3D"display:flex;"><span>    <span style=3D"color:=
+#f92672">"Path"</span>: <span style=3D"color:#e6db74">"git.rootprojects.org=
+/root/go-gitver/v2"</span>,
+</span></span><span style=3D"display:flex;"><span>    <span style=3D"color:=
+#f92672">"Version"</span>: <span style=3D"color:#e6db74">"v2.0.2-pre.1"</sp=
+an>,
+</span></span><span style=3D"display:flex;"><span>    <span style=3D"color:=
+#f92672">"Time"</span>: <span style=3D"color:#e6db74">"2020-10-10T22:33:22Z=
+"</span>
+</span></span><span style=3D"display:flex;"><span>}
+</span></span></code></pre>
+            </div>
+            <h2 id=3D"alternative-option-a-v2-directory">Alternative Option=
+: A =E2=80=98v2=E2=80=99 Directory</h2>
+            <p>If you want to simultaneously maintain v1 and v2, or to buil=
+d v2 as a wrapper around v1 (or vice-versa), you can use a <code>v2</code> =
+directory instead of bumping your go.mod to v2.</p>
+            <div class=3D"highlight">
+              <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-color=
+: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=3D"la=
+nguage-txt" data-lang=3D"txt"><span style=3D"display:flex;"><span>github.co=
+m/example/project
+</span></span><span style=3D"display:flex;"><span>=E2=94=9C=E2=94=80=E2=94=
+=80 go.mod
+</span></span><span style=3D"display:flex;"><span>=E2=94=9C=E2=94=80=E2=94=
+=80 sprocket.go
+</span></span><span style=3D"display:flex;"><span>=E2=94=94=E2=94=80=E2=94=
+=80 v2
+</span></span><span style=3D"display:flex;"><span>   =E2=94=94=E2=94=80=E2=
+=94=80 sprocket.go
+</span></span></code></pre>
+            </div>
+            <p>In this case you should keep your <code>go.mod</code> plain,=
+ without the <code>v2</code> suffix:</p>
+            <div class=3D"highlight">
+              <pre tabindex=3D"0" style=3D"color: #f8f8f2; background-color=
+: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class=3D"la=
+nguage-txt" data-lang=3D"txt"><span style=3D"display:flex;"><span>module gi=
+thub.com/example/project
+</span></span><span style=3D"display:flex;"><span>
+</span></span><span style=3D"display:flex;"><span>go 1.12
+</span></span></code></pre>
+            </div>
+            <p>In this case you can use both <code>v1.x</code> and <code>v2=
+.x</code> tags on your repo and <code>go get</code> will fetch the correct =
+latest one based on the <code>v2</code> suffix.</p>
+            <h2 id=3D"see-an-example">See an example</h2>
+            <p>
+              Take a look at <a href=3D"https://git.rootprojects.org/root/g=
+o-gitver"><code>go-gitver</code></a>, which has a <code>v2</code> <code>go.=
+mod</code>.
+            </p>
+            <div class=3D"postmeta-foot">
+              <div class=3D"categories">
+                <span class=3D"catlabel"><strong>Categories:</strong></span=
+>
+                <ul>
+                  <li><a href=3D"https://therootcompany.com/categories/gola=
+ng/">Golang</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class=3D"footer">
+      <div class=3D"container">
+        <div class=3D"footer-text">
+          <span>=C2=A9 2020 The Root Group, LLC. All rights reserved.</span=
+>
+        </div>
+        <div class=3D"footer-links">
+          <a href=3D"https://therootcompany.com/legal/#privacy"><span>Priva=
+cy</span></a>
+          <a href=3D"https://therootcompany.com/legal/#terms"><span>Terms o=
+f Use</span></a>
+        </div>
+      </div>
+    </footer>
+   =20
+ =20
+</body></html>
+------MultipartBoundary--dw7PI0qZx75pBvG71VSIuFF0kJ5M6MHzAxvajZzY8e----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://therootcompany.com/style.ac85a8696621b85b88b4.css
+
+@charset "utf-8";
+
+.select select, .input, .button { appearance: none; align-items: center; bo=
+rder: 1px solid rgba(0, 0, 0, 0); border-radius: 4px; box-shadow: none; dis=
+play: inline-flex; font-size: 1rem; height: 2.5em; justify-content: flex-st=
+art; line-height: 1.5; padding: calc(0.5em - 1px) calc(0.75em - 1px); posit=
+ion: relative; vertical-align: top; }
+
+.select select:focus, .input:focus, .button:focus, .select select:active, .=
+input:active, .button:active { outline: none; }
+
+.select select[disabled], [disabled].input, [disabled].button { cursor: not=
+-allowed; }
+
+.file, .button { user-select: none; }
+
+.select:not(.is-multiple):not(.is-loading)::after { border-width: 0px 0px 3=
+px 3px; border-bottom-style: solid; border-left-style: solid; border-bottom=
+-color: rgba(0, 0, 0, 0); border-left-color: rgba(0, 0, 0, 0); border-image=
+: initial; border-radius: 2px; border-right-style: initial; border-right-co=
+lor: initial; border-top-style: initial; border-top-color: initial; content=
+: " "; display: block; height: 0.625em; margin-top: -0.4375em; pointer-even=
+ts: none; position: absolute; top: 50%; transform: rotate(-45deg); transfor=
+m-origin: center center; width: 0.625em; }
+
+.block:not(:last-child), .title:not(:last-child), .table-container:not(:las=
+t-child), .table:not(:last-child), .progress:not(:last-child), .content:not=
+(:last-child), .box:not(:last-child), .message:not(:last-child), .level:not=
+(:last-child) { margin-bottom: 1.5rem; }
+
+.delete { user-select: none; appearance: none; background-color: rgba(0, 0,=
+ 0, 0.2); border: none; border-radius: 9999px; cursor: pointer; pointer-eve=
+nts: auto; display: inline-block; flex-grow: 0; flex-shrink: 0; font-size: =
+0px; height: 20px; max-height: 20px; max-width: 20px; min-height: 20px; min=
+-width: 20px; outline: none; position: relative; vertical-align: top; width=
+: 20px; }
+
+.delete::before, .delete::after { background-color: rgb(255, 255, 255); con=
+tent: ""; display: block; left: 50%; position: absolute; top: 50%; transfor=
+m: translateX(-50%) translateY(-50%) rotate(45deg); transform-origin: cente=
+r center; }
+
+.delete::before { height: 2px; width: 50%; }
+
+.delete::after { height: 50%; width: 2px; }
+
+.delete:hover, .delete:focus { background-color: rgba(0, 0, 0, 0.3); }
+
+.delete:active { background-color: rgba(0, 0, 0, 0.4); }
+
+.image.is-16by9 img { inset: 0px; position: absolute; }
+
+html, body, p, ol, ul, li, dl, blockquote, figure, pre, hr, h1, h2, h3, h4 =
+{ margin: 0px; padding: 0px; }
+
+h1, h2, h3, h4 { font-size: 100%; font-weight: normal; }
+
+ul { list-style: none; }
+
+button, input, select { margin: 0px; }
+
+html { box-sizing: border-box; }
+
+*, ::before, ::after { box-sizing: inherit; }
+
+img { height: auto; max-width: 100%; }
+
+table { border-collapse: collapse; border-spacing: 0px; }
+
+td, th { padding: 0px; }
+
+td:not([align]), th:not([align]) { text-align: inherit; }
+
+html { background-color: rgb(255, 255, 255); font-size: 16px; -webkit-font-=
+smoothing: antialiased; min-width: 300px; overflow: hidden scroll; text-ren=
+dering: optimizelegibility; text-size-adjust: 100%; }
+
+article, aside, figure, footer, header, section { display: block; }
+
+body, button, input, select { font-family: BlinkMacSystemFont, -apple-syste=
+m, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans"=
+, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+code, pre { -webkit-font-smoothing: auto; font-family: monospace; }
+
+body { color: rgb(74, 74, 74); font-size: 1em; font-weight: 400; line-heigh=
+t: 1.5; }
+
+a { color: rgb(99, 37, 243); cursor: pointer; text-decoration: none; }
+
+a strong { color: currentcolor; }
+
+a:hover { color: rgb(54, 54, 54); }
+
+code { background-color: rgb(245, 245, 245); color: rgb(218, 16, 57); font-=
+size: 0.875em; font-weight: normal; padding: 0.25em 0.5em; }
+
+hr { background-color: rgb(245, 245, 245); border: none; display: block; he=
+ight: 2px; margin: 1.5rem 0px; }
+
+img { height: auto; max-width: 100%; }
+
+small { font-size: 0.875em; }
+
+span { font-style: inherit; font-weight: inherit; }
+
+strong { color: rgb(54, 54, 54); font-weight: 700; }
+
+pre { background-color: rgb(245, 245, 245); color: rgb(74, 74, 74); font-si=
+ze: 0.875em; overflow-x: auto; padding: 1.25rem 1.5rem; white-space: pre; o=
+verflow-wrap: normal; }
+
+pre code { background-color: rgba(0, 0, 0, 0); color: currentcolor; font-si=
+ze: 1em; padding: 0px; }
+
+table td, table th { vertical-align: top; }
+
+table td:not([align]), table th:not([align]) { text-align: inherit; }
+
+table th { color: rgb(54, 54, 54); }
+
+.card { background-color: rgb(255, 255, 255); border-radius: 0.25rem; box-s=
+hadow: rgba(0, 0, 0, 0.1) 0px 0.5em 1em -0.125em, rgba(0, 0, 0, 0.02) 0px 0=
+px 0px 1px; color: rgb(74, 74, 74); max-width: 100%; position: relative; }
+
+.card-content:first-child { border-top-left-radius: 0.25rem; border-top-rig=
+ht-radius: 0.25rem; }
+
+.card-content:last-child { border-bottom-left-radius: 0.25rem; border-botto=
+m-right-radius: 0.25rem; }
+
+.card-content { background-color: rgba(0, 0, 0, 0); padding: 1.5rem; }
+
+.card .media:not(:last-child) { margin-bottom: 1.5rem; }
+
+.dropdown { display: inline-flex; position: relative; vertical-align: top; =
+}
+
+.level { align-items: center; justify-content: space-between; }
+
+.level code { border-radius: 4px; }
+
+.level img { display: inline-block; vertical-align: top; }
+
+@media screen and (min-width: 769px), print {
+  .level { display: flex; }
+}
+
+.media { align-items: flex-start; display: flex; text-align: inherit; }
+
+.media .content:not(:last-child) { margin-bottom: 0.75rem; }
+
+.media .media { border-top: 1px solid rgba(219, 219, 219, 0.5); display: fl=
+ex; padding-top: 0.75rem; }
+
+.media .media .content:not(:last-child), .media .media .control:not(:last-c=
+hild) { margin-bottom: 0.5rem; }
+
+.media .media .media { padding-top: 0.5rem; }
+
+.media .media .media + .media { margin-top: 0.5rem; }
+
+.media + .media { border-top: 1px solid rgba(219, 219, 219, 0.5); margin-to=
+p: 1rem; padding-top: 1rem; }
+
+.message { background-color: rgb(245, 245, 245); border-radius: 4px; font-s=
+ize: 1rem; }
+
+.message strong { color: currentcolor; }
+
+.message a:not(.button):not(.tag):not(.dropdown-item) { color: currentcolor=
+; text-decoration: underline; }
+
+.message.is-link { background-color: rgb(241, 236, 254); }
+
+.navbar { background-color: rgb(255, 255, 255); min-height: 3.25rem; positi=
+on: relative; z-index: 30; }
+
+.navbar.is-link { background-color: rgb(99, 37, 243); color: rgb(255, 255, =
+255); }
+
+.navbar > .container { align-items: stretch; display: flex; min-height: 3.2=
+5rem; width: 100%; }
+
+@media screen and (max-width: 1023px) {
+  .navbar > .container { display: block; }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar { align-items: stretch; display: flex; }
+  .navbar { min-height: 3.25rem; }
+}
+
+.box { background-color: rgb(255, 255, 255); border-radius: 6px; box-shadow=
+: rgba(0, 0, 0, 0.1) 0px 0.5em 1em -0.125em, rgba(0, 0, 0, 0.02) 0px 0px 0p=
+x 1px; color: rgb(74, 74, 74); display: block; padding: 1.25rem; }
+
+a.box:hover, a.box:focus { box-shadow: rgba(0, 0, 0, 0.1) 0px 0.5em 1em -0.=
+125em, rgb(99, 37, 243) 0px 0px 0px 1px; }
+
+a.box:active { box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px inset, rgb(99, 37=
+, 243) 0px 0px 0px 1px; }
+
+.button { background-color: rgb(255, 255, 255); border-color: rgb(219, 219,=
+ 219); border-width: 1px; color: rgb(54, 54, 54); cursor: pointer; justify-=
+content: center; padding: calc(0.5em - 1px) 1em; text-align: center; white-=
+space: nowrap; }
+
+.button strong { color: inherit; }
+
+.button:hover { border-color: rgb(181, 181, 181); color: rgb(54, 54, 54); }
+
+.button:focus { border-color: rgb(72, 95, 199); color: rgb(54, 54, 54); }
+
+.button:focus:not(:active) { box-shadow: rgba(99, 37, 243, 0.25) 0px 0px 0p=
+x 0.125em; }
+
+.button:active { border-color: rgb(74, 74, 74); color: rgb(54, 54, 54); }
+
+.button.is-link { background-color: rgb(99, 37, 243); border-color: rgba(0,=
+ 0, 0, 0); color: rgb(255, 255, 255); }
+
+.button.is-link:hover { background-color: rgb(90, 25, 242); border-color: r=
+gba(0, 0, 0, 0); color: rgb(255, 255, 255); }
+
+.button.is-link:focus { border-color: rgba(0, 0, 0, 0); color: rgb(255, 255=
+, 255); }
+
+.button.is-link:focus:not(:active) { box-shadow: rgba(99, 37, 243, 0.25) 0p=
+x 0px 0px 0.125em; }
+
+.button.is-link:active { background-color: rgb(82, 13, 241); border-color: =
+rgba(0, 0, 0, 0); color: rgb(255, 255, 255); }
+
+.button.is-link[disabled] { background-color: rgb(99, 37, 243); border-colo=
+r: rgb(99, 37, 243); box-shadow: none; }
+
+.button[disabled] { background-color: rgb(255, 255, 255); border-color: rgb=
+(219, 219, 219); box-shadow: none; opacity: 0.5; }
+
+.container { flex-grow: 1; margin: 0px auto; position: relative; width: aut=
+o; }
+
+@media screen and (min-width: 1024px) {
+  .container { max-width: 960px; }
+}
+
+.content li + li { margin-top: 0.25em; }
+
+.content p:not(:last-child), .content dl:not(:last-child), .content ol:not(=
+:last-child), .content ul:not(:last-child), .content blockquote:not(:last-c=
+hild), .content pre:not(:last-child), .content table:not(:last-child) { mar=
+gin-bottom: 1em; }
+
+.content h1, .content h2, .content h3, .content h4 { color: rgb(54, 54, 54)=
+; font-weight: 600; line-height: 1.125; }
+
+.content h1 { font-size: 2em; margin-bottom: 0.5em; }
+
+.content h1:not(:first-child) { margin-top: 1em; }
+
+.content h2 { font-size: 1.75em; margin-bottom: 0.5714em; }
+
+.content h2:not(:first-child) { margin-top: 1.1428em; }
+
+.content h3 { font-size: 1.5em; margin-bottom: 0.6666em; }
+
+.content h3:not(:first-child) { margin-top: 1.3333em; }
+
+.content h4 { font-size: 1.25em; margin-bottom: 0.8em; }
+
+.content blockquote { background-color: rgb(245, 245, 245); border-left: 5p=
+x solid rgb(219, 219, 219); padding: 1.25em 1.5em; }
+
+.content ol { list-style-position: outside; margin-left: 2em; margin-top: 1=
+em; }
+
+.content ol:not([type]) { list-style-type: decimal; }
+
+.content ul { list-style: outside disc; margin-left: 2em; margin-top: 1em; =
+}
+
+.content ul ul { list-style-type: circle; margin-top: 0.5em; }
+
+.content ul ul ul { list-style-type: square; }
+
+.content figure { margin-left: 2em; margin-right: 2em; text-align: center; =
+}
+
+.content figure:not(:first-child) { margin-top: 2em; }
+
+.content figure:not(:last-child) { margin-bottom: 2em; }
+
+.content figure img { display: inline-block; }
+
+.content pre { overflow-x: auto; padding: 1.25em 1.5em; white-space: pre; o=
+verflow-wrap: normal; }
+
+.content sub { font-size: 75%; }
+
+.content table { width: 100%; }
+
+.content table td, .content table th { border-style: solid; border-color: r=
+gb(219, 219, 219); border-image: initial; border-width: 0px 0px 1px; paddin=
+g: 0.5em 0.75em; vertical-align: top; }
+
+.content table th { color: rgb(54, 54, 54); }
+
+.content table th:not([align]) { text-align: inherit; }
+
+.content table thead td, .content table thead th { border-width: 0px 0px 2p=
+x; color: rgb(54, 54, 54); }
+
+.content table tbody tr:last-child td, .content table tbody tr:last-child t=
+h { border-bottom-width: 0px; }
+
+.image { display: block; position: relative; }
+
+.image img { display: block; height: auto; width: 100%; }
+
+.image.is-16by9 img { height: 100%; width: 100%; }
+
+.image.is-16by9 { padding-top: 56.25%; }
+
+.progress { appearance: none; border: none; border-radius: 9999px; display:=
+ block; height: 1rem; overflow: hidden; padding: 0px; width: 100%; }
+
+.progress::-webkit-progress-bar { background-color: rgb(237, 237, 237); }
+
+.progress::-webkit-progress-value { background-color: rgb(74, 74, 74); }
+
+.progress.is-link::-webkit-progress-value { background-color: rgb(99, 37, 2=
+43); }
+
+.progress.is-link:indeterminate { background-image: linear-gradient(to righ=
+t, rgb(99, 37, 243) 30%, rgb(237, 237, 237) 30%); }
+
+.progress:indeterminate { animation-duration: 1.5s; animation-iteration-cou=
+nt: infinite; animation-name: moveIndeterminate; animation-timing-function:=
+ linear; background-color: rgb(237, 237, 237); background-image: linear-gra=
+dient(to right, rgb(74, 74, 74) 30%, rgb(237, 237, 237) 30%); background-po=
+sition: left top; background-repeat: no-repeat; background-size: 150% 150%;=
+ }
+
+.progress:indeterminate::-webkit-progress-bar { background-color: rgba(0, 0=
+, 0, 0); }
+
+@-webkit-keyframes moveIndeterminate {=20
+  0% { background-position: 200% 0px; }
+  100% { background-position: -200% 0px; }
+}
+
+@keyframes moveIndeterminate {=20
+  0% { background-position: 200% 0px; }
+  100% { background-position: -200% 0px; }
+}
+
+.table { background-color: rgb(255, 255, 255); color: rgb(54, 54, 54); }
+
+.table td, .table th { border-style: solid; border-color: rgb(219, 219, 219=
+); border-image: initial; border-width: 0px 0px 1px; padding: 0.5em 0.75em;=
+ vertical-align: top; }
+
+.table td.is-link, .table th.is-link { background-color: rgb(99, 37, 243); =
+border-color: rgb(99, 37, 243); color: rgb(255, 255, 255); }
+
+.table th { color: rgb(54, 54, 54); }
+
+.table th:not([align]) { text-align: left; }
+
+.table thead { background-color: rgba(0, 0, 0, 0); }
+
+.table thead td, .table thead th { border-width: 0px 0px 2px; color: rgb(54=
+, 54, 54); }
+
+.table tbody { background-color: rgba(0, 0, 0, 0); }
+
+.table tbody tr:last-child td, .table tbody tr:last-child th { border-botto=
+m-width: 0px; }
+
+.table-container { overflow: auto hidden; max-width: 100%; }
+
+.tags { align-items: center; display: flex; flex-wrap: wrap; justify-conten=
+t: flex-start; }
+
+.tags .tag { margin-bottom: 0.5rem; }
+
+.tags .tag:not(:last-child) { margin-right: 0.5rem; }
+
+.tags:last-child { margin-bottom: -0.5rem; }
+
+.tags:not(:last-child) { margin-bottom: 1rem; }
+
+.tags.has-addons .tag { margin-right: 0px; }
+
+.tags.has-addons .tag:not(:first-child) { margin-left: 0px; border-top-left=
+-radius: 0px; border-bottom-left-radius: 0px; }
+
+.tags.has-addons .tag:not(:last-child) { border-top-right-radius: 0px; bord=
+er-bottom-right-radius: 0px; }
+
+.tag:not(body) { align-items: center; background-color: rgb(245, 245, 245);=
+ border-radius: 4px; color: rgb(74, 74, 74); display: inline-flex; font-siz=
+e: 0.75rem; height: 2em; justify-content: center; line-height: 1.5; padding=
+-left: 0.75em; padding-right: 0.75em; white-space: nowrap; }
+
+.tag:not(body) .delete { margin-left: 0.25rem; margin-right: -0.375rem; }
+
+.tag:not(body).is-link { background-color: rgb(99, 37, 243); color: rgb(255=
+, 255, 255); }
+
+a.tag:hover { text-decoration: underline; }
+
+.title { word-break: break-word; }
+
+.title em, .title span { font-weight: inherit; }
+
+.title sub { font-size: 0.75em; }
+
+.title .tag { vertical-align: middle; }
+
+.title { color: rgb(54, 54, 54); font-size: 2rem; font-weight: 600; line-he=
+ight: 1.125; }
+
+.title strong { color: inherit; font-weight: inherit; }
+
+.number { align-items: center; background-color: rgb(245, 245, 245); border=
+-radius: 9999px; display: inline-flex; font-size: 1.25rem; height: 2em; jus=
+tify-content: center; margin-right: 1.5rem; min-width: 2.5em; padding: 0.25=
+rem 0.5rem; text-align: center; vertical-align: top; }
+
+.select select, .input { background-color: rgb(255, 255, 255); border-color=
+: rgb(219, 219, 219); border-radius: 4px; color: rgb(54, 54, 54); }
+
+.select select::-webkit-input-placeholder, .input::-webkit-input-placeholde=
+r { color: rgba(54, 54, 54, 0.3); }
+
+.select select:hover, .input:hover { border-color: rgb(181, 181, 181); }
+
+.select select:focus, .input:focus, .select select:active, .input:active { =
+border-color: rgb(99, 37, 243); box-shadow: rgba(99, 37, 243, 0.25) 0px 0px=
+ 0px 0.125em; }
+
+.select select[disabled], [disabled].input { background-color: rgb(245, 245=
+, 245); border-color: rgb(245, 245, 245); box-shadow: none; color: rgb(122,=
+ 122, 122); }
+
+.select select[disabled]::-webkit-input-placeholder, [disabled].input::-web=
+kit-input-placeholder { color: rgba(122, 122, 122, 0.3); }
+
+.input { box-shadow: rgba(0, 0, 0, 0.05) 0px 0.0625em 0.125em inset; max-wi=
+dth: 100%; width: 100%; }
+
+[readonly].input { box-shadow: none; }
+
+.is-link.input { border-color: rgb(99, 37, 243); }
+
+.is-link.input:focus, .is-link.input:active { box-shadow: rgba(99, 37, 243,=
+ 0.25) 0px 0px 0px 0.125em; }
+
+.select { display: inline-block; max-width: 100%; position: relative; verti=
+cal-align: top; }
+
+.select:not(.is-multiple) { height: 2.5em; }
+
+.select:not(.is-multiple):not(.is-loading)::after { border-color: rgb(99, 3=
+7, 243); right: 1.125em; z-index: 4; }
+
+.select select { cursor: pointer; display: block; font-size: 1em; max-width=
+: 100%; outline: none; }
+
+.select select[disabled]:hover { border-color: rgb(245, 245, 245); }
+
+.select select:not([multiple]) { padding-right: 2.5em; }
+
+.select select[multiple] { height: auto; padding: 0px; }
+
+.select select[multiple] option { padding: 0.5em 1em; }
+
+.select:not(.is-multiple):not(.is-loading):hover::after { border-color: rgb=
+(54, 54, 54); }
+
+.select.is-link:not(:hover)::after { border-color: rgb(99, 37, 243); }
+
+.select.is-link select { border-color: rgb(99, 37, 243); }
+
+.select.is-link select:hover { border-color: rgb(82, 13, 241); }
+
+.select.is-link select:focus, .select.is-link select:active { box-shadow: r=
+gba(99, 37, 243, 0.25) 0px 0px 0px 0.125em; }
+
+.file { align-items: stretch; display: flex; justify-content: flex-start; p=
+osition: relative; }
+
+.label { color: rgb(54, 54, 54); display: block; font-size: 1rem; font-weig=
+ht: 700; }
+
+.label:not(:last-child) { margin-bottom: 0.5em; }
+
+.help { display: block; font-size: 0.75rem; margin-top: 0.25rem; }
+
+.help.is-link { color: rgb(99, 37, 243); }
+
+.field:not(:last-child) { margin-bottom: 0.75rem; }
+
+.field.has-addons { display: flex; justify-content: flex-start; }
+
+.field.has-addons .control:not(:last-child) { margin-right: -1px; }
+
+.field.has-addons .control:not(:first-child):not(:last-child) .button, .fie=
+ld.has-addons .control:not(:first-child):not(:last-child) .input, .field.ha=
+s-addons .control:not(:first-child):not(:last-child) .select select { borde=
+r-radius: 0px; }
+
+.field.has-addons .control:first-child:not(:only-child) .button, .field.has=
+-addons .control:first-child:not(:only-child) .input, .field.has-addons .co=
+ntrol:first-child:not(:only-child) .select select { border-bottom-right-rad=
+ius: 0px; border-top-right-radius: 0px; }
+
+.field.has-addons .control:last-child:not(:only-child) .button, .field.has-=
+addons .control:last-child:not(:only-child) .input, .field.has-addons .cont=
+rol:last-child:not(:only-child) .select select { border-bottom-left-radius:=
+ 0px; border-top-left-radius: 0px; }
+
+.field.has-addons .control .button:not([disabled]):hover, .field.has-addons=
+ .control .input:not([disabled]):hover, .field.has-addons .control .select =
+select:not([disabled]):hover { z-index: 2; }
+
+.field.has-addons .control .button:not([disabled]):focus, .field.has-addons=
+ .control .button:not([disabled]):active, .field.has-addons .control .input=
+:not([disabled]):focus, .field.has-addons .control .input:not([disabled]):a=
+ctive, .field.has-addons .control .select select:not([disabled]):focus, .fi=
+eld.has-addons .control .select select:not([disabled]):active { z-index: 3;=
+ }
+
+.field.has-addons .control .button:not([disabled]):focus:hover, .field.has-=
+addons .control .button:not([disabled]):active:hover, .field.has-addons .co=
+ntrol .input:not([disabled]):focus:hover, .field.has-addons .control .input=
+:not([disabled]):active:hover, .field.has-addons .control .select select:no=
+t([disabled]):focus:hover, .field.has-addons .control .select select:not([d=
+isabled]):active:hover { z-index: 4; }
+
+.control { box-sizing: border-box; clear: both; font-size: 1rem; position: =
+relative; text-align: inherit; }
+
+.column { display: block; flex: 1 1 0px; padding: 0.75rem; }
+
+.columns { margin-left: -0.75rem; margin-right: -0.75rem; margin-top: -0.75=
+rem; }
+
+.columns:last-child { margin-bottom: -0.75rem; }
+
+.columns:not(:last-child) { margin-bottom: calc(0.75rem); }
+
+@media screen and (min-width: 769px), print {
+  .columns:not(.is-desktop) { display: flex; }
+}
+
+.has-text-centered { text-align: center !important; }
+
+.hero { align-items: stretch; display: flex; flex-direction: column; justif=
+y-content: space-between; }
+
+.hero .navbar { background: none; }
+
+.hero.is-link { background-color: rgb(99, 37, 243); color: rgb(255, 255, 25=
+5); }
+
+.hero.is-link a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-=
+link.is-current), .hero.is-link strong { color: inherit; }
+
+.hero.is-link .title { color: rgb(255, 255, 255); }
+
+.section, .root-hero-newsletter, .root-hero-team, .root-hero-apps, .root-he=
+ro-hub, .root-hero-main { padding: 3rem 1.5rem; }
+
+@media screen and (min-width: 1024px) {
+  .section, .root-hero-newsletter, .root-hero-team, .root-hero-apps, .root-=
+hero-hub, .root-hero-main { padding: 3rem; }
+}
+
+.footer { background-color: rgb(250, 250, 250); padding: 3rem 1.5rem 6rem; =
+}
+
+.header, .footer, .section, .root-hero-newsletter, .root-hero-team, .root-h=
+ero-apps, .root-hero-hub, .root-hero-main { padding-right: 1.25rem; padding=
+-left: 1.25rem; }
+
+@media screen and (min-width: 769px), print {
+  .header, .footer, .section, .root-hero-newsletter, .root-hero-team, .root=
+-hero-apps, .root-hero-hub, .root-hero-main { padding-right: 2rem; padding-=
+left: 2rem; }
+}
+
+.content h1, .content h2, .content h3, .content h4 { margin-bottom: 1.5rem;=
+ }
+
+.content h1:not(:first-child), .content h2:not(:first-child), .content h3:n=
+ot(:first-child), .content h4:not(:first-child) { margin-top: 3rem; }
+
+.content p, .content li { font-size: 1.125rem; }
+
+.content pre a, .content code a { color: rgb(54, 54, 54); }
+
+.content pre { padding: 1.5rem 1.5rem 1.4rem; }
+
+.content p:not(:last-child), .content dl:not(:last-child), .content ol:not(=
+:last-child), .content ul:not(:last-child), .content blockquote:not(:last-c=
+hild), .content pre:not(:last-child), .content table:not(:last-child), .con=
+tent .highlight:not(:last-child), .content .postmeta-foot:not(:last-child) =
+{ margin-bottom: 1.5rem; }
+
+.content img { display: block; max-width: 100%; max-height: 80vh; margin-ri=
+ght: auto; margin-left: auto; }
+
+.content blockquote ul:first-child { margin-top: 0px; }
+
+.content a { word-break: break-word; }
+
+.content .single-title .title, .content .single-title .title a, .content .s=
+ingle-title .title a:hover { color: rgb(54, 54, 54); text-decoration: none;=
+ }
+
+.header { display: flex; padding-top: 2rem; margin-bottom: 4.854rem; }
+
+.header .brand { flex-grow: 1; }
+
+.header .brand h1 a, .header .brand h1 a:hover { border: none; }
+
+.header .content, .header h1 { margin: 0px; }
+
+.header h1 { font-size: 1.75rem; line-height: 3rem; }
+
+.header a { color: rgb(0, 0, 0); }
+
+.header a:hover { text-decoration: none; }
+
+.header .navbar li, .header .navbar a { user-select: none; }
+
+.header .navbar .revealer { display: none; }
+
+.header .navbar li { display: none; }
+
+.header .navbar.style-desktop li { display: block; }
+
+.header .navbar.style-desktop .revealer { display: none; }
+
+.header .navbar.style-revealed .revealer { display: block; }
+
+.header .navbar ul { display: flex; }
+
+.header .navbar a { margin: 0px 0.809rem; line-height: 3rem; text-transform=
+: uppercase; font-weight: bold; font-size: 0.875rem; border-bottom: 2px sol=
+id rgba(0, 0, 0, 0); }
+
+.header .navbar a:hover { text-decoration: none; border-color: rgb(0, 0, 0)=
+; }
+
+.header .navbar .revealer a { font-size: 0.875rem; font-weight: bold; curso=
+r: pointer; }
+
+.header .navbar .revealer a:active, .header .navbar .revealer a:hover { tex=
+t-decoration: none; }
+
+.header .navbar .revealer a.hover { text-decoration: none; }
+
+.header .navbar li:last-of-type { margin-right: 0px; }
+
+.navbar-items-revealed { margin-top: -1.854rem; margin-bottom: 2.5rem; text=
+-align: center; transition: opacity 180ms linear 0s; opacity: 0; }
+
+.navbar-items-revealed .container { padding-bottom: 2rem; border-bottom: 1p=
+x solid rgb(218, 218, 218); }
+
+.navbar-items-revealed.fadein { opacity: 1; }
+
+.navbar-items-revealed li { margin: 0px 0px 1rem; text-transform: uppercase=
+; font-weight: bold; font-size: 1.5rem; }
+
+.navbar-items-revealed a { color: rgb(0, 0, 0); text-decoration: none; }
+
+.navbar-items-revealed a:hover { color: rgb(0, 0, 0); }
+
+.hero { margin-bottom: 3rem; text-align: center; }
+
+.hero h1 { margin: 0px; padding: 0px; font-size: 3.5rem; font-weight: bold;=
+ }
+
+.postmeta-head { color: rgb(77, 77, 77); }
+
+.postmeta-head p, .postmeta-head span, .postmeta-head li { font-size: 1rem;=
+ }
+
+.postmeta-head p, .postmeta-head span { display: flex; flex-wrap: wrap; }
+
+.postmeta-head p { margin: 0px; line-height: 2rem; }
+
+.postmeta-head p > span:not(:last-child)::after { content: "=E2=80=A2"; pad=
+ding: 0px 0.5rem; }
+
+.postmeta-head .gravatar { height: 2rem; border-radius: 10rem; margin-right=
+: 0.6rem; padding: 0px; display: inline-block; vertical-align: bottom; }
+
+.postmeta-head a { color: rgb(89, 89, 89); }
+
+.postmeta-head a:hover { color: rgb(89, 89, 89); text-decoration: underline=
+; }
+
+.postmeta-head .author { font-weight: bold; }
+
+.postmeta-foot p, .postmeta-foot span, .postmeta-foot li { font-size: 1rem;=
+ }
+
+.postmeta-foot ul, .postmeta-foot ul li { display: inline-block; list-style=
+-type: none; margin: 0px; padding: 0px; }
+
+.postmeta-foot ul li:not(:last-child)::after { content: ", "; }
+
+.postmeta-foot a { color: rgb(89, 89, 89); }
+
+.postmeta-foot a:hover { color: rgb(89, 89, 89); text-decoration: underline=
+; }
+
+.default-list .item, .blog-list .item { padding: 3rem 0px 2.5rem; border-bo=
+ttom: 1px solid rgb(218, 218, 218); }
+
+.default-list .item:first-child, .blog-list .item:first-child { padding-top=
+: 0px; }
+
+.default-list .item:last-child, .blog-list .item:last-child { padding-botto=
+m: 0px; border-bottom: none; }
+
+.default-list .item .title, .blog-list .item .title { margin: 0px; }
+
+.default-list .item a, .blog-list .item a { color: rgb(0, 0, 0); }
+
+.default-list .item .postmeta-head, .blog-list .item .postmeta-head, .defau=
+lt-list .item .postmeta-foot, .blog-list .item .postmeta-foot { margin: 0px=
+ 0px 0.5rem; }
+
+.default-list .item h1, .blog-list .item h1 { margin: -0.1rem 0px 0.5rem; }
+
+.default-single .postmeta-head { margin: 0px 0px 0.5rem; }
+
+.default-single h1.title { margin-top: 0px; margin-bottom: 3rem; }
+
+.default-single #disqus_thread { padding: 2rem 0px 0px; }
+
+.blog-list .controls-tags { padding-bottom: 2.5rem; border-bottom: 1px soli=
+d rgb(218, 218, 218); }
+
+.blog-list .controls-tags ul, .blog-list .controls-tags ul li { display: in=
+line-block; list-style-type: none; margin: 0px; padding: 0px; }
+
+.blog-list .controls-tags ul li:not(:last-child)::after { content: ", "; }
+
+.blog-list .controls-tags p, .blog-list .controls-tags ul, .blog-list .cont=
+rols-tags li { font-size: 1rem; }
+
+.blog-list .catlabel { padding-right: 0.3rem; }
+
+.blog-list a { color: rgb(0, 0, 0); }
+
+.blog-list a:hover { color: rgb(0, 0, 0); text-decoration: underline; }
+
+.blog-list .postmeta-foot:empty { display: none; }
+
+.form .field p.help, .content .form .field p.help { font-size: 0.9rem; marg=
+in-bottom: 0px; }
+
+.footer { margin: 4rem 0px 0px; padding-top: 2rem; padding-bottom: 2rem; }
+
+.footer p { font-size: 1rem; }
+
+html, body { height: 100%; }
+
+body { display: flex; flex-direction: column; }
+
+.main { flex: 1 0 auto; }
+
+.footer { flex-shrink: 0; }
+
+.content #disqus_thread { margin: -0.75rem 0px -1rem; }
+
+.utterances-container { margin-right: -4px; margin-bottom: -16px; margin-le=
+ft: -4px; overflow: hidden; }
+
+.utterances-container .utterances { max-width: 100%; }
+
+.container { flex-grow: 1; margin: 0px auto; position: relative; width: aut=
+o; }
+
+@media screen and (min-width: 1024px) {
+  .container { max-width: 960px; }
+}
+
+.header, .footer, .section, .root-hero-newsletter, .root-hero-team, .root-h=
+ero-apps, .root-hero-hub, .root-hero-main { padding-right: 1.25rem; padding=
+-left: 1.25rem; }
+
+@media screen and (min-width: 769px), print {
+  .header, .footer, .section, .root-hero-newsletter, .root-hero-team, .root=
+-hero-apps, .root-hero-hub, .root-hero-main { padding-right: 2rem; padding-=
+left: 2rem; }
+}
+
+body, button { font-family: Cabin, Arial, sans-serif; font-weight: 400; bac=
+kground-color: rgb(255, 255, 255); min-height: 100vh; display: flex; flex-d=
+irection: column; }
+
+body > section { flex-grow: 1; }
+
+.content a:hover { text-decoration: underline; }
+
+.content h1, .content h2, .content h3, .content h4 { margin-bottom: 1.5rem;=
+ }
+
+.content h1:not(:first-child), .content h2:not(:first-child), .content h3:n=
+ot(:first-child), .content h4:not(:first-child) { margin-top: 3rem; }
+
+.content p, .content li { font-size: 1.125rem; }
+
+.content pre a, .content code a { color: rgb(54, 54, 54); }
+
+.content pre { padding: 1.5rem 1.5rem 1.4rem; }
+
+.content p:not(:last-child), .content dl:not(:last-child), .content ol:not(=
+:last-child), .content ul:not(:last-child), .content blockquote:not(:last-c=
+hild), .content pre:not(:last-child), .content table:not(:last-child), .con=
+tent .highlight:not(:last-child), .content .postmeta-foot:not(:last-child) =
+{ margin-bottom: 1.5rem; }
+
+.content img { display: block; max-width: 100%; max-height: 80vh; margin-ri=
+ght: auto; margin-left: auto; }
+
+.content blockquote ul:first-child { margin-top: 0px; }
+
+.content a { word-break: break-word; }
+
+.content .single-title .title, .content .single-title .title a, .content .s=
+ingle-title .title a:hover { color: rgb(54, 54, 54); text-decoration: none;=
+ }
+
+.content a { color: rgb(136, 136, 136); text-decoration: none; }
+
+.content a:hover { color: rgb(99, 37, 243); text-decoration: none; }
+
+.header { display: flex; padding-top: 1.618rem; padding-bottom: 1.618rem; m=
+argin-bottom: 3.236rem; }
+
+.header .brand { flex-grow: 1; }
+
+.header .content, .header h1 { margin: 0px; }
+
+.header h1 { font-size: 1.75rem; line-height: 3rem; }
+
+.header img { display: inline-block; width: auto; height: 3rem; vertical-al=
+ign: middle; transform: scale(0.6); transform-origin: left center; }
+
+.header a { line-height: 3rem; color: rgb(0, 0, 0); }
+
+.header a:hover { text-decoration: underline; }
+
+.header .navbar li, .header .navbar a { user-select: none; }
+
+.header .navbar .revealer { display: none; }
+
+.header .navbar li { display: none; }
+
+.header .navbar.style-desktop li { display: block; }
+
+.header .navbar.style-desktop .revealer { display: none; }
+
+.header .navbar.style-revealed .revealer { display: block; }
+
+.header .navbar ul { display: flex; }
+
+.header .navbar a { margin: 0px 0.809rem; line-height: 51px; text-transform=
+: uppercase; font-weight: bold; font-size: 1rem; color: rgb(0, 0, 0); borde=
+r-bottom: 2px solid rgba(0, 0, 0, 0); }
+
+.header .navbar a:hover { text-decoration: none; border-color: rgb(99, 37, =
+243); }
+
+.header .navbar a.last { margin-right: 0px; }
+
+.header .navbar .revealer a { font-size: 1rem; font-weight: bold; cursor: p=
+ointer; }
+
+.header .navbar .revealer a:active, .header .navbar .revealer a:hover { tex=
+t-decoration: none; }
+
+.header .navbar li:last-of-type { margin-right: 0px; }
+
+.navbar-items-revealed { margin-top: -1.854rem; margin-bottom: 3rem; text-a=
+lign: center; transition: opacity 180ms linear 0s; opacity: 0; background-c=
+olor: rgb(255, 255, 255); z-index: 10; }
+
+.navbar-items-revealed .container { padding-bottom: 2rem; }
+
+.navbar-items-revealed.fadein { opacity: 1; }
+
+.navbar-items-revealed li { margin: 0px 0px 1rem; text-transform: uppercase=
+; font-weight: bold; font-size: 1.5rem; }
+
+.navbar-items-revealed a { color: rgb(0, 0, 0); text-decoration: none; bord=
+er-bottom: 2px solid rgba(0, 0, 0, 0); }
+
+.navbar-items-revealed a:hover { border-color: rgb(99, 37, 243); }
+
+.hero { margin-bottom: 3rem; text-align: center; }
+
+.hero h1 { margin: 0px; padding: 0px; font-size: 3.5rem; font-weight: bold;=
+ }
+
+.root-hero-newsletter, .root-hero-team, .root-hero-apps, .root-hero-hub, .r=
+oot-hero-main { padding-top: 8rem; padding-bottom: 8rem; text-align: center=
+; }
+
+.root-hero-newsletter h1, .root-hero-team h1, .root-hero-apps h1, .root-her=
+o-hub h1, .root-hero-main h1 { margin: 0px 0px 2rem; padding: 0px; font-siz=
+e: 3.5rem; line-height: 1.2; font-weight: bold; }
+
+.root-hero-newsletter h1:first-child, .root-hero-team h1:first-child, .root=
+-hero-apps h1:first-child, .root-hero-hub h1:first-child, .root-hero-main h=
+1:first-child { margin-top: -0.5rem; }
+
+.root-hero-newsletter p, .root-hero-team p, .root-hero-apps p, .root-hero-h=
+ub p, .root-hero-main p { font-size: 1.6rem; }
+
+.root-hero-newsletter p:not(:last-child), .root-hero-team p:not(:last-child=
+), .root-hero-apps p:not(:last-child), .root-hero-hub p:not(:last-child), .=
+root-hero-main p:not(:last-child) { margin-bottom: 2rem; }
+
+.root-hero-newsletter, .root-hero-team, .root-hero-apps, .root-hero-hub, .r=
+oot-hero-main { background-image: linear-gradient(rgb(255, 255, 255), white=
+smoke); }
+
+.root-hero-main { margin-top: -3rem; }
+
+.root-hero-apps p { padding-top: 0.5rem; }
+
+.root-hero-apps .nav-apps { display: grid; grid-template-columns: repeat(1,=
+ 1fr); gap: 3rem; grid-auto-rows: 1fr; margin-right: 1.5rem; margin-bottom:=
+ 2rem; margin-left: 1.5rem; }
+
+@media only screen and (min-width: 44em) {
+  .root-hero-apps .nav-apps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media only screen and (min-width: 62em) {
+  .root-hero-apps .nav-apps { grid-template-columns: repeat(4, 1fr); }
+}
+
+.root-hero-apps .nav-apps img { max-width: 5rem; margin-bottom: 1rem; }
+
+.root-hero-apps .nav-apps a { display: block; border: 1px solid rgb(179, 17=
+9, 179); border-radius: 5px; background-color: rgb(255, 255, 255); padding:=
+ 1.5rem 0px; color: rgb(0, 0, 0); }
+
+.root-hero-apps .nav-apps a span { display: block; padding: 0px 0.75rem; fo=
+nt-size: 0.9rem; }
+
+.root-hero-apps .nav-apps a span:not(:last-child) { margin-bottom: 0.5rem; =
+}
+
+.root-hero-apps .nav-apps a span.title { font-size: 1.3rem; font-weight: bo=
+ld; }
+
+.root-hero-apps .nav-apps a:hover { border-color: rgb(99, 37, 243); }
+
+.root-hero-apps .nav-apps a:hover span.title { color: rgb(99, 37, 243); }
+
+.root-hero-team .team-members { display: grid; gap: 3rem; grid-template-col=
+umns: repeat(1, 1fr); grid-auto-rows: 1fr; margin: 1rem auto 2rem; max-widt=
+h: 40rem; }
+
+@media only screen and (min-width: 36em) {
+  .root-hero-team .team-members { grid-template-columns: repeat(2, 1fr); }
+}
+
+.root-hero-team img { display: block; width: 100%; max-width: 8rem; border-=
+radius: 8rem; margin: 0px auto 1rem; }
+
+.root-hero-team span { display: block; }
+
+.root-hero-team span.name { font-size: 1.1rem; line-height: 1.5rem; font-we=
+ight: bold; }
+
+.root-hero-team span.title { font-size: 0.9rem; line-height: 1.5rem; font-w=
+eight: normal; color: rgb(68, 68, 68); }
+
+.root-hero-newsletter .form { margin: 0px auto; max-width: 26rem; }
+
+.root-hero-newsletter .fg1 { flex-grow: 1; }
+
+.root-hero-newsletter { margin-bottom: -4rem; }
+
+.postmeta-head { color: rgb(77, 77, 77); }
+
+.postmeta-head p, .postmeta-head span, .postmeta-head li { font-size: 1rem;=
+ }
+
+.postmeta-head p, .postmeta-head span { display: flex; flex-wrap: wrap; }
+
+.postmeta-head p { margin: 0px; line-height: 2rem; }
+
+.postmeta-head p > span:not(:last-child)::after { content: "=E2=80=A2"; pad=
+ding: 0px 0.5rem; }
+
+.postmeta-head .gravatar { height: 2rem; border-radius: 10rem; margin-right=
+: 0.6rem; padding: 0px; display: inline-block; vertical-align: bottom; }
+
+.postmeta-head a { color: rgb(89, 89, 89); }
+
+.postmeta-head a:hover { color: rgb(89, 89, 89); text-decoration: underline=
+; }
+
+.postmeta-head .author { font-weight: bold; }
+
+.postmeta-foot p, .postmeta-foot span, .postmeta-foot li { font-size: 1rem;=
+ }
+
+.postmeta-foot ul, .postmeta-foot ul li { display: inline-block; list-style=
+-type: none; margin: 0px; padding: 0px; }
+
+.postmeta-foot ul li:not(:last-child)::after { content: ", "; }
+
+.postmeta-foot a { color: rgb(89, 89, 89); }
+
+.postmeta-foot a:hover { color: rgb(89, 89, 89); text-decoration: underline=
+; }
+
+.default-list .item, .blog-list .item { padding: 3rem 0px 2.5rem; border-bo=
+ttom: 1px solid rgb(218, 218, 218); }
+
+.default-list .item:first-child, .blog-list .item:first-child { padding-top=
+: 0px; }
+
+.default-list .item:last-child, .blog-list .item:last-child { padding-botto=
+m: 0px; border-bottom: none; }
+
+.default-list .item .title, .blog-list .item .title { margin: 0px; }
+
+.default-list .item a, .blog-list .item a { color: rgb(0, 0, 0); }
+
+.default-list .item .postmeta-head, .blog-list .item .postmeta-head, .defau=
+lt-list .item .postmeta-foot, .blog-list .item .postmeta-foot { margin: 0px=
+ 0px 0.5rem; }
+
+.default-list .item h1, .blog-list .item h1 { margin: -0.1rem 0px 0.5rem; }
+
+.default-single .postmeta-head { margin: 0px 0px 0.5rem; }
+
+.default-single h1.title { margin-top: 0px; margin-bottom: 3rem; }
+
+.default-single #disqus_thread { padding: 2rem 0px 0px; }
+
+.blog-list .controls-tags { padding-bottom: 2.5rem; border-bottom: 1px soli=
+d rgb(218, 218, 218); }
+
+.blog-list .controls-tags ul, .blog-list .controls-tags ul li { display: in=
+line-block; list-style-type: none; margin: 0px; padding: 0px; }
+
+.blog-list .controls-tags ul li:not(:last-child)::after { content: ", "; }
+
+.blog-list .controls-tags p, .blog-list .controls-tags ul, .blog-list .cont=
+rols-tags li { font-size: 1rem; }
+
+.blog-list .catlabel { padding-right: 0.3rem; }
+
+.blog-list a { color: rgb(0, 0, 0); }
+
+.blog-list a:hover { color: rgb(0, 0, 0); text-decoration: underline; }
+
+.blog-list .postmeta-foot:empty { display: none; }
+
+.form .field p.help, .content .form .field p.help { font-size: 0.9rem; marg=
+in-bottom: 0px; }
+
+.footer { margin: 4rem 0px 0px; padding-top: 2rem; padding-bottom: 2rem; }
+
+.footer p { font-size: 1rem; }
+
+.footer { background-color: rgb(236, 236, 236); text-align: center; }
+
+.footer p { font-size: 1rem; }
+
+.footer .footer-links a { display: block; }
+
+@media only screen and (min-width: 40em) {
+  .footer { text-align: left; }
+  .footer .container { display: flex; }
+  .footer .footer-text { flex-grow: 1; }
+  .footer .footer-links a { display: inline-block; color: rgb(0, 0, 0); }
+  .footer .footer-links a:not(:last-child) { padding-right: 1rem; }
+  .footer .footer-links a:hover { text-decoration: none; }
+  .footer .footer-links a:hover span { border-bottom: 2px solid rgb(99, 37,=
+ 243); }
+}
+
+.button { background-color: rgb(255, 255, 255); border-color: rgb(219, 219,=
+ 219); border-width: 1px; color: rgb(54, 54, 54); cursor: pointer; justify-=
+content: center; padding: calc(0.5em - 1px) 1em; text-align: center; white-=
+space: nowrap; }
+
+.button strong { color: inherit; }
+
+.button:hover { border-color: rgb(181, 181, 181); color: rgb(54, 54, 54); }
+
+.button:focus { border-color: rgb(72, 95, 199); color: rgb(54, 54, 54); }
+
+.button:focus:not(:active) { box-shadow: rgba(99, 37, 243, 0.25) 0px 0px 0p=
+x 0.125em; }
+
+.button:active { border-color: rgb(74, 74, 74); color: rgb(54, 54, 54); }
+
+.button.is-link { background-color: rgb(99, 37, 243); border-color: rgba(0,=
+ 0, 0, 0); color: rgb(255, 255, 255); }
+
+.button.is-link:hover { background-color: rgb(90, 25, 242); border-color: r=
+gba(0, 0, 0, 0); color: rgb(255, 255, 255); }
+
+.button.is-link:focus { border-color: rgba(0, 0, 0, 0); color: rgb(255, 255=
+, 255); }
+
+.button.is-link:focus:not(:active) { box-shadow: rgba(99, 37, 243, 0.25) 0p=
+x 0px 0px 0.125em; }
+
+.button.is-link:active { background-color: rgb(82, 13, 241); border-color: =
+rgba(0, 0, 0, 0); color: rgb(255, 255, 255); }
+
+.button.is-link[disabled] { background-color: rgb(99, 37, 243); border-colo=
+r: rgb(99, 37, 243); box-shadow: none; }
+
+.button[disabled] { background-color: rgb(255, 255, 255); border-color: rgb=
+(219, 219, 219); box-shadow: none; opacity: 0.5; }
+
+pre, code { background-color: rgb(242, 242, 242); color: rgb(0, 0, 0); }
+
+a:hover { color: rgb(99, 37, 243); }
+
+.table { background-color: rgb(255, 255, 255); color: rgb(54, 54, 54); }
+
+.table td, .table th { border-style: solid; border-color: rgb(219, 219, 219=
+); border-image: initial; border-width: 0px 0px 1px; padding: 0.5em 0.75em;=
+ vertical-align: top; }
+
+.table td.is-link, .table th.is-link { background-color: rgb(99, 37, 243); =
+border-color: rgb(99, 37, 243); color: rgb(255, 255, 255); }
+
+.table th { color: rgb(54, 54, 54); }
+
+.table th:not([align]) { text-align: left; }
+
+.table thead { background-color: rgba(0, 0, 0, 0); }
+
+.table thead td, .table thead th { border-width: 0px 0px 2px; color: rgb(54=
+, 54, 54); }
+
+.table tbody { background-color: rgba(0, 0, 0, 0); }
+
+.table tbody tr:last-child td, .table tbody tr:last-child th { border-botto=
+m-width: 0px; }
+
+.table-container { overflow: auto hidden; max-width: 100%; }
+
+.table-container { max-width: 100%; overflow-y: scroll; }
+------MultipartBoundary--dw7PI0qZx75pBvG71VSIuFF0kJ5M6MHzAxvajZzY8e----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,700;1,400&display=swap
+
+@charset "utf-8";
+
+@font-face { font-family: Cabin; font-style: italic; font-weight: 400; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXHx_KVykbpIf6lB_y8kV=
+g.woff") format("woff"); unicode-range: U+102-103, U+110-111, U+128-129, U+=
+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+32=
+9, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Cabin; font-style: italic; font-weight: 400; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXHx_KVy0bpIf6lB_y8kV=
+g.woff") format("woff"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+=
+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1=
+EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Cabin; font-style: italic; font-weight: 400; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXHx_KVxUbpIf6lB_y8.w=
+off") format("woff"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U=
++2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+219=
+1, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 400; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6XvptnsF3-OA6Fw.woff2") format("woff2=
+"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U=
++1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20A=
+B; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 400; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6Xvp9nsF3-OA6Fw.woff2") format("woff2=
+"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U=
++304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-2=
+0AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 400; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6XvqdnsF3-OAw.woff2") format("woff2")=
+; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, =
+U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U=
++2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 500; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6XvptnsF3-OA6Fw.woff2") format("woff2=
+"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U=
++1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20A=
+B; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 500; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6Xvp9nsF3-OA6Fw.woff2") format("woff2=
+"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U=
++304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-2=
+0AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 500; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6XvqdnsF3-OAw.woff2") format("woff2")=
+; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, =
+U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U=
++2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 700; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6XvptnsF3-OA6Fw.woff2") format("woff2=
+"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U=
++1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20A=
+B; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 700; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6Xvp9nsF3-OA6Fw.woff2") format("woff2=
+"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U=
++304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-2=
+0AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Cabin; font-style: normal; font-weight: 700; font=
+-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/c=
+abin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6XvqdnsF3-OAw.woff2") format("woff2")=
+; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, =
+U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U=
++2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--dw7PI0qZx75pBvG71VSIuFF0kJ5M6MHzAxvajZzY8e----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://therootcompany.com/root-logo.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version:=
+ 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/=
+SVG/1.1/DTD/svg11.dtd">
+<svg version=3D"1.1" id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" xm=
+lns:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+	 width=3D"62.908px" height=3D"19.27px" viewBox=3D"0.75 0.865 62.908 19.27"=
+ enable-background=3D"new 0.75 0.865 62.908 19.27"
+	 xml:space=3D"preserve">
+<title>1 logo/full/black</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<g id=3D"Page-1">
+		<g id=3D"_x39_00" transform=3D"translate(-36.000000, -20.000000)">
+			<g id=3D"_x31_-logo_x2F_full_x2F_black" transform=3D"translate(24.000000=
+, 10.000000)">
+				<g id=3D"_x31_-logo_x2F_icon_x2F_black" transform=3D"translate(-0.00000=
+0, -0.880000)">
+					<g id=3D"Group" transform=3D"translate(9.020000, 7.480000)">
+						<path id=3D"Shape" d=3D"M21.624,6.419l2.141,2.141l-6.618,1.558L19.3,7=
+.964l-2.141-2.141l6.619-1.558L21.624,6.419z"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<path d=3D"M4.823,16.062l2.284,2.283c-1.471,0.549-3.171,1.131-5.102,1.744c=
+-0.19,0.061-0.394,0.061-0.583,0
+		c-0.507-0.162-0.788-0.703-0.626-1.211C2.835,12.455,4.521,8.577,5.852,7.24=
+6c2.173-2.173,5.678-2.192,7.828-0.042
+		c2.104,2.104,2.131,5.507,0.095,7.688L9.884,11l-0.003,0.004c-0.16-0.161-0.=
+419-0.161-0.578,0c-0.159,0.158-0.162,0.422-0.002,0.58
+		l3.86,3.861c-0.994,0.756-2.73,1.615-5.207,2.578L5.404,15.48c-0.16-0.16-0.=
+419-0.16-0.578,0S4.664,15.904,4.823,16.062z"/>
+</g>
+<g>
+	<path d=3D"M26.225,3.597h4.978c1.452,0,2.596,0.347,3.432,1.04c0.836,0.694,=
+1.254,1.722,1.254,3.083c0,0.946-0.201,1.721-0.602,2.323
+		c-0.402,0.603-0.973,1.086-1.713,1.449l3.074,5.717h-2.781l-2.625-5.056h-0.=
+097h-2.431v5.056h-2.489V3.597z M30.542,10.072
+		c1.828,0,2.742-0.739,2.742-2.217c0-0.713-0.207-1.254-0.622-1.624c-0.415-0=
+.369-1.089-0.554-2.022-0.554h-1.925v4.395H30.542z"/>
+	<path d=3D"M39.02,16.723c-0.752-0.453-1.329-1.062-1.73-1.828c-0.402-0.765-=
+0.603-1.607-0.603-2.527c0-0.921,0.2-1.77,0.603-2.548
+		c0.401-0.777,0.979-1.394,1.73-1.847c0.752-0.454,1.64-0.681,2.664-0.681s1.=
+912,0.227,2.664,0.681
+		c0.752,0.453,1.329,1.069,1.731,1.847c0.401,0.778,0.603,1.627,0.603,2.548c=
+0,0.92-0.201,1.763-0.603,2.527
+		c-0.402,0.766-0.979,1.375-1.731,1.828c-0.752,0.454-1.64,0.681-2.664,0.681=
+S39.771,17.177,39.02,16.723z M43.541,14.584
+		c0.447-0.558,0.671-1.297,0.671-2.217c0-0.934-0.224-1.683-0.671-2.246c-0.4=
+47-0.564-1.066-0.846-1.857-0.846
+		s-1.409,0.281-1.856,0.846c-0.447,0.563-0.671,1.312-0.671,2.246c0,0.92,0.2=
+24,1.659,0.671,2.217s1.065,0.836,1.856,0.836
+		S43.094,15.142,43.541,14.584z"/>
+	<path d=3D"M49.715,16.723c-0.752-0.453-1.329-1.062-1.73-1.828c-0.402-0.765=
+-0.603-1.607-0.603-2.527c0-0.921,0.2-1.77,0.603-2.548
+		c0.401-0.777,0.979-1.394,1.73-1.847c0.752-0.454,1.64-0.681,2.664-0.681s1.=
+912,0.227,2.664,0.681
+		c0.752,0.453,1.329,1.069,1.731,1.847c0.401,0.778,0.603,1.627,0.603,2.548c=
+0,0.92-0.201,1.763-0.603,2.527
+		c-0.402,0.766-0.979,1.375-1.731,1.828c-0.752,0.454-1.64,0.681-2.664,0.681=
+S50.467,17.177,49.715,16.723z M54.236,14.584
+		c0.447-0.558,0.671-1.297,0.671-2.217c0-0.934-0.224-1.683-0.671-2.246c-0.4=
+47-0.564-1.066-0.846-1.857-0.846
+		s-1.409,0.281-1.856,0.846c-0.447,0.563-0.671,1.312-0.671,2.246c0,0.92,0.2=
+24,1.659,0.671,2.217s1.065,0.836,1.856,0.836
+		S53.789,15.142,54.236,14.584z"/>
+	<path d=3D"M59.769,16.654c-0.44-0.498-0.661-1.099-0.661-1.798V9.47h-1.38l0=
+.214-1.983h1.166v-2.14l2.412-0.253v2.393h2.139V9.47
+		H61.52v4.395c0,0.519,0.029,0.878,0.087,1.079c0.059,0.201,0.182,0.331,0.37=
+,0.389c0.188,0.059,0.527,0.088,1.021,0.088h0.661
+		l-0.214,1.983h-1.73C60.858,17.403,60.21,17.154,59.769,16.654z"/>
+</g>
+</svg>
+
+------MultipartBoundary--dw7PI0qZx75pBvG71VSIuFF0kJ5M6MHzAxvajZzY8e------

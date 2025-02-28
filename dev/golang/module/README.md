@@ -29,3 +29,4 @@
 
 ## V2
 * [Go Modules: v2 and Beyond](https://go.dev/blog/v2-go-modules)
+* [How to bump a Go package to v2.0.0](https://therootcompany.com/blog/bump-go-package-to-v2/)
