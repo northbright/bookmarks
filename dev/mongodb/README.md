@@ -3,6 +3,7 @@
 ## Articles
 * [MongoDB vs. Redis Comparison](https://www.mongodb.com/resources/compare/mongodb-vs-redis)
 * [为什么mongoDB在国内发展的没redis好？](https://www.zhihu.com/question/478485839)
+  * [为什么mongoDB在国内发展的没redis好？(江小北的回答)](https://www.zhihu.com/question/478485839/answer/3628012941)
 
 ## Queryable Encryption
 * [网络研讨会｜MongoDB Atlas安全性和可查询加密](https://www.bilibili.com/video/BV1Pm421L71C)
