@@ -123,3 +123,6 @@
 
 ## RegExp
 * [Feature: scan keys and return keys with pattern of any regex #5997](https://github.com/redis/redis/issues/5997)
+
+## RediSearch and RedisJSON
+* [Redis查询之RediSearch和RedisJSON讲解](https://www.cnblogs.com/jingzh/p/17033403.html)
