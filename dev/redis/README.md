@@ -127,3 +127,4 @@
 ## RediSearch and RedisJSON
 * [Indexing, Querying, and Full-Text Search of JSON Documents with Redis](https://redis.io/blog/index-and-query-json-docs-with-redis/)
 * [Redis查询之RediSearch和RedisJSON讲解](https://www.cnblogs.com/jingzh/p/17033403.html)
+* [Redis Stack 不只是缓存之 RedisJSON](https://segmentfault.com/a/1190000044723119)
