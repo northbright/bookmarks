@@ -125,4 +125,5 @@
 * [Feature: scan keys and return keys with pattern of any regex #5997](https://github.com/redis/redis/issues/5997)
 
 ## RediSearch and RedisJSON
+* [Indexing, Querying, and Full-Text Search of JSON Documents with Redis](https://redis.io/blog/index-and-query-json-docs-with-redis/)
 * [Redis查询之RediSearch和RedisJSON讲解](https://www.cnblogs.com/jingzh/p/17033403.html)
