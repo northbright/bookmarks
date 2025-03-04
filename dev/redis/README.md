@@ -129,3 +129,4 @@
 * [Redis查询之RediSearch和RedisJSON讲解](https://www.cnblogs.com/jingzh/p/17033403.html)
 * [Redis Stack 不只是缓存之 RedisJSON](https://segmentfault.com/a/1190000044723119)
 * [RediSearch的简单使用与总结](https://www.cnblogs.com/dyhuang/p/18191659)
+* [Redis 也支持全文搜索 了？这也太强了](https://zhuanlan.zhihu.com/p/671537505)
