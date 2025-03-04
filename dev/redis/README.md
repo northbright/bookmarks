@@ -131,3 +131,4 @@
 * [RediSearch的简单使用与总结](https://www.cnblogs.com/dyhuang/p/18191659)
 * [关于RediSearch无法正常执行模糊匹配的解决方案](https://blog.csdn.net/qq_16494381/article/details/123693300)
 * [Redis 也支持全文搜索 了？这也太强了](https://zhuanlan.zhihu.com/p/671537505)
+* [Redis 全文检索及使用示例(go)](https://segmentfault.com/a/1190000045065763)
