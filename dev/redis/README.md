@@ -130,5 +130,6 @@
 * [Redis Stack 不只是缓存之 RedisJSON](https://segmentfault.com/a/1190000044723119)
 * [RediSearch的简单使用与总结](https://www.cnblogs.com/dyhuang/p/18191659)
 * [关于RediSearch无法正常执行模糊匹配的解决方案](https://blog.csdn.net/qq_16494381/article/details/123693300)
+* [比 Elasticsearch 更快！ RediSearch + RedisJSON = 王炸！](https://juejin.cn/post/7073276818425380872)
 * [Redis 也支持全文搜索 了？这也太强了](https://zhuanlan.zhihu.com/p/671537505)
 * [Redis 全文检索及使用示例(go)](https://segmentfault.com/a/1190000045065763)
