@@ -133,3 +133,4 @@
 * [比 Elasticsearch 更快！ RediSearch + RedisJSON = 王炸！](https://juejin.cn/post/7073276818425380872)
 * [Redis 也支持全文搜索 了？这也太强了](https://zhuanlan.zhihu.com/p/671537505)
 * [Redis 全文检索及使用示例(go)](https://segmentfault.com/a/1190000045065763)
+* [RedisJson和RedisSearch探究（三）](https://blog.csdn.net/hebeiqiaozhonghui/article/details/122739332)
