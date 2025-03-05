@@ -135,3 +135,4 @@
 * [Redis 全文检索及使用示例(go)](https://segmentfault.com/a/1190000045065763)
 * [RediSearch自定义Friso词库](https://blog.csdn.net/she1026/article/details/141362513)
 * [RedisJson和RedisSearch探究（三）](https://blog.csdn.net/hebeiqiaozhonghui/article/details/122739332)
+* [使用 RediSearch 在 Redis 中进行全文检索](https://mp.weixin.qq.com/s/X1qKL0jMaklGw6GLcrkp2g)
