@@ -19,3 +19,6 @@
 
 ## 日本
 * [只靠公交能走多远？- 奄美大岛游记&公交攻略](https://www.chiphell.com/thread-2566378-1-1.html)
+
+## 墨西哥
+* [独行墨西哥｜尤卡坦半岛（三）：沉浸进玛雅文化的一天](https://www.chiphell.com/thread-2676677-1-1.html)
