@@ -26,6 +26,7 @@
 * [GSAP](gsap/README.md)
 * [Vite](vite/README.md)
 * [Signature](signature/README.md)
+* [PDF](pdf/README.md)
 
 ## Articles
 * [react.js,angular.js,vue.js学习哪个好？](http://www.zhihu.com/question/39943474)
