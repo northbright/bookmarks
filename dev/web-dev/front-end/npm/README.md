@@ -12,3 +12,6 @@
 
 ## Scope
 * [What is the meaning of the “at” (@) prefix on npm packages?](https://stackoverflow.com/questions/36667258/what-is-the-meaning-of-the-at-prefix-on-npm-packages)
+
+## Install
+* [What is the meaning of –save for NPM install ?](https://www.geeksforgeeks.org/what-is-the-meaning-of-save-for-npm-install/)
