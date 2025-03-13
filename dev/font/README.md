@@ -5,6 +5,7 @@
 * [Fonts](https://chinesemac.org/pages/fonts.html)
 
 ## Free Font
+* [Free-Chinese-Fonts](http://zenozeng.github.io/Free-Chinese-Fonts/)
 * [阿里巴巴普惠体](https://www.alibabafonts.com/#/font)
 
 * 思源宋体
