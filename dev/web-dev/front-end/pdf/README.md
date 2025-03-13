@@ -7,6 +7,7 @@
 * [Generating Complex PDF files with Node.js and PDFMake](https://www.appgambit.com/blog/nodejs-with-pdfmake)
 * [js 程序如何实现 html 转 pdf？](https://www.zhihu.com/question/587899149/answer/3522752274)
 * [Generate PDF files using NodeJS and PDFMake](https://dev.to/phprunner/generate-pdf-files-using-nodejs-and-pdfmake-2gie)
+* [Working with PDF in Node.JS (pdfmake)](https://tech.bloggernepal.com/2021/12/working-with-pdf-in-nodejs-pdfmake.html)
 
 *  Font
   * [pdfmake 打包导入使用中文字体，解决中文乱码问题](https://www.cnblogs.com/wuzexin/p/17614769.html)
