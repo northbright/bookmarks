@@ -7,6 +7,9 @@
 * [第 6 堂課：基礎檔案系統管理](https://linux.vbird.org/linux_basic_train/centos8/unit06.php)
 * [command blkid don't show my partitions UUID](https://stackoverflow.com/questions/30558050/command-blkid-dont-show-my-partitions-uuid)
 
+## Ext4
+* [优化 Ext4 分区格式化后占用空间(通过降低inode数来节省磁盘空间)](https://blog.csdn.net/xiayufighting/article/details/54579425)
+
 ## Aliyun
 * [挂载数据盘](https://help.aliyun.com/document_detail/25446.html)
 * [分区格式化数据盘（Linux）](https://help.aliyun.com/document_detail/25426.htm)
