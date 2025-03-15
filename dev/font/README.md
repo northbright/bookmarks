@@ -1,5 +1,8 @@
 # Font
 
+## Font Types
+* [What's the Difference Between TrueType and OpenType Fonts?](https://www.high-logic.com/font-editor/fontcreator/tutorials/the-difference-between-truetype-and-opentype-fonts)
+
 ## Font for Developers
 * [Top 11 Programming Fonts for your Text Editor and Terminal](https://wesbos.com/programming-fonts/)
 * [Fonts](https://chinesemac.org/pages/fonts.html)
