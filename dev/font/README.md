@@ -16,3 +16,4 @@
 
 * 思源黑体
   * <https://github.com/adobe-fonts/source-han-sans>
+  * [思源黑体版本指南](https://zhuanlan.zhihu.com/p/526734630)
