@@ -15,5 +15,8 @@
   * [PDFMake: Can't display chinese fonts](https://stackoverflow.com/questions/62653011/pdfmake-cant-display-chinese-fonts)
   * [前端导出PDF之pdfmake(如何支持中文)](https://www.jianshu.com/p/f84177c37f80)
 
+* Page Break
+  * [Adding page breaks in the doc definition #25](https://github.com/bpampuch/pdfmake/issues/25)
+
 ## PDFKit
 * [Fonts](https://pdfkit.org/docs/text.html#fonts)
