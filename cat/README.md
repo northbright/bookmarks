@@ -52,3 +52,6 @@
 
 ## 驱虫
 * [猫咪体内外驱虫多久一次，为什么？](https://www.zhihu.com/question/285641623)
+
+## 洁牙
+* [有什么比较好的猫咪洁牙用品?](https://www.zhihu.com/tardis/bd/ans/1638382982)
