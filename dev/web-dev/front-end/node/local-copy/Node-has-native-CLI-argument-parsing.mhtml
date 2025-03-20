@@ -1,0 +1,497 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://kgrz.io/node-has-native-arg-parsing.html
+Subject: Node has native CLI argument parsing
+Date: Thu, 20 Mar 2025 08:47:49 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--NiupQGoOAXF4DyAldGJX8yeyE5c9YkfBoAM0nJCP24----"
+
+
+------MultipartBoundary--NiupQGoOAXF4DyAldGJX8yeyE5c9YkfBoAM0nJCP24----
+Content-Type: text/html
+Content-ID: <frame-2F1D50B58AE41E625AA3A7CAEF900B55@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://kgrz.io/node-has-native-arg-parsing.html
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"wid=
+th=3Ddevice-width,initial-scale=3D1"><title>Node has native CLI argument pa=
+rsing</title><link rel=3D"stylesheet" href=3D"https://kgrz.io/index.0ae95a8=
+7.css"><meta name=3D"kgrz" content=3D"I am not the radio. For whatever reas=
+on, I chose this meaningless 4 letter word to represent me on the Internets=
+ and now, I=E2=80=99m stuck with it."><meta name=3D"title" content=3D"Node =
+has native CLI argument parsing"><meta name=3D"description" content=3D"I kn=
+ew this was in the works, but wasn't aware this was shipped with v16! (rele=
+ased in 2022). This is so useful for small cli scripts."><meta property=3D"=
+twitter:card" content=3D"summary"><meta property=3D"twitter:url" content=3D=
+"https://kgrz.io/node-has-native-arg-parsing.html"><meta property=3D"twitte=
+r:title" content=3D"Node has native CLI argument parsing"><meta property=3D=
+"twitter:description" content=3D"I knew this was in the works, but wasn't a=
+ware this was shipped with v16! (released in 2022). This is so useful for s=
+mall cli scripts."><meta property=3D"twitter:site" content=3D"@kgrz"><link =
+rel=3D"icon shortcut" type=3D"image/x-icon" href=3D"https://kgrz.io/favicon=
+.6bc295a5.png"><link rel=3D"alternate" href=3D"https://kgrz.io/feed.xml" ty=
+pe=3D"application/rss+xml" title=3D"kgrz.io"></head><body> <div class=3D"co=
+ntainer"> <div class=3D"site"> <header> <h1 class=3D"site-title"> <a href=
+=3D"https://kgrz.io/" title=3D"Kashyap Kondamudi"> -.- --. .-. --.. </a> </=
+h1> </header> <h1 class=3D"post-title">Node has native CLI argument parsing=
+</h1> <time class=3D"meta">09 Feb 2023</time> <main class=3D"post"> <p>I kn=
+ew this was in the works, but wasn=E2=80=99t aware this was shipped with v1=
+6! (released in 2022). I was playing with TypeScript code transforms and wa=
+nted to update the source file after the transformation based on a flag. Th=
+e script was basically standalone, so I didn=E2=80=99t want to depend on an=
+y external depedencies like <code class=3D"highlighter-rouge language-plain=
+text">argparse</code>. The API I was aiming at was basically:</p> <figure c=
+lass=3D"highlight"> <pre><code class=3D"language-bash" data-lang=3D"bash">n=
+ode enum-to-const-object.mjs source.ts <span class=3D"o">[</span>...]
+node enum-to-const-object.mjs <span class=3D"nt">-w</span> source.ts <span =
+class=3D"o">[</span>...]
+node enum-to-const-object.mjs <span class=3D"nt">--write</span> source.ts <=
+span class=3D"o">[</span>...]</code></pre> </figure> <p>The first invocatio=
+n would print out the result to standard out, whereas the latter two would =
+update the source file in-place, exactly how <a href=3D"https://prettier.io=
+/" target=3D"_blank" rel=3D"noopener noreferrer"><code class=3D"highlighter=
+-rouge language-plaintext">prettier</code></a> works. The standard library =
+API is pretty neat for such a simple interface:</p> <figure class=3D"highli=
+ght"> <pre><code class=3D"language-javascript" data-lang=3D"javascript"><sp=
+an class=3D"c1">// file: enum-to-const-object.mjs</span>
+<span class=3D"c1">// Note the mjs extension, which is why I'm able to use =
+import. Otherwise,</span>
+<span class=3D"c1">// you'll have to use require in place of the following =
+line</span>
+<span class=3D"k">import</span> <span class=3D"p">{</span> <span class=3D"n=
+x">parseArgs</span> <span class=3D"p">}</span> <span class=3D"k">from</span=
+> <span class=3D"dl">'</span><span class=3D"s1">node:util</span><span class=
+=3D"dl">'</span><span class=3D"p">;</span>
+
+<span class=3D"kd">const</span> <span class=3D"nx">options</span> <span cla=
+ss=3D"o">=3D</span> <span class=3D"p">{</span>
+  <span class=3D"na">write</span><span class=3D"p">:</span> <span class=3D"=
+p">{</span>
+    <span class=3D"na">type</span><span class=3D"p">:</span> <span class=3D=
+"dl">'</span><span class=3D"s1">boolean</span><span class=3D"dl">'</span><s=
+pan class=3D"p">,</span>
+    <span class=3D"na">short</span><span class=3D"p">:</span> <span class=
+=3D"dl">'</span><span class=3D"s1">w</span><span class=3D"dl">'</span><span=
+ class=3D"p">,</span>
+    <span class=3D"na">default</span><span class=3D"p">:</span> <span class=
+=3D"kc">false</span>
+  <span class=3D"p">}</span>
+<span class=3D"p">};</span>
+
+<span class=3D"kd">const</span> <span class=3D"p">{</span> <span class=3D"n=
+x">values</span><span class=3D"p">,</span> <span class=3D"nx">positionals</=
+span> <span class=3D"p">}</span> <span class=3D"o">=3D</span> <span class=
+=3D"nf">parseArgs</span><span class=3D"p">({</span> <span class=3D"nx">opti=
+ons</span><span class=3D"p">,</span> <span class=3D"na">allowPositionals</s=
+pan><span class=3D"p">:</span> <span class=3D"kc">true</span> <span class=
+=3D"p">});</span>
+<span class=3D"c1">// values is of the shape { write: &lt;flag value&gt; }<=
+/span>
+<span class=3D"c1">// positionals: [ source.ts, ... ]</span></code></pre> <=
+/figure> <p>The <code class=3D"highlighter-rouge language-plaintext">option=
+s</code> object is the one used by the parser as the configuration of the f=
+lags. The keys of this object are the expected flags in long-hand. The <cod=
+e class=3D"highlighter-rouge language-plaintext">short</code> property for =
+each of these long-hand flags helps with adding aliases.</p> <p>In addition=
+ to the flag format and strings, there is one more additional option that I=
+ had to configure: <code class=3D"highlighter-rouge language-plaintext">all=
+owPositionals</code>. This returns rest of the arguments that are not flags=
+, which in my case are the files I wanted to transform. Once <code class=3D=
+"highlighter-rouge language-plaintext">parseArgs</code> is called using the=
+ configuration, and (by default) on <code class=3D"highlighter-rouge langua=
+ge-plaintext">process.argv</code>, the flag values as an key-value pair, an=
+d the rest of the arguments are returned=E2=80=95<code class=3D"highlighter=
+-rouge language-plaintext">values</code> which contains the flag values, an=
+d <code class=3D"highlighter-rouge language-plaintext">positionals</code> w=
+hich contains the file list.</p> <p><a href=3D"https://nodejs.org/docs/late=
+st-v16.x/api/util.html#utilparseargsconfig" target=3D"_blank" rel=3D"noopen=
+er noreferrer">Docs Link</a></p> <section class=3D"prev-next-nav"> <a class=
+=3D"prev-next-previous" href=3D"https://kgrz.io/multiple-csp.html"> <span c=
+lass=3D"label">=E2=86=90 Using CSP in report-only and enforcement mode</spa=
+n> </a> <a class=3D"prev-next-next" href=3D"https://kgrz.io/composing-class=
+names.html"> <span class=3D"label">classnames library composes well! =E2=86=
+=92</span> </a> </section> </main> <footer class=3D"footer"> <div class=3D"=
+contact"> <p> Kashyap Kondamudi<br> Ex-Banker, Programmer. Typography buff.=
+ I draw ambigrams during meetings. Prev: <a rel=3D"noopener noreferrer" tar=
+get=3D"_blank" alt=3D"Codemancers Pvt. Ltd." href=3D"https://www.codemancer=
+s.com/">Codemancers</a>, Now: <a target=3D"_blank" rel=3D"noopener noreferr=
+er" alt=3D"Flipkart" href=3D"https://en.wikipedia.org/wiki/Flipkart">Flipka=
+rt</a> </p> </div> <div class=3D"contact links"> <p> <a href=3D"http://gith=
+ub.com/kgrz/" target=3D"_blank" rel=3D"noopener noreferrer">github.com/kgrz=
+</a><br> <a rel=3D"noopener noreferrer" href=3D"https://mastodon.social/@kg=
+rz" target=3D"_blank">kgrz@mastodon.social</a><br> <a href=3D"http://twitte=
+r.com/kgrz/" target=3D"_blank" rel=3D"noopener noreferrer">twitter.com/kgrz=
+</a><br> <a href=3D"http://www.flickr.com/photos/kgrz/" target=3D"_blank" r=
+el=3D"noopener noreferrer">flickr.com/photos/kgrz</a><br> </p> </div> <div =
+class=3D"contact">=C2=A9 Kashyap Kondamudi. All rights reserved.</div> </fo=
+oter> </div> </div>    </body></html>
+------MultipartBoundary--NiupQGoOAXF4DyAldGJX8yeyE5c9YkfBoAM0nJCP24----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://kgrz.io/index.0ae95a87.css
+
+@charset "utf-8";
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font=
+-display: swap; src: url("InterVariable-subset.0e59ed89.woff2") format("wof=
+f2-variations"); }
+
+@font-face { font-family: Inter; font-style: italic; font-weight: 400; font=
+-display: swap; src: url("InterVariable-Italic-subset.1ace4d5f.woff2") form=
+at("woff2-variations"); }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font=
+-display: swap; src: url("InterVariable-subset.0e59ed89.woff2") format("wof=
+f2-variations"); }
+
+@font-face { font-family: Inter; font-style: italic; font-weight: 700; font=
+-display: swap; src: url("InterVariable-Italic-subset.1ace4d5f.woff2") form=
+at("woff2-variations"); }
+
+.highlight { background-image: initial; background-position: initial; backg=
+round-size: initial; background-repeat: initial; background-attachment: ini=
+tial; background-origin: initial; background-clip: initial; background-colo=
+r: var(--color-code-background); color: rgb(36, 41, 46); }
+
+.highlight .c { font-style: italic; }
+
+.highlight .err { color: rgb(179, 29, 40); background-color: rgb(227, 210, =
+210); }
+
+.highlight .hll { background: oklch(0.85 0.19 81.96 / 0.5); }
+
+.highlight .ow, .highlight .o { color: rgb(0, 92, 197); font-weight: 700; }
+
+.highlight .cm { font-style: italic; }
+
+.highlight .cp { font-weight: 700; }
+
+.highlight .c1 { font-style: normal; }
+
+.highlight .cs { font-style: italic; font-weight: 700; }
+
+.highlight .ge { color: rgb(36, 41, 46); font-style: italic; }
+
+.highlight .go { color: rgb(136, 136, 136); }
+
+.highlight .gp { color: rgb(85, 85, 85); }
+
+.highlight .gs { color: rgb(36, 41, 46); font-weight: 700; }
+
+.highlight .gh, .highlight .gu { color: rgb(0, 92, 197); font-weight: 700; =
+}
+
+.highlight .nb { color: rgb(0, 134, 179); }
+
+.highlight .nc { font-weight: 700; }
+
+.highlight .nc, .highlight .nf, .highlight .ni { color: rgb(111, 66, 193); =
+}
+
+.highlight .nn { color: rgb(85, 85, 85); }
+
+.highlight .nt { color: rgb(34, 134, 58); }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .sr { color: rgb(3, 47, 98); }
+
+.highlight .ss { color: rgb(227, 98, 9); }
+
+.highlight .na, .highlight .no, .highlight .nv, .highlight .vc, .highlight =
+.vg, .highlight .vi, .highlight .il, .highlight .mf, .highlight .mh, .highl=
+ight .mi, .highlight .mo, .highlight .m { color: rgb(0, 92, 197); }
+
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .=
+s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highli=
+ght .s1 { color: rgb(3, 47, 98); }
+
+.highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .=
+cs, .highlight .bp { color: rgb(106, 115, 125); }
+
+.highlight .gt, .highlight .gr { color: rgb(179, 29, 40); }
+
+.highlight .gd, .highlight .gd .x { color: rgb(179, 29, 40); background-col=
+or: rgb(255, 238, 240); }
+
+.highlight .gi, .highlight .gi .x { color: rgb(0, 0, 0); }
+
+.highlight .ne { color: rgb(34, 134, 58); background-color: rgb(240, 255, 2=
+44); }
+
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight .=
+kr { color: rgb(215, 58, 73); font-weight: 700; }
+
+.highlight .kt { color: rgb(68, 85, 136); font-weight: 700; }
+
+@media (prefers-color-scheme: dark) {
+  .highlight { color: rgb(201, 209, 217); background-image: initial; backgr=
+ound-position: initial; background-size: initial; background-repeat: initia=
+l; background-attachment: initial; background-origin: initial; background-c=
+lip: initial; background-color: var(--color-code-background); }
+  .highlight .c { font-style: italic; }
+  .highlight .err { color: rgb(215, 58, 73); background-color: rgb(227, 210=
+, 210); }
+  .highlight .hll { background: rgb(42, 69, 111); }
+  .highlight .ow, .highlight .o { color: rgb(0, 92, 197); font-weight: 700;=
+ }
+  .highlight .cm { font-style: italic; }
+  .highlight .cp { font-weight: 700; }
+  .highlight .c1 { font-style: normal; }
+  .highlight .cs { font-style: italic; font-weight: 700; }
+  .highlight .ge { color: rgb(201, 209, 217); font-style: italic; }
+  .highlight .go { color: rgb(136, 136, 136); }
+  .highlight .gp { color: rgb(85, 85, 85); }
+  .highlight .gs { color: rgb(201, 209, 217); font-weight: 700; }
+  .highlight .gh, .highlight .gu { color: rgb(31, 111, 235); font-weight: 7=
+00; }
+  .highlight .nb { color: rgb(0, 134, 179); }
+  .highlight .nc { font-weight: 700; }
+  .highlight .nc, .highlight .nf, .highlight .ni { color: rgb(210, 168, 255=
+); }
+  .highlight .nn { color: rgb(85, 85, 85); }
+  .highlight .nt { color: rgb(126, 231, 135); }
+  .highlight .w { color: rgb(187, 187, 187); }
+  .highlight .sr { color: rgb(165, 214, 255); }
+  .highlight .ss { color: rgb(255, 166, 87); }
+  .highlight .na, .highlight .no, .highlight .nv, .highlight .vc, .highligh=
+t .vg, .highlight .vi, .highlight .il, .highlight .mf, .highlight .mh, .hig=
+hlight .mi, .highlight .mo, .highlight .m { color: rgb(121, 192, 255); }
+  .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight=
+ .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .high=
+light .s1 { color: rgb(165, 214, 255); }
+  .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight=
+ .cs, .highlight .bp { color: rgb(139, 148, 158); }
+  .highlight .gt, .highlight .gr { color: rgb(170, 0, 0); }
+  .highlight .gd, .highlight .gd .x { color: rgb(255, 220, 215); background=
+-color: rgb(103, 6, 12); }
+  .highlight .gi, .highlight .gi .x { color: rgb(175, 245, 180); background=
+-color: rgb(3, 58, 22); }
+  .highlight .ne { color: rgb(215, 58, 73); font-weight: 700; }
+  .highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight=
+ .kr { color: rgb(255, 123, 114); font-weight: 700; }
+  .highlight .kt { color: rgb(68, 85, 136); font-weight: 700; }
+}
+
+* { margin: 0px; padding: 0px; }
+
+:root { --font-monospace: system-monospace,monospace; font-feature-settings=
+: "liga", "calt", "ss01", "ss02", "ss03", "dlig"; --color-fg: #3c3c3c; --co=
+lor-bg: #fff; --color-grey0: #444; --color-grey1: #666; --color-grey5: #efe=
+fef; --color-grey6: #7575754d; --color-grey7: #fafafa; --color-black: #000;=
+ --color-orange0: #ff5722; --color-orange1: #ffc107; --color-orange2: #ff98=
+00; --color-orange3: #ff57224d; --color-blue0: #00a; --color-blue1: #8085c1=
+; --color-red0: #ffc5d57d; --color-link-visited: #a0a; --color-link: var(--=
+color-orange2); --color-link-hover: var(--color-orange0); --color-meta-date=
+: var(--color-orange0); font-family: Inter, ui-rounded, system-ui, sans-ser=
+if; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --color-fg: #c0d0e7; --color-bg: #0c1118; --color-grey0: #4784d9;=
+ --color-grey1: #a0b5d3; --color-grey5: #0e1a2b; --color-grey6: #31507f; --=
+color-grey7: #0e1a2b; --color-black: #000; --color-orange0: #ff5722; --colo=
+r-orange1: #ffc107; --color-orange2: #ff9800; --color-orange3: #ff57224d; -=
+-color-blue0: #00a; --color-blue1: #8085c1; --color-red0: var(--color-grey6=
+); --color-link-visited: var(--color-grey6); --color-link: var(--color-fg);=
+ --color-link-hover: var(--color-grey0); --color-meta-date: var(--color-gre=
+y1); }
+}
+
+body { background-color: var(--color-bg); color: var(--color-fg); text-wrap=
+: pretty; font-size: 100%; font-style: normal; font-weight: 400; }
+
+blockquote { text-wrap: balance; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+h1, h2, h4, h5 { color: var(--color-grey0); font-weight: 700; }
+
+h1 { margin-top: 1rem; font-size: 2.5rem; line-height: 1.3; }
+
+h2 { margin-top: 1rem; font-size: 2.5rem; line-height: 1.25; }
+
+h3 { text-align: center; letter-spacing: 1px; text-transform: uppercase; ma=
+rgin: 2rem 0px 1rem; font-size: 1.2rem; font-weight: 400; }
+
+h4 { margin: 2rem 0px 1rem; font-size: 1.24rem; }
+
+.post-title { color: var(--color-orange0); }
+
+p { overflow-wrap: break-word; margin-top: 2rem; margin-bottom: 0px; }
+
+p:first-child { margin-top: 1.9375rem; }
+
+a { color: var(--color-link); }
+
+a:visited { color: var(--color-link-visited); }
+
+a:hover, a:focus, a:active, a:visited:hover, a:visited:focus, a:visited:act=
+ive { color: var(--color-link-hover); }
+
+.is-external-link::after, a[target=3D"_blank"]::after, a[rel~=3D"noopener"]=
+::after { content: " =E2=86=97=EF=B8=8F"; }
+
+ul.posts { margin: 3rem 0px; list-style-type: none; }
+
+ul.posts li { justify-content: space-between; align-items: baseline; paddin=
+g: 0.675rem 0px; display: flex; }
+
+ul.posts a { font-size: 1.2em; }
+
+ul.posts .meta { color: var(--color-grey1); flex-shrink: 0; margin: 0px; }
+
+.site { max-width: 48.875rem; margin: auto; }
+
+header { text-align: center; }
+
+header a { text-decoration: none; }
+
+header h1.site-title a { color: var(--color-orange1); }
+
+header h1.site-title a:hover, header h1.site-title a:focus, header h1.site-=
+title a:active { color: var(--color-orange0); }
+
+.meta { color: var(--color-meta-date); font-feature-settings: "liga", "calt=
+", "ss01", "ss02", "ss03", "dlig", "tnum"; margin: 30px auto 0px; font-size=
+: 0.8rem; display: block; }
+
+pre { font-family: var(--font-monospace); margin: 0px auto; font-weight: 40=
+0; overflow: auto; }
+
+code { font-family: var(--font-monospace); font-feature-settings: "dlig" 0,=
+ "liga" 0; font-weight: 400; }
+
+figure.highlight, div.highlighter-rouge { background-color: var(--color-gre=
+y7); border: 1px solid var(--color-grey6); box-shadow: 2px 2px var(--color-=
+grey6); border-radius: 3px; margin: 1.92rem 0px; padding: 0.5rem 1rem; line=
+-height: 1.3; }
+
+figure.highlight .gutter pre { padding-right: 10px; }
+
+.cp_embed_wrapper { margin-top: 1.92rem; }
+
+.post ul, .post ol { margin-top: 1rem; }
+
+.post code { white-space: nowrap; padding-top: 2px; font-size: 0.9rem; }
+
+.post h2 code, .post h3 code, .post h4 code { font-size: inherit; padding-t=
+op: unset; white-space: normal; }
+
+.post li code, .post p code { background-color: var(--color-red0); text-sha=
+dow: 0px 1px var(--color-bg); border-radius: 2px; padding: 3px 3px 1px; }
+
+.post pre code { white-space: pre; border: none; font-size: 0.9rem; line-he=
+ight: 1.3; }
+
+.post { text-align: left; line-height: 1.55; }
+
+@media screen and (max-width: 800px) {
+  body { padding: 0px 1.5rem; }
+  header { text-align: left; }
+}
+
+@media screen and (max-width: 1440px) {
+  body { padding: 0px 4rem; }
+  .site { max-width: 43.75rem; }
+  pre code { line-height: 1.6rem; }
+}
+
+@media screen and (max-width: 500px) {
+  body { padding: 0px 5px; }
+  .post { line-height: 1.4; }
+  .post ul, .post ol { margin-left: 2.5rem; }
+  ul.posts a { font-size: 1.1rem; }
+  .site { padding: 0px 0.1rem; }
+  h1, h2 { font-size: 2rem; }
+  h3 { text-align: left; font-size: 1.2rem; }
+  h4 { font-size: 1.2rem; }
+  .post code { white-space: normal; }
+}
+
+.smallcaps { letter-spacing: 1px; text-transform: uppercase; }
+
+#markdown-toc { margin-top: 2rem; }
+
+#markdown-toc li { list-style: none; }
+
+#markdown-toc li ul, #markdown-toc li ol { margin: 0px 0px 1rem 1rem; }
+
+blockquote { border-left: 5px var(--color-orange1)solid; margin-top: 1.9375=
+rem; margin-bottom: 1.9375rem; padding: 0px 0.96875rem; font-style: italic;=
+ }
+
+blockquote p, blockquote p:first-child, blockquote ul, blockquote ol { marg=
+in: 0px; }
+
+.image { max-width: 100%; }
+
+hr { margin: 1.5rem 0px; }
+
+.site .prev-next-nav, .site .footer { border-top: 2px solid var(--color-gre=
+y5); margin-top: 2rem; padding: 2rem 0px 0px; }
+
+.site .prev-next-nav { flex-wrap: wrap; justify-content: space-between; dis=
+play: flex; }
+
+.site .footer { color: var(--color-grey1); margin-bottom: 2rem; line-height=
+: 1.4; overflow: hidden; }
+
+.site .footer .contact { float: left; max-width: 50%; margin-right: 3rem; }
+
+.site .footer .contact a { color: var(--color-blue1); }
+
+.site .footer .contact a:hover, .site .footer .contact a:focus, .site .foot=
+er .contact a:active { color: var(--color-blue0); }
+
+.site .footer .links a { line-height: 1.8; }
+
+sup { font-size: inherit; font-feature-settings: "numr", "sups"; vertical-a=
+lign: baseline; }
+
+sup:has(a.footnote) { text-align: right; width: 0.5rem; font-weight: 500; l=
+ine-height: 0; display: inline-block; }
+
+.footnotes sup { font-feature-settings: "numr" 0, "sups" 0; vertical-align:=
+ super; font-size: smaller; }
+
+@media screen and (max-width: 800px) {
+  .site .footer .contact { float: none; max-width: 100%; margin: 1rem 0px; =
+}
+  .footer { text-align: center; }
+}
+
+.caption .image { margin-top: 0.5rem; }
+
+.image img { margin: auto; display: block; }
+
+.caption { margin-top: 0px; margin-bottom: 1.5rem; font-size: 0.8rem; }
+
+.caption > p { margin-top: 0px; }
+
+@media screen and (max-width: 500px) {
+  .caption { margin-top: 0px; margin-bottom: 1.9375rem; }
+  .caption code { white-space: nowrap; }
+}
+
+.old-text { color: var(--color-grey5); text-decoration: line-through; }
+
+section p:first-child { margin-top: 0px !important; }
+
+section { margin-top: 1.9375rem; }
+
+.aside { box-shadow: 3px 3px var(--color-orange3); border: 1px solid var(--=
+color-orange0); border-radius: 3px; padding: 10px; }
+
+.aside p { margin-top: 0px !important; }
+
+.aside h3 { text-align: left; margin: 0px 0px 0.9rem !important; font-size:=
+ 1.1rem !important; }
+
+.sad-container { text-align: center; margin-top: 2rem; }
+
+.sad { font-size: 8vh; display: inline-block; transform: rotate(90deg); }
+
+.error h3 { text-transform: unset; font-weight: 700; }
+------MultipartBoundary--NiupQGoOAXF4DyAldGJX8yeyE5c9YkfBoAM0nJCP24------
