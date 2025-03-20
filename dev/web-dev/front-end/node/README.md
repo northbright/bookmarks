@@ -5,3 +5,4 @@
 * [Using parseArgs in Node](https://www.kevincunningham.co.uk/posts/using-parseargs-in-node/)
 * [Top 12 libraries to build CLI tools in Node.js](https://byby.dev/node-command-line-libraries)
 * [Node has native CLI argument parsing](https://kgrz.io/node-has-native-arg-parsing.html)
+* [util.parseArgs](https://nodejs.org/api/util.html#utilparseargsconfig)
