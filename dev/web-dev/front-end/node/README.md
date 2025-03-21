@@ -9,3 +9,6 @@
 
 ## Path
 * [How to get the current directory in Node.js](https://attacomsian.com/blog/nodejs-get-current-directory)
+
+## File System
+* [Reading files with Node.js](https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs)
