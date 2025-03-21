@@ -6,3 +6,6 @@
 * [Top 12 libraries to build CLI tools in Node.js](https://byby.dev/node-command-line-libraries)
 * [Node has native CLI argument parsing](https://kgrz.io/node-has-native-arg-parsing.html)
 * [util.parseArgs](https://nodejs.org/api/util.html#utilparseargsconfig)
+
+## Path
+* [How to get the current directory in Node.js](https://attacomsian.com/blog/nodejs-get-current-directory)

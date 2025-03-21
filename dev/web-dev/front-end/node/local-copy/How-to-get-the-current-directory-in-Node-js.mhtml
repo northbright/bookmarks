@@ -1,0 +1,2358 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://attacomsian.com/blog/nodejs-get-current-directory
+Subject: How to get the current directory in Node.js
+Date: Fri, 21 Mar 2025 01:18:08 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--66NsEcBSORhzAaIPAq0mZm40Z59Q7wdZk8jCOESiop----"
+
+
+------MultipartBoundary--66NsEcBSORhzAaIPAq0mZm40Z59Q7wdZk8jCOESiop----
+Content-Type: text/html
+Content-ID: <frame-8ADDF92FBD398BB38E78C0CEF6FB8206@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://attacomsian.com/blog/nodejs-get-current-directory
+
+<!DOCTYPE html><html lang=3D"en" data-theme=3D"light"><head><meta http-equi=
+v=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><link rel=3D"styl=
+esheet" type=3D"text/css" href=3D"cid:css-5370eefd-db1a-4089-aab7-dc8880611=
+1d9@mhtml.blink" />
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, shrink-to-fit=3Dno">
+    <title>How to get the current directory in Node.js</title>
+
+    <link rel=3D"preconnect" href=3D"https://cdn.attacomsian.com/">
+    <link rel=3D"preconnect" href=3D"https://ik.imagekit.io/" crossorigin=
+=3D"">
+    <link rel=3D"preconnect" href=3D"https://cdn.jsdelivr.net/" crossorigin=
+=3D"">
+    <link rel=3D"preconnect" href=3D"https://www.google-analytics.com/" cro=
+ssorigin=3D"">
+    <link rel=3D"preconnect" href=3D"https://fonts.googleapis.com/">
+    <link rel=3D"preconnect" href=3D"https://fonts.gstatic.com/" crossorigi=
+n=3D"">
+
+    <meta name=3D"ir-site-verification-token" value=3D"1536712541">
+
+    <meta name=3D"_csrf" content=3D"5ac9aa8d-d4f1-4bdd-97ac-f144abab8379">
+    <meta name=3D"_csrf_header" content=3D"X-CSRF-TOKEN">
+
+   =20
+    <meta name=3D"robots" content=3D"index, follow, max-snippet:-1, max-ima=
+ge-preview:large, max-video-preview:-1">
+
+    <meta name=3D"description" content=3D"A short article to learn how to g=
+et the current working directory in a Node.js application.">
+
+    <meta name=3D"twitter:card" content=3D"summary_large_image">
+
+    <meta name=3D"twitter:site" content=3D"@attacomsian">
+
+    <meta name=3D"twitter:creator" content=3D"@attacomsian">
+
+    <meta name=3D"twitter:title" content=3D"How to get the current director=
+y in Node.js">
+
+    <meta name=3D"twitter:description" content=3D"A short article to learn =
+how to get the current working directory in a Node.js application.">
+
+    <meta name=3D"twitter:image" content=3D"https://attacomsian.com/social-=
+banner/nodejs-get-current-directory.png">
+
+   =20
+
+    <meta property=3D"og:title" content=3D"How to get the current directory=
+ in Node.js">
+
+    <meta property=3D"og:description" content=3D"A short article to learn h=
+ow to get the current working directory in a Node.js application.">
+
+    <meta property=3D"og:url" content=3D"https://attacomsian.com/blog/nodej=
+s-get-current-directory">
+
+    <meta property=3D"og:type" content=3D"article">
+
+    <meta property=3D"og:site_name" content=3D"Atta-Ur-Rehman Shah">
+
+   =20
+
+    <meta property=3D"og:image:alt" content=3D"How to get the current direc=
+tory in Node.js">
+
+    <meta property=3D"article:published_time" content=3D"2020-04-01T20:47:4=
+4.000+00:00">
+
+    <meta property=3D"article:modified_time" content=3D"2022-10-01T07:18:04=
+.000+00:00">
+
+    <meta property=3D"article:tag" content=3D"node.js">
+
+    <link rel=3D"alternate" type=3D"application/rss+xml" title=3D"RSS Feed =
+for Atta-Ur-Rehman Shah" href=3D"https://attacomsian.com/feed">
+   =20
+
+   =20
+        <!-- Google Analytics -->
+       =20
+       =20
+        <!-- End Google Analytics -->
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+       =20
+
+
+   =20
+        <link rel=3D"apple-touch-icon" sizes=3D"180x180" href=3D"https://at=
+tacomsian.com/img/ico/apple-touch-icon.png">
+        <link rel=3D"icon" type=3D"image/png" sizes=3D"32x32" href=3D"https=
+://attacomsian.com/img/ico/favicon-32x32.png">
+        <link rel=3D"icon" type=3D"image/png" sizes=3D"16x16" href=3D"https=
+://attacomsian.com/img/ico/favicon-16x16.png">
+        <link rel=3D"manifest" href=3D"https://attacomsian.com/img/ico/site=
+.webmanifest">
+        <link rel=3D"mask-icon" href=3D"https://attacomsian.com/img/ico/saf=
+ari-pinned-tab.svg" color=3D"#006aff">
+        <link rel=3D"shortcut icon" href=3D"https://attacomsian.com/img/ico=
+/favicon.ico">
+        <meta name=3D"msapplication-TileColor" content=3D"#ffffff">
+        <meta name=3D"msapplication-config" content=3D"/img/ico/browserconf=
+ig.xml">
+        <meta name=3D"theme-color" content=3D"#ffffff">
+   =20
+
+<link rel=3D"amphtml" href=3D"https://attacomsian.com/blog/nodejs-get-curre=
+nt-directory?amp">
+
+
+        <meta property=3D"og:image" content=3D"https://attacomsian.com/soci=
+al-banner/nodejs-get-current-directory.png">
+        <meta property=3D"og:image:width" content=3D"1920">
+        <meta property=3D"og:image:height" content=3D"1080">
+   =20
+
+
+   =20
+
+
+<link rel=3D"canonical" href=3D"https://attacomsian.com/blog/nodejs-get-cur=
+rent-directory">
+
+</head>
+<body class=3D"" style=3D"padding-right: 15px;">
+
+<div class=3D"scroll-bar" style=3D"--scroll-x: 0%;"></div>
+
+<!--top message bar-->
+
+
+<!--navigation-->
+<nav class=3D"navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class=3D"container-fluid">
+        <a class=3D"navbar-brand brand-logo" href=3D"https://attacomsian.co=
+m/" aria-label=3D"Homepage">
+           =20
+    <svg xmlns=3D"http://www.w3.org/2000/svg" viewBox=3D"0 0 133 49"><g fil=
+l=3D"none"><path fill=3D"#006AFF" stroke=3D"#006AFF" stroke-width=3D"3" d=
+=3D"M10.46 48.02c4.56 0 10.88-2.94 18.96-8.82 5.4-3.96 10.78-8.56 16.14-13.=
+8l7.2-.18c-3.08 6.24-4.62 11.38-4.62 15.42 0 1.96.48 3.12 1.44 3.48.4.08.95=
+.12 1.65.12s1.56-.24 2.58-.72 1.63-1.08 1.83-1.8c0-.2-.07-.3-.21-.3-.14 0-.=
+54.27-1.2.81-.66.54-1.21.81-1.65.81-1.16 0-1.74-.92-1.74-2.76 0-2.64 1.86-7=
+.6 5.58-14.88 5.84-.4 8.76-.86 8.76-1.38 0-.2-.72-.3-2.16-.3l-5.82.12c1.04-=
+1.88 2.3-4.33 3.78-7.35 1.48-3.02 2.62-5.08 3.42-6.18.8-1.1 1.66-1.97 2.58-=
+2.61.44-.32.84-1.2 1.2-2.64.36-1.44.54-2.5.54-3.18 0-.68-.22-1.02-.66-1.02-=
+.783 0-2.668 1.482-5.655 4.447l-.508.507c-.691.696-1.437 1.464-2.237 2.306-=
+6.84 7.2-11.98 12.38-15.42 15.54-1.8 0-4.02-.16-6.66-.48-1.36 0-2.12.74-2.2=
+8 2.22-.16.64 1.04.72 3.6.24 1.2-.2 2.5-.34 3.9-.42-7.12 6.56-12.26 11.02-1=
+5.42 13.38-7.12 5.36-12.76 8.04-16.92 8.04-4.36 0-6.54-2.14-6.54-6.42 0-2.8=
+4 1.13-6.8 3.39-11.88 2.26-5.08 5.56-9.36 9.9-12.84 4.34-3.48 8.07-5.22 11.=
+19-5.22 1.52 0 2.63.49 3.33 1.47.7.98 1.05 2.27 1.05 3.87s-.68 3.46-2.04 5.=
+58l-1.98 3.24c0 .08.07.12.21.12.14 0 .27-.02.39-.06 1.24-.64 2.46-2.16 3.66=
+-4.56 1.2-2.4 1.8-4.58 1.8-6.54 0-2.92-1.98-4.38-5.94-4.38-3.96 0-8.44 1.81=
+-13.44 5.43-5 3.62-8.94 7.99-11.82 13.11C1.46 31.4.38 35.04.38 38.48c0 5.8 =
+3.08 8.96 9.24 9.48.28.04.56.06.84.06zM53.3 23.66c-1.24 0-2.28-.02-3.12-.06=
+h-3.54L62 9.2c-4.64 7.36-7.54 12.18-8.7 14.46zm12.12 17.7c2.84 0 5.82-.96 8=
+.94-2.88 2.6-1.56 4.94-3.62 7.02-6.18.6-.72.9-1.2.9-1.44s-.06-.36-.18-.36c-=
+.2 0-.58.28-1.14.84-2.56 2.72-4.96 4.78-7.2 6.18-.84.52-2.04 1.08-3.6 1.68-=
+1.56.6-2.82.9-3.78.9-2.04 0-3.06-.74-3.06-2.22 0-1.56 1.02-4.03 3.06-7.41s3=
+.44-5.41 4.2-6.09c.043-.013.113-.029.21-.048l.165-.03c.958-.172 3.523-.526 =
+7.695-1.062 4.98-.64 7.47-1.14 7.47-1.5 0-.04-.06-.1-.18-.18l-8.64.12c-1.68=
+ 0-3.04-.02-4.08-.06 1.92-2.16 2.88-3.46 2.88-3.9 0-.44-.3-.82-.9-1.14-.6-.=
+32-1.1-.48-1.5-.48-.4 0-1.16.72-2.28 2.16-.92 1.2-1.74 2.26-2.46 3.18h-3.48=
+c-.24.04-.42.06-.54.06-.96.28-1.44.76-1.44 1.44 0 .92.58 1.38 1.74 1.38.4 0=
+ .88-.06 1.44-.18-.76 1.4-1.86 3.53-3.3 6.39-1.44 2.86-2.16 5.11-2.16 6.75 =
+0 1.64.39 2.73 1.17 3.27.78.54 1.79.81 3.03.81zm17.82 0c2.84 0 5.82-.96 8.9=
+4-2.88 2.6-1.56 4.94-3.62 7.02-6.18.6-.72.9-1.2.9-1.44s-.06-.36-.18-.36c-.2=
+ 0-.58.28-1.14.84-2.56 2.72-4.96 4.78-7.2 6.18-.84.52-2.04 1.08-3.6 1.68-1.=
+56.6-2.82.9-3.78.9-2.04 0-3.06-.74-3.06-2.22 0-1.56 1.02-4.03 3.06-7.41s3.4=
+4-5.41 4.2-6.09c.043-.013.113-.029.21-.048l.165-.03c.958-.172 3.523-.526 7.=
+695-1.062 4.98-.64 7.47-1.14 7.47-1.5 0-.04-.06-.1-.18-.18l-8.64.12c-1.68 0=
+-3.04-.02-4.08-.06 1.92-2.16 2.88-3.46 2.88-3.9 0-.44-.3-.82-.9-1.14-.6-.32=
+-1.1-.48-1.5-.48-.4 0-1.16.72-2.28 2.16-.92 1.2-1.74 2.26-2.46 3.18H83.3c-.=
+24.04-.42.06-.54.06-.96.28-1.44.76-1.44 1.44 0 .92.58 1.38 1.74 1.38.4 0 .8=
+8-.06 1.44-.18-.76 1.4-1.86 3.53-3.3 6.39-1.44 2.86-2.16 5.11-2.16 6.75 0 1=
+.64.39 2.73 1.17 3.27.78.54 1.79.81 3.03.81zm18.21-.06c1.06 0 2.77-1.04 5.1=
+3-3.12l3.72-3.6a8.88 8.88 0 00-.24 2.04c0 1.96.88 3.28 2.64 3.96.32.12.66.1=
+8 1.02.18 2.68 0 6.58-3.42 11.7-10.26.36-.48.54-.87.54-1.17 0-.3-.08-.45-.2=
+4-.45-.16 0-.3.08-.42.24-5.52 6.88-9.32 10.32-11.4 10.32-.68 0-1.12-.46-1.3=
+2-1.38-.04-.12-.06-.24-.06-.36 0-1.44 1.24-3.99 3.72-7.65 2.48-3.66 3.72-5.=
+59 3.72-5.79 0-.2-.2-.48-.6-.84-.4-.36-.82-.54-1.26-.54l-.84.18c-.04 0-.1-.=
+11-.18-.33-.08-.22-.18-.49-.3-.81-.44-.92-1.32-1.38-2.64-1.38-3.4 0-7.14 2.=
+03-11.22 6.09-4.08 4.06-6.12 7.55-6.12 10.47 0 1.32.54 2.38 1.62 3.18.96.68=
+ 1.97 1.02 3.03 1.02zm-.63-1.32c-1 0-1.5-.72-1.5-2.16 0-2.48 2.02-5.61 6.06=
+-9.39 4.04-3.78 7.28-5.67 9.72-5.67.72 0 1.24.28 1.56.84l-6.36 8.76c-4 5.08=
+-7.16 7.62-9.48 7.62z"></path><path fill=3D"#f49a40" stroke=3D"#f49a40" str=
+oke-width=3D"3" d=3D"M129.68 41.06c.6 0 1.15-.19 1.65-.57.5-.38.75-.82.75-1=
+.32 0-.5-.27-.95-.81-1.35-.54-.4-1.11-.6-1.71-.6-1.52 0-2.28.58-2.28 1.74 0=
+ .56.25 1.05.75 1.47.5.42 1.05.63 1.65.63z"></path></g></svg>
+
+        </a>
+        <button class=3D"navbar-toggler" type=3D"button" data-bs-toggle=3D"=
+collapse" data-bs-target=3D"#top-menu" aria-controls=3D"top-menu" aria-expa=
+nded=3D"false" aria-label=3D"Toggle navigation">
+            <span class=3D"navbar-toggler-icon"></span>
+        </button>
+        <div class=3D"collapse navbar-collapse" id=3D"top-menu">
+            <ul class=3D"navbar-nav mx-auto">
+                <li class=3D"nav-item">
+                    <a class=3D"nav-link active" href=3D"https://attacomsia=
+n.com/blog">Blog</a>
+                </li>
+                <li class=3D"nav-item">
+                    <a class=3D"nav-link" href=3D"https://attacomsian.com/t=
+opics">Topics</a>
+                </li>
+                <li class=3D"nav-item">
+                    <a class=3D"nav-link" href=3D"https://attacomsian.com/n=
+ewsletter">Newsletter</a>
+                </li>
+                <li class=3D"nav-item">
+                    <a class=3D"nav-link text-secondary" href=3D"https://fo=
+re.studio/?ref=3Dattacomsian.com" target=3D"_blank">Work with us =F0=9F=A6=
+=84</a>
+                </li>
+                <li class=3D"nav-item">
+                    <a class=3D"nav-link text-info" href=3D"https://attacom=
+sian.com/sponsors">Advertise =E2=9C=A8</a>
+                </li>
+                <li class=3D"nav-item d-lg-none">
+                    <a class=3D"nav-link" href=3D"https://attacomsian.com/b=
+log/nodejs-get-current-directory#">Search</a>
+                </li>
+                <li class=3D"nav-item d-lg-none">
+                    <a class=3D"nav-link" rel=3D"nofollow noopener" href=3D=
+"https://feeds.feedburner.com/attacomsian" target=3D"_blank">RSS Feed</a>
+                </li>
+               =20
+            </ul>
+            <ul class=3D"navbar-nav d-none d-lg-flex">
+                <li class=3D"nav-item">
+                    <a class=3D"nav-link nav-link-icon" href=3D"https://att=
+acomsian.com/blog/nodejs-get-current-directory#" aria-label=3D"Search">
+                       =20
+   =20
+
+   =20
+        <svg width=3D"24" height=3D"24" viewBox=3D"0 0 24 24" xmlns=3D"http=
+://www.w3.org/2000/svg"><g fill=3D"none" fill-rule=3D"evenodd"><path d=3D"M=
+0 0h24v24H0z"></path><path d=3D"M14.293 16.707a1 1 0 011.414-1.414l4 4a1 1 =
+0 01-1.414 1.414l-4-4z" fill=3D"#000" fill-rule=3D"nonzero" opacity=3D".3">=
+</path><path d=3D"M11 16a5 5 0 100-10 5 5 0 000 10zm0 2a7 7 0 110-14 7 7 0 =
+010 14z" fill=3D"#000" fill-rule=3D"nonzero"></path></g></svg>
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+
+                    </a>
+                </li>
+                <li class=3D"nav-item">
+                    <a class=3D"nav-link nav-link-icon" target=3D"_blank" r=
+el=3D"noopener nofollow" aria-label=3D"RSS Feed" href=3D"https://feeds.feed=
+burner.com/attacomsian" title=3D"RSS Feed">
+                       =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+        <svg width=3D"24" height=3D"24" viewBox=3D"0 0 24 24" xmlns=3D"http=
+://www.w3.org/2000/svg"><g fill=3D"none" fill-rule=3D"evenodd"><path d=3D"M=
+0 0h24v24H0z"></path><circle fill=3D"#000" cx=3D"6" cy=3D"18" r=3D"3"></cir=
+cle><path d=3D"M16.5 21h-3c0-5.799-4.701-10.5-10.5-10.5v-3c7.456 0 13.5 6.0=
+44 13.5 13.5z" fill=3D"#000" fill-rule=3D"nonzero" opacity=3D".3"></path><p=
+ath d=3D"M22.5 21h-3c0-8.837-7.663-16.5-16.5-16.5v-3c10.493 0 19.5 9.007 19=
+.5 19.5z" fill=3D"#000" fill-rule=3D"nonzero" opacity=3D".3"></path></g></s=
+vg>
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Search Sidebar -->
+<div class=3D"modal fade" id=3D"searchModal" tabindex=3D"-1" role=3D"dialog=
+" aria-labelledby=3D"searchModalLabel" aria-hidden=3D"true" data-backdrop=
+=3D"static">
+    <div class=3D"modal-dialog modal-dialog-centered modal-fullscreen" role=
+=3D"document">
+        <div class=3D"modal-content">
+            <div class=3D"modal-body p-md-5">
+                <button type=3D"button" class=3D"btn-close d-flex ms-auto" =
+data-dismiss=3D"modal" aria-label=3D"Close"></button>
+                <div class=3D"my-3">
+                    <input type=3D"search" placeholder=3D"Search node, java=
+script, spring, java ..." aria-label=3D"Search" class=3D"form-control form-=
+control-lg fs-lg fw-bold" id=3D"search-query" autocomplete=3D"off">
+                </div>
+                <div class=3D"text-center d-none mt-5" id=3D"search-loader"=
+>
+                    <div class=3D"spinner-grow text-primary" role=3D"status=
+">
+                        <span class=3D"visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div id=3D"search-results"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <section class=3D"py-5">
+        <div class=3D"container">
+            <div class=3D"row">
+                <div class=3D"col-12">
+                    <nav aria-label=3D"breadcrumb">
+                        <ol class=3D"breadcrumb">
+                            <li class=3D"breadcrumb-item fw-semi-bold">
+                                <a href=3D"https://attacomsian.com/blog">Bl=
+og</a>
+                            </li>
+                            <li class=3D"breadcrumb-item active" aria-curre=
+nt=3D"page">=E2=A4=B5</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class=3D"row">
+                <div class=3D"col-lg-8">
+                    <div class=3D"post-title">
+                        <h1 class=3D"display-4 fw-bolder text-break">How to=
+ get the current directory in Node.js</h1>
+                    </div>
+                    <div class=3D"fs-ml fw-semi-bold mb-3">
+                        <time class=3D"card-text text-muted fw-medium" titl=
+e=3D"Published Date" datetime=3D"2020-04-01T20:47:44.000+00:00">=E5=9B=9B=
+=E6=9C=88 01, 2020</time>
+                       =20
+                    </div>
+
+                   =20
+
+                    <div class=3D"post-content">
+                       =20
+                        <p>In Node.js, there are two built-in ways to get t=
+he current directory. You can use the <code>__dirname</code> variable or th=
+e <code>process.cwd()</code> method to get the current folder. However, the=
+re is a big difference between these two options.</p>
+<p>The <code>__dirname</code> variable (double underscores at the start) is=
+ part of core Node.js since the beginning. It returns the <strong>absolute =
+path of the directory</strong> in which the currently executing JavaScript =
+file exists.</p>
+<p>On the other hand, the <code>process.cwd()</code> returns the <strong>cu=
+rrent working directory</strong> from where you started the Node.js applica=
+tion (e.g. <code>$ node index.js</code>).</p>
+<p>Here is a simple example:</p>
+<pre rel=3D"bash" class=3D"language-bash"><code class=3D"language-bash">nod=
+e-runner
+  =E2=94=9C=E2=94=80=E2=94=80index.js
+  =E2=94=9C=E2=94=80=E2=94=80public
+  =E2=94=9C=E2=94=80=E2=94=80api
+  =E2=94=82  =E2=94=9C=E2=94=80=E2=94=80routes.js
+  =E2=94=82  =E2=94=94=E2=94=80=E2=94=80helpers
+  =E2=94=82      =E2=94=94=E2=94=80=E2=94=80paths.js
+  =E2=94=9C=E2=94=80=E2=94=80mailer
+  =E2=94=82  =E2=94=94=E2=94=80=E2=94=80send-email.js
+  =E2=94=94=E2=94=80=E2=94=80package.json
+</code></pre>
+<p>Let us say the <code>paths.js</code> file contains the following code sn=
+ippet:</p>
+<p class=3D"file-desc"><span>paths.js</span></p>
+<pre rel=3D"javascript" class=3D"language-javascript"><code class=3D"langua=
+ge-javascript">console<span class=3D"token punctuation">.</span><span class=
+=3D"token function">log</span><span class=3D"token punctuation">(</span>__d=
+irname<span class=3D"token punctuation">)</span>
+console<span class=3D"token punctuation">.</span><span class=3D"token funct=
+ion">log</span><span class=3D"token punctuation">(</span>process<span class=
+=3D"token punctuation">.</span><span class=3D"token function">cwd</span><sp=
+an class=3D"token punctuation">(</span><span class=3D"token punctuation">)<=
+/span><span class=3D"token punctuation">)</span>
+</code></pre>
+<p>Now, if you execute the <code>paths.js</code> from the root directory, y=
+ou should see the following output:</p>
+<pre rel=3D"bash" class=3D"language-bash"><code class=3D"language-bash">/ho=
+me/attacomsian/node-runner/api/helpers
+/home/attacomsian/node-runner
+</code></pre>
+<p>As you can see above, <code>__dirname</code> returned the absolute folde=
+r path where the execution file (<code>paths.js</code>) resides. Whereas <c=
+ode>process.cwd()</code> simply prints the current working directory from w=
+here the Node.js application was launched.</p>
+<p>The global <code>__dirname</code> variable is beneficial when you want t=
+o get the current containing folder for a file. For example, when creating =
+a new directory inside the current directory, you can use this variable to =
+specify the absolute parent folder path:</p>
+<pre rel=3D"javascript" class=3D"language-javascript"><code class=3D"langua=
+ge-javascript"><span class=3D"token keyword">const</span> fs <span class=3D=
+"token operator">=3D</span> <span class=3D"token function">require</span><s=
+pan class=3D"token punctuation">(</span><span class=3D"token string">'fs'</=
+span><span class=3D"token punctuation">)</span>
+<span class=3D"token keyword">const</span> path <span class=3D"token operat=
+or">=3D</span> <span class=3D"token function">require</span><span class=3D"=
+token punctuation">(</span><span class=3D"token string">'path'</span><span =
+class=3D"token punctuation">)</span>
+
+<span class=3D"token comment">// new folder absolute path</span>
+<span class=3D"token keyword">const</span> dirPath <span class=3D"token ope=
+rator">=3D</span> path<span class=3D"token punctuation">.</span><span class=
+=3D"token function">join</span><span class=3D"token punctuation">(</span>__=
+dirname<span class=3D"token punctuation">,</span> <span class=3D"token stri=
+ng">'/views'</span><span class=3D"token punctuation">)</span>
+
+<span class=3D"token comment">// create directory</span>
+fs<span class=3D"token punctuation">.</span><span class=3D"token function">=
+mkdirSync</span><span class=3D"token punctuation">(</span>dirPath<span clas=
+s=3D"token punctuation">)</span>
+</code></pre>
+<p>Read <a href=3D"https://attacomsian.com/blog/reading-writing-files-nodej=
+s">this guide</a> to learn more about reading and writing files in a Node.j=
+s application.</p>
+
+                        <p class=3D"fw-semi-bold">
+                            <strong>=E2=9C=8C=EF=B8=8F Like this article?</=
+strong> Follow me on
+                            <a href=3D"https://twitter.com/attacomsian" tar=
+get=3D"_blank" rel=3D"noopener nofollow">Twitter</a>
+                            and <a href=3D"https://linkedin.com/in/attacoms=
+ian" rel=3D"nofollow noopener">LinkedIn</a>.
+                            You can also subscribe to
+                            <a href=3D"https://feeds.feedburner.com/attacom=
+sian" target=3D"_blank" rel=3D"noopener nofollow">RSS Feed</a>.
+                        </p>
+                    </div>
+
+                   =20
+
+                    <div class=3D"d-flex align-content-start flex-wrap mb-3=
+">
+                        <a class=3D"badge bg-light text-black badge-lg fw-s=
+emi-bold mb-4 mb-md-3" href=3D"https://attacomsian.com/topics/nodejs">
+                            <span class=3D"text-muted">#</span>Node.js
+                        </a>
+                    </div>
+                    <h3>You might also like...</h3>
+                    <ol class=3D"styled-list styled-list-sm fw-medium fs-ml=
+ fw-semi-bold">
+                        <li>
+                            <a href=3D"https://attacomsian.com/blog/nodejs-=
+read-file-to-array" class=3D"link-black">How to read a text file into an ar=
+ray using Node.js</a>
+                        </li>
+                        <li>
+                            <a href=3D"https://attacomsian.com/blog/nodejs-=
+copy-file" class=3D"link-black">How to copy a file using Node.js</a>
+                        </li>
+                        <li>
+                            <a href=3D"https://attacomsian.com/blog/nodejs-=
+check-if-file-contains-string" class=3D"link-black">How to check if a file =
+contains a string using Node.js</a>
+                        </li>
+                        <li>
+                            <a href=3D"https://attacomsian.com/blog/nodejs-=
+find-files-with-pattern-matching" class=3D"link-black">How to find files th=
+at match a pattern using Node.js</a>
+                        </li>
+                        <li>
+                            <a href=3D"https://attacomsian.com/blog/nodejs-=
+replace-string-in-file" class=3D"link-black">How to replace a string in a f=
+ile using Node.js</a>
+                        </li>
+                        <li>
+                            <a href=3D"https://attacomsian.com/blog/javascr=
+ipt-validate-email-address" class=3D"link-black">How to validate an email a=
+ddress in JavaScript</a>
+                        </li>
+                    </ol>
+                   =20
+                        <div class=3D"d-flex flex-row align-items-center sh=
+are-icons mt-4 border-top pt-4 mb-3">
+                            <span class=3D"text-muted fw-bold">Share it =E2=
+=9F=B6</span>
+                            <a href=3D"https://twitter.com/intent/tweet?tex=
+t=3DHow+to+get+the+current+directory+in+Node.js&amp;url=3Dhttps://attacomsi=
+an.com/blog/nodejs-get-current-directory&amp;via=3Dattacomsian" target=3D"_=
+blank" rel=3D"noopener nofollow" class=3D"twitter" role=3D"button" title=3D=
+"Share on Twitter" aria-label=3D"Share on Twitter">
+                               =20
+    <svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"16" height=3D"16" vi=
+ewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2=
+" stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"feather feath=
+er-twitter">
+       =20
+            <path d=3D"M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86=
+ 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5=
+a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+    </svg>
+
+                            </a>
+                            <a href=3D"https://www.facebook.com/sharer/shar=
+er.php?u=3Dhttps://attacomsian.com/blog/nodejs-get-current-directory" targe=
+t=3D"_blank" rel=3D"noopener nofollow" class=3D"facebook" role=3D"button" t=
+itle=3D"Share on Facebook" aria-label=3D"Share on Facebook">
+                               =20
+    <svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"16" height=3D"16" vi=
+ewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2=
+" stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"feather feath=
+er-facebook">
+       =20
+       =20
+       =20
+            <path d=3D"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1=
+ 0 0 1 1-1h3z"></path>
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+    </svg>
+
+                            </a>
+                            <a href=3D"https://www.linkedin.com/shareArticl=
+e?mini=3Dtrue&amp;url=3Dhttps://attacomsian.com/blog/nodejs-get-current-dir=
+ectory" target=3D"_blank" rel=3D"noopener nofollow" class=3D"linkedin" role=
+=3D"button" title=3D"Share on LinkedIn" aria-label=3D"Share on LinkedIn">
+                               =20
+    <svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"16" height=3D"16" vi=
+ewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2=
+" stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"feather feath=
+er-linkedin">
+       =20
+       =20
+       =20
+       =20
+            <path d=3D"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-=
+2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x=3D"2" y=3D"9" width=3D"4" height=3D"12"></rect>
+            <circle cx=3D"4" cy=3D"4" r=3D"2"></circle>
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+    </svg>
+
+                            </a>
+                        </div>
+                   =20
+                </div>
+                <div class=3D"col-lg-4">
+                   =20
+    <div class=3D"card mb-4">
+        <div class=3D"card-body text-center card-partners">
+            <img src=3D"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL=
+3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTAwIiBoZWlnaHQ9IjQyMiIgdmlld0JveD0i=
+MCAwIDEwMDIgMTY5Ij48cGF0aCBkPSJNODQuMTYgMTY5di0zMi44OGMzNC44NiAwIDYxLjc1LTM=
+0LjM3IDQ4LjMxLTcwLjc0QTQ5IDQ5IDAgMCAwIDEwMy4wOSAzNmE1MS45NCA1MS45NCAwIDAgMC=
+03MC4yMiA0OC4zMUgwYzAtNTQuOCA1My4yOS05OC4xNCAxMTEuNTUtODAuMmE4MS40MyA4MS40M=
+yAwIDAgMSA1My4yOSA1My4zQzE4Mi43NyAxMTUuNyAxMzkuNDQgMTY5IDg0LjE2IDE2OXoiIGZp=
+bGw9IiMwMDgwZmYiLz48cGF0aCBkPSJNODQuNjYgMTM2LjEySDUxLjc5di0zMi4zOGgzMi44N20=
+tMzIuODcgNTcuNzloLTI0Ljl2LTI1LjQxaDI0Ljl2MjUuNDFtLTI0LjktMjUuNDFINlYxMTUuMm=
+gyMC44OU0zMDAuMyA0OC45NGMtOS40Ni02LjQ4LTIxLjkxLTEwLTM1Ljg2LTEwaC0zMC4zN3Y5N=
+y4xNGgzMC4zOHEyMC45MiAwIDM1Ljg2LTEwLjQ2YTM4LjExIDM4LjExIDAgMCAwIDEyLjQ1LTE1=
+LjQ0YzMtNi40OCA0LjQ4LTE0LjQ1IDQuNDgtMjIuOTJzLTEuNDktMTYuNDQtNC40OC0yMi40MmM=
+tMy03LjQzLTYuOTgtMTIuNDEtMTIuNDYtMTUuOXpNMjUyIDU1LjQyaDkuNDZjMTAuNDYgMCAxOS=
+40MiAyIDI2LjM5IDYuNDggNy40NyA0LjQ4IDExIDEzIDExIDI1LjQxcy00IDIxLjQyLTExIDI2L=
+jRjLTYuNDcgNC0xNC45NCA2LjQ4LTI1LjkgNi40OEgyNTJWNTUuNDJtODYuNjUtMTcuOTNhMTAu=
+MTMgMTAuMTMgMCAwIDAtNy40NyAzIDkgOSAwIDAgMC0zLjQ5IDcuNDcgMTAuNDYgMTAuNDYgMCA=
+xIDAgMjAuOTIgMCAxMC4xNCAxMC4xNCAwIDAgMC0zLTcuNDdjLTEuNDktMi00LTMtNy0zbS05ID=
+I5Ljg5aDE3LjQzdjY4LjI1aC0xNy4zNlY2Ny4zOG03OS42OCA2Yy01LTQuNDgtMTEtNy40Ny0xN=
+y40My03LjQ3YTMwLjgyIDMwLjgyIDAgMCAwLTIzLjQxIDEwIDM0LjY5IDM0LjY5IDAgMCAwLTku=
+NDYgMjQuNDFjMCA5LjQ3IDMgMTcuOTMgOSAyNC40MXMxMy45NCA5LjQ3IDIzLjQxIDkuNDdhMjc=
+uNTYgMjcuNTYgMCAwIDAgMTYuOTMtNS40OHYxLjQ5YzAgNS40OC0xLjQ5IDEwLTQuNDggMTNzLT=
+cgNC40OC0xMi40NSA0LjQ4Yy04IDAtMTIuOTUtMy0xOC45Mi0xMS40NmwtMTIgMTEuNDYuNS41Y=
+zIuNDkgMy40OSA2LjQ3IDcgMTEuNDUgMTAuNDZzMTEuNDUgNSAxOC45MiA1YzEwLjQ2IDAgMTgu=
+NDMtMyAyNC40LTkuNDdzOS40Ni0xNC40NSA5LjQ2LTI0LjkxVjY3LjM4aC0xNi45MXY2aDFtLTQ=
+uNDggNDAuMzVjLTMgMy40OS03IDUtMTIgNXMtOS0xLjQ5LTEyLTUtNC40OC04LTQuNDgtMTMuND=
+VTMzc4IDkwLjI5IDM4MSA4Ni44czctNSAxMi01IDkgMS40OSAxMiA1IDQuNDggOCA0LjQ4IDEzL=
+jQ1LTEuNDkgMTAtNC40OCAxMy40NW0zNi4zNS00Ni4zM2gxNy40M3Y2OC4yNWgtMTcuNTRWNjcu=
+MzhtOC40Ny0yOS44OWExMC4yMSAxMC4yMSAwIDAgMC0xMC40NiAxMC40NiAxMC40NiAxMC40NiA=
+wIDEgMCAyMC45MiAwIDEwLjIxIDEwLjIxIDAgMCAwLTEwLjQ3LTEwLjQ2TTQ5NiA0OC45NGgtMT=
+YuOTF2MTguNDRoLTEwdjE1LjQ0aDEwdjI4LjRjMCA5IDIgMTUuNDQgNS40OCAxOC45M3MxMCA1L=
+jQ4IDE4LjQzIDUuNDhhNDguMyA0OC4zIDAgMCAwIDguNDctLjVoMXYtMTUuNDVsLTYgLjVjLTQg=
+MC03LS41LTgtMi0xLjQ5LTEuNDktMi00LjQ4LTItOVY4My4zMmgxNS45NFY2Ny44N2gtMTUuODl=
+MNDk2IDQ4Ljk0bTk2LjYxLTEwaDE3LjQzdjk3LjE0aC0xNy40MVYzOW0xOTEuMjQgNzIuNzNhNT=
+cuNzYgNTcuNzYgMCAwIDEtOC40NyA4IDE3LjE5IDE3LjE5IDAgMCAxLTkgMi40OSAxNyAxNyAwI=
+DAgMS0xMi40LTUuNTNjLTMuNDktNC01LTguNDctNS0xNC40NXMxLjQ5LTEwLjQ2IDUtMTQuNDVh=
+MTUuMzEgMTUuMzEgMCAwIDEgMTIuNDUtNS40OGM1LjQ4IDAgMTEuNDUgMy40OSAxNi40MyA5LjQ=
+3bDExLjQ1LTExYy03LjQ3LTkuNDctMTYuOTMtMTMuOTUtMjguMzktMTMuOTUtOS40NiAwLTE3Lj=
+QzIDMuNDktMjQuNCAxMC40NmEzNi4yIDM2LjIgMCAwIDAtMTAgMjUuNDFjMCAxMCAzLjQ5IDE4L=
+jkzIDEwIDI1LjQxYTMyLjM5IDMyLjM5IDAgMCAwIDI0LjQgMTAuNDZjMTIuNDUgMCAyMi40MS01=
+LjQ4IDI5LjM4LTE1LjQ0bC0xMS40NS0xMS40Nm03MC4yMi0zNC4zN2EyNi4yMiAyNi4yMiAwIDA=
+gMC0xMC04IDMyLjUgMzIuNSAwIDAgMC0xNC40NC0zYy05LjQ2IDAtMTcuNDMgMy40OS0yMy40MS=
+AxMC40NmE0MCA0MCAwIDAgMC04LjQ3IDI1LjQxYzAgMTAuNDYgMyAxOC45MyA5LjQ2IDI1LjQxc=
+zE0LjQ0IDEwIDI0LjkgMTBjMTEuNDUgMCAyMC45Mi00LjQ4IDI4LjM5LTEzLjk1bC41LS41LTEx=
+LjQ1LTExYy0xIDEuNDktMi40OSAyLjQ5LTQgNGExNS4xOCAxNS4xOCAwIDAgMS01IDMuNDkgMTY=
+uMzYgMTYuMzYgMCAwIDEtOC40NyAyIDE5LjE3IDE5LjE3IDAgMCAxLTEyLTRjLTMtMi40OS00Lj=
+Q4LTYtNS0xMC40Nmg0NS44MnYtNi40OGEzNy4xNiAzNy4xNiAwIDAgMC0yLTEzIDIyLjU5IDIyL=
+jU5IDAgMCAwLTUtMTAuNDZtLTM3LjE4IDE2LjA2YTE3LjY0IDE3LjY0IDAgMCAxIDQuNDgtOCAx=
+MiAxMiAwIDAgMSA5LTMuNDljNCAwIDcuNDcgMSA5LjQ2IDMuNDkgMiAyIDMgNSAzLjQ5IDhoLTI=
+2LjQzbTEwMy41OS0yMC40M2MtNS00LjQ4LTEyLjQ1LTYuNDgtMjEuNDEtNi40OGE0My41OSA0My=
+41OSAwIDAgMC0xNS45MiAzLjVjLTQuNDggMi40OS05IDYtMTEuNDUgMTFsMTEgMTAuNDZjNC40O=
+C03LjQ3IDkuNDYtMTAgMTYuNDMtMTBhMTMuOSAxMy45IDAgMCAxIDkgMyA5IDkgMCAwIDEgMy40=
+OSA3LjQ3djMuNDlhMzguMTMgMzguMTMgMCAwIDAtMTIuNDUtMnEtMTIuNyAwLTIwLjkyIDZjLTU=
+uNDggNC04IDEwLTggMTYuOTQgMCA2LjQ4IDIgMTEuNDYgNi40NyAxNS40NHMxMCA1LjQ4IDE2Lj=
+QzIDUuNDggMTIuNDUtMi40OSAxOC40My03djUuNDhoMTYuOTNWOTEuNzljMC04LTIuNDktMTQuN=
+DUtOC0xOC45M20tMzAuMzggMzYuODZjMi0xLjQ5IDQuNDgtMiA4LTJhNDIuMzcgNDIuMzcgMCAw=
+IDEgMTIuOTUgMi40OXY2LjQ4YTIyIDIyIDAgMCAxLTE0Ljk0IDUuNDhjLTMgMC01LjQ4LS41LTc=
+tMnMtMi40OS0zLTIuNDktNWE4LjE3IDguMTcgMCAwIDEgMy40OS01LjQ4bTEwNC41NC0zNS44NG=
+MtNS01LjQ4LTExLjQ1LTgtMTkuOTItOHEtMTAuNDYgMC0xNi40MyA2di00aC0xNi45NHY2OC4yN=
+WgxNy40M1Y5OC4yNmMwLTUgMS05LjQ3IDMuNDktMTIuNDVhMTIuNTQgMTIuNTQgMCAwIDEgMTAt=
+NC40OCAxMC45NCAxMC45NCAwIDAgMSA5IDQgMTggMTggMCAwIDEgMy40OSAxMXYzOS44NUgxMDA=
+yVjk2LjI3cS0uNzUtMTQuMi03LjQ3LTIyLjQybS00MjMuMzEtMWMtNS00LjQ4LTEyLjQ1LTYuND=
+gtMjEuNDEtNi40OGE0My41OSA0My41OSAwIDAgMC0xNS45NCAzLjQ5Yy00LjQ4IDIuNDktOSA2L=
+TExLjQ1IDExbDExIDEwLjQ2YzQuNDgtNy40NyA5LjQ2LTEwIDE2LjQzLTEwYTEzLjkgMTMuOSAw=
+IDAgMSA5IDMgOSA5IDAgMCAxIDMuNDkgNy40N3YzLjQ5YTM4LjEzIDM4LjEzIDAgMCAwLTEyLjQ=
+1LTJxLTEyLjcgMC0yMC45MiA2Yy01LjQ4IDQtOCAxMC04IDE2Ljk0IDAgNi40OCAyIDExLjQ2ID=
+YuNDcgMTUuNDRzMTAgNS40OCAxNi40MyA1LjQ4IDEyLjQ1LTIuNDkgMTguNDMtN3Y1LjQ4aDE2L=
+jkzVjkxLjc5YzAtOC0zLTE0LjQ1LTgtMTguOTNtLTMwLjg4IDM2Ljg2YzItMS40OSA0LjQ4LTIg=
+OC0yYTQyLjM3IDQyLjM3IDAgMCAxIDEyLjk1IDIuNDl2Ni40OGEyMiAyMiAwIDAgMS0xNC45NCA=
+1LjQ4Yy0zIDAtNS40OC0uNS03LTJzLTIuNDktMy0yLjQ5LTVhMTQuODQgMTQuODQgMCAwIDEgMy=
+40OS01LjQ4bTEzMiAyNy45YTQ5LjgyIDQ5LjgyIDAgMSAxIDQ5LjgtNDkuODIgNTAgNTAgMCAwI=
+DEtNDkuOCA0OS44Mm0wLTgyLjY5YTMyLjM4IDMyLjM4IDAgMSAwIDMyLjMzIDMyLjQgMzIuMzEg=
+MzIuMzEgMCAwIDAtMzIuMzctMzIuMzgiIGZpbGw9IiMwMDgwZmYiLz48L3N2Zz4=3D" height=
+=3D"50" alt=3D"Digital Ocean">
+            <p class=3D"my-4 fs-ml">
+                The simplest cloud platform for developers &amp; teams. Sta=
+rt with a
+                <span class=3D"fw-bold">$200</span> free credit.
+            </p>
+            <div class=3D"text-center text-md-end">
+                <a href=3D"https://attacomsian.com/go/digitalocean" rel=3D"=
+nofollow" class=3D"fw-bold stretched-link" target=3D"_blank">Learn more =E2=
+=9F=B6</a>
+            </div>
+        </div>
+    </div>
+
+                    <div class=3D"card mb-4 bg-warning bg-opacity-10 border=
+-0">
+                        <div class=3D"card-body">
+                            <h3>Buy me a coffee =E2=98=95</h3>
+                            <p class=3D"fs-ml">
+                                If you enjoy reading my articles and want t=
+o help me out paying bills, please
+                                consider buying me a coffee ($5) or two ($1=
+0). I will be highly grateful to you =E2=9C=8C=EF=B8=8F
+                            </p>
+                            <p class=3D"fs-ml">Enter the number of coffees =
+below:</p>
+                            <div class=3D"input-group mb-2">
+                                <input type=3D"number" placeholder=3D"0 cof=
+fee" min=3D"1" value=3D"2" aria-label=3D"Coffees" class=3D"form-control fw-=
+bold" id=3D"donate-amount" aria-describedby=3D"btn-donate">
+                                <button class=3D"btn btn-primary" type=3D"b=
+utton" id=3D"btn-donate">Buy</button>
+                            </div>
+                            <div id=3D"notify" class=3D"text-danger"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- newsletter -->
+
+   =20
+    <section class=3D"py-5 bg-light">
+        <div class=3D"container">
+            <div class=3D"row">
+                <div class=3D"col-12 col-md-10 col-lg-8 mx-auto text-center=
+">
+                   =20
+                   =20
+                        <h2 class=3D"fw-bolder">=E2=9C=A8 Learn to build mo=
+dern web applications using
+                            JavaScript and Spring Boot</h2>
+                   =20
+                    <p class=3D"fs-lg">
+                        I started this blog as a place to share everything =
+I have learned in the last decade. I
+                        write about modern JavaScript, Node.js, Spring Boot=
+, core Java, RESTful APIs, and all things
+                        web development.
+                    </p>
+                    <p class=3D"fs-lg">
+                        The newsletter is sent every week and includes <spa=
+n class=3D"fw-semi-bold text-decoration-underline">early access</span> to c=
+lear, concise, and
+                        easy-to-follow tutorials, and other stuff I think y=
+ou'd enjoy! No spam ever, unsubscribe at any
+                        time.
+                    </p>
+                    <div class=3D"card border-0 mt-4 mb-5">
+                        <div class=3D"card-body p-3">
+                            <div class=3D"row">
+                                <div class=3D"col-md">
+                                    <input type=3D"email" placeholder=3D"Yo=
+ur Email Address" aria-label=3D"Your Email Address" class=3D"form-control f=
+orm-control-lg fw-medium border-0" aria-describedby=3D"subscribe-newsletter=
+" id=3D"newsletter-email" autocomplete=3D"off">
+                                </div>
+                                <div class=3D"col-md-auto mt-3 mt-md-0">
+                                    <button class=3D"btn btn-primary w-100 =
+btn-lg btn-newsletter" type=3D"button" id=3D"subscribe-newsletter">
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<footer class=3D"py-5 bg-light">
+    <div class=3D"container">
+        <div class=3D"row">
+            <div class=3D"col-md order-4 order-md-0 mt-3 mt-md-0 text-md-st=
+art text-center mt-5 mt-md-0">
+                <div class=3D"text-primary brand-logo mb-2">
+                   =20
+    <svg xmlns=3D"http://www.w3.org/2000/svg" viewBox=3D"0 0 133 49"><g fil=
+l=3D"none"><path fill=3D"#006AFF" stroke=3D"#006AFF" stroke-width=3D"3" d=
+=3D"M10.46 48.02c4.56 0 10.88-2.94 18.96-8.82 5.4-3.96 10.78-8.56 16.14-13.=
+8l7.2-.18c-3.08 6.24-4.62 11.38-4.62 15.42 0 1.96.48 3.12 1.44 3.48.4.08.95=
+.12 1.65.12s1.56-.24 2.58-.72 1.63-1.08 1.83-1.8c0-.2-.07-.3-.21-.3-.14 0-.=
+54.27-1.2.81-.66.54-1.21.81-1.65.81-1.16 0-1.74-.92-1.74-2.76 0-2.64 1.86-7=
+.6 5.58-14.88 5.84-.4 8.76-.86 8.76-1.38 0-.2-.72-.3-2.16-.3l-5.82.12c1.04-=
+1.88 2.3-4.33 3.78-7.35 1.48-3.02 2.62-5.08 3.42-6.18.8-1.1 1.66-1.97 2.58-=
+2.61.44-.32.84-1.2 1.2-2.64.36-1.44.54-2.5.54-3.18 0-.68-.22-1.02-.66-1.02-=
+.783 0-2.668 1.482-5.655 4.447l-.508.507c-.691.696-1.437 1.464-2.237 2.306-=
+6.84 7.2-11.98 12.38-15.42 15.54-1.8 0-4.02-.16-6.66-.48-1.36 0-2.12.74-2.2=
+8 2.22-.16.64 1.04.72 3.6.24 1.2-.2 2.5-.34 3.9-.42-7.12 6.56-12.26 11.02-1=
+5.42 13.38-7.12 5.36-12.76 8.04-16.92 8.04-4.36 0-6.54-2.14-6.54-6.42 0-2.8=
+4 1.13-6.8 3.39-11.88 2.26-5.08 5.56-9.36 9.9-12.84 4.34-3.48 8.07-5.22 11.=
+19-5.22 1.52 0 2.63.49 3.33 1.47.7.98 1.05 2.27 1.05 3.87s-.68 3.46-2.04 5.=
+58l-1.98 3.24c0 .08.07.12.21.12.14 0 .27-.02.39-.06 1.24-.64 2.46-2.16 3.66=
+-4.56 1.2-2.4 1.8-4.58 1.8-6.54 0-2.92-1.98-4.38-5.94-4.38-3.96 0-8.44 1.81=
+-13.44 5.43-5 3.62-8.94 7.99-11.82 13.11C1.46 31.4.38 35.04.38 38.48c0 5.8 =
+3.08 8.96 9.24 9.48.28.04.56.06.84.06zM53.3 23.66c-1.24 0-2.28-.02-3.12-.06=
+h-3.54L62 9.2c-4.64 7.36-7.54 12.18-8.7 14.46zm12.12 17.7c2.84 0 5.82-.96 8=
+.94-2.88 2.6-1.56 4.94-3.62 7.02-6.18.6-.72.9-1.2.9-1.44s-.06-.36-.18-.36c-=
+.2 0-.58.28-1.14.84-2.56 2.72-4.96 4.78-7.2 6.18-.84.52-2.04 1.08-3.6 1.68-=
+1.56.6-2.82.9-3.78.9-2.04 0-3.06-.74-3.06-2.22 0-1.56 1.02-4.03 3.06-7.41s3=
+.44-5.41 4.2-6.09c.043-.013.113-.029.21-.048l.165-.03c.958-.172 3.523-.526 =
+7.695-1.062 4.98-.64 7.47-1.14 7.47-1.5 0-.04-.06-.1-.18-.18l-8.64.12c-1.68=
+ 0-3.04-.02-4.08-.06 1.92-2.16 2.88-3.46 2.88-3.9 0-.44-.3-.82-.9-1.14-.6-.=
+32-1.1-.48-1.5-.48-.4 0-1.16.72-2.28 2.16-.92 1.2-1.74 2.26-2.46 3.18h-3.48=
+c-.24.04-.42.06-.54.06-.96.28-1.44.76-1.44 1.44 0 .92.58 1.38 1.74 1.38.4 0=
+ .88-.06 1.44-.18-.76 1.4-1.86 3.53-3.3 6.39-1.44 2.86-2.16 5.11-2.16 6.75 =
+0 1.64.39 2.73 1.17 3.27.78.54 1.79.81 3.03.81zm17.82 0c2.84 0 5.82-.96 8.9=
+4-2.88 2.6-1.56 4.94-3.62 7.02-6.18.6-.72.9-1.2.9-1.44s-.06-.36-.18-.36c-.2=
+ 0-.58.28-1.14.84-2.56 2.72-4.96 4.78-7.2 6.18-.84.52-2.04 1.08-3.6 1.68-1.=
+56.6-2.82.9-3.78.9-2.04 0-3.06-.74-3.06-2.22 0-1.56 1.02-4.03 3.06-7.41s3.4=
+4-5.41 4.2-6.09c.043-.013.113-.029.21-.048l.165-.03c.958-.172 3.523-.526 7.=
+695-1.062 4.98-.64 7.47-1.14 7.47-1.5 0-.04-.06-.1-.18-.18l-8.64.12c-1.68 0=
+-3.04-.02-4.08-.06 1.92-2.16 2.88-3.46 2.88-3.9 0-.44-.3-.82-.9-1.14-.6-.32=
+-1.1-.48-1.5-.48-.4 0-1.16.72-2.28 2.16-.92 1.2-1.74 2.26-2.46 3.18H83.3c-.=
+24.04-.42.06-.54.06-.96.28-1.44.76-1.44 1.44 0 .92.58 1.38 1.74 1.38.4 0 .8=
+8-.06 1.44-.18-.76 1.4-1.86 3.53-3.3 6.39-1.44 2.86-2.16 5.11-2.16 6.75 0 1=
+.64.39 2.73 1.17 3.27.78.54 1.79.81 3.03.81zm18.21-.06c1.06 0 2.77-1.04 5.1=
+3-3.12l3.72-3.6a8.88 8.88 0 00-.24 2.04c0 1.96.88 3.28 2.64 3.96.32.12.66.1=
+8 1.02.18 2.68 0 6.58-3.42 11.7-10.26.36-.48.54-.87.54-1.17 0-.3-.08-.45-.2=
+4-.45-.16 0-.3.08-.42.24-5.52 6.88-9.32 10.32-11.4 10.32-.68 0-1.12-.46-1.3=
+2-1.38-.04-.12-.06-.24-.06-.36 0-1.44 1.24-3.99 3.72-7.65 2.48-3.66 3.72-5.=
+59 3.72-5.79 0-.2-.2-.48-.6-.84-.4-.36-.82-.54-1.26-.54l-.84.18c-.04 0-.1-.=
+11-.18-.33-.08-.22-.18-.49-.3-.81-.44-.92-1.32-1.38-2.64-1.38-3.4 0-7.14 2.=
+03-11.22 6.09-4.08 4.06-6.12 7.55-6.12 10.47 0 1.32.54 2.38 1.62 3.18.96.68=
+ 1.97 1.02 3.03 1.02zm-.63-1.32c-1 0-1.5-.72-1.5-2.16 0-2.48 2.02-5.61 6.06=
+-9.39 4.04-3.78 7.28-5.67 9.72-5.67.72 0 1.24.28 1.56.84l-6.36 8.76c-4 5.08=
+-7.16 7.62-9.48 7.62z"></path><path fill=3D"#f49a40" stroke=3D"#f49a40" str=
+oke-width=3D"3" d=3D"M129.68 41.06c.6 0 1.15-.19 1.65-.57.5-.38.75-.82.75-1=
+.32 0-.5-.27-.95-.81-1.35-.54-.4-1.11-.6-1.71-.6-1.52 0-2.28.58-2.28 1.74 0=
+ .56.25 1.05.75 1.47.5.42 1.05.63 1.65.63z"></path></g></svg>
+
+                </div>
+                <p class=3D"fw-medium">Maker. Developer. Writer.</p>
+                <p class=3D"small fw-medium text-muted mb-0">
+                    =C2=A9 <span>2025</span> Made with <span class=3D"text-=
+primary">=E2=9D=A4=EF=B8=8F</span>
+                    by Atta
+                </p>
+            </div>
+            <div class=3D"col-md-2 col-6 order-0 order-md-1">
+                <div class=3D"h6 mb-2">Products</div>
+                <ul class=3D"nav flex-column">
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" target=3D"_blank" href=
+=3D"https://www.dombuck.com/?utm_source=3Datta-footer" rel=3D"noopener">Dom=
+Buck</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" target=3D"_blank" href=
+=3D"https://startupbase.io/?utm_source=3Datta-footer" rel=3D"noopener">Star=
+tupBase</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" target=3D"_blank" href=
+=3D"https://acquirebase.com/?utm_source=3Datta-footer" rel=3D"noopener">Acq=
+uireBase</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" target=3D"_blank" href=
+=3D"https://protips.io/?utm_source=3Datta-footer" rel=3D"noopener">Protips<=
+/a>
+                    </li>
+                </ul>
+            </div>
+            <div class=3D"col-md-2 col-6 order-1 order-md-2">
+                <div class=3D"h6 mb-2">Links</div>
+                <ul class=3D"nav flex-column">
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" href=3D"https://attacoms=
+ian.com/blog">Articles</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" href=3D"https://attacoms=
+ian.com/topics">Topics</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" href=3D"https://attacoms=
+ian.com/sponsors">Advertise</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" href=3D"mailto:hi@attaco=
+msian.com">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class=3D"col-md-2 col-6 order-2 order-md-3 mt-3 mt-md-0">
+                <div class=3D"h6 mb-2">Follow Me</div>
+                <ul class=3D"nav flex-column">
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" target=3D"_blank" href=
+=3D"https://twitter.com/attacomsian" rel=3D"noopener nofollow">Twitter</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" target=3D"_blank" href=
+=3D"https://www.linkedin.com/in/attacomsian" rel=3D"noopener nofollow">Link=
+edIn</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" target=3D"_blank" href=
+=3D"https://github.com/attacomsian" rel=3D"noopener nofollow">GitHub</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" target=3D"_blank" href=
+=3D"https://feeds.feedburner.com/attacomsian" rel=3D"noopener nofollow">RSS=
+ Feed</a>
+                    </li>
+                </ul>
+            </div>
+            <div class=3D"col-md-2 col-6 order-3 order-md-4 mt-3 mt-md-0">
+                <div class=3D"h6 mb-2">Others</div>
+                <ul class=3D"nav flex-column">
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" href=3D"https://attacoms=
+ian.com/privacy">Privacy Policy</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" href=3D"https://attacoms=
+ian.com/cookies">Cookies</a>
+                    </li>
+                    <li class=3D"nav-item">
+                        <a class=3D"nav-link px-0" href=3D"https://attacoms=
+ian.com/disclaimer">Disclaimer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--Subscribe Popup-->
+
+    <div class=3D"modal fade" id=3D"newsletterModal" tabindex=3D"-1" role=
+=3D"dialog" aria-labelledby=3D"newsletterModalLabel" data-backdrop=3D"stati=
+c" aria-hidden=3D"trie" style=3D"display: none; padding-right: 15px;">
+        <div class=3D"modal-dialog modal-dialog-centered" role=3D"document"=
+>
+            <div class=3D"modal-content">
+                <div class=3D"modal-body p-md-4">
+                    <button type=3D"button" class=3D"btn-close d-flex ms-au=
+to" data-dismiss=3D"modal" aria-label=3D"Close"></button>
+                    <h3 class=3D"fw-bolder">
+                        =E2=9C=A8 Learn to build modern web applications us=
+ing JavaScript and Spring Boot
+                    </h3>
+                    <ul class=3D"styled-list fs-ml fw-semi-bold my-4">
+                        <li>JavaScript, Node.js &amp; Spring Boot</li>
+                        <li>In-depth tutorials</li>
+                        <li>Super-handy protips</li>
+                        <li>Cool stuff around the web</li>
+                        <li>1-click unsubscribe</li>
+                        <li>No spam, free-forever!</li>
+                    </ul>
+                    <div class=3D"clearfix"></div>
+                    <div class=3D"row mt-4">
+                        <div class=3D"col-12">
+                            <div class=3D"mb-2">
+                                <input id=3D"popup-email" name=3D"email" ty=
+pe=3D"email" class=3D"form-control" placeholder=3D"Your Email Address" aria=
+-label=3D"Your Email Address" aria-describedby=3D"popup-newsletter" require=
+d=3D"">
+                            </div>
+                            <button class=3D"btn btn-primary btn-block mt-2=
+ btn-newsletter" id=3D"popup-newsletter" type=3D"button">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   =20
+   =20
+       =20
+       =20
+   =20
+
+
+
+</body></html>
+------MultipartBoundary--66NsEcBSORhzAaIPAq0mZm40Z59Q7wdZk8jCOESiop----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-5370eefd-db1a-4089-aab7-dc88806111d9@mhtml.blink
+
+@charset "utf-8";
+
+:root { --bs-blue: #006AFF; --bs-indigo: #5c51e0; --bs-purple: #9B51E0; --b=
+s-pink: #ff4081; --bs-red: #F44336; --bs-orange: #f49a40; --bs-yellow: #F2C=
+94C; --bs-green: #27ae60; --bs-teal: #20c997; --bs-cyan: #00e5ff; --bs-blac=
+k: #000; --bs-white: #fff; --bs-gray: #6c757d; --bs-gray-dark: #343a40; --b=
+s-gray-100: #f8f9fa; --bs-gray-200: #e9ecef; --bs-gray-300: #dee2e6; --bs-g=
+ray-400: #ced4da; --bs-gray-500: #adb5bd; --bs-gray-600: #6c757d; --bs-gray=
+-700: #495057; --bs-gray-800: #343a40; --bs-gray-900: #212529; --bs-primary=
+: #006AFF; --bs-secondary: #9B51E0; --bs-success: #27ae60; --bs-info: #ff40=
+81; --bs-warning: #f49a40; --bs-danger: #F44336; --bs-light: #f8f9fa; --bs-=
+dark: #1b1642; --bs-primary-rgb: 0,106,255; --bs-secondary-rgb: 155,81,224;=
+ --bs-success-rgb: 39,174,96; --bs-info-rgb: 255,64,129; --bs-warning-rgb: =
+244,154,64; --bs-danger-rgb: 244,67,54; --bs-light-rgb: 248,249,250; --bs-d=
+ark-rgb: 27,22,66; --bs-primary-text-emphasis: #002a66; --bs-secondary-text=
+-emphasis: #3e205a; --bs-success-text-emphasis: #104626; --bs-info-text-emp=
+hasis: #661a34; --bs-warning-text-emphasis: #623e1a; --bs-danger-text-empha=
+sis: #621b16; --bs-light-text-emphasis: #495057; --bs-dark-text-emphasis: #=
+495057; --bs-primary-bg-subtle: #cce1ff; --bs-secondary-bg-subtle: #ebdcf9;=
+ --bs-success-bg-subtle: #d4efdf; --bs-info-bg-subtle: #ffd9e6; --bs-warnin=
+g-bg-subtle: #fdebd9; --bs-danger-bg-subtle: #fdd9d7; --bs-light-bg-subtle:=
+ #fcfcfd; --bs-dark-bg-subtle: #ced4da; --bs-primary-border-subtle: #99c3ff=
+; --bs-secondary-border-subtle: #d7b9f3; --bs-success-border-subtle: #a9dfb=
+f; --bs-info-border-subtle: #ffb3cd; --bs-warning-border-subtle: #fbd7b3; -=
+-bs-danger-border-subtle: #fbb4af; --bs-light-border-subtle: #e9ecef; --bs-=
+dark-border-subtle: #adb5bd; --bs-white-rgb: 255,255,255; --bs-black-rgb: 0=
+,0,0; --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helv=
+etica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emo=
+ji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; --bs-font-monosp=
+ace: "JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Li=
+beration Mono","Courier New",monospace; --bs-gradient: linear-gradient(180d=
+eg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); --bs-body-font-fami=
+ly: var(--bs-font-sans-serif); --bs-body-font-size: 1rem; --bs-body-font-we=
+ight: 400; --bs-body-line-height: 1.5; --bs-body-color: #212529; --bs-body-=
+color-rgb: 33,37,41; --bs-body-bg: #fff; --bs-body-bg-rgb: 255,255,255; --b=
+s-emphasis-color: #000; --bs-emphasis-color-rgb: 0,0,0; --bs-secondary-colo=
+r: rgba(33, 37, 41, 0.75); --bs-secondary-color-rgb: 33,37,41; --bs-seconda=
+ry-bg: #e9ecef; --bs-secondary-bg-rgb: 233,236,239; --bs-tertiary-color: rg=
+ba(33, 37, 41, 0.5); --bs-tertiary-color-rgb: 33,37,41; --bs-tertiary-bg: #=
+f8f9fa; --bs-tertiary-bg-rgb: 248,249,250; --bs-heading-color: #1b1642; --b=
+s-link-color: #006AFF; --bs-link-color-rgb: 0,106,255; --bs-link-decoration=
+: none; --bs-link-hover-color: #0055cc; --bs-link-hover-color-rgb: 0,85,204=
+; --bs-link-hover-decoration: none; --bs-code-color: #ff4081; --bs-highligh=
+t-color: #212529; --bs-highlight-bg: #fcf4db; --bs-border-width: 1px; --bs-=
+border-style: solid; --bs-border-color: #e9ecef; --bs-border-color-transluc=
+ent: rgba(0, 0, 0, 0.175); --bs-border-radius: 0.375rem; --bs-border-radius=
+-sm: 0.25rem; --bs-border-radius-lg: 0.5rem; --bs-border-radius-xl: 1rem; -=
+-bs-border-radius-xxl: 2rem; --bs-border-radius-2xl: var(--bs-border-radius=
+-xxl); --bs-border-radius-pill: 50rem; --bs-box-shadow: 0 0.5rem 1rem rgba(=
+0, 0, 0, 0.15); --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)=
+; --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175); --bs-box-shadow-ins=
+et: inset 0 1px 2px rgba(0, 0, 0, 0.075); --bs-focus-ring-width: 0.25rem; -=
+-bs-focus-ring-opacity: 0.25; --bs-focus-ring-color: rgba(0, 106, 255, 0.25=
+); --bs-form-valid-color: #27ae60; --bs-form-valid-border-color: #27ae60; -=
+-bs-form-invalid-color: #F44336; --bs-form-invalid-border-color: #F44336; }
+
+*, ::after, ::before { box-sizing: border-box; }
+
+@media (prefers-reduced-motion: no-preference) {
+  :root { scroll-behavior: smooth; }
+}
+
+body { margin: 0px; font-family: var(--bs-body-font-family); font-size: var=
+(--bs-body-font-size); font-weight: var(--bs-body-font-weight); line-height=
+: var(--bs-body-line-height); color: var(--bs-body-color); text-align: var(=
+--bs-body-text-align); background-color: var(--bs-body-bg); text-size-adjus=
+t: 100%; -webkit-tap-highlight-color: transparent; }
+
+.h1, .h2, .h3, .h6, h1, h2, h3, h6 { margin-top: 0px; margin-bottom: 1.15re=
+m; font-family: Sora, system-ui, -apple-system, "Segoe UI", Roboto, "Helvet=
+ica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color =
+Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-weigh=
+t: 700; line-height: 1.5; color: var(--bs-heading-color); }
+
+.h1, h1 { font-size: calc(1.325rem + 0.9vw); }
+
+@media (min-width: 1200px) {
+  .h1, h1 { font-size: 2rem; }
+}
+
+.h2, h2 { font-size: calc(1.3rem + 0.6vw); }
+
+@media (min-width: 1200px) {
+  .h2, h2 { font-size: 1.75rem; }
+}
+
+.h3, h3 { font-size: calc(1.275rem + 0.3vw); }
+
+@media (min-width: 1200px) {
+  .h3, h3 { font-size: 1.5rem; }
+}
+
+.h6, h6 { font-size: 1rem; }
+
+p { margin-top: 0px; margin-bottom: 1rem; }
+
+ol, ul { padding-left: 2rem; }
+
+ol, ul { margin-top: 0px; margin-bottom: 1rem; }
+
+ol ol, ol ul, ul ol, ul ul { margin-bottom: 0px; }
+
+dd { margin-bottom: 0.5rem; margin-left: 0px; }
+
+b, strong { font-weight: 800; }
+
+.small, small { font-size: 0.875em; }
+
+.mark, mark { padding: 0.1875em; color: var(--bs-highlight-color); backgrou=
+nd-color: var(--bs-highlight-bg); }
+
+a { color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1)); text-de=
+coration: none; }
+
+a:hover { --bs-link-color-rgb: var(--bs-link-hover-color-rgb); text-decorat=
+ion: none; }
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover { color: inher=
+it; text-decoration: none; }
+
+code { font-family: var(--bs-font-monospace); font-size: 1em; }
+
+code { font-size: 0.875em; color: var(--bs-code-color); overflow-wrap: brea=
+k-word; }
+
+a > code { color: inherit; }
+
+img, svg { vertical-align: middle; }
+
+th { text-align: -webkit-match-parent; }
+
+th { border-color: inherit; border-style: solid; border-width: 0px; }
+
+button { border-radius: 0px; }
+
+button:focus:not(:focus-visible) { outline: 0px; }
+
+button, input { margin: 0px; font-family: inherit; font-size: inherit; line=
+-height: inherit; }
+
+button { text-transform: none; }
+
+[role=3D"button"] { cursor: pointer; }
+
+[type=3D"button"], [type=3D"submit"], button { appearance: button; }
+
+[type=3D"button"]:not(:disabled), [type=3D"submit"]:not(:disabled), button:=
+not(:disabled) { cursor: pointer; }
+
+::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-fields-wrapper, =
+::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute, ::-webk=
+it-datetime-edit-month-field, ::-webkit-datetime-edit-text, ::-webkit-datet=
+ime-edit-year-field { padding: 0px; }
+
+::-webkit-inner-spin-button { height: auto; }
+
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+::-webkit-search-decoration { appearance: none; }
+
+::-webkit-color-swatch-wrapper { padding: 0px; }
+
+::-webkit-file-upload-button { font: inherit; appearance: button; }
+
+::file-selector-button { font: inherit; appearance: button; }
+
+summary { display: list-item; cursor: pointer; }
+
+[hidden] { display: none !important; }
+
+.display-4 { font-size: calc(1.375rem + 1.5vw); font-weight: 300; line-heig=
+ht: 1.5; }
+
+@media (min-width: 1200px) {
+  .display-4 { font-size: 2.5rem; }
+}
+
+.display-5 { font-size: calc(1.275rem + 0.3vw); font-weight: 300; line-heig=
+ht: 1.5; }
+
+@media (min-width: 1200px) {
+  .display-5 { font-size: 1.5rem; }
+}
+
+.list-inline { padding-left: 0px; list-style: none; }
+
+.list-inline-item { display: inline-block; }
+
+.list-inline-item:not(:last-child) { margin-right: 0.5rem; }
+
+.img-fluid { max-width: 100%; height: auto; }
+
+.container, .container-fluid { --bs-gutter-x: 1.5rem; --bs-gutter-y: 0; wid=
+th: 100%; padding-right: calc(var(--bs-gutter-x) * .5); padding-left: calc(=
+var(--bs-gutter-x) * .5); margin-right: auto; margin-left: auto; }
+
+@media (min-width: 576px) {
+  .container { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+}
+
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+
+@media (min-width: 1400px) {
+  .container { max-width: 1320px; }
+}
+
+:root { --bs-breakpoint-xs: 0; --bs-breakpoint-sm: 576px; --bs-breakpoint-m=
+d: 768px; --bs-breakpoint-lg: 992px; --bs-breakpoint-xl: 1200px; --bs-break=
+point-xxl: 1400px; }
+
+.row { --bs-gutter-x: 1.5rem; --bs-gutter-y: 0; display: flex; flex-wrap: w=
+rap; margin-top: calc(-1 * var(--bs-gutter-y)); margin-right: calc(-.5 * va=
+r(--bs-gutter-x)); margin-left: calc(-.5 * var(--bs-gutter-x)); }
+
+.row > * { flex-shrink: 0; width: 100%; max-width: 100%; padding-right: cal=
+c(var(--bs-gutter-x) * .5); padding-left: calc(var(--bs-gutter-x) * .5); ma=
+rgin-top: var(--bs-gutter-y); }
+
+.col { flex: 1 0 0%; }
+
+.row-cols-1 > * { flex: 0 0 auto; width: 100%; }
+
+.col-6 { flex: 0 0 auto; width: 50%; }
+
+.col-12 { flex: 0 0 auto; width: 100%; }
+
+@media (min-width: 576px) {
+  .col-sm-12 { flex: 0 0 auto; width: 100%; }
+}
+
+@media (min-width: 768px) {
+  .col-md { flex: 1 0 0%; }
+  .row-cols-md-2 > * { flex: 0 0 auto; width: 50%; }
+  .col-md-auto { flex: 0 0 auto; width: auto; }
+  .col-md-2 { flex: 0 0 auto; width: 16.6667%; }
+  .col-md-8 { flex: 0 0 auto; width: 66.6667%; }
+  .col-md-10 { flex: 0 0 auto; width: 83.3333%; }
+}
+
+@media (min-width: 992px) {
+  .row-cols-lg-3 > * { flex: 0 0 auto; width: 33.3333%; }
+  .col-lg-4 { flex: 0 0 auto; width: 33.3333%; }
+  .col-lg-8 { flex: 0 0 auto; width: 66.6667%; }
+}
+
+.form-control { display: block; width: 100%; padding: 0.625rem 1rem; font-s=
+ize: 1rem; font-weight: 400; line-height: 1.5; color: var(--bs-body-color);=
+ appearance: none; background-color: rgb(255, 255, 255); background-clip: p=
+adding-box; border: var(--bs-border-width) solid #e9ecef; border-radius: va=
+r(--bs-border-radius); transition: border-color 0.15s ease-in-out 0s, box-s=
+hadow 0.15s ease-in-out 0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control { transition: none 0s ease 0s; }
+}
+
+.form-control:focus { color: var(--bs-body-color); background-color: rgb(25=
+5, 255, 255); border-color: rgb(128, 181, 255); outline: 0px; box-shadow: r=
+gba(0, 106, 255, 0.25) 0px 0px 0px 0.25rem; }
+
+.form-control::-webkit-date-and-time-value { min-width: 85px; height: 1.5em=
+; margin: 0px; }
+
+.form-control::-webkit-datetime-edit { display: block; padding: 0px; }
+
+.form-control::placeholder { color: rgb(108, 117, 125); opacity: 1; }
+
+.form-control:disabled { background-color: var(--bs-secondary-bg); opacity:=
+ 1; }
+
+.form-control::-webkit-file-upload-button { padding: 0.625rem 1rem; margin:=
+ -0.625rem -1rem; margin-inline-end: 1rem; color: var(--bs-body-color); bac=
+kground-color: var(--bs-tertiary-bg); pointer-events: none; border-color: i=
+nherit; border-style: solid; border-width: 0px; border-inline-end-width: va=
+r(--bs-border-width); border-radius: 0px; transition: color 0.15s ease-in-o=
+ut 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-ou=
+t 0s, box-shadow 0.15s ease-in-out 0s; }
+
+.form-control::file-selector-button { padding: 0.625rem 1rem; margin: -0.62=
+5rem -1rem; margin-inline-end: 1rem; color: var(--bs-body-color); backgroun=
+d-color: var(--bs-tertiary-bg); pointer-events: none; border-color: inherit=
+; border-style: solid; border-width: 0px; border-inline-end-width: var(--bs=
+-border-width); border-radius: 0px; transition: color 0.15s ease-in-out 0s,=
+ background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, =
+box-shadow 0.15s ease-in-out 0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control::-webkit-file-upload-button { transition: none 0s ease 0s; =
+}
+  .form-control::file-selector-button { transition: none 0s ease 0s; }
+}
+
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-but=
+ton { background-color: var(--bs-secondary-bg); }
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button { =
+background-color: var(--bs-secondary-bg); }
+
+.form-control-lg { min-height: calc(1.5em + 1.5rem + calc(var(--bs-border-w=
+idth) * 2)); padding: 0.75rem 1.25rem; font-size: 1.125rem; border-radius: =
+var(--bs-border-radius-lg); }
+
+.form-control-lg::-webkit-file-upload-button { padding: 0.75rem 1.25rem; ma=
+rgin: -0.75rem -1.25rem; margin-inline-end: 1.25rem; }
+
+.form-control-lg::file-selector-button { padding: 0.75rem 1.25rem; margin: =
+-0.75rem -1.25rem; margin-inline-end: 1.25rem; }
+
+.input-group { position: relative; display: flex; flex-wrap: wrap; align-it=
+ems: stretch; width: 100%; }
+
+.input-group > .form-control { position: relative; flex: 1 1 auto; width: 1=
+%; min-width: 0px; }
+
+.input-group > .form-control:focus { z-index: 5; }
+
+.input-group .btn { position: relative; z-index: 2; }
+
+.input-group .btn:focus { z-index: 5; }
+
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .=
+input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):=
+not(.dropdown-menu):not(.form-floating) { border-top-right-radius: 0px; bor=
+der-bottom-right-radius: 0px; }
+
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):n=
+ot(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) { margin-l=
+eft: calc(var(--bs-border-width) * -1); border-top-left-radius: 0px; border=
+-bottom-left-radius: 0px; }
+
+.btn { --bs-btn-padding-x: 1rem; --bs-btn-padding-y: 0.625rem; --bs-btn-fon=
+t-size: 1rem; --bs-btn-font-weight: 600; --bs-btn-line-height: 1.5; --bs-bt=
+n-color: var(--bs-body-color); --bs-btn-bg: transparent; --bs-btn-border-wi=
+dth: var(--bs-border-width); --bs-btn-border-color: transparent; --bs-btn-b=
+order-radius: var(--bs-border-radius); --bs-btn-hover-border-color: transpa=
+rent; --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1p=
+x rgba(0, 0, 0, 0.075); --bs-btn-disabled-opacity: 0.65; --bs-btn-focus-box=
+-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5); display: i=
+nline-block; padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x); font=
+-family: var(--bs-btn-font-family); font-size: var(--bs-btn-font-size); fon=
+t-weight: var(--bs-btn-font-weight); line-height: var(--bs-btn-line-height)=
+; color: var(--bs-btn-color); text-align: center; vertical-align: middle; c=
+ursor: pointer; user-select: none; border: var(--bs-btn-border-width) solid=
+ var(--bs-btn-border-color); border-radius: var(--bs-btn-border-radius); ba=
+ckground-color: var(--bs-btn-bg); transition: color 0.15s ease-in-out 0s, b=
+ackground-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, bo=
+x-shadow 0.15s ease-in-out 0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none 0s ease 0s; }
+}
+
+.btn:hover { color: var(--bs-btn-hover-color); background-color: var(--bs-b=
+tn-hover-bg); border-color: var(--bs-btn-hover-border-color); }
+
+.btn:focus-visible { color: var(--bs-btn-hover-color); background-color: va=
+r(--bs-btn-hover-bg); border-color: var(--bs-btn-hover-border-color); outli=
+ne: 0px; box-shadow: var(--bs-btn-focus-box-shadow); }
+
+.btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:ac=
+tive { color: var(--bs-btn-active-color); background-color: var(--bs-btn-ac=
+tive-bg); border-color: var(--bs-btn-active-border-color); }
+
+.btn.active:focus-visible, .btn.show:focus-visible, .btn:first-child:active=
+:focus-visible, :not(.btn-check) + .btn:active:focus-visible { box-shadow: =
+var(--bs-btn-focus-box-shadow); }
+
+.btn.disabled, .btn:disabled { color: var(--bs-btn-disabled-color); pointer=
+-events: none; background-color: var(--bs-btn-disabled-bg); border-color: v=
+ar(--bs-btn-disabled-border-color); opacity: var(--bs-btn-disabled-opacity)=
+; }
+
+.btn-primary { --bs-btn-color: #fff; --bs-btn-bg: #006AFF; --bs-btn-border-=
+color: #006AFF; --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #005ad9; --b=
+s-btn-hover-border-color: #0055cc; --bs-btn-focus-shadow-rgb: 38,128,255; -=
+-bs-btn-active-color: #fff; --bs-btn-active-bg: #0055cc; --bs-btn-active-bo=
+rder-color: #0050bf; --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, =
+0.125); --bs-btn-disabled-color: #fff; --bs-btn-disabled-bg: #006AFF; --bs-=
+btn-disabled-border-color: #006AFF; }
+
+.btn-info { --bs-btn-color: #000; --bs-btn-bg: #ff4081; --bs-btn-border-col=
+or: #ff4081; --bs-btn-hover-color: #000; --bs-btn-hover-bg: #ff5d94; --bs-b=
+tn-hover-border-color: #ff538e; --bs-btn-focus-shadow-rgb: 217,54,110; --bs=
+-btn-active-color: #000; --bs-btn-active-bg: #ff669a; --bs-btn-active-borde=
+r-color: #ff538e; --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1=
+25); --bs-btn-disabled-color: #000; --bs-btn-disabled-bg: #ff4081; --bs-btn=
+-disabled-border-color: #ff4081; }
+
+.btn-lg { --bs-btn-padding-y: 0.75rem; --bs-btn-padding-x: 1.25rem; --bs-bt=
+n-font-size: 1.125rem; --bs-btn-border-radius: var(--bs-border-radius-lg); =
+}
+
+.fade { transition: opacity 0.15s linear 0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade { transition: none 0s ease 0s; }
+}
+
+.fade:not(.show) { opacity: 0; }
+
+.collapse:not(.show) { display: none; }
+
+.dropdown { position: relative; }
+
+.dropdown-toggle { white-space: nowrap; }
+
+.dropdown-toggle::after { display: inline-block; margin-left: 0.255em; vert=
+ical-align: 0.255em; content: ""; border-width: 0.3em 0.3em 0px; border-top=
+-style: solid; border-top-color: initial; border-right-style: solid; border=
+-right-color: transparent; border-bottom-style: initial; border-bottom-colo=
+r: initial; border-left-style: solid; border-left-color: transparent; }
+
+.dropdown-toggle:empty::after { margin-left: 0px; }
+
+.dropdown-menu { --bs-dropdown-zindex: 1000; --bs-dropdown-min-width: 10rem=
+; --bs-dropdown-padding-x: 0; --bs-dropdown-padding-y: 0.5rem; --bs-dropdow=
+n-spacer: 0.125rem; --bs-dropdown-font-size: 1rem; --bs-dropdown-color: var=
+(--bs-body-color); --bs-dropdown-bg: var(--bs-body-bg); --bs-dropdown-borde=
+r-color: var(--bs-border-color-translucent); --bs-dropdown-border-radius: v=
+ar(--bs-border-radius); --bs-dropdown-border-width: var(--bs-border-width);=
+ --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - var(--bs=
+-border-width)); --bs-dropdown-divider-bg: var(--bs-border-color-translucen=
+t); --bs-dropdown-divider-margin-y: 0.5rem; --bs-dropdown-box-shadow: var(-=
+-bs-box-shadow); --bs-dropdown-link-color: var(--bs-body-color); --bs-dropd=
+own-link-hover-color: var(--bs-body-color); --bs-dropdown-link-hover-bg: va=
+r(--bs-tertiary-bg); --bs-dropdown-link-active-color: #fff; --bs-dropdown-l=
+ink-active-bg: #006AFF; --bs-dropdown-link-disabled-color: var(--bs-tertiar=
+y-color); --bs-dropdown-item-padding-x: 1rem; --bs-dropdown-item-padding-y:=
+ 0.25rem; --bs-dropdown-header-color: #6c757d; --bs-dropdown-header-padding=
+-x: 1rem; --bs-dropdown-header-padding-y: 0.5rem; position: absolute; z-ind=
+ex: var(--bs-dropdown-zindex); display: none; min-width: var(--bs-dropdown-=
+min-width); padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding=
+-x); margin: 0px; font-size: var(--bs-dropdown-font-size); color: var(--bs-=
+dropdown-color); text-align: left; list-style: none; background-color: var(=
+--bs-dropdown-bg); background-clip: padding-box; border: var(--bs-dropdown-=
+border-width) solid var(--bs-dropdown-border-color); border-radius: var(--b=
+s-dropdown-border-radius); }
+
+.dropdown-divider { height: 0px; margin: var(--bs-dropdown-divider-margin-y=
+) 0; overflow: hidden; border-top: 1px solid var(--bs-dropdown-divider-bg);=
+ opacity: 1; }
+
+.dropdown-item { display: block; width: 100%; padding: var(--bs-dropdown-it=
+em-padding-y) var(--bs-dropdown-item-padding-x); clear: both; font-weight: =
+400; color: var(--bs-dropdown-link-color); text-align: inherit; white-space=
+: nowrap; background-color: transparent; border: 0px; border-radius: var(--=
+bs-dropdown-item-border-radius,0); }
+
+.dropdown-item:focus, .dropdown-item:hover { color: var(--bs-dropdown-link-=
+hover-color); background-color: var(--bs-dropdown-link-hover-bg); }
+
+.dropdown-item.active, .dropdown-item:active { color: var(--bs-dropdown-lin=
+k-active-color); text-decoration: none; background-color: var(--bs-dropdown=
+-link-active-bg); }
+
+.dropdown-item.disabled, .dropdown-item:disabled { color: var(--bs-dropdown=
+-link-disabled-color); pointer-events: none; background-color: transparent;=
+ }
+
+.dropdown-menu.show { display: block; }
+
+.nav { --bs-nav-link-padding-x: 1rem; --bs-nav-link-padding-y: 0.5rem; --bs=
+-nav-link-font-weight: 600; --bs-nav-link-color: var(--bs-link-color); --bs=
+-nav-link-hover-color: var(--bs-link-hover-color); --bs-nav-link-disabled-c=
+olor: var(--bs-secondary-color); display: flex; flex-wrap: wrap; padding-le=
+ft: 0px; margin-bottom: 0px; list-style: none; }
+
+.nav-link { display: block; padding: var(--bs-nav-link-padding-y) var(--bs-=
+nav-link-padding-x); font-size: var(--bs-nav-link-font-size); font-weight: =
+var(--bs-nav-link-font-weight); color: var(--bs-nav-link-color); background=
+: 0px 0px; border: 0px; transition: color 0.15s ease-in-out 0s, background-=
+color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link { transition: none 0s ease 0s; }
+}
+
+.nav-link:focus, .nav-link:hover { color: var(--bs-nav-link-hover-color); }
+
+.nav-link:focus-visible { outline: 0px; box-shadow: rgba(0, 106, 255, 0.25)=
+ 0px 0px 0px 0.25rem; }
+
+.nav-link.disabled, .nav-link:disabled { color: var(--bs-nav-link-disabled-=
+color); pointer-events: none; cursor: default; }
+
+.navbar { --bs-navbar-padding-x: 1.25rem; --bs-navbar-padding-y: 1.125rem; =
+--bs-navbar-color: #000; --bs-navbar-hover-color: #006AFF; --bs-navbar-disa=
+bled-color: #adb5bd; --bs-navbar-active-color: #006AFF; --bs-navbar-brand-p=
+adding-y: 0.3125rem; --bs-navbar-brand-margin-end: 1rem; --bs-navbar-brand-=
+font-size: 1.25rem; --bs-navbar-brand-color: #006AFF; --bs-navbar-brand-hov=
+er-color: #006AFF; --bs-navbar-nav-link-padding-x: 1rem; --bs-navbar-toggle=
+r-padding-y: 0.25rem; --bs-navbar-toggler-padding-x: 0.75rem; --bs-navbar-t=
+oggler-font-size: 1.25rem; --bs-navbar-toggler-icon-bg: url("data:image/svg=
++xml,%3csvg xmlns=3D'http://www.w3.org/2000/svg' viewBox=3D'0 0 24 24' widt=
+h=3D'24' height=3D'24' stroke=3D'%23000' stroke-width=3D'2' fill=3D'none' s=
+troke-linecap=3D'round' stroke-linejoin=3D'round'%3e%3cline x1=3D'3' y1=3D'=
+12' x2=3D'21' y2=3D'12'%3e%3c/line%3e%3cline x1=3D'3' y1=3D'6' x2=3D'21' y2=
+=3D'6'%3e%3c/line%3e%3cline x1=3D'3' y1=3D'18' x2=3D'21' y2=3D'18'%3e%3c/li=
+ne%3e%3c/svg%3e"); --bs-navbar-toggler-border-color: transparent; --bs-navb=
+ar-toggler-border-radius: var(--bs-border-radius); --bs-navbar-toggler-focu=
+s-width: 0.25rem; --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-=
+out; position: relative; display: flex; flex-wrap: wrap; align-items: cente=
+r; justify-content: space-between; padding: var(--bs-navbar-padding-y) var(=
+--bs-navbar-padding-x); }
+
+.navbar > .container, .navbar > .container-fluid { display: flex; flex-wrap=
+: inherit; align-items: center; justify-content: space-between; }
+
+.navbar-brand { padding-top: var(--bs-navbar-brand-padding-y); padding-bott=
+om: var(--bs-navbar-brand-padding-y); margin-right: var(--bs-navbar-brand-m=
+argin-end); font-size: var(--bs-navbar-brand-font-size); color: var(--bs-na=
+vbar-brand-color); white-space: nowrap; }
+
+.navbar-brand:focus, .navbar-brand:hover { color: var(--bs-navbar-brand-hov=
+er-color); }
+
+.navbar-nav { --bs-nav-link-padding-x: 0; --bs-nav-link-padding-y: 0.5rem; =
+--bs-nav-link-font-weight: 600; --bs-nav-link-color: var(--bs-navbar-color)=
+; --bs-nav-link-hover-color: var(--bs-navbar-hover-color); --bs-nav-link-di=
+sabled-color: var(--bs-navbar-disabled-color); display: flex; flex-directio=
+n: column; padding-left: 0px; margin-bottom: 0px; list-style: none; }
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show { color: var(--bs-=
+navbar-active-color); }
+
+.navbar-nav .dropdown-menu { position: static; }
+
+.navbar-collapse { flex-basis: 100%; flex-grow: 1; align-items: center; }
+
+.navbar-toggler { padding: var(--bs-navbar-toggler-padding-y) var(--bs-navb=
+ar-toggler-padding-x); font-size: var(--bs-navbar-toggler-font-size); line-=
+height: 1; color: var(--bs-navbar-color); background-color: transparent; bo=
+rder: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color); b=
+order-radius: var(--bs-navbar-toggler-border-radius); transition: var(--bs-=
+navbar-toggler-transition); }
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-toggler { transition: none 0s ease 0s; }
+}
+
+.navbar-toggler:hover { text-decoration: none; }
+
+.navbar-toggler:focus { text-decoration: none; outline: 0px; box-shadow: 0 =
+0 0 var(--bs-navbar-toggler-focus-width); }
+
+.navbar-toggler-icon { display: inline-block; width: 1.5em; height: 1.5em; =
+vertical-align: middle; background-image: var(--bs-navbar-toggler-icon-bg);=
+ background-repeat: no-repeat; background-position: center center; backgrou=
+nd-size: 100%; }
+
+@media (min-width: 992px) {
+  .navbar-expand-lg { flex-wrap: nowrap; justify-content: flex-start; }
+  .navbar-expand-lg .navbar-nav { flex-direction: row; }
+  .navbar-expand-lg .navbar-nav .dropdown-menu { position: absolute; }
+  .navbar-expand-lg .navbar-nav .nav-link { padding-right: var(--bs-navbar-=
+nav-link-padding-x); padding-left: var(--bs-navbar-nav-link-padding-x); }
+  .navbar-expand-lg .navbar-collapse { flex-basis: auto; display: flex !imp=
+ortant; }
+  .navbar-expand-lg .navbar-toggler { display: none; }
+}
+
+.card { --bs-card-spacer-y: 0.875rem; --bs-card-spacer-x: 1.25rem; --bs-car=
+d-title-spacer-y: 0.5rem; --bs-card-border-width: var(--bs-border-width); -=
+-bs-card-border-color: #e9ecef; --bs-card-border-radius: var(--bs-border-ra=
+dius); --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(-=
+-bs-border-width))); --bs-card-cap-padding-y: 0.4375rem; --bs-card-cap-padd=
+ing-x: 1.25rem; --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03); --b=
+s-card-bg: var(--bs-body-bg); --bs-card-img-overlay-padding: 1rem; --bs-car=
+d-group-margin: 0.75rem; position: relative; display: flex; flex-direction:=
+ column; min-width: 0px; height: var(--bs-card-height); color: var(--bs-bod=
+y-color); overflow-wrap: break-word; background-color: var(--bs-card-bg); b=
+ackground-clip: border-box; border: var(--bs-card-border-width) solid var(-=
+-bs-card-border-color); border-radius: var(--bs-card-border-radius); }
+
+.card > .list-group { border-top: inherit; border-bottom: inherit; }
+
+.card > .list-group:first-child { border-top-width: 0px; border-top-left-ra=
+dius: var(--bs-card-inner-border-radius); border-top-right-radius: var(--bs=
+-card-inner-border-radius); }
+
+.card > .list-group:last-child { border-bottom-width: 0px; border-bottom-ri=
+ght-radius: var(--bs-card-inner-border-radius); border-bottom-left-radius: =
+var(--bs-card-inner-border-radius); }
+
+.card-body { flex: 1 1 auto; padding: var(--bs-card-spacer-y) var(--bs-card=
+-spacer-x); color: var(--bs-card-color); }
+
+.card-title { margin-bottom: var(--bs-card-title-spacer-y); color: var(--bs=
+-card-title-color); }
+
+.card-text:last-child { margin-bottom: 0px; }
+
+.breadcrumb { --bs-breadcrumb-padding-x: 0; --bs-breadcrumb-padding-y: 0; -=
+-bs-breadcrumb-margin-bottom: 1rem; --bs-breadcrumb-divider-color: var(--bs=
+-secondary-color); --bs-breadcrumb-item-padding-x: 1rem; --bs-breadcrumb-it=
+em-active-color: var(--bs-secondary-color); display: flex; flex-wrap: wrap;=
+ padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x); ma=
+rgin-bottom: var(--bs-breadcrumb-margin-bottom); font-size: var(--bs-breadc=
+rumb-font-size); list-style: none; background-color: var(--bs-breadcrumb-bg=
+); border-radius: var(--bs-breadcrumb-border-radius); }
+
+.breadcrumb-item + .breadcrumb-item { padding-left: var(--bs-breadcrumb-ite=
+m-padding-x); }
+
+.breadcrumb-item + .breadcrumb-item::before { float: left; padding-right: v=
+ar(--bs-breadcrumb-item-padding-x); color: var(--bs-breadcrumb-divider-colo=
+r); content: var(--bs-breadcrumb-divider, ""); }
+
+.breadcrumb-item.active { color: var(--bs-breadcrumb-item-active-color); }
+
+.badge { --bs-badge-padding-x: 0.75em; --bs-badge-padding-y: 0.625em; --bs-=
+badge-font-size: 0.85em; --bs-badge-font-weight: 500; --bs-badge-color: #ff=
+f; --bs-badge-border-radius: var(--bs-border-radius); display: inline-block=
+; padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x); font-size: =
+var(--bs-badge-font-size); font-weight: var(--bs-badge-font-weight); line-h=
+eight: 1; color: var(--bs-badge-color); text-align: center; white-space: no=
+wrap; vertical-align: baseline; border-radius: var(--bs-badge-border-radius=
+); }
+
+.badge:empty { display: none; }
+
+.btn .badge { position: relative; top: -1px; }
+
+.alert { --bs-alert-bg: transparent; --bs-alert-padding-x: 1rem; --bs-alert=
+-padding-y: 1rem; --bs-alert-margin-bottom: 1rem; --bs-alert-color: inherit=
+; --bs-alert-border-color: transparent; --bs-alert-border: var(--bs-border-=
+width) solid var(--bs-alert-border-color); --bs-alert-border-radius: var(--=
+bs-border-radius); --bs-alert-link-color: inherit; position: relative; padd=
+ing: var(--bs-alert-padding-y) var(--bs-alert-padding-x); margin-bottom: va=
+r(--bs-alert-margin-bottom); color: var(--bs-alert-color); background-color=
+: var(--bs-alert-bg); border: var(--bs-alert-border); border-radius: var(--=
+bs-alert-border-radius); }
+
+@keyframes progress-bar-stripes {=20
+  0% { background-position-x: 1rem; }
+}
+
+.list-group { --bs-list-group-color: var(--bs-body-color); --bs-list-group-=
+bg: var(--bs-body-bg); --bs-list-group-border-color: var(--bs-border-color)=
+; --bs-list-group-border-width: var(--bs-border-width); --bs-list-group-bor=
+der-radius: var(--bs-border-radius); --bs-list-group-item-padding-x: 1rem; =
+--bs-list-group-item-padding-y: 0.5rem; --bs-list-group-action-color: var(-=
+-bs-secondary-color); --bs-list-group-action-hover-color: var(--bs-emphasis=
+-color); --bs-list-group-action-hover-bg: var(--bs-tertiary-bg); --bs-list-=
+group-action-active-color: var(--bs-body-color); --bs-list-group-action-act=
+ive-bg: var(--bs-secondary-bg); --bs-list-group-disabled-color: var(--bs-se=
+condary-color); --bs-list-group-disabled-bg: var(--bs-body-bg); --bs-list-g=
+roup-active-color: #fff; --bs-list-group-active-bg: #006AFF; --bs-list-grou=
+p-active-border-color: #006AFF; display: flex; flex-direction: column; padd=
+ing-left: 0px; margin-bottom: 0px; border-radius: var(--bs-list-group-borde=
+r-radius); }
+
+.list-group-item-action { width: 100%; color: var(--bs-list-group-action-co=
+lor); text-align: inherit; }
+
+.list-group-item-action:focus, .list-group-item-action:hover { z-index: 1; =
+color: var(--bs-list-group-action-hover-color); text-decoration: none; back=
+ground-color: var(--bs-list-group-action-hover-bg); }
+
+.list-group-item-action:active { color: var(--bs-list-group-action-active-c=
+olor); background-color: var(--bs-list-group-action-active-bg); }
+
+.list-group-item { position: relative; display: block; padding: var(--bs-li=
+st-group-item-padding-y) var(--bs-list-group-item-padding-x); color: var(--=
+bs-list-group-color); background-color: var(--bs-list-group-bg); border: va=
+r(--bs-list-group-border-width) solid var(--bs-list-group-border-color); }
+
+.list-group-item:first-child { border-top-left-radius: inherit; border-top-=
+right-radius: inherit; }
+
+.list-group-item:last-child { border-bottom-right-radius: inherit; border-b=
+ottom-left-radius: inherit; }
+
+.list-group-item.disabled, .list-group-item:disabled { color: var(--bs-list=
+-group-disabled-color); pointer-events: none; background-color: var(--bs-li=
+st-group-disabled-bg); }
+
+.list-group-item.active { z-index: 2; color: var(--bs-list-group-active-col=
+or); background-color: var(--bs-list-group-active-bg); border-color: var(--=
+bs-list-group-active-border-color); }
+
+.list-group-item + .list-group-item { border-top-width: 0px; }
+
+.list-group-item + .list-group-item.active { margin-top: calc(-1 * var(--bs=
+-list-group-border-width)); border-top-width: var(--bs-list-group-border-wi=
+dth); }
+
+.list-group-flush { border-radius: 0px; }
+
+.list-group-flush > .list-group-item { border-width: 0 0 var(--bs-list-grou=
+p-border-width); }
+
+.list-group-flush > .list-group-item:last-child { border-bottom-width: 0px;=
+ }
+
+.btn-close { --bs-btn-close-color: #adb5bd; --bs-btn-close-bg: url("data:im=
+age/svg+xml,%3csvg xmlns=3D'http://www.w3.org/2000/svg' viewBox=3D'0 0 16 1=
+6' fill=3D'%23adb5bd'%3e%3cpath d=3D'M.293.293a1 1 0 0 1 1.414 0L8 6.586 14=
+.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 =
+9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.4=
+14z'/%3e%3c/svg%3e"); --bs-btn-close-opacity: 0.5; --bs-btn-close-hover-opa=
+city: 0.75; --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(0, 106, 255, 0.=
+25); --bs-btn-close-focus-opacity: 1; --bs-btn-close-disabled-opacity: 0.25=
+; --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%); =
+box-sizing: content-box; width: 1em; height: 1em; padding: 0.25em; color: v=
+ar(--bs-btn-close-color); background: transparent var(--bs-btn-close-bg) ce=
+nter/1em auto no-repeat; border: 0px; border-radius: 0.375rem; opacity: var=
+(--bs-btn-close-opacity); }
+
+.btn-close:hover { color: var(--bs-btn-close-color); text-decoration: none;=
+ opacity: var(--bs-btn-close-hover-opacity); }
+
+.btn-close:focus { outline: 0px; box-shadow: var(--bs-btn-close-focus-shado=
+w); opacity: var(--bs-btn-close-focus-opacity); }
+
+.btn-close.disabled, .btn-close:disabled { pointer-events: none; user-selec=
+t: none; opacity: var(--bs-btn-close-disabled-opacity); }
+
+.modal { --bs-modal-zindex: 1055; --bs-modal-width: 500px; --bs-modal-paddi=
+ng: 1rem; --bs-modal-margin: 0.5rem; --bs-modal-bg: var(--bs-body-bg); --bs=
+-modal-border-color: var(--bs-border-color-translucent); --bs-modal-border-=
+width: var(--bs-border-width); --bs-modal-border-radius: var(--bs-border-ra=
+dius-lg); --bs-modal-box-shadow: var(--bs-box-shadow-sm); --bs-modal-inner-=
+border-radius: calc(var(--bs-border-radius-lg) - (var(--bs-border-width)));=
+ --bs-modal-header-padding-x: 1rem; --bs-modal-header-padding-y: 1rem; --bs=
+-modal-header-padding: 1rem 1rem; --bs-modal-header-border-color: var(--bs-=
+border-color); --bs-modal-header-border-width: var(--bs-border-width); --bs=
+-modal-title-line-height: 1.5; --bs-modal-footer-gap: 0.5rem; --bs-modal-fo=
+oter-border-color: var(--bs-border-color); --bs-modal-footer-border-width: =
+var(--bs-border-width); position: fixed; top: 0px; left: 0px; z-index: var(=
+--bs-modal-zindex); display: none; width: 100%; height: 100%; overflow: hid=
+den auto; outline: 0px; }
+
+.modal-dialog { position: relative; width: auto; margin: var(--bs-modal-mar=
+gin); pointer-events: none; }
+
+.modal.fade .modal-dialog { transition: transform 0.3s ease-out 0s; transfo=
+rm: translate(0px, -50px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog { transition: none 0s ease 0s; }
+}
+
+.modal.show .modal-dialog { transform: none; }
+
+.modal-dialog-centered { display: flex; align-items: center; min-height: ca=
+lc(100% - var(--bs-modal-margin) * 2); }
+
+.modal-content { position: relative; display: flex; flex-direction: column;=
+ width: 100%; color: var(--bs-modal-color); pointer-events: auto; backgroun=
+d-color: var(--bs-modal-bg); background-clip: padding-box; border: var(--bs=
+-modal-border-width) solid var(--bs-modal-border-color); border-radius: var=
+(--bs-modal-border-radius); outline: 0px; }
+
+.modal-backdrop { --bs-backdrop-zindex: 1050; --bs-backdrop-bg: #000; --bs-=
+backdrop-opacity: 0.5; position: fixed; top: 0px; left: 0px; z-index: var(-=
+-bs-backdrop-zindex); width: 100vw; height: 100vh; background-color: var(--=
+bs-backdrop-bg); }
+
+.modal-backdrop.fade { opacity: 0; }
+
+.modal-backdrop.show { opacity: var(--bs-backdrop-opacity); }
+
+.modal-body { position: relative; flex: 1 1 auto; padding: var(--bs-modal-p=
+adding); }
+
+@media (min-width: 576px) {
+  .modal { --bs-modal-margin: 1.75rem; --bs-modal-box-shadow: var(--bs-box-=
+shadow); }
+  .modal-dialog { max-width: var(--bs-modal-width); margin-right: auto; mar=
+gin-left: auto; }
+}
+
+.modal-fullscreen { width: 100vw; max-width: none; height: 100%; margin: 0p=
+x; }
+
+.modal-fullscreen .modal-content { height: 100%; border: 0px; border-radius=
+: 0px; }
+
+.modal-fullscreen .modal-body { overflow-y: auto; }
+
+.spinner-grow { display: inline-block; width: var(--bs-spinner-width); heig=
+ht: var(--bs-spinner-height); vertical-align: var(--bs-spinner-vertical-ali=
+gn); border-radius: 50%; animation: var(--bs-spinner-animation-speed) linea=
+r infinite var(--bs-spinner-animation-name); }
+
+@keyframes spinner-border {=20
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinner-grow {=20
+  0% { transform: scale(0); }
+  50% { opacity: 1; transform: none; }
+}
+
+.spinner-grow { --bs-spinner-width: 2rem; --bs-spinner-height: 2rem; --bs-s=
+pinner-vertical-align: -0.125em; --bs-spinner-animation-speed: 0.75s; --bs-=
+spinner-animation-name: spinner-grow; background-color: currentcolor; opaci=
+ty: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner-grow { --bs-spinner-animation-speed: 1.5s; }
+}
+
+.placeholder { display: inline-block; min-height: 1em; vertical-align: midd=
+le; cursor: wait; background-color: currentcolor; opacity: 0.5; }
+
+.placeholder.btn::before { display: inline-block; content: ""; }
+
+@keyframes placeholder-glow {=20
+  50% { opacity: 0.2; }
+}
+
+@keyframes placeholder-wave {=20
+  100% { -webkit-mask-position: -200% 0px; }
+}
+
+.clearfix::after { display: block; clear: both; content: ""; }
+
+@media (min-width: 992px) {
+  .sticky-lg-top { position: sticky; top: 0px; z-index: 1020; }
+}
+
+.visually-hidden { width: 1px !important; height: 1px !important; padding: =
+0px !important; margin: -1px !important; overflow: hidden !important; clip:=
+ rect(0px, 0px, 0px, 0px) !important; white-space: nowrap !important; borde=
+r: 0px !important; }
+
+.visually-hidden:not(caption) { position: absolute !important; }
+
+.stretched-link::after { position: absolute; inset: 0px; z-index: 1; conten=
+t: ""; }
+
+.d-block { display: block !important; }
+
+.d-flex { display: flex !important; }
+
+.d-inline-flex { display: inline-flex !important; }
+
+.d-none { display: none !important; }
+
+.border-0 { border: 0px !important; }
+
+.border-top { border-top: var(--bs-border-width) var(--bs-border-style) var=
+(--bs-border-color) !important; }
+
+.border-bottom { border-bottom: var(--bs-border-width) var(--bs-border-styl=
+e) var(--bs-border-color) !important; }
+
+.w-100 { width: 100% !important; }
+
+.h-100 { height: 100% !important; }
+
+.vh-100 { height: 100vh !important; }
+
+.flex-row { flex-direction: row !important; }
+
+.flex-column { flex-direction: column !important; }
+
+.flex-wrap { flex-wrap: wrap !important; }
+
+.justify-content-center { justify-content: center !important; }
+
+.align-items-center { align-items: center !important; }
+
+.align-content-start { align-content: flex-start !important; }
+
+.order-0 { order: 0 !important; }
+
+.order-1 { order: 1 !important; }
+
+.order-2 { order: 2 !important; }
+
+.order-3 { order: 3 !important; }
+
+.order-4 { order: 4 !important; }
+
+.mx-2 { margin-right: 0.5rem !important; margin-left: 0.5rem !important; }
+
+.mx-4 { margin-right: 1.5rem !important; margin-left: 1.5rem !important; }
+
+.mx-auto { margin-right: auto !important; margin-left: auto !important; }
+
+.my-3 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+
+.my-4 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+
+.my-auto { margin-top: auto !important; margin-bottom: auto !important; }
+
+.mt-2 { margin-top: 0.5rem !important; }
+
+.mt-3 { margin-top: 1rem !important; }
+
+.mt-4 { margin-top: 1.5rem !important; }
+
+.mt-5 { margin-top: 3rem !important; }
+
+.me-1 { margin-right: 0.25rem !important; }
+
+.me-2 { margin-right: 0.5rem !important; }
+
+.mb-0 { margin-bottom: 0px !important; }
+
+.mb-2 { margin-bottom: 0.5rem !important; }
+
+.mb-3 { margin-bottom: 1rem !important; }
+
+.mb-4 { margin-bottom: 1.5rem !important; }
+
+.mb-5 { margin-bottom: 3rem !important; }
+
+.ms-2 { margin-left: 0.5rem !important; }
+
+.ms-3 { margin-left: 1rem !important; }
+
+.ms-auto { margin-left: auto !important; }
+
+.p-3 { padding: 1rem !important; }
+
+.p-4 { padding: 1.5rem !important; }
+
+.px-0 { padding-right: 0px !important; padding-left: 0px !important; }
+
+.py-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; =
+}
+
+.py-3 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+
+.py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+
+.pt-4 { padding-top: 1.5rem !important; }
+
+.pb-5 { padding-bottom: 3rem !important; }
+
+.fs-2 { font-size: calc(1.3rem + 0.6vw) !important; }
+
+.fw-medium { font-weight: 500 !important; }
+
+.fw-bold { font-weight: 700 !important; }
+
+.fw-bolder { font-weight: 800 !important; }
+
+.lh-lg { line-height: 2 !important; }
+
+.text-center { text-align: center !important; }
+
+.text-decoration-underline { text-decoration: underline !important; }
+
+.text-uppercase { text-transform: uppercase !important; }
+
+.text-break { overflow-wrap: break-word !important; word-break: break-word =
+!important; }
+
+.text-primary { --bs-text-opacity: 1; color: rgba(var(--bs-primary-rgb),var=
+(--bs-text-opacity)) !important; }
+
+.text-secondary { --bs-text-opacity: 1; color: rgba(var(--bs-secondary-rgb)=
+,var(--bs-text-opacity)) !important; }
+
+.text-info { --bs-text-opacity: 1; color: rgba(var(--bs-info-rgb),var(--bs-=
+text-opacity)) !important; }
+
+.text-danger { --bs-text-opacity: 1; color: rgba(var(--bs-danger-rgb),var(-=
+-bs-text-opacity)) !important; }
+
+.text-black { --bs-text-opacity: 1; color: rgba(var(--bs-black-rgb),var(--b=
+s-text-opacity)) !important; }
+
+.text-white { --bs-text-opacity: 1; color: rgba(var(--bs-white-rgb),var(--b=
+s-text-opacity)) !important; }
+
+.text-muted { --bs-text-opacity: 1; color: var(--bs-secondary-color) !impor=
+tant; }
+
+.text-white-50 { --bs-text-opacity: 1; color: rgba(255, 255, 255, 0.5) !imp=
+ortant; }
+
+.bg-secondary { --bs-bg-opacity: 1; background-color: rgba(var(--bs-seconda=
+ry-rgb),var(--bs-bg-opacity)) !important; }
+
+.bg-success { --bs-bg-opacity: 1; background-color: rgba(var(--bs-success-r=
+gb),var(--bs-bg-opacity)) !important; }
+
+.bg-warning { --bs-bg-opacity: 1; background-color: rgba(var(--bs-warning-r=
+gb),var(--bs-bg-opacity)) !important; }
+
+.bg-danger { --bs-bg-opacity: 1; background-color: rgba(var(--bs-danger-rgb=
+),var(--bs-bg-opacity)) !important; }
+
+.bg-light { --bs-bg-opacity: 1; background-color: rgba(var(--bs-light-rgb),=
+var(--bs-bg-opacity)) !important; }
+
+.bg-white { --bs-bg-opacity: 1; background-color: rgba(var(--bs-white-rgb),=
+var(--bs-bg-opacity)) !important; }
+
+.bg-opacity-10 { --bs-bg-opacity: 0.1; }
+
+.rounded { border-radius: var(--bs-border-radius) !important; }
+
+@media (min-width: 768px) {
+  .d-md-block { display: block !important; }
+  .flex-md-row { flex-direction: row !important; }
+  .order-md-0 { order: 0 !important; }
+  .order-md-1 { order: 1 !important; }
+  .order-md-2 { order: 2 !important; }
+  .order-md-3 { order: 3 !important; }
+  .order-md-4 { order: 4 !important; }
+  .mt-md-0 { margin-top: 0px !important; }
+  .mb-md-3 { margin-bottom: 1rem !important; }
+  .p-md-4 { padding: 1.5rem !important; }
+  .p-md-5 { padding: 3rem !important; }
+  .text-md-start { text-align: left !important; }
+  .text-md-end { text-align: right !important; }
+}
+
+@media (min-width: 992px) {
+  .d-lg-flex { display: flex !important; }
+  .d-lg-none { display: none !important; }
+}
+
+@media (min-width: 1200px) {
+  .fs-2 { font-size: 1.75rem !important; }
+}
+
+html { scroll-behavior: smooth; }
+
+details > summary { outline: 0px !important; }
+
+.fs-lg { font-size: 1.25rem; }
+
+.link-black, footer a { color: rgb(0, 0, 0); }
+
+.link-black:hover, footer a:hover { color: rgb(0, 106, 255) !important; }
+
+.display-4 { line-height: 1.25 !important; }
+
+.card-preview { font-family: Inter,var(--bs-font-sans-serif); }
+
+.card-preview .heading-black { letter-spacing: -1.5px; line-height: 1.25; f=
+ont-size: 7rem !important; }
+
+b, strong { font-weight: 600; }
+
+.post-content ol, .post-content ul, .styled-list { display: grid; gap: 0.75=
+rem; }
+
+.post-content ol.no-marker, .post-content ul.no-marker, .styled-list.no-mar=
+ker { list-style: none; }
+
+.post-content ol li, .post-content ul li, .styled-list li { padding-left: 0=
+.5rem; }
+
+.post-content ol li::marker, .post-content ul li::marker, .styled-list li::=
+marker { color: rgb(173, 181, 189); font-size: 1.25em; font-weight: 600; }
+
+.post-content ol.styled-list-sm li::marker, .post-content ul.styled-list-sm=
+ li::marker, .styled-list.styled-list-sm li::marker { font-size: 1em; }
+
+@media (min-width: 992px) {
+  .post-title .display-4 { font-size: 2.5rem; line-height: 4rem !important;=
+ }
+}
+
+.post-content { line-height: 2rem; font-size: 1.115rem !important; }
+
+.post-content a:not(.anchor-link) code { color: unset; }
+
+.post-content .gist, .post-content blockquote, .post-content img, .post-con=
+tent p, .post-content pre, .post-content ul { margin-bottom: 1.75rem !impor=
+tant; }
+
+.post-content img:not(.no-style) { max-width: 100%; height: auto; border-ra=
+dius: 0.375rem; margin: 0px auto; display: block; }
+
+.post-content ol, .post-content ul { line-height: 2rem !important; }
+
+.post-content ol li::marker { color: rgb(173, 181, 189); font-size: 0.95em;=
+ font-weight: 600; }
+
+.post-content .h2, .post-content h2 { font-size: 1.575rem; }
+
+.post-content .h3, .post-content h3 { font-size: 1.375rem; }
+
+.post-content .h4, .post-content h4 { font-size: 1.25rem; }
+
+.post-content .file-desc { font-family: "JetBrains Mono", ui-monospace, SFM=
+ono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", mon=
+ospace; color: rgb(255, 255, 255); border-top-left-radius: 0.375rem; border=
+-top-right-radius: 0.375rem; font-size: 0.8rem; font-weight: 600; padding: =
+0.5rem 1.5rem; background: rgb(0, 106, 255); border-image: initial; letter-=
+spacing: 1px; margin-bottom: 0px !important; }
+
+.post-content .file-desc + pre { margin-top: 0px !important; border-top-lef=
+t-radius: 0px !important; border-top-right-radius: 0px !important; border-t=
+op: none !important; }
+
+.post-content pre:not([class*=3D"language-"]) { padding: 1.5rem; border-rad=
+ius: 0.375rem; background: rgb(248, 249, 250); color: rgb(27, 22, 66); font=
+-size: 0.9rem; overflow-x: auto; border-top: 3rem solid rgb(0, 106, 255); }
+
+.post-content code:not([class*=3D"language-"]) { color: rgb(255, 64, 129); =
+font-weight: 600; font-size: 0.935rem; overflow-wrap: break-word; }
+
+@media (max-width: 767.98px) {
+  .post-content code:not([class*=3D"language-"]) { line-break: anywhere; }
+}
+
+.post-content code:not([class*=3D"language-"])::before { content: "`"; }
+
+.post-content code:not([class*=3D"language-"])::after { content: "`"; }
+
+.post-content .h1, .post-content .h2, .post-content .h3, .post-content .h4,=
+ .post-content .h5, .post-content .h6, .post-content h1, .post-content h2, =
+.post-content h3, .post-content h4, .post-content h5, .post-content h6 { ma=
+rgin-top: 2rem; margin-bottom: 1.8rem; }
+
+.post-content .h1 code, .post-content .h2 code, .post-content .h3 code, .po=
+st-content .h4 code, .post-content .h5 code, .post-content .h6 code, .post-=
+content h1 code, .post-content h2 code, .post-content h3 code, .post-conten=
+t h4 code, .post-content h5 code, .post-content h6 code { padding: 4px 5px;=
+ font-family: var(--bs-font-sans-serif); font-size: 100% !important; font-w=
+eight: 700 !important; color: rgb(27, 22, 66) !important; }
+
+.post-content blockquote { border-width: 1px 1px 1px 0.25rem; border-style:=
+ solid; border-color: rgb(233, 236, 239) rgb(233, 236, 239) rgb(233, 236, 2=
+39) rgb(0, 106, 255); border-image: initial; border-radius: 0.375rem; paddi=
+ng: 1.25rem; margin: 1rem 0px; }
+
+.post-content blockquote > :last-child { margin-bottom: 0px !important; }
+
+.post-content .table-wrapper { overflow-x: auto; }
+
+.post-content .table { width: 100%; }
+
+.post-content .table thead tr > th { color: rgb(0, 106, 255); font-size: 0.=
+8rem; font-weight: 600; text-transform: uppercase; padding-top: 0px !import=
+ant; }
+
+.post-content .table tbody td, .post-content .table thead th { padding: 0.7=
+5rem; }
+
+.post-content .table tbody tr td { font-size: 0.95rem; }
+
+.border-heading, .post-content .h2, .post-content h2 { padding-bottom: 0.5r=
+em; margin-top: 3rem; border-bottom: 2px solid rgba(0, 106, 255, 0.05); }
+
+.anchor-heading { flex-direction: row; align-items: center; position: relat=
+ive; margin-top: 3rem !important; }
+
+.anchor-heading .anchor-link { display: inline-flex; flex-direction: row; a=
+lign-items: center; padding-left: 0.25rem; text-decoration: none; opacity: =
+0; transition: opacity 0.25s ease-in-out 0s; color: rgb(0, 106, 255) !impor=
+tant; }
+
+.anchor-heading .anchor-link:hover { opacity: 1 !important; }
+
+.anchor-heading .anchor-link svg { width: 1.375rem; height: 1.375rem; }
+
+.anchor-heading:hover .anchor-link { opacity: 0.5; }
+
+@media (max-width: 575.98px) {
+  .anchor-heading .anchor-link { display: none !important; }
+}
+
+.scroll-bar { background: linear-gradient(to right,rgba(0,106,255,.75) var(=
+--scroll-x),transparent 0); position: fixed; width: 100%; height: 3px; z-in=
+dex: 10000; }
+
+.toc-section ul { font-size: 15px; list-style: none; padding-left: 0px; mar=
+gin-top: 0.5rem; margin-bottom: 0px; line-height: 1.5; }
+
+.toc-section ul li .list-group-item { border: 0px; background-color: transp=
+arent !important; }
+
+.toc-section ul li a { padding: 0.5rem 0px; color: rgb(33, 37, 41); font-we=
+ight: 500; }
+
+.toc-section ul li a:hover { color: rgb(0, 85, 204); }
+
+.toc-section ul li.h3-link { padding-left: 10px; }
+
+.toc-section ul li.h3-link a { font-size: 14px; }
+
+.card-sponsor { padding: 1.5rem; line-height: 2.25rem; }
+
+.card-sponsor a { border-bottom: 1px solid; }
+
+.card-sponsor p:last-child { margin-bottom: 0px; display: inline; }
+
+.card-partners { padding: 2.5rem; }
+
+.card-partners img { max-width: 100%; }
+
+.share-icons a { color: rgb(173, 181, 189); margin-left: 1rem; }
+
+.share-icons a:hover { color: rgb(0, 106, 255); }
+
+.dropdown-item { font-weight: 500; }
+
+.nav-link-icon svg { width: 1.625rem; height: 1.625rem; }
+
+.brand-logo svg { height: 3.25rem; width: 8.5rem; overflow: initial; }
+
+.fw-medium { font-weight: 500 !important; }
+
+.fw-semi-bold { font-weight: 600 !important; }
+
+.fw-bolder { font-weight: 800 !important; }
+
+.fs-ml { font-size: 1.0625rem; }
+
+.fs-xs { font-size: 0.75rem; }
+
+footer a { font-size: 0.9375rem; color: rgb(33, 37, 41) !important; }
+
+.bsa-standard { position: relative; font-family: var(--bs-font-sans-serif);=
+ font-size: 16px; max-width: 960px; margin: 0px auto; }
+
+.bsa-standard * { padding-bottom: 10px; }
+
+.bsa-standard .native-banner { display: flex; align-items: center; padding:=
+ 1em; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 2px in=
+set; }
+
+.bsa-standard .native-img { margin-right: 1.25em; line-height: 0; height: 5=
+0px; }
+
+.bsa-standard .native-details { display: flex; flex-grow: 1; margin-right: =
+1.25em; flex-flow: column; }
+
+.bsa-standard .native-company { margin-bottom: 0.5ex; font-size: 0.625em; f=
+ont-weight: 600; line-height: 1; letter-spacing: 0.2ch; text-transform: upp=
+ercase; }
+
+.bsa-standard .native-desc { font-size: 1em; font-weight: 300; line-height:=
+ 1.4; max-width: 600px; letter-spacing: 1px; }
+
+.bsa-standard .native-cta { padding: 10px 16px; font-size: 0.875em; font-we=
+ight: 600; line-height: 1; white-space: nowrap; letter-spacing: 0.1ch; text=
+-transform: uppercase; border-radius: 3px; }
+
+.breadcrumb .active::before { font-weight: 700; }
+
+code[class*=3D"language-"], pre[class*=3D"language-"] { color: rgb(27, 22, =
+66); font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Mo=
+naco, Consolas, "Liberation Mono", "Courier New", monospace; direction: ltr=
+; text-align: left; white-space: pre; word-spacing: normal; word-break: nor=
+mal; font-size: 0.9rem; line-height: 1.875rem; tab-size: 4; hyphens: none; =
+}
+
+pre[class*=3D"language-"] { margin: 0.5rem 0px; overflow: hidden; border: 1=
+px solid transparent; position: relative; border-radius: 0.375rem; backgrou=
+nd-color: rgb(248, 249, 250) !important; }
+
+pre[class*=3D"language-"]::before { position: absolute; content: attr(rel);=
+ z-index: 3; top: 0.5rem; right: 0.75rem; color: rgb(70, 119, 144); text-tr=
+ansform: uppercase; font-size: 0.7rem; line-height: 1.5; letter-spacing: 1p=
+x; opacity: 0; transition: opacity 0.5s ease-in-out 0s; font-weight: 600; }
+
+pre[class*=3D"language-"]:hover::before { opacity: 1; }
+
+code[class*=3D"language-"] { padding: 1.5rem; display: block; overflow-x: a=
+uto; }
+
+.token.bold, .token.important { font-weight: 500; }
+
+.token.italic { font-style: italic; }
+
+.token.entity { cursor: help; }
+
+.token.cdata, .token.comment, .token.doctype, .token.namespace, .token.prol=
+og { color: rgb(70, 119, 144); }
+
+.token.attr-value, .token.string { color: rgb(39, 174, 96); }
+
+.token.operator, .token.punctuation, .token.tag { color: rgb(155, 81, 224);=
+ font-weight: 500; }
+
+.token.boolean, .token.constant, .token.entity, .token.inserted, .token.num=
+ber, .token.property, .token.regex, .token.symbol, .token.url, .token.varia=
+ble { color: rgb(255, 64, 129); font-weight: 500; }
+
+.token.attr-name { color: rgb(244, 154, 64); }
+
+.language-autohotkey .token.selector, .token.atrule, .token.keyword { color=
+: rgb(0, 106, 255); }
+
+.language-autohotkey .token.tag, .token.deleted, .token.function { color: r=
+gb(92, 81, 224); font-weight: 500; }
+
+.language-autohotkey .token.keyword, .token.selector { color: rgb(244, 67, =
+54); font-weight: 500; }
+------MultipartBoundary--66NsEcBSORhzAaIPAq0mZm40Z59Q7wdZk8jCOESiop------
