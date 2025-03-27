@@ -15,3 +15,4 @@
 
 ## Modules
 * [Using import Statements in Node.js](https://masteringjs.io/tutorials/node/import)
+* [Javascript modules - Cannot use import statement outside a module](https://stackoverflow.com/questions/62443624/javascript-modules-cannot-use-import-statement-outside-a-module)
