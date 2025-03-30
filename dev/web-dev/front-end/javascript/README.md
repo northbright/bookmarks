@@ -29,3 +29,7 @@
 ## Online Playground
 * <https://playcode.io/>
 * [codepen](https://codepen.io/)
+
+## QR Code
+* [Generate a QR Code in Javascript](https://anjandutta.com/generate-qr-code-javascript/)
+* [QRCode.js](https://github.com/davidshimjs/qrcodejs)
