@@ -17,6 +17,9 @@
 ## Operator
 * [Spread vs Rest operator in JavaScript ES6](https://www.geeksforgeeks.org/spread-vs-rest-operator-in-javascript-es6/)
 
+## Destructure
+* [Extract Data from Arrays and Objects in JavaScript](https://anjandutta.com/extract-data-from-arrays-and-objects-in-javascript/)
+
 ## Post
   * [POST data in JSON format](http://stackoverflow.com/questions/1255948/post-data-in-json-format)
 
