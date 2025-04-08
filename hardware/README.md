@@ -178,3 +178,6 @@
 
 ## vPro
 * [开源 vs. Intel官方控制台：使用AMT/vPro无线带外管理的几种姿势（下篇）](https://zhuanlan.zhihu.com/p/106000423)
+
+## 显卡
+* [解决部分nVIDIA显示卡DP输出无显示问题](https://zhuanlan.zhihu.com/p/457323299)
