@@ -33,3 +33,6 @@
 ## QR Code
 * [Generate a QR Code in Javascript](https://anjandutta.com/generate-qr-code-javascript/)
 * [QRCode.js](https://github.com/davidshimjs/qrcodejs)
+
+## async / await
+* [async/await 必须使用 try/catch 吗？](https://mp.weixin.qq.com/s/7qWBiszyErw2urJB5jowpg)
