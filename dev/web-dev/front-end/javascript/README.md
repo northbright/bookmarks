@@ -36,3 +36,6 @@
 
 ## async / await
 * [async/await 必须使用 try/catch 吗？](https://mp.weixin.qq.com/s/7qWBiszyErw2urJB5jowpg)
+
+## Function
+* [JavaScript Anonymous Functions](https://www.geeksforgeeks.org/javascript-anonymous-functions/)
