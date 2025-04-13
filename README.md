@@ -46,5 +46,6 @@ Bookmarks of development and more...
 * [Trip（旅游）](trip/README.md)
 * [Food（美食）](food/README.md)
 * [Journal（手帐）](journal/README.md)
-* [软件著作权登记](ruanzhu/README.md)
-* [双软企业](shuangruan/README.md)
+* 认证
+  * [软件著作权登记](renzheng/ruanzhu/README.md)
+  * [双软企业](renzheng/shuangruan/README.md)
