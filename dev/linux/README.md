@@ -22,6 +22,7 @@
 * [pkg-config](pkg-config/README.md)
 * [linker](linker/README.md)
 * [find](find/README.md)
+* [zip](zip/README.md)
 * [grep](grep/README.md)
 * [network](network/README.md)
 * [Performance](performance/README.md)
