@@ -186,3 +186,6 @@
 
 ## ExifTool
 * [How to modify image EXIF metadata - Date Created / Date Modified [Command line tool]](https://yarnaudov.com/modify-image-exif-metadata-dates.html)
+
+## Sougou Input(搜狗输入法)
+* [怎么永久关闭搜狗输入法ai汪仔](https://mydown.yesky.com/news/273691.html)
