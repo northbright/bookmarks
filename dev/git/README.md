@@ -53,3 +53,6 @@
 
 ## Detached Head
 * [Git 提交时的 Detached HEAD 问题](https://juejin.cn/post/7102429431133634568)
+
+## Archive
+* [Use git archive to Create Zip File for Git Repo](https://github.com/northbright/Notes/blob/master/Git/use-git-archive-to-create-zip-file-for-git-repo.md)
