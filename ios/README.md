@@ -28,3 +28,4 @@
 
 ## AirPlay
 * [Unofficial AirPlay Specification](https://openairplay.github.io/airplay-spec/)
+  * <https://github.com/openairplay/airplay-spec>
