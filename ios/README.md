@@ -26,3 +26,5 @@
 ## WiFi
 * [如何将iphone靠近任何已连接的wifi的手机来访问不知道密码的wifi？](https://www.zhihu.com/question/67564189)
 
+## AirPlay
+* [Unofficial AirPlay Specification](https://openairplay.github.io/airplay-spec/)
