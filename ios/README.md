@@ -29,3 +29,5 @@
 ## AirPlay
 * [Unofficial AirPlay Specification](https://openairplay.github.io/airplay-spec/)
   * <https://github.com/openairplay/airplay-spec>
+
+* [除了Apple TV，还有哪些设备支持Airplay镜像功能？](https://www.zhihu.com/tardis/bd/ans/1129083172)
