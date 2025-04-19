@@ -52,14 +52,17 @@
 * [USB3.1 gen2 Type-c 硬盘盒 ASM235CM JMS580 VL716 测试](https://tieba.baidu.com/p/6446387461)
 * [2019年为什么极少见到配备SATA接口固态硬盘的笔记本了？](https://www.zhihu.com/question/319773970)
 * [现在还有什么主流笔记本是带sata2.5寸硬盘接口的吗？](https://www.zhihu.com/question/469773031)
-* [三星的0E现在咋样了](https://www.chiphell.com/thread-2500479-1-1.html)
-* [金士顿KC3000、西数SN850X、致钛Tipro7000哪个好？](https://www.zhihu.com/question/587945577)
-* [NVME固态硬盘推荐（PCIE4.0篇）2023年3月更新](https://zhuanlan.zhihu.com/p/530426466)
-* 西数 SN850X
-  * [西数 SN850X SSD 安装 Win11 后出现蓝屏、卡死问题，官方称会尽快发布固件更新](https://www.ithome.com/0/674/985.htm)
-  * [[Finally new firmware released][SN850X] The driver detected a controller error on \Device\RaidPort0](https://community.wd.com/t/finally-new-firmware-released-sn850x-the-driver-detected-a-controller-error-on-device-raidport0/281205)
 * [SSD Dashboard Unknown Error(0x2efd) during install](https://community.wd.com/t/ssd-dashboard-unknown-error-0x2efd-during-install/252696)
 * [Queue length 和 Queue depth 的区别](https://www.cnblogs.com/awpatp/p/12161182.html)
+* [金士顿KC3000、西数SN850X、致钛Tipro7000哪个好？](https://www.zhihu.com/question/587945577)
+* [NVME固态硬盘推荐（PCIE4.0篇）2023年3月更新](https://zhuanlan.zhihu.com/p/530426466)
+
+* 西数
+  * [西数 SN850X SSD 安装 Win11 后出现蓝屏、卡死问题，官方称会尽快发布固件更新](https://www.ithome.com/0/674/985.htm)
+  * [[Finally new firmware released][SN850X] The driver detected a controller error on \Device\RaidPort0](https://community.wd.com/t/finally-new-firmware-released-sn850x-the-driver-detected-a-controller-error-on-device-raidport0/281205)
+
+* Samsung
+  * [三星的0E现在咋样了](https://www.chiphell.com/thread-2500479-1-1.html)
 
 ## Mac
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
