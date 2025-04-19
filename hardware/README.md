@@ -63,6 +63,7 @@
 
 * Samsung
   * [三星的0E现在咋样了](https://www.chiphell.com/thread-2500479-1-1.html)
+  * [【保姆级】三星固态硬盘保修售后流程](https://www.bilibili.com/video/BV1Vt4y1F7F9/)
 
 ## Mac
 * [MacBook Pro 16寸 2019 版有推荐的扩展坞吗?](https://www.zhihu.com/question/349605922)
