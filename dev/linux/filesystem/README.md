@@ -26,3 +26,6 @@
 
 ## The Sleuth Kit
 * [The Sleuth Kit](https://github.com/sleuthkit/sleuthkit)
+
+## DD
+* [How to make disk image with dd on Linux or Unix](https://www.cyberciti.biz/faq/unix-linux-dd-create-make-disk-image-commands/)
