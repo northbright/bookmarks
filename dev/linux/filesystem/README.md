@@ -29,3 +29,4 @@
 
 ## DD
 * [How to make disk image with dd on Linux or Unix](https://www.cyberciti.biz/faq/unix-linux-dd-create-make-disk-image-commands/)
+* [dd: reading /dev/sda1: Input/output error](https://ubuntuforums.org/showthread.php?t=1666299)
