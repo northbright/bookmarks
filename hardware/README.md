@@ -187,3 +187,8 @@
 
 ## 显卡
 * [解决部分nVIDIA显示卡DP输出无显示问题](https://zhuanlan.zhihu.com/p/457323299)
+
+## 华为
+* 交换机
+  * [S5731登录提示修改密码，不修改无法登陆](https://support.huawei.com/enterprise/zh/knowledge/EKB1100060188)
+
