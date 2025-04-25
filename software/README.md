@@ -189,3 +189,6 @@
 
 ## Sougou Input(搜狗输入法)
 * [怎么永久关闭搜狗输入法ai汪仔](https://mydown.yesky.com/news/273691.html)
+
+## Clonezilla
+* [使用Clonezilla(再生龙)克隆、恢复Linux系统](https://www.jianshu.com/p/72a4514751c3)
