@@ -99,6 +99,9 @@
 #### Map
 * [Selecting streams with the -map option](https://trac.ffmpeg.org/wiki/Map)
 
+#### Mix Audio Streams
+* [FFmpeg : mixing and setting each volume of a multi audio track file](https://superuser.com/questions/769168/ffmpeg-mixing-and-setting-each-volume-of-a-multi-audio-track-file)
+
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
 
