@@ -59,18 +59,33 @@
 * [How To Enlarge a Virtual Machine’s Disk in VirtualBox or VMware](https://www.howtogeek.com/124622/how-to-enlarge-a-virtual-machines-disk-in-virtualbox-or-vmware/)
 
 ## FFmpeg
-* [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
+#### Articles
 * [Useful FFmpeg Commands for Working with Audio and Video Files](https://www.labnol.org/internet/useful-ffmpeg-commands/28490/)
+* [15 Useful ‘FFmpeg’ Commands for Video, Audio and Image Conversion in Linux – Part 2](https://www.tecmint.com/ffmpeg-commands-for-video-audio-and-image-conversion-in-linux/)
+
+#### Upscaling and Downscaling
+* [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
+
+#### Seeking
 * [FFmpeg Seeking](https://trac.ffmpeg.org/wiki/Seeking)
 * [Video seeking and cutting sections - 2020](https://www.bogotobogo.com/FFMpeg/ffmpeg_seeking_ss_option_cutting_section_video_image.php)
+
+#### GIF
 * [How do I convert a video to GIF using ffmpeg, with reasonable quality?](https://superuser.com/questions/556029/how-do-i-convert-a-video-to-gif-using-ffmpeg-with-reasonable-quality)
 * [High quality GIF with FFmpeg](http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html)
-* [15 Useful ‘FFmpeg’ Commands for Video, Audio and Image Conversion in Linux – Part 2](https://www.tecmint.com/ffmpeg-commands-for-video-audio-and-image-conversion-in-linux/)
 * [使用ffmpeg对视频指定时间点加入指定音频和gif动图 实现水印旋转](https://blog.csdn.net/qq_39962403/article/details/114946422)
+
+#### Subtitle
 * [ffmpeg 给视频添加字幕，在视频的某个时间段加入声音特效和动画](https://blog.csdn.net/qq_39962403/article/details/114897352)
-* [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
 * [How to Embed Subtitles into a Video Using FFmpeg](https://www.baeldung.com/linux/subtitles-ffmpeg)
+
+#### Cut
+* [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
+
+#### Images
 * [A simple guide to using FFmpeg to convert images to video](https://www.plainlyvideos.com/blog/ffmpeg-convert-images-to-video)
+
+#### Fade
 * [Add Fade In and Fade Out Effects With ffmpeg!](https://dev.to/dak425/add-fade-in-and-fade-out-effects-with-ffmpeg-2bj7)
 
 ## iMovie
