@@ -90,6 +90,7 @@
 
 #### Creating Silence
 * [Creating silence with FFmpeg](https://notes.mark.himsley.org/FFmpeg/creating_silence.html)
+* [Concatenate videos with/without audio stream](https://superuser.com/questions/928770/concatenate-videos-with-without-audio-stream)
 
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
