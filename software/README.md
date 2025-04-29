@@ -93,6 +93,9 @@
 * [Concatenate videos with/without audio stream](https://superuser.com/questions/928770/concatenate-videos-with-without-audio-stream)
 * [ffmpeg complex_filter with aevalsrc results in "Invalid stream specifier"](https://stackoverflow.com/questions/69956420/ffmpeg-complex-filter-with-aevalsrc-results-in-invalid-stream-specifier)
 
+#### Concat
+* [Concatenating media files](https://trac.ffmpeg.org/wiki/Concatenate)
+
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
 
