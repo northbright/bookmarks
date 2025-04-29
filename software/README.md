@@ -88,6 +88,9 @@
 #### Fade
 * [Add Fade In and Fade Out Effects With ffmpeg!](https://dev.to/dak425/add-fade-in-and-fade-out-effects-with-ffmpeg-2bj7)
 
+#### Creating Silence
+* [Creating silence with FFmpeg](https://notes.mark.himsley.org/FFmpeg/creating_silence.html)
+
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
 
