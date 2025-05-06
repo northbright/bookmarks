@@ -82,6 +82,7 @@
 * [ffmpeg: how to add several subtitle streams](https://video.stackexchange.com/questions/22197/ffmpeg-how-to-add-several-subtitle-streams)
 * [How do I add and/or keep subtitles when converting video?](https://askubuntu.com/questions/214199/how-do-i-add-and-or-keep-subtitles-when-converting-video)
 * [ffmpeg set subtitles track as default](https://stackoverflow.com/questions/26956762/ffmpeg-set-subtitles-track-as-default)
+* [Is there an option in ffmpeg to specify a subtitle track that should be shown by default?](https://superuser.com/questions/700082/is-there-an-option-in-ffmpeg-to-specify-a-subtitle-track-that-should-be-shown-by)
 
 #### Cut
 * [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
