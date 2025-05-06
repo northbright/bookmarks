@@ -80,6 +80,7 @@
 * [How to Embed Subtitles into a Video Using FFmpeg](https://www.baeldung.com/linux/subtitles-ffmpeg)
 * [How to Add Subtitles to a Video File Using FFmpeg](https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-file-using-ffmpeg/)
 * [ffmpeg: how to add several subtitle streams](https://video.stackexchange.com/questions/22197/ffmpeg-how-to-add-several-subtitle-streams)
+* [How do I add and/or keep subtitles when converting video?](https://askubuntu.com/questions/214199/how-do-i-add-and-or-keep-subtitles-when-converting-video)
 
 #### Cut
 * [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
