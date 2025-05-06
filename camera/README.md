@@ -53,6 +53,7 @@
 * [索尼85/f1.8值得买吗？](https://www.zhihu.com/question/363335178)
 * [【顾俊】索尼 FE 85 f1.4 GM VS 索尼 FE 85 f1.8](https://www.bilibili.com/video/BV11s411M7ZD/)
 * [【顾俊】减肥瘦身后的适马 —— Sigma 85 f1.4 DG DN Art](https://www.bilibili.com/video/BV1TT4y177Xb/)
+* [50 F1.2 镜头与 50F1.4 镜头除了光圈外 还有哪些区别 来了解一下](https://baijiahao.baidu.com/s?id=1810940226530379496)
 
 #### A7M3
 * [剖析索尼A7M3：重新定义“全画幅门槛”](https://baijiahao.baidu.com/s?id=1595261618845349544)
