@@ -79,6 +79,7 @@
 * [ffmpeg 给视频添加字幕，在视频的某个时间段加入声音特效和动画](https://blog.csdn.net/qq_39962403/article/details/114897352)
 * [How to Embed Subtitles into a Video Using FFmpeg](https://www.baeldung.com/linux/subtitles-ffmpeg)
 * [How to Add Subtitles to a Video File Using FFmpeg](https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-file-using-ffmpeg/)
+* [ffmpeg: how to add several subtitle streams](https://video.stackexchange.com/questions/22197/ffmpeg-how-to-add-several-subtitle-streams)
 
 #### Cut
 * [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
