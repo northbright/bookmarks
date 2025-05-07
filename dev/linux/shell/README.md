@@ -26,3 +26,6 @@
 
 ## Progress
 * [How to add a progress bar to a shell script?](https://stackoverflow.com/questions/238073/how-to-add-a-progress-bar-to-a-shell-script)
+
+## Sudo
+* [How do I run a 'sudo' command inside a script?](https://askubuntu.com/questions/425754/how-do-i-run-a-sudo-command-inside-a-script)
