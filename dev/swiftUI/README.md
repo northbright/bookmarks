@@ -12,6 +12,7 @@
 * [Build SwiftUI apps for iOS 17](https://designcode.io/swiftui-ios17-intro)
 * [SwiftUI Handbook](https://designcode.io/swiftui-handbook)
 * [SwiftUI Advanced Handbook](https://designcode.io/swiftui-advanced-handbook)
+* [戴铭的小册子](https://github.com/ming1016/SwiftPamphletApp)
 
 ## Articles
 * [SwiftUI 两周内入门到精通？](https://v2ex.com/t/693573)
