@@ -29,5 +29,8 @@
 * [What’s New in SwiftUI for iOS 18](https://www.appcoda.com/swiftui-ios-18/)
 * [几个常见的关于 SwiftUI 的误解](https://fatbobman.com/zh/posts/common-misconceptions-about-swiftui/)
 
+## Blogs
+* [戴铭的博客](https://ming1016.github.io/)
+
 ## Task
 * [How to run an asynchronous task when a view is shown](https://www.hackingwithswift.com/quick-start/swiftui/how-to-run-an-asynchronous-task-when-a-view-is-shown)
