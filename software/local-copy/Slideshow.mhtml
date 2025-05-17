@@ -1,0 +1,1909 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://trac.ffmpeg.org/wiki/Slideshow
+Subject: =?utf-8?Q?Slideshow=20=E2=80=93=20FFmpeg?=
+Date: Sat, 17 May 2025 06:19:58 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----"
+
+
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: text/html
+Content-ID: <frame-5C0B22CA678249FF876554C64B7171F2@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://trac.ffmpeg.org/wiki/Slideshow
+
+<!DOCTYPE html><html lang=3D"en-US"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8">
+    <!-- # block head (placeholder in theme.html) -->
+        <!-- # block head (content inherited from layout.html) -->
+    <title>
+      Slideshow     =E2=80=93 FFmpeg
+
+    </title>
+
+   =20
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <!--[if IE]><script>
+        if (/^#__msie303:/.test(window.location.hash))
+        window.location.replace(window.location.hash.replace(/^#__msie303:/=
+, '#'));
+        </script><![endif]-->
+
+    <link rel=3D"start" href=3D"https://trac.ffmpeg.org/wiki">
+    <link rel=3D"search" href=3D"https://trac.ffmpeg.org/search">
+    <link rel=3D"help" href=3D"https://trac.ffmpeg.org/wiki/TracGuide">
+    <link rel=3D"stylesheet" href=3D"https://trac.ffmpeg.org/chrome/common/=
+css/trac.css" type=3D"text/css">
+    <link rel=3D"stylesheet" href=3D"https://trac.ffmpeg.org/chrome/common/=
+css/wiki.css" type=3D"text/css">
+    <link rel=3D"stylesheet" href=3D"https://trac.ffmpeg.org/chrome/vote/cs=
+s/tracvote.css" type=3D"text/css">
+    <link rel=3D"stylesheet" href=3D"https://trac.ffmpeg.org/chrome/tags/cs=
+s/tractags.css" type=3D"text/css">
+    <link rel=3D"icon" href=3D"https://trac.ffmpeg.org/chrome/common/trac.i=
+co" type=3D"image/x-icon">
+    <link rel=3D"alternate" href=3D"https://trac.ffmpeg.org/wiki/Slideshow?=
+format=3Dtxt" title=3D"Plain Text" type=3D"text/x-trac-wiki">
+   =20
+    <link type=3D"application/opensearchdescription+xml" rel=3D"search" hre=
+f=3D"https://trac.ffmpeg.org/search/opensearch" title=3D"Search FFmpeg">
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+    <!--   # include 'site_head.html' (layout.html) -->
+    <!--   end of site_head.html -->
+    <!-- # endblock head (content inherited from layout.html) -->
+
+
+   =20
+    <!-- # endblock head (placeholder in theme.html) -->
+  </head>=20
+  <body class=3D"trac-has-js">
+    <!-- # block body (content inherited from theme.html) -->
+    <!--   # include 'site_header.html' (theme.html) -->
+    <!--   end of site_header.html -->
+
+    <div id=3D"banner">
+      <div id=3D"header">
+        <a id=3D"logo" href=3D"https://ffmpeg.org/">
+          <img alt=3D"FFmpeg" src=3D"https://trac.ffmpeg.org/ffmpeg-logo.pn=
+g"></a>
+
+
+      </div>
+      <form id=3D"search" action=3D"https://trac.ffmpeg.org/search" method=
+=3D"get">
+        <div>
+          <label for=3D"proj-search">Search:</label>
+          <input type=3D"text" id=3D"proj-search" name=3D"q" size=3D"18" va=
+lue=3D"">
+          <input type=3D"submit" value=3D"Search">
+        </div>
+      </form>
+          <div id=3D"metanav" class=3D"nav">
+      <ul><li class=3D"first"><a href=3D"https://trac.ffmpeg.org/login">Log=
+in</a></li><li><a href=3D"https://trac.ffmpeg.org/prefs">Preferences</a></l=
+i><li><a href=3D"https://trac.ffmpeg.org/wiki/TracGuide">Help/Guide</a></li=
+><li><a href=3D"https://trac.ffmpeg.org/about">About Trac</a></li><li><a hr=
+ef=3D"https://trac.ffmpeg.org/register">Register</a></li><li class=3D"last"=
+><a href=3D"https://trac.ffmpeg.org/reset_password">Forgot your password?</=
+a></li></ul>
+    </div>
+
+    </div>
+        <div id=3D"mainnav" class=3D"nav">
+      <ul><li class=3D"active first"><a href=3D"https://trac.ffmpeg.org/wik=
+i">Wiki</a></li><li><a href=3D"https://trac.ffmpeg.org/timeline">Timeline</=
+a></li><li><a href=3D"https://trac.ffmpeg.org/report">View Tickets</a></li>=
+<li><a href=3D"https://trac.ffmpeg.org/search">Search</a></li><li class=3D"=
+last"><a accesskey=3D"T" href=3D"https://trac.ffmpeg.org/tags">Tags</a></li=
+></ul>
+    </div>
+
+
+    <div id=3D"main">
+
+<div id=3D"pagepath" class=3D"noprint">
+<a class=3D"pathentry first" title=3D"View WikiStart" href=3D"https://trac.=
+ffmpeg.org/wiki">wiki:</a><a href=3D"https://trac.ffmpeg.org/wiki/Slideshow=
+" title=3D"View Slideshow" class=3D"pathentry">Slideshow</a></div>      <di=
+v id=3D"ctxtnav" class=3D"nav">
+        <h2>Context Navigation</h2>
+        <ul>
+          <li class=3D"first"><span id=3D"vote" title=3D"Vote count (+1)"><=
+img alt=3D"Up-vote" src=3D"https://trac.ffmpeg.org/chrome/vote/aupgray.png"=
+><span id=3D"votes">+1</span><img alt=3D"Down-vote" src=3D"https://trac.ffm=
+peg.org/chrome/vote/adowngray.png"></span></li>
+          <li><a href=3D"https://trac.ffmpeg.org/wiki/WikiStart">Start Page=
+</a></li>
+          <li><a href=3D"https://trac.ffmpeg.org/wiki/TitleIndex">Index</a>=
+</li>
+          <li class=3D"last"><a href=3D"https://trac.ffmpeg.org/wiki/Slides=
+how?action=3Dhistory">History</a></li>
+        </ul>
+        <hr>
+      </div>
+
+     =20
+
+     =20
+
+      <!-- # block content (placeholder in theme.html) -->
+    <div id=3D"content" class=3D"wiki narrow">
+
+      <div class=3D"wikipage searchable">
+        <div id=3D"wikipage" class=3D"trac-content borderless"><span id=3D"=
+trac-wiki-expander"></span><p>
+</p><div class=3D"wiki-toc">
+<ol>
+  <li>
+    <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Basicexamples">Basic =
+examples</a>
+    <ol>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Sequential">Seque=
+ntial</a>
+        <ol>
+          <li>
+            <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Startingwitha=
+specificimage">Starting with a specific image</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Globpattern">Glob=
+ pattern</a>
+      </li>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Pipe">Pipe</a>
+      </li>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Concatdemuxer">Co=
+ncat demuxer</a>
+      </li>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Singleimage">Sing=
+le image</a>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#AdditionalInfo">Addit=
+ional Info</a>
+    <ol>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Framerates">Frame=
+ rates</a>
+      </li>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Ifyourvideodoesno=
+tshowtheframescorrectly">If your video does not show the frames correctly</=
+a>
+      </li>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Colorspaceconvers=
+ionandchromasub-sampling">Color space conversion and chroma sub-sampling</a=
+>
+      </li>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Addingaudio">Addi=
+ng audio</a>
+      </li>
+      <li>
+        <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Alsosee">Also see=
+</a>
+      </li>
+    </ol>
+  </li>
+</ol>
+</div><p>
+</p>
+<h1 class=3D"section" id=3D"Basicexamples">Basic examples<a class=3D"anchor=
+" href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Basicexamples" title=3D"Li=
+nk to this section"> =C2=B6</a></h1>
+<p>
+You can input images sequentially, with a glob pattern, via piping, or with=
+ the concat demuxer. You can also make a video from a single image.
+</p>
+<h2 class=3D"section" id=3D"Sequential">Sequential<a class=3D"anchor" href=
+=3D"https://trac.ffmpeg.org/wiki/Slideshow#Sequential" title=3D"Link to thi=
+s section"> =C2=B6</a></h2>
+<p>
+In this example the input images are sequentially named <code>img001.png</c=
+ode>, <code>img002.png</code>, <code>img003.png</code>, etc.
+</p>
+<pre class=3D"wiki">ffmpeg -framerate 24 -i img%03d.png output.mp4
+</pre><ul><li>When outputting H.264, adding <code>-vf format=3Dyuv420p</cod=
+e> or <code>-pix_fmt yuv420p</code> will ensure compatibility so crappy pla=
+yers can decode the video. See the <a class=3D"wiki" href=3D"https://trac.f=
+fmpeg.org/wiki/Slideshow#Colorspaceconversionandchromasub-sampling">colorsp=
+ace and chroma-subsampling</a> for more info.
+</li></ul><ul><li>If <code>-framerate</code> option is omitted the default =
+will input and output 25 frames per second. See <a class=3D"wiki" href=3D"h=
+ttps://trac.ffmpeg.org/wiki/Slideshow#Framerates">Frame rates</a> for more =
+info.
+</li></ul><h3 class=3D"section" id=3D"Startingwithaspecificimage">Starting =
+with a specific image<a class=3D"anchor" href=3D"https://trac.ffmpeg.org/wi=
+ki/Slideshow#Startingwithaspecificimage" title=3D"Link to this section"> =
+=C2=B6</a></h3>
+<p>
+For example if you want to start with <code>img126.png</code> then use the =
+<code>-start_number</code> option:
+</p>
+<pre class=3D"wiki">ffmpeg -start_number 126 -i img%03d.png -pix_fmt yuv420=
+p out.mp4
+</pre><h2 class=3D"section" id=3D"Globpattern">Glob pattern<a class=3D"anch=
+or" href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Globpattern" title=3D"Li=
+nk to this section"> =C2=B6</a></h2>
+<p>
+Bash-style globbing (<code>*</code> represents any number of any characters=
+) is useful if your images are sequential but not necessarily in a numerica=
+lly sequential order as in the previous example.
+</p>
+<pre class=3D"wiki">ffmpeg -framerate 10 -pattern_type glob -i '*.jpg' -c:v=
+ libx264 -pix_fmt yuv420p out.mp4
+</pre><p>
+The glob pattern is not available on Windows builds.
+</p>
+<h2 class=3D"section" id=3D"Pipe">Pipe<a class=3D"anchor" href=3D"https://t=
+rac.ffmpeg.org/wiki/Slideshow#Pipe" title=3D"Link to this section"> =C2=B6<=
+/a></h2>
+<p>
+You can use <code>cat</code> or other tools to pipe to <code>ffmpeg</code>:
+</p>
+<pre class=3D"wiki">cat *.png | ffmpeg -f image2pipe -i - output.mkv
+</pre><h2 class=3D"section" id=3D"Concatdemuxer">Concat demuxer<a class=3D"=
+anchor" href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Concatdemuxer" title=
+=3D"Link to this section"> =C2=B6</a></h2>
+<p>
+You can use the <a href=3D"https://ffmpeg.org/ffmpeg-formats.html#concat">c=
+oncat demuxer</a> to manually order images and to provide a specific durati=
+on for each image.
+</p>
+<p>
+First, make a text file with the appropriate info:
+</p>
+<pre class=3D"wiki">file '/path/to/dog.png'
+duration 5
+file '/path/to/cat.png'
+duration 1
+file '/path/to/rat.png'
+duration 3
+file '/path/to/tapeworm.png'
+duration 2
+file '/path/to/tapeworm.png'
+</pre><p>
+(Due to a quirk, the last image has to be specified twice - the 2nd time wi=
+thout any duration directive)
+</p>
+<p>
+Then run the <code>ffmpeg</code> command:
+</p>
+<pre class=3D"wiki">ffmpeg -f concat -i input.txt -vsync vfr -pix_fmt yuv42=
+0p output.mp4
+</pre><h2 class=3D"section" id=3D"Singleimage">Single image<a class=3D"anch=
+or" href=3D"https://trac.ffmpeg.org/wiki/Slideshow#Singleimage" title=3D"Li=
+nk to this section"> =C2=B6</a></h2>
+<p>
+Example with output video duration set to 30 seconds with <code>-t 30</code=
+>:
+</p>
+<pre class=3D"wiki">ffmpeg -loop 1 -i img.jpg -c:v libx264 -t 30 -pix_fmt y=
+uv420p out.mp4
+</pre><hr>
+<h1 class=3D"section" id=3D"AdditionalInfo">Additional Info<a class=3D"anch=
+or" href=3D"https://trac.ffmpeg.org/wiki/Slideshow#AdditionalInfo" title=3D=
+"Link to this section"> =C2=B6</a></h1>
+<h2 class=3D"section" id=3D"Framerates">Frame rates<a class=3D"anchor" href=
+=3D"https://trac.ffmpeg.org/wiki/Slideshow#Framerates" title=3D"Link to thi=
+s section"> =C2=B6</a></h2>
+<p>
+You can specify two frame rates: input and output.
+</p>
+<ul><li>Set input frame rate with the <code>-framerate</code> input option =
+(before <code>-i</code>). The default for reading inputs is <code>-framerat=
+e 25</code> which will be set if no <code>-framerate</code> is specified.
+</li><li>The output frame rate for the video stream by setting <code>-r</co=
+de> after <code>-i</code> or by using the <code>fps</code> filter. <strong>=
+If you want the input and output frame rates to be the same, then just decl=
+are an input <code>-framerate</code> and the output will inherit the same v=
+alue (meaning you can omit the <code>-r</code>).</strong>
+</li></ul><p>
+By using a separate frame rate for the input and output you can control the=
+ duration at which each input is displayed and tell <code>ffmpeg</code> the=
+ frame rate you want for the output file. This is useful if your player can=
+not handle a non-standard frame rate. If the input <code>-framerate</code> =
+is lower than the output <code>-r</code> then <code>ffmpeg</code> will dupl=
+icate frames to reach your desired output frame rate. If the input <code>-f=
+ramerate</code> is higher than the output <code>-r</code> then <code>ffmpeg=
+</code> will drop frames to reach your desired output frame rate.
+</p>
+<p>
+In this example each image will have a duration of 5 seconds (the inverse o=
+f 1/5 frames per second). The video stream will have a frame rate of 30 fps=
+ by duplicating the frames accordingly:
+</p>
+<pre class=3D"wiki">ffmpeg -framerate 1/5 -i img%03d.png -c:v libx264 -r 30=
+ -pix_fmt yuv420p out.mp4
+</pre><hr>
+<h2 class=3D"section" id=3D"Ifyourvideodoesnotshowtheframescorrectly">If yo=
+ur video does not show the frames correctly<a class=3D"anchor" href=3D"http=
+s://trac.ffmpeg.org/wiki/Slideshow#Ifyourvideodoesnotshowtheframescorrectly=
+" title=3D"Link to this section"> =C2=B6</a></h2>
+<p>
+If you encounter problems, such as the first image is skipped or only shows=
+ for one frame, then use the <a class=3D"ext-link" href=3D"http://ffmpeg.or=
+g/ffmpeg-filters.html#fps"><span class=3D"icon">=E2=80=8B</span>fps video f=
+ilter</a> instead of <code>-r</code> for the output framerate (see <a class=
+=3D"closed ticket" href=3D"https://trac.ffmpeg.org/ticket/1578" title=3D"#1=
+578: defect: variable FPS incorrect frame length (closed: fixed)">ticket:15=
+78</a> and <a class=3D"closed ticket" href=3D"https://trac.ffmpeg.org/ticke=
+t/2674" title=3D"#2674: defect: fps filter changes video length (closed: fi=
+xed)">ticket:2674</a> / <a class=3D"closed ticket" href=3D"https://trac.ffm=
+peg.org/ticket/3164" title=3D"#3164: defect: First image skipped when forci=
+ng output rate (closed: duplicate)">ticket:3164</a> for more info):
+</p>
+<pre class=3D"wiki">ffmpeg -framerate 1/5 -i img%03d.png -c:v libx264 -vf f=
+ps=3D25 -pix_fmt yuv420p out.mp4
+</pre><p>
+Alternatively the <a class=3D"ext-link" href=3D"http://ffmpeg.org/ffmpeg-fi=
+lters.html#format"><span class=3D"icon">=E2=80=8B</span>format video filter=
+</a> can be added to the <a class=3D"ext-link" href=3D"http://ffmpeg.org/ff=
+mpeg-filters.html#Filtergraph-syntax-1"><span class=3D"icon">=E2=80=8B</spa=
+n>filterchain</a> to replace <code>-pix_fmt yuv420p</code>. The advantage t=
+o this method is that you can control which filter goes first:
+</p>
+<pre class=3D"wiki">ffmpeg -framerate 1/5 -i img%03d.png -c:v libx264 -vf "=
+fps=3D25,format=3Dyuv420p" out.mp4
+</pre><hr>
+<h2 class=3D"section" id=3D"Colorspaceconversionandchromasub-sampling">Colo=
+r space conversion and chroma sub-sampling<a class=3D"anchor" href=3D"https=
+://trac.ffmpeg.org/wiki/Slideshow#Colorspaceconversionandchromasub-sampling=
+" title=3D"Link to this section"> =C2=B6</a></h2>
+<p>
+By default when using <code>libx264</code>, and depending on your input, <c=
+ode>ffmpeg</code> will attempt to avoid color subsampling. Technically this=
+ is preferred, but unfortunately almost all video players, excluding FFmpeg=
+ based players, and many online video services only support the YUV color s=
+pace with 4:2:0 chroma subsampling. Using the options <code>-pix_fmt yuv420=
+p</code> or <code>-vf format=3Dyuv420p</code> will maximize compatibility.
+</p>
+<hr>
+<h2 class=3D"section" id=3D"Addingaudio">Adding audio<a class=3D"anchor" hr=
+ef=3D"https://trac.ffmpeg.org/wiki/Slideshow#Addingaudio" title=3D"Link to =
+this section"> =C2=B6</a></h2>
+<p>
+If you want to add audio (e.g. <code>audio.wav</code>) to one "poster" imag=
+e, you need <code>-shortest</code> to tell it to stop after the audio strea=
+m is finished. The internal AAC encoder is used in this example, but you ca=
+n <a class=3D"wiki" href=3D"https://trac.ffmpeg.org/wiki/AACEncodingGuide">=
+use any other supported AAC encoder</a> as well:
+</p>
+<pre class=3D"wiki">ffmpeg -loop 1 -i img.jpg -i audio.wav -c:v libx264 -c:=
+a aac -b:a 192k -shortest out.mp4
+</pre><p>
+If your audio file is using a codec that the output container supports (e.g=
+. MP3 audio in AVI or M4A/AAC audio in MP4), you can <a href=3D"https://ffm=
+peg.org/ffmpeg.html#Stream-copy">stream copy</a> (re-mux) it instead of re-=
+encoding, which will preserve the audio quality:
+</p>
+<pre class=3D"wiki">ffmpeg -loop 1 -i img.jpg -i audio.m4a -c:v libx264 -c:=
+a copy -shortest out.mp4
+</pre><hr>
+<h2 class=3D"section" id=3D"Alsosee">Also see<a class=3D"anchor" href=3D"ht=
+tps://trac.ffmpeg.org/wiki/Slideshow#Alsosee" title=3D"Link to this section=
+"> =C2=B6</a></h2>
+<ul><li><a class=3D"ext-link" href=3D"http://ffmpeg.org/ffmpeg-formats.html=
+#image2-2"><span class=3D"icon">=E2=80=8B</span>FFmpeg image file demuxer d=
+ocumentation</a>
+</li><li><a class=3D"wiki" href=3D"https://trac.ffmpeg.org/wiki/Create%20a%=
+20thumbnail%20image%20every%20X%20seconds%20of%20the%20video">Create a thum=
+bnail image every X seconds of the video</a>
+</li><li><a class=3D"wiki" href=3D"https://trac.ffmpeg.org/wiki/Encode/H.26=
+4">H.264 Encoding Guide</a>
+</li><li><a class=3D"wiki" href=3D"https://trac.ffmpeg.org/wiki/Encode/H.26=
+5">H.265 Encoding Guide</a>
+</li></ul></div>
+        <div class=3D"trac-modifiedby">
+          <span>
+            <a href=3D"https://trac.ffmpeg.org/wiki/Slideshow?action=3Ddiff=
+&amp;version=3D19" title=3D"Version 19 by Ben Roth: Added H.265 encoding gu=
+ide to Also See section">Last modified</a>
+ <a class=3D"timeline" href=3D"https://trac.ffmpeg.org/timeline?from=3D2017=
+-09-15T21%3A28%3A24Z&amp;precision=3Dsecond" title=3D"See timeline at Sep 1=
+5, 2017, 9:28:24 PM">8 years ago</a>          </span>
+          <span class=3D"trac-print">
+            Last modified on Sep 15, 2017, 9:28:24 PM
+          </span>
+        </div>
+      </div><ul class=3D"tags"><li class=3D"header">Tags</li><li><a class=
+=3D"tag" href=3D"https://trac.ffmpeg.org/tags/images" rel=3D"tag">images</a=
+> </li><li><a class=3D"tag" href=3D"https://trac.ffmpeg.org/tags/slideshow"=
+ rel=3D"tag">slideshow</a> </li></ul>
+
+
+
+
+
+<div class=3D"trac-help">
+  <strong>Note:</strong>
+ See   <a href=3D"https://trac.ffmpeg.org/wiki/TracWiki">TracWiki</a>
+ for help on using the wiki.
+</div>
+    </div>
+        <!-- # block content (content inherited from layout.html) -->
+   =20
+    <div id=3D"altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class=3D"first last">
+          <a rel=3D"nofollow" href=3D"https://trac.ffmpeg.org/wiki/Slidesho=
+w?format=3Dtxt" class=3D"">
+            Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    <!-- # endblock content (content inherited from layout.html) -->
+
+      <!-- # endblock content (placeholder in theme.html) -->
+    </div>
+
+    <div id=3D"footer"><hr>
+      <a id=3D"tracpowered" href=3D"https://trac.edgewall.org/"><img src=3D=
+"https://trac.ffmpeg.org/chrome/common/trac_logo_mini.png" height=3D"30" wi=
+dth=3D"107" alt=3D"Trac Powered"></a>
+      <p class=3D"left">
+Powered by         <a href=3D"https://trac.ffmpeg.org/about"><strong>Trac 1=
+.6</strong></a>
+        <br>
+ By         <a href=3D"http://www.edgewall.org/">Edgewall Software</a>
+.      </p>
+      <p class=3D"right">Visit the Trac open source project at<br><a href=
+=3D"http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+    <!--   # include 'site_footer.html' (theme.html) -->
+    <!--   end of site_footer.html -->
+    <!-- # endblock body (content inherited from theme.html) -->
+   </body></html>
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://trac.ffmpeg.org/chrome/common/css/trac.css
+
+@charset "utf-8";
+
+html { overflow-y: scroll; }
+
+body { font-size: 100%; background: rgb(255, 255, 255); color: rgb(0, 0, 0)=
+; margin: 0.5em; padding: 0px; }
+
+body, th, tr { font-style: normal; font-family: Roboto, "Segoe UI", Verdana=
+, "Bitstream Vera Sans", Helvetica, sans-serif; }
+
+h1, h2, h3, h4 { font-weight: bold; letter-spacing: -0.018em; break-after: =
+avoid; }
+
+h1 { font-size: 1.8em; margin: 0.15em 1em 0.5em 0px; }
+
+h2 { font-size: 1.6em; }
+
+h3 { font-size: 1.2em; }
+
+hr { border-right: none; border-bottom: none; border-left: none; border-ima=
+ge: initial; border-top: 1px solid rgb(204, 204, 187); margin: 2em 0px; }
+
+address { font-style: normal; }
+
+img { border: none; }
+
+.underline { text-decoration: underline; }
+
+ol.loweralpha { list-style-type: lower-alpha; }
+
+ol.upperalpha { list-style-type: upper-alpha; }
+
+ol.lowerroman { list-style-type: lower-roman; }
+
+ol.upperroman { list-style-type: upper-roman; }
+
+ol.arabic { list-style-type: decimal; }
+
+:link, :visited { text-decoration: none; color: rgb(187, 0, 0); border-bott=
+om: 1px dotted rgb(187, 187, 187); }
+
+:link:hover, :visited:hover { background-color: rgba(238, 238, 238, 0.5); c=
+olor: rgb(85, 0, 0); border-radius: 0.1em; box-shadow: rgba(238, 238, 238, =
+0.5) 0px 0px 0px 0.15em; }
+
+h1 :link, h1 :visited, h2 :link, h2 :visited, h3 :link, h3 :visited, h4 :li=
+nk, h4 :visited, h5 :link, h5 :visited, h6 :link, h6 :visited { color: inhe=
+rit; }
+
+.anchor:link, .anchor:visited { border: none; color: rgb(215, 215, 215); fo=
+nt-size: 0.8em; vertical-align: text-top; }
+
+* > .anchor:link, * > .anchor:visited { visibility: hidden; }
+
+h1:hover .anchor, h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:=
+hover .anchor, h6:hover .anchor, span:hover .anchor { visibility: visible; =
+}
+
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target, span:targ=
+et { background: rgb(251, 255, 182); box-shadow: rgba(172, 172, 172, 0.25) =
+0px 0px 0.4em 0.1em; }
+
+.tracini table.wiki tbody tr:target { background: rgb(255, 255, 187); }
+
+.tracini .tracini-option { border: none; position: relative; }
+
+.tracini .tracini-option:link:hover, .tracini .tracini-option:visited:hover=
+ { background-color: transparent; }
+
+.tracini tr[id]:hover .tracini-option::before { content: "=C2=B6"; position=
+: absolute; display: block; left: -1em; width: 1em; color: rgb(215, 215, 21=
+5); z-index: 1; }
+
+@media screen {
+  a.ext-link .icon { background: url("../extlink.gif") left center no-repea=
+t; padding-left: 15px; }
+  a.mail-link .icon { background: url("../envelope.png") left center no-rep=
+eat; padding-left: 16px; }
+  a.trac-rawlink, a.trac-ziplink { background: url("../download.png") right=
+ center no-repeat; padding-right: 16px; border-bottom: none; }
+}
+
+input, textarea, select, .trac-button { margin: 2px; }
+
+input, select, button { font-style: normal; font-size: 0.9em; font-family: =
+Roboto, "Segoe UI", Verdana, "Bitstream Vera Sans", Helvetica, sans-serif; =
+}
+
+textarea { white-space: pre-wrap; font-size: 1em; }
+
+input, select, .trac-button { vertical-align: middle; }
+
+select { background: linear-gradient(to top, rgb(219, 219, 219) 0%, rgb(238=
+, 238, 238) 30%, rgb(251, 251, 251) 100%); border-radius: 0.2em; padding-bo=
+ttom: 0.15em; }
+
+select[disabled] { background: rgb(253, 253, 253); }
+
+input[type=3D"button"], input[type=3D"submit"], input[type=3D"reset"], .tra=
+c-button { background: rgb(238, 238, 238); color: rgb(34, 34, 34); border: =
+1px solid rgb(187, 187, 187); border-radius: 0.3em; box-shadow: rgb(204, 20=
+4, 204) 0.1em 0.1em 0.1em 0px; padding: 0.25em 0.5em 0.35em; font-size: 0.9=
+em; text-shadow: rgb(221, 221, 221) 0.04em 0.04em; cursor: pointer; }
+
+input[type=3D"button"]:hover, input[type=3D"submit"]:hover, input[type=3D"r=
+eset"]:hover, .trac-button:hover { background: rgb(246, 246, 246); box-shad=
+ow: rgb(153, 153, 153) 0.1em 0.1em 0.2em 0px; text-shadow: rgb(252, 252, 25=
+2) 0.04em 0.04em; }
+
+input[type=3D"button"]:active, input[type=3D"submit"]:active, input[type=3D=
+"reset"]:active, .trac-button:active, .inlinebuttons a:active { position: r=
+elative; top: 0.1em; left: 0.1em; }
+
+input[type=3D"button"][disabled], input[type=3D"submit"][disabled], input[t=
+ype=3D"reset"][disabled], .trac-button[disabled] { background: rgb(246, 246=
+, 246); border-style: solid; color: rgb(153, 153, 153); }
+
+input[type=3D"text"], input.textwidget, textarea { border: 1px solid rgb(21=
+5, 215, 215); border-radius: 0.3em; box-shadow: rgb(246, 246, 246) 0.1em 0.=
+1em 0.4em 0px inset; }
+
+input[type=3D"text"], input.textwidget { padding: 0.25em 0.5em; }
+
+input[type=3D"text"]:focus, input.textwidget:focus, textarea:focus { border=
+: 1px solid rgb(136, 136, 102); }
+
+option { border-bottom: 1px dotted rgb(215, 215, 215); }
+
+fieldset { border: 1px solid rgb(215, 215, 215); border-radius: 0.4em; marg=
+in: 1em 0px; background: rgb(247, 247, 240); box-shadow: rgb(231, 231, 231)=
+ 0.1em 0.1em 1em 0px inset; padding: 1em; }
+
+p.hint, span.hint, span.trac-datetimehint { color: rgb(102, 102, 102); font=
+-size: 0.9em; font-style: italic; margin: 0.5em 0px; padding-left: 1em; }
+
+.trac-has-js .trac-nodatetimehint, .trac-has-js .trac-datetimehint { displa=
+y: none !important; }
+
+label.trac-textarea-hint { color: rgb(102, 102, 102); display: block; font-=
+size: 0.9em; font-style: italic; margin: 0.25em 0px; text-align: right; }
+
+span.hint { vertical-align: middle; }
+
+p.help { color: rgb(102, 102, 102); font-size: 90%; margin: 1em 0.5em 0.5em=
+; }
+
+legend { color: rgb(153, 153, 153); margin-left: 0.6em; padding: 0px 0.25em=
+; font-size: 90%; font-weight: bold; }
+
+label.disabled, .disabled span.hint, .disabled p.help, .disabled legend, .d=
+isabled input, .disabled select, .readonly span.hint, .readonly p.help { co=
+lor: rgb(215, 215, 215); }
+
+.buttons { margin: 0.5em 0.5em 0.5em 0px; }
+
+.buttons form, .buttons form div { display: inline; }
+
+.buttons input { margin: 1em 0.5em 0.1em 0px; }
+
+.inlinebuttons input, .inlinebuttons .trac-button, .inlinebuttons a { borde=
+r: 1px solid rgb(221, 221, 221); border-radius: 1em; height: 1.6em; padding=
+: 0px 0.4em 0.1em; font-size: 70%; box-shadow: none; margin: 0px 0.1em 0.1e=
+m; background: none; color: rgb(128, 128, 128); cursor: pointer; }
+
+.uisymbols .inlinebuttons input[type=3D"button"], .uisymbols .inlinebuttons=
+ input[type=3D"submit"], .uisymbols .inlinebuttons .trac-button, .uisymbols=
+ .inlinebuttons a { font-size: 100%; }
+
+.inlinebuttons input[type=3D"button"]:hover, .inlinebuttons input[type=3D"s=
+ubmit"]:hover, .inlinebuttons .trac-button:hover, .inlinebuttons a:hover { =
+background: rgb(246, 246, 246); color: rgb(51, 51, 51); box-shadow: rgb(223=
+, 223, 223) 0.1em 0.1em 0.4em 0px; }
+
+input[type=3D"button"].trac-delete, input[type=3D"submit"].trac-delete, .tr=
+ac-button.trac-delete { color: rgb(211, 19, 19); }
+
+input[type=3D"button"].trac-delete:hover, input[type=3D"submit"].trac-delet=
+e:hover, .trac-button.trac-delete:hover { color: rgb(227, 19, 19); }
+
+textarea { font-family: "Open Sans Mono", Consolas, "Lucida Console", monos=
+pace; }
+
+textarea.trac-fullwidth, input.trac-fullwidth, button.trac-fullwidth { box-=
+sizing: border-box; margin-left: 0px; margin-right: 0px; width: 100%; }
+
+textarea.trac-fullwidth { padding: 2px; }
+
+form.mod { margin: 1em 0px; }
+
+form.mod .field { margin: 0.5em 0px; }
+
+form.mod .field.description { margin-top: 1em; }
+
+form.mod .field label { padding-left: 0.2em; }
+
+form.mod #changeinfo .field { margin: 0.25em 0px 0.75em; }
+
+form.mod #changeinfo .options { padding: 0px 0px 0.5em 1em; }
+
+#header hr { display: none; }
+
+#header h1 { margin: 1.5em 0px -1.5em; padding: 0px; }
+
+#header img { border: none; margin: 0px 0px -3em; }
+
+#header :link, #header :visited, #header :link:hover, #header :visited:hove=
+r { background: transparent; color: rgb(85, 85, 85); margin-bottom: 2px; bo=
+rder: none; padding: 0px; }
+
+#header h1 :link:hover, #header h1 :visited:hover { color: rgb(0, 0, 0); }
+
+#search { clear: both; font-size: 0.8em; height: 2.2em; margin: 0px 0px 1em=
+; text-align: right; }
+
+#search input { font-size: 1em; }
+
+#search label { display: none; }
+
+.nav h2, .nav hr { display: none; }
+
+.nav ul { font-size: 0.9em; list-style: none; margin: 0px; padding: 0px; te=
+xt-align: right; }
+
+.nav li { border-right: 1px solid rgb(215, 215, 215); display: inline-block=
+; padding: 0px 0.75em; white-space: nowrap; }
+
+.nav li.last { border-right: none; }
+
+#metanav { padding-top: 0.3em; }
+
+#metanav form.trac-logout { display: inline; margin: 0px; padding: 0px; }
+
+#metanav form.trac-logout button { margin: 0px; padding: 0px; border-width:=
+ 0px 0px 1px; border-top-style: initial; border-right-style: initial; borde=
+r-left-style: initial; border-top-color: initial; border-right-color: initi=
+al; border-left-color: initial; border-image: initial; outline: 0px; backgr=
+ound: transparent; font-family: inherit; font-size: 100%; color: rgb(187, 0=
+, 0); border-bottom-style: dotted; border-bottom-color: rgb(187, 187, 187);=
+ cursor: pointer; }
+
+#metanav form.trac-logout button:hover { background-color: rgba(238, 238, 2=
+38, 0.5); color: rgb(85, 0, 0); border-radius: 0.1em; box-shadow: rgba(238,=
+ 238, 238, 0.5) 0px 0px 0px 0.15em; }
+
+#metanav form.trac-logout button:active { position: static; }
+
+#mainnav { font-size: 0.9em; font-weight: 600; letter-spacing: 0.03em; box-=
+shadow: rgb(242, 242, 242) 0px 0.3em 1em; border: 1px solid rgb(228, 228, 2=
+28); border-radius: 0.4em; margin: 0.66em 0px 0.33em; }
+
+#mainnav ul { margin: -1px; }
+
+#mainnav li { background: linear-gradient(rgb(242, 242, 242) 0%, rgb(250, 2=
+50, 250) 25%, rgb(254, 254, 254) 49%, rgb(255, 255, 255) 51%, rgb(250, 250,=
+ 250) 85%, rgb(242, 242, 242) 100%); border: 1px solid rgb(228, 228, 228); =
+margin: 0px 0.3em 0px -0.4em; padding: 0.4em 0px; font-weight: 600; text-tr=
+ansform: uppercase; }
+
+#mainnav .first, #mainnav .first :link { border-top-left-radius: 0.5em; bor=
+der-bottom-left-radius: 0.5em; }
+
+#mainnav .last, #mainnav .last :link { border-top-right-radius: 0.5em; bord=
+er-bottom-right-radius: 0.5em; margin-right: 0px; }
+
+#mainnav :link, #mainnav :visited { border-bottom: none; color: rgb(102, 10=
+2, 102); padding: 0.5em 20px; }
+
+#mainnav :link:hover, #mainnav :visited:hover { background: linear-gradient=
+(rgb(136, 136, 136) 0%, rgb(85, 85, 85) 25%, rgb(51, 51, 51) 49%, rgb(51, 5=
+1, 51) 51%, rgb(68, 68, 68) 85%, rgb(136, 136, 136) 100%); color: rgb(238, =
+238, 238); padding: 0.5em 20px; }
+
+#mainnav .active { border: 1px solid rgb(102, 102, 102); }
+
+#mainnav .active :link, #mainnav .active :visited { background: linear-grad=
+ient(rgb(85, 85, 85) 0%, rgb(51, 51, 51) 25%, rgb(17, 17, 17) 49%, rgb(0, 0=
+, 0) 51%, rgb(51, 51, 51) 75%, rgb(85, 85, 85) 100%); color: rgb(238, 238, =
+238); }
+
+#ctxtnav { min-height: 1em; padding: 0.4em 0px; }
+
+#ctxtnav li ul { background: rgb(247, 247, 247); color: rgb(204, 204, 204);=
+ border: 1px solid; padding: 0px; display: inline; margin: 0px; }
+
+#ctxtnav li li { padding: 0px; }
+
+#ctxtnav li li :link, #ctxtnav li li :visited { padding: 0px 1em; }
+
+#ctxtnav li li :link:hover, #ctxtnav li li :visited:hover { background: rgb=
+(187, 187, 170); color: rgb(255, 255, 255); }
+
+.trac-nav, .trac-topnav { float: right; font-size: 80%; }
+
+.trac-topnav { margin-top: 14px; }
+
+#altlinks { clear: both; margin-top: 0.4em; text-align: center; }
+
+#altlinks h3 { font-size: 1.1em; letter-spacing: normal; margin: 0px; }
+
+#altlinks ul { list-style: none; margin: 0px; padding: 0px; }
+
+#altlinks li { border-right: 1px solid rgb(215, 215, 215); display: inline;=
+ font-size: 1.1em; line-height: 1.5; padding: 0px 1em; white-space: nowrap;=
+ }
+
+#altlinks li.last { border-right: none; }
+
+#altlinks li :link, #altlinks li :visited { background-repeat: no-repeat; c=
+olor: rgb(102, 102, 102); border: none; padding: 0px 0px 2px; }
+
+#altlinks li a.ics { background: url("../ics.png") left center no-repeat; p=
+adding-left: 22px; }
+
+#altlinks li a.rss { background: url("../feed.png") left center no-repeat; =
+padding-left: 20px; }
+
+#footer { clear: both; color: rgb(187, 187, 187); font-size: 0.9em; height:=
+ 31px; padding: 0.25em 0px; }
+
+#footer :link, #footer :visited { color: rgb(187, 187, 187); }
+
+#footer hr { display: none; }
+
+#footer #tracpowered { border: 0px; float: left; }
+
+#footer #tracpowered:hover { background: transparent; }
+
+#footer p { margin: 0px; }
+
+#footer p.left { float: left; margin-left: 1em; padding: 0px 1em; border-le=
+ft: 1px solid rgb(215, 215, 215); border-right: 1px solid rgb(215, 215, 215=
+); }
+
+#footer p.right { float: right; text-align: right; }
+
+#content { position: relative; }
+
+div.trac-content { padding: 0.5rem 1rem; margin: 0.3em auto; border: 1px so=
+lid rgb(228, 228, 228); border-radius: 0.4em; box-shadow: rgb(242, 242, 242=
+) 0.3em 0.3em 0.4em; }
+
+div.trac-content.borderless { border: none; box-shadow: none; }
+
+div.trac-draft { background: url("../draft.png") rgb(251, 251, 251); }
+
+.trac-author-anonymous, .trac-author-none { font-style: italic; }
+
+.trac-author-user { font-weight: bold; color: rgb(102, 102, 102); }
+
+.uinohelp .trac-help { display: none; }
+
+.trac-help { clear: both; color: rgb(153, 153, 153); font-size: 90%; margin=
+: 1em; text-align: right; }
+
+.trac-help :link, .trac-help :visited { cursor: help; }
+
+.trac-help hr { display: none; }
+
+.foldable :link, .foldable :visited { background: url("../expanded.png") 4p=
+x 50% no-repeat; border: 1px solid rgb(228, 228, 228); border-radius: 0.3em=
+; box-shadow: rgb(215, 215, 215) 0.1em 0.15em 0.3em 0px; color: rgb(34, 34,=
+ 34); text-shadow: rgb(252, 252, 252) 0.04em 0.04em; padding: 0.2em 0.5em 0=
+.3em 20px; }
+
+.foldable :link:hover, .foldable :visited:hover { background-color: transpa=
+rent; }
+
+.collapsed > .foldable :link, .collapsed > .foldable :visited { background-=
+image: url("../collapsed.png"); }
+
+.collapsed > div, .collapsed > table, .collapsed > ul, .collapsed > dl { di=
+splay: none; }
+
+fieldset > legend.foldable :link, fieldset > legend.foldable :visited { col=
+or: rgb(102, 102, 102); font-size: 110%; text-shadow: rgb(221, 221, 221) 0.=
+04em 0.04em; }
+
+.collapsed legend.foldable { background: white; }
+
+.expander { background: url("../expander_normal.png") 0px 50% no-repeat; cu=
+rsor: pointer; padding-left: 8px; margin-left: 4px; }
+
+.expander:hover { background: url("../expander_normal_hover.png") 0px 50% n=
+o-repeat; }
+
+.expander.expanded { background: url("../expander_open.png") 0px 50% no-rep=
+eat; padding-left: 12px; margin-left: 0px; }
+
+.expander.expanded:hover { background: url("../expander_open_hover.png") 0p=
+x 50% no-repeat; }
+
+h2 .trac-count, h3 .trac-count { margin-left: 0.2em; vertical-align: baseli=
+ne; color: rgb(153, 153, 153); font-size: 90%; font-weight: normal; }
+
+#prefs { background: rgb(247, 247, 240); border: 1px solid rgb(212, 212, 21=
+2); border-radius: 11px; box-shadow: rgb(212, 212, 212) 0.1em 0.3em 0.5em 0=
+px; float: right; font-size: 0.9em; padding: 0.8em; position: relative; mar=
+gin: 0px 1em 1em; }
+
+#prefs input, #prefs select { font-size: 0.9em; vertical-align: middle; }
+
+#prefs fieldset { background: transparent; border: none; box-shadow: none; =
+margin: 0.5em; padding: 0px; }
+
+#prefs fieldset legend { background: transparent; color: rgb(0, 0, 0); font=
+-size: 0.9em; font-weight: normal; margin: 0px 0px 0px -1.5em; padding: 0px=
+; }
+
+#prefs .buttons { text-align: right; }
+
+#info { margin: 1em 0px 0px; background: rgb(247, 247, 240); border: 1px so=
+lid rgb(215, 215, 215); border-collapse: collapse; border-spacing: 0px; cle=
+ar: both; width: 100%; }
+
+#info th, #info td { font-size: 0.9em; padding: 2px 0.5em; vertical-align: =
+top; }
+
+#info th { font-weight: bold; text-align: left; }
+
+#info td.message { width: 100%; }
+
+#info .message ul { padding: 0px; margin: 0px 2em; }
+
+#info .message p { margin: 0.5em 0px; padding: 0px; }
+
+#info .message hr { margin: 0.5em 0px; padding: 0px; }
+
+a.trac-diff::after { content: "=E2=88=86"; }
+
+.wikipage h1, .wikipage h2, .wikipage h3, .wikipage h4, .wikipage h5, .wiki=
+page h6 { margin-left: -1.5rem; margin-right: -1rem; }
+
+.wikipage table h1, .wikipage table h2, .wikipage table h3 { margin-left: -=
+1rem; margin-right: -0.25rem; }
+
+div.compact > p:first-child { margin-top: 0px; }
+
+div.compact > p:last-child { margin-bottom: 0px; }
+
+#delete-confirm li { list-style-type: square; }
+
+.rtl { direction: rtl; }
+
+.rtl div.wiki-toc { float: left; }
+
+.rtl .wiki-toc ul ul, .wiki-toc ol ol { padding-right: 1.2em; }
+
+a.missing:link, a.missing:visited, a.missing, span.missing, a.forbidden, sp=
+an.forbidden { color: rgb(102, 102, 102); }
+
+a.missing::after { content: "?"; }
+
+a.missing:hover { color: rgb(0, 0, 0); }
+
+a.closed:link, a.closed:visited, span.closed { text-decoration: line-throug=
+h; }
+
+.important { background: rgb(255, 204, 187); border: 1px dotted rgb(221, 0,=
+ 0); color: rgb(85, 0, 0); padding: 0px 0.5em; margin: 0.5em; }
+
+dl.wiki dt { font-weight: bold; }
+
+dl.compact dt { float: left; padding-right: 0.5em; }
+
+dl.compact dd { margin: 0px; padding: 0px; }
+
+pre.wiki, pre.literal-block { background: rgb(247, 247, 247); border: 1px s=
+olid rgb(215, 215, 215); box-shadow: rgba(210, 215, 220, 0.3) 0.3em 0.3em 0=
+.75em 0.1em; border-radius: 0.3em; margin: 1em 1.75em; padding: 0.25em; ove=
+rflow: auto; }
+
+div.wiki-code { margin: 1em 1.75em; }
+
+code, tt { color: rgb(102, 0, 0); font-family: "Open Sans Mono", Consolas, =
+"Lucida Console", monospace; border: 1px solid rgb(238, 221, 204); border-r=
+adius: 0.25em; padding: 0px 0.15em; background: rgb(252, 252, 252); margin:=
+ 0px 0.1em; white-space: pre-wrap; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { color: rgb(85, 0, 0)=
+; font-weight: 500; }
+
+pre { font-family: "Open Sans Mono", Consolas, "Lucida Console", monospace;=
+ font-size: 0.9em; }
+
+blockquote.citation { margin: -0.6em 0px 0px; border-style: solid; border-w=
+idth: 0px 0px 0px 2px; padding-left: 0.5em; border-color: rgb(187, 68, 68);=
+ }
+
+.citation blockquote.citation { border-color: rgb(68, 187, 68); }
+
+.citation .citation blockquote.citation { border-color: rgb(68, 68, 187); }
+
+.citation .citation .citation blockquote.citation { border-color: rgb(204, =
+85, 85); }
+
+li blockquote.citation { margin-top: 0px; }
+
+table.wiki { border: 1px solid rgb(204, 204, 204); border-collapse: collaps=
+e; border-spacing: 0px; box-shadow: rgba(210, 215, 220, 0.3) 0.3em 0.3em 0.=
+75em 0.1em; }
+
+table.wiki td { border: 1px solid rgb(204, 204, 204); padding: 0.1em 0.25em=
+; }
+
+table.wiki th { border: 1px solid rgb(187, 187, 187); padding: 0.1em 0.25em=
+; background-color: rgb(247, 247, 247); }
+
+table.wiki tbody tr.even { background-color: rgb(252, 252, 252); }
+
+table.wiki tbody tr.odd { background-color: rgb(247, 247, 247); }
+
+.wikitoolbar { margin-top: 0.3em; border-style: solid; border-color: rgb(21=
+5, 215, 215); border-image: initial; border-width: 1px 1px 1px 0px; height:=
+ 18px; width: 234px; }
+
+.wikitoolbar :link, .wikitoolbar :visited { background: url("../edit_toolba=
+r.png") no-repeat transparent; border-width: 1px; border-style: solid; bord=
+er-color: rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) rgb(215,=
+ 215, 215); border-image: initial; cursor: default; display: block; float: =
+left; width: 24px; height: 16px; }
+
+.wikitoolbar :link:hover, .wikitoolbar :visited:hover { background-color: t=
+ransparent; border: 1px solid rgb(255, 187, 34); }
+
+.wikitoolbar a.trac-wikitoolbar-em { background-position: 0px 0px; }
+
+.wikitoolbar a.trac-wikitoolbar-strong { background-position: 0px -16px; }
+
+.wikitoolbar a.trac-wikitoolbar-heading { background-position: 0px -32px; }
+
+.wikitoolbar a.trac-wikitoolbar-link { background-position: 0px -48px; }
+
+.wikitoolbar a.trac-wikitoolbar-code { background-position: 0px -64px; }
+
+.wikitoolbar a.trac-wikitoolbar-hr { background-position: 0px -80px; }
+
+.wikitoolbar a.trac-wikitoolbar-np { background-position: 0px -96px; }
+
+.wikitoolbar a.trac-wikitoolbar-br { background-position: 0px -112px; }
+
+.wikitoolbar a.trac-wikitoolbar-img { background-position: 0px -128px; }
+
+div.trac-resizable { display: inline-table; width: 100%; }
+
+div.trac-resizable > div { display: table-cell; }
+
+div.trac-resizable textarea { display: block; margin-bottom: 0px; }
+
+div.trac-grip { height: 5px; overflow: hidden; background: url("../grip.png=
+") center 1px no-repeat rgb(238, 238, 238); border-width: 0px 1px 1px; bord=
+er-style: solid; border-color: rgb(221, 221, 221); border-image: initial; c=
+ursor: s-resize; }
+
+#attachments > div.attachments { padding: 0px 0px 1em 1em; }
+
+#attachments dl.attachments { margin-left: 2em; padding: 0px; }
+
+#attachments dt { display: list-item; list-style: square; }
+
+#attachments dd { font-style: italic; margin-left: 0px; padding-left: 0px; =
+}
+
+#attachments p { margin-left: 2em; font-size: 90%; color: rgb(102, 102, 102=
+); }
+
+#attachments > div.attachments > p { float: right; margin: 0.4em 0px; }
+
+#attachments span.trac-author { font-style: italic; }
+
+.attachment #preview { margin-top: 1em; }
+
+table.listing { clear: both; border-bottom: 1px solid rgb(215, 215, 215); b=
+order-collapse: collapse; border-spacing: 0px; box-shadow: rgb(242, 242, 24=
+2) 0.3em 0.3em 0.4em 0px; margin: 1em 0px; width: 100%; }
+
+table.listing th { text-align: left; padding: 0px 1em 0.1em 0px; font-size:=
+ 1em; }
+
+table.listing th.sel, table.listing td.sel { text-align: center; width: 1%;=
+ }
+
+table.listing thead tr { background: rgb(247, 247, 240); }
+
+table.listing thead th { border-width: 1px; border-style: solid; border-col=
+or: rgb(215, 215, 215) rgb(215, 215, 215) rgb(153, 153, 153); border-image:=
+ initial; font-size: 1em; font-weight: bold; padding: 2px 0.5em; vertical-a=
+lign: bottom; white-space: nowrap; }
+
+table.listing thead th :link:hover, table.listing thead th :visited:hover {=
+ background-color: transparent; }
+
+table.listing thead th a { border: none; padding-right: 12px; }
+
+table.listing th.asc a, table.listing th.desc a { font-weight: bold; backgr=
+ound-position: 100% 50%; background-repeat: no-repeat; }
+
+table.listing th.asc a { background-image: url("../asc.png"); }
+
+table.listing th.desc a { background-image: url("../desc.png"); }
+
+table.listing tbody td, table.listing tbody th { border: 1px dotted rgb(221=
+, 221, 221); padding: 0.3em 0.5em; vertical-align: top; }
+
+table.listing tbody td a:hover, table.listing tbody th a:hover { background=
+-color: transparent; }
+
+table.listing tbody tr { border-top: 1px solid rgb(221, 221, 221); }
+
+table.listing tbody tr.even { background-color: rgb(252, 252, 252); }
+
+table.listing tbody tr.odd { background-color: rgb(247, 247, 247); }
+
+table.listing tbody tr:hover td { background: rgb(238, 238, 221) !important=
+; }
+
+table.listing tbody tr.focus { background: rgb(221, 221, 255) !important; }
+
+table.listing pre { white-space: pre-wrap; }
+
+#fieldhist td { padding: 0px 0.5em; }
+
+#fieldhist td.date, #fieldhist td.diff, #fieldhist td.version, #fieldhist t=
+d.author { white-space: nowrap; }
+
+#fieldhist td.version { text-align: center; }
+
+#fieldhist td.comment { width: 100%; }
+
+#fieldhist .inlinebuttons { display: none; float: right; }
+
+.uisymbols #fieldhist .inlinebuttons a { font-size: 85%; }
+
+.suggestions { background: rgb(255, 255, 255); border: 1px solid rgb(136, 1=
+36, 102); color: rgb(34, 34, 34); }
+
+.suggestions ul { font-family: sans-serif; max-height: 20em; min-height: 3e=
+m; list-style: none; margin: 0px; overflow: auto; padding: 0px; width: 440p=
+x; }
+
+* html .suggestions ul { height: 10em; }
+
+.suggestions li { background: rgb(255, 255, 255); cursor: pointer; padding:=
+ 2px 5px; }
+
+.suggestions li.selected { background: rgb(185, 185, 185); }
+
+#content.error .message, div.system-message { background: rgb(255, 221, 204=
+); border: 2px solid rgb(221, 0, 0); color: rgb(85, 0, 0); padding: 0.5em; =
+margin: 1em 0px; }
+
+#content.error div.message pre, div.system-message pre { margin-left: 1em; =
+overflow: hidden; white-space: pre-wrap; }
+
+div.system-message p { margin: 0px; }
+
+div.system-message p.system-message-title { font-weight: bold; }
+
+span.system-message { float: left; background: rgb(255, 221, 204); padding:=
+ 0.2em; margin: 1px; border-radius: 0.25em; }
+
+div.system-message { border-radius: 0.4em; box-shadow: rgb(242, 242, 242) 0=
+.3em 0.3em 0.4em 0px; }
+
+#warning.system-message, .warning.system-message { background: rgb(255, 255=
+, 187); border: 1px solid rgb(187, 187, 136); }
+
+#warning.system-message li { list-style-type: square; }
+
+#notice.system-message, .notice.system-message { background: rgb(221, 255, =
+221); border: 1px solid rgb(136, 187, 136); }
+
+#notice.system-message li { list-style-type: square; }
+
+div.system-message .trac-close-msg { display: none; float: right; font-size=
+: 80%; border: 1px solid rgb(221, 221, 221); border-radius: 1em; padding: 0=
+px 0.4em 0.1em; box-shadow: none; margin: 0px 0.1em 0.1em 0px; background: =
+none; color: rgb(211, 19, 19); height: 1.4em; }
+
+div.system-message .trac-close-msg:hover { background: rgb(246, 246, 246); =
+color: rgb(51, 51, 51); text-shadow: rgb(252, 252, 252) 0.04em 0.04em; box-=
+shadow: rgb(153, 153, 153) 0.1em 0.1em 0.6em 0px; }
+
+.uisymbols div.system-message .trac-close-msg > span { display: none; }
+
+.uisymbols div.system-message .trac-close-msg::after { content: "x"; }
+
+#content.error form.newticket { display: inline; }
+
+#content.error form.newticket textarea { display: none; }
+
+#content.error #traceback { margin-left: 1em; }
+
+#content.error #traceback :link, #content.error #traceback :visited { borde=
+r: none; }
+
+#content.error #tbtoggle { font-size: 80%; }
+
+#content.error #traceback div { margin-left: 1em; }
+
+#content.error #traceback h3 { font-size: 95%; margin: 0.5em 0px 0px; }
+
+#content.error #traceback :link var, #content.error #traceback :visited var=
+ { font-family: "Open Sans Mono", Consolas, "Lucida Console", monospace; fo=
+nt-style: normal; font-weight: bold; }
+
+#content.error #traceback span.file { color: rgb(102, 102, 102); font-size:=
+ 85%; }
+
+#content.error #traceback ul { list-style: none; margin: 0.5em 0px; padding=
+: 0px; }
+
+#content.error #traceback table.code td { white-space: pre; font-size: 90%;=
+ }
+
+#content.error #traceback table.code tr.current td { background: rgb(230, 2=
+30, 230); }
+
+#content.error #traceback table { margin: 0.5em 0px 1em; }
+
+#content.error #traceback th, #content.error #traceback td { font-size: 85%=
+; padding: 1px; }
+
+#content.error #traceback th var { font-family: "Open Sans Mono", Consolas,=
+ "Lucida Console", monospace; font-style: normal; }
+
+#content.error #traceback td code { white-space: pre; }
+
+#content.error #traceback pre { font-size: 95%; }
+
+#content .paging { margin: 0px 0px 2em; padding: 0.5em 0px 0px; font-size: =
+85%; line-height: 2em; text-align: center; }
+
+#content .paging .current { padding: 0.1em 0.3em; border: 1px solid rgb(51,=
+ 51, 51); background: rgb(153, 153, 153); color: rgb(255, 255, 255); }
+
+#content .paging :link, #content .paging :visited { padding: 0.1em 0.3em; b=
+order: 1px solid rgb(102, 102, 102); background: transparent; color: rgb(10=
+2, 102, 102); }
+
+#content .paging :link:hover, #content .paging :visited:hover { background:=
+ rgb(153, 153, 153); color: rgb(255, 255, 255); border-color: rgb(51, 51, 5=
+1); }
+
+#content .paging .previous a, #content .paging .next a { font-size: 150%; f=
+ont-weight: bold; border: none; }
+
+#content .paging .previous a:hover, #content .paging .next a:hover { backgr=
+ound: transparent; color: rgb(102, 102, 102); }
+
+#content h2 .numresults { color: rgb(102, 102, 102); font-size: 90%; }
+
+#content.about a.logo { border: none; float: right; margin-left: 2em; }
+
+#content.about a.logo img { display: block; }
+
+#content.about #python-logo img { width: 140px; height: 56px; }
+
+#content.about p.copyright { color: rgb(153, 153, 153); font-size: 90%; }
+
+#environmentinfo h2 { margin-top: 2em; }
+
+#environmentinfo table { margin: 1em; width: auto; }
+
+#environmentinfo table th, #environmentinfo table td { border: 1px solid rg=
+b(221, 221, 221); font-size: 90%; }
+
+#environmentinfo table th { background: rgb(247, 247, 247); font-weight: bo=
+ld; white-space: nowrap; }
+
+#environmentinfo table td.file { color: rgb(102, 102, 102); }
+
+#environmentinfo table tr.disabled th, #environmentinfo table tr.disabled t=
+d { color: rgb(153, 153, 153); }
+
+#environmentinfo #config th, #content.about #config td { padding: 3px; }
+
+#environmentinfo #config tr.modified { background: rgb(255, 255, 221); }
+
+#environmentinfo #config tr.modified td.value { font-style: italic; }
+
+#environmentinfo #config td.doc { padding: 3px 1em; }
+
+.trac-placeholder { background: rgb(238, 238, 221); }
+
+@media screen {
+  .searchword0 { background: rgb(255, 255, 153); }
+  .searchword1 { background: rgb(204, 255, 204); }
+  .searchword2 { background: rgb(204, 255, 255); }
+  .searchword3 { background: rgb(204, 204, 255); }
+  .searchword4 { background: rgb(255, 204, 255); }
+}
+
+@media print {
+  #header, #altlinks, #footer, .trac-help, #warning, #notice { display: non=
+e; }
+  .nav, form, .buttons form, form .buttons, form .inlinebuttons, .noprint, =
+.trac-nav, .trac-topnav, #attachments > div.attachments > p { display: none=
+; }
+  form.printableform { display: block; }
+  pre.wiki, pre.literal-block { box-shadow: none; }
+  :link, :visited { border-bottom: none; }
+  div.trac-content { box-shadow: none; border: none; }
+  .foldable :link, .foldable :visited { text-shadow: none; box-shadow: none=
+; }
+}
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://trac.ffmpeg.org/chrome/common/extlink.gif
+
+R0lGODlhDQAHAMIEAJiolKKmkrm8rdLXv////////////////yH5BAEAAAQALAAAAAANAAcAAAMf
+OBIsQwRAIiYMEEiCrdUcNGhk2XmZVFkdSChM4GRTAgA7
+
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://trac.ffmpeg.org/chrome/common/css/wiki.css
+
+@charset "utf-8";
+
+@import url("code.css");
+
+#info { margin: 0px 0px 1em; }
+
+#wikipage { clear: both; }
+
+#content #wikipage { max-width: none; }
+
+#content #trac-wiki-expander { cursor: pointer; }
+
+#content #trac-wiki-expander::before { content: "=E2=86=B9"; }
+
+#trac-wiki-expander { float: right; margin-top: -0.5em; margin-right: -0.5e=
+m; }
+
+#content.narrow #wikipage { max-width: 53em; }
+
+#content.narrow #trac-wiki-expander::before { content: "=E2=86=94"; }
+
+h1.section { font-size: 1.8em; color: rgb(136, 34, 34); padding-left: 0.5re=
+m; }
+
+h2.section { font-size: 1.6em; color: rgb(136, 34, 34); margin-top: 1.4em; =
+padding: 0.2em 0.3em 1em 0.5rem; background: linear-gradient(to top, rgba(2=
+55, 255, 255, 0) 0px, rgba(239, 239, 239, 0.4) 0.4em, rgba(215, 215, 215, 0=
+.4) 0.79em, rgb(136, 34, 34) 0.8em, rgb(136, 34, 34) 0.9em, rgba(255, 255, =
+255, 0) 0.9em, rgba(255, 255, 255, 0) 100%); }
+
+h3.section { font-size: 1.3em; font-weight: 600; color: rgb(136, 34, 34); m=
+argin-top: 1.4em; margin-bottom: 1em; padding: 0.2em 0.3em 1em 0.5rem; back=
+ground: linear-gradient(to top, rgba(255, 255, 255, 0) 0px, rgba(239, 239, =
+239, 0.4) 0.4em, rgba(215, 215, 215, 0.4) 0.8em, rgb(136, 34, 34) 0.8em, rg=
+b(136, 34, 34) 0.85em, rgba(255, 255, 255, 0) 0.9em, rgba(255, 255, 255, 0)=
+ 100%); }
+
+h2.section + *, h3.section + * { margin-top: -1em !important; }
+
+h2.section :link, .section h2 :visited, h3.section :link, .section h3 :visi=
+ted { border-bottom: none; }
+
+h2.section:target { background: linear-gradient(to top, rgba(255, 255, 255,=
+ 0) 0px, rgba(239, 239, 239, 0.4) 0.4em, rgba(215, 215, 215, 0.4) 0.79em, r=
+gb(136, 34, 34) 0.8em, rgb(136, 34, 34) 0.9em, rgb(251, 255, 182) 0.9em, rg=
+b(251, 255, 182) 100%); box-shadow: none; }
+
+h3.section:target { background: linear-gradient(to top, rgba(255, 255, 255,=
+ 0) 0px, rgba(239, 239, 239, 0.4) 0.4em, rgba(215, 215, 215, 0.4) 0.8em, rg=
+b(136, 34, 34) 0.8em, rgb(136, 34, 34) 0.85em, rgb(251, 255, 182) 0.9em, rg=
+b(251, 255, 182) 100%); box-shadow: none; }
+
+@media print {
+  #content.narrow #wikipage { max-width: none; }
+  #content.narrow #trac-wiki-expander::before, #content #trac-wiki-expander=
+ { display: none; }
+  h2.section:target { background: linear-gradient(to top, rgb(255, 255, 255=
+) 0px, rgb(255, 255, 255) 0.79em, rgb(136, 34, 34) 0.8em, rgb(136, 34, 34) =
+0.9em, rgb(255, 255, 255) 0.9em, rgb(255, 255, 255) 100%); }
+  h3.section:target { background: linear-gradient(to top, rgb(255, 255, 255=
+) 0px, rgb(255, 255, 255) 0.8em, rgb(136, 34, 34) 0.8em, rgb(136, 34, 34) 0=
+.85em, rgb(255, 255, 255) 0.9em, rgb(255, 255, 255) 100%); }
+}
+
+h4.section { font-size: 1.15em; font-weight: 600; color: rgb(136, 34, 34); =
+margin-top: 1.4em; margin-bottom: 1em; padding-left: 0.5rem; }
+
+h5.section { font-size: 1.1em; font-weight: normal; color: rgb(136, 34, 34)=
+; margin-top: 1.4em; margin-bottom: 0.9em; padding-left: 0.5rem; }
+
+h6.section { font-size: 1em; font-style: italic; font-weight: normal; color=
+: rgb(136, 34, 34); margin-top: 1.4em; margin-bottom: 0.8em; padding-left: =
+0.5rem; }
+
+.wikipage .trac-content { margin: 0.3em auto; padding-left: 1.5rem; }
+
+.wikipage .trac-content .wikipage { margin-left: -1.5rem; padding-left: 1.5=
+rem; }
+
+table.wiki { background-color: inherit; }
+
+#pagepath { font-size: 0.9em; float: left; padding: 0.4em 0px; }
+
+#pagepath :link, #pagepath :visited { margin: 0px 0.2em; }
+
+#pagepath .first:link, #pagepath .first:visited { color: rgb(153, 153, 136)=
+; }
+
+#pagepath .sep { color: rgb(102, 102, 102); padding: 0px 0.1em; }
+
+#pagepath .pathentry { float: left; }
+
+.create #modifypage input { margin: 2px; }
+
+.wikipage h2.editor { margin-left: 0px; }
+
+.preview-right { float: right; width: 50%; display: block; margin: 0px 0px =
+0px 1em; }
+
+.sidebyside > h2 { margin: 0.4em 0px; }
+
+.sidebyside #preview { margin: 0px; }
+
+.sidebyside #text { overflow: hidden; }
+
+#edit { margin-top: 0.5em; }
+
+#edit #rows { float: right; font-size: 80%; margin: 0.4em 0px 0px; }
+
+#edit #rows select { font-size: 90%; }
+
+#edit fieldset { margin-left: 1px; margin-right: 1px; }
+
+#edit #text { clear: both; min-height: 10em; resize: vertical; }
+
+#edit .wikitoolbar { float: left; }
+
+#edit div.trac-resizable { clear: both; }
+
+#edit + #info { margin-top: 1em; }
+
+#edit + #attachments { margin-top: 1.5em; }
+
+#delete, #rename, #save { margin-left: 3em; }
+
+#preview .trac-content { margin: 0px; overflow: auto; }
+
+#overview .multi { color: rgb(153, 153, 153); }
+
+#overview .comment { padding: 1em 0px 0px; }
+
+@media print {
+  th.diff, td.diff { display: none; }
+}
+
+.wiki-toc { padding: 0.5em 1em; margin: 0px 0px 2em 1em; float: right; clea=
+r: right; border: 1px solid rgb(221, 221, 204); border-radius: 0.4em; box-s=
+hadow: rgb(212, 212, 212) 0.1em 0.3em 0.5em 0px; background: rgb(255, 255, =
+221); font-size: 85%; position: relative; }
+
+.wiki-toc h4 { font-size: 1.2em; margin: 0px 0px 0.5em; padding: 0px; }
+
+.wiki-toc ul, .wiki-toc ol { list-style: none; padding: 0px; margin: 0px; }
+
+.wiki-toc ul ul, .wiki-toc ol ol { padding-left: 1.2em; }
+
+.wiki-toc li { margin: 0px; padding: 0px; }
+
+.wiki-toc .active { background: rgb(255, 255, 153); position: relative; }
+
+.wiki-toc-un ul, .wiki-toc-un ol { list-style: none; }
+
+.wiki-toc ol li { font-weight: normal; }
+
+.wiki-toc > ol > li { font-weight: 500; }
+
+div.trac-modifiedby { margin: 0.3em 0.5em; color: rgb(136, 136, 136); font-=
+size: 80%; font-style: italic; text-align: right; float: right; }
+
+div.trac-modifiedby :link, div.trac-modifiedby :visited { color: inherit; }
+
+div.trac-modifiedby span.trac-print { display: none; }
+
+@media print {
+  div.trac-modifiedby span { display: none; }
+  div.trac-modifiedby span.trac-print { display: block; }
+}
+
+div.tracini td.default { font-size: 90%; }
+
+div.tracini td.nodefault { color: rgb(119, 119, 119); font-size: 85%; font-=
+style: italic; white-space: nowrap; }
+
+div.tracini td > p:first-child { margin-top: 0px; }
+
+div.tracini td > p:last-child { margin-bottom: 0px; }
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://trac.ffmpeg.org/chrome/common/css/code.css
+
+@charset "utf-8";
+
+div.code { background: rgb(247, 247, 247); border: 1px solid rgb(215, 215, =
+215); overflow: auto; border-radius: 0.3em; box-shadow: rgba(210, 215, 220,=
+ 0.3) 0.3em 0.3em 0.75em 0.1em; }
+
+div.code pre { margin: 0px; overflow: auto; padding: 0.25em; border-radius:=
+ 0.3em; }
+
+@media print {
+  div.code { box-shadow: none; }
+  div.code pre { white-space: pre-wrap; }
+}
+
+table.code { border-width: 0px 1px 1px; border-right-style: solid; border-b=
+ottom-style: solid; border-left-style: solid; border-right-color: rgb(221, =
+221, 221); border-bottom-color: rgb(221, 221, 221); border-left-color: rgb(=
+221, 221, 221); border-image: initial; border-spacing: 0px; border-top-styl=
+e: initial; border-top-color: initial; border-collapse: collapse; empty-cel=
+ls: show; font-size: 0.9em; line-height: 120%; padding: 0px; margin: 0px au=
+to; table-layout: fixed; width: 100%; box-shadow: rgba(210, 215, 220, 0.3) =
+0.3em 0.3em 0.75em 0.1em; }
+
+table.code th { border-right: 1px solid rgb(215, 215, 215); border-bottom: =
+1px solid rgb(215, 215, 215); font-size: 0.9em; }
+
+table.code th.lineno { width: 4em; }
+
+table.code thead th { background: rgb(238, 238, 238); border-top: 1px solid=
+ rgb(215, 215, 215); color: rgb(153, 153, 153); padding: 0px 0.25em; text-a=
+lign: center; white-space: nowrap; }
+
+table.code thead th.content { text-align: left; }
+
+table.code thead th.content span.recover { background: rgb(247, 247, 247); =
+border-left: 1px solid; border-right: 1px solid; cursor: pointer; margin: 0=
+px 1em 0px 0px; padding: 0px 0.5em; }
+
+table.code tbody th { background: rgb(238, 238, 221); color: rgb(136, 136, =
+102); font-weight: normal; padding: 0px 0.5em; text-align: right; vertical-=
+align: top; }
+
+table.code tbody th :link, table.code tbody th :visited { border: none; col=
+or: rgb(136, 136, 102); text-decoration: none; }
+
+table.code tbody th :link:hover, table.code tbody th :visited:hover { color=
+: rgb(0, 0, 0); }
+
+table.code tbody tr:hover td { background: rgb(238, 238, 221); }
+
+table.code td { font-family: "Open Sans Mono", Consolas, "Lucida Console", =
+monospace; overflow: hidden; padding: 1px 2px; vertical-align: top; white-s=
+pace: pre-wrap; }
+
+table.code tr.hilite th { background: rgb(204, 204, 255); }
+
+table.code tr.hilite td { background: rgb(221, 221, 255); }
+
+.image-file { background: rgb(238, 238, 238); padding: 0.3em; }
+
+.image-file img { background: url("../imggrid.png"); }
+
+.code-block span { font-family: "Open Sans Mono", Consolas, "Lucida Console=
+", monospace; }
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://trac.ffmpeg.org/chrome/vote/css/tracvote.css
+
+@charset "utf-8";
+
+#vote :link, #vote :visited { border: none; }
+
+#vote img { vertical-align: middle; }
+
+#votes { font-weight: bold; }
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://trac.ffmpeg.org/chrome/tags/css/tractags.css
+
+@charset "utf-8";
+
+.listtagged li.header { font-weight: bold; text-decoration: underline; }
+
+.listtags .listtagged li.header { font-weight: normal; }
+
+.listtags .listtagged ul { margin: 0px; padding: 0px; }
+
+#content ul.tags { float: right; list-style: none; text-align: center; max-=
+width: 20em; }
+
+#content .tags li { display: inline; text-align: center; }
+
+#content .tags li.header { font-weight: bold; font-size: large; text-align:=
+ center; color: rgb(204, 204, 204); text-transform: lowercase; letter-spaci=
+ng: 0.5em; display: block; }
+
+ul.tagcloud { list-style: none; }
+
+.tagcloud li { display: inline; }
+
+.tagcloud li::after { content: ", "; }
+
+.tagcloud li.last::after { content: ""; }
+
+#query { float: right; clear: both; font-size: 10px; text-align: left; }
+
+#query ul { list-style: none; padding: 0px 0px 0px 2em; }
+
+#query input { font-size: 10px; }
+
+#query-error { color: rgb(170, 0, 0); font-size: 11px; margin: 0.3em 0px; }
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://trac.ffmpeg.org/ffmpeg-logo.png
+
+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
+TkSuQmCC
+
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://trac.ffmpeg.org/chrome/vote/aupgray.png
+
+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
+O3xcmnsAAAAASUVORK5CYII=
+
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://trac.ffmpeg.org/chrome/vote/adowngray.png
+
+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
+3v6r/w4ARne0LCfvQl8AAAAASUVORK5CYII=
+
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://trac.ffmpeg.org/chrome/common/trac_logo_mini.png
+
+iVBORw0KGgoAAAANSUhEUgAAAGsAAAAeCAMAAAAcjhBMAAADAFBMVEUAAQAQEg8bHRopKigxMzA+
+Pz2tJSRdX13GZGSHh4eXmZbUjIqrq6vcpKXkuLfRysfOzs7v5eT9//z///8AAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAADlVrIXAAABAHRSTlP///////////////////////8A////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////r46s5AAA
+AkZJREFUeJy1louSgyAMRcEHsFihgf//10VIkIe47U6bGZWGluNNQihzQ9thPPcvY+MpIS6coKX+
+Csu0LjszxuQXWLvogqjZR1mgbtL0YZYRCke7EFtNkuvBmqWUNlwhcaBXruPEzKe1yGTwTHyR2t6y
+gFgB1cAky5YSB/GueXavKSZ6IkdVR32+jNliTaiDdaTMUFA7VnRIfbrZ3HyvykfP2kQqwIgSexiQ
+uJK1hFt6ewmMhWhpSUKIHaa5u2VBRGTWVuwzsKk2rLWw4oKB4jArNgLSg01H9GyVrp61kZwUw6BQ
+qTx51uGKmvIrWp30JPXTVTEPWIoG7kjgiDWj28qzPOzU1cSQZQTqgZOZhTUsXLHIY2D1NTFghX6r
+SNgekQYjOWYhis9RnH6ZFRigKHi7MhhKqsQrVhTCNaAv6aqL4pqlBC6vTk/LWmqWzKMl7zy2vsBy
+xu2mKgeFZemyhhigk5VHqEg2FTpmHaJQhdk3QBb9EFJmltk2uiZtsTFZSDXJQ8Oc/+gbWQZCTNUV
+F6q2k1W2qOgrHbe9F2gHY+2Dg704Mm3PctRCOPmKZnzbe6HeymFYH84UqX5/LdaSD2hvT/d9nlhK
+kNWHmAvNyDaJDw3qwqWbdjjoGxu1Xtpq0fzz8fOePZ7e37AiDHIIK1ZAee/jKunh6fLnvfrwuGfF
+3WUKlKlYGZAePvPKufzhT5bL2VLbVvwjLXS1rAtdL7PoEKsMdV2x0JkD+w7rOEi6LlOwfny9vC8D
++06+DoOLfvb5Ovye/QLtUaaD3NuV0gAAAABJRU5ErkJggg==
+
+------MultipartBoundary--7e9tI9DBIv5RgbfoMZSjbgCktSjbEbDiP7jkmTuYs5------
