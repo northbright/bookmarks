@@ -1,0 +1,281 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://2016.8-p.info/post/06-18-go-html-template/
+Subject: How to use if in Go's html/template - Kazu's Log
+Date: Sun, 18 May 2025 07:51:21 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--q9ln9zYy61i7uTAxzQlPy76v8PS075DAcljIL5oAQj----"
+
+
+------MultipartBoundary--q9ln9zYy61i7uTAxzQlPy76v8PS075DAcljIL5oAQj----
+Content-Type: text/html
+Content-ID: <frame-1BD4B623031FA19FB6F3523D88B7276A@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://2016.8-p.info/post/06-18-go-html-template/
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8">
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+ =20
+  <link rel=3D"stylesheet" href=3D"http://2016.8-p.info/css/main.css">
+  <title>
+     How to use if in Go's html/template -=20
+    Kazu's Log
+  </title>
+  <meta name=3D"generator" content=3D"Hugo 0.15">
+</head>
+<body>
+
+
+
+
+
+
+<div id=3D"content">
+  <header>
+    <h1><a href=3D"http://2016.8-p.info/">Kazu's Log</a></h1>
+    <div id=3D"menu">
+      <ul>
+        <li><a href=3D"http://2016.8-p.info/post/">List</a></li>
+        <li><a href=3D"http://2016.8-p.info/post/06-18-go-html-template/">R=
+SS</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+
+<article class=3D"">
+  <div class=3D"posted">Jun 18, 2016</div>
+  <div class=3D"right">
+    <h2><a href=3D"http://2016.8-p.info/post/06-18-go-html-template/">How t=
+o use if in Go's html/template</a></h2>
+   =20
+    <div class=3D"content">
+
+<p>Hugo uses Go=E2=80=99s html/template which has its own langugage
+that is different from Go=E2=80=99s own syntax.</p>
+
+<p>What I wrote today, for showing both English and Japanese posts,
+but only show the content of the Japanese posts on
+each post=E2=80=99s individual page is,</p>
+
+<pre><code>{{ if or (ne .Params.lang "japanese") (.Scratch.Get "IsSingle") =
+}}
+&lt;div class=3D"content"&gt;{{ .Content }}&lt;/div&gt;
+{{ else }}
+&lt;div class=3D"content"&gt;&lt;/div&gt;
+{{ end }}
+
+</code></pre>
+
+<p>That was hard to figure out. Let me explain each syntax element.</p>
+
+<h3 id=3D"if:40dbffa9d370db0de47a4cb56ca0ec72">if</h3>
+
+<p>That is straightforward.</p>
+
+<pre><code>{{ if condition }}
+Show this section if the condition is true
+{{ else }}
+Show this section if the condition is false
+{{ end }}
+</code></pre>
+
+<h3 id=3D"or-and-ne:40dbffa9d370db0de47a4cb56ca0ec72"><code>or</code> and <=
+code>ne</code></h3>
+
+<p><a href=3D"https://golang.org/pkg/html/template/">html/template</a> shar=
+es the syntax with
+<a href=3D"https://golang.org/pkg/text/template/">text/template</a> and the=
+ syntax is mostly explained in the latter=E2=80=99s one.</p>
+
+<blockquote>
+<p>The documentation here focuses on the security features of the package. =
+For information about how to program the templates themselves, see the docu=
+mentation for text/template.</p>
+</blockquote>
+
+<p>text/template doesn=E2=80=99t provide operators, but it provides
+<a href=3D"https://golang.org/pkg/text/template/#hdr-Functions">functions</=
+a>
+such as <code>and</code>, <code>or</code>, <code>not</code>, <code>eq</code=
+> or <code>ne</code>.</p>
+
+<p>The syntax for calling functions is</p>
+
+<pre><code>function arg1 arg2... argN
+</code></pre>
+
+<p>Commas are not needed, parenthesis are optional for calling functions,
+but needed for nesting invocations.
+That results the below which reminds me Lisp.</p>
+
+<pre><code>{{ if or (ne .Params.lang "japanese") (.Scratch.Get "IsSingle") =
+}}
+</code></pre>
+
+<h3 id=3D"partial-and-scratch:40dbffa9d370db0de47a4cb56ca0ec72"><code>parti=
+al</code> and <code>.Scratch</code></h3>
+
+<p>The last ones are for Hugo, not Go.</p>
+
+<p><a href=3D"https://gohugo.io/templates/partials/">partial</a> is a funct=
+ion which takes 2
+parameters - the file location and the variables to be passed down to the f=
+ile.</p>
+
+<p>In my case, <code>layouts/index.html</code> has</p>
+
+<pre><code>{{ range $paginator.Pages }}
+  {{ .Scratch.Set "IsSingle" false }}
+  {{ partial "article.html" . }}
+{{ end }}
+</code></pre>
+
+<p><code>layouts/_default/single.html</code> has</p>
+
+<pre><code>{{ .Scratch.Set "IsSingle" true }}
+{{ partial "article.html" . }}
+</code></pre>
+
+<p>The <code>.</code> on partial means =E2=80=9Cpass all variables in this =
+scope to the partial=E2=80=9D. However it prevents access to <a href=3D"htt=
+ps://gohugo.io/templates/variables/">variables</a> Hugo has. Then <code>art=
+icle.html</code> doesn=E2=80=99t have a way to say =E2=80=9Cif this partial=
+ is render in X=E2=80=9D.</p>
+
+<p>Hugo has <a href=3D"https://gohugo.io/extras/scratch">Scratch</a> which =
+is useful to
+workaround the issue.</p>
+
+<p>I used that for adding additional parameters to the argument of <code>pa=
+rtial</code>.
+Actually this technique was explained in
+<a href=3D"https://codeandsend.com/blog/how-to-identify-single-pages-in-hug=
+o/">How to identify single pages in Hugo</a> and I just copied that.</p>
+
+<h3 id=3D"mini-language-woes:40dbffa9d370db0de47a4cb56ca0ec72">Mini Languag=
+e Woes</h3>
+
+<p>I=E2=80=99m not a big fan of =E2=80=9Cmini=E2=80=9D languages. I prefer =
+<a href=3D"http://ruby-doc.org/stdlib-2.3.1/libdoc/erb/rdoc/ERB.html">eRuby=
+</a> on Ruby, and <a href=3D"http://www.embeddedjs.com/">EJS</a> on JavaScr=
+ipt because it reduces the cognitive load of switching multiple languages.<=
+/p>
+
+<p>No offence. Unlike Ruby and JavaScript, Go is a compiled language and th=
+ere is no <code>eval</code>. So the decision to make a mini language is tot=
+ally reasonable.</p>
+</div>
+   =20
+  </div>
+</article>
+
+
+<footer>
+  <div class=3D"content">
+    <p>
+     =20
+      <strong>Kazuyoshi Kato</strong> is a software developer.
+      All opinions expressed here are my own.
+    </p>
+    <p>Powered by Hugo 0.15</p>
+  </div>
+</footer>
+
+
+</div></body></html>
+------MultipartBoundary--q9ln9zYy61i7uTAxzQlPy76v8PS075DAcljIL5oAQj----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://2016.8-p.info/css/main.css
+
+@charset "utf-8";
+
+body { margin: 0px; padding: 0px 0.5em; font-family: Georgia, serif; }
+
+h1, h2, h3, footer, .posted { font-family: "Helvetica Neue", sans-serif; }
+
+article.japanese { font-family: "Helvetica Neue", "Hiragino Kaku Gothic Pro=
+", sans-serif; }
+
+a:link { color: rgb(0, 0, 0); }
+
+a:visited { color: rgb(153, 153, 153); }
+
+a:hover { background: rgb(238, 238, 238); }
+
+a:active { background: rgb(221, 221, 221); }
+
+h1 a, h2 a { text-decoration: none; color: black !important; }
+
+h1 { font-size: 100%; margin: 0px; padding: 0px; float: left; }
+
+h1 a { display: block; padding: 1em 0px; }
+
+h1 a:hover { background: none; }
+
+#content { max-width: 50em; margin: 0px auto; }
+
+header { padding: 0px 0.5em; border-bottom: 1px solid rgb(221, 221, 221); }
+
+header { clear: both; overflow: hidden; }
+
+header #menu { float: right; }
+
+article { padding: 1em 0.5em; }
+
+article h2 { margin: 0px; padding: 0px; font-size: 140%; line-height: 2rem;=
+ }
+
+article ._title { margin: 0px 0px 1em; }
+
+article .posted { font-size: 80%; line-height: 2rem; }
+
+article p, article ul { line-height: 1.5; }
+
+article.japanese p, article.japanese ul { line-height: 1.6; }
+
+footer { padding: 0px 0.5em; float: none; clear: both; }
+
+footer .content { font-size: 90%; }
+
+article .photo img { max-width: 100%; height: auto; }
+
+code { background: rgb(240, 240, 240); padding: 0px 0.5em; }
+
+pre { background: rgb(240, 240, 240); padding: 1em; white-space: pre-wrap; =
+word-break: break-all; }
+
+pre code { padding: 0px; }
+
+#pagination { clear: both; float: none; padding: 0px 0.5em; }
+
+#pagination ul { margin: 0px auto; padding: 1em 0px; }
+
+#pagination ul li { list-style: none; display: inline; }
+
+#pagination ul li a { padding: 1em; }
+
+#menu ul li { list-style: none; display: inline; }
+
+#menu ul li a { padding: 1em; }
+
+#list h2 { font-size: 100%; }
+
+@media (min-width: 750px) {
+  article .posted { float: left; width: 10em; font-size: 80%; line-height: =
+2rem; }
+  h1, article .right, footer, #pagination { margin-left: 10em; }
+}
+
+article.japanese p { font-size: 90%; }
+
+article blockquote { margin: 0px 0px 0px 2em; }
+
+div.photo { margin-top: 1em; }
+------MultipartBoundary--q9ln9zYy61i7uTAxzQlPy76v8PS075DAcljIL5oAQj------
