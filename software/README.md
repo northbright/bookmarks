@@ -63,6 +63,7 @@
 * [Useful FFmpeg Commands for Working with Audio and Video Files](https://www.labnol.org/internet/useful-ffmpeg-commands/28490/)
 * [15 Useful ‘FFmpeg’ Commands for Video, Audio and Image Conversion in Linux – Part 2](https://www.tecmint.com/ffmpeg-commands-for-video-audio-and-image-conversion-in-linux/)
 * [FFmpeg 视频处理入门教程](https://ruanyifeng.com/blog/2020/01/ffmpeg.html)
+* [The Complete Guide for Using ffmpeg in Linux](https://itsfoss.com/ffmpeg/)
 
 #### Upscaling and Downscaling
 * [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
