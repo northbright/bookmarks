@@ -67,6 +67,7 @@
 
 #### H264
 * [Optimizing FFmpeg Settings for H.264 Encoding](https://toxigon.com/optimizing-ffmpeg-settings-for-h264-encoding)
+* [What is the different of h264 and libx264](https://superuser.com/questions/1587136/what-is-the-different-of-h264-and-libx264)
 
 #### Upscaling and Downscaling
 * [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
