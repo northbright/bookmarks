@@ -65,6 +65,9 @@
 * [FFmpeg 视频处理入门教程](https://ruanyifeng.com/blog/2020/01/ffmpeg.html)
 * [The Complete Guide for Using ffmpeg in Linux](https://itsfoss.com/ffmpeg/)
 
+#### H264
+* [Optimizing FFmpeg Settings for H.264 Encoding](https://toxigon.com/optimizing-ffmpeg-settings-for-h264-encoding)
+
 #### Upscaling and Downscaling
 * [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
 
