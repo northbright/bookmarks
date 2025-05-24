@@ -108,6 +108,7 @@
 
 #### Concat
 * [Concatenating media files](https://trac.ffmpeg.org/wiki/Concatenate)
+* [How to concatenate two MP4 files using FFmpeg?](https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg)
 
 #### Map
 * [Selecting streams with the -map option](https://trac.ffmpeg.org/wiki/Map)
