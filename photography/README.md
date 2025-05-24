@@ -9,6 +9,7 @@
 * [A9+50/1.2GM，拍娃与扫街](https://forum.xitek.com/thread-1974542-1-1.html)
 * [太甜啦](https://www.chiphell.com/thread-2670634-1-1.html)
 * [我眼中的日本 Part1 北境的浪漫](https://www.chiphell.com/thread-2671293-1-1.html)
+* [杭州良渚-半日打卡](https://www.chiphell.com/thread-2697094-1-1.html)
 
 ## PPI and DPI
 * [别乱用dpi，ppi才是图像分辨率单位，很多人都搞错了](https://zhuanlan.zhihu.com/p/146713168)
