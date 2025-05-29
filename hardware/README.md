@@ -193,3 +193,4 @@
   * [S5731登录提示修改密码，不修改无法登陆](https://support.huawei.com/enterprise/zh/knowledge/EKB1100060188)
   * [S12700修改管理员账号密码时报错](https://support.huawei.com/enterprise/zh/knowledge/EKB1000478063)
   * [华为交换机-修改密码时报错](https://www.cnblogs.com/subsea/p/15489517.html)
+  * [S380 V600R024C10 配置指南（Web网管）](https://support.huawei.com/enterprise/zh/doc/EDOC1100460452/531f26f6?idPath=24030814|259023469|259023623|259590357)
