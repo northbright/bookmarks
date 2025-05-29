@@ -29,3 +29,6 @@
 * [WiFi 跑不满千兆的原因，今天终于搞懂了](https://www.isolves.com/it/wl/zs/2021-12-14/47231.html)
 * [国行iphone和macbook支持的5g信道有哪些](https://discussionschinese.apple.com/thread/250390030)
 * [Wi-Fi 路由器和接入点的推荐设置](https://support.apple.com/zh-cn/HT202068)
+
+## 安全策略
+* [S380 V600R024C10 MD-CLI配置参考(包含 WPA 相关知识)](https://support.huawei.com/enterprise/zh/doc/EDOC1100460455/f4d700ce)
