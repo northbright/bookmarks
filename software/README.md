@@ -110,6 +110,9 @@
 * [Concatenating media files](https://trac.ffmpeg.org/wiki/Concatenate)
 * [How to concatenate two MP4 files using FFmpeg?](https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg)
 
+#### Trim
+* [FFmpeg: To trim a video using 'trim' and specify time using HH:MM:SS format](https://superuser.com/questions/1846340/ffmpeg-to-trim-a-video-using-trim-and-specify-time-using-hhmmss-format)
+
 #### Map
 * [Selecting streams with the -map option](https://trac.ffmpeg.org/wiki/Map)
 
