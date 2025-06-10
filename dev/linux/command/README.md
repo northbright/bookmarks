@@ -21,3 +21,6 @@
 
 ## cp
 * [Difference between cp -r and cp -R (copy command)](https://unix.stackexchange.com/questions/18712/difference-between-cp-r-and-cp-r-copy-command)
+
+## echo
+* [linux echo 写入文件](https://developer.aliyun.com/article/1631327)
