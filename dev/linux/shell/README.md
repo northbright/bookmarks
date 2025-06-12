@@ -36,3 +36,6 @@
 
 ## Time
 * [Convert time stamp to seconds in bash](https://askubuntu.com/questions/407743/convert-time-stamp-to-seconds-in-bash)
+
+## String
+* [Use `printf -v` to assign formatted output to a variable](https://www.linuxbash.sh/post/use-printf--v-to-assign-formatted-output-to-a-variable)
