@@ -32,3 +32,6 @@
 
 ## Sudo
 * [How do I run a 'sudo' command inside a script?](https://askubuntu.com/questions/425754/how-do-i-run-a-sudo-command-inside-a-script)
+
+## Time
+* [Convert time stamp to seconds in bash](https://askubuntu.com/questions/407743/convert-time-stamp-to-seconds-in-bash)
