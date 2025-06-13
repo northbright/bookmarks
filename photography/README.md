@@ -20,3 +20,6 @@
 
 ## Print
 * [哪个淘宝店铺或app洗照片比较好？](https://www.zhihu.com/question/276145977)
+
+## EXIF
+* [Online EXIF Viewer](https://onlineexifviewer.com/)
