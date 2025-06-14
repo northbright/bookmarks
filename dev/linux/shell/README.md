@@ -19,6 +19,7 @@
 
 ## Variables
 * [Assigning default values to shell variables with a single command in bash](https://stackoverflow.com/questions/2013547/assigning-default-values-to-shell-variables-with-a-single-command-in-bash)
+* [bash -c "v=value; echo $v" displays nothing](https://askubuntu.com/questions/786816/bash-c-v-value-echo-v-displays-nothing)
 
 ## Pipe
 * [What's the difference between `curl | sh` and `sh -c “$(curl)”`?](https://unix.stackexchange.com/questions/339237/whats-the-difference-between-curl-sh-and-sh-c-curl)
