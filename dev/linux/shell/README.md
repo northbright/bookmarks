@@ -39,3 +39,6 @@
 
 ## String
 * [Use `printf -v` to assign formatted output to a variable](https://www.linuxbash.sh/post/use-printf--v-to-assign-formatted-output-to-a-variable)
+
+## Multiple Commands
+* [Which one is better: using ; or && to execute multiple commands in one line?](https://askubuntu.com/questions/334994/which-one-is-better-using-or-to-execute-multiple-commands-in-one-line)
