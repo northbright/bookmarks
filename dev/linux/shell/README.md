@@ -44,3 +44,6 @@
 
 ## Multiple Commands
 * [Which one is better: using ; or && to execute multiple commands in one line?](https://askubuntu.com/questions/334994/which-one-is-better-using-or-to-execute-multiple-commands-in-one-line)
+
+## printf
+* [printf: "09" and "08" are invalid octal values](https://www.studytonight.com/post/printf-09-and-08-are-invalid-octal-values)
