@@ -24,3 +24,4 @@
 
 ## Exec
 * [Executing Shell Commands in Golang](https://www.sohamkamani.com/golang/exec-shell-command/)
+* [Some Useful Patterns for Go's os/exec](https://www.dolthub.com/blog/2022-11-28-go-os-exec-patterns/)
