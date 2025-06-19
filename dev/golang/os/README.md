@@ -21,3 +21,6 @@
 
 ## Executable
 * [How to get the directory of the currently running file?](https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg)
+
+## Exec
+* [Executing Shell Commands in Golang](https://www.sohamkamani.com/golang/exec-shell-command/)

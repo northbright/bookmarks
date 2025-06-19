@@ -1,0 +1,2477 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://www.sohamkamani.com/golang/exec-shell-command/
+Subject: Executing Shell Commands in Golang
+Date: Thu, 19 Jun 2025 12:08:42 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----"
+
+
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----
+Content-Type: text/html
+Content-ID: <frame-75E7F8EFFB5EF5CEBF6C79623FA6CD53@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.sohamkamani.com/golang/exec-shell-command/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/=
+css" href=3D"cid:css-118897b5-0423-421c-9462-eb56dd0ba95e@mhtml.blink" /><!=
+-- Global Metadata --><meta name=3D"viewport" content=3D"width=3Ddevice-wid=
+th,initial-scale=3D1"><meta name=3D"generator" content=3D"Astro v5.7.4"><!-=
+- Favicons & Theme Color --><link rel=3D"icon" type=3D"image/x-icon" href=
+=3D"https://www.sohamkamani.com/favicon/favicon.ico"><link rel=3D"icon" typ=
+e=3D"image/png" sizes=3D"16x16" href=3D"https://www.sohamkamani.com/favicon=
+/favicon-16x16.png"><link rel=3D"icon" type=3D"image/png" sizes=3D"32x32" h=
+ref=3D"https://www.sohamkamani.com/favicon/favicon-32x32.png"><link rel=3D"=
+apple-touch-icon" href=3D"https://www.sohamkamani.com/favicon/apple-touch-i=
+con.png"><meta name=3D"theme-color" content=3D"#2e86ab"><!-- Sitemap & RSS =
+--><link rel=3D"sitemap" href=3D"https://www.sohamkamani.com/sitemap-index.=
+xml"><link rel=3D"alternate" type=3D"application/rss+xml" title=3D"Soham Ka=
+mani" href=3D"https://www.sohamkamani.com/rss.xml"><!-- Canonical URL --><l=
+ink rel=3D"canonical" href=3D"https://www.sohamkamani.com/golang/exec-shell=
+-command/"><!-- Primary Meta Tags --><title>Executing Shell Commands in Gol=
+ang</title><meta name=3D"title" content=3D"Executing Shell Commands in Gola=
+ng"><meta name=3D"description" content=3D""><!-- Open Graph / Facebook --><=
+meta property=3D"og:type" content=3D"website"><meta property=3D"og:url" con=
+tent=3D"https://www.sohamkamani.com/golang/exec-shell-command/"><meta prope=
+rty=3D"og:title" content=3D"Executing Shell Commands in Golang"><meta prope=
+rty=3D"og:description" content=3D""><meta property=3D"og:image" content=3D"=
+https://www.sohamkamani.com/_astro/banner.drawio.MzWUIqVE.png"><!-- Twitter=
+ --><meta property=3D"twitter:card" content=3D"summary_large_image"><meta p=
+roperty=3D"twitter:url" content=3D"https://www.sohamkamani.com/golang/exec-=
+shell-command/"><meta property=3D"twitter:title" content=3D"Executing Shell=
+ Commands in Golang"><meta property=3D"twitter:description" content=3D""><m=
+eta property=3D"twitter:image" content=3D"https://www.sohamkamani.com/_astr=
+o/banner.drawio.MzWUIqVE.png"><!-- Include your global CSS -->
+ =20
+<link rel=3D"stylesheet" href=3D"https://www.sohamkamani.com/_astro/_slug_.=
+BixwVWN4.css"></head> <body class=3D"w-full"> <header class=3D"m-0 p-0 px-4=
+ shadow-md" style=3D"background-color: var(--accent);" data-astro-cid-3ef6k=
+sr2=3D""> <nav class=3D"flex items-center justify-between" data-astro-cid-3=
+ef6ksr2=3D""> <div class=3D"internal-links" data-astro-cid-3ef6ksr2=3D""> <=
+a href=3D"https://www.sohamkamani.com/" class=3D"text-white px-4" data-astr=
+o-cid-3ef6ksr2=3D"true" data-astro-cid-eimmu3lg=3D""> Home </a>  <a href=3D=
+"https://www.sohamkamani.com/about" class=3D"text-white px-4" data-astro-ci=
+d-3ef6ksr2=3D"true" data-astro-cid-eimmu3lg=3D""> About </a>  </div> <h2 cl=
+ass=3D"m-0 text-2xl" data-astro-cid-3ef6ksr2=3D""> <a href=3D"https://www.s=
+ohamkamani.com/" class=3D"no-underline text-white" data-astro-cid-3ef6ksr2=
+=3D""> &lt;   <span class=3D"animated-title-css" style=3D"--char-count: 12;=
+" data-astro-cid-3ef6ksr2=3D""> Soham Kamani </span>  /&gt; </a> </h2> <div=
+ class=3D"social-links flex md:flex hidden"> <a href=3D"https://www.youtube=
+.com/@sohamkamanitech" target=3D"_blank" class=3D"flex py-4 px-2 text-white=
+ no-underline border-b-4 border-transparent"> <span class=3D"sr-only">Follo=
+w me on YouTube</span> <svg viewBox=3D"0 0 24 24" aria-hidden=3D"true" widt=
+h=3D"32" height=3D"32"> <path fill=3D"white" d=3D"M23.498 6.186a3.016 3.016=
+ 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 =
+3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 =
+2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 =
+0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L=
+15.818 12l-6.273 3.568z"></path> </svg> </a> <a href=3D"https://www.linkedi=
+n.com/in/soham-kamani-74034999/" target=3D"_blank" class=3D"flex py-4 px-2 =
+text-white no-underline border-b-4 border-transparent"> <span class=3D"sr-o=
+nly">Connect with me on LinkedIn</span> <svg viewBox=3D"0 0 24 24" aria-hid=
+den=3D"true" width=3D"32" height=3D"32"> <path fill=3D"white" d=3D"M20.5 2h=
+-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 =
+1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 0=
+1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V=
+19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path> <=
+/svg> </a> <a href=3D"https://github.com/sohamkamani" target=3D"_blank" cla=
+ss=3D"flex py-4 px-2 text-white no-underline border-b-4 border-transparent"=
+> <span class=3D"sr-only">Go to Astro's GitHub repo</span> <svg viewBox=3D"=
+0 0 16 16" aria-hidden=3D"true" width=3D"32" height=3D"32"><path fill=3D"wh=
+ite" d=3D"M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-=
+.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.=
+13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.0=
+7-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.=
+2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 =
+.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 =
+0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .2=
+1.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> </a>=
+ <a href=3D"https://www.sohamkamani.com/rss.xml" target=3D"_blank" class=3D=
+"flex py-4 px-2 text-white no-underline border-b-4 border-transparent"> <sp=
+an class=3D"sr-only">RSS Feed</span> <svg viewBox=3D"0 0 24 24" aria-hidden=
+=3D"true" width=3D"32" height=3D"32"> <circle fill=3D"white" cx=3D"6.18" cy=
+=3D"17.82" r=3D"2.18"></circle> <path fill=3D"white" d=3D"M4 4.44v2.83c7.03=
+ 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.=
+9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path> </svg> </a> =
+</div> </nav> </header>   <main class=3D"w-full m-0 p-4"> <article class=3D=
+"blog-article"> <div class=3D"mx-auto w-[900px] max-w-[calc(100%-2em)] p-4 =
+text-gray-800"> <div class=3D"mb-4 py-4 text-center leading-none"> <h1 clas=
+s=3D"m-0 mb-2">Executing Shell Commands in Golang</h1> <div class=3D"flex j=
+ustify-between items-center mb-2 text-gray-600"> <div class=3D"text-left"> =
+<time datetime=3D"2022-10-14T07:37:00.000Z">Oct 14, 2022</time> </div> <div=
+ class=3D"text-right">
+By <a href=3D"https://www.sohamkamani.com/about" rel=3D"author" class=3D"te=
+xt-accent hover:text-accent">Soham Kamani</a> </div> </div> <hr class=3D"bo=
+rder-gray-200"> </div> <div class=3D"toc-container top-24 float-right ml-4 =
+mb-4 w-full md:w-2/5 max-w-[100%] md:max-w-[50%] bg-gray-50 p-4 rounded-lg =
+border border-gray-200 text-sm"><h2 class=3D"text-lg font-semibold mb-2">Ta=
+ble of Contents</h2><ul class=3D"list-none p-0 m-0"><li class=3D"mb-2 ml-4"=
+><a href=3D"https://www.sohamkamani.com/golang/exec-shell-command/#the-exec=
+-package" class=3D"text-accent hover:underline">The Exec Package </a></li><=
+li class=3D"mb-2 ml-4"><a href=3D"https://www.sohamkamani.com/golang/exec-s=
+hell-command/#running-basic-shell-commands" class=3D"text-accent hover:unde=
+rline">Running Basic Shell Commands </a></li><li class=3D"mb-2 ml-4"><a hre=
+f=3D"https://www.sohamkamani.com/golang/exec-shell-command/#executing-long-=
+running-commands" class=3D"text-accent hover:underline">Executing Long Runn=
+ing Commands </a></li><li class=3D"mb-2 ml-4"><a href=3D"https://www.sohamk=
+amani.com/golang/exec-shell-command/#custom-output-writer" class=3D"text-ac=
+cent hover:underline">Custom Output Writer </a></li><li class=3D"mb-2 ml-4"=
+><a href=3D"https://www.sohamkamani.com/golang/exec-shell-command/#passing-=
+input-to-commands-with-stdin" class=3D"text-accent hover:underline">Passing=
+ Input To Commands With STDIN </a></li><li class=3D"mb-2 ml-4"><a href=3D"h=
+ttps://www.sohamkamani.com/golang/exec-shell-command/#killing-a-child-proce=
+ss" class=3D"text-accent hover:underline">Killing a Child Process </a></li>=
+<li class=3D"mb-2 ml-4"><a href=3D"https://www.sohamkamani.com/golang/exec-=
+shell-command/#conclusion" class=3D"text-accent hover:underline">Conclusion=
+ </a></li></ul></div>  <p>In this tutorial we will learn how to execute she=
+ll commands (like <code>ls</code>, <code>mkdir</code> or <code>grep</code>)=
+ in Golang.</p>
+<p>We will also learn how to pass I/O to a running command through stdin an=
+d stdout, as well as manage long running commands.</p>
+<p><img alt=3D"banner" width=3D"1001" height=3D"502" loading=3D"lazy" decod=
+ing=3D"async" src=3D"https://www.sohamkamani.com/_astro/banner.drawio.MzWUI=
+qVE_TiS7i.webp"></p>
+<blockquote>
+<p>If you just want to see the code, you can view it <a href=3D"https://git=
+hub.com/sohamkamani/golang-examples/blob/main/shellcommands/main.go">on Git=
+hub</a></p>
+</blockquote>
+<h2 id=3D"the-exec-package">The Exec Package<a aria-hidden=3D"true" tabinde=
+x=3D"-1" href=3D"https://www.sohamkamani.com/golang/exec-shell-command/#the=
+-exec-package"><span class=3D"anchor-link"> #</span></a></h2>
+<p>We can use the official <a href=3D"https://pkg.go.dev/os/exec">os/exec</=
+a> package to run external commands.</p>
+<p>When we execute shell commands, we are running code outside of our Go ap=
+plication. In order to do this, we need to run these commands in a <em>chil=
+d process</em>.</p>
+<img loading=3D"lazy" src=3D"https://www.sohamkamani.com/golang/exec-shell-=
+command/child-process-thread.drawio.svg" alt=3D"golang application creates =
+child processes, communicates via I/O and is informed when it exits" height=
+=3D"auto" width=3D"auto">
+<p>Each command is run as a child process within the running Go application=
+, and exposes <code>Stdin</code> and <code>Stdout</code> attributes that we=
+ can use to read and write data from the process.</p>
+<h2 id=3D"running-basic-shell-commands">Running Basic Shell Commands<a aria=
+-hidden=3D"true" tabindex=3D"-1" href=3D"https://www.sohamkamani.com/golang=
+/exec-shell-command/#running-basic-shell-commands"><span class=3D"anchor-li=
+nk"> #</span></a></h2>
+<p>To run a simple command and read its output, we can create a new <code>*=
+exec.Cmd</code> instance and run it.</p>
+<p>In this example, let=E2=80=99s list the files in our current directory u=
+sing <code>ls</code>, and print the output from our code:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"go"><code><s=
+pan class=3D"line"><span style=3D"color:#6A737D">// create a new *Cmd insta=
+nce</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// here we pass the comm=
+and as the first argument and the arguments to pass to the command as the</=
+span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// remaining arguments i=
+n the function</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">cmd </span><span style=
+=3D"color:#F97583">:=3D</span><span style=3D"color:#E1E4E8"> exec.</span><s=
+pan style=3D"color:#B392F0">Command</span><span style=3D"color:#E1E4E8">(</=
+span><span style=3D"color:#9ECBFF">"ls"</span><span style=3D"color:#E1E4E8"=
+>, </span><span style=3D"color:#9ECBFF">"./"</span><span style=3D"color:#E1=
+E4E8">)</span></span>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// The `Output` method e=
+xecutes the command and</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// collects the output, =
+returning its value</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">out, err </span><span st=
+yle=3D"color:#F97583">:=3D</span><span style=3D"color:#E1E4E8"> cmd.</span>=
+<span style=3D"color:#B392F0">Output</span><span style=3D"color:#E1E4E8">()=
+</span></span>
+<span class=3D"line"><span style=3D"color:#F97583">if</span><span style=3D"=
+color:#E1E4E8"> err </span><span style=3D"color:#F97583">!=3D</span><span s=
+tyle=3D"color:#79B8FF"> nil</span><span style=3D"color:#E1E4E8"> {</span></=
+span>
+<span class=3D"line"><span style=3D"color:#6A737D">  // if there was any er=
+ror, print it here</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">  fmt.</span><span style=
+=3D"color:#B392F0">Println</span><span style=3D"color:#E1E4E8">(</span><spa=
+n style=3D"color:#9ECBFF">"could not run command: "</span><span style=3D"co=
+lor:#E1E4E8">, err)</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">}</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// otherwise, print the =
+output from running the command</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">fmt.</span><span style=
+=3D"color:#B392F0">Println</span><span style=3D"color:#E1E4E8">(</span><spa=
+n style=3D"color:#9ECBFF">"Output: "</span><span style=3D"color:#E1E4E8">, =
+</span><span style=3D"color:#F97583">string</span><span style=3D"color:#E1E=
+4E8">(out))</span></span></code></pre>
+<p>Since I am running this code within the <a href=3D"https://github.com/so=
+hamkamani/golang-examples">example repository</a>, it prints the files in t=
+he project root:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"plaintext"><=
+code><span class=3D"line"><span>&gt; go run shellcommands/main.go</span></s=
+pan>
+<span class=3D"line"><span></span></span>
+<span class=3D"line"><span>Output:  LICENSE</span></span>
+<span class=3D"line"><span>README.md</span></span>
+<span class=3D"line"><span>go.mod</span></span>
+<span class=3D"line"><span>shellcommands</span></span></code></pre>
+<p><img alt=3D"cmd.Output runs the command and collects the output" width=
+=3D"504" height=3D"451" loading=3D"lazy" decoding=3D"async" src=3D"https://=
+www.sohamkamani.com/_astro/cmd-output-execution.drawio.CcpssOkM_Z1GNJPX.svg=
+"></p>
+<p>Note that when we run exec, our application does not spawn a shell, and =
+runs the given command directly. <em>This means that any shell-based proces=
+sing, like glob patterns or expansions will not be done</em>.</p>
+<p>So for example, when we run <code>ls ./*.md</code> , it is not expanded =
+into <code>README.md</code> like we expect when running in our bash shell.<=
+/p>
+<h2 id=3D"executing-long-running-commands">Executing Long Running Commands<=
+a aria-hidden=3D"true" tabindex=3D"-1" href=3D"https://www.sohamkamani.com/=
+golang/exec-shell-command/#executing-long-running-commands"><span class=3D"=
+anchor-link"> #</span></a></h2>
+<p>The previous example executed the <code>ls</code> command that returned =
+its output immediately. What about commands whose output is continuous, or =
+takes a long time to retrieve?</p>
+<p>For example, when we run the <code>ping</code> command, we get continuou=
+s output at periodic intervals:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"bash"><code>=
+<span class=3D"line"><span style=3D"color:#B392F0">=E2=9E=9C</span><span st=
+yle=3D"color:#9ECBFF">  ~</span><span style=3D"color:#9ECBFF"> ping</span><=
+span style=3D"color:#9ECBFF"> google.com</span></span>
+<span class=3D"line"><span style=3D"color:#B392F0">PING</span><span style=
+=3D"color:#9ECBFF"> google.com</span><span style=3D"color:#E1E4E8"> (142.25=
+0.77.110): 56 data bytes</span></span>
+<span class=3D"line"><span style=3D"color:#B392F0">64</span><span style=3D"=
+color:#9ECBFF"> bytes</span><span style=3D"color:#9ECBFF"> from</span><span=
+ style=3D"color:#9ECBFF"> 142.250.77.110:</span><span style=3D"color:#9ECBF=
+F"> icmp_seq=3D</span><span style=3D"color:#79B8FF">0</span><span style=3D"=
+color:#9ECBFF"> ttl=3D</span><span style=3D"color:#79B8FF">116</span><span =
+style=3D"color:#9ECBFF"> time=3D</span><span style=3D"color:#79B8FF">11.397=
+</span><span style=3D"color:#9ECBFF"> ms</span></span>
+<span class=3D"line"><span style=3D"color:#B392F0">64</span><span style=3D"=
+color:#9ECBFF"> bytes</span><span style=3D"color:#9ECBFF"> from</span><span=
+ style=3D"color:#9ECBFF"> 142.250.77.110:</span><span style=3D"color:#9ECBF=
+F"> icmp_seq=3D</span><span style=3D"color:#79B8FF">1</span><span style=3D"=
+color:#9ECBFF"> ttl=3D</span><span style=3D"color:#79B8FF">116</span><span =
+style=3D"color:#9ECBFF"> time=3D</span><span style=3D"color:#79B8FF">17.646=
+</span><span style=3D"color:#9ECBFF"> ms</span><span style=3D"color:#6A737D=
+">  ## this is received after 1 second</span></span>
+<span class=3D"line"><span style=3D"color:#B392F0">64</span><span style=3D"=
+color:#9ECBFF"> bytes</span><span style=3D"color:#9ECBFF"> from</span><span=
+ style=3D"color:#9ECBFF"> 142.250.77.110:</span><span style=3D"color:#9ECBF=
+F"> icmp_seq=3D</span><span style=3D"color:#79B8FF">2</span><span style=3D"=
+color:#9ECBFF"> ttl=3D</span><span style=3D"color:#79B8FF">116</span><span =
+style=3D"color:#9ECBFF"> time=3D</span><span style=3D"color:#79B8FF">10.036=
+</span><span style=3D"color:#9ECBFF"> ms</span><span style=3D"color:#6A737D=
+">  ## this is received after 2 seconds</span></span>
+<span class=3D"line"><span style=3D"color:#B392F0">64</span><span style=3D"=
+color:#9ECBFF"> bytes</span><span style=3D"color:#9ECBFF"> from</span><span=
+ style=3D"color:#9ECBFF"> 142.250.77.110:</span><span style=3D"color:#9ECBF=
+F"> icmp_seq=3D</span><span style=3D"color:#79B8FF">3</span><span style=3D"=
+color:#9ECBFF"> ttl=3D</span><span style=3D"color:#79B8FF">116</span><span =
+style=3D"color:#9ECBFF"> time=3D</span><span style=3D"color:#79B8FF">9.656<=
+/span><span style=3D"color:#9ECBFF"> ms</span><span style=3D"color:#6A737D"=
+>   ## and so on</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D"># ...</span></span></cod=
+e></pre>
+<p>If we tried executing this type of command using <code>cmd.Output</code>=
+, we wouldn=E2=80=99t get any output, since the <code>Output</code> method =
+waits for the command to execute, and the <code>ping</code> command execute=
+s indefinitely.</p>
+<p>Instead, we can a custom <code>Stdout</code> attribute to read output co=
+ntinuously:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"go"><code><s=
+pan class=3D"line"><span style=3D"color:#E1E4E8">cmd </span><span style=3D"=
+color:#F97583">:=3D</span><span style=3D"color:#E1E4E8"> exec.</span><span =
+style=3D"color:#B392F0">Command</span><span style=3D"color:#E1E4E8">(</span=
+><span style=3D"color:#9ECBFF">"ping"</span><span style=3D"color:#E1E4E8">,=
+ </span><span style=3D"color:#9ECBFF">"google.com"</span><span style=3D"col=
+or:#E1E4E8">)</span></span>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// pipe the commands out=
+put to the applications</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// standard output</span=
+></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">cmd.Stdout </span><span =
+style=3D"color:#F97583">=3D</span><span style=3D"color:#E1E4E8"> os.Stdout<=
+/span></span>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// Run still runs the co=
+mmand and waits for completion</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// but the output is ins=
+tantly piped to Stdout</span></span>
+<span class=3D"line"><span style=3D"color:#F97583">if</span><span style=3D"=
+color:#E1E4E8"> err </span><span style=3D"color:#F97583">:=3D</span><span s=
+tyle=3D"color:#E1E4E8"> cmd.</span><span style=3D"color:#B392F0">Run</span>=
+<span style=3D"color:#E1E4E8">(); err </span><span style=3D"color:#F97583">=
+!=3D</span><span style=3D"color:#79B8FF"> nil</span><span style=3D"color:#E=
+1E4E8"> {</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">  fmt.</span><span style=
+=3D"color:#B392F0">Println</span><span style=3D"color:#E1E4E8">(</span><spa=
+n style=3D"color:#9ECBFF">"could not run command: "</span><span style=3D"co=
+lor:#E1E4E8">, err)</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">}</span></span></code></=
+pre>
+<p>Output:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"plaintext"><=
+code><span class=3D"line"><span>&gt; go run shellcommands/main.go</span></s=
+pan>
+<span class=3D"line"><span></span></span>
+<span class=3D"line"><span>PING google.com (142.250.195.142): 56 data bytes=
+</span></span>
+<span class=3D"line"><span>64 bytes from 142.250.195.142: icmp_seq=3D0 ttl=
+=3D114 time=3D9.397 ms</span></span>
+<span class=3D"line"><span>64 bytes from 142.250.195.142: icmp_seq=3D1 ttl=
+=3D114 time=3D37.398 ms</span></span>
+<span class=3D"line"><span>64 bytes from 142.250.195.142: icmp_seq=3D2 ttl=
+=3D114 time=3D34.050 ms</span></span>
+<span class=3D"line"><span>64 bytes from 142.250.195.142: icmp_seq=3D3 ttl=
+=3D114 time=3D33.272 ms</span></span>
+<span class=3D"line"><span></span></span>
+<span class=3D"line"><span># ...</span></span>
+<span class=3D"line"><span># and so on</span></span></code></pre>
+<p>By assigning the <code>Stdout</code> attribute directly, we can capture =
+the output throughout the commands lifecycle, and process it as soon as it =
+is received.</p>
+<p><img alt=3D"events return data as soon as its received - timing diagram"=
+ width=3D"501" height=3D"451" loading=3D"lazy" decoding=3D"async" src=3D"ht=
+tps://www.sohamkamani.com/_astro/cmd-stdout-workflow.drawio.CXS2uM-3_Z1H0Wq=
+2.svg"></p>
+<h2 id=3D"custom-output-writer">Custom Output Writer<a aria-hidden=3D"true"=
+ tabindex=3D"-1" href=3D"https://www.sohamkamani.com/golang/exec-shell-comm=
+and/#custom-output-writer"><span class=3D"anchor-link"> #</span></a></h2>
+<p>Instead of using <code>os.Stdout</code>, we can create our own writer th=
+at implements the <code>io.Writer</code> interface.</p>
+<p>Let=E2=80=99s create a writer that adds a <code>"received output:"</code=
+> prefix before each output chunk:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"go"><code><s=
+pan class=3D"line"><span style=3D"color:#F97583">type</span><span style=3D"=
+color:#B392F0"> customOutput</span><span style=3D"color:#F97583"> struct</s=
+pan><span style=3D"color:#E1E4E8">{}</span></span>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#F97583">func</span><span style=
+=3D"color:#E1E4E8"> (</span><span style=3D"color:#FFAB70">c </span><span st=
+yle=3D"color:#B392F0">customOutput</span><span style=3D"color:#E1E4E8">) </=
+span><span style=3D"color:#B392F0">Write</span><span style=3D"color:#E1E4E8=
+">(</span><span style=3D"color:#FFAB70">p</span><span style=3D"color:#E1E4E=
+8"> []</span><span style=3D"color:#F97583">byte</span><span style=3D"color:=
+#E1E4E8">) (</span><span style=3D"color:#F97583">int</span><span style=3D"c=
+olor:#E1E4E8">, </span><span style=3D"color:#F97583">error</span><span styl=
+e=3D"color:#E1E4E8">) {</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">	fmt.</span><span style=
+=3D"color:#B392F0">Println</span><span style=3D"color:#E1E4E8">(</span><spa=
+n style=3D"color:#9ECBFF">"received output: "</span><span style=3D"color:#E=
+1E4E8">, </span><span style=3D"color:#F97583">string</span><span style=3D"c=
+olor:#E1E4E8">(p))</span></span>
+<span class=3D"line"><span style=3D"color:#F97583">	return</span><span styl=
+e=3D"color:#B392F0"> len</span><span style=3D"color:#E1E4E8">(p), </span><s=
+pan style=3D"color:#79B8FF">nil</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">}</span></span></code></=
+pre>
+<p>Now we can assign a new instance of <code>customWriter</code> as the out=
+put writer:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"go"><code><s=
+pan class=3D"line"><span style=3D"color:#E1E4E8">cmd.Stdout </span><span st=
+yle=3D"color:#F97583">=3D</span><span style=3D"color:#B392F0"> customOutput=
+</span><span style=3D"color:#E1E4E8">{}</span></span></code></pre>
+<p>If we run the application now, we will get the below output:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"plaintext"><=
+code><span class=3D"line"><span>received output:  PING google.com (142.250.=
+195.142): 56 data bytes</span></span>
+<span class=3D"line"><span>64 bytes from 142.250.195.142: icmp_seq=3D0 ttl=
+=3D114 time=3D187.825 ms</span></span>
+<span class=3D"line"><span></span></span>
+<span class=3D"line"><span>received output:  64 bytes from 142.250.195.142:=
+ icmp_seq=3D1 ttl=3D114 time=3D19.489 ms</span></span>
+<span class=3D"line"><span></span></span>
+<span class=3D"line"><span>received output:  64 bytes from 142.250.195.142:=
+ icmp_seq=3D2 ttl=3D114 time=3D117.676 ms</span></span>
+<span class=3D"line"><span></span></span>
+<span class=3D"line"><span>received output:  64 bytes from 142.250.195.142:=
+ icmp_seq=3D3 ttl=3D114 time=3D57.780 ms</span></span></code></pre>
+<h2 id=3D"passing-input-to-commands-with-stdin">Passing Input To Commands W=
+ith STDIN<a aria-hidden=3D"true" tabindex=3D"-1" href=3D"https://www.sohamk=
+amani.com/golang/exec-shell-command/#passing-input-to-commands-with-stdin">=
+<span class=3D"anchor-link"> #</span></a></h2>
+<p>In the previous examples, we executed commands without giving any input =
+(or providing limited inputs as arguments). In most cases, input is given t=
+hrough the STDIN stream.</p>
+<p>One popular example of this is the <code>grep</code> command, where we c=
+an pipe the input from another command:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"bash"><code>=
+<span class=3D"line"><span style=3D"color:#B392F0">=E2=9E=9C</span><span st=
+yle=3D"color:#9ECBFF">  ~</span><span style=3D"color:#9ECBFF"> echo</span><=
+span style=3D"color:#9ECBFF"> "1. pear\n2. grapes\n3. apple\n4. banana\n"</=
+span><span style=3D"color:#F97583"> |</span><span style=3D"color:#B392F0"> =
+grep</span><span style=3D"color:#9ECBFF"> apple</span></span>
+<span class=3D"line"><span style=3D"color:#B392F0">3.</span><span style=3D"=
+color:#9ECBFF"> apple</span></span></code></pre>
+<p>Here, the input is passed to the <code>grep</code> command through STDIN=
+. In this case the input is a list of fruit, and <code>grep</code> filters =
+the line that contains <code>"apple"</code></p>
+<p>The <code>*Cmd</code> instance provides us with an input stream which we=
+ can write into. Let=E2=80=99s use it to pass input to a <code>grep</code> =
+child process:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"go"><code><s=
+pan class=3D"line"><span style=3D"color:#E1E4E8">cmd </span><span style=3D"=
+color:#F97583">:=3D</span><span style=3D"color:#E1E4E8"> exec.</span><span =
+style=3D"color:#B392F0">Command</span><span style=3D"color:#E1E4E8">(</span=
+><span style=3D"color:#9ECBFF">"grep"</span><span style=3D"color:#E1E4E8">,=
+ </span><span style=3D"color:#9ECBFF">"apple"</span><span style=3D"color:#E=
+1E4E8">)</span></span>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// Create a new pipe, wh=
+ich gives us a reader/writer pair</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">reader, writer </span><s=
+pan style=3D"color:#F97583">:=3D</span><span style=3D"color:#E1E4E8"> io.</=
+span><span style=3D"color:#B392F0">Pipe</span><span style=3D"color:#E1E4E8"=
+>()</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// assign the reader to =
+Stdin for the command</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">cmd.Stdin </span><span s=
+tyle=3D"color:#F97583">=3D</span><span style=3D"color:#E1E4E8"> reader</spa=
+n></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// the output is printed=
+ to the console</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">cmd.Stdout </span><span =
+style=3D"color:#F97583">=3D</span><span style=3D"color:#E1E4E8"> os.Stdout<=
+/span></span>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#F97583">go</span><span style=3D"=
+color:#F97583"> func</span><span style=3D"color:#E1E4E8">() {</span></span>
+<span class=3D"line"><span style=3D"color:#F97583">  defer</span><span styl=
+e=3D"color:#E1E4E8"> writer.</span><span style=3D"color:#B392F0">Close</spa=
+n><span style=3D"color:#E1E4E8">()</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">  // the writer is conne=
+cted to the reader via the pipe</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">  // so all data written=
+ here is passed on to the commands</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">  // standard input</spa=
+n></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">  writer.</span><span st=
+yle=3D"color:#B392F0">Write</span><span style=3D"color:#E1E4E8">([]</span><=
+span style=3D"color:#F97583">byte</span><span style=3D"color:#E1E4E8">(</sp=
+an><span style=3D"color:#9ECBFF">"1. pear</span><span style=3D"color:#79B8F=
+F">\n</span><span style=3D"color:#9ECBFF">"</span><span style=3D"color:#E1E=
+4E8">))</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">  writer.</span><span st=
+yle=3D"color:#B392F0">Write</span><span style=3D"color:#E1E4E8">([]</span><=
+span style=3D"color:#F97583">byte</span><span style=3D"color:#E1E4E8">(</sp=
+an><span style=3D"color:#9ECBFF">"2. grapes</span><span style=3D"color:#79B=
+8FF">\n</span><span style=3D"color:#9ECBFF">"</span><span style=3D"color:#E=
+1E4E8">))</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">  writer.</span><span st=
+yle=3D"color:#B392F0">Write</span><span style=3D"color:#E1E4E8">([]</span><=
+span style=3D"color:#F97583">byte</span><span style=3D"color:#E1E4E8">(</sp=
+an><span style=3D"color:#9ECBFF">"3. apple</span><span style=3D"color:#79B8=
+FF">\n</span><span style=3D"color:#9ECBFF">"</span><span style=3D"color:#E1=
+E4E8">))</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">  writer.</span><span st=
+yle=3D"color:#B392F0">Write</span><span style=3D"color:#E1E4E8">([]</span><=
+span style=3D"color:#F97583">byte</span><span style=3D"color:#E1E4E8">(</sp=
+an><span style=3D"color:#9ECBFF">"4. banana</span><span style=3D"color:#79B=
+8FF">\n</span><span style=3D"color:#9ECBFF">"</span><span style=3D"color:#E=
+1E4E8">))</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">}()</span></span>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#F97583">if</span><span style=3D"=
+color:#E1E4E8"> err </span><span style=3D"color:#F97583">:=3D</span><span s=
+tyle=3D"color:#E1E4E8"> cmd.</span><span style=3D"color:#B392F0">Run</span>=
+<span style=3D"color:#E1E4E8">(); err </span><span style=3D"color:#F97583">=
+!=3D</span><span style=3D"color:#79B8FF"> nil</span><span style=3D"color:#E=
+1E4E8"> {</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">  fmt.</span><span style=
+=3D"color:#B392F0">Println</span><span style=3D"color:#E1E4E8">(</span><spa=
+n style=3D"color:#9ECBFF">"could not run command: "</span><span style=3D"co=
+lor:#E1E4E8">, err)</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">}</span></span></code></=
+pre>
+<p>Output:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"plaintext"><=
+code><span class=3D"line"><span>3. apple</span></span></code></pre>
+<p><img alt=3D"input is written to the child process using the stdin.write =
+method: sequence diagram" width=3D"501" height=3D"451" loading=3D"lazy" dec=
+oding=3D"async" src=3D"https://www.sohamkamani.com/_astro/stdin.drawio.a38g=
+A58v_Z1H0Wq2.svg"></p>
+<h2 id=3D"killing-a-child-process">Killing a Child Process<a aria-hidden=3D=
+"true" tabindex=3D"-1" href=3D"https://www.sohamkamani.com/golang/exec-shel=
+l-command/#killing-a-child-process"><span class=3D"anchor-link"> #</span></=
+a></h2>
+<p>There are several commands that run indefinitely, or need an explicit si=
+gnal to stop.</p>
+<p>For example, if we start a web server using <code>python3 -m http.server=
+</code> or execute <code>sleep 10000</code> the resulting child processes w=
+ill run for a very long time (or indefinitely).</p>
+<p>To stop these processes, we need to send a kill signal from our applicat=
+ion. We can do this by adding a <a href=3D"https://www.sohamkamani.com/gola=
+ng/context-cancellation-and-values/">context instance</a> to the command.</=
+p>
+<p>If the context gets cancelled, the command terminates as well.</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"go"><code><s=
+pan class=3D"line"><span style=3D"color:#E1E4E8">ctx </span><span style=3D"=
+color:#F97583">:=3D</span><span style=3D"color:#E1E4E8"> context.</span><sp=
+an style=3D"color:#B392F0">Background</span><span style=3D"color:#E1E4E8">(=
+)</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// The context now times=
+ out after 1 second</span></span>
+<span class=3D"line"><span style=3D"color:#6A737D">// alternately, we can c=
+all `cancel()` to terminate immediately</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">ctx, cancel </span><span=
+ style=3D"color:#F97583">=3D</span><span style=3D"color:#E1E4E8"> context.<=
+/span><span style=3D"color:#B392F0">WithTimeout</span><span style=3D"color:=
+#E1E4E8">(ctx, </span><span style=3D"color:#79B8FF">1</span><span style=3D"=
+color:#F97583">*</span><span style=3D"color:#E1E4E8">time.Second)</span></s=
+pan>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">cmd </span><span style=
+=3D"color:#F97583">:=3D</span><span style=3D"color:#E1E4E8"> exec.</span><s=
+pan style=3D"color:#B392F0">CommandContext</span><span style=3D"color:#E1E4=
+E8">(ctx, </span><span style=3D"color:#9ECBFF">"sleep"</span><span style=3D=
+"color:#E1E4E8">, </span><span style=3D"color:#9ECBFF">"100"</span><span st=
+yle=3D"color:#E1E4E8">)</span></span>
+<span class=3D"line"></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">out, err </span><span st=
+yle=3D"color:#F97583">:=3D</span><span style=3D"color:#E1E4E8"> cmd.</span>=
+<span style=3D"color:#B392F0">Output</span><span style=3D"color:#E1E4E8">()=
+</span></span>
+<span class=3D"line"><span style=3D"color:#F97583">if</span><span style=3D"=
+color:#E1E4E8"> err </span><span style=3D"color:#F97583">!=3D</span><span s=
+tyle=3D"color:#79B8FF"> nil</span><span style=3D"color:#E1E4E8"> {</span></=
+span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">  fmt.</span><span style=
+=3D"color:#B392F0">Println</span><span style=3D"color:#E1E4E8">(</span><spa=
+n style=3D"color:#9ECBFF">"could not run command: "</span><span style=3D"co=
+lor:#E1E4E8">, err)</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">}</span></span>
+<span class=3D"line"><span style=3D"color:#E1E4E8">fmt.</span><span style=
+=3D"color:#B392F0">Println</span><span style=3D"color:#E1E4E8">(</span><spa=
+n style=3D"color:#9ECBFF">"Output: "</span><span style=3D"color:#E1E4E8">, =
+</span><span style=3D"color:#F97583">string</span><span style=3D"color:#E1E=
+4E8">(out))</span></span></code></pre>
+<p>This will give the following output after 1 second has elapsed:</p>
+<pre class=3D"astro-code github-dark" style=3D"background-color:#24292e;col=
+or:#e1e4e8; overflow-x: auto;" tabindex=3D"0" data-language=3D"plaintext"><=
+code><span class=3D"line"><span>could not run command:  signal: killed</spa=
+n></span>
+<span class=3D"line"><span>Output:  </span></span></code></pre>
+<p>Terminating child processes is useful when you want to limit the time sp=
+ent in running a command or want to create a fallback incase a command does=
+n=E2=80=99t return a result on time.</p>
+<h2 id=3D"conclusion">Conclusion<a aria-hidden=3D"true" tabindex=3D"-1" hre=
+f=3D"https://www.sohamkamani.com/golang/exec-shell-command/#conclusion"><sp=
+an class=3D"anchor-link"> #</span></a></h2>
+<p>So far, we learned multiple ways to execute and interact with unix shell=
+ commands. Here are some things to keep in mind when using the <code>os/exe=
+c</code> package:</p>
+<ul>
+<li>Use <code>cmd.Output</code> when you want to execute simple commands th=
+at don=E2=80=99t usually give too much output</li>
+<li>For functions with continuous or long-running output, you should use <c=
+ode>cmd.Run</code> and interact with the command using <code>cmd.Stdout</co=
+de> and <code>cmd.Stdin</code></li>
+<li>In production applications, its useful to keep a timeout and kill a pro=
+cess if it isn=E2=80=99t responding for a given time. We can send terminati=
+on commands using <a href=3D"https://www.sohamkamani.com/golang/context-can=
+cellation-and-values/#context-cancellation-in-go">context cancellation</a>.=
+</li>
+</ul>
+<p>If you want to read more about the different functions and configuration=
+ options, you can view the <a href=3D"https://pkg.go.dev/os/exec#Cmd">offic=
+ial documentation page</a>.</p>
+<p>You can view the working code for all examples <a href=3D"https://github=
+.com/sohamkamani/golang-examples/blob/main/shellcommands/main.go">on Github=
+</a>.</p>  </div> </article> <!-- Add the Mailing List Form here --> <div c=
+lass=3D"mx-auto w-[900px] max-w-[calc(100%-2em)] p-4"> <div class=3D"mailin=
+g-list-container my-8 p-6 border border-gray-200 rounded-md bg-gray-50"> <f=
+orm action=3D"https://sohamkamani.us17.list-manage.com/subscribe/post?u=3D8=
+4ea1f74b92bc659f025f95fe&amp;id=3Ddc1498c2fe&amp;SIGNUP=3D%2Fgolang%2Fexec-=
+shell-command%2F" method=3D"post" name=3D"mc-embedded-subscribe-form" class=
+=3D"mailing-list" target=3D"_blank" novalidate=3D""> <div> <p class=3D"mb-4=
+ text-gray-700">
+Like what I write? Let me know your email, and I'll send you more posts
+        like this. No spam, I promise!
+</p> <div class=3D"flex flex-col sm:flex-row gap-2 items-center"> <input ty=
+pe=3D"email" name=3D"EMAIL" placeholder=3D"Your Email =E2=9C=89=EF=B8=8F" c=
+lass=3D"flex-grow p-2 border border-gray-300 rounded-md focus:ring-blue-500=
+ focus:border-blue-500" *=3D"" updated=3D"" focus=3D"" rings=3D"" to=3D"" m=
+atch=3D"" required=3D""> <!-- real people should not fill this in and expec=
+t good things - do not remove this or risk form bot signups--> <div style=
+=3D"position: absolute; left: -5000px;" aria-hidden=3D"true"> <input type=
+=3D"text" name=3D"b_84ea1f74b92bc659f025f95fe_dc1498c2fe" tabindex=3D"-1" v=
+alue=3D""> </div> <input type=3D"submit" value=3D"Subscribe =F0=9F=9A=80" n=
+ame=3D"subscribe" class=3D"button mail-list-subscribe bg-blue-600 hover:bg-=
+blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer transitio=
+n duration-150 ease-in-out w-full sm:w-auto" *=3D"" ---=3D"" modified=3D"" =
+here=3D""> </div> </div> <div class=3D"mt-6 text-sm text-gray-600 space-y-2=
+"> <p class=3D"rss-subscribe">
+or,
+<a href=3D"https://www.sohamkamani.com/rss.xml" target=3D"_blank" rel=3D"no=
+opener" class=3D"text-blue-600 hover:underline inline-flex items-center gap=
+-1" *=3D"" changed=3D"" accent=3D"" link=3D"" color=3D"">
+subscribe via RSS
+<svg xmlns=3D"http://www.w3.org/2000/svg" id=3D"RSSicon" viewBox=3D"0 0 8 8=
+" width=3D"16" height=3D"16"> <title>RSS feed icon</title> <style>
+              .rss-button {
+                fill: orange;
+              }
+              .rss-symbol {
+                fill: #fff;
+              }
+            </style> <rect class=3D"rss-button" width=3D"8" height=3D"8" rx=
+=3D"1.5"></rect> <circle class=3D"rss-symbol" cx=3D"2" cy=3D"6" r=3D"1"></c=
+ircle> <path class=3D"rss-symbol" d=3D"m1 4a3 3 0 013 3h1A4 4 0 001 3z"></p=
+ath> <path class=3D"rss-symbol" d=3D"m1 2a5 5 0 015 5h1A6 6 0 001 1z"></pat=
+h> </svg> </a> </p> <p>
+Prefer videos?
+<a href=3D"https://www.youtube.com/@sohamkamanitech" target=3D"_blank" rel=
+=3D"noopener" class=3D"text-blue-600 hover:underline inline-flex items-cent=
+er gap-1" *=3D"" changed=3D"" accent=3D"" link=3D"" color=3D""> <svg style=
+=3D"vertical-align: middle;" viewBox=3D"0 0 28.57 20" width=3D"18" height=
+=3D"18" xmlns=3D"http://www.w3.org/2000/svg"> <g> <path d=3D"M27.9727 3.123=
+24C27.6435 1.89323 26.6768.926623 25.4468.597366 23.2197.224288e-6 14.285.0=
+ 14.285.0S5.35042.224288e-6 3.12323.597366C1.89323.926623.926623 1.89323.59=
+7366 3.12324.224288e-6 5.35042.0 10 0 10s.224288e-6 4.6496.597366 6.8768c.3=
+29257 1.23 1.295864 2.1966 2.525864 2.5258C5.35042 20 14.285 20 14.285 20s8=
+.9347.0 11.1618-.5974c1.23-.3292 2.1967-1.2958 2.5259-2.5258.5974-2.2272.59=
+74-6.8768.5974-6.8768S28.5677 5.35042 27.9727 3.12324z" fill=3D"red"></path=
+> <path d=3D"M11.4253 14.2854l7.4224-4.285-7.4224-4.28507V14.2854z" fill=3D=
+"#fff"></path> </g> </svg>
+Subscribe to my YouTube channel
+</a> </p> </div> </form> </div> </div> <!-- End Mailing List Form --> </mai=
+n> <div class=3D"min-h-[200px] mx-auto w-[900px] max-w-[calc(100%-2em)] p-4=
+"> <div id=3D"disqus_thread"></div>  </div> <footer class=3D"bg-gradient-to=
+-r from-gray-100 to-gray-300 text-gray-700 text-center py-8 px-4 pb-24 pt-8=
+"> <div>
+=C2=A9 2025 Soham Kamani. All rights reserved.
+<div class=3D"social-links flex justify-center gap-4 mt-4"> <div class=3D"s=
+ocial-links flex md:flex hidden"> <a href=3D"https://www.youtube.com/@soham=
+kamanitech" target=3D"_blank" class=3D"flex py-4 px-2 text-white no-underli=
+ne border-b-4 border-transparent"> <span class=3D"sr-only">Follow me on You=
+Tube</span> <svg viewBox=3D"0 0 24 24" aria-hidden=3D"true" width=3D"32" he=
+ight=3D"32"> <path fill=3D"gray" d=3D"M23.498 6.186a3.016 3.016 0 0 0-2.122=
+-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 =
+.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c=
+1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.=
+136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6=
+.273 3.568z"></path> </svg> </a> <a href=3D"https://www.linkedin.com/in/soh=
+am-kamani-74034999/" target=3D"_blank" class=3D"flex py-4 px-2 text-white n=
+o-underline border-b-4 border-transparent"> <span class=3D"sr-only">Connect=
+ with me on LinkedIn</span> <svg viewBox=3D"0 0 24 24" aria-hidden=3D"true"=
+ width=3D"32" height=3D"32"> <path fill=3D"gray" d=3D"M20.5 2h-17A1.5 1.5 0=
+ 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 =
+2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM1=
+9 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v=
+1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path> </svg> </a> <a=
+ href=3D"https://github.com/sohamkamani" target=3D"_blank" class=3D"flex py=
+-4 px-2 text-white no-underline border-b-4 border-transparent"> <span class=
+=3D"sr-only">Go to Astro's GitHub repo</span> <svg viewBox=3D"0 0 16 16" ar=
+ia-hidden=3D"true" width=3D"32" height=3D"32"><path fill=3D"gray" d=3D"M8 0=
+C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-=
+.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68=
+-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5=
+1-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-=
+2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 =
+2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.=
+75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A=
+8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> </a> <a href=3D"ht=
+tps://www.sohamkamani.com/rss.xml" target=3D"_blank" class=3D"flex py-4 px-=
+2 text-white no-underline border-b-4 border-transparent"> <span class=3D"sr=
+-only">RSS Feed</span> <svg viewBox=3D"0 0 24 24" aria-hidden=3D"true" widt=
+h=3D"32" height=3D"32"> <circle fill=3D"gray" cx=3D"6.18" cy=3D"17.82" r=3D=
+"2.18"></circle> <path fill=3D"gray" d=3D"M4 4.44v2.83c7.03 0 12.73 5.7 12.=
+73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.=
+07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path> </svg> </a> </div> </div> </=
+div> </footer>  <!-- Cloudflare Pages Analytics --><!-- Cloudflare Pages An=
+alytics -->
+</body></html>
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-118897b5-0423-421c-9462-eb56dd0ba95e@mhtml.blink
+
+@charset "utf-8";
+
+@import url("../styles/global.css");
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.sohamkamani.com/golang/styles/global.css
+
+@charset "utf-8";
+=0A
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.sohamkamani.com/_astro/_slug_.BixwVWN4.css
+
+@charset "utf-8";
+
+@layer theme {
+  :root, :host { --font-sans: ui-sans-serif,system-ui,sans-serif,"Apple Col=
+or Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; --font-mon=
+o: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Cou=
+rier New",monospace; --color-blue-200: oklch(.882 .059 254.128); --color-bl=
+ue-500: oklch(.623 .214 259.815); --color-blue-600: oklch(.546 .245 262.881=
+); --color-blue-700: oklch(.488 .243 264.376); --color-gray-50: oklch(.985 =
+.002 247.839); --color-gray-100: oklch(.967 .003 264.542); --color-gray-200=
+: oklch(.928 .006 264.531); --color-gray-300: oklch(.872 .01 258.338); --co=
+lor-gray-600: oklch(.446 .03 256.802); --color-gray-700: oklch(.373 .034 25=
+9.733); --color-gray-800: oklch(.278 .033 256.848); --color-black: #000; --=
+color-white: #fff; --spacing: .25rem; --text-xs: .75rem; --text-xs--line-he=
+ight: calc(1/.75); --text-sm: .875rem; --text-sm--line-height: calc(1.25/.8=
+75); --text-lg: 1.125rem; --text-lg--line-height: calc(1.75/1.125); --text-=
+2xl: 1.5rem; --text-2xl--line-height: calc(2/1.5); --font-weight-medium: 50=
+0; --font-weight-semibold: 600; --font-weight-bold: 700; --radius-md: .375r=
+em; --radius-lg: .5rem; --ease-in-out: cubic-bezier(.4,0,.2,1); --default-t=
+ransition-duration: .15s; --default-transition-timing-function: cubic-bezie=
+r(.4,0,.2,1); --default-font-family: var(--font-sans); --default-font-featu=
+re-settings: var(--font-sans--font-feature-settings); --default-font-variat=
+ion-settings: var(--font-sans--font-variation-settings); --default-mono-fon=
+t-family: var(--font-mono); --default-mono-font-feature-settings: var(--fon=
+t-mono--font-feature-settings); --default-mono-font-variation-settings: var=
+(--font-mono--font-variation-settings); }
+}
+
+@layer base {
+  *, ::after, ::before, ::backdrop { box-sizing: border-box; border: 0px so=
+lid; margin: 0px; padding: 0px; }
+  ::file-selector-button { box-sizing: border-box; border: 0px solid; margi=
+n: 0px; padding: 0px; }
+  html, :host { text-size-adjust: 100%; tab-size: 4; line-height: 1.5; font=
+-family: var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Appl=
+e Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"); font=
+-feature-settings: var(--default-font-feature-settings,normal); font-variat=
+ion-settings: var(--default-font-variation-settings,normal); -webkit-tap-hi=
+ghlight-color: transparent; }
+  body { line-height: inherit; }
+  hr { height: 0px; color: inherit; border-top-width: 1px; }
+  abbr:where([title]) { text-decoration: underline dotted; }
+  h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+  a { color: inherit; text-decoration: inherit; }
+  b, strong { font-weight: bolder; }
+  code, kbd, samp, pre { font-family: var(--default-mono-font-family,ui-mon=
+ospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New"=
+,monospace); font-feature-settings: var(--default-mono-font-feature-setting=
+s,normal); font-variation-settings: var(--default-mono-font-variation-setti=
+ngs,normal); font-size: 1em; }
+  small { font-size: 80%; }
+  sub, sup { vertical-align: baseline; font-size: 75%; line-height: 0; posi=
+tion: relative; }
+  sub { bottom: -0.25em; }
+  sup { top: -0.5em; }
+  table { text-indent: 0px; border-color: inherit; border-collapse: collaps=
+e; }
+  progress { vertical-align: baseline; }
+  summary { display: list-item; }
+  ol, ul, menu { list-style: none; }
+  img, svg, video, canvas, audio, iframe, embed, object { vertical-align: m=
+iddle; display: block; }
+  img, video { max-width: 100%; height: auto; }
+  button, input, select, optgroup, textarea { font: inherit; letter-spacing=
+: inherit; color: inherit; opacity: 1; background-color: rgba(0, 0, 0, 0); =
+border-radius: 0px; }
+  ::file-selector-button { font: inherit; letter-spacing: inherit; color: i=
+nherit; opacity: 1; background-color: rgba(0, 0, 0, 0); border-radius: 0px;=
+ }
+  :where(select:is([multiple], [size])) optgroup { font-weight: bolder; }
+  :where(select:is([multiple], [size])) optgroup option { padding-inline-st=
+art: 20px; }
+  ::file-selector-button { margin-inline-end: 4px; }
+  ::placeholder { opacity: 1; color: color-mix(in oklab, currentcolor, tran=
+sparent); }
+  textarea { resize: vertical; }
+  ::-webkit-search-decoration { appearance: none; }
+  ::-webkit-date-and-time-value { min-height: 1lh; text-align: inherit; }
+  ::-webkit-datetime-edit { display: inline-flex; }
+  ::-webkit-datetime-edit-fields-wrapper { padding: 0px; }
+  ::-webkit-datetime-edit { padding-block: 0px; }
+  ::-webkit-datetime-edit-year-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-month-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-day-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-hour-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-minute-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-second-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-millisecond-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-meridiem-field { padding-block: 0px; }
+  button, input:where([type=3D"button"], [type=3D"reset"], [type=3D"submit"=
+]) { appearance: button; }
+  ::file-selector-button { appearance: button; }
+  ::-webkit-inner-spin-button { height: auto; }
+  ::-webkit-outer-spin-button { height: auto; }
+  [hidden]:where(:not([hidden=3D"until-found"])) { display: none !important=
+; }
+  ul, ol { all: revert; }
+  body { text-align: left; background-image: ; background-position-x: ; bac=
+kground-position-y: ; background-repeat-x: ; background-repeat-y: ; backgro=
+und-attachment: ; background-origin: ; background-clip: ; background-color:=
+ ; overflow-wrap: break-word; color: rgb(var(--gray-dark)); background-size=
+: 100% 600px; margin: 0px; padding: 0px; font-family: Roboto, Helvetica, sa=
+ns-serif; font-size: 20px; line-height: 1.7; }
+  h1, h2, h3, h4, h5, h6 { color: rgb(var(--black)); margin: 0px 0px 0.5rem=
+; line-height: 1.2; }
+  h1 { font-size: 3.052em; }
+  h2 { font-size: 2.441em; }
+  h3 { font-size: 1.953em; }
+  h4 { font-size: 1.563em; }
+  h5 { font-size: 1.25em; }
+  strong, b { font-weight: 700; }
+  a, a:hover { color: var(--accent); }
+  p { margin-bottom: 1em; }
+  .prose p { margin-bottom: 2em; }
+  textarea { width: 100%; font-size: 16px; }
+  input { font-size: 16px; }
+  table { width: 100%; }
+  img { border-radius: 8px; max-width: 100%; height: auto; }
+  code { background-color: rgb(var(--gray-light)); border-radius: 2px; padd=
+ing: 2px 5px; font-size: 0.8em; }
+  details { background-color: rgb(var(--gray-light)); border-radius: 2px; m=
+argin: 1em 0px; padding: 2px 5px; }
+  pre { border-radius: 8px; padding: 1em; line-height: 1.4; }
+  pre > code { color: unset; font-family: unset; font-feature-settings: uns=
+et; font-kerning: unset; font-optical-sizing: unset; font-palette: unset; f=
+ont-size: 0.9em; font-stretch: unset; font-style: unset; font-synthesis: un=
+set; font-variant: unset; font-variation-settings: unset; font-weight: unse=
+t; forced-color-adjust: unset; text-orientation: unset; text-rendering: uns=
+et; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orie=
+ntation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: uns=
+et; accent-color: unset; place-content: unset; place-items: unset; place-se=
+lf: unset; alignment-baseline: unset; animation-composition: unset; animati=
+on: unset; app-region: unset; appearance: unset; aspect-ratio: unset; backd=
+rop-filter: unset; backface-visibility: unset; background: unset; backgroun=
+d-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-s=
+ize: unset; border-block: unset; border: unset; border-radius: unset; borde=
+r-collapse: unset; border-end-end-radius: unset; border-end-start-radius: u=
+nset; border-inline: unset; border-start-end-radius: unset; border-start-st=
+art-radius: unset; inset: unset; box-shadow: unset; box-sizing: unset; brea=
+k-after: unset; break-before: unset; break-inside: unset; buffered-renderin=
+g: unset; caption-side: unset; caret-color: unset; clear: unset; clip: unse=
+t; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-in=
+terpolation-filters: unset; color-rendering: unset; color-scheme: unset; co=
+lumns: unset; column-fill: unset; gap: unset; column-rule: unset; column-sp=
+an: unset; contain: unset; contain-intrinsic-block-size: unset; contain-int=
+rinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset;=
+ content: unset; content-visibility: unset; counter-increment: unset; count=
+er-reset: unset; counter-set: unset; cursor: unset; cx: unset; cy: unset; d=
+: unset; display: unset; dominant-baseline: unset; empty-cells: unset; fill=
+: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset;=
+ flex-flow: unset; float: unset; flood-color: unset; flood-opacity: unset; =
+grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; h=
+yphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; imag=
+e-rendering: unset; initial-letter: unset; inline-size: unset; inset-block:=
+ unset; inset-inline: unset; isolation: unset; letter-spacing: unset; light=
+ing-color: unset; line-break: unset; line-height: unset; list-style: unset;=
+ margin-block: unset; margin: unset; margin-inline: unset; marker: unset; m=
+ask: unset; mask-type: unset; math-depth: unset; math-shift: unset; math-st=
+yle: unset; max-block-size: unset; max-height: unset; max-inline-size: unse=
+t; max-width: unset; min-block-size: unset; min-height: unset; min-inline-s=
+ize: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; obj=
+ect-position: unset; object-view-box: unset; offset: unset; opacity: unset;=
+ order: unset; orphans: unset; outline: unset; outline-offset: unset; overf=
+low-anchor: unset; overflow-clip-margin: unset; overflow-wrap: unset; overf=
+low: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-be=
+havior-inline: unset; overscroll-behavior: unset; padding-block: unset; pad=
+ding: unset; padding-inline: unset; page: unset; page-orientation: unset; p=
+aint-order: unset; perspective: unset; perspective-origin: unset; pointer-e=
+vents: unset; position: unset; quotes: unset; r: unset; resize: unset; rota=
+te: unset; ruby-position: unset; rx: unset; ry: unset; scale: unset; scroll=
+-behavior: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-=
+margin-inline: unset; scroll-padding-block: unset; scroll-padding: unset; s=
+croll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: un=
+set; scroll-snap-type: unset; scroll-timeline: unset; scrollbar-gutter: uns=
+et; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset=
+; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; sto=
+p-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset=
+: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: =
+unset; stroke-opacity: unset; stroke-width: unset; tab-size: 4; table-layou=
+t: unset; text-align: unset; text-align-last: unset; text-anchor: unset; te=
+xt-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink=
+: unset; text-emphasis: unset; text-emphasis-position: unset; text-indent: =
+unset; text-overflow: unset; text-shadow: unset; text-size-adjust: unset; t=
+ext-transform: unset; text-underline-offset: unset; text-underline-position=
+: unset; white-space: unset; timeline-scope: unset; touch-action: unset; tr=
+ansform: unset; transform-box: unset; transform-origin: unset; transform-st=
+yle: unset; transition: unset; translate: unset; user-select: unset; vector=
+-effect: unset; vertical-align: unset; view-timeline: unset; view-transitio=
+n-name: unset; visibility: unset; border-spacing: unset; -webkit-box-align:=
+ unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; =
+-webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orie=
+nt: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-lin=
+e-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -=
+webkit-mask: unset; -webkit-mask-composite: unset; -webkit-print-color-adju=
+st: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webk=
+it-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-de=
+corations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-se=
+curity: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; -webki=
+t-user-modify: unset; widows: unset; width: unset; will-change: unset; word=
+-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; }
+  pre[data-language=3D"java"] > code { tab-size: 2; }
+  blockquote { border-left: 4px solid var(--accent); margin: 0px; padding: =
+0px 0px 0px 20px; }
+  hr { border-right: none; border-bottom: none; border-left: none; border-i=
+mage: initial; border-top: 1px solid rgb(var(--gray-light)); }
+  @media (width <=3D 720px) {
+  body { font-size: 18px; }
+  main { padding: 1em; }
+}
+  .sr-only { clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); white-s=
+pace: nowrap; border: 0px; width: 1px; height: 1px; margin: 0px; padding: 0=
+px; overflow: hidden; position: absolute !important; }
+  .anchor-link { opacity: 0; color: rgb(170, 170, 170); margin-left: 0.3em;=
+ text-decoration: none; transition: opacity 0.2s ease 0s; }
+  h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, h4:h=
+over .anchor-link, h5:hover .anchor-link, h6:hover .anchor-link { opacity: =
+1; }
+}
+
+@layer components;
+
+@layer utilities {
+  .collapse { visibility: collapse; }
+  .invisible { visibility: hidden; }
+  .visible { visibility: visible; }
+  .sr-only { clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-wi=
+dth: 0px; width: 1px; height: 1px; margin: -1px; padding: 0px; position: ab=
+solute; overflow: hidden; }
+  .absolute { position: absolute; }
+  .fixed { position: fixed; }
+  .relative { position: relative; }
+  .static { position: static; }
+  .top-24 { top: calc(var(--spacing)*24); }
+  .bottom-0 { bottom: calc(var(--spacing)*0); }
+  .left-0 { left: calc(var(--spacing)*0); }
+  .float-right { float: right; }
+  .container { width: 100%; }
+  @media (width >=3D 40rem) {
+  .container { max-width: 40rem; }
+}
+  @media (width >=3D 48rem) {
+  .container { max-width: 48rem; }
+}
+  @media (width >=3D 64rem) {
+  .container { max-width: 64rem; }
+}
+  @media (width >=3D 80rem) {
+  .container { max-width: 80rem; }
+}
+  @media (width >=3D 96rem) {
+  .container { max-width: 96rem; }
+}
+  .m-0 { margin: calc(var(--spacing)*0); }
+  .mx-auto { margin-inline: auto; }
+  .my-8 { margin-block: calc(var(--spacing)*8); }
+  .mt-0 { margin-top: calc(var(--spacing)*0); }
+  .mt-1 { margin-top: calc(var(--spacing)*1); }
+  .mt-4 { margin-top: calc(var(--spacing)*4); }
+  .mt-6 { margin-top: calc(var(--spacing)*6); }
+  .mb-0 { margin-bottom: calc(var(--spacing)*0); }
+  .mb-2 { margin-bottom: calc(var(--spacing)*2); }
+  .mb-4 { margin-bottom: calc(var(--spacing)*4); }
+  .ml-4 { margin-left: calc(var(--spacing)*4); }
+  .ml-5 { margin-left: calc(var(--spacing)*5); }
+  .block { display: block; }
+  .contents { display: contents; }
+  .flex { display: flex; }
+  .grid { display: grid; }
+  .hidden { display: none; }
+  .inline-block { display: inline-block; }
+  .inline-flex { display: inline-flex; }
+  .table { display: table; }
+  .h-64 { height: calc(var(--spacing)*64); }
+  .h-full { height: 100%; }
+  .min-h-\[200px\] { min-height: 200px; }
+  .w-\[900px\] { width: 900px; }
+  .w-full { width: 100%; }
+  .max-w-\[100\%\] { max-width: 100%; }
+  .max-w-\[calc\(100\%-2em\)\] { max-width: calc(100% - 2em); }
+  .flex-grow { flex-grow: 1; }
+  .border-collapse { border-collapse: collapse; }
+  .transform { transform: var(--tw-rotate-x)var(--tw-rotate-y)var(--tw-rota=
+te-z)var(--tw-skew-x)var(--tw-skew-y); }
+  .cursor-pointer { cursor: pointer; }
+  .list-none { list-style-type: none; }
+  .grid-cols-1 { grid-template-columns: repeat(1, minmax(0px, 1fr)); }
+  .flex-col { flex-direction: column; }
+  .items-center { align-items: center; }
+  .justify-between { justify-content: space-between; }
+  .justify-center { justify-content: center; }
+  .gap-1 { gap: calc(var(--spacing)*1); }
+  .gap-2 { gap: calc(var(--spacing)*2); }
+  .gap-4 { gap: calc(var(--spacing)*4); }
+  :where(.space-y-2 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-=
+block-start: calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse)); margin=
+-block-end: calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse))=
+); }
+  .overflow-hidden { overflow: hidden; }
+  .rounded { border-radius: 0.25rem; }
+  .rounded-full { border-radius: 3.40282e+38px; }
+  .rounded-lg { border-radius: var(--radius-lg); }
+  .rounded-md { border-radius: var(--radius-md); }
+  .border { border-style: var(--tw-border-style); border-width: 1px; }
+  .border-b-4 { border-bottom-style: var(--tw-border-style); border-bottom-=
+width: 4px; }
+  .border-gray-200 { border-color: var(--color-gray-200); }
+  .border-gray-300 { border-color: var(--color-gray-300); }
+  .border-transparent { border-color: rgba(0, 0, 0, 0); }
+  .bg-black\/90 { background-color: color-mix(in oklab,var(--color-black)90=
+%,transparent); }
+  .bg-blue-600 { background-color: var(--color-blue-600); }
+  .bg-gray-50 { background-color: var(--color-gray-50); }
+  .bg-gradient-to-r { --tw-gradient-position: to right in oklab; background=
+-image: linear-gradient(var(--tw-gradient-stops)); }
+  .from-gray-100 { --tw-gradient-from: var(--color-gray-100); --tw-gradient=
+-stops: var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gr=
+adient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-=
+gradient-to-position)); }
+  .to-gray-300 { --tw-gradient-to: var(--color-gray-300); --tw-gradient-sto=
+ps: var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradie=
+nt-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-grad=
+ient-to-position)); }
+  .object-cover { object-fit: cover; }
+  .object-top { object-position: center top; }
+  .p-0 { padding: calc(var(--spacing)*0); }
+  .p-2 { padding: calc(var(--spacing)*2); }
+  .p-4 { padding: calc(var(--spacing)*4); }
+  .p-6 { padding: calc(var(--spacing)*6); }
+  .px-2 { padding-inline: calc(var(--spacing)*2); }
+  .px-4 { padding-inline: calc(var(--spacing)*4); }
+  .py-1 { padding-block: calc(var(--spacing)*1); }
+  .py-2 { padding-block: calc(var(--spacing)*2); }
+  .py-4 { padding-block: calc(var(--spacing)*4); }
+  .py-8 { padding-block: calc(var(--spacing)*8); }
+  .pt-8 { padding-top: calc(var(--spacing)*8); }
+  .pb-24 { padding-bottom: calc(var(--spacing)*24); }
+  .text-center { text-align: center; }
+  .text-left { text-align: left; }
+  .text-right { text-align: right; }
+  .text-2xl { font-size: var(--text-2xl); line-height: var(--tw-leading,var=
+(--text-2xl--line-height)); }
+  .text-lg { font-size: var(--text-lg); line-height: var(--tw-leading,var(-=
+-text-lg--line-height)); }
+  .text-sm { font-size: var(--text-sm); line-height: var(--tw-leading,var(-=
+-text-sm--line-height)); }
+  .text-xs { font-size: var(--text-xs); line-height: var(--tw-leading,var(-=
+-text-xs--line-height)); }
+  .leading-none { --tw-leading: 1; line-height: 1; }
+  .font-bold { --tw-font-weight: var(--font-weight-bold); font-weight: var(=
+--font-weight-bold); }
+  .font-medium { --tw-font-weight: var(--font-weight-medium); font-weight: =
+var(--font-weight-medium); }
+  .font-semibold { --tw-font-weight: var(--font-weight-semibold); font-weig=
+ht: var(--font-weight-semibold); }
+  .text-blue-600 { color: var(--color-blue-600); }
+  .text-gray-100 { color: var(--color-gray-100); }
+  .text-gray-200 { color: var(--color-gray-200); }
+  .text-gray-600 { color: var(--color-gray-600); }
+  .text-gray-700 { color: var(--color-gray-700); }
+  .text-gray-800 { color: var(--color-gray-800); }
+  .text-white { color: var(--color-white); }
+  .lowercase { text-transform: lowercase; }
+  .uppercase { text-transform: uppercase; }
+  .no-underline { text-decoration-line: none; }
+  .shadow { --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px=
+ 2px -1px var(--tw-shadow-color,#0000001a); box-shadow: var(--tw-inset-shad=
+ow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-=
+shadow),var(--tw-shadow); }
+  .shadow-md { --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color,#0000001a)=
+,0 2px 4px -2px var(--tw-shadow-color,#0000001a); box-shadow: var(--tw-inse=
+t-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw=
+-ring-shadow),var(--tw-shadow); }
+  .ring { --tw-ring-shadow: var(--tw-ring-inset,)0 0 0 calc(1px + var(--tw-=
+ring-offset-width))var(--tw-ring-color,currentColor); box-shadow: var(--tw-=
+inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(=
+--tw-ring-shadow),var(--tw-shadow); }
+  .outline { outline-style: var(--tw-outline-style); outline-width: 1px; }
+  .blur { --tw-blur: blur(8px); filter: var(--tw-blur,)var(--tw-brightness,=
+)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-inver=
+t,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,); }
+  .grayscale { --tw-grayscale: grayscale(100%); filter: var(--tw-blur,)var(=
+--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate=
+,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,=
+); }
+  .filter { filter: var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)=
+var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate=
+,)var(--tw-sepia,)var(--tw-drop-shadow,); }
+  .transition { transition-property: color, background-color, border-color,=
+ outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --=
+tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translat=
+e, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter; transit=
+ion-timing-function: var(--tw-ease,var(--default-transition-timing-function=
+)); transition-duration: var(--tw-duration,var(--default-transition-duratio=
+n)); }
+  .duration-150 { --tw-duration: .15s; transition-duration: 0.15s; }
+  .ease-in-out { --tw-ease: var(--ease-in-out); transition-timing-function:=
+ var(--ease-in-out); }
+  .\[https\:\/\/sylvan-harmony-353705\.uc\.r\.appspot\.com\] { }
+  @media (hover: hover) {
+  .hover\:bg-blue-700:hover { background-color: var(--color-blue-700); }
+  .hover\:text-blue-200:hover { color: var(--color-blue-200); }
+  .hover\:underline:hover { text-decoration-line: underline; }
+}
+  .focus\:border-blue-500:focus { border-color: var(--color-blue-500); }
+  .focus\:ring-blue-500:focus { --tw-ring-color: var(--color-blue-500); }
+  @media (width >=3D 40rem) {
+  .sm\:w-auto { width: auto; }
+  .sm\:flex-row { flex-direction: row; }
+}
+  @media (width >=3D 48rem) {
+  .md\:flex { display: flex; }
+  .md\:w-2\/5 { width: 40%; }
+  .md\:max-w-\[50\%\] { max-width: 50%; }
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+}
+}
+
+:root { --accent: #2e86ab; --accent-dark: #000d8a; --black: 15,18,25; --gra=
+y: 96,115,159; --gray-light: 229,233,240; --gray-dark: 34,41,57; --gray-gra=
+dient: rgba(var(--gray-light),50%),#fff; --box-shadow: 0 2px 6px rgba(var(-=
+-gray),25%),0 8px 24px rgba(var(--gray),33%),0 16px 32px rgba(var(--gray),3=
+3%); }
+
+@property --tw-rotate-x { syntax: "*"; inherits: false; initial-value: rota=
+teX(0); }
+
+@property --tw-rotate-y { syntax: "*"; inherits: false; initial-value: rota=
+teY(0); }
+
+@property --tw-rotate-z { syntax: "*"; inherits: false; initial-value: rota=
+teZ(0); }
+
+@property --tw-skew-x { syntax: "*"; inherits: false; initial-value: skewX(=
+0); }
+
+@property --tw-skew-y { syntax: "*"; inherits: false; initial-value: skewY(=
+0); }
+
+@property --tw-space-y-reverse { syntax: "*"; inherits: false; initial-valu=
+e: 0; }
+
+@property --tw-border-style { syntax: "*"; inherits: false; initial-value: =
+solid; }
+
+@property --tw-gradient-position { syntax: "*"; inherits: false; }
+
+@property --tw-gradient-from { syntax: "<color>"; inherits: false; initial-=
+value: #0000; }
+
+@property --tw-gradient-via { syntax: "<color>"; inherits: false; initial-v=
+alue: #0000; }
+
+@property --tw-gradient-to { syntax: "<color>"; inherits: false; initial-va=
+lue: #0000; }
+
+@property --tw-gradient-stops { syntax: "*"; inherits: false; }
+
+@property --tw-gradient-via-stops { syntax: "*"; inherits: false; }
+
+@property --tw-gradient-from-position { syntax: "<length-percentage>"; inhe=
+rits: false; initial-value: 0%; }
+
+@property --tw-gradient-via-position { syntax: "<length-percentage>"; inher=
+its: false; initial-value: 50%; }
+
+@property --tw-gradient-to-position { syntax: "<length-percentage>"; inheri=
+ts: false; initial-value: 100%; }
+
+@property --tw-leading { syntax: "*"; inherits: false; }
+
+@property --tw-font-weight { syntax: "*"; inherits: false; }
+
+@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0=
+000; }
+
+@property --tw-shadow-color { syntax: "*"; inherits: false; }
+
+@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: =
+0 0 #0000; }
+
+@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }
+
+@property --tw-ring-color { syntax: "*"; inherits: false; }
+
+@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0=
+ 0 #0000; }
+
+@property --tw-inset-ring-color { syntax: "*"; inherits: false; }
+
+@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-va=
+lue: 0 0 #0000; }
+
+@property --tw-ring-inset { syntax: "*"; inherits: false; }
+
+@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; ini=
+tial-value: 0; }
+
+@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-va=
+lue: #fff; }
+
+@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-v=
+alue: 0 0 #0000; }
+
+@property --tw-outline-style { syntax: "*"; inherits: false; initial-value:=
+ solid; }
+
+@property --tw-blur { syntax: "*"; inherits: false; }
+
+@property --tw-brightness { syntax: "*"; inherits: false; }
+
+@property --tw-contrast { syntax: "*"; inherits: false; }
+
+@property --tw-grayscale { syntax: "*"; inherits: false; }
+
+@property --tw-hue-rotate { syntax: "*"; inherits: false; }
+
+@property --tw-invert { syntax: "*"; inherits: false; }
+
+@property --tw-opacity { syntax: "*"; inherits: false; }
+
+@property --tw-saturate { syntax: "*"; inherits: false; }
+
+@property --tw-sepia { syntax: "*"; inherits: false; }
+
+@property --tw-drop-shadow { syntax: "*"; inherits: false; }
+
+@property --tw-duration { syntax: "*"; inherits: false; }
+
+@property --tw-ease { syntax: "*"; inherits: false; }
+
+a[data-astro-cid-eimmu3lg] { display: inline-block; text-decoration: none; =
+}
+
+a[data-astro-cid-eimmu3lg].active { font-weight: bolder; text-decoration: u=
+nderline; }
+
+.animated-title-css[data-astro-cid-3ef6ksr2] { display: inline-block; verti=
+cal-align: bottom; font-family: "Courier New", Courier, monospace; overflow=
+: hidden; white-space: nowrap; width: 0px; border-right: 0.1em solid white;=
+ box-sizing: content-box; animation: typing calc(var(--char-count) * .1s) s=
+teps(var(--char-count),end) 1.5s forwards,blink-caret .75s step-end infinit=
+e; }
+
+@keyframes typing {=20
+  0% { width: 0px; }
+  100% { width: calc(var(--char-count) * 1ch); }
+}
+
+@keyframes blink-caret {=20
+  0%, 100% { border-color: transparent; }
+  50% { border-color: rgb(255, 255, 255); }
+}
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----
+Content-Type: image/webp
+Content-Transfer-Encoding: base64
+Content-Location: https://www.sohamkamani.com/_astro/banner.drawio.MzWUIqVE_TiS7i.webp
+
+UklGRoaEAABXRUJQVlA4WAoAAAAQAAAA6AMA9QEAQUxQSDEAAAABDzD/ERHCTNs2LX/QQ9BzckT/
+JyDjb3v5j//4j//4j//4j//4j//4j//4j//4700AAFZQOCAuhAAAsCUCnQEq6QP2AT5tNJVIJCKi
+IaSyO0iADYljbvKf0f/PlBAl/9ll6Sz/jPbJ/4MRD17jli+VkPkz/cf4Devdy/z/9y/cL++e+Fyj
+23e7vv/7F9nHgt2B5Wfnv67/zP8p/lP3S+aX+j/8v+m91n9Y/13/S/P/6Bf7B/cf+p/i/et/w/Vh
+/iv+f+Q/wN/rX+W/b/3Wf9j/4P8z+//y7/tH+z/Zv/W/IH/WP8//5va3/83sx/6D/u///3NP20//
+//X9uD91Phm/s3/V/dD2mP/h7AH//9QD/69av1S/r34++aL9R/uP9x/wn+w/t3/k9o/xj6F+3/3j
+9pf7R/4f9Z8nn0B5r+rv2Z9Vf499lfyP9x/zn/A/x/7U/d3+E/0X9m/ZP8u/av5C/5X+O9gX8X/l
+n+G/u37bf379yfd12Yu9/7v/feoL7VfSv9d/eP89/7P8x8Df0n/b/yvqd9hv9p/d/yG+wH+Z/1n/
+df4/97f8v/////9+f8T/yeMJ+G/5H7c/AD/Kv7T/1v79/n/2z+m3+o/8n+X/1/7q+3T9B/y//l/z
+f+v+Qz+Y/2D/pf4P8o/nM//fuJ/cz//+5d+x////3ZORr4c58rdawnzn9xKiMBKuVYfV9tn/KxEa
+fk1fcoT2xKyXUq3LLUcQSCer+yJZWu/+yt8hPbErJdSrcstRxBIJ6wr0XZMRWRpbLMccu+exEJ7Y
+lZLqVSpQsILGn1tzVauALE1RpkNiQzCDdNVKJLbfyE9sSsl1Ktyy1HEEkJqjtahHNgW1XKsPq+2z
+/lYiNPyavuUJ7YlZLqVSpQrhDL/vKKKlquVYfV9tn/KxEaD3onc7+sK2zUfigYqqtRRsvAPkvU0P
+6S8Ndv3clraGRDuDZEYs9qYzncjqa+nNbQtw1VXEO44PW59/3ywbhPIXu5lJj4Pxekop2uXcGvIC
+KCVsq61f0jTYEfEQlnZHmJBMtZEJwKXzUlPs5S7qVcWI16ub96CYVdLz2fEl96KDw+LhknR7L07K
+8HpcEI0+GNJifgrIetOONKZKTutT0O0mmso2IqjeXEgTqM6LEvuAq+SNtCWqQXzf+17m0qOQMjuH
+nKU2rEePJmBiY5POgjyJqv+YKg06WJADqbJiZZBiMvHFSeGmibQpUuBDMbeRgXFpXBzdw8HfzlwI
+jKr84AiVILPXIQsO6B+ZSYG3qVTdAMR0LSBthJ6Y4fqoodQ3QY9nhfAVL5xCDtdmOOLfUonEYtaK
+zNa2bibDbKX8qzD3vihJNrqVw1DTpPMyA/tqS2T2x0Zne31Y0LnBgLiQCOSuLUtFCtw+Z4IXtnr3
+qzDI4lb/9sEjT2c+KL15Bdo2dfAOm3PYhDzltzCX6+kTJ4ATe22xH7mLxW0xGr+ucH6Qc/9CREb+
+a8xhqn7ScVg7rpa7dC0F+4m+CUYC+XK88Cmg4YPQSJccM5w8wiXcXNjHh3IHwUSGlSph52/C18Xi
++8lCGXtR3kAkGCeSMD+K5R6LWpIXnxAV+U2y5XyiRDA5aVYnJUjgPInUWJrWLbSluMW/eak4FlrJ
+NF8qEdisoP+n8VcDiTMChPU6V7MNocTiF5M4MgZ/nbtjZACRHnJFmMHjedV/COFF9FyfpaBf8RJl
+Gby6lg1cCBlruH7laiGpFkPjsQ4m97P/yHIFonMiDfdEB1MhgrXndosM0Rvx2REKg2BWYzcA0h8d
+lTG0ylRdOfjNZJ/A1T4evkpjwRwZlLWWDIWLFbSrbn8aDCg+8I4sWZdBLFmysUgl4EAZSYQZnq68
+8kWkM14qTstfy+c1YQLrnVOXyLSxYOECTnJfdwK5xTwB5gZ7UqLDIdI+/euzAdfcdi/cS78Q9Y48
+DN8wwRW+KaFHzEfD0hqmYsltdGJcPo/R/7dM6St9MsPvbltdGJbg5pHyAxcPo/SPkBi4fR+dmzP3
+anp+7U9P3anp+7Uyh8xIE39hDfELMUbCMq0sT+ErsyrgjX8enGYFMpEOENqTndFHhiytAUWVoCiy
+tAUWVoCiys7JCzuIgZ53EQM87iIGeY2ydTVOxecCnR3jqfSSrVuKUMwLzA0TvWnwXPyBM001c+37
+0oHxRH/ykaEPiAxgyW5h4OElcu+YMIZ1dvRC9bFZOfGWpNEI0Q3+tY7y2unIjQ7JwXgBzP9xVwjl
+okHs1kkCPs835ZyZwIt4zztvmjFn4zMs/GZln4zMs/GChiwO+MoF32Zmk4wDTdJt42WaW9djDpHD
+XBruMcQ3wkmfIf9564VMfkvDuIpn18/ig2LnBXZvIzPk6rXqWVddwaAaEpmc4RKrB+x6fu1PT92p
+6fu1PROrtleij7tT0/dqen7tT0GyxveXXZHqNNVQ3fhQi6TqHTO+w+ytcFT422xw78IifVgZGZfz
+D9zmrsDvpD83RiVtik6VN11MlXGQ6beKqA/e9POkaEwvlSGXDEX5EMaxXuzAY2PWxf+pJ8R4A3jT
+kEwyzcyz8ZmWfjMhV3VcgMXD6P0j5AYuTTd0rxqalBvojHrHU5f7c3r9c6n3K0ENwuPy/zGnfqDn
+mZu/t3OU+I2U8dI+QGLh9HxCyJrkU+ZoffJ96EBVBbGVb0ICqC2Mq1TeUeZsZHvO8o8zYyPVN6U4
+QSTbCxaWfXL8gOBazP79jGq/uFHhiytAUWVNHy49Wm2sVT7xLg3Dd5mI7RFK4tr8hk4O6aR8gMXD
+6P0j1DrVfNMrKaygHlfZZCFpP/q6JlJrGFdMHbKAS2gxq2stdkIYtDDUup6GgpwdklYunjzvsFWV
+ko5GTlA9k3OwGC5TyYbmKNN+CVigMc1TkNbz1mSpwwunuY+BL2NnhSpWmnel5x73WNuTUe4Hm/6y
+1UiD++cRPs82o8cp1Pd8WJOHf5yNmXq1yTQbfmGU7Me7E6EHJDi0uVG6349IiezOOVUV9QenHv/5
+Pk8L3EhW22ZW+9KqpJB0HmFLrK10YlrV9NtrrDgUs1JhGAvSyvDRAcf/qBRoruQVGlhCtTYE5N9J
+KJbGdi57weBk0IJySn59Xajr+OVcD6cfEn1dqOuZu6kwUsdhO7ywBmfm0dN01kg5pLt/3aqVsHky
+N4/9oLlJ7Ljyv9t/T5ao3ivyj0qtullqkAiBxyOVoV5SJG+GACAKj8wxu8+eVLL2AkRPeakglFqq
+rrfwXFfEQ42i78/mBUQ+7w4ZOJ4HHpaIMDwA2cRTROvkeN0BrmumafnhNzYpe2aA8ajfuF8SlZWu
+jEuF/gc9TQuW9k1H8jLeQWazofWVxs88xQczXaD7tQif5edaauA/g6kpC4qH5ZnxgBbPfa6/waen
+7tAwSJLIZriN4szyR/TPSFO8saJD/53mWgQk/h2X+kfDkM9X85CDeRkzxoxI5aXn74AatiDO69Et
+xloMnVKVz2vEs/GZCanimMYQWxlW9CAqgtjKt6EBVBbGVb0ICqC2Mq1TelUFsZVvQgKoLYvT5Qy8
+3f1o0t2ig5DwTWUkwllOQr5IqkwY4bWKtAZa6fPNIZ4K5w2ZxkmDk7AiQv8Gk57f4uH5kNkpEteZ
+1lR4YsrQFFlaAosrQFFlaAosrQFFlaAosrLytka3Ftj5XO6krSIBAl+E57YMZcUJic261aNBsujg
+pF2+zVWf02GVOui2KD5QRK2uh794//qC2Mq3oQFUFsZVvQgKoLYyrehAVQWxlW9CAqgtjKt6EBVB
+bGVbyD/6roL+JZ+MxGn9Yp6RMI1GgXSJ1ydj0Hxlo6sqKHVG38NNjpsfTIvfOMLi5p93H9RtH5ij
+bb+pCbnBKftR+iEE650XDHSpQjbJZPqf7JkFE188xcVgt/gJv4mSZrLnkGqP0j5ATPJECkzd/9YN
+w9I7G6+gHl8L+TcBYcuabg0Btqr47K89Ol8ZdlJr3f8ysM0HKyZ/Oe6/RyhLgyjXcwzdvC94qO9P
+qGUzt9F3wZs4CsQDeyYuKqJJdWlFqZFYismMZjRj987B4sNentENDcPYsGrndsBu+S4+9bAoumyW
+k26Nwv+KvyBrXyWK3d3f/HtEZB+ertiYiSbt9XDTt4VfwJisQVVgVonT/Cq0pugTRx2LM0oeJjXV
+Zaj58FFXTwlyheozMf8id9rnKZCn/jli2Tv6g5zPX2DmK2wBkE997wdTyzTYLI8RfCr5orIFhDzY
+yVzVch6YUBU9y1vA5lU6kv0FOTf8LZadE8Cf5TPfYV6cMBhpPcjLQJbrWZXOwXXsFFT2uGbP0XFP
+RVY/sW+r77tAv9L5AxRUvb9HVit/GBvbgdwFH5YV5rVqHtY5gQ5fxgRSsiC3rZF+VKrLW8O62J83
+CTzfZeKwYRHVEielhiduLoYXewEKW7g49jTwHHqWi3RO4GgtzFdP2bcinz7OrD18HWM8A6baQaD8
+uwRt/UWwRSG19icDYF7QMvMMe/trfHJEvQD2/eL2HMABEm7LPBUhp6jC1xjczA5F74hN9VbQNzNZ
+XzbsA1ESyHh9bDL90RMKYy2toGjNEe7bccQQ349DP7TrQ9dl+NAQYDLwTaiY+gMdr16S8WoD7ofX
+2PAVljCIu3sagc7S4tJgssybcOVeJLHphFfxQMjr1DhvIuZ0+xVls9Kng3OFjQXwYHzRmDN0IbCI
+PPOo+yaIGHkn73I5FqZGtxbdkLP5s2qFefVDtPj+tW1R/Ow6prdcU8I6gb+PZ87jHicUXgSfWaUp
+58zQ++T70ICnM1363oP0kDyZVvQgKoLYyPed6VQWxlW9CAqgtjKpx/I2LwxZVbsSSEA1KnReLYW3
+Zw2rnpfrpUj29g/tA/ZCGLK9FH3rbwx5Zlo12PVxytDx0ejHJpimn71t1avLa3cRGhppf6R8ye04
+CBN9lBaiAqgtjKt6EBVBbGVb0ICqC2Mq3oQFUFsZVvQgKoLYyrehAVQWxlW9B0c5S754eZiys5df
+MSQLOy/zYYxyZmMeByycXERHls60dg/d1OHJ0E08Lh7Dy/1+FROhJn7JeWCj5SHN/9DQGKLSE9MD
+EOg6aY8PXPS8AhUT+H5tcCunoX/L0PQKZUP+2sNDKtaUVvrdalO2r6l4Tpwi5EdJIsTYyVtA2Iqq
+6J9ai5LhqgcPmGtLMxXh3Yml3t3bsKlOfSPiCuLxH1dmn5eZKDMW1Fo+myRFP5tyjbsIUdfwr0xZ
+TLngAgHV3Bj95Pm2uye3bdLA+pO6aoaBPBbElAod6PydG4i4P/5HDYXZW1rtG1dulDiC4ZFyYxwi
+7zIssC8o+a/vsGdsFzcwsZywkjDPcyVHEAEFZjOLFED5VW/1GFOVBOrck/nnujqAYuis9MNjSVe1
+0KyA/Z2XVl7LZa+zGaXo0DVW4vbyFn+6HdlrBKMgstOxYWzcgyoODQqcCOltcCIQQogGHzvCyhEn
+3mB4HR9TDfu9I6hAJHwZwVvs6mYe8xOW87c++jGRbb24PQuNtLIoO9mxmlwP1U4+0fn1A5aqsNyj
+FPJ/vAlJo93k/2T5MRvwwR4Su5vLtkmS3JhfuwX4yKz2xGra88v6AO/i7JFbHyhL2tAyoLKb1njo
+Q6l32kQrDBEk2jMwn+hTm0fHS1cQ/FsfocnRtjsF/JD5wJVvvAXogpL/Z/vpS9N+fjiuPR6Nfx3o
+zKERDstuMMjnz1eJRMkOM3LwywgovFlKwG9/9s6XPGAYW4Anc5aaulgLAaYApA9/sm4ugJCcIaxu
+qyytktro2UOrL/R/qYrFSIJyDcGIuYobuwNdOR11iTz4PR3GIR8Jdpq93mvw/ICYYLq9CN6TTxmh
+98n3oQFUFsZVvQgKoLYyrehAVQWxlW9CAqgtjKt6EBVBaJrDct8KPDFlaNgs/FFlnrmsO7qnpCub
+OoUqdWvXs27l6+gw4seTLnT6NKpVr17Nu5evoMOLHky50+jN4Ba9ezbuXr6DDix5MudPUlgUl4AA
+/qdBm5A89pdTt0MbnUdnOG3bxMTnP9bQtcwziHoLLMSwfW/Sr5IgAAAB5zoVJX10x+Jv71ju1v6x
+Jt4AAAoct1TFtRrzU5fgTEIDNLFGqU2OSl5KHe3rmwEBXkFbziQVIMJ606JH9VdDB/xqwD+SRkUt
+SVdMg9SogAMojD5+uBww3mLjLMRpxs+1hFfy3E+vyAofybGPPIXAkHG+GyFVlQPJXIZMkiIVhNRD
+IW+Fe59pw2n/S0bGrwRTBTuAl9s4Eu5AAAAAAAAQwO7hQLVwZQdnuz6LPtrRZDJ4KQAAEIdJ7mXB
+eimG+Tqop9Jpzzd4AC9Q0Ej9xP3pql00t5i+/2BRUzHJSjOLNf2qDQMd5aa8ED490PY8rmYtdxdC
+Y0aLvmJjiHsbvy5JCOJuBx/8NJyQu6b3x3efOB78Nwdj2SQxvHaklLxfuMpnyH3aW6FOwZaPI2x0
+80mvVWXixf4c4p1LPip7uTIHwioKNCKik+ZzvbZOTvKRCalmcH+F/ZoUjakOtsZ1eKzLd2BZdfPG
+KWA9rPeKYTPTgjEdP5L7JvsFZc7U2tz/hDGSgWtn2T5JuxLb0lc7QW65l14dO7zePQSKx2f/sP63
+V5Z8WMcw8Uy17OYpVQXvI9sLfInUAWGIk1iTGrJJ2RouAEr5aBTCt/2jH5OfkgR3wOkUwGJFhLD3
+H/mFVv3cWQkR4LKIiNWw+B/rLnOIEoctotK+qcnE9StBVQtcE1h8K7GKe6sbnOxMxMX1sqlNb/QE
+HqbuF1wQ6achZFZID3h26LjRdoeQNkS7adfjMAGedAr5yy3zQu95igrN+p/pg68mz5ooSOUOXa+T
+ljxYdEn38Go+IVZh+i01kr/S16HQv4LMKygUb4vzcGmj6+Tf2tUIqxf822b9SZ3B7GBFnKb4OJ46
+S7pX1qdSoZyyDAtktQFmJ3jDVqNgTfxSyIC1YvndZ6YInBIQ3nmGzsPOF5Y7klZky7Nw0MuTnkDP
+ibwpccv76IRRHsYXZYLqVySbIxvt86fWDoekBD8TykzoYA9aOdZ1L/Yp9BFeHf6yJRNJRxrnBgtN
+bMMkCVt7DaHpFhDSyv2NYIdX7kBIQINZAFOz1+mwReb/7qHzLHLXI6YZXblUZA8KXO9qm0bUx86M
+yVHlbw5NPQyR52v95NcoDsiSRjfcIklpWvml/4FT5eEsoeIMAar3R3smiMW6AcKK1zXQKYXzqZCV
+iBnuRI3vAR/Ei9bNGmY1OmtZw/fcc1ZK5duBRjP7mPcR9a5sgTZzMsXwFT0HUDUi2BMIY4j9WLsB
+n6BXWfXavM/Bkm9vj2u0VAkxmjeZ9Zc21o9ZwktMbPpoygeiV0Ux8AVaJkEFdYbmmS3bIniW2bcB
+wfir8TUn7MonuYmNOOqKMH5Nj/ETBFreyB+VYI/b1qJvo/YA3k3idOzhgQfqg1R02L2gyeLlXO7n
+TyfitOiAHLmRNUvAIDx3uOuJAZhZZfqhIn6PPOvFGJd0G6N5uS65hgORNyyKFbKdJa3uEF5XIaGA
+cVR5/V73/zHesYwNgl5Qg/8K4RTMgi3F2THYDJ/P91aNL/66KWlXVnhNL25SgMDb1mB/UzhX0NLG
+5ZRF++jyH0iOCJmcuWzz2gvmBfkgqyOEEqa3SgKZ+uug1nY3JPRp6Laccd7erptQzf34P5iMDuZq
+ouXYZ9htLgtbKeGfrA7F5he3pPlHQuBmuqt7xx/GmjIpBdK/CIy1tD5WaiLax1K17mqIxmUo10cl
+3lT2AdwZFG71I8W21j8Wr1/yp5qCNQmLcz8TuLvLlS4VMvYSZkGx49sBFcAvfdw6RloPNwSsmp+M
+419ru1O0mjVwgdt8sHF0Iyh5euyp4e/WL8mMwIJ5ZuEHzTNTBTDfqAtXqGUe2w4kVP6x86sA+aMO
+SKdN1V92DGoyaybDp88gQo2YuiNlrH0wTNHOSjAzDpFtD61p5M7lnML2V9ga8whGzxkEHjOrx2xe
+LTu9Ssn1V7JM62RdanthQxsRfyf4S69fjVIloINzT7Rz6jEdQ+mJhA3XJAfYRnE/i9NjZKTQE8bo
+AEfOv+Sh/z3UH5h5+/mfjxmZqiIFE1Q8csSqtcK9DCLdqExb9PIJOxgB+dNY2BR0Dmi9TNlrbG3X
++//9WIqwD1ltKzlR4+1dEU3IW22ACTsGbf1wKJ0+VtnZc8di60ZAR8Fv3mhPEzKvaJhkCN6TtpLq
+1aOee2BDpHOOKdt+UOZTqPdM1KczHlZ99PZSHqM4jS+tmikQ6mFs1EraRlxpnDk3+xD7+9WSeEzn
+o4Q/SGIYYB4n7Q2Lb2tghdjLdPrt3hviyACiY1M10Nk4ESwutq8qG4YeT6yiIT+YST8F9jJ7Qbi5
+PO4OIeqgw97ksr5Br0oYPAHyK1oLF9vYTgmQPlI6aAf921CbdrFpV2VNO01gB6I6jDtWYCAUoVOJ
+CY+LpUIxaCbICc7/29DIf/+uP0LRX7VQdcKqBvPzyNGHfb3T5V2mZi449qmUe9huESVFV72RD6GC
+PL2G5VoYFGiFEjSMt+gu4gZPkkaEL2tCefEkorIK4L2+gPyLAFP0XC7VeyoTLJR5Ibpi4BiGQ/kg
+0FKLa1TsVqlXF+SnNPxluepnAaeyfLYXVhZRbVe1QRY8BIMpcp7bGjRuxQfxtKZYDm5+lHvErtYZ
+d8vG5aKGOxcW1Y23KFI3UYWAoRlIECKJZZibGpJ3LlZsnkmR18LgGDyV4OnsZw7GyZcx6KFzJub5
+ntOcoXtAyTWJUcnJ9QlEH3+zJvUwPeJQbz2IdnKdwjdqxOKCiCCraJ9grOvDGPDzIVguRK1unGWa
+ErhT9VIQFlEclJqyiKcTfObFMDI3/t0owntxICb+yOBJKf9yCgrkc4xOhjPEgveeppD8xRltTSh/
+jQ4DG1wnZ59WXnhIc/LOTBsWY8CGb5J545x5F6yE4hepX/DLkFfqA8S2LcUklD3L7v/k0yzIO25h
+OhKHe4HLtD/O2dN22wAnFLPD0CgDOs6XGRuY5ObKwhn/bMJQyjtBFqTqab5D/oL4iKOrFjxXcsys
+WICbk44iuG2+bN7xA98iNLpFutCA6tNFCQc6kIs2iYgIMoa7atLiXhOBZkmxYr/i14GTApOeCprs
+ih9ubpB0ReM7gP8liD7GrCHrEfLim7cIAFGFHKfm7oT5oitvz/wYO37+7XrfAop+2QIvkTMjzjg4
+bJ6EbkNeU/McRM8ybB01LVo9cfNAq2+APPiFTeyiQJjB1yVKXTpIcXqrv1+WK+23wVwn0ptrYPN4
+npQ9Gw3G5d7g2f8MR2f56ljpI3N7wkDhBunPPDMFsxgHAU6AMjob3qxQhLLgO40Fw3u1XfNP7R9Y
+Pzxd2XxHN2CkP1MbesgIbKgYEK3b5pywsIIglC4tcflfwKqYWJSSkkXkJd4OvcEbaETEPGFrH0h7
++FcXEtcY5b4uxL8Hx+x24ZIPPS3hIJFdANeh0QID2AWzFIhyzejh1vmFhDeC8mQDHCDET5XlyIsG
+EM/WCJ2jPAI1Z5I2CAs/IgrmddmeeHF+ByIS1ghgQjq5sZjV+Ql+0NKiR/p6kNsSNif2czt+GWJz
+1vmSfSRW9K0vlVGz5HDg7TZLfP4F5877dGMQqxs2cscQv+UegeuBxv8g1BN8aIZNFDoYLEDTAmnP
+iXFbznc3l/+rlgAY3fY4jiYkiQT8MdyYoIv5Wvrm1Zk3Lf+LzTpo/u1PRIQTyOLMgoIQ+9IkH3ZI
+vIt3Y2V8FJklPpz2gqwdqRENCoIDgsY8+uageYQ/MD6rYRCRh2Wzl2YHNjKMAQ0IV7Tat5TU7b8i
+orB6CWCS0Q5BEzRAEMYObOpeYBPzN1VNnUE7vnToVnGb/ZqcoKyB8nwN6IUkVLOGr2wvVx3uUFkX
+lwwhnQW9iGprFX9GeK261Jjo08rpI2MdYnL1beWwa+0HyMBtmddJydZJyAPOPWd+S4VTd9LinMUO
+3qH6c1pD8NsHylnIgZEpPKbSwLKNN3+OaCkhfHDJ5KeyZVdbgUJWjaAftj52RYE8oPSQpUKqGDo8
+ZNSl9Qy6k4evh6TzXl7XPQIK9I4umScv28DNwv/h09kX6+aIX7H2yrmo8u0E8T0mc/Un8SCDh/8r
+59EyaTMANw4DpJX0CBROXjYu8GKAqJ+UGp0B37m3rLNMSt16IPaFGGztF6RsQFSOgAGh3/C3mjVE
+3FqiE2Ky7o+6/RbGdHa2l8TNDGe1AifLkKD76hYbMb5fGy9sYUkQD/bSx+XZ5Q88cPBXXritHh6U
+UfaQbvSeODmcGUGdCM1hwy5jSHcsMvPi+TUil+Q8v1ouWQ9LyXpAg2TU8pESZer6yltb44w87U52
+5wKI2KWQITIBWO4iETC23koFRMGWXQT6QmuLsDKU86GXDpMMLQixKRFpYEIwCK6zLTRD5EgQk3kq
++zL2ArAC/zJh+asaIKUhov7fJw9zWCPHafHuMfyXKUjQ3RTyfcZSjBveROn93ol708ycJpsrJwXA
+Ok81/QYDEO5LnOERZ7qo5XtlKX38Kwv7LMGupd7nlE9XSwKX7lGnyqs/Abw0KmYZVQga46OP+PWY
+OAoV7lwrT7WaRNBMdFPPoEyS0IJUVYvUzKM08IMG6ovuPeMvu4OqKiSmZuzAOXJrk31Lf/wtMcFB
+/Egq9nczPSRXYqJ4D6kXat9DFQBVHxQok0XQTZ9QlVFOYcssJS0HeSB6KPsEIZIn9r/DmXXlygIy
+NgaU/Fyqsy/+iECGe+EG453HFiuYcrcy1wSDrW/1d5+yV+QuzHlQjEmvP5nKAh+CLXLMYoTq/19Y
+RiJQSBcrvvOzJmDA2Fsa8BExY4mJ9flpLGLjfqWI6claLItwuZZLcaLt+Nf/7rfQns/EFFAvRYEE
+D+3k2vEbkahIxCL+ak0fvd9OlMxQjv2TliBq8JLujmyUDWQPVqW7GKEvZeaDqnb9wxEyAf5EYpP4
+GY1Efejd8NeNYRF4BZd6h7FkJ2uvfD25nR5zMOx/Y/qUO/S74Uvc4+Awojpbv4ypjQA1oqpyasXQ
+g9idVKzlpvzHAVAcTBrw/7BNztO33FAYxVHy5c6HS3lUaO3HXSs5qUQPcTSVDkIo28lGurMyEVVo
+8390jPXBNl4MFdk4uEWLb5XOiKzDrdpTYRo2Qh2M0vEfG5aZVCP+TZA8S+LczVO/6RbDXDj6+B+C
+AksQxMPgi9/ZJZ8aBOMqrD5MV1stFbwbl/1NBk9sYt/H8ekDSqnDsa8Rjzqqq+Vw0pxgjYzZibGq
+Xmm/DQa8X555SY3fmM6btDpxoJXOfEk7HUVoLilN6W2JItr2YWOdb7pcANC/AdptYwF3sLE5GnCq
+MRFmZ3QvqAFZuJR45o1dMdcxrMGVngc0+qHbeWclLX73cb1Oa0raVasJpGcYeK5GAx4y89uqMu3H
+BP9fG3ny42Jv/reQ3hdzXPbdjcE/ntzWZ0TpC/jbL2bEdcRxEFxgNX3DjSYoPqvgGCatJT6MV9Wy
+EutsInIO/+V09SB7x+6foH96V+gO3ODUSd1u80kVxQxFvMpSiv/2esgXb8dKoQEnjM5zQIfZR9ZL
+SiIXhFf6yTp9hW4HI2dAYK52q795a9KPS8nAerqOLg3ikSuDDVFtb1xel8tz343BuTXSOp2Ce5jl
+Yn5k+O3bQEIUjrx7JTxt99Hzgtn/cxwWty2ALZ7KOVZX92c8toHm3DkW4XR0sAOVhN0mKl1b8NGy
+HulIdgkPw9BLBjlKrr1Zt9rDlh+h3F6rh+WiJ9cv9SUZ/lBT3Ytz3xzspUBX8o/QWXwg2PFTNTZQ
+xy+JNODpcjmB/0QbYbTtO5hjj9yTZ0KIzj4em78pE8KhSrv85F9N34fvdo4MwCP2WGO0UQ6dexhb
+/LDdnfgw1XMae46Y5eI9L+S33eKtjOhkdEQz3qc7ohmZAREU4l09Nn0H7IyRwRP+cxqUAjatA7pr
+9uqzH1eRKKRK0uWftQ02W1y3Zw3dmemNB/AQamZPAiPhSxZ7L/9V+JFVyBmUow8lTmKWZdBo+xCj
+JmmMDlhDnRgzFs7pQLVelGFjMozT1mu9AalVVXtP7y8qjTXPGq6zFFfkRCIMePJDE4ZugpTsW0rt
+bag0VhdJbWU+kQ5GigJAjRWZcy7zoNx32ANqy26c2bvkBFH6/IQhXy089Q8n2Mu4p6m1CEXxZZct
+HGiSiERr2Wk8wNJWit6sl9nLOS02U/iSFbaFDcdlvbKRuewVr+rjOekN0PWgy5VmHe1fCyRugr+b
+p7NrrWfrlq32e3gsHYMSPeodmXuSxSggHkUAGDNjHdoMJmixAEvPnjOgUMrrmqXCT7tbc0nhTM0o
+NWM+MqzksWE2F8od/4z4ew2Q6XYxRdPR0kc/Cw7RfHHch8Ae9dwYQZmeGMBv/fR8ZSDJIjNNNRFK
+eocyvI7O+9DB5eiNgdbxUubsAL1dXy3OM54hxVt1GfO/XmVVQ8Rusza3I5QiVOFv2UndD5GQy+dM
+TX8g0WlXZxmnmEBYmqDc9FG9WP/4u4r+2+iutRlmeqxQON8iX4uCvH9S6fGFZalXlhkJdhClohsa
+MWRgyxomDN/f3gK78A9FjsnzRhqbP2GF/nRI077aG2snkg677rZ+/idRaBt7E9gNb9r3L8QtKY6p
+rO1IFeQN5+dyRKPmN1dyAZOrIcMq6e3sisw0lSSyGpQCGuexSN1Mk43P+ZwLoOUJLvin8UP2vxgk
+dRSlLwedWtuFnwYOwDwlnjPEBExLQbXzTBmYQ5AqmexISNVhy7DR42dRr37vJJm1ncZRLEZE4Tf2
+3c42GXQB6aGT4VcKMnt9SGDn+OXOJR8U82Xph2XDbg7MdwBxBF7WiL7Oc3WjgYQBB23PATIKHTI6
+bmNEIYOJVg8qqO4xwxZoN5QPU3y77GBy2nH88FZri3/T3Q+ZV86sH97NEnGcZhzogpDbKwgobeJG
+4c6Y7Jheehkp7fYR/fdvLWXbjz/cQnlegbBkPPP5NdYBrDX6YpM4cVEuobhHLL34e+ZTQDVvijpB
+RuIyF9czc+MhszZN4tpnyeT3oMjWI99x2bTmiB39xK6m5xjVU74KytIooSc17bIpqRF2vxX3i2du
+2mLMaCTeoHJEGuIn0cDPJWqGioZoDXJD/1T/Gh9RV6+xC9Pm4z/GdUC87EiaWYRUgR6dTTxgPtnQ
+E+inawh6/NhENPYCYrsXB86BaJHissCASUYHBHjkpx8ZPyC5yk8Yhvi5uxGkdSK/IQ3Y8LfKjGLA
+L4wK0L62Sd/0KAELaCJfp4SYra2K996CFgzhvfwJnSLOW/+gXSQR6D4Nok81vXs9gEVJJWriZKRe
+bKBZmID0Q3gOdGaGoYZZA2OR0i85eAetapG8c8EN7a3flrlS0ebgKKedfPFWVz+I8YPvUVNuiqzB
+vsyMfdvPVVteP0pgSa/ciG0K92Lz+h0v/RqxTyEXzTD3NyIIYSfyeUfxRMVKg/2Uubwq9xDUiEZq
+As6vBlgC82BO9lNVtmGqL2bSvlkK/eYMkaEGBOAIIbEFa3JqNFKNLsNBWivFCqMAsqnxPTARSa7x
+cUpTMbnUMNrg97rJt/ofJgGg6oNp4g/qUHx0sGBwr/aGfn/nm7lSR62XyIVOgcI/0qWcza+sO6vG
+prIbmT18beOOvfmywPfZM0xi3R4NWLa+I1AOlTj+xJB6jN9ZWINXxc2dAdwAfTcvCzp8ZYzegxuH
+lj1OMgHt25z93H12/e4tKz6UUWHFJxEDK9Q3F4FAAj6U01a9i/mF37UxsHy8NYq0o4WpQIs44z/l
+k1rKBCmqoArUXwvainzKkv8/DVkkAusUwK8lBud8tfMbAe/a1yRAtMg5Fd+9almE7f9eA2oO/rZq
+jnAukm+dwbaZY5Pe7J2ZPPk0dmuIQahXBIcIhd1k1IkvyT6qFPdFurLLVvgDMM4rp/el4LOf7l31
+ya4e1KID6wRjHpG+D0WkaHsci6iCv/nRT6zEkid/fnK4Ulbdu5KHBSYd05tZJhu6OcwVun/Y4iaZ
+ks4GlGMgxv2Lm7WxDnUuI2F+nV7wvgowomBPAHehirXq3j9+5n9ryYkNbO8iEAgixnOZgAcP2XHE
+rjjZV+nuAPeETuo7cBwfdmhuMyI2LWIoQ+4PJgNab5HHHiIPR3otqKjk1Cq+M02q5Rw47zRoW9mL
+RF7WyHJ4KeNy72l3hf5UYE/whn5qtHOmwkU4OLLn0g/JN0+S4zp+8Y8ElTt2cF/ZbNZq7gDAYHFz
+X21t/MgGXHVQuLJV8aPVqWbQx3I61r2ocrg1wlpfEroOe4M6JKFs7+fJGSomKlQf7KXN4Ve5DN/J
+J9ISNbHxvDVmlf98/Sno7umps6OliAq0f/Yxcap4Dm2laXphTDH7QZLahzov7GQfNtFwGn3NeQIs
+GUjZYVOGgQ3borN/YT+4+MOYrMY9X4bjZfQXD02026xX/T3I0Ct+vMC14fzKGxpLWUuEN7KiiFkS
+nA8tvA8p/t+QlDMmszy5BZu+U39Hwe5lMrW8H6kwg0ZTKvbbpQk9ogaQddaK9dV/2ywKMmmbWMhJ
+wB+mZs6BLooQFMBRcH6bhJSf0WE3U/XviAAAAAAKfrbLP38X593ZOHsn0eE3eoP8DJZgQKwt9ENn
+laONpythDRYNRk7KvrAnOEPep/OzZbD5F+k48T1T3ekUISKPDqrBUDKL8KyvY0uCT3YRlykpy5mV
+NU92awKVsBoGl8ZEaROFE6EnDEj9coBOfeEllik+q1Cj6IcFguHM4Ez4lI+VuE0Kl+CAtPll1HF1
+G0cSLOR2Iyj4aANkoXs/GGGfcWG2v7IsH8m2WchhPoJvwMkg+jfGskI8AFbq5W/qF255c/aJJPnV
+0gGyi/wy7vKEqY2Qt4dVGisIi92Ye80cp8i0VjIoAAAAAAADP8uCR+mwDq6urq6urq6vjKas/Q7y
+hkdrzgQ2ca4Ho6LpDx6/Cuhm13DrPVrmKoZjF9DjQ+446N6GRkBiJZvlcV79pgessWOV7cq/FT3I
+0vTaMPHjI10PY0TmANu+Z13kAbdfcCk78iYDwU0JiaKe7Ya/guyk9m7aaO19Zt6EdYfOc79TtezD
+GhNkwGJ0rjnEPxSD7jUokHOnJwbWslKRV9YgPFaAFvNOHcOyAJcxdc8skAk8J9DyjYnWTYajXqgw
+pwSSZ5SFlQ/9rY/KBJRaGWAhf12HytPciC8dt2N/ZbHAo+fDJNYnyWvBAsv1u/FmAxYp1dmDALBk
+3IysMMfOaTYNs7fQqvgtM/gh7o7/gHBT8FeN+ZR832XK49i/l39SneBMPBuOMTSatHHKhwSj32Qz
+MEKGRn4D7fxsMwseY9mA49W9g8CGvK2lolIeeECHTupYOJoFtzNw2nPAnl79S014zP+gmKfr4wq0
+z01bSJ/AIFhw2eJPya0RdhPTdhbuVvKAZ1m/MqRsIxALWHSh6fs6hZ9Q0YpDOnh2+y9C3+6P3762
+h00AhwRcOd7wD08kIj4GmXfaDYUc6rWz1ZatmlndWGDqC1cLMf1k43mTH9gk6mBYcuW3wJId9yzr
+1mp5UV0hUXj8Omxwg3vjyAam+71sw6lRiYbL8PylA3marNPjcNBYS0J6wzmlpYze5QTcpNA9EDry
+MMNUsJQy7Iv9y9mBGDtpfvCHQt98r7hIOFHY8qgJcEmm3aKImHPRs7Va71/JrOnv46hiA9SoIfD9
+aqZoYMqy/FIQOdici3c3F8OPqLLjS5+XgBQaYFbUXfcZC1eFsvB1YH0TwyAu7Xi1LKCgob10Yp3j
+ri4Jh3YxwXGWYgg1a6Y3+G5id1gOJ6JD2ZaeH4TEhD2vITwvfjNcRkYXKDE1VRna4E8AJI3h6KTV
+Qmn9toWNonyZAv4Sx9ldtpOa8OYaPQBiRWt3ItVsNnEQNnL95o2JHVfUTsWnnooqBGueVsVAxzAq
+UUOYtAfRm7NrjOFa6Fk6X08JNxb7Sfzhxdi8n+dvQIDVoh18cLL4eOZKDfyThyHRGE2w8g6yO9XM
+7q6urq6urq6usMJ6nMt78AAAAz8XPm851aLRg2DX6TUw7Et4LrXOewkCvU130yKfEprs2PLf6K0V
+UgUlDGQigXkVLS51HaZ5MNty8Za8WaTpV9Ek5zHJhHejsjxj2QelLocgiP0tnXqfim3YLiuQQPLv
+snDqRobZPQyWCgRpO9SrJGexeRyWFyjbHtnEL4vGibV9JTX2RNP//sWt1ssxvYwQ1sYoRvt9g6qQ
+n22dnU+T3rjvaU5UzWyY5iYMde0CG/S8RuHAG0q54ezdE14hL6AZWCh2lksFtfede1NYBfBM+jtu
+wDTvyKfjFKWS3crSGMlSKeTJdWvlfkBzup1vUTCeGQsRfEGAlGR8a3s6Q9It5u7I9bl5f3r4WGx9
+b2QL4LA7YSE3iZ7IVbiRnMt/NVqlLBQCAVrBRwJoo1cgxDUiQ9tbY+Oq2MTtY6Z2bpVCM4prBXZF
+98xnmGBmHBgfz0/RMHPURfLEeSVn+gK+fwtblDnJh52bmNP6pHn9XraAsZ9i3m6hKc2/01dA+D57
+PvlOK2Ec00iVEu+QRTjtwqaNXI+F/HdaYRa6r2DD+Yh7EBS9zEyA7lGRcTe9xJG+CVWEMPlVtRbz
+umMdjn4s+Sm20BXU4rFpA1OEjkFzYvdsqJDOsHNribNsJOx00tUWq7ttSOdH5t1/PwAAA6tZQxh0
+i2mRUGlH/eyzIZpR/3ssyGaUfMqyGSxZabqA6q/2zUXiXcEh/SXblFfQDCI4vcyoqcaQxr22BvKj
+INrulNhI5dhT4jH9g3gRTcxxN+9cCFFO6jMzP/6YAXnoG8ArF7nsO6wYzKP1Az8VJSvHgesrpyre
+b8x/I1S9hhSXlTzb1h4fpTNYvBxNnhT3B5HKjXU42RXGNO2R00IxOuv+I7KRUbwkNCdvBflr26TS
+DgmkRCxzDcvaL/uZsvUdLq+x7wFEBBUd5Hh30xk2PEwF4qEe/Dbs3wHwgBmltjnpR4M/pFmm52c0
+KkHXgOHmI+WUw5o7sQcj1+7IAO8NOi/3fUwphBBfwE2YGChjMGBCM4V7L+fEutJSD9Dmd2UW40h5
+agOPqZCO2gzn/x0T4CvCB7IqSXpgr33OoM0hb9jjjvh/Feq/JWTx7SSB4IMUT7Y3q9MopRh/Wf22
+w66Qh3qizrrFUtssDJTFGvLvbeYpapcvvLjPimuNg/hya4OJINAm1o3++MWPLnVMblMTtDBDKz12
+p60Drwb8HaI9JaRVeRzlY7y+JeaJzeZJdbiuM3uN86HNDsLXSiTMiG38en4QcqjqnfolieZ8TJma
+U77CXD0b4+qkyc6MToxv3HHu2XlWfJ70nRnTOquDhMG/9lf1pBb9aU5Ploek5lhTUwjiGhyN5Awy
+DXJsJHLrwCvBpHlI0tePXRInSwS6+qTGId7MsQ1FtUQAzyUunZddniyWRrFBf7oMzry5j+Jgv4Jw
++P+jn3/g9X7FIqTrMut1KN94WPSvQA3CZdmxxzxcJS3nEGUKxbcZABWxk6x2e5j9hxO2X7nhmdTA
+Q1QcArcF9yAaUmPR2CQUIgvBQw5pbwwiI0EtIOtx6kSGjaRPd15ZMhmAuFdcbt29AOAYMZ90xcVM
+H9TJBgGExdC7MFFVA/CLiYOvlcP/+oJl//hyZsl5etUm0wn5lFbJoQGCqL7L2hZ5PJkHRDk3BX07
+rhilvwS6SiC7KQTbslKW2OsyGaUf97LMhmlH6l5dKcqoDTzQU1uf8YvYaeSBGN4jRnd5pUPTks0P
+uEanFilmToDwkaokKujQe1LSltNe9/ndbwNOHuIBbTjm+Qfqu8YOavdp9PRh8aJIrkBOYQkb/u6B
+gB0ZnMDFAXBysTYBaeaqE3lGlwHKpJuheRWGYpr06diQ6KbY1ngTrcGxwTkX18Fq9OxHrPvvORGK
+UpGIjWiXBjkl+63MT3Wu5n11DYcFDhXY0+tZYF701nxfttARv7VNBRvIK5eGl8AQV6zfAojp/NKM
+ovPXA4Fn4XIavjWKVZQ3oleXNYIbj8bsSCbyFHgKkT7lcynqT28tkU/va/ic/wyRrf8YvYaeaCms
+4uZVS0Gc09ADwxe8P7xsDst0OxvFUoB35jDk7vfodLV9uL7cX24vtxfbi+3F9uL7sHiyvFleLK8W
+V46vQ6WtWZXjq3BHpcgaKEgLIMU4afp1w4UDd4Efi2xCSpxPpAPYlfKp7FT5vp8UIub00snsUJfp
+q9y4qnUykvjWrgJHkvh2N/iIpK45W/ONlAuZosmwTinuM30AAACJQHKhu9tk2TIuGTyvToIKp21j
+T53/cD6cDlyLeSYprgLlmUtU4FNFHzOfs9TBsyunkFJzQN0Sv/pxKWchkPqimf50sQNuQB2dq6O6
+fhRPPhJkCXq/Nr089l+kNqsgEXmujWvo3u/3LSj4niCLvze5ro+/Bdxg3MX+5hP4/PFxUVEmKCfb
+aAoLX0Yp+RcfeqTMiZryuCrKs/TmeYS/zukUY1ww2pqDZsZmuH1OdcTtQWm0MMRE0y+Hdu+Rye97
+6a3HFtul5rjjsNSDPUplv/l3WQUOljG3XKv0m8po+/2fqaaqEP6fnRcaYjiTGDqjA75AAOOGTdeE
+GU9N8ulbk71dzOEMsCUR35RS5eohHyCUzXUUMHpO4yDVxczbfjtU6/Tj+xyc/4Qor1i39gwc0Zux
+kd8xlBFLL54rRpUDS2SCo2wh23qS48SOBGp2ye1719fx23jruuIYSQM5lXtbhPW9LpiKwoB6QucN
+E1hiZ41gJTSRClMLaUCDSmaRvhyWGFuQvw38aS0Tr83GWqbnZEvyeWKffo+BrHQReXdjHFFxUFms
+KlRYq/vY3xLU/Jz9vFk1UCwfl0hKaeHgHCE+hxCAZmTrT7jOmLd+mMXuqnWhcGm2OHUA9fSsQhMW
+SaTD5yPsLNTaVhrgOFtRCe4CC2WubKWJi0rRyPZmeVZUIi/pfqeff/rodDSXOsepF6EyVEqBo266
+WVDUs2VjakIoLy3E+YWkD9WDHFbrEGbz6NIc9pTcm0WDiIbsURa2DPe83hg/HX7/EAvvn7f1uK7D
+D3S0jwtYGAYB+taKeovRS5Ghzwi2FFv5CINbEUyLMXCYRQB/g2Ec07vqeZQD8zU00Qk9hrzhii7z
+/lpk4kDbVMCO49AwARuLKglHRJwBzoE9axg8QMwTiOqPZNTh0BhgoDm3ktATkjBmeygzvtVv4UIR
+P8uRz+YixvZK9dnOAot9MMZy5V/qchyMiFqvlirkmEzgLrKTRw82lsaHETsXZct544Srmsw2XrJO
+zsS55+OWgRnghzzIqKOrL8VxmP8MSoD/QBvciu90aHbjqwUsH3Yqq/AjBL6z61b5PicezrLFIhQW
+kI0TXdfpqFZ/bFjmxsoPxzhotKxiTnrhRIvzOmFTgtuBGaXwIBxU01LV9CvbD09nvsS2odDlTA0K
+6x15GvRFbi0KdqKCP/LEDYDq6Xnlt2DJIPcuQOj/72ZncLr/C6nQophxhyAOpLeaA6Fl6C5apz01
+Lm6jzVE/lDKn9xm7n6pJ1224ebVzC5sqa3z6rzkJg8d3ygKqPPbc2nHri9VI3Xj7MSV/D2SSyMkD
+nWRTgL4nd2m8hHyPn/rvwE89uXktJqScm1uU6s1UMj0YKj1lUrQMj7ke+2cqLzL+fO0XVWnGUV4t
+mGjwtC16XcwmkdBWw8K/2S5yxVWPn1eSF7RlBmGlmM3m+86TTRSjlLkAK3ZX3fP9oCVpqn8TNixp
+YiwE25htxzr1h3RzhTURffEyCYDJt89ShIeAgjwd4dt4rhsDs+4n7Phlm9Mkeevt9YgU22SDqvo5
+MqVIcS7Q2IW8S5r4CHrwK0vmKU+fJkwrPDtMW5beOrCZvjGTp4KaVEqf1/7bLHxdCLLOXJhzJP6h
+UkcPwDMJyvnAXinbH9zAiI9/0rmfImtCb+h5sHN7zk8CLXbXhJU00ucyXWuv3IzzaGqwvD43nbgJ
+tk7EAmLHAjq23HzwPixbcyCbwbe0DpCRmI2U7/w5PKsLwudk/0StIrlVPeVR/HywoRzZswx5uZtu
+RSFP2L8kib9jK2ffiHl6d00MM4SRUY+ble7Cf/RmFQFq/6XQiaKxd/ijfhAtD9YLQLzolbcVdE7r
+JIsudWdlS4ymo9agZMunTE+6jzThSF/vpN6QdFKdb0FAiMHU5gqYfLuN7aNV1QZ1xBHN+9OnX614
+kQFG0mQKmXtb7DInGmYSCI+SxQDjG17eHMlhOxNv5Ls08q7F73gBZEWNJOmZse/ZmAYYsn7uUP8d
+1HDMI6MyG2q491e/vVyMh1PQKEu2X3k+Bd4l6eODk371s+3hi+3MzxA7YMg3wGsPaIlAMFPo677d
+E02Ic6hLcVMr3rI/l6enlMql3/MXBDhVEq7dIeIf0rBPZTUEKmX6SkHVPeIDsTcFovhGLYCJroqP
+Jo/Kz5zBxuyiR4iRKJAc7j369okLLCrOf/P3T8snkontE9MmIEuslgIzGXKY2qF0qHBMIpprvpxw
+Nvg1ae3xLexHwHj8Nnl7MModYli5sfII6Q7CWp236SYuHMADqmZHBz7Cpfy3TlQHKx24MHGwzvco
+S5KHp0Vk2VxgeD7ANr5sC7Fml66TsTy4TpnB1n+pf2laLFiKCisRDZ2LJgnOzP7CIwS4nm2RUM0P
+Gw2qsP2jBDHNmPb/QpPCCSthmYMqjfENqNTYC2jCruE68zYOOqa4cJMy6OzJMKVPBzROsf6TYXTJ
+JEDwx/UFRLYEjsD4OdLIsF8Q3B9/nZpexkdg5tL9F/GJHieRbvsD+YNhiPTuPDloGBGNPSuZWlka
+MW1bqT88eeeWPT8B6Esyb0aQUj5opRqgBFdWo85p+ukI7tl9nKGCjTPOeJCywzZXbSJLC+NfWVtF
+ePjYMFqb/lbMjjlWR3Z5hbCr/jxBdH8Z3aaDYZmdJo8g7d6mi7RnGNz/1+2eXmETfabPUAOIzCUs
+V3eaJr7n/7SaHsrVuy6PPLuN3la0Y+ustePR0cHtIhWVOeYel36un7cp+csae6kva52lxk8YiRNJ
+kCG2H4xNvUzmy3Ohogp30g0Q1O+7YSb/sxo1f6Se4p2cVG2hI+mLaZU2pClLm32QkoVAF5aWk5Rk
+DlDlRkLXQB+AbMHRUiijQQ2rRsnUz/cd4auexcfXlEkrLPu5/Er3spgTOyQDTkCP1VDfqv2wkHvz
+5VHF0Fbj7buRIpdZXWZ83QCpUdwZp47yaIHhZkqFoGxzi9suenFprQ3G9tGubW29Nh2VsbdiFDWb
+mJOE1140XqJYsQA0NWlLwSadatqu8pvLwcVbPW7lxIzfzAZ8RFmK5dBtXiLkuYe281EZsKgNzvzh
+vLhCRtM6+XQS4OIf4K67GwqzgezeeCcfS9Z+YR/J4PB5WBRcV9uuAlCUxy5BacLKJmqPY+BTrqhy
+oT/E1qeRXsTFS4Ky8jZABXE6wroEmRafq7hTrgyavIt3zzkNvVd20QscZUC3GDQibh29H+ywIz3T
+gC9MWYn/fRNgPy2+H/xC6Ynp4bAeR/CGacXfP8nDtLUiKjVWGAzl6M4SLYPU8YQxCmvf6DbmVK6E
+Yq8tP/En3Z2e8TsI817aX0UOqMpBZwt6HqTC+/pF4jMbHZuBkEZqEGEkrjY/rgsw0HPGvrlIbZt4
+0Foz55stcakRxj798iGa4rk3MXZI7D4dRHE5HGMTWW6YH154XJSyevOecjULihAK+J0Hl1A0bo9e
+CNVHhVk2ayttS2cuNeQwdSZT2KljHIUU56ZcuGxoofoYHYXCAqwdwgf+rdKMZow4LzmyAaa0cF50
+FXUP+oRAktJggpYUZutnLMARmQ0WV8Oo27ytXOsRR0C8lLu1tL/Pg2jy6EwxAZAwPJ/6m/EV67DH
+iom8QG73hpm3J1YEcTIkqHViFv8/axSkbenXLVkmai099Q0JHEF3k4E0vi02qiSPNoHz9h7BE6Qq
+smPGFdpgt5Ltbcnbng9omrN8AHppsWfuAgiwh17USAAAAVPda6PulOkq+rPRcBp3tc7QytOP2oqw
+3k6g5ljdVmI9nlRaDs7ajwJ1Z8trRGajdmxnEVbUFRCiJdzSOeGgQNn7m9mHz1q/LtONU80nzDLX
+hsP2x3TBq8ZBYxegw1tnSidLe5ZD56UgGvLApWhehKcHus5+NEyiEB8vEnwBGSllJaOjgEZMy9CE
+TjP4UrArCSyM7oeP9JVYPBmNkpmPOXCVRI0AmBhU3EyYucN3jn0B2e1pWS8uWprNFfnEp1nX6w55
+q3lJOQxoplAEqg9OeCN1GCN1/SRIICZlUcKV7mQtqtASwZ/gBlq/wOzI5U+DASNi6HlO/F6aWTxm
+3gbYFoDHvL39BJYE3x3QchDPWBEYjFTbDON5NzwcrfD++DF1Uw+/UK6mN23+l3+ZHEJa20g+lNKV
+5O/KkWbxXrvnwYe4WzbQBXghXcoAZlGlp4O5MCYR3W7D0Zl5fxudQuCJHSJ+s2cLDQK4AT4EiSF0
+mbr4kGr1XzMGpXSo2vB/vJ4AmKHP2zmIrQLoYRrlWH4AQ/P8gLIRFwT+IRBLt35OFY/NYWRTP8sC
+TsFUjz/DLwC83P5mteMbnYg2IYo//vsfBtBED4XIajZtRMEYceJiN0/KyTTMROx+vA1Q53BjyMso
+jnsrK3GHpre0ltWbILTrYC1FCKOsx6zxffSNG38BbVuxVUro5WyEdXohb3xja9IGf1N4uu/J9r1v
+efnn+psP7bsdWP7AfRtQKEqqED12v/wVmiPnBMoBqakNVznMw8Q2jjCIIms1Rg4g+2q2qXV6tfHX
+FHfqaq459rNnN8YJRPzEskIJWphhWR79tqAHTud2ysscWSJvPyX+0yAh0P8odlsNZv3h9KaVjWTw
+0RVCDT4+J6kdbZBHpSAO6rE+NdRrjVz5F1sEyGQAY60Dyy1mK9DPx+TNnTJ96VwFkGN5e+4XeQon
+vvaaLqr4ink1TJXFGKL8WQVGAzifpneT0KZo/1DiHLSIJxeZGFUMgqURA6upkyTJwzMHcpMKMQdP
+G7HceigpGZBH5ZV9feQH5ReHryfuDkFhZakhxtl62soF3FA4Fq/3uCrWQkigoba8yK27arLG3aU0
+1TxRVzUtPoDPu+RNzE0LsqaFcw9Nhf2JEkSAc8DrOxRpUeh/6rHlTk59w3mxeJUjdXxuM6abh7MH
+Eakphl23VpRF5JICd5FNRRlL5KCF9wv/xzOPREThAmkq7WuahjwXkrF4URZ/n0U5cOuJgqkiROwa
+neRb2eMhlNbzkTGTchzOALrzQgL5ubRdxt30XoNt1r0qAMhgfb70mYBkBh6geYT+Xiuj22ZqRYaa
+lh1omaoGp5SeS5cip1J6VxTiRyudqg4lHvfoMxbWWIgbNvIM/5pz7YSzxqtILiEnNuLhbtWGkXor
+F8PqL/a09Q17hHtRsjm9Oy87yd0NcVktQzL37OicG07S19aKcyAjeFGWQuPryImByFFKIIVsW8Ok
+WzSe1Z6CwI5zXel9enXuzq1ZburbVuBzJRSJBOLY0rXumPrfvZ1XWix0W0rnLBiXqZfsB2jcBHYW
+V78CremvRbRYoW/b4lNbPCFUxGPgEaODAUP/JmYIhbjrYb+HrIL58PwHkKYxRr3/G7EaIzKe1UCy
+zUECGIE9w61znors5QNX3X7I6JuPgNi8vJ6papf27/iQ0YMX126omQMGZyNgg2gb4TfrDwlID7kE
+VBB2jF6+YUVLqVebFbvr+Hfl0UxryLjqwks/N8IRHeJYyCga5ASIkI3+xoJylChQ/itfNoY6DCzR
+q/MwClKt+XGcb0/3PuqfoP/SFVHk8O53MpwLlliCyqTYUtPfqonWQqLtQxfg5JtwgtOFUJ/wRPPt
+i03mr/5PQ7+kAhMGSw6w1mKanBhw+acFeaCd8kJLc8QPf3bq6JslRbZIe/I7UI4hStnNJLttBlVu
+Mwyca9IBGbRO4DSBfaIyNblkhZhrBWdog69rfGTeTAEEnEPczkuub4amk2f2lmsLmaHiA6r78fk0
+DreXTYxNmtCXxpMKtqYFrRCCfJmDQMsFl++3ST/DMtAIzo3l8m++1mHboVw+z+q2FXG7i+3YevX4
+C1uWAg5Bi5rYkc0snStKB3lfYiqBAcQxz22Gg4gd3VSu+uPbzMENj5oXYZAbgj14lRJv6nraVknx
+1v/JyUvqW2kH405IAEotr9pOHCTzEEF2u3ZPkiG5XXe757u5N7IArBgxsfSRRFYtgAaXbfQcwd8V
+K8xi2r3iozjjBSHku9zKu+Dqz7IgwXWCF56AjFONa5uD+WclWOYrOxaqjn3TSHev9qv0LxqgLsTD
+Zekju4acFHWu5fG0x6PPtVNMrKG877g9W2g8ZFlIVvlPHe44eGzdyzPG7/5S36r0xJzVlbwWMYQf
+CswUKyZga8nucV+URoDbNGtr2BxvbCL7SWM4xtwLVaW5GEhXJzkOqjELwYYjmuR+/d7dOHBeLxK4
+6Nh1bSsU6Eyw4eoIEUEN1XFO/RnRnhsJBdE+czQZaWpHSzsaA4gqnzmAmc13FMm/0fM9VrQXOhov
+bDll6a5BaI0mLJjpI7KE/ndEC3DPxH7Er9gIOV5OlCJYn9Z84Q7tMJl+fMEbc1zfa1/+yXWhtcC9
+8bnRhsVAFjFlYnxyJWvtMgT5f7YZCZnFaMiT0BX5Yxb0b5HbWnQ2xLXAlaGcai34lysYHMbz+lkn
+KTiiPqBcnC5LfyRSFo1hLpea/jCBEUHRdKHRHJhdrVntJg5HVFABsjSgnb8RCJ6TxIPBfLQanhzJ
+utCHXgPTNCOughPtluMMfWo+lqr9+V+LCWtH38Pbxnue75pwj430+rwf9tf5Zv4R2uzMoT4StDiO
+t9ISsDb1YX5skFQDCbMfL5Y9LDzy75FpzHutH7SU+6KuKp0NnSCYnpNpA/uUb6mC5LqSxIZTjwjf
+95dzsC9Kqp86cbASEpi1hYWZDNKP1QfNDAAAAAAAAADYQTdDSOFzcruEvS1E6XlEvL7SaSJ8Poj1
+G6ky7+d4+uEMjgsPrtgo22pEIRshhg40NR6jP/pVvcAACNee+t6N2mlxhNY16+CLs1VgPx7+ZpR9
+KdtC4GCQk40HX7wKu6JKLVxrIvQWT9Tmj4SOorwUdalFMysTUChrv6ENbj0DORSokh869FAwYgJJ
+hDjmSaxkfdHMDtPTyzfS2JENxNTYo/2MQpEtYCJ95RRvCiyfpiPqIv3hU8jDfmHnrNTxAbBUlhB1
+WQoRMqhg0AyNIrpoUyNw5wNKKYlUdrE3rDSXC7ZGRV3KpAQmPyHQAQszX5vXST1Yia7rcrIvaAfA
+7Mq7tuGhfw01desuTSO2/qgAAe4P0uFMAUb20K62ASSoU2tFR36IHQz9XlUvf1yNTL4cSHT2q2uH
+V9Y2nTLC75e9/NKPPDVf84PSHB1DAc+o5jrCA6OCL7ocomGjTHGZdPv6KUJhmNZ3zKkC69wKHogp
+v+mQ6axJxeVIz0+yPpW24Q5FdHlgHwm5wGJCj6Rjf19Xn2zvFntVpIIsuwM1P3enH/BskmXRtqV8
+F2h/rUEEHwgZBZLYsNi4gAx0H0RYnpEEIGD2Sa8Ik39iEF38fkcc06Nn+S2qxZDUa1JmAQKh3La/
+KdCg/u59B4Y6s8aQyiojIyMYLd47p4K7QePK0RZxkBvoQFn4kpb2MYT7GQjgT/Y/7oX6FbxNFLVm
+nR82HLz2gX9rg19cHSLsP1OCCHnX8B5fFLLMvzOkSO/il/+BBh5O1s9GJOMnHGsA89fMAiBxoWcD
+SRKTynQNGHuCdm2eoEYSoxdkfJStrXALG4NehXNhcRZOGk24I78jO8u2G5TY88Zxy1FkGygMMnDC
+8GHVeH2Qs2CoYnIM5tn6Hvh3Jkzj+ZkBt70ixlrWUXkSRB7n85x4OAAAAAAAAAAABAoteKRx6dAM
+AbubpPpmctyaFWszeCyeuaUlZr3iegVQnQy/HyzfeO/7NU3ms8NewZiJovp7uQlZyShdpEByR/NZ
+oWEehvDiF9THvsLNNh8DvyQL0xF4/lBF7lC8rotg7jXi4ygGISyYTY6QsGDUQhl6OYT78WVXkYgN
+MRN8bpT2gO8ST7FGwgrbEbdNZuMtt3Pxa9EjpoZiUdDKICcNlzwqvZ8xttKPvSgJsUNnr4Q0MTMB
+GnvWVnGiOnVZKMYJjFfffSACD3+DjgqdqEpKGGHcfsG1Za1JJ266xi3xP5dVLqE5bgSHDqZWnTeq
+n8LM7IL5V0O+edZ5JDSgj0YK/gLKqkC9YvwDtkInJ4fqVmbiStg6egaOUTjAc0nho0LnUBpUm3yG
+z8Hs6bxmmYP+ZLTz7khBD0T5ELnaOyQR7w6U21PpUfgG03GbMNn4SZEuL7e4qB+kQMBswN8e30H3
+aMPY1FmPazEjPcEMGw/uASm47s6AQkpMr3jtnC7nLQ2pSz5nw9AS72pdhStFAjD267ZT54dWdjTA
+AAAAAv55clD3CLL6xc70TUUKqXHPd/8/p3lMv8Mk+QzJFtZ36fUcSdiIp0CXNKoJJOuqP82H3S1a
+TdNmSvF4gI/k2CHCwttAp8vOGMQe1iMS1soCEP5yXKB9UzBrniN8rYpy8umamFuf7InetCI0xg7P
+w2eQwOUZ+rnkGj4W0MfiJDMoX5Ibqc6WTsmA0M/OJkQWHCcN52gAJ59gvz2+QubTp4eCs7EGpKFk
+0rUAXsIsVnsl07+fMva3eujpXX5IaL1HhSLF7JISqanrzJhI8sV9Q7Stow2EujYfheKbEFMrsym8
+uWCHHtpPqCqsjbH424g3jEadFMWxcMN3Ry0cTawM6UPJYir5g5Wd5YsI2OiOFMbmp12CyWe/+OYO
+rCgrv9um7A2Y9AL8xa0ySUT2Dii5kfXlizv7DIeMVv/q2ivRbG509OUdOeLVUyOcpCWFBxhb7+zg
+93973dJTVIkSptNvrAfSu09blKaEkMA3q0RDjXLNkll4cukHh0ujKFXlRD90OYBX8NyPd+wJExI/
+0/9FDo6LHPbASw8VyIgJNT4S3KHMvlEQqWN/qNHrLpG3TpgagV24c6r4DgkvK7U+fyp+rNL4oupn
+ajTaQMDJxej2KARpXuDKafODkxs2Ck2tkc1z9i2/1CB5aRAGwsJNWU+r02R5wD2j2CiXyKfsUtfq
+FU/cShbv/LseAR3pAbr/hUqhAIdFmziqQNa3X+B5MP7Djfgh2geKl50Y06+LusuThmUGDXL852bT
+sPxVF4+COQfos19hFaCMIlOkHjJ3aBPDksHhkl3UePRLIEhpJwCPLCXjgGlZqpIJxyOcugtTQreq
+z21w99YLfkxuFNed6UOoUlZrdPnBVqBP2B7SyOQQYt+DsYyGaDjPB9/4Gzk/HlFRxzjiQ6alhDtS
+vWZtzc2xR1Lq71PDM18D10qM4bqjhIky8BD1pRCv15tkCxKlBsegFbnwmoAf7qHPOLf70YaQuFCY
+uLUxf8PzSnF/M58RHvZnfO/SC690hHk3tGHfCn53+12yC1U/BSxfJ1xiCNxZgAWi++nFIUy07WIA
+of7QquKOIViHzvp0GMlyKQIZZf+mkeSKxxoVECJMjaq4vhxixjA6kb/1WqBUIohlJwOc9OdqMXnZ
+XTc3Jsy3Rlr6tAABe97ozj+xz5nntue7IeN6BdHbJ0f/QI4UCvVmQe3+RRgC0GccTPH4MO1d9NXf
+JodAAHd+q6Y344L9PKuTTaQdWY5NSV8/AfNY4FggKsbdu3c1vpHYo4CerQoJYHmXpc4uNu18jShG
+KKvefGydYK0kAAbXhEDLCMkCeRjHNMs0FmlGcu7N2+hNqKqWreDbvJCsHaInZhnNTPDAvHk2Nt5X
+Bavffio/jiwfAreo4D40yoTq0g+b/5oygnQFtkeGv08aikp4hZyrPxARUdOXveqfqat2IoXsN7ku
+24h3kg6XUXYBqKbsXOFF2bePqtjUrvS7SgGoj7AaCOEhc9HLG0hZ66rDFXnc8vwDTXIO5GGjfbSC
+MT/ATAnobWpBhddYSuj5Hu9hWjzufbYaRyiPRtO/75EAa1x+dqHs2fosvS/V0PbO/tWlwS8sS6yL
+PgsUj5YC3R8P/gmy8FR53SEIR9TSUoY12z9m6/Wu7OlNfZXbkdMMmnxKCmrYuKH60Y1oTu023I+m
+J9cXR8Nd219R63+HV+jsFbe4cTJ0gsnu8xAjnVbDVUnX5qwG+mzaDTIWcNO6Kwd/H8M04ChBeWS5
+vmxEihhRgNE2oxW9wte4NOqiJKuqg4vVvs/NIu5xXcnOX09n0sF79otJAn1Um1ogCsYlkxF9i2pb
+8gJa5ov+7HSFWT4/jpnlYa7gsApw0sAKi76zqA62pa/cff6d8EWc5qPkJ1zBQKcHy+h7LjahN8rx
+tPKmCSqUe4z50N1gEuhDDlibxgasOSjNtX18D0EctcI6ziThcOLBz4kGiWkmgGlJVTmgyMajRmM1
+D5+zmNjtO6qRJlCRrEv5ik90r4m/Y6h4uBk3vkT/Lo5ODkbavIq1oE92O8oGX5iJdS5+RYGlFvdu
+k7IcVRLRs8oq78qM+U39LMO+FZVn9CDKTkFYI3RVePHZ56zj3MIlg/OwMuoMS9rXeNRXoa/eVAuO
+Vei30/iVabsdUpeypvKNEE44zN8U2DpYLHWhyzGPjgSZV5/cJnkAOYO1q8nnBsriLiyoVQWpl3Ka
+nzX+QMp8PfevsXJblifnXATW5mJiV7xEsabF7Cmd+KpBhWXTPgZieh/UgFs1c+wRSvJhJmOdoAC4
+gU3E/rFiXA7m/H+ShBonx3+9PuiDy7bYtW7pumdk762N9wiLZw6i4lQQMoMEpv24V/pDHGbRLjcg
+tolMGSZJTWk2W8lxBn9HPub7GMvr2dVU5kTvmRNlAqCCH6qEPooqOKdFExBQrO8w/Y4rdMmvPRP1
+9lLXg4SIA5Vbf1a5BB8FtG1+IZadbriiyVcplcfD6nH5JuJG5TRhi9LfblnyflSgGPp2WXZoX12x
+5DmlKWI79WRm6G/wTzEbzt7vya7cqphMu4Zroc+ILoLim2UPCuoftcu13gnSoPJ5+8fMwKxyI9u+
+2LetB87lNWT9z2a5/LqSwgoduSzhYhaakGlhDTaVcOHC2p1D/ev54zhPAuuccevhlbSyHnCG4np2
+Ue7ePeH51yQkFYX79JefrLgAlf79k8ze8mf2gBQ0Xx0IXwlmzZ02SZSDJ6sObdDDfISDqSk12asH
+xtmI5xUWN3Z0oYtpQgSp/sIsE7b4Uz+GLt7NM6kfkynpX+uy7ULn2q3yjrGXnOHtIGcFsRiINgtr
+urQYj1+RY/zO29TknG1zazpSIAR52rzs6PEHK7LZVuzOlX+PCl6lWb7bZ9UwQl+3CztmF9W2JWLs
+u1j7ITo1Vohd2fEpPSl84GQYwMwKipwNI6FGAGHYsF3QykeHJwIOEifJtTFlo6Gt3lPAhF7b/smS
+4S8cKmJOj7Z3fCFAlTLS+OM0Pv48rP/xPydlRmGDh9t+BHifFJ8nNpVXOOtxK+JZczqGJ54MPYwO
+ejwFOaF2y7BZ4x5iU1e4+II2YoUGu1xJPdLhzCLuIERgOPJW7xCUsu78PVGAMJ/k1to3cj+IKdYj
+yRic6742O+crmSWnT2mDebo6dGmfVVY7pzwKmryZUN0F6Lc1PMkgd/VlYbZHj4PqVgjY3lLEu/zH
+/XRVvPlsPkCVN46bCY1oLFOrODkWRdVtZoLu02gq2KLTejrLa7XAHbDHtRvI78SVIDqt+c7BM7Cj
+LVaiKIRtStygNxb0LKhUemC5Yn4IscB3/u1gOx3d7flZ1HAo8OibhGccb/NEiq7kFv0jhrFMkP2u
+1vZQuyXHtfzmHvjpe0ULJys9WAsUvv+MGCP8rCoaWzPgkZL+kutme9beVEcXdMWtxzMMQCrcHemr
+Q+vD3Y5qjEjlSoBBISsfx8Wu9p4p3ZzCh2KwbjBjmsJoGjvmgKEMSNgrWKZ+ujS/GLXndC/8kMWx
+dRb0DCejsPX8oqMS+HPo6r77fcqA1+y/L+FBzYfHO+7VhotuRoeW/L4M2QMZgDQ9YC6RCYK29ukZ
+zguMlqt9rkaMtL+n7mw9x4JJnvqfjsRtFYSAZtNC+WK5ewv8+y9bjlwy6Pq2qxD1GrP6VMoATfn1
+ldee46sd1T9cZjwjHH1236i/CPNCswe8XGqqG4zyCpl1VBtF5VEGUBtQB6NBwffgyo7uTPAyxhxR
+9nIPZSQmfpB7rS7rnYd78KCmniwsW/jdkTgL5QLBp69PLifH/XIFLz7O0LW+wBT0wV9k6lXhXKTZ
+RNAsX6C0CPnDRHOM0Uo8AhTDyriSprKxqsMrOzYH46+kAxpVgINs+6R3u7hKG+eKgO/wXmIOb57q
+gqL+OOZsV9XXY3j2RXgOtA8YDRE99gKYWRddRdk6pn78qP8eUbHzoqJlg2pg38Me1srLfl66y+9w
+Zg2BY8jfW86TG6dmwVCekDVwkJjo+MTzTeu9trTXK+cURqj1gkRmAMXrbtSWdW6yik/vOgSVOwWO
+NiVJzbtrDWyXJrwt6wTeyoAuedXitHe1igHmJNHPJ66p9LsILjg/rnMOOt6w4yfj5cND8d/vaoWy
+wtR+i2M3BsjuTqP8g8FCRrtq/AMlkQXvO62cS8nXPW4YmzaflVzrEaTdZYDBRUaNiBklo76zz4tG
+m4a+Fgeu8VZk2QZENrtHKqiXuYcOjLQP4eUSy7613U539gqWy4VcLvwNiUMmUi0SWvEnX8E/Dfsu
+hvEHxLw/YkqJIJuvh4nrKmQ18G1QDP5Ph2MOneH+rPmDzXhvRyvfymlD66zbWfdNiFrr5K/yta5J
+6y5TrYbGugDO45s1OwAVn7tEv6ifLmxSjsx5jFN6VD0+M0jHtfK+HA8fn0sEIFC+u77vIJnx8PI8
+S49Py02RbuJQz8Zk9KiBrHWTb7jUWGuQMoUb8TrUSJBRNoYb58ACRm14CaeCZ22JYAVKFGo7/ueH
+ig0mo5xX6y2PHHVNaFj5YTumWWgABs4OliUnAWKAZosS5lXJPOoPRhQQfhBwCzNxBAYpxf/x0hms
+L4abB+uBT8kGknI38kfIXenJPyuRO5aihuZFQ8bFXVyT1RYdkQcLTbqy34vgMl85j5UBA2cQhrSp
+KjHPbJrhUlOat3C9uJxBbvPQSTyacVI7tghSOzZ6YPcEcXBL9Xa4fx6mMfddI6/LHl/w8WLUnvTv
+hqHfifK5AHfGYvp7DqUZ7+Iwf+/HZFpZokkjFMxxRH4oFyqa+FYy/ykIg6VMjdGbp/NBVf9shLEe
+6pXQZ/M2Mjjcla2DlDSuxnEqeQxQLhRKaV1bF0+XrY3FMOY57suc5tudBlFZCqNS3c4Hu4Z0n4bJ
+88VFN5I0PXfTdyD3U08ZMax4k+5I6jTRi5+JB8eOtmHT6pgv3fS6ZUli5rB68f7SoXLIlmZnrAqB
+GqtYkJe2nEaaYa7fUpPOU44btoNEgWCyaOpZx/LWlhYK4o9kA0G26qy/XmVgMu3v8/ox6ZPWzAHd
+I90JA1vO0TT6ef7+Pgq92duZS1FbBZBpxVEuB+QhBCTt4vUlaryeo0Buh6jxKGHngSwKcZ+hlhyR
+gGmxLF4RWbCQKyz0dnPCjI80BRxT6lik+RqbSa6Ed/nCqW+I9rcHqWa+66QZBOo9xaraPAey6v91
++pUo2iOvaQSPJfyd70s5pFS3OP1aCszr+HPbGmtnvYAhr2FdTJL3TILiTVXiPeBQpuhNxi9QtHtv
+LjG2HENyAy9pS/xQshcfc+/OGXFUj3LU9a7wYjnwrLz41W2GzDo+SiS896ubw7EHxgQlbzHLUjCU
+dd8R5T5O0ecfLCjNERmJjwcgdYqesKXujjY0oM7JVB02FEsM6tdEBAb4pblBn4wLH+B3dop1hQv4
+sBDLxhxEZ0ZMbeRkDs/nb2pX6hAJBT9/9utagdOetac+FdhvZknTcWG6zwmhLJbkQGLfgLTEl7rI
+SEpv1D2GEOSOGO4FmMWhAqM+tc20xbMP8gGAf8qAKjWC1wsWouzNczUDTyY0oCGSJO57yttC5FUx
+UqcIpttpGf/+InNNLDjrBfoNN+yMCjBNAqHGwDEHBJeWHpvkQEbOSwRwV+KUen2Btmt5qdvR/pqe
+kEnuwVV6hhqA5lLS9G8PmxOWbBpNvLJHmcBIsqnzWtg+SkYDns0jLtBEtatothBZhboZNuyt7xN5
+OmzmCh/iIVP7wHNRR3wzJDdo7aakEu2FFtg7qv43AkpAWF4cUWqUq+hxLaakLB+1BJtiE31daIL/
+1hv6IQgR3IQxdjgQiO1gtnRi09q77KWdCJ/L3n9vL6Pzv8V0j2wUa/9a5oj4PMZirSbJCtgVwnJx
+C0mwoIx5fi8YENBlfXzWS5VDXJxnoWdk1w6zdV3/CK5BpRwmPkJe9d3GrPhKyb/2rBpkqQmEId7b
+jXVxmXF1H7o08wdjT5cnwEPEf8uPBP4PI28rVbjepLemvzIL47pagFJXLNjluRy8ahhAAjQqIEbC
+4CYknYaDepoHQlolu8F9exb1ey9gZxSjw0A4FHHiTOxSFWqEvou/XSYQJh9/cTQIW9x3ENJLtyA5
+8VKNZj/BhTKZXr60+tX+fVmtfDPm4/lnpGM1shl5LIpws7TWnSlTJamsimVgXGxjDUFslVPZ895h
+1eeWToYXD8vhAWHVKUf39CerZrhgwJrZ19Tv0N+u8MvWjOPI9zIBhAGVY7Yljg2zZNGDzARbblbq
+gJzCfhL0h1kQplX2zR6zRLWj2kMtHbFocTB4iO9Bs4yPcENdvoOf8e1DV022+/pxSirB37/rYwS7
+13kT4lMF6iSef66NT0d8i3VBIJnQ8WPZ4r5nnqBwRQDaJ8J6OB/tM6nusOd/rIcTG3tyatbw0gM4
+eHluuZc9aXDZtgXRKUY74JyV5vaLAf/0FH2C/twmkvCf44eE47AJPrJolCCLXvsHFXb9t7RCYQgh
+aaYy43tdLd9bjF5862GZqEdbqJMWOIghzPz+AnHokwtIBLM3pdieR33ULqM/dqKdWGkIslqLsq9M
+y0u3jjEAm6Jnja3aDtPGL4y4BD0yKv5WiKx2VlQXswnwjwQZD/LnLRAtQpF+O3dAAA/DmS3tsmMU
+3rHYZMB5tfE9R6mWKRsbnXU+zguUPtxyeGpdhL3pQBEf2cwrw7SDfPvWIyDNjR5FRp+pMtyAwt2p
+Cd7tBXHaHxpDpGgx7sLOkQFoex0fPjHCPc20RAz4oFeyQ0sEMcOcqqcc2JQQX25Dt3d52Q/8Cllv
+cesGGubGdKsCWxYBiRjoBsRZFMzEgV8c8elnL4/i9rqJ5NImruuEhjPupem7ecmLrUo1s01oTPQv
+Oq/PKZt+9CsjIoH9xPlq4N1b0r6MGvQVqaH7odrq3VcpGwuPDE+Pt0JyxR6LQ4Uae/crJB/Yx/V0
+FwXAwMUGFQBvyRNtpe+6McX+UepSAxg6nRXnTxFacm+0lH3XicBKBxRjCMXrZIiLER93rXqi+7aZ
+jrwiar2y0icTJUVh+IrSmqHTbxpvx1aFyv92S7Yf3nb0qBEFqB5KsfenoLhY0zJzJ1x/jk9GXtU7
+EauRwFYR7QbkRd2gdtfT9B0qtrSTKioqUVcRNT1gzt9JMn8CBCruE4+I+EtKo+FS++zK64fJr3BG
+ysKfXrSY1BkvVp0J1RTEtUAiaNG6ARBTe2n6fP2hFRhuhFO3zmCk5vCj3ViaNed5gsqHr7gLahqc
++LzT5CG1BAUfk6YYTGM4JpJM0tTJBP/36ZKS8h8SjJLqFJASiJpdijODj86ZckZLoVn2kaXp1GnQ
+48rEJk1l/oJl7g8EPAncA5voH50dabCl/1vHNHOB2V2YzJXzeJcpxUd+seYGHCaIdDlZtzmnOv8K
+Y2HHwuAN79tyJ22anWiqyKp4MhQhBNh3B5DmmVlppnFLNvJwMWKsDHRrowoMwuANJvYxzYsgOFKt
+3/RfI7A1fJ4tg0NF/ERj8Rupn95TK7w50uIyd3fUXZTnrIkT12/b3gnK7owb5QSpAgSzGAl+z5L8
+9R2vaCGOb3IPuyws53jQfFtTtFin2A/7HIZG7xwT1AuI5uSockB9cLhLLKWDwLQznbPkjM+o6iBS
+hDQRs1sRvMT4/nLgHssEiQh2RHCTQJ21kPjFBi6i2bRpOMXOB5UEuZmVb3HtVfYCBh1TdXNqiyMA
+9oKw9i6gIO6A47VMS/+YLHEb7WhV75Io+GBrqDPPPMqBL/hWSsUy0dWYlCHpK6vJ8ZGCbUAgYgyh
+HcFg+t2rKglzXK060KLl7+VByVZBDl8ZzF8F9NSCxv7RhSey4PW+y69PIL4z2c90/qTLD5LpOQzB
+aCkSL3155Xi0fOgcuyVmLs3Svf3VJGbJIIPys7whbfx3lPc60jvwJEricXysh+G0+r0s/zWW1WcQ
+uHoXpC+Wc+NUAolzANHUuDxj3fzx8N9Pb2JA49BQvhOMC7Z6wbQEgTmc8H8UEt2L3IQmN1brWge0
+EBLrsbjB7xhWt0CEcyqTYLIU2DJNDEzHRkLxNu5dhugtO/MOAQviNYkbNE6886VxLYbGnPkw2Wgx
+C/ahIGv7xpFO3LFNlSE+pxTVHMisY9vxwInaRtKBKdCD3fGVjFHHM55kWHLoiyJFHhadFkGWeuYJ
+ssEUCTTZP5ZlekwB2YaWG3VKahwVwPpO20ixVxmhUeKc3zoYufaucg/c0Npt3x0QPuWwuTKzZWmf
+e3zDG6lhqcJVCM8r3etykE2o5cFWaRUb45wct3eUMlaEQIiDV2jkdbLSCzFO0IXalgvfeV7uFLLK
+ardR+X/fkD//c93+pOAwEh4+HHaX7oyPaqwEpJrgV4wRjPlvxnQmlKy5F8Rb5NIFJJ+aDxNpsy5X
+zQeLRLQyNu/GoPX5vIrf0R01mS51BS5dEr9zWhljoH6NuaPWnAjwefMPFT5F/3C4ZMjkuvtFULEZ
+jgoW33ikLcx14W7gJpDqvnqaG+1LNr/Rq07hJ3uD2FNyqVWF4m9nkWLLlrWH+qC5HRhnvhJlBNut
+9QHinRdVgS8YMbI5aM1SYTdVrjtH9BdNQH7xEAPxfsj9SDSk03pC0+2dLVbCOTgveHeXtMxWnRM/
+/okV9RG7Vx9oBxXzRmUOUxrB4UVcmojsIZRSxhli+j4s5jkM1UvC6Zu1OsT7yBPZd73cHRYs/Yh4
+1OiPK5vAGn1v5S8S5pxGKsbW+A82cRSY0GlGfzDb5end1/qJQY1i/KMZoXZBkKUnZQymUoKLuhZs
+VVGb5MUDLYgk+dwA4JfO73WlO9q0kH5wGXEtPMlDz5uYg91jad1rFYctJVy8+6QORdGIA9G9MzAd
+so4GxJi8VliQfUAME9l34AXB3TCTgZ3cFqOEa6dsUofkkwwx/tHw+xm/AT6KBD3axYEQKWr4NNPG
+RIQIOakv7l/2FtC60GDieBzrWzEuJ1nvLFy/Dxaq0PKFf/Kzu1cs64xSJBZHXxD8mVEKa4chxa9j
+PjQu5MtlD+70cJtIgNu/xd9LjNPg127UNQbAR0QS0WHcamYE91QrhLoky4E4FfQpRHTlwOlptEk6
+gXG8Gb0EyqkjW7zlX7Zy0E24XqRgpNCf4lYFAI+7Ifo4Nwx4v/FN6Xl7e1/IxvGy7WjNDKftvapF
+9sv8OgZtOcFKFiKICVZwYopf7ZIiJhySPg7vsXzzioMp1Iha1I1yvzAGh5KX03EKyWmYI3tSet9l
+7l4TK/hDv11bwCyjXb/eoxNfVZIY4P/SnzeKs6I60I73cveX23zIB/8rJ89bgqk2f0lVIgwMXi+K
+qBz+Bz5C2Ug7MOv6i3OE3KUIzFBd+wb1rQdhJI05uKG+XnuB+5DvHHAcBnB5imWXRS4T83Psv0J8
+VpKUi7kfeum+Dg4xHm8G4wqA2HF75nB8mUGBJSDqycr5F3x7mMIZG46A+2tu703Kno1N5N1Db8WU
+UQ2QnXfdLwbCqY9ziM4rbtYuxTAQQ/F0aOJR0WJswL49L26Xk8gJSPTdMAzmT9Hv5PkAQ8PBxHFR
+EYDV6D2FUfFvvQNaEVEmqivkYc5pu47UgGNl33U6toBwEaS/BF1YjdEz40FR+DYbWwBV8D9uXCMB
+IYUxHxaJpmMA3a7xdXe6ihAcDBf5KAJSSz+aF9qnu8e0yhSPv/8YT8RDByR9I/hRKhKsAAAAM87L
+5mgybNW12sHZk3l/rVSbVGYcLcMVF/6xeGB2me4hgCbwtqYZTjK0ARHKU/wZLmkiFwyYHvEuseY/
+t69T07H7fsw//8P4sCxwZaEqbS+06+JDmUUIAABJmZUS62ur39WmLww91/fsoRlTQWXIcmIVtanU
+R9eMGyBVkOqmYomcIcMAAAAAIT8+Gf+72t+iQLMq5DMM1hdZgNdJ4K7GrvyIouy3GitRLJJYhigB
+EMUaXl+f7irZ8sLvV8i98cr0JbMZ8DBQQ8PR3koSPK0xJfBJK5Z/7SYDxyti5s5jwjoLQYhU1az8
+LtWPTFCYfQA2DltRjIo/UTEn/HTb0GRql+4AjiJZmiY6eqz9M0lS++VUtZ2sU1AHmALRET1bjytu
+VUZpxOkg0ptfj/4oVxXeuSlYsMAAAAAiYNgPuNE2XH6HQRxAbwACPb2GB0CrFMy5Mgdc14M7wdwo
+XZ6YTsxqFUdP4vNJm1maUH0XalBoOkaQH/3QYi1S3Ye4WWsCtAQ1nWyAJ5jEt/bzbnttxWmjee8S
+LGYPN9dpZQNIarpX/lkSMBqPMrkGfLlzcB8qFq+MMgDhpoukx5iiZNj9I5FhBtfBgjKtBTLt5+vh
+F3/8aq2FM7oL+TVWxlA/Lhl6lA/F4Ta9k1RRGCFX9uBvCqLQmGZxLxLNIkqnJSeUcSXoUBngf6M0
+7FLoN/EygTMT8xgIgMTvd/Asj3DfA76R02hxMgmeiWFe1PHB1DdhYoJ+OZN/oORr8cg5zJu/DtKI
+gvlnnPglB/P8bey6bdRCJZgDvkBli1BvKMg9lrvqH4dTuUTkYw+MPLD4w+MPCjhkKTuWnPJ+nMx4
+mj8CMJv2iPVrNYCmlYLVhyHKJWlEDpISBSkWZc57WeEczCgB4jSY4dvI3pOhRmoC5mB9C2whTjs5
+rduOzp/TvkewM6wBK4aYYOHx+v/P29OK8/k6b4pPDVyWMQa53eJgVhmu/SG3qS5nDk+9g+rB84Lh
+JdpV6iuEu3BxAHp6UlU43MulaF9RFX5TczwUpoWWgkc3dta82Wtxztu2f2ToaOKYSSDXE6QdyDwE
+yNo7Ln/lj4z8kqGSXh643TiiezN4lwVOLcBTzCKMIotYDDaOwAIzVEwAl6n2xyTcQol/k7dv7AXa
+anN5rGa1/xW5CgMKCKQSlwaevumhaFlWFz+6QEHsrPOXb4aFvo7B5OydJ8gA8cML1yNq7NRLHQcG
+93psIW6rTvNsuB62bP5fxOUy/eX/ISQVlFBfAsAzs9envK6Hw9lxzVM1o8OmaLIQF0O3xt70G5BE
+cHVIwSXVdk09IWK+H77uYL+WM+qrwAx5/M7Raiza+3AHzrpJ4odfulkBXqSyEGzsfWZ085a4zYlE
+K28fEsewvKfgEdK/VfMqCWqvyhWCEbJ467GSYt3ETIS/VmBx3dDdgDlI5kowj6Sf/K7HOeT2Did9
+CDUTp2Utf9pqSNjn19Pc3h7XtGqX3cUiac99BEfo2cMgA/cBZftmlKG277WZCL6S+DR3NaPHLuFd
+ih4eoWC+e6rcyJ+t4iw/YHQkdVGcZfQEwTfOuV6it+C702x85qQBg+uN3GGJHxlgPgb/mNfFOn1g
+JsdrSzK6Hs9IsnougZvGL9utmpN7XkAeKWIgA9qzyo6kueI7hbaI1gKVNlIZz9r879nK64pxsV/+
+A3/erVnpIkeWYYYyrBH1qc20L4jSNr/i2BK34iwABNrrjIgR8TxJ18z+yMT+DEPpLRvOLicpGZXa
+KUeOK+LFOE7OkH8F2jpWjTIDE9KLQvsXvs57eXWRR2ZSQT1Jc3R6NSB8jpYfMd6v5Kp+7Vt96+rZ
+ecOjFhdVVfaP6eUO/IX48nnLP4859/Xx/7p0bHmO7VnUpnuoaHUPolCD1yvP/nNiV3KcZNvmkZfh
+eVfyRX6tUtBX0tcJImfY30RglJY6lGY53j+G63B3R/J5R0uMlZkj/Rnh3Pfbb4irLyfqCmd18boA
+vPsMS8m8vWYfp2ismj7buewNSjp0J84h9knoRZDMFSKanHSvOkDyezuIuWbU9afg2ggh4R7es+Di
+zz8P1MVOTdzJbmtvHyoBCVXI0jGR2Vs0jsylpVK/ateKu2JvrcEkp11TGPrjUlQoeSvR7Ps6qeJJ
+KjipjkP0YHE/OXT1LBGMUX7GBJSD4BmKRAU6ZHNZig5SS0HgaEgLluBy9LKaXX1atG0CdRIbTk/a
+RwI4neuvfHPqAEgCgbcMrkpriCio8fKcrZ+8bsIBDONmH+K9PDVpqBOy7hi6/DNppZ5KpiMBSl6D
+BYBOazlFsut50xxlOIlz8a69CoC6ViQ2bMOwpZWuTJ/9002YFYlvnEuiVI2XmuRhH8YrITlbCSoB
+4hkpOziIOR0u/a5XEBMPUeesd/jx41Hn4jg8/WiY+EAd4nfvei7XcDdX6uoiQYnuud6DCc/8HVoW
+p56Tqd44aL89Rnpbmbhw71z0Bz5HPuI1FhDBOEGj1duenwSl+DjT/PMYCPhUinMRKJ8ApZPoOjo7
+jtqo+xd19BaWncjCs60V+N8f6BV5nCBjJPNoCY2PpnqbX9CTVEdOClTGFkmnO+Zux8dXxmJ5wKP6
+lSnUqN7Y9XoIqk4Uok1gjnto81yHKllLpshogMZSgJ6hZDAioj4nfyB13vZ0a4TimqBoEaGmc1r6
+sJ6G7rw6akkqL2u8Pr/rG7VHSaF7u2cj4qtF89h2GNHe9mWxCWs0ukn2WJkVY0HC2si0DOmmgE7e
+AwHJS+0g+N2sbaTjTgftIgoMl4S2kiraFapbWoZ/gZ2S9pSSw3Sa43xQKfXRoBcMfQoH7xOdiPc6
+zAalhLY0la5a/68iSxcvevG0V2qvPXBBzmhTKGZno8kTlCWpe+XRaRrNBUYdgC/B8vUfcJuYXtgY
+/3LfPXqsWxuhDEgczKomLYwKXaqMek7JAicN0p4B8DuIXkrEQmoeEFQGE/UsKZ/ntw/EWKs0Z3Zj
+5k+Y3z5tNUrlK/8sqlGQGI6uuV5+f/Y3UUIkv43L6CkswpK5F7Y2Zh1PV9GnSCc5Y9JBIQd/SY5z
+MJJcOuTQUaFkjcgXbTwclbLwWEIgDKRfIAn4A1cWadSdArH1AF3SdWvixY66QuoD0jnP4X/IZDHH
+VZXIPvgMLbUx4gR/RySAOijoYakRewCKFiTzVRXU5Kx4V+P7GjN9nR27kxx2ndFdVdKi2qPjDn+R
+IYe6NOW0Aimq9jxdApCYyGriFA3bzb54ZD30nb1e6Xa7wNC3FD+mDQlC1jbtiiO5d7FzexAsuqO7
+K6eBnioczcYrUQkFHCFccIXfPTGYz646GMsX/EFjerj07laT4fZnIGGT4QUsSuFqiF0YQqUVLDFo
+csTotLtL8liNAvOiBZAsHKqnOQyGPIRYf8xh8OyvD1slXVaznhqseZ2VNh1xciV0wLdJ3JHP1zlN
+EXcOuacU3qxMM3DUQOR5BJ1xNvZ25zdDJuxBpoPGQzGoJTI0zrUn1G7sf+Ri5ZZeXh39vvADNk5J
+si+HilRNaP3UKnX71muGsPKr4Y31pFpC2tciTg5KtEJDtj1GziqKqUH9G6ejg9VLLPi1e5LU0Oz/
+cJshGpMTxum1JXiXw/3m3rXoZ9/gT7yj5oC4hhHvYuAj+xhkX7xDfowzV41tHkwtbvgGYP0fNnA/
+KbILUJyh/ughKCd5oeuepJ/wqU5Z6AS75DYGrqs7JdKCMpxzG3rT/hNGPeQttShQXZjiqWuuxpCt
+fCZfyVNj3/A7B+IoNk5Tz6iRjn9ODVxzUHuSjcovZ6in50r7QRrdafTfRxZYKBTCcw09y6MbO2CO
+z7FDz0J8OW6zy6HCPyKuCXiGiR7I8+GdrMscieGC/cec0nM2MR4fwgQB90ZI/piP20Xj8Eg5TZWp
+WhPMYce8Z5P4BSBw5nn+nAYm+mHzEX3tHLQ3mzwuydiZjYRNRAnDv/Z96tNeAXq39kLWPrTGRgwY
+GSyNvdqtw3wmjrdlNvRImJ6G2zVnx2Dzc7vQT6Et/tBkOm75TPI3/PBeF82vtZURiP0O000cRMiO
+gU9UdYzVojtBR6MXFRQ2RkszqprdLpi+zp54lcVXEDkcb/gceGPdsvMCiilcYF5By5WuGbZg3I3M
+j7SjI+1O6x8yzAp9j8XByI6F0qorEdk9nvzvhYGql0TQGqifjRu1SyRXW/Gb8FN7/JYUkeqkFdIw
+JFOyQJbf9G497JuSCKtwU6wNMQZaUSo+C6l1aS56kdJBPMBq7Gyo75dZeYdmLdlyDDkw8NOazbdE
+/IjvbFnZA74YVM0KNjkhuwYmCs1gUqQjUZTi7JFr5QL1KSrTUyElrLfyTFSUmUBCfz2sdjwSmgE8
+srD6AXGX7ywZq+5+kuxoFMa/X29H0hOf+hTo6D+JCtUXZ+ctIVX8W++BMBB4Pkf4o7SzwqxroUWS
+pkFeQl8RouJZQUtudXCUuM9ocoLX7OaFdrqPR/auQEGsdEXV9G+RAF5eJ2nre8uAPiwjHGp9iPGZ
++25ICtWJ5hVmopD+VlPzxsK58yHzUMrExw5bRyFsbJRoBh0ZEjk6tC+uBrS5y6OF07CfGjg0it/+
+1nj1hCkpeUt1b1mZWNQxZFs+gUyh3Aaxp1eLGop5NcT3OBG63xCtTvMPOJEwkDKYOFhlOSG490ZG
+5OglgklEb7hljQNscqwm6WBF8UMrtFMUlul1MPqJwL88lca3PxDdnM83i+RVJbZlMix55USkHXTx
+8v+7KPusifVm4oGEBHxjPwMz2uq5giJUZ6hkmfO335OIKjJAsM2gSO5RV6RKZ83VahjhzyI2FMb4
+MXYrBto2DikxvdXCdgWbY4fiq/3W3M7deTW8sv15qdDS47/8n4yYLuk9yATrcKRbOM92ngpmCSiK
+ZLsu2342VSi+Ny1y5SQoc6zBrVmPNfTJeooig8w6HdpeNUEUJDEVCygPg3UsyOvRdKNRhZWP69QI
+CGXYzUVYfHdA+sUN9eAXHKNDhSJRDpOQOj+xUi4b9EFbzzAy26l17mfAp+A+vZdCEr+Syj94tple
+dOqP76Etoo6+BBt4z3teF2hrJkgqKlMl/iWSh9C2XPM7ilk071BgjkJ0LfOtdQpm4N98DfW1SiK/
+PqpmZso+kyjSo3VUEuxcZyYTfMmcIqPFF/BwcuVaaPAJkln9KJv+soKeIZ3VJljL+7zj/mtRoZVR
++Ji0L416nqP5L7VhV1Wig7IcewfIGxoI7WBNwad9ncaY+Xc+x/BKslm22QuCxOKzd44dFH2lD4eN
+oRd67GxtxevbFgdO0YENzBb56rjhXQ7tIuXDd2jYCLekMsGZ//Dzf1sJt7B2fVRM5UomsOrChR72
+ymapz1D7aUGHtW5aP44taLweOaZgjaigLC/BHVSRVnRe8IQeLqjuvxF85E/RVdo9MsG5FJbsDvIO
+XyYvhyKPmjP4VQR0ihzaM0J57C/8tvzwBn6nBHGCigoOWE8NFZugXe7cPXQg/VGCK0XaguesNqwq
+tjsHJI93K+fkiALgu5BvV3fHWg3wv7o+fCi2fnmDPsYUfrcm8ePVibSNZjZ48v2d38IQPnI870EE
+WLYHRLjemqNrqf6e+2DI0edVAkB6X3DU0cqrrek1D9qsrn0hne8EBoN5tIXgyI3U86tQFIEp7eRS
+Mob1mNvnE1/cDIhqbIX6fhrOP0Pbqimkc8FOzT8vZ8J4bbsIN0bBKwng7vpW8ors/IjJzv3gHcNb
+bcVXYSEKjZHORbtICXRe+fGIlrwi4VIL2UyAyUGCAov4ed4VThsS/6Ishezp6vS/Y4CTabxLmhw9
+ZSOrWWq9FlrhxZcQIZFSeeJj+y/qx88Xq8XQlbkWVCquVEBK30wrLd4ytPLn2VgGnbruskyVgEyn
+7+pHWQ4JvtZfYWslJLDpKI4DLoWw/3VgPe6o4oJtII70HsQiPvhNh+RpdJjwCmNtGrknLJljLgWY
+6/7r22uhRG7J0kVvR49bc9L1rhzlCuLYNT61lxWHuFxT6h0eLwHef8xhzNekQqwZ1vnJTwGPQKaE
+XhKzWSZPz5KxMzxOVNNcO5bzyO9wEf412VvZx6IQWVAgoJm0e31Kx6H6DtVriL2WqNQ88wNJS5iO
+WJbKx0x4YrZrPHng04F7rZIG1eSOsNk7XgZQi7RGzIu1UfQZw92LoifazREur3wKMzumcA/kVw6G
+pa0qkoJFwyIh8Ayjhwwj4xZ8vsI+xdtiGnN0zjsz4TwNvew16hef+HPbhOL+MHUTUl3dq5wnXCbO
+1bRYDIOP1B5C0fiFYz8EyKhyXW5ucjW6oqMVBVK6gVaQ7gBfsx70pT5gVa6Rx3rTGwW+7uZOytJB
+qzBwAPfTUuhmuCwRbItwPUwzacK2MN7RfNfXiM6JacKmjA3VWigEZ2QWk5lEdZejc7/9BR6E7MfR
+D4drNzpLTDXR8nOpoy2uOV68y3IWanA6sCnnZR/o/8Z6qU8SLobaboNKsOLxl3/q41+Hw8b7uaf+
+xHIhARdr8SHaeVSFxgocMC47/vFkrXjfCaoV8xmwhvGgRMRuDXcLi84ZaZHWRDAwzj+AyP0KUsJJ
+WEbLx1KhrSaNCtJz61AOBVGWft/h056M/tHxREZhAVhpajaboBEdWR1DPLD5m8EeQziSrmypSmBp
+vfmIa2poOq8WMSnaaEaQhvHW4UlFoqWlx7eHgK7bUav4i1Jx3fZkKJLzv2znKLGB4pQbF7+MSGs3
+TEut0U8ZZe6EzxYmpfd+BXxvC5MAiTjYrWDqCfCNZEN0ODEPGPh8VyEYMSg3Rt6qRnBx8MNBgk3V
+FMmeh/yOmC3d6UuFE+80GfRHBGQfYdjsRVtJJzDeVQ9CmlEbgSq1r8Agtl2yJDye9antcQl/tj63
+8rkKcYVTquDmQQGSfUVz5TIn+XqjqSyzC36O+INQQZsPdgKqw9JZlmyy6x1pME0XVlFT4GyqkuWL
+D1fHa8HKNu4E2A6yK8qJT1JjmZUPqe95WhftDdft2yvGgrZ+OPewLmvNbGBpwJbNHy42gZcIDW+t
+PAJ1e1c9TxDtOGyRmjA6QqFFnI0daL3pMp3cD51Nn8/7o27qsZcXVeqCl6IJOKOYjHLNy0iLNC7T
+K8IMloewcDM46QWz/lBr7WiVslvPCSIyRsUl9jPV5a8GAUzCy/Nj+V2AX/L2x01kHQOFyzMv9Sem
+xBbFwHVTPDwB0lBSV8YHWm3L/RWkY3dgHEmgP+TEgkaJyHujLaGk7EUFqSX6FlFdUhQDQvSGUOYw
+oH50U1ZQrz7UeeDkxPDIQvLAFS1cc/H2CX1U2+rakPdv5g0C0WsxZetlvsA3v6kbvnIbcFPVDw8K
+jp5AWHb0B2Dev80V9qcgyTSXPQvOnN3Y6J0dcYp4ptv+x91RLVO6AIjEXma6LXDtZx2nrP4bO7ko
+Jj1HtpL/wDGXbiClsHqDVKTjzzjoCaFWGgoHmIlETYepv6Y6UpZpobNfT4aycBONBvWYWbBuK/Fl
+44kwOf9PB8xLGik/xFbpPE537BrzwheMeCFH4oZ7dWDmVjlCn+XFRyotJL5BEVqzO9VsCMoFyLXO
+rpuXPPjOHfMOccE6lqDk2F09zvsZjMWFw0f9R64Bgm3sCCVlqX1cc7fRMp89n1dmC0y8+zaW5fqb
+PUuIZzKW47EMeAcuVXWKEHjLOYoZ881oMZGLSNXSYiuJLje6tk7HryVZ3AksJS0xPSaVTZF661++
+5+XS4Dm3aCt3e44KgUsWor9MMywAs+HiuE6CuL8TKwWmoOB7R4ppLW/eBksok2yuvJE/Fn6IX/4X
+ltfDgopnel+u0zSVEnaFXATFYYTQqDd830/txMIMPaXQUcwywNPppsyGpcjLE3mw0JMl02wxKroH
+67fp+sa/cW1+hcLizDYxpyEBPzSwjmpT5EMoQ+fMBQAmVVow++NkrQDd5UAyuOgmhxruWhfZupbD
+Qew4roNH9f5fjwWUbgfBgsGLE0k4vELX9LPSQOyQs9CHFqTs6HJe8UUBZnxK7lA2IrQpry5wFfng
++twnnaHdvL8ynOXA3PKM+pXiraqNy5AN2aRR5FLr1/eMydUwDk5emeBCSDgtpDnOCBd6APPDxNpo
+g0eJ8aHQN2hbgV14Nx84MR1NdN/QK5MXpMUVWns56S9VEcxdJ36WUf7VRnjaltrUzo5+TN8DhkEP
+n3of0SHrg3vhkpIU7Y9DNjuYLfD/fsKXjpbClgbh+hfAlav/MvxnDOAK0GqjUdMQPzRBgb930kwc
+QeruVYi1RBWSwd0VHeh3Me++Zq5wEDjS0uqPb5WQfwv4kuGz15l1mLqQEpmdaU8TkC2XV3Dod9hX
+blBtH/GP/BITIXGPKiVlqWNCaFKRaxHoeSZ6J7NDKrAIMdBLahntuP666tDQVblBvGiw5JJzhYow
+IHBD6vP5F5voWml1POZyp0M0/8/NTCOGVwGrJXLqJWM9HqbTIXtXpWsilfoA5jmlWA9jStB7dVc+
+L2jie2vRm7vs3P51ST6k0yBj5dXiNj+Vi1x4UGF8qfIChqRuY7pg3rzlSATtM8pdOaTBeeXosPRK
+p7yuHAkG+zOhZXxQdP905TDb2AXBHYU9MVHS7Jp+xIcnR12iTPSpcu0x6HxBQ4pkPI0GH0s8I9+M
+h1YlSHBRhnBMmJKrbS7yedZ6FKUXZgeQ9nucgJEirnBbe0UFZpRRNbpmsmr2D+jGmO8Z6Balrchu
+CVGzsMXzIdZyzI7ODYfJjcD4SXVgG0qHT/XYKF4LbtxOEEFyCP3wQVy9NTwjo/1LBOq2jgVvgVK/
+B54P0YwBECCj0de3aaYbtUNlkCG/SeVd1L2vAubU0MB0gGaYHgAAm3Iv+NR4wAAAAAAAAG8qlD/l
+hk8sC3UVqn5SkRQQf14xl/o5fK/bKKA7I42J6u0odb/fnnrG9T+kAAWSGbKngvdjllKiTWQz+42c
+x0DcYaUeM+Yc6/FjdeXe8snFIamEw2MloIrqjM1gnbfPwQtdEujd+IAkvNVu0JTQhX6NnNQDS7Zp
+RsLTkCM3arA2EMgPBJwAF9DM8BANo5I55c7vxEgCv0dxX+HunlAlzA1Df0M6YFkfTnDiUqKQWk2B
+rEaz6ZGgMVTf+jcjgK24tqI/U49r7pLs003v4AAAAAD8/7OrveWX/HF73lXxVgAAAQjHO7fecE9m
+7s2M1CGC43o4hdFOx+90XR/vZZkM0o/72WZDNKP+9lmQzSj/vZZkM0o/72T7P+lDbKTZsI66UNsp
+OCOulDbKTgjphnXgkWskfAAAAA==
+
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.sohamkamani.com/_astro/cmd-output-execution.drawio.CcpssOkM_Z1GNJPX.svg
+
+<svg xmlns=3D"http://www.w3.org/2000/svg" xmlns:xlink=3D"http://www.w3.org/=
+1999/xlink" width=3D"504" height=3D"451" viewBox=3D"-0.5 -0.5 504 451"><pat=
+h fill=3D"none" stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"M249.5 377H64=
+.37" pointer-events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"=
+10" d=3D"m59.12 377 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path=
+ fill=3D"#d5e8d4" stroke=3D"#82b366" d=3D"M0 0h100v40H0z" pointer-events=3D=
+"all"/><path fill=3D"none" stroke=3D"#82b366" stroke-dasharray=3D"3 3" stro=
+ke-miterlimit=3D"10" d=3D"M50 40v410" pointer-events=3D"all"/><switch trans=
+form=3D"translate(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" p=
+ointer-events=3D"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/featu=
+re#Extensibility" style=3D"overflow:visible;text-align:left"><div xmlns=3D"=
+http://www.w3.org/1999/xhtml" style=3D"display:flex;align-items:unsafe cent=
+er;justify-content:unsafe center;width:98px;height:1px;padding-top:20px;mar=
+gin-left:1px"><div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box=
+-sizing:border-box;font-size:0;text-align:center"><div style=3D"display:inl=
+ine-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;p=
+ointer-events:all;white-space:normal;overflow-wrap:normal">Golang<br/>appli=
+cation</div></div></div></foreignObject><text x=3D"50" y=3D"24" font-family=
+=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    Golang...
+                </text></switch><path fill=3D"#d5e8d4" stroke=3D"#82b366" d=
+=3D"M45 80h10v300H45zM200 0h100v40H200z" pointer-events=3D"all"/><path fill=
+=3D"none" stroke=3D"#82b366" stroke-dasharray=3D"3 3" stroke-miterlimit=3D"=
+10" d=3D"M250 40v410" pointer-events=3D"all"/><switch transform=3D"translat=
+e(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D=
+"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility=
+" style=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.or=
+g/1999/xhtml" style=3D"display:flex;align-items:unsafe center;justify-conte=
+nt:unsafe center;width:98px;height:1px;padding-top:20px;margin-left:201px">=
+<div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border=
+-box;font-size:0;text-align:center"><div style=3D"display:inline-block;font=
+-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:=
+all;white-space:normal;overflow-wrap:normal">*Cmd</div></div></div></foreig=
+nObject><text x=3D"250" y=3D"24" font-family=3D"Helvetica" font-size=3D"12"=
+ text-anchor=3D"middle">
+                    *Cmd
+                </text></switch><path fill=3D"#d5e8d4" stroke=3D"#82b366" d=
+=3D"M245 75h10v305h-10z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#000" stroke-miterlimit=3D"10" d=3D"m55 86.9 178.63.1" pointer-events=
+=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m238.88 87=
+-7 3.5 1.75-3.5-1.75-3.5Z" pointer-events=3D"all"/><path fill=3D"none" d=3D=
+"M100 70h100v20H100z" pointer-events=3D"all"/><switch transform=3D"translat=
+e(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D=
+"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility=
+" style=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.or=
+g/1999/xhtml" style=3D"display:flex;align-items:unsafe center;justify-conte=
+nt:unsafe center;width:1px;height:1px;padding-top:80px;margin-left:150px"><=
+div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-=
+box;font-size:0;text-align:center"><div style=3D"display:inline-block;font-=
+size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:a=
+ll;white-space:nowrap">exec.Command</div></div></div></foreignObject><text =
+x=3D"150" y=3D"84" font-family=3D"Helvetica" font-size=3D"12" text-anchor=
+=3D"middle">
+                    exec.Command
+                </text></switch><path fill=3D"none" stroke=3D"#000" stroke-=
+miterlimit=3D"10" d=3D"m258 101.53 178.63-.43" pointer-events=3D"stroke"/><=
+path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m441.88 101.08-6.99 3.52=
+ 1.74-3.5-1.76-3.5Z" pointer-events=3D"all"/><path fill=3D"none" d=3D"M305 =
+80h90v20h-90z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -=
+.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" =
+requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=
+=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/=
+xhtml" style=3D"display:flex;align-items:unsafe center;justify-content:unsa=
+fe center;width:1px;height:1px;padding-top:90px;margin-left:350px"><div dat=
+a-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;fon=
+t-size:0;text-align:center"><div style=3D"display:inline-block;font-size:12=
+px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;whit=
+e-space:nowrap">cmd.Output()</div></div></div></foreignObject><text x=3D"35=
+0" y=3D"94" font-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middl=
+e">
+                    cmd.Output()
+                </text></switch><path fill=3D"none" d=3D"M75 350h150v20H75z=
+" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><foreign=
+Object width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFeatu=
+res=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overflow:=
+visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" style=
+=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;wi=
+dth:1px;height:1px;padding-top:360px;margin-left:150px"><div data-drawio-co=
+lors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;te=
+xt-align:center"><div style=3D"display:inline-block;font-size:12px;font-fam=
+ily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:now=
+rap">output1, output2, output3</div></div></div></foreignObject><text x=3D"=
+150" y=3D"364" font-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"mi=
+ddle">
+                    output1, output2, output3
+                </text></switch><path fill=3D"#fff2cc" stroke=3D"#d6b656" d=
+=3D"M402.5 0h100v40h-100z" pointer-events=3D"all"/><path fill=3D"none" stro=
+ke=3D"#d6b656" stroke-dasharray=3D"3 3" stroke-miterlimit=3D"10" d=3D"M452.=
+5 40v410" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)">=
+<foreignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requi=
+redFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"o=
+verflow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml=
+" style=3D"display:flex;align-items:unsafe center;justify-content:unsafe ce=
+nter;width:98px;height:1px;padding-top:20px;margin-left:404px"><div data-dr=
+awio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-si=
+ze:0;text-align:center"><div style=3D"display:inline-block;font-size:12px;f=
+ont-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-sp=
+ace:normal;overflow-wrap:normal">unix command</div></div></div></foreignObj=
+ect><text x=3D"453" y=3D"24" font-family=3D"Helvetica" font-size=3D"12" tex=
+t-anchor=3D"middle">
+                    unix command
+                </text></switch><path fill=3D"#fff2cc" stroke=3D"#d6b656" d=
+=3D"M447.5 98h10v280h-10z" pointer-events=3D"all"/><path fill=3D"none" stro=
+ke=3D"#000" stroke-miterlimit=3D"10" d=3D"m445 170-178.63.02" pointer-event=
+s=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m261.12 1=
+70.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"none"=
+ stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m445 224.5-178.63.02" pointe=
+r-events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m2=
+61.12 224.52 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=
+=3D"none" stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m445 290-178.63.02"=
+ pointer-events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" =
+d=3D"m261.12 290.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path=
+ fill=3D"none" stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m445 370-178.6=
+3.02" pointer-events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D=
+"10" d=3D"m261.12 370.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/>=
+<path fill=3D"none" d=3D"M322.5 150h60v20h-60z" pointer-events=3D"all"/><sw=
+itch transform=3D"translate(-.5 -.5)"><foreignObject width=3D"100%" height=
+=3D"100%" pointer-events=3D"none" requiredFeatures=3D"http://www.w3.org/TR/=
+SVG11/feature#Extensibility" style=3D"overflow:visible;text-align:left"><di=
+v xmlns=3D"http://www.w3.org/1999/xhtml" style=3D"display:flex;align-items:=
+unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-to=
+p:160px;margin-left:353px"><div data-drawio-colors=3D"color: rgb(0, 0, 0);"=
+ style=3D"box-sizing:border-box;font-size:0;text-align:center"><div style=
+=3D"display:inline-block;font-size:12px;font-family:Helvetica;color:#000;li=
+ne-height:1.2;pointer-events:all;white-space:nowrap">output1</div></div></d=
+iv></foreignObject><text x=3D"353" y=3D"164" font-family=3D"Helvetica" font=
+-size=3D"12" text-anchor=3D"middle">
+                    output1
+                </text></switch><path fill=3D"none" d=3D"M322.5 204h60v20h-=
+60z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><fore=
+ignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFe=
+atures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overfl=
+ow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" sty=
+le=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;=
+width:1px;height:1px;padding-top:214px;margin-left:353px"><div data-drawio-=
+colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;=
+text-align:center"><div style=3D"display:inline-block;font-size:12px;font-f=
+amily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:n=
+owrap">output2</div></div></div></foreignObject><text x=3D"353" y=3D"218" f=
+ont-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    output2
+                </text></switch><path fill=3D"none" d=3D"M322.5 270h60v20h-=
+60z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><fore=
+ignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFe=
+atures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overfl=
+ow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" sty=
+le=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;=
+width:1px;height:1px;padding-top:280px;margin-left:353px"><div data-drawio-=
+colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;=
+text-align:center"><div style=3D"display:inline-block;font-size:12px;font-f=
+amily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:n=
+owrap">output3</div></div></div></foreignObject><text x=3D"353" y=3D"284" f=
+ont-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    output3
+                </text></switch><path fill=3D"none" d=3D"M337.5 350h30v20h-=
+30z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><fore=
+ignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFe=
+atures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overfl=
+ow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" sty=
+le=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;=
+width:1px;height:1px;padding-top:360px;margin-left:353px"><div data-drawio-=
+colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;=
+text-align:center"><div style=3D"display:inline-block;font-size:12px;font-f=
+amily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:n=
+owrap">exit</div></div></div></foreignObject><text x=3D"353" y=3D"364" font=
+-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    exit
+                </text></switch><switch><g requiredFeatures=3D"http://www.w=
+3.org/TR/SVG11/feature#Extensibility"/><a xlink:href=3D"https://www.diagram=
+s.net/doc/faq/svg-export-text-problems" target=3D"_blank" transform=3D"tran=
+slate(0 -5)"><text x=3D"50%" y=3D"100%" font-size=3D"10" text-anchor=3D"mid=
+dle">
+                Viewer does not support full SVG 1.1
+            </text></a></switch></svg>
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.sohamkamani.com/_astro/cmd-stdout-workflow.drawio.CXS2uM-3_Z1H0Wq2.svg
+
+<svg xmlns=3D"http://www.w3.org/2000/svg" xmlns:xlink=3D"http://www.w3.org/=
+1999/xlink" width=3D"501" height=3D"451" viewBox=3D"-0.5 -0.5 501 451"><pat=
+h fill=3D"none" stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"M249.5 377H64=
+.37" pointer-events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"=
+10" d=3D"m59.12 377 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path=
+ fill=3D"#d5e8d4" stroke=3D"#82b366" d=3D"M0 0h100v40H0z" pointer-events=3D=
+"all"/><path fill=3D"none" stroke=3D"#82b366" stroke-dasharray=3D"3 3" stro=
+ke-miterlimit=3D"10" d=3D"M50 40v410" pointer-events=3D"all"/><switch trans=
+form=3D"translate(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" p=
+ointer-events=3D"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/featu=
+re#Extensibility" style=3D"overflow:visible;text-align:left"><div xmlns=3D"=
+http://www.w3.org/1999/xhtml" style=3D"display:flex;align-items:unsafe cent=
+er;justify-content:unsafe center;width:98px;height:1px;padding-top:20px;mar=
+gin-left:1px"><div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box=
+-sizing:border-box;font-size:0;text-align:center"><div style=3D"display:inl=
+ine-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;p=
+ointer-events:all;white-space:normal;overflow-wrap:normal">Golang<br/>appli=
+cation</div></div></div></foreignObject><text x=3D"50" y=3D"24" font-family=
+=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    Golang...
+                </text></switch><path fill=3D"#d5e8d4" stroke=3D"#82b366" d=
+=3D"M45 80h10v300H45zM200 0h100v40H200z" pointer-events=3D"all"/><path fill=
+=3D"none" stroke=3D"#82b366" stroke-dasharray=3D"3 3" stroke-miterlimit=3D"=
+10" d=3D"M250 40v410" pointer-events=3D"all"/><switch transform=3D"translat=
+e(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D=
+"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility=
+" style=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.or=
+g/1999/xhtml" style=3D"display:flex;align-items:unsafe center;justify-conte=
+nt:unsafe center;width:98px;height:1px;padding-top:20px;margin-left:201px">=
+<div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border=
+-box;font-size:0;text-align:center"><div style=3D"display:inline-block;font=
+-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:=
+all;white-space:normal;overflow-wrap:normal">*Cmd</div></div></div></foreig=
+nObject><text x=3D"250" y=3D"24" font-family=3D"Helvetica" font-size=3D"12"=
+ text-anchor=3D"middle">
+                    *Cmd
+                </text></switch><path fill=3D"#d5e8d4" stroke=3D"#82b366" d=
+=3D"M245 75h10v305h-10z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#000" stroke-miterlimit=3D"10" d=3D"m245 190-178.63.02" pointer-events=
+=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m61.12 190=
+.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"none" s=
+troke=3D"#000" stroke-miterlimit=3D"10" d=3D"m245 244.5-178.63.02" pointer-=
+events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m61.=
+12 244.52 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"n=
+one" stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m245 310-178.63.02" poin=
+ter-events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"=
+m61.12 310.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=
+=3D"none" d=3D"M107.5 170h90v20h-90z" pointer-events=3D"all"/><switch trans=
+form=3D"translate(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" p=
+ointer-events=3D"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/featu=
+re#Extensibility" style=3D"overflow:visible;text-align:left"><div xmlns=3D"=
+http://www.w3.org/1999/xhtml" style=3D"display:flex;align-items:unsafe cent=
+er;justify-content:unsafe center;width:1px;height:1px;padding-top:180px;mar=
+gin-left:153px"><div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"b=
+ox-sizing:border-box;font-size:0;text-align:center"><div style=3D"display:i=
+nline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2=
+;pointer-events:all;white-space:nowrap"><b>data:</b>output1</div></div></di=
+v></foreignObject><text x=3D"153" y=3D"184" font-family=3D"Helvetica" font-=
+size=3D"12" text-anchor=3D"middle">
+                    data: output1
+                </text></switch><path fill=3D"none" d=3D"M107.5 224h90v20h-=
+90z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><fore=
+ignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFe=
+atures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overfl=
+ow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" sty=
+le=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;=
+width:1px;height:1px;padding-top:234px;margin-left:153px"><div data-drawio-=
+colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;=
+text-align:center"><div style=3D"display:inline-block;font-size:12px;font-f=
+amily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:n=
+owrap"><b>data:</b>output2</div></div></div></foreignObject><text x=3D"153"=
+ y=3D"238" font-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle=
+">
+                    data: output2
+                </text></switch><path fill=3D"none" d=3D"M107.5 290h90v20h-=
+90z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><fore=
+ignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFe=
+atures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overfl=
+ow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" sty=
+le=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;=
+width:1px;height:1px;padding-top:300px;margin-left:153px"><div data-drawio-=
+colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;=
+text-align:center"><div style=3D"display:inline-block;font-size:12px;font-f=
+amily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:n=
+owrap"><b>data:</b>output3</div></div></div></foreignObject><text x=3D"153"=
+ y=3D"304" font-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle=
+">
+                    data: output3
+                </text></switch><path fill=3D"#fff2cc" stroke=3D"#d6b656" d=
+=3D"M400 0h100v40H400z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#d6b656" stroke-dasharray=3D"3 3" stroke-miterlimit=3D"10" d=3D"M450 40=
+v410" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><for=
+eignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredF=
+eatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overf=
+low:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" st=
+yle=3D"display:flex;align-items:unsafe center;justify-content:unsafe center=
+;width:98px;height:1px;padding-top:20px;margin-left:401px"><div data-drawio=
+-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0=
+;text-align:center"><div style=3D"display:inline-block;font-size:12px;font-=
+family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:=
+normal;overflow-wrap:normal">unix command</div></div></div></foreignObject>=
+<text x=3D"450" y=3D"24" font-family=3D"Helvetica" font-size=3D"12" text-an=
+chor=3D"middle">
+                    unix command
+                </text></switch><path fill=3D"#fff2cc" stroke=3D"#d6b656" d=
+=3D"M445 98h10v280h-10z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#000" stroke-miterlimit=3D"10" d=3D"m55 86.9 178.63.1" pointer-events=
+=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m238.88 87=
+-7 3.5 1.75-3.5-1.75-3.5Z" pointer-events=3D"all"/><path fill=3D"none" d=3D=
+"M100 70h100v20H100z" pointer-events=3D"all"/><switch transform=3D"translat=
+e(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D=
+"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility=
+" style=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.or=
+g/1999/xhtml" style=3D"display:flex;align-items:unsafe center;justify-conte=
+nt:unsafe center;width:1px;height:1px;padding-top:80px;margin-left:150px"><=
+div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-=
+box;font-size:0;text-align:center"><div style=3D"display:inline-block;font-=
+size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:a=
+ll;white-space:nowrap">exec.Command</div></div></div></foreignObject><text =
+x=3D"150" y=3D"84" font-family=3D"Helvetica" font-size=3D"12" text-anchor=
+=3D"middle">
+                    exec.Command
+                </text></switch><path fill=3D"none" stroke=3D"#000" stroke-=
+miterlimit=3D"10" d=3D"m258 101.53 178.63-.43" pointer-events=3D"stroke"/><=
+path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m441.88 101.08-6.99 3.52=
+ 1.74-3.5-1.76-3.5Z" pointer-events=3D"all"/><path fill=3D"none" d=3D"M305 =
+80h90v20h-90z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -=
+.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" =
+requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=
+=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/=
+xhtml" style=3D"display:flex;align-items:unsafe center;justify-content:unsa=
+fe center;width:1px;height:1px;padding-top:90px;margin-left:350px"><div dat=
+a-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;fon=
+t-size:0;text-align:center"><div style=3D"display:inline-block;font-size:12=
+px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;whit=
+e-space:nowrap">start command</div></div></div></foreignObject><text x=3D"3=
+50" y=3D"94" font-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"midd=
+le">
+                    start command
+                </text></switch><path fill=3D"none" stroke=3D"#000" stroke-=
+miterlimit=3D"10" d=3D"m442.5 170-178.63.02" pointer-events=3D"stroke"/><pa=
+th stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m258.62 170.02 7-3.5-1.75 =
+3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"none" stroke=3D"#000" =
+stroke-miterlimit=3D"10" d=3D"m442.5 224.5-178.63.02" pointer-events=3D"str=
+oke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m258.62 224.52 7-=
+3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#000" stroke-miterlimit=3D"10" d=3D"m442.5 290-178.63.02" pointer-event=
+s=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m258.62 2=
+90.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"none"=
+ stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m442.5 370-178.63.02" pointe=
+r-events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m2=
+58.62 370.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=
+=3D"none" d=3D"M320 150h60v20h-60z" pointer-events=3D"all"/><switch transfo=
+rm=3D"translate(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" poi=
+nter-events=3D"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature=
+#Extensibility" style=3D"overflow:visible;text-align:left"><div xmlns=3D"ht=
+tp://www.w3.org/1999/xhtml" style=3D"display:flex;align-items:unsafe center=
+;justify-content:unsafe center;width:1px;height:1px;padding-top:160px;margi=
+n-left:350px"><div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box=
+-sizing:border-box;font-size:0;text-align:center"><div style=3D"display:inl=
+ine-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;p=
+ointer-events:all;white-space:nowrap">output1</div></div></div></foreignObj=
+ect><text x=3D"350" y=3D"164" font-family=3D"Helvetica" font-size=3D"12" te=
+xt-anchor=3D"middle">
+                    output1
+                </text></switch><path fill=3D"none" d=3D"M320 204h60v20h-60=
+z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><foreig=
+nObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFeat=
+ures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overflow=
+:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" style=
+=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;wi=
+dth:1px;height:1px;padding-top:214px;margin-left:350px"><div data-drawio-co=
+lors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;te=
+xt-align:center"><div style=3D"display:inline-block;font-size:12px;font-fam=
+ily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:now=
+rap">output2</div></div></div></foreignObject><text x=3D"350" y=3D"218" fon=
+t-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    output2
+                </text></switch><path fill=3D"none" d=3D"M320 270h60v20h-60=
+z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><foreig=
+nObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFeat=
+ures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overflow=
+:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" style=
+=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;wi=
+dth:1px;height:1px;padding-top:280px;margin-left:350px"><div data-drawio-co=
+lors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;te=
+xt-align:center"><div style=3D"display:inline-block;font-size:12px;font-fam=
+ily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:now=
+rap">output3</div></div></div></foreignObject><text x=3D"350" y=3D"284" fon=
+t-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    output3
+                </text></switch><path fill=3D"none" d=3D"M335 350h30v20h-30=
+z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><foreig=
+nObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFeat=
+ures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overflow=
+:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" style=
+=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;wi=
+dth:1px;height:1px;padding-top:360px;margin-left:350px"><div data-drawio-co=
+lors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;te=
+xt-align:center"><div style=3D"display:inline-block;font-size:12px;font-fam=
+ily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:now=
+rap">exit</div></div></div></foreignObject><text x=3D"350" y=3D"364" font-f=
+amily=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    exit
+                </text></switch><path fill=3D"none" d=3D"M125 360h40v20h-40=
+z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><foreig=
+nObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFeat=
+ures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overflow=
+:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" style=
+=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;wi=
+dth:1px;height:1px;padding-top:370px;margin-left:145px"><div data-drawio-co=
+lors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;te=
+xt-align:center"><div style=3D"display:inline-block;font-size:12px;font-fam=
+ily:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700=
+;white-space:nowrap">exit</div></div></div></foreignObject><text x=3D"145" =
+y=3D"374" font-family=3D"Helvetica" font-size=3D"12" font-weight=3D"bold" t=
+ext-anchor=3D"middle">
+                    exit
+                </text></switch><switch><g requiredFeatures=3D"http://www.w=
+3.org/TR/SVG11/feature#Extensibility"/><a xlink:href=3D"https://www.diagram=
+s.net/doc/faq/svg-export-text-problems" target=3D"_blank" transform=3D"tran=
+slate(0 -5)"><text x=3D"50%" y=3D"100%" font-size=3D"10" text-anchor=3D"mid=
+dle">
+                Viewer does not support full SVG 1.1
+            </text></a></switch></svg>
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.sohamkamani.com/_astro/stdin.drawio.a38gA58v_Z1H0Wq2.svg
+
+<svg xmlns=3D"http://www.w3.org/2000/svg" xmlns:xlink=3D"http://www.w3.org/=
+1999/xlink" width=3D"501" height=3D"451" viewBox=3D"-0.5 -0.5 501 451"><pat=
+h fill=3D"none" stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"M249.5 377H64=
+.37" pointer-events=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"=
+10" d=3D"m59.12 377 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path=
+ fill=3D"#d5e8d4" stroke=3D"#82b366" d=3D"M0 0h100v40H0z" pointer-events=3D=
+"all"/><path fill=3D"none" stroke=3D"#82b366" stroke-dasharray=3D"3 3" stro=
+ke-miterlimit=3D"10" d=3D"M50 40v410" pointer-events=3D"all"/><switch trans=
+form=3D"translate(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" p=
+ointer-events=3D"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/featu=
+re#Extensibility" style=3D"overflow:visible;text-align:left"><div xmlns=3D"=
+http://www.w3.org/1999/xhtml" style=3D"display:flex;align-items:unsafe cent=
+er;justify-content:unsafe center;width:98px;height:1px;padding-top:20px;mar=
+gin-left:1px"><div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box=
+-sizing:border-box;font-size:0;text-align:center"><div style=3D"display:inl=
+ine-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;p=
+ointer-events:all;white-space:normal;overflow-wrap:normal">Golang<br/>appli=
+cation</div></div></div></foreignObject><text x=3D"50" y=3D"24" font-family=
+=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    Golang...
+                </text></switch><path fill=3D"#d5e8d4" stroke=3D"#82b366" d=
+=3D"M45 80h10v300H45zM200 0h100v40H200z" pointer-events=3D"all"/><path fill=
+=3D"none" stroke=3D"#82b366" stroke-dasharray=3D"3 3" stroke-miterlimit=3D"=
+10" d=3D"M250 40v410" pointer-events=3D"all"/><switch transform=3D"translat=
+e(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D=
+"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility=
+" style=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.or=
+g/1999/xhtml" style=3D"display:flex;align-items:unsafe center;justify-conte=
+nt:unsafe center;width:98px;height:1px;padding-top:20px;margin-left:201px">=
+<div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border=
+-box;font-size:0;text-align:center"><div style=3D"display:inline-block;font=
+-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:=
+all;white-space:normal;overflow-wrap:normal">*Cmd</div></div></div></foreig=
+nObject><text x=3D"250" y=3D"24" font-family=3D"Helvetica" font-size=3D"12"=
+ text-anchor=3D"middle">
+                    *Cmd
+                </text></switch><path fill=3D"#d5e8d4" stroke=3D"#82b366" d=
+=3D"M245 75h10v305h-10z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#000" stroke-miterlimit=3D"10" d=3D"m60 190.02 178.63-.02" pointer-even=
+ts=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m243.88 =
+190-7 3.5 1.75-3.5-1.75-3.5Z" pointer-events=3D"all"/><path fill=3D"none" s=
+troke=3D"#000" stroke-miterlimit=3D"10" d=3D"m245 310-178.63.02" pointer-ev=
+ents=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m61.12=
+ 310.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"non=
+e" d=3D"M97.5 170h110v20h-110z" pointer-events=3D"all"/><switch transform=
+=3D"translate(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" point=
+er-events=3D"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#E=
+xtensibility" style=3D"overflow:visible;text-align:left"><div xmlns=3D"http=
+://www.w3.org/1999/xhtml" style=3D"display:flex;align-items:unsafe center;j=
+ustify-content:unsafe center;width:1px;height:1px;padding-top:180px;margin-=
+left:153px"><div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-s=
+izing:border-box;font-size:0;text-align:center"><div style=3D"display:inlin=
+e-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;poi=
+nter-events:all;white-space:nowrap"><b>stdin.write:</b>input</div></div></d=
+iv></foreignObject><text x=3D"153" y=3D"184" font-family=3D"Helvetica" font=
+-size=3D"12" text-anchor=3D"middle">
+                    stdin.write:=C2=A0input
+                </text></switch><path fill=3D"none" d=3D"M112.5 290h80v20h-=
+80z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><fore=
+ignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFe=
+atures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overfl=
+ow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" sty=
+le=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;=
+width:1px;height:1px;padding-top:300px;margin-left:153px"><div data-drawio-=
+colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;=
+text-align:center"><div style=3D"display:inline-block;font-size:12px;font-f=
+amily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:n=
+owrap"><b>data:</b>output</div></div></div></foreignObject><text x=3D"153" =
+y=3D"304" font-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle"=
+>
+                    data: output
+                </text></switch><path fill=3D"#fff2cc" stroke=3D"#d6b656" d=
+=3D"M400 0h100v40H400z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#d6b656" stroke-dasharray=3D"3 3" stroke-miterlimit=3D"10" d=3D"M450 40=
+v410" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><for=
+eignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredF=
+eatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overf=
+low:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" st=
+yle=3D"display:flex;align-items:unsafe center;justify-content:unsafe center=
+;width:98px;height:1px;padding-top:20px;margin-left:401px"><div data-drawio=
+-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0=
+;text-align:center"><div style=3D"display:inline-block;font-size:12px;font-=
+family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:=
+normal;overflow-wrap:normal">unix command</div></div></div></foreignObject>=
+<text x=3D"450" y=3D"24" font-family=3D"Helvetica" font-size=3D"12" text-an=
+chor=3D"middle">
+                    unix command
+                </text></switch><path fill=3D"#fff2cc" stroke=3D"#d6b656" d=
+=3D"M445 98h10v280h-10z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#000" stroke-miterlimit=3D"10" d=3D"m55 86.9 178.63.1" pointer-events=
+=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m238.88 87=
+-7 3.5 1.75-3.5-1.75-3.5Z" pointer-events=3D"all"/><path fill=3D"none" d=3D=
+"M100 70h100v20H100z" pointer-events=3D"all"/><switch transform=3D"translat=
+e(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D=
+"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility=
+" style=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.or=
+g/1999/xhtml" style=3D"display:flex;align-items:unsafe center;justify-conte=
+nt:unsafe center;width:1px;height:1px;padding-top:80px;margin-left:150px"><=
+div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-=
+box;font-size:0;text-align:center"><div style=3D"display:inline-block;font-=
+size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:a=
+ll;white-space:nowrap">exec.Command</div></div></div></foreignObject><text =
+x=3D"150" y=3D"84" font-family=3D"Helvetica" font-size=3D"12" text-anchor=
+=3D"middle">
+                    exec.Command
+                </text></switch><path fill=3D"none" stroke=3D"#000" stroke-=
+miterlimit=3D"10" d=3D"m258 101.53 178.63-.43" pointer-events=3D"stroke"/><=
+path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m441.88 101.08-6.99 3.52=
+ 1.74-3.5-1.76-3.5Z" pointer-events=3D"all"/><path fill=3D"none" d=3D"M305 =
+80h90v20h-90z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -=
+.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-events=3D"none" =
+requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=
+=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/=
+xhtml" style=3D"display:flex;align-items:unsafe center;justify-content:unsa=
+fe center;width:1px;height:1px;padding-top:90px;margin-left:350px"><div dat=
+a-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;fon=
+t-size:0;text-align:center"><div style=3D"display:inline-block;font-size:12=
+px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;whit=
+e-space:nowrap">start command</div></div></div></foreignObject><text x=3D"3=
+50" y=3D"94" font-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"midd=
+le">
+                    start command
+                </text></switch><path fill=3D"none" stroke=3D"#000" stroke-=
+miterlimit=3D"10" d=3D"m257.5 220.02 178.63-.02" pointer-events=3D"stroke"/=
+><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m441.38 220-7 3.5 1.75=
+-3.5-1.75-3.5Z" pointer-events=3D"all"/><path fill=3D"none" stroke=3D"#000"=
+ stroke-miterlimit=3D"10" d=3D"m442.5 290-178.63.02" pointer-events=3D"stro=
+ke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m258.62 290.02 7-3=
+.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"none" stroke=
+=3D"#000" stroke-miterlimit=3D"10" d=3D"m442.5 370-178.63.02" pointer-event=
+s=3D"stroke"/><path stroke=3D"#000" stroke-miterlimit=3D"10" d=3D"m258.62 3=
+70.02 7-3.5-1.75 3.5 1.75 3.5Z" pointer-events=3D"all"/><path fill=3D"none"=
+ d=3D"M330 200h40v20h-40z" pointer-events=3D"all"/><switch transform=3D"tra=
+nslate(-.5 -.5)"><foreignObject width=3D"100%" height=3D"100%" pointer-even=
+ts=3D"none" requiredFeatures=3D"http://www.w3.org/TR/SVG11/feature#Extensib=
+ility" style=3D"overflow:visible;text-align:left"><div xmlns=3D"http://www.=
+w3.org/1999/xhtml" style=3D"display:flex;align-items:unsafe center;justify-=
+content:unsafe center;width:1px;height:1px;padding-top:210px;margin-left:35=
+0px"><div data-drawio-colors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:b=
+order-box;font-size:0;text-align:center"><div style=3D"display:inline-block=
+;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-ev=
+ents:all;white-space:nowrap">input</div></div></div></foreignObject><text x=
+=3D"350" y=3D"214" font-family=3D"Helvetica" font-size=3D"12" text-anchor=
+=3D"middle">
+                    input
+                </text></switch><path fill=3D"none" d=3D"M325 270h50v20h-50=
+z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><foreig=
+nObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFeat=
+ures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overflow=
+:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" style=
+=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;wi=
+dth:1px;height:1px;padding-top:280px;margin-left:350px"><div data-drawio-co=
+lors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;te=
+xt-align:center"><div style=3D"display:inline-block;font-size:12px;font-fam=
+ily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:now=
+rap">output</div></div></div></foreignObject><text x=3D"350" y=3D"284" font=
+-family=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    output
+                </text></switch><path fill=3D"none" d=3D"M335 350h30v20h-30=
+z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><foreig=
+nObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFeat=
+ures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overflow=
+:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" style=
+=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;wi=
+dth:1px;height:1px;padding-top:360px;margin-left:350px"><div data-drawio-co=
+lors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;te=
+xt-align:center"><div style=3D"display:inline-block;font-size:12px;font-fam=
+ily:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:now=
+rap">exit</div></div></div></foreignObject><text x=3D"350" y=3D"364" font-f=
+amily=3D"Helvetica" font-size=3D"12" text-anchor=3D"middle">
+                    exit
+                </text></switch><path fill=3D"none" d=3D"M125 360h40v20h-40=
+z" pointer-events=3D"all"/><switch transform=3D"translate(-.5 -.5)"><foreig=
+nObject width=3D"100%" height=3D"100%" pointer-events=3D"none" requiredFeat=
+ures=3D"http://www.w3.org/TR/SVG11/feature#Extensibility" style=3D"overflow=
+:visible;text-align:left"><div xmlns=3D"http://www.w3.org/1999/xhtml" style=
+=3D"display:flex;align-items:unsafe center;justify-content:unsafe center;wi=
+dth:1px;height:1px;padding-top:370px;margin-left:145px"><div data-drawio-co=
+lors=3D"color: rgb(0, 0, 0);" style=3D"box-sizing:border-box;font-size:0;te=
+xt-align:center"><div style=3D"display:inline-block;font-size:12px;font-fam=
+ily:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700=
+;white-space:nowrap">exit</div></div></div></foreignObject><text x=3D"145" =
+y=3D"374" font-family=3D"Helvetica" font-size=3D"12" font-weight=3D"bold" t=
+ext-anchor=3D"middle">
+                    exit
+                </text></switch><switch><g requiredFeatures=3D"http://www.w=
+3.org/TR/SVG11/feature#Extensibility"/><a xlink:href=3D"https://www.diagram=
+s.net/doc/faq/svg-export-text-problems" target=3D"_blank" transform=3D"tran=
+slate(0 -5)"><text x=3D"50%" y=3D"100%" font-size=3D"10" text-anchor=3D"mid=
+dle">
+                Viewer does not support full SVG 1.1
+            </text></a></switch></svg>
+------MultipartBoundary--YGAWw20jDQQxsQ9EhghJawwgvvfIyhrKwpFKQIIHXb------
