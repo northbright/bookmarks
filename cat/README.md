@@ -24,6 +24,7 @@
 * [幼猫从小吃猫罐头有必要吗，该怎么选呢？｜ZIWI巅峰主食罐值得买吗？](https://www.zhihu.com/tardis/bd/art/636412502)
 * [有适合离乳期幼猫吃的主食罐头吗？](https://www.zhihu.com/tardis/bd/ans/2236495698)
 * [选购猫粮有什么建议？(青虎爸爸的回答)](https://www.zhihu.com/question/21916276/answer/775664940)
+* [猫粮的推荐与避雷](https://zhuanlan.zhihu.com/p/358685187)
 * nulo
   * [准备给家里小猫换干粮了，nulo猫粮怎么样？](https://www.zhihu.com/question/529400741)
   * [nulo猫粮鸡肉款，这几年引进的最靠谱进口粮，没有之一，无脑买买买的新选择](https://zhuanlan.zhihu.com/p/403421941)
