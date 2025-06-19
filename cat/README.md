@@ -26,6 +26,7 @@
 * [选购猫粮有什么建议？(青虎爸爸的回答)](https://www.zhihu.com/question/21916276/answer/775664940)
 * nulo
   * [准备给家里小猫换干粮了，nulo猫粮怎么样？](https://www.zhihu.com/question/529400741)
+  * [nulo猫粮鸡肉款，这几年引进的最靠谱进口粮，没有之一，无脑买买买的新选择](https://zhuanlan.zhihu.com/p/403421941)
 
 ## 玩具
 * [这些玩具弄不好，可是会要猫命的！细数那些不安全的猫玩具](https://zhuanlan.zhihu.com/p/70074490)
