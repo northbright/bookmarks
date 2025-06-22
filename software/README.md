@@ -97,6 +97,7 @@
 * [A simple guide to using FFmpeg to convert images to video](https://www.plainlyvideos.com/blog/ffmpeg-convert-images-to-video)
 * [Loop images at specific frame rate to generate a video](https://ffmpegbyexample.com/examples/fnjrnx47/loop_images_at_specific_frame_rate_to_generate_video/)
 * [Slideshow](https://trac.ffmpeg.org/wiki/Slideshow)
+* [deprecated pixel format used, make sure you did set range correctly](https://lists.ffmpeg.org/pipermail/ffmpeg-user/2023-June/056488.html)
 
 #### Fade
 * [Add Fade In and Fade Out Effects With ffmpeg!](https://dev.to/dak425/add-fade-in-and-fade-out-effects-with-ffmpeg-2bj7)
