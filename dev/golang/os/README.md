@@ -27,3 +27,4 @@
 * [Some Useful Patterns for Go's os/exec](https://www.dolthub.com/blog/2022-11-28-go-os-exec-patterns/)
 * [Advanced command execution in Go with os/exec](https://blog.kowalczyk.info/article/wOYk/advanced-command-execution-in-go-with-osexec.html)
 * [Killing a process and all of its descendants in Go](https://sigmoid.at/post/2023/08/kill_process_descendants_golang/)
+* [Go exec.CommandContext is not being terminated after context timeout](https://stackoverflow.com/questions/71714228/go-exec-commandcontext-is-not-being-terminated-after-context-timeout)
