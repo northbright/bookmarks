@@ -1,0 +1,798 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://sigmoid.at/post/2023/08/kill_process_descendants_golang/
+Subject: Killing a process and all of its descendants in Go - sigmoid.at
+Date: Sun, 22 Jun 2025 09:08:37 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----"
+
+
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----
+Content-Type: text/html
+Content-ID: <frame-3D5ABE3C4867B5D453D57539BF540A81@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://sigmoid.at/post/2023/08/kill_process_descendants_golang/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/=
+css" href=3D"cid:css-e1d7072d-57c1-4749-a05d-9b7a54056d7b@mhtml.blink" /><l=
+ink rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-27e0e26d-6c32-49cf=
+-9d26-b457236049d1@mhtml.blink" /><link rel=3D"stylesheet" type=3D"text/css=
+" href=3D"cid:css-63325563-641f-494b-91af-a28cfe36ff1b@mhtml.blink" /><link=
+ rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-5f5a2231-7248-4708-9c=
+b8-c88662b79533@mhtml.blink" />
+
+  <title>Killing a process and all of its descendants in Go - sigmoid.at</t=
+itle>
+
+
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+<link rel=3D"stylesheet" href=3D"https://sigmoid.at/css/latex.css">
+<link rel=3D"stylesheet" href=3D"https://sigmoid.at/css/main.css">
+<link rel=3D"stylesheet" href=3D"https://sigmoid.at/css/override.css">
+
+<meta name=3D"generator" content=3D"Hugo 0.83.0"></head><body>
+
+
+
+
+
+
+<header>
+  <nav class=3D"navbar">
+  <div class=3D"nav">
+   =20
+
+    <ul class=3D"nav-links">
+     =20
+    </ul>
+  </div>
+</nav>
+  <div class=3D"intro-header">
+    <div class=3D"container">
+      <div class=3D"post-heading">
+       =20
+          <h1>Killing a process and all of its descendants in Go</h1>
+         =20
+       =20
+      </div>
+    </div>
+  </div>
+</header>
+<div id=3D"content">
+  <div class=3D"container" role=3D"main">
+    <article class=3D"article">
+      <div class=3D"postmeta">
+        <span class=3D"meta-post">
+  <i class=3D"fa fa-calendar-alt"></i>Aug 20, 2023
+ =20
+</span>
+      </div>
+      <br>
+     =20
+    <p>The Go <a href=3D"https://pkg.go.dev/os/exec"><code>os/exec</code> p=
+ackage</a> allows for passing a <code>Context</code> when executing a comma=
+nd, therefore allowing for early termination if the context is canceled.
+Unfortunately, this comes with a caveat: While the spawned process will be =
+killed, its children will simply be reparented and keep on going.</p>
+<p>We can work around this by, instead of sending <code>SIGKILL</code> to t=
+he process, sending <code>SIGKILL</code> to the entire process group.
+Note that this is OS-specific and will not work on non-POSIX operating syst=
+ems.</p>
+<p><strong>Caveats</strong></p>
+<ul>
+<li>If you are running this in a Docker container, make sure that you have =
+something (e.g. <a href=3D"https://github.com/Yelp/dumb-init">dumb-init</a>=
+) running on PID 1 that will <code>wait(2)</code> on the zombie processes. =
+Otherwise, this will still leak entries in the process table.</li>
+<li>This mirrors the behavior of the Go stdlib which sends <code>SIGKILL</c=
+ode> on context cancelation. Alternate strategies (e.g. <code>SIGTERM</code=
+> with <code>SIGKILL</code> fallback) may be worth considering, depending o=
+n the use case.</li>
+</ul>
+<div class=3D"highlight"><pre style=3D"color:#f8f8f2;background-color:#2728=
+22;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class=3D"language-golang=
+" data-lang=3D"golang"><span style=3D"color:#f92672">import</span> <span st=
+yle=3D"color:#e6db74">"syscall"</span>
+<span style=3D"color:#f92672">import</span> <span style=3D"color:#e6db74">"=
+context"</span>
+<span style=3D"color:#f92672">import</span> <span style=3D"color:#e6db74">"=
+os/exec"</span>
+
+<span style=3D"color:#75715e">// Runs the specified exec.Cmd and ensures th=
+at all children are killed when the command terminates
+</span><span style=3D"color:#75715e">// The exit can occur due to the proce=
+ss itself exiting, or the context being canceled
+</span><span style=3D"color:#75715e">// This only works on POSIX systems an=
+d has only been tested on Linux (Ubuntu 22.04) with Go version 1.18.
+</span><span style=3D"color:#75715e">//
+</span><span style=3D"color:#75715e">// This expects cmd to not have a cont=
+ext set, although it should handle it being set gracefully.
+</span><span style=3D"color:#75715e">// With the context set on cmd, we cou=
+ld save ourselves the ceremony and just signal the process group after cmd.=
+Wait terminates.
+</span><span style=3D"color:#75715e">// Unfortunately, this won't work reli=
+ably, as there are some unfortunate edge cases where having a [WaitDelay](h=
+ttps://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/os/exec/exec.go;=
+l=3D286) of zero results in cmd.Wait blocking forever on the orphaned subpr=
+ocesses.
+</span><span style=3D"color:#75715e">//
+</span><span style=3D"color:#75715e">// Outline:
+</span><span style=3D"color:#75715e">// 1. Set the process group id on the =
+child process and its children
+</span><span style=3D"color:#75715e">// 2. Wait for the process to finish i=
+n a separate goroutine
+</span><span style=3D"color:#75715e">// 3. Select on the context being canc=
+eled and the command terminating
+</span><span style=3D"color:#75715e">// 4. After either, send a SIGKILL to =
+the process group
+</span><span style=3D"color:#75715e"></span><span style=3D"color:#66d9ef">f=
+unc</span> <span style=3D"color:#a6e22e">runCommandAndKillChildrenOnTermina=
+tion</span>(<span style=3D"color:#a6e22e">ctx</span> <span style=3D"color:#=
+a6e22e">context</span>.<span style=3D"color:#a6e22e">Context</span>, <span =
+style=3D"color:#a6e22e">cmd</span> <span style=3D"color:#f92672">*</span><s=
+pan style=3D"color:#a6e22e">exec</span>.<span style=3D"color:#a6e22e">Cmd</=
+span>) <span style=3D"color:#66d9ef">error</span> {
+	<span style=3D"color:#75715e">// Request that the process group id be set =
+(Setpgid: true) to the PID of the newly spawned process (Pgid: 0)
+</span><span style=3D"color:#75715e"></span>	<span style=3D"color:#a6e22e">=
+cmd</span>.<span style=3D"color:#a6e22e">SysProcAttr</span> =3D <span style=
+=3D"color:#f92672">&amp;</span><span style=3D"color:#a6e22e">syscall</span>=
+.<span style=3D"color:#a6e22e">SysProcAttr</span>{<span style=3D"color:#a6e=
+22e">Setpgid</span>: <span style=3D"color:#66d9ef">true</span>, <span style=
+=3D"color:#a6e22e">Pgid</span>: <span style=3D"color:#ae81ff">0</span>}
+
+	<span style=3D"color:#66d9ef">if</span> <span style=3D"color:#a6e22e">err<=
+/span> <span style=3D"color:#f92672">:=3D</span> <span style=3D"color:#a6e2=
+2e">cmd</span>.<span style=3D"color:#a6e22e">Start</span>(); <span style=3D=
+"color:#a6e22e">err</span> <span style=3D"color:#f92672">!=3D</span> <span =
+style=3D"color:#66d9ef">nil</span> {
+		<span style=3D"color:#66d9ef">return</span> <span style=3D"color:#a6e22e"=
+>err</span>
+	}
+
+	<span style=3D"color:#a6e22e">pgid</span> <span style=3D"color:#f92672">:=
+=3D</span> <span style=3D"color:#a6e22e">cmd</span>.<span style=3D"color:#a=
+6e22e">Process</span>.<span style=3D"color:#a6e22e">Pid</span>
+
+	<span style=3D"color:#75715e">// Buffered channel to make sure the writer =
+goroutine doesn't block, in case the reader completes early because of the =
+cancellation
+</span><span style=3D"color:#75715e"></span>	<span style=3D"color:#a6e22e">=
+cmdDone</span> <span style=3D"color:#f92672">:=3D</span> make(<span style=
+=3D"color:#66d9ef">chan</span> <span style=3D"color:#66d9ef">error</span>, =
+<span style=3D"color:#ae81ff">1</span>)
+	<span style=3D"color:#75715e">// Spin off a separate goroutine to wait for=
+ the command and report the status back
+</span><span style=3D"color:#75715e"></span>	<span style=3D"color:#66d9ef">=
+go</span> <span style=3D"color:#66d9ef">func</span>() {
+		<span style=3D"color:#66d9ef">defer</span> close(<span style=3D"color:#a6=
+e22e">cmdDone</span>)
+
+		<span style=3D"color:#a6e22e">err</span> <span style=3D"color:#f92672">:=
+=3D</span> <span style=3D"color:#a6e22e">cmd</span>.<span style=3D"color:#a=
+6e22e">Wait</span>()
+		<span style=3D"color:#a6e22e">cmdDone</span> <span style=3D"color:#f92672=
+">&lt;-</span> <span style=3D"color:#a6e22e">err</span>
+	}()
+
+	<span style=3D"color:#75715e">// Wait for either the command to terminate,=
+ or the context to be canceled
+</span><span style=3D"color:#75715e"></span>	<span style=3D"color:#66d9ef">=
+var</span> <span style=3D"color:#a6e22e">isCancellation</span> <span style=
+=3D"color:#66d9ef">bool</span>
+	<span style=3D"color:#66d9ef">var</span> <span style=3D"color:#a6e22e">cmd=
+Err</span> <span style=3D"color:#66d9ef">error</span>
+	<span style=3D"color:#66d9ef">select</span> {
+	<span style=3D"color:#66d9ef">case</span> <span style=3D"color:#a6e22e">cm=
+dErr</span> =3D <span style=3D"color:#f92672">&lt;-</span><span style=3D"co=
+lor:#a6e22e">cmdDone</span>:
+		<span style=3D"color:#a6e22e">isCancellation</span> =3D <span style=3D"co=
+lor:#66d9ef">false</span>
+	<span style=3D"color:#66d9ef">case</span> <span style=3D"color:#f92672">&l=
+t;-</span><span style=3D"color:#a6e22e">ctx</span>.<span style=3D"color:#a6=
+e22e">Done</span>():
+		<span style=3D"color:#a6e22e">isCancellation</span> =3D <span style=3D"co=
+lor:#66d9ef">true</span>
+	}
+
+	<span style=3D"color:#75715e">// Once we are finished with the command exe=
+cution, we want to kill all the children
+</span><span style=3D"color:#75715e"></span>	<span style=3D"color:#75715e">=
+// This also applies if the command exited by itself, as it may have been S=
+IGKILLed for other reasons
+</span><span style=3D"color:#75715e"></span>	<span style=3D"color:#75715e">=
+// In case of a timeout, this will also kill the command process
+</span><span style=3D"color:#75715e"></span>	<span style=3D"color:#75715e">=
+// Kill all processes in the group via `kill -9 -$PGID` (note the "-" to si=
+gnal the group)
+</span><span style=3D"color:#75715e"></span>	<span style=3D"color:#66d9ef">=
+if</span> <span style=3D"color:#a6e22e">err</span> <span style=3D"color:#f9=
+2672">:=3D</span> <span style=3D"color:#a6e22e">syscall</span>.<span style=
+=3D"color:#a6e22e">Kill</span>(<span style=3D"color:#f92672">-</span><span =
+style=3D"color:#a6e22e">pgid</span>, <span style=3D"color:#a6e22e">syscall<=
+/span>.<span style=3D"color:#a6e22e">SIGKILL</span>); <span style=3D"color:=
+#a6e22e">err</span> <span style=3D"color:#f92672">!=3D</span> <span style=
+=3D"color:#66d9ef">nil</span> {
+		<span style=3D"color:#75715e">// No such process, this is possible if the=
+ process exited and left no children behind
+</span><span style=3D"color:#75715e"></span>		<span style=3D"color:#66d9ef"=
+>if</span> <span style=3D"color:#a6e22e">errno</span>, <span style=3D"color=
+:#a6e22e">ok</span> <span style=3D"color:#f92672">:=3D</span> <span style=
+=3D"color:#a6e22e">err</span>.(<span style=3D"color:#a6e22e">syscall</span>=
+.<span style=3D"color:#a6e22e">Errno</span>); <span style=3D"color:#a6e22e"=
+>ok</span> <span style=3D"color:#f92672">&amp;&amp;</span> <span style=3D"c=
+olor:#a6e22e">errno</span> <span style=3D"color:#f92672">=3D=3D</span> <spa=
+n style=3D"color:#a6e22e">syscall</span>.<span style=3D"color:#a6e22e">ESRC=
+H</span> {
+			<span style=3D"color:#75715e">// Do nothing, treat it like a regular exi=
+t
+</span><span style=3D"color:#75715e"></span>		} <span style=3D"color:#66d9e=
+f">else</span> {
+			<span style=3D"color:#66d9ef">return</span> <span style=3D"color:#a6e22e=
+">err</span>
+		}
+	}
+
+	<span style=3D"color:#66d9ef">if</span> <span style=3D"color:#a6e22e">isCa=
+ncellation</span> {
+        <span style=3D"color:#75715e">// An alternative here is to wait on =
+cmdDone, as the process must terminate either way
+</span><span style=3D"color:#75715e"></span>        <span style=3D"color:#7=
+5715e">// This would allow bubbling up the "actual" process error (i.e. SIG=
+KILL received, in case of cancelation)
+</span><span style=3D"color:#75715e"></span>        <span style=3D"color:#7=
+5715e">// However, there appears to be little value in it and it merely int=
+roduces more complexity and another point of error
+</span><span style=3D"color:#75715e"></span>		<span style=3D"color:#66d9ef"=
+>return</span> <span style=3D"color:#a6e22e">ctx</span>.<span style=3D"colo=
+r:#a6e22e">Err</span>()
+	} <span style=3D"color:#66d9ef">else</span> {
+		<span style=3D"color:#66d9ef">return</span> <span style=3D"color:#a6e22e"=
+>cmdErr</span>
+	}
+}
+</code></pre></div>
+
+
+     =20
+    </article>
+   =20
+  </div>
+
+        </div><footer>
+  <div class=3D"container">
+    <p class=3D"credits copyright">
+      </p><p class=3D"credits theme-by">
+        Powered By <a href=3D"https://gohugo.io/">Hugo</a>&nbsp;/&nbsp;Them=
+e&nbsp;<a href=3D"https://github.com/HelloRusk/HugoTeX">HugoTeX</a>
+        <br>
+        <a href=3D"https://sigmoid.at/about">Simon Strassl</a>
+        =C2=A9
+        2025
+      </p>
+  </div>
+</footer>
+
+</body></html>
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-e1d7072d-57c1-4749-a05d-9b7a54056d7b@mhtml.blink
+
+@charset "utf-8";
+
+.CtxtMenu_InfoClose { top: 0.2em; right: 0.2em; }
+
+.CtxtMenu_InfoContent { overflow: auto; text-align: left; font-size: 80%; p=
+adding: 0.4em 0.6em; border: 1px inset; margin: 1em 0px; max-height: 20em; =
+max-width: 30em; background-color: rgb(238, 238, 238); white-space: normal;=
+ }
+
+.CtxtMenu_Info.CtxtMenu_MousePost { outline: none; }
+
+.CtxtMenu_Info { position: fixed; left: 50%; width: auto; text-align: cente=
+r; border: 3px outset; padding: 1em 2em; background-color: rgb(221, 221, 22=
+1); color: black; cursor: default; font-family: message-box; font-size: 120=
+%; font-style: normal; text-indent: 0px; text-transform: none; line-height:=
+ normal; letter-spacing: normal; word-spacing: normal; overflow-wrap: norma=
+l; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; box=
+-shadow: rgb(128, 128, 128) 0px 10px 20px; }
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-27e0e26d-6c32-49cf-9d26-b457236049d1@mhtml.blink
+
+@charset "utf-8";
+
+.CtxtMenu_MenuClose { position: absolute; cursor: pointer; display: inline-=
+block; border: 2px solid rgb(170, 170, 170); border-radius: 18px; font-fami=
+ly: "Courier New", Courier; font-size: 24px; color: rgb(240, 240, 240); }
+
+.CtxtMenu_MenuClose span { display: block; background-color: rgb(170, 170, =
+170); border: 1.5px solid; border-radius: 18px; line-height: 0; padding: 8p=
+x 0px 6px; }
+
+.CtxtMenu_MenuClose:hover { color: white !important; border: 2px solid rgb(=
+204, 204, 204) !important; }
+
+.CtxtMenu_MenuClose:hover span { background-color: rgb(204, 204, 204) !impo=
+rtant; }
+
+.CtxtMenu_MenuClose:hover:focus { outline: none; }
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-63325563-641f-494b-91af-a28cfe36ff1b@mhtml.blink
+
+@charset "utf-8";
+
+.CtxtMenu_Menu { position: absolute; background-color: white; color: black;=
+ width: auto; padding: 5px 0px; border: 1px solid rgb(204, 204, 204); margi=
+n: 0px; cursor: default; font-style: ; font-variant: normal; font-weight: ;=
+ font-stretch: ; font-size: ; font-family: ; font-optical-sizing: ; font-ke=
+rning: ; font-feature-settings: ; font-variation-settings: ; text-align: le=
+ft; text-indent: 0px; text-transform: none; line-height: normal; letter-spa=
+cing: normal; word-spacing: normal; overflow-wrap: normal; white-space: now=
+rap; float: none; z-index: 201; border-radius: 5px; box-shadow: rgb(128, 12=
+8, 128) 0px 10px 20px; }
+
+.CtxtMenu_MenuItem { padding: 1px 2em; background: transparent; }
+
+.CtxtMenu_MenuArrow { position: absolute; right: 0.5em; padding-top: 0.25em=
+; color: rgb(102, 102, 102); font-family: null; font-size: 0.75em; }
+
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow { color: white; }
+
+.CtxtMenu_MenuArrow.CtxtMenu_RTL { left: 0.5em; right: auto; }
+
+.CtxtMenu_MenuCheck { position: absolute; left: 0.7em; font-family: null; }
+
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right: 0.7em; left: auto; }
+
+.CtxtMenu_MenuRadioCheck { position: absolute; left: 0.7em; }
+
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL { right: 0.7em; left: auto; }
+
+.CtxtMenu_MenuInputBox { padding-left: 1em; right: 0.5em; color: rgb(102, 1=
+02, 102); font-family: null; }
+
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL { left: 0.1em; }
+
+.CtxtMenu_MenuComboBox { left: 0.1em; padding-bottom: 0.5em; }
+
+.CtxtMenu_MenuSlider { left: 0.1em; }
+
+.CtxtMenu_SliderValue { position: absolute; right: 0.1em; padding-top: 0.25=
+em; color: rgb(51, 51, 51); font-size: 0.75em; }
+
+.CtxtMenu_SliderBar { outline: none; background: rgb(211, 211, 211); }
+
+.CtxtMenu_MenuLabel { padding: 1px 2em 3px 1.33em; font-style: italic; }
+
+.CtxtMenu_MenuRule { border-top: 1px solid rgb(221, 221, 221); margin: 4px =
+3px; }
+
+.CtxtMenu_MenuDisabled { color: graytext; }
+
+.CtxtMenu_MenuActive { background-color: rgb(96, 104, 114); color: white; }
+
+.CtxtMenu_MenuDisabled:focus { background-color: rgb(232, 232, 232); }
+
+.CtxtMenu_MenuLabel:focus { background-color: rgb(232, 232, 232); }
+
+.CtxtMenu_ContextMenu:focus { outline: none; }
+
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus { outline: none; }
+
+.CtxtMenu_SelectionMenu { position: relative; float: left; border-bottom: n=
+one; box-shadow: none; border-radius: 0px; }
+
+.CtxtMenu_SelectionItem { padding-right: 1em; }
+
+.CtxtMenu_Selection { right: 40%; width: 50%; }
+
+.CtxtMenu_SelectionBox { padding: 0em; max-height: 20em; max-width: none; b=
+ackground-color: rgb(255, 255, 255); }
+
+.CtxtMenu_SelectionDivider { clear: both; border-top: 2px solid rgb(0, 0, 0=
+); }
+
+.CtxtMenu_Menu .CtxtMenu_MenuClose { top: -10px; left: -10px; }
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-5f5a2231-7248-4708-9cb8-c88662b79533@mhtml.blink
+
+@charset "utf-8";
+
+mjx-container[jax=3D"CHTML"] { line-height: 0; }
+
+mjx-container [space=3D"1"] { margin-left: 0.111em; }
+
+mjx-container [space=3D"2"] { margin-left: 0.167em; }
+
+mjx-container [space=3D"3"] { margin-left: 0.222em; }
+
+mjx-container [space=3D"4"] { margin-left: 0.278em; }
+
+mjx-container [space=3D"5"] { margin-left: 0.333em; }
+
+mjx-container [rspace=3D"1"] { margin-right: 0.111em; }
+
+mjx-container [rspace=3D"2"] { margin-right: 0.167em; }
+
+mjx-container [rspace=3D"3"] { margin-right: 0.222em; }
+
+mjx-container [rspace=3D"4"] { margin-right: 0.278em; }
+
+mjx-container [rspace=3D"5"] { margin-right: 0.333em; }
+
+mjx-container [size=3D"s"] { font-size: 70.7%; }
+
+mjx-container [size=3D"ss"] { font-size: 50%; }
+
+mjx-container [size=3D"Tn"] { font-size: 60%; }
+
+mjx-container [size=3D"sm"] { font-size: 85%; }
+
+mjx-container [size=3D"lg"] { font-size: 120%; }
+
+mjx-container [size=3D"Lg"] { font-size: 144%; }
+
+mjx-container [size=3D"LG"] { font-size: 173%; }
+
+mjx-container [size=3D"hg"] { font-size: 207%; }
+
+mjx-container [size=3D"HG"] { font-size: 249%; }
+
+mjx-container [width=3D"full"] { width: 100%; }
+
+mjx-box { display: inline-block; }
+
+mjx-block { display: block; }
+
+mjx-itable { display: inline-table; }
+
+mjx-row { display: table-row; }
+
+mjx-row > * { display: table-cell; }
+
+mjx-mtext { display: inline-block; }
+
+mjx-mstyle { display: inline-block; }
+
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+
+mjx-mphantom { visibility: hidden; }
+
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); us=
+er-select: none; position: absolute !important; padding: 1px 0px 0px !impor=
+tant; border: 0px !important; display: block !important; width: auto !impor=
+tant; overflow: hidden !important; }
+
+mjx-assistive-mml[display=3D"block"] { width: 100% !important; }
+
+mjx-c::before { display: block; width: 0px; }
+
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S=
+1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+
+@font-face { font-family: MJXZERO; src: url("https://cdn.jsdelivr.net/npm/m=
+athjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");=
+ }
+
+@font-face { font-family: MJXTEX; src: url("https://cdn.jsdelivr.net/npm/ma=
+thjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("=
+woff"); }
+
+@font-face { font-family: MJXTEX-B; src: url("https://cdn.jsdelivr.net/npm/=
+mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("w=
+off"); }
+
+@font-face { font-family: MJXTEX-I; src: url("https://cdn.jsdelivr.net/npm/=
+mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format(=
+"woff"); }
+
+@font-face { font-family: MJXTEX-MI; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format=
+("woff"); }
+
+@font-face { font-family: MJXTEX-BI; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") fo=
+rmat("woff"); }
+
+@font-face { font-family: MJXTEX-S1; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") form=
+at("woff"); }
+
+@font-face { font-family: MJXTEX-S2; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") form=
+at("woff"); }
+
+@font-face { font-family: MJXTEX-S3; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") form=
+at("woff"); }
+
+@font-face { font-family: MJXTEX-S4; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") form=
+at("woff"); }
+
+@font-face { font-family: MJXTEX-A; src: url("https://cdn.jsdelivr.net/npm/=
+mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format(=
+"woff"); }
+
+@font-face { font-family: MJXTEX-C; src: url("https://cdn.jsdelivr.net/npm/=
+mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff"=
+) format("woff"); }
+
+@font-face { font-family: MJXTEX-CB; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") =
+format("woff"); }
+
+@font-face { font-family: MJXTEX-FR; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") fo=
+rmat("woff"); }
+
+@font-face { font-family: MJXTEX-FRB; src: url("https://cdn.jsdelivr.net/np=
+m/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") form=
+at("woff"); }
+
+@font-face { font-family: MJXTEX-SS; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") =
+format("woff"); }
+
+@font-face { font-family: MJXTEX-SSB; src: url("https://cdn.jsdelivr.net/np=
+m/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") fo=
+rmat("woff"); }
+
+@font-face { font-family: MJXTEX-SSI; src: url("https://cdn.jsdelivr.net/np=
+m/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") =
+format("woff"); }
+
+@font-face { font-family: MJXTEX-SC; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") for=
+mat("woff"); }
+
+@font-face { font-family: MJXTEX-T; src: url("https://cdn.jsdelivr.net/npm/=
+mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") =
+format("woff"); }
+
+@font-face { font-family: MJXTEX-V; src: url("https://cdn.jsdelivr.net/npm/=
+mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") form=
+at("woff"); }
+
+@font-face { font-family: MJXTEX-VB; src: url("https://cdn.jsdelivr.net/npm=
+/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format=
+("woff"); }
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://sigmoid.at/css/latex.css
+
+@charset "utf-8";
+
+@font-face { font-family: "Latin Modern"; font-style: normal; font-weight: =
+normal; font-display: swap; src: url("./fonts/LM-regular.woff2") format("wo=
+ff2"), url("./fonts/LM-regular.woff") format("woff"), url("./fonts/LM-regul=
+ar.ttf") format("truetype"); }
+
+@font-face { font-family: "Latin Modern"; font-style: italic; font-weight: =
+normal; font-display: swap; src: url("./fonts/LM-italic.woff2") format("wof=
+f2"), url("./fonts/LM-italic.woff") format("woff"), url("./fonts/LM-italic.=
+ttf") format("truetype"); }
+
+@font-face { font-family: "Latin Modern"; font-style: normal; font-weight: =
+bold; font-display: swap; src: url("./fonts/LM-bold.woff2") format("woff2")=
+, url("./fonts/LM-bold.woff") format("woff"), url("./fonts/LM-bold.ttf") fo=
+rmat("truetype"); }
+
+@font-face { font-family: "Latin Modern"; font-style: italic; font-weight: =
+bold; font-display: swap; src: url("./fonts/LM-bold-italic.woff2") format("=
+woff2"), url("./fonts/LM-bold-italic.woff") format("woff"), url("./fonts/LM=
+-bold-italic.ttf") format("truetype"); }
+
+*, ::before, ::after { box-sizing: border-box; }
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, dl, =
+dd { margin: 0px; }
+
+html { font-size: 1rem; scroll-behavior: smooth; }
+
+body { font-family: "Latin Modern", Georgia, Cambria, "Times New Roman", Ti=
+mes, serif; line-height: 1.8; max-width: 100ch; min-height: 100vh; overflow=
+-x: hidden; margin: 0px auto; padding: 2rem 1.25rem; counter-reset: definit=
+ion 0; color: rgb(27, 24, 24); background-color: rgb(249, 250, 251); text-r=
+endering: optimizelegibility; }
+
+p { text-align: justify; hyphens: auto; margin-top: 1rem; }
+
+a:not([class]) { text-decoration-skip-ink: auto; }
+
+a, a:visited { color: rgb(170, 0, 0); }
+
+a:focus { outline-offset: 2px; outline: rgb(22, 96, 243) solid 2px; }
+
+img { max-width: 100%; display: block; }
+
+input, button, textarea, select { font: inherit; }
+
+textarea { width: 100%; }
+
+article > * + * { margin-top: 1em; }
+
+code, pre, kbd { font-family: Menlo, Monaco, Consolas, "Liberation Mono", "=
+Courier New", monospace; font-size: 85%; }
+
+pre { padding: 1rem 1.4rem; max-width: 100%; overflow: auto; border-radius:=
+ 4px; background: rgb(232, 237, 242); }
+
+pre code { font-size: 95%; position: relative; }
+
+kbd { background: rgb(255, 255, 255); border: 1px solid rgb(175, 179, 182);=
+ border-radius: 2px; padding: 2px 4px; font-size: 75%; }
+
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; max-wi=
+dth: 100%; }
+
+th, td { text-align: left; padding: 0.5rem; }
+
+td { border-bottom: 1px solid rgb(217, 217, 217); }
+
+thead th { border-bottom: 2px solid rgb(179, 179, 179); }
+
+tfoot th { border-top: 2px solid rgb(179, 179, 179); }
+
+h1:first-child { text-align: center; }
+
+nav ol { counter-reset: item 0; padding-left: 2rem; }
+
+nav li { display: block; }
+
+nav li::before { content: counters(item, ".") " "; counter-increment: item =
+1; padding-right: 0.85rem; }
+
+dl dd { text-align: center; }
+
+.theorem { counter-increment: theorem 1; display: block; margin: 12px 0px; =
+font-style: italic; }
+
+.theorem::before { content: "Theorem " counter(theorem) ". "; font-weight: =
+bold; font-style: normal; }
+
+.lemma { counter-increment: theorem 1; display: block; margin: 12px 0px; fo=
+nt-style: italic; }
+
+.lemma::before { content: "Lemma " counter(theorem) ". "; font-weight: bold=
+; font-style: normal; }
+
+.proof { display: block; margin: 12px 0px; font-style: normal; position: re=
+lative; }
+
+.proof::before { content: "Proof.=E2=80=83" attr(title); font-style: italic=
+; }
+
+.proof::after { content: "=E2=97=BE=EF=B8=8F"; position: absolute; right: -=
+12px; bottom: -2px; }
+
+.definition { counter-increment: definition 1; display: block; margin: 12px=
+ 0px; font-style: normal; }
+
+.definition::before { content: "Definition " counter(definition) ". "; font=
+-weight: bold; font-style: normal; }
+
+.author { margin: 0.85rem 0px; font-variant-caps: small-caps; text-align: c=
+enter; }
+
+.footnotes p { text-align: left; line-height: 1.5; font-size: 85%; margin-b=
+ottom: 0.4rem; }
+
+.footnotes { border-top: 1px solid rgb(99, 99, 99); }
+
+.abstract, .abstract p { text-align: center; }
+
+.abstract { margin: 2.25rem 0px; }
+
+.latex span:nth-child(1) { text-transform: uppercase; font-size: 0.75em; ve=
+rtical-align: 0.28em; margin-left: -0.48em; margin-right: -0.15em; line-hei=
+ght: 1ex; }
+
+.latex span:nth-child(2) { text-transform: uppercase; vertical-align: -0.5e=
+x; margin-left: -0.1667em; margin-right: -0.125em; line-height: 1ex; }
+
+h1 { font-size: 2.5rem; line-height: 3.25rem; margin-bottom: 1.625rem; }
+
+h2 { font-size: 1.7rem; line-height: 2rem; margin-top: 3rem; }
+
+h3 { font-size: 1.4rem; margin-top: 2.5rem; }
+
+h4 { font-size: 1.2rem; margin-top: 2rem; }
+
+h5 { font-size: 1rem; margin-top: 1.8rem; }
+
+h6 { font-size: 1rem; font-style: italic; font-weight: normal; margin-top: =
+2.5rem; }
+
+h3, h4, h5, h6 { line-height: 1.625rem; }
+
+h1 + h2 { margin-top: 1.625rem; }
+
+h2 + h3, h3 + h4, h4 + h5 { margin-top: 0.8rem; }
+
+h5 + h6 { margin-top: -0.8rem; }
+
+h2, h3, h4, h5, h6 { margin-bottom: 0.8rem; }
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://sigmoid.at/css/main.css
+
+@charset "utf-8";
+
+footer .theme-by { text-align: center; margin: 100px 0px 0px; }
+
+.pager { list-style: none; text-align: center; margin: 20px 0px 0px; paddin=
+g-left: 0px; }
+
+.pager ul { display: block; }
+
+.pager .previous > a { margin: 20px 0px 0px; float: left; display: block; }
+
+.pager .next > a { margin: 20px 0px 0px; float: right; display: block; }
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://sigmoid.at/css/override.css
+
+@charset "utf-8";
+
+figure figcaption { display: flex; flex-direction: row; justify-content: ce=
+nter; }
+
+figure figcaption > * { margin: 0px; }
+------MultipartBoundary--Bo8k5OebVkP0AyQNhxNDP4B3KA4zENxMRbsHOyKQnN------
