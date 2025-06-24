@@ -30,3 +30,4 @@
 * [Go exec.CommandContext is not being terminated after context timeout](https://stackoverflow.com/questions/71714228/go-exec-commandcontext-is-not-being-terminated-after-context-timeout)
 * [Everything You Need To Know About Managing Go Processes](https://hackernoon.com/everything-you-need-to-know-about-managing-go-processes)
   * [golang-cmd-exit-demo](https://github.com/gouravkrosx/golang-cmd-exit-demo)
+* [Go 1.20で入ったexec.CommandのCancelとWaitDelayで外部コマンドを正しく終了させる](https://poyo.hatenablog.jp/entry/2023/03/11/114225)
