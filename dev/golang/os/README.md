@@ -28,3 +28,5 @@
 * [Advanced command execution in Go with os/exec](https://blog.kowalczyk.info/article/wOYk/advanced-command-execution-in-go-with-osexec.html)
 * [Killing a process and all of its descendants in Go](https://sigmoid.at/post/2023/08/kill_process_descendants_golang/)
 * [Go exec.CommandContext is not being terminated after context timeout](https://stackoverflow.com/questions/71714228/go-exec-commandcontext-is-not-being-terminated-after-context-timeout)
+* [Everything You Need To Know About Managing Go Processes](https://hackernoon.com/everything-you-need-to-know-about-managing-go-processes)
+  * [golang-cmd-exit-demo](https://github.com/gouravkrosx/golang-cmd-exit-demo)
