@@ -12,3 +12,6 @@
 ## File System
 #### APFS
 * [Apple File System Reference](https://developer.apple.com/support/downloads/Apple-File-System-Reference.pdf)
+
+## Mac App Store
+* [Mac App Store: 集成python命令行工具](https://zhuanlan.zhihu.com/p/709753936)
