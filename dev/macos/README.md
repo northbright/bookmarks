@@ -13,6 +13,9 @@
 #### APFS
 * [Apple File System Reference](https://developer.apple.com/support/downloads/Apple-File-System-Reference.pdf)
 
+## macOS App
+* [Create MacOS App Bundle from Script](https://relentlesscoding.com/posts/create-macos-app-bundle-from-script/)
+
 ## Mac App Store
 * [Mac App Store: 集成python命令行工具](https://zhuanlan.zhihu.com/p/709753936)
 * [macOS 开发 - 在沙盒应用中嵌入命令行工具](https://www.bilibili.com/opus/841646846526881801)
