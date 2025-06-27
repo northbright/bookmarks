@@ -15,3 +15,4 @@
 
 ## Mac App Store
 * [Mac App Store: 集成python命令行工具](https://zhuanlan.zhihu.com/p/709753936)
+* [macOS 开发 - 在沙盒应用中嵌入命令行工具](https://www.bilibili.com/opus/841646846526881801)
