@@ -125,6 +125,9 @@
 #### `-shortest`
 * [FFmpeg -shortest not working when using -filter_complex with audio and video filters](https://superuser.com/questions/1684633/ffmpeg-shortest-not-working-when-using-filter-complex-with-audio-and-video-fil)
 
+#### Watermark
+* [How to Add Watermarks to Videos Using FFmpeg](https://www.bannerbear.com/blog/how-to-add-watermark-to-videos-using-ffmpeg/)
+
 ## iMovie
 * [哪里能找到比较好的 iMovie 教程？](https://www.zhihu.com/question/30082152)
 
