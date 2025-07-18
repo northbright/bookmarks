@@ -64,3 +64,6 @@
 ## 零食
 * [有哪些值得推荐的猫咪零食？(猫无忧的回答：主食罐头当零食，零食罐头当垃圾。)](https://www.zhihu.com/question/54913614/answer/977654095)
 * [有哪些值得推荐的猫咪零食？(爱生活的小小惠的回答)](https://www.zhihu.com/question/54913614/answer/1233210645)
+
+## 储粮
+* [大袋猫粮如何储存？](https://www.zhihu.com/question/279414065/answer/1133106991)
