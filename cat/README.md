@@ -29,6 +29,7 @@
   * [准备给家里小猫换干粮了，nulo猫粮怎么样？](https://www.zhihu.com/question/529400741)
   * [nulo猫粮鸡肉款，这几年引进的最靠谱进口粮，没有之一，无脑买买买的新选择](https://zhuanlan.zhihu.com/p/403421941)
 * [谁是猫粮性价比之王？](https://www.zhihu.com/tardis/bd/ans/1057242477)
+* [2025年最新|国产猫粮评测-15个品牌35款猫粮，猫粮红黑榜，性价比猫粮推荐](https://www.zhihu.com/tardis/bd/art/477701957)
 
 ## 玩具
 * [这些玩具弄不好，可是会要猫命的！细数那些不安全的猫玩具](https://zhuanlan.zhihu.com/p/70074490)
