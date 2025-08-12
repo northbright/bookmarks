@@ -105,6 +105,7 @@
 * [MongoDB](mongodb/README.md)
 * [SQLite](sqlite/README.md)
 * [Subtitle](subtitle/README.md)
+* [Semantic Versioning](semantic-versioning/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
