@@ -87,4 +87,8 @@
 ## 猫条
 * 猫条对猫咪会有害吗?
   * [深藏blue的回答](https://www.zhihu.com/question/363613704/answer/2509788786)
-  * [猫太郎CATTARO的回答](https://www.zhihu.com/question/363613704/answer/1893962665_
+  * [猫太郎CATTARO的回答](https://www.zhihu.com/question/363613704/answer/1893962665)
+
+## 主食冻干
+* 想让猫猫吃的好一点，有什么冻干更值得推荐？
+  * [何谈朋友的回答](https://www.zhihu.com/question/548705526/answer/2676455097)
