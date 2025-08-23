@@ -199,3 +199,7 @@
 ## 小米
 * [小米电视连接不到网关怎么处理?](https://www.zhihu.com/question/391255548)
 * [华为路由器连接小米电视无法联网问题](https://blog.csdn.net/weixin_44666638/article/details/112172279)
+
+## 台式机
+#### 联想
+* [【X.PIN】我买到了一台“官方魔改”的拯救者台式机](https://www.bilibili.com/video/BV1G6421f78Z/)
