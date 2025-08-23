@@ -15,15 +15,17 @@
 * [TechPowerup](http://www.techpowerup.com/reviews/)
 
 ## 笔记本
-### 联想拯救者 
+
+### 联想
+#### 联想拯救者 
 * [一步到位——联想拯救者开箱及配置升级](https://chiphell.com/forum.php?mod=viewthread&tid=1684446&extra=page%3D1%26filter%3Dtypeid%26typeid%3D724)
 * [拯救者-15拆机教程（加内存加固态清灰必看](http://bbs.zol.com.cn/nbbbs/d160_283725.html)
 * [联想拯救者Win10蓝屏0xc000000d的解决办法](http://jingyan.baidu.com/article/6b1823099ebf8aba58e1599c.html)
 
-### 联想小新
+#### 联想小新
 * [扒一扒联想小新Pro16的几个不为人知的优缺点](https://www.chiphell.com/forum.php?mod=viewthread&tid=2336271)
 
-### 联想 ThinkBook
+#### 联想 ThinkBook
 * [ThinkBook 16P 开箱简测](https://www.chiphell.com/thread-2342747-1-1.html)
 
 ### 屏幕
