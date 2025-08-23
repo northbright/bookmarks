@@ -208,4 +208,6 @@
 
 ## 台式机
 #### 联想
-* [【X.PIN】我买到了一台“官方魔改”的拯救者台式机](https://www.bilibili.com/video/BV1G6421f78Z/)
+* 拯救者刃7000K
+  * [【X.PIN】我买到了一台“官方魔改”的拯救者台式机](https://www.bilibili.com/video/BV1G6421f78Z/)
+
