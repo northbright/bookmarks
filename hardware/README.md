@@ -210,4 +210,4 @@
 #### 联想
 * 拯救者刃7000K
   * [【X.PIN】我买到了一台“官方魔改”的拯救者台式机](https://www.bilibili.com/video/BV1G6421f78Z/)
-
+  * [Intel台式机不能买了？拯救者刃7000K用笔记本处理器，值得买吗](https://www.zhihu.com/tardis/bd/art/717787746)
