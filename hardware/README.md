@@ -187,6 +187,7 @@
 
 ## 显卡
 * [解决部分nVIDIA显示卡DP输出无显示问题](https://zhuanlan.zhihu.com/p/457323299)
+* [[显卡] 剪映 升级显卡 求建议](https://www.chiphell.com/forum.php?mod=viewthread&tid=2615478)
 
 ## 华为
 * 交换机
