@@ -28,6 +28,10 @@
 #### 联想 ThinkBook
 * [ThinkBook 16P 开箱简测](https://www.chiphell.com/thread-2342747-1-1.html)
 
+### HP
+* 暗夜精灵
+  * [惠普暗影精灵9大面积黑屏到底什么情况？维修厮告诉答案！](https://www.bilibili.com/video/av1501303558)
+
 ### 屏幕
 * [笔记本屏幕导致视力下降?这下终于找到病根儿了](http://notebook.pconline.com.cn/1156/11560011.html)
 * [BLUR BUSTERS Motion Tests](https://www.testufo.com/blurtrail)
