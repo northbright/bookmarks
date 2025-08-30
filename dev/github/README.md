@@ -4,6 +4,7 @@
 * [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 * [Setting your email in Git](https://help.github.com/articles/setting-your-email-in-git/)
 * [Using SSH over the HTTPS port](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)
+* [GitHub SSH 无法连接](https://news.qq.com/rain/a/20250828A0984900)
 
 ## Security
 * [Generating a new set of recovery codes](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods#generating-a-new-set-of-recovery-codes)
