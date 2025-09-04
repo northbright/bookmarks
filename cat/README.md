@@ -98,7 +98,8 @@
 * 给猫喂冻干生骨肉是最好的喂养方式吗，该如何选择？
   * [戒猫组长的回答](https://www.zhihu.com/question/520766112/answer/2407323333)
   * [口水基与拆家猫的回答](https://www.zhihu.com/question/520766112/answer/2404583993)
-
+* [三大主食猫冻干SC、VE和PR应该怎么选？](https://www.zhihu.com/question/485536719)
+  * [白切雞的回答](https://www.zhihu.com/question/485536719/answer/2112995295)
 
 ## 生骨肉
 * [生骨肉喂猫，是不是一场骗局？](https://www2.zhihu.com/question/350713529)
