@@ -107,5 +107,8 @@
 #### VE
 * [VE冻干分析，4大进口冻干中最好的一个【终篇】4大进口冻干的对比和购买建议](https://zhuanlan.zhihu.com/p/261995433)
 
+#### PR
+* [PR冻干分析，比K9靠谱多了，但所有的冻干都是智商税](https://zhuanlan.zhihu.com/p/261361837)
+
 ## 生骨肉
 * [生骨肉喂猫，是不是一场骗局？](https://www2.zhihu.com/question/350713529)
