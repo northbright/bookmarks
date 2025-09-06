@@ -35,6 +35,8 @@
     * [“唉声叹气”的回答和评论](https://www.zhihu.com/question/418332646/answer/2659892661)
     * [“Waldeinsamkeit”的回答和评论](https://www.zhihu.com/question/418332646/answer/1514686190)
     * [“1号铲屎官”的回答和评论](https://www.zhihu.com/question/418332646/answer/2049092443)
+* Go
+  * [加拿大猫粮被禁又上热搜，回顾“Go猫粮翻车”事件，我很庆幸自己选择了这款猫粮！](https://www.zhihu.com/tardis/bd/art/480938660)
 
 ## 玩具
 * [这些玩具弄不好，可是会要猫命的！细数那些不安全的猫玩具](https://zhuanlan.zhihu.com/p/70074490)
