@@ -118,3 +118,4 @@
 
 ## 饮水
 * [猫咪超级不爱喝水怎么办？跪求各位猫奴支招！？](https://www.zhihu.com/question/64876364)
+  * [蓝猫胖胖的日常的回答](https://www.zhihu.com/question/64876364/answer/3072506600)
