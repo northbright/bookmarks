@@ -30,5 +30,6 @@
 * [How to make disk image with dd on Linux or Unix](https://www.cyberciti.biz/faq/unix-linux-dd-create-make-disk-image-commands/)
 * [dd: reading /dev/sda1: Input/output error](https://ubuntuforums.org/showthread.php?t=1666299)
 
-## Hard Links and Soft Links
+## Hard Link and Soft Link
 * [理解 Linux 的硬链接与软链接](https://www.ibm.com/developerworks/cn/linux/l-cn-hardandsymb-links/index.html)
+* [Difference between Hard Link and Soft Link](https://www.geeksforgeeks.org/operating-systems/difference-between-hard-link-and-soft-link/)
