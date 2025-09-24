@@ -11,6 +11,8 @@
 * [说一下自己的被骗经历然后曝光一家骗子救助中心，上海宠物救助领养中心](https://zhuanlan.zhihu.com/p/265212980)
 * 猫岛
   * [上海最近有个流浪猫救助收容的猫岛，值得去看看吗?](https://www.zhihu.com/question/557411264)
+* 宠邻里
+  * [从遗弃到被爱！昨天闵行这里爆满，只为TA们找新家](https://sghexport.shobserver.com/html/baijiahao/2025/08/10/1623845.html)
 
 ## 视频
 * [爷爷奶奶养大的心肝小猫咪](https://www.bilibili.com/video/BV1MU411S7ia/)
