@@ -15,6 +15,7 @@
 * 宠邻里
   * [从遗弃到被爱！昨天闵行这里爆满，只为TA们找新家](https://sghexport.shobserver.com/html/baijiahao/2025/08/10/1623845.html)
 * [上海佳娅JAR流浪动物领养](https://weibo.com/jargroup)
+* [金山王阿姨流浪狗基地](https://weibo.com/u/2180864522)
 
 ## 视频
 * [爷爷奶奶养大的心肝小猫咪](https://www.bilibili.com/video/BV1MU411S7ia/)
