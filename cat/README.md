@@ -7,6 +7,9 @@
 * [猫咪便便软怎么办？](https://zhuanlan.zhihu.com/p/421678167)
 * [新手养猫从入门到精通，猫无忧新手养猫指南，持续更新中……](https://zhuanlan.zhihu.com/p/448759562)
 
+## 救助
+* [说一下自己的被骗经历然后曝光一家骗子救助中心，上海宠物救助领养中心](https://zhuanlan.zhihu.com/p/265212980)
+
 ## 视频
 * [爷爷奶奶养大的心肝小猫咪](https://www.bilibili.com/video/BV1MU411S7ia/)
 * [《爷爷奶奶的猫》](https://www.bilibili.com/video/BV1EN4y147Sd/)
