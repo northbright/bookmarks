@@ -33,3 +33,6 @@
 ## Free Music(no copyright)
 * [pixabay](https://pixabay.com/music/)
   * [penguinmusic](https://pixabay.com/users/penguinmusic-24940186/)
+
+## 精卫
+* [歌曲《精卫》前奏有个女声的英文，那个英文是什么意思？](https://www.zhihu.com/question/579459648/answer/3003290282)
