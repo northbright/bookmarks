@@ -36,3 +36,4 @@
 
 ## 精卫
 * [歌曲《精卫》前奏有个女声的英文，那个英文是什么意思？](https://www.zhihu.com/question/579459648/answer/3003290282)
+* [这才是《精卫》原版MV](https://www.bilibili.com/video/BV18g4y1G7c5/)
