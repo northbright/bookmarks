@@ -116,6 +116,7 @@
   * [匿名用户](https://www.zhihu.com/question/485536719/answer/2442477280)
   * [三大主食猫冻干SC、VE和PR应该怎么选？](https://www.zhihu.com/question/485536719/answer/2622966526)
 * [讨论/科普｜【讨论】主食冻干是否能不复水喂](https://www.douban.com/group/topic/281268956)
+* [真得有人会完全用冻干作为主食喂猫吗？](https://www.zhihu.com/question/412019090/answer/3156041090)
 
 #### VE
 * [VE冻干分析，4大进口冻干中最好的一个【终篇】4大进口冻干的对比和购买建议](https://zhuanlan.zhihu.com/p/261995433)
