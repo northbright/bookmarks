@@ -10,3 +10,6 @@
 ## Projects
 * [FFmpeg iOS build script](https://github.com/kewlbear/FFmpeg-iOS-build-script)
 * [FFmpegKit](https://github.com/tanersener/ffmpeg-kit)
+
+## Filters
+* [Merging multiple video files with ffmpeg and xfade filter](https://stackoverflow.com/questions/63553906/merging-multiple-video-files-with-ffmpeg-and-xfade-filter/63570355#63570355)
