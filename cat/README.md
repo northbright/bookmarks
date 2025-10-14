@@ -38,6 +38,7 @@
 * [百利vs渴望，极限二选一？](https://www.bilibili.com/video/BV1bs421G7St)
 * [百利高蛋白和百利无谷鸡到底有什么区别？应该怎么选？](https://www.bilibili.com/video/BV13E4m1R7ey)
 * [高蛋白猫犬粮导致肾衰？原来都是资本的天性...](https://www.bilibili.com/video/BV163411x7C2)
+* [猫狗能永远只吃一款粮吗？这么做居然会...](https://www.bilibili.com/video/BV1n3411i7R1)
 * nulo
   * [准备给家里小猫换干粮了，nulo猫粮怎么样？](https://www.zhihu.com/question/529400741)
   * [nulo猫粮鸡肉款，这几年引进的最靠谱进口粮，没有之一，无脑买买买的新选择](https://zhuanlan.zhihu.com/p/403421941)
