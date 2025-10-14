@@ -57,6 +57,7 @@
 
 ## CrossFade
 * [Merging multiple video files with ffmpeg and xfade filter](https://stackoverflow.com/questions/63553906/merging-multiple-video-files-with-ffmpeg-and-xfade-filter/63570355#63570355)
+* [FFmpeg中转场滤镜xfade的时间参数(duration和offset)与算法解读](https://blog.csdn.net/chaijunkun/article/details/111579466)
 
 ## Creating Silence
 * [Creating silence with FFmpeg](https://notes.mark.himsley.org/FFmpeg/creating_silence.html)
