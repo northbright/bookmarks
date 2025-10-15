@@ -102,6 +102,7 @@
   * [猫猫城的回答](https://www.zhihu.com/question/355955255/answer/3565840031)
   * [考拉的小号的回答](https://www.zhihu.com/question/355955255/answer/1212225073)
   * [坦克手贝塔的回答](https://www.zhihu.com/question/355955255/answer/2456501157)
+* [【参考手册】格吾安主食罐（下拉附补充说明）](https://www.bilibili.com/video/BV1z84y1J72R)
 
 ## 猫条
 * 猫条对猫咪会有害吗?
