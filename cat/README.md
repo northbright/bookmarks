@@ -126,6 +126,7 @@
 * [真得有人会完全用冻干作为主食喂猫吗？](https://www.zhihu.com/question/412019090/answer/3156041090)
 * [国产猫冻干中，生生不息冻干和爱立方冻干哪家好？](https://www.zhihu.com/question/537998222)
 * [【讨论】国产冻干少喂，会肝损伤(第2页澡澡猫? 的回复) ](https://www.douban.com/group/topic/298669584)
+* [讨论/科普｜fljt冻干生物胺未达人级标准，ssbx检出腐胺](https://www.douban.com/group/topic/306401141)
 
 #### VE
 * [VE冻干分析，4大进口冻干中最好的一个【终篇】4大进口冻干的对比和购买建议](https://zhuanlan.zhihu.com/p/261995433)
