@@ -85,6 +85,7 @@
 
 ## 洁牙
 * [有什么比较好的猫咪洁牙用品?](https://www.zhihu.com/tardis/bd/ans/1638382982)
+* [0基础猫咪刷牙全攻略，手把手教你怎么训练猫咪刷牙](https://www.bilibili.com/video/BV1xG411J7bW)
 
 ## 零食
 * [有哪些值得推荐的猫咪零食？(猫无忧的回答：主食罐头当零食，零食罐头当垃圾。)](https://www.zhihu.com/question/54913614/answer/977654095)
