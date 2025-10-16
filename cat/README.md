@@ -107,6 +107,7 @@
 #### 进口
 * [进口主食罐分享2.0版本！宝子们！我又发现好罐头了~~~~快来看](https://www.bilibili.com/video/BV1pq4y1y73b)
 * [猫咪主食罐怎么选？12款进口猫咪主食罐测评，总有一款适合你！](https://www.bilibili.com/video/BV1Vq4y1E7pN)
+* [附进口罐头大总结！11款进口主食罐开罐分享！](https://www.bilibili.com/video/BV1214y177Xo)
 
 #### 国产
 * [【参考手册】格吾安主食罐（下拉附补充说明）](https://www.bilibili.com/video/BV1z84y1J72R)
