@@ -107,6 +107,7 @@
 * [9款高性价比国产主食罐开罐分享](https://www.bilibili.com/video/BV1t3411z79n)
 * [国产主食罐测评2.0版本，大家推荐我入的罐头，我都陆陆续续有在买，考虑我家三只的胃口，慢慢挑，好的后面再持续出奥](https://www.bilibili.com/video/BV1Gu411S72p)
 * [猫咪主食罐怎么选？12款进口猫咪主食罐测评，总有一款适合你！](https://www.bilibili.com/video/BV1Vq4y1E7pN)
+* [国产主食罐大热门！不知道怎么买的看这篇，附各代工厂总结~](https://www.bilibili.com/video/BV1A24y17773)
 
 
 ## 猫条
