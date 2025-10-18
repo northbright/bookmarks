@@ -6,6 +6,7 @@
 * [猫咪健康指南（上篇）猫咪拉肚子、软便怎么办？如何让猫咪恢复健康？](https://zhuanlan.zhihu.com/p/542049604)
 * [猫咪便便软怎么办？](https://zhuanlan.zhihu.com/p/421678167)
 * [新手养猫从入门到精通，猫无忧新手养猫指南，持续更新中……](https://zhuanlan.zhihu.com/p/448759562)
+* [养猫4年，只要它不坏我就会一直用的养猫好物！](https://www.bilibili.com/video/BV1vd4y1b7GN)
 
 ## 收容和领养
 * [想救助流浪动物但是找不到联系方式怎么办？](https://zhuanlan.zhihu.com/p/24628633)
