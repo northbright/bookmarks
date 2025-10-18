@@ -156,3 +156,6 @@
 * [猫咪超级不爱喝水怎么办？跪求各位猫奴支招！？](https://www.zhihu.com/question/64876364)
   * [蓝猫胖胖的日常的回答](https://www.zhihu.com/question/64876364/answer/3072506600)
   * [猫太郎CATTARO的回答](https://www.zhihu.com/question/64876364/answer/3071829618)
+
+## 排毛
+* [猫咪排毛产品怎么选？猫草、猫草冻干、化毛膏、化毛片、洋车前子壳粉、排毛罐头6款排毛产品对比~](https://www.bilibili.com/video/BV1Lh4y1V7gz)
