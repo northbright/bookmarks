@@ -20,6 +20,7 @@
   * [让猫多喝水的小窍门！学起来！](https://www.bilibili.com/video/BV11R4y1i7fK)
   * [打破误区！宠物换粮必须7天过渡？看完直呼被忽悠了](https://www.bilibili.com/video/BV1UtEBzpEBq)
   * [频繁吐毛球？](https://www.bilibili.com/video/BV1MyQWYQEVW)
+  * [小动物过高蛋白质饮食到底好不好呢](https://www.bilibili.com/video/BV1fu4VebET2)
 
 ## 收容和领养
 * [想救助流浪动物但是找不到联系方式怎么办？](https://zhuanlan.zhihu.com/p/24628633)
