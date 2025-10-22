@@ -18,6 +18,7 @@
   * [猫咪吐毛球，医生却不建议吃化毛片＆化毛膏？](https://www.bilibili.com/video/BV11L411p7QW)
   * [动物圈传言：猫喝自来水会结石？](https://www.bilibili.com/video/BV1xb4y1t75r)
   * [让猫多喝水的小窍门！学起来！](https://www.bilibili.com/video/BV11R4y1i7fK)
+  * [打破误区！宠物换粮必须7天过渡？看完直呼被忽悠了](https://www.bilibili.com/video/BV1UtEBzpEBq)
 
 ## 收容和领养
 * [想救助流浪动物但是找不到联系方式怎么办？](https://zhuanlan.zhihu.com/p/24628633)
