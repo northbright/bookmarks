@@ -16,6 +16,7 @@
   * [城市家养猫不要出门玩](https://www.bilibili.com/video/BV1mKS3YGEU9)
   * [“化”毛膏，“化”毛片](https://www.bilibili.com/video/BV1oFKHzWEXN)
   * [猫咪吐毛球，医生却不建议吃化毛片＆化毛膏？](https://www.bilibili.com/video/BV11L411p7QW)
+  * [动物圈传言：猫喝自来水会结石？](https://www.bilibili.com/video/BV1xb4y1t75r)
 
 ## 收容和领养
 * [想救助流浪动物但是找不到联系方式怎么办？](https://zhuanlan.zhihu.com/p/24628633)
