@@ -104,6 +104,7 @@
 
 ## 罐头
 * [罐头一定比干猫粮有营养？热量高？全程干货！教你如何计算猫罐头、猫粮热量！](https://www.bilibili.com/video/BV1wx4y1L7ro)
+* [罐头拌猫粮吃科学吗？](https://www.bilibili.com/video/BV1emCAYSE1F)
 * 有哪些猫主食罐头值得推荐？
   * [贰倩的回答](https://www.zhihu.com/question/355955255/answer/3328840889)
   * [猫猫城的回答](https://www.zhihu.com/question/355955255/answer/3565840031)
