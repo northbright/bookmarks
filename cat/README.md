@@ -8,6 +8,7 @@
 * [新手养猫从入门到精通，猫无忧新手养猫指南，持续更新中……](https://zhuanlan.zhihu.com/p/448759562)
 * [养猫4年，只要它不坏我就会一直用的养猫好物！](https://www.bilibili.com/video/BV1vd4y1b7GN)
 * [“穷鬼养猫”不能错过的4件养猫好物，一物多用还省钱](https://www.bilibili.com/video/BV1TcKHe5EDe)
+* [橘子=空空跟挖机的职业危机！ 便宜又好用的网购省钱关键词3.0版](https://www.bilibili.com/video/BV1DF411s7Sp)
 
 ## 收容和领养
 * [想救助流浪动物但是找不到联系方式怎么办？](https://zhuanlan.zhihu.com/p/24628633)
