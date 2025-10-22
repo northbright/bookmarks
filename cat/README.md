@@ -14,6 +14,7 @@
   * [你家猫的猫粮吃对了吗？](https://www.bilibili.com/video/BV1kX4y1A79c)
   * [一些关于猫粮size的小建议](https://www.bilibili.com/video/BV1yf4y1V7G5)
   * [城市家养猫不要出门玩](https://www.bilibili.com/video/BV1mKS3YGEU9)
+  * [“化”毛膏，“化”毛片](https://www.bilibili.com/video/BV1oFKHzWEXN)
 
 ## 收容和领养
 * [想救助流浪动物但是找不到联系方式怎么办？](https://zhuanlan.zhihu.com/p/24628633)
