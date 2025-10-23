@@ -186,6 +186,7 @@
   * [蓝猫胖胖的日常的回答](https://www.zhihu.com/question/64876364/answer/3072506600)
   * [猫太郎CATTARO的回答](https://www.zhihu.com/question/64876364/answer/3071829618)
 * [猫咪不能喝这5种水，养猫多年的你，可能也不知道](https://zhuanlan.zhihu.com/p/591388232)
+* [猫水碗推荐，黑色水碗真的有用！](https://zhuanlan.zhihu.com/p/8659390043)
 
 ## 排毛
 * [猫咪排毛产品怎么选？猫草、猫草冻干、化毛膏、化毛片、洋车前子壳粉、排毛罐头6款排毛产品对比~](https://www.bilibili.com/video/BV1Lh4y1V7gz)
