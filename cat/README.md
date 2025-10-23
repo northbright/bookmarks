@@ -188,6 +188,7 @@
 * [猫咪不能喝这5种水，养猫多年的你，可能也不知道](https://zhuanlan.zhihu.com/p/591388232)
 * [猫水碗推荐，黑色水碗真的有用！](https://zhuanlan.zhihu.com/p/8659390043)
 * [黑色碗成猫咪喝水助推器？我花了72小时做了这个实验！](https://www.bilibili.com/video/BV12o4y1b7Xb)
+* [正常猫需要每天强行灌水吗？](https://www.bilibili.com/video/BV1694y197R4)
 
 ## 排毛
 * [猫咪排毛产品怎么选？猫草、猫草冻干、化毛膏、化毛片、洋车前子壳粉、排毛罐头6款排毛产品对比~](https://www.bilibili.com/video/BV1Lh4y1V7gz)
