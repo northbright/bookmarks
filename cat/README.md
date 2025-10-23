@@ -188,6 +188,7 @@
 * [猫咪不能喝这5种水，养猫多年的你，可能也不知道](https://zhuanlan.zhihu.com/p/591388232)
 * [猫水碗推荐，黑色水碗真的有用！](https://zhuanlan.zhihu.com/p/8659390043)
 * [黑色碗成猫咪喝水助推器？我花了72小时做了这个实验！](https://www.bilibili.com/video/BV12o4y1b7Xb)
+* [水碗指南](https://www.bilibili.com/video/BV1hG411G7pY/)
 * [正常猫需要每天强行灌水吗？](https://www.bilibili.com/video/BV1694y197R4)
 
 ## 排毛
