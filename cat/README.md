@@ -61,6 +61,7 @@
   * [高蛋白猫犬粮导致肾衰？原来都是资本的天性...](https://www.bilibili.com/video/BV163411x7C2)
   * [猫粮真的是蛋白质越高越好吗？以及猫咪晚年肾病真的无法预防？(温鸦的回答)](https://www.zhihu.com/question/350894377/answer/861107931)
   * [高蛋白猫粮真的对猫不好么？(modich的回答)](https://www.zhihu.com/question/54542237/answer/139844110)
+  * [猫粮真的是蛋白质越高越好吗？以及猫咪晚年肾病真的无法预防？(吴物的回答)](https://www.zhihu.com/question/350894377/answer/3630585074)
 
 * nulo
   * [准备给家里小猫换干粮了，nulo猫粮怎么样？](https://www.zhihu.com/question/529400741)
