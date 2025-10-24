@@ -71,6 +71,7 @@
     * [猫狗肾脏和蛋白质那点恩恩怨怨-modich发表在RawMeat的文章](https://mp.weixin.qq.com/s/7dD-njfIScEoH3kd6puv2w?)
   * [百利vs渴望，极限二选一？](https://www.bilibili.com/video/BV1bs421G7St)
   * [百利高蛋白猫粮，进口粮的天花板，极品还不贵，无脑买买买(其中有2021年中广测的检测报告)](https://zhuanlan.zhihu.com/p/474819551)
+  * [百利无谷鸡猫粮分析，高配版的go，无脑买买买的第五选择](https://www.douban.com/note/763311804)
 
 * nulo
   * [准备给家里小猫换干粮了，nulo猫粮怎么样？](https://www.zhihu.com/question/529400741)
