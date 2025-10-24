@@ -27,3 +27,6 @@
 
 ## 电池
 * [19款7号电池大横评！谁是最强7号电池？谁性价比最高？](https://www.chiphell.com/thread-2657439-1-1.html)
+
+## 洗地机
+* [日本岳母：没想到被中国家电拯救….(云鲸J6热活水履带洗地机器人)](https://www.bilibili.com/video/BV1ZB4y1u7TE)
