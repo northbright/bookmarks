@@ -69,6 +69,7 @@
     * [奥克的回答-真担心肾病风险，与其纠结蛋白质比例高低，不如多关注日常补水量。减少干粮投喂、多提供湿粮，即可起到理想预防效果。关注在蛋白质的品质](https://www.zhihu.com/question/350894377/answer/2307286096)
   * [高蛋白猫粮真的对猫不好么？(modich的回答)](https://www.zhihu.com/question/54542237/answer/139844110)
     * [猫狗肾脏和蛋白质那点恩恩怨怨-modich发表在RawMeat的文章](https://mp.weixin.qq.com/s/7dD-njfIScEoH3kd6puv2w?)
+  * [百利vs渴望，极限二选一？](https://www.bilibili.com/video/BV1bs421G7St)
 
 * nulo
   * [准备给家里小猫换干粮了，nulo猫粮怎么样？](https://www.zhihu.com/question/529400741)
