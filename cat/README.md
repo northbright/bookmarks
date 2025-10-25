@@ -181,6 +181,7 @@
 * [8款国产主食冻干开袋分享| 冻干测试第三弹](https://www.bilibili.com/video/BV1yV411M7Nk)
 * [个人分享测评~5款猫咪进口主食冻干！](https://www.bilibili.com/video/BV16A411F7ZG)
 * [讨论/科普｜ssbx冻干瓜，再次证明了国产真的不行😅😅😅别对国产抱期望 ](https://www.douban.com/group/topic/305980917)
+* [讨论/科普｜【讨论】为啥没人买弗列加特冻干呢？](https://www.douban.com/group/topic/263144088)
 
 #### VE
 * [VE冻干分析，4大进口冻干中最好的一个【终篇】4大进口冻干的对比和购买建议](https://zhuanlan.zhihu.com/p/261995433)
