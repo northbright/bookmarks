@@ -23,7 +23,6 @@
   * [小动物过高蛋白质饮食到底好不好呢](https://www.bilibili.com/video/BV1fu4VebET2)
   * [动物圈传言：猫狗不能吃盐？老尹：不存在！](https://www.bilibili.com/video/BV15q4y1p7K2)
   * [猫狗为啥不能拿兔肉当主粮](https://www.bilibili.com/video/BV1KZBRYTEq9)
-* [讨论/科普｜【讨论】‼️‼️别问啦别问啦，我说还不行吗？！🤪🤪国产粮国产罐头国产冻干挑选指不南🫣🫣 ](https://www.douban.com/group/topic/308800007)
 
 ## 收容和领养
 * [想救助流浪动物但是找不到联系方式怎么办？](https://zhuanlan.zhihu.com/p/24628633)
@@ -62,6 +61,7 @@
 * [猫粮知识大全-终极干货-必收藏！](https://zhuanlan.zhihu.com/p/684911122)
 * [讨论/科普｜【讨论】鲜朗和弗列加特怎么样？价格不低，为什么买的人这么多？](讨论/科普｜【讨论】鲜朗和弗列加特怎么样？价格不低，为什么买的人这么多？)
 * [讨论/科普｜建议不喂国产粮被骂滚出拆那，出组不养猫是真的 ](https://www.douban.com/group/topic/315571215)
+* [讨论/科普｜【讨论】‼️‼️别问啦别问啦，我说还不行吗？！🤪🤪国产粮国产罐头国产冻干挑选指不南🫣🫣 ](https://www.douban.com/group/topic/308800007)
 
 * 高蛋白
   * [高蛋白猫犬粮导致肾衰？原来都是资本的天性...](https://www.bilibili.com/video/BV163411x7C2)
