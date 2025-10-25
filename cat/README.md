@@ -60,6 +60,7 @@
 * [7款高性价比幼猫粮推荐！进口国产都有~](https://www.bilibili.com/video/BV13q4y1u7G9)
 * [11款进口猫粮大合集！你选对了吗？](https://www.bilibili.com/video/BV1ZB4y1u7TE)
 * [猫粮知识大全-终极干货-必收藏！](https://zhuanlan.zhihu.com/p/684911122)
+* [讨论/科普｜建议不喂国产粮被骂滚出拆那，出组不养猫是真的 ](https://www.douban.com/group/topic/315571215)
 
 * 高蛋白
   * [高蛋白猫犬粮导致肾衰？原来都是资本的天性...](https://www.bilibili.com/video/BV163411x7C2)
