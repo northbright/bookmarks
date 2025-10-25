@@ -24,6 +24,9 @@
   * [动物圈传言：猫狗不能吃盐？老尹：不存在！](https://www.bilibili.com/video/BV15q4y1p7K2)
   * [猫狗为啥不能拿兔肉当主粮](https://www.bilibili.com/video/BV1KZBRYTEq9)
 
+* [猫咪后腿无力走路不稳的病因维生素B1缺乏症](https://www.bilibili.com/video/BV12r4y1J7uL)
+
+
 ## 收容和领养
 * [想救助流浪动物但是找不到联系方式怎么办？](https://zhuanlan.zhihu.com/p/24628633)
 * [说一下自己的被骗经历然后曝光一家骗子救助中心，上海宠物救助领养中心](https://zhuanlan.zhihu.com/p/265212980)
