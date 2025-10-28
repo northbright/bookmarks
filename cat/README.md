@@ -198,6 +198,7 @@
 
 #### PR
 * [PR冻干分析，比K9靠谱多了，但所有的冻干都是智商税](https://zhuanlan.zhihu.com/p/261361837)
+* [讨论/科普｜【讨论】pr冻干生产暴雷事件始末-总结整理有具体批次！](https://www.douban.com/group/topic/285045806)
 
 ## 生骨肉
 * [生骨肉喂猫，是不是一场骗局？](https://www2.zhihu.com/question/350713529)
