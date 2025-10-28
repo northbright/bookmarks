@@ -195,6 +195,7 @@
 
 #### VE
 * [VE冻干分析，4大进口冻干中最好的一个【终篇】4大进口冻干的对比和购买建议](https://zhuanlan.zhihu.com/p/261995433)
+* [【注意】吃VE冻干后！我家三只猫的身体都出现问题！](https://www.douban.com/group/topic/236331699)
 
 #### PR
 * [PR冻干分析，比K9靠谱多了，但所有的冻干都是智商税](https://zhuanlan.zhihu.com/p/261361837)
