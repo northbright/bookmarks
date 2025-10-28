@@ -164,6 +164,7 @@
     * [日常饮食生活｜迈阿密的小白罐里是不是有诱食剂呢？](https://www.douban.com/group/topic/170653296)
     * [讨论/科普｜迈阿密小白罐20个已到 简单反馈 ](https://www.douban.com/group/topic/226956723)
     * [【讨论】迈阿密小白罐到底是怎么样得存在？](https://www.douban.com/group/topic/184616505)
+    * [【参考手册】Miamor迈阿密挑食慕斯系列主食罐（下拉附补充说明）](https://www.bilibili.com/video/BV1DY411S72F/)
 
 #### 国产
 * [【参考手册】格吾安主食罐（下拉附补充说明）](https://www.bilibili.com/video/BV1z84y1J72R)
