@@ -168,6 +168,7 @@
 
 * 美士
   * [讨论/科普｜【讨论】避坑！美士一分为二餐盒便血，有图慎入 ](https://www.douban.com/group/topic/298452923)
+  * [讨论/科普｜【讨论】（保姆级教程？😂）帮助大家辨别一下美士的好坏（🍑旗舰店买的） ](https://www.douban.com/group/topic/252041054)
 
 #### 国产
 * [【参考手册】格吾安主食罐（下拉附补充说明）](https://www.bilibili.com/video/BV1z84y1J72R)
