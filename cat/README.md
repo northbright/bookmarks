@@ -67,6 +67,7 @@
 * [讨论/科普｜【讨论】‼️‼️别问啦别问啦，我说还不行吗？！🤪🤪国产粮国产罐头国产冻干挑选指不南🫣🫣 ](https://www.douban.com/group/topic/308800007)
 * [讨论/科普｜【讨论】国产粮阿飞巴弟吃死三只猫](https://www.douban.com/group/topic/305992909)
 * [讨论/科普｜【讨论】目前实锤是假洋牌或者是特供牌子统计[持续更新]](https://www.douban.com/group/topic/282853941)
+* [【讨论】tb销量前十的毒粮真的误导人](https://www.douban.com/group/topic/159778665)
 
 * 高蛋白
   * [高蛋白猫犬粮导致肾衰？原来都是资本的天性...](https://www.bilibili.com/video/BV163411x7C2)
