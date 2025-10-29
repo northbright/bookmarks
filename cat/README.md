@@ -166,6 +166,9 @@
     * [【讨论】迈阿密小白罐到底是怎么样得存在？](https://www.douban.com/group/topic/184616505)
     * [【参考手册】Miamor迈阿密挑食慕斯系列主食罐（下拉附补充说明）](https://www.bilibili.com/video/BV1DY411S72F/)
 
+* 美士
+  * [讨论/科普｜【讨论】避坑！美士一分为二餐盒便血，有图慎入 ](https://www.douban.com/group/topic/298452923)
+
 #### 国产
 * [【参考手册】格吾安主食罐（下拉附补充说明）](https://www.bilibili.com/video/BV1z84y1J72R)
 * [9款高性价比国产主食罐开罐分享](https://www.bilibili.com/video/BV1t3411z79n)
