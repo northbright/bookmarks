@@ -215,6 +215,7 @@
 * [讨论/科普｜【讨论】友友们爱立方冻干怎么样啊](https://www.douban.com/group/topic/244190801)
 * [讨论/科普｜爱立方冻干怎么样](https://www.douban.com/group/topic/253077981)
 * [讨论/科普｜【讨论】小猫吃多了国产冻干吐血便血](https://www.douban.com/group/topic/298922919)
+* [讨论/科普｜爱立方鹌鹑细菌超标？](https://www.douban.com/group/topic/209690192)
 
 #### VE
 * [VE冻干分析，4大进口冻干中最好的一个【终篇】4大进口冻干的对比和购买建议](https://zhuanlan.zhihu.com/p/261995433)
