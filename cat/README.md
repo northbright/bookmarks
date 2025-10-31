@@ -239,6 +239,7 @@
 * [黑色碗成猫咪喝水助推器？我花了72小时做了这个实验！](https://www.bilibili.com/video/BV12o4y1b7Xb)
 * [水碗指南](https://www.bilibili.com/video/BV1hG411G7pY/)
 * [正常猫需要每天强行灌水吗？](https://www.bilibili.com/video/BV1694y197R4)
+* [自动饮水机真的能让猫咪喝更多水吗？(老梗的回复：我家猫喜欢喝水陪植物里的水，我就往水碗里扦插了薄荷，猫挺爱喝的，流动饮水机买了好几个了，没啥用)](https://www.douban.com/note/781367722)
 
 ## 排毛
 * [猫咪排毛产品怎么选？猫草、猫草冻干、化毛膏、化毛片、洋车前子壳粉、排毛罐头6款排毛产品对比~](https://www.bilibili.com/video/BV1Lh4y1V7gz)
