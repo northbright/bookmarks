@@ -220,6 +220,9 @@
 * [讨论/科普｜【讨论】小猫吃多了国产冻干吐血便血](https://www.douban.com/group/topic/298922919)
 * [讨论/科普｜爱立方鹌鹑细菌超标？](https://www.douban.com/group/topic/209690192)
 
+#### SC
+* [讨论/科普｜【讨论】我送检了SC和百利生鲜冻干粮里面的冻干](https://www.douban.com/group/topic/260305848)
+
 #### VE
 * [VE冻干分析，4大进口冻干中最好的一个【终篇】4大进口冻干的对比和购买建议](https://zhuanlan.zhihu.com/p/261995433)
 * [【注意】吃VE冻干后！我家三只猫的身体都出现问题！](https://www.douban.com/group/topic/236331699)
