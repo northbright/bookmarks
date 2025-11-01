@@ -219,6 +219,7 @@
 * [讨论/科普｜爱立方冻干怎么样](https://www.douban.com/group/topic/253077981)
 * [讨论/科普｜【讨论】小猫吃多了国产冻干吐血便血](https://www.douban.com/group/topic/298922919)
 * [讨论/科普｜爱立方鹌鹑细菌超标？](https://www.douban.com/group/topic/209690192)
+* [【讨论】布兰德冻干月套餐！合算吗！](https://www.douban.com/group/topic/277438287)
 
 #### SC
 * [讨论/科普｜【讨论】我送检了SC和百利生鲜冻干粮里面的冻干](https://www.douban.com/group/topic/260305848)
