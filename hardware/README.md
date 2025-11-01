@@ -155,6 +155,7 @@
 * [HP Z240 Workstation Maintenance and Service Guide](http://h10032.www1.hp.com/ctg/Manual/c04897695.pdf)
 * [HPE Gen10 Plus 开箱和使用](https://www.chiphell.com/thread-2429660-1-1.html)
 * [某鱼大量流出200元大厂准系统小主机，天生NAS圣体，支持6-7代及E3处理器，最高五盘位，还带多条PCIE扩展！](https://zhuanlan.zhihu.com/p/1931085065355501991)
+* [249！飞牛全闪NAS圣体 双万兆电口7代核显HP Z240SFF](https://www.bilibili.com/video/BV1WqfVYwEMi)
 
 #### Lenovo
 * [仅1L的50GbE全闪小机机——Thinkstation P3 Tiny](https://www.chiphell.com/thread-2668072-1-1.html)
