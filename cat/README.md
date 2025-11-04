@@ -69,6 +69,7 @@
 * [讨论/科普｜【讨论】目前实锤是假洋牌或者是特供牌子统计[持续更新]](https://www.douban.com/group/topic/282853941)
 * [【讨论】tb销量前十的毒粮真的误导人](https://www.douban.com/group/topic/159778665)
 * [53%的猫咪都吃多了](https://www.bilibili.com/video/BV1djuAzrEgb)
+* [【讨论】成猫吃幼猫粮对猫是否有影响](https://www.douban.com/group/topic/173820382)
 
 * 高蛋白
   * [高蛋白猫犬粮导致肾衰？原来都是资本的天性...](https://www.bilibili.com/video/BV163411x7C2)
