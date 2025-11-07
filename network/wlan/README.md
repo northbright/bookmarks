@@ -32,3 +32,6 @@
 
 ## 安全策略
 * [S380 V600R024C10 MD-CLI配置参考(包含 WPA 相关知识)](https://support.huawei.com/enterprise/zh/doc/EDOC1100460455/f4d700ce)
+
+## BSSID
+* [SSID、BSSID、ESSID区别？](https://www.zhihu.com/question/24362037)
