@@ -25,6 +25,7 @@
   * [猫狗为啥不能拿兔肉当主粮](https://www.bilibili.com/video/BV1KZBRYTEq9)
 
 * [猫咪后腿无力走路不稳的病因维生素B1缺乏症](https://www.bilibili.com/video/BV12r4y1J7uL)
+* [猫咪养护心得｜我的猫猫20岁啦！](https://www.bilibili.com/video/BV1YC4y1j71W)
 
 
 ## 收容和领养
