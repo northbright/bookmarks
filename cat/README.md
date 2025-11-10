@@ -263,3 +263,6 @@
 
 ## 排毛
 * [猫咪排毛产品怎么选？猫草、猫草冻干、化毛膏、化毛片、洋车前子壳粉、排毛罐头6款排毛产品对比~](https://www.bilibili.com/video/BV1Lh4y1V7gz)
+
+## 简州猫
+* [狸花加白等于简州猫？不对！(4个耳朵：附耳很大)](https://www.bilibili.com/video/BV1Xj42197Vg)
