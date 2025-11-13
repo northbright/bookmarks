@@ -3,6 +3,7 @@
 ## Activation
 * [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
   * [FAQ](https://massgrave.dev/faq)
+* [TSforge，Windows/Office最新激活方案](https://zhuanlan.zhihu.com/p/24002737516)
 
 ## Security
 * [Customer Guidance for WannaCrypt attacks](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/)
