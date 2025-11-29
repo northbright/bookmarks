@@ -73,7 +73,9 @@
 * [【讨论】成猫吃幼猫粮对猫是否有影响](https://www.douban.com/group/topic/173820382)
 * [【讨论】成猫可以吃幼猫粮吗 ](https://www.douban.com/group/topic/183769498)
 * [【讨论/科普】搬运美国猫粮品牌对比金字塔，百利高生虫但在最高档…… ](https://www.douban.com/group/topic/230057381)
-* [合格猫奴养成记——千万不能吃](https://zhuanlan.zhihu.com/p/28360583)
+* 金枪鱼
+  * [合格猫奴养成记——千万不能吃](https://zhuanlan.zhihu.com/p/28360583)
+  * [讨论/科普｜猫每天都吃金枪鱼](https://www.douban.com/group/topic/296719283)
 
 * 高蛋白
   * [高蛋白猫犬粮导致肾衰？原来都是资本的天性...](https://www.bilibili.com/video/BV163411x7C2)
