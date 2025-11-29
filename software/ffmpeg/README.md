@@ -86,3 +86,4 @@
 
 ## Hardware Encoding
 * [NVIDIA FFmpeg Transcoding Guide](https://developer.nvidia.com/blog/nvidia-ffmpeg-transcoding-guide/)
+* [FFmpeg + NVENC 代替 Handbrake 压制视频](https://zhuanlan.zhihu.com/p/347339620)
