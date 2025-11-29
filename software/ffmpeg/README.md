@@ -83,3 +83,6 @@
 ## Watermark
 * [How to Add Watermarks to Videos Using FFmpeg](https://www.bannerbear.com/blog/how-to-add-watermark-to-videos-using-ffmpeg/)
 
+
+## Hardware Encoding
+* [NVIDIA FFmpeg Transcoding Guide](https://developer.nvidia.com/blog/nvidia-ffmpeg-transcoding-guide/)
