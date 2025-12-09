@@ -28,6 +28,9 @@
 #### 联想 ThinkBook
 * [ThinkBook 16P 开箱简测](https://www.chiphell.com/thread-2342747-1-1.html)
 
+#### 联想 P3
+* [迷你工作站新基准——联想 P3 Ultra Gen2 使用体验](https://www.chiphell.com/thread-2760682-1-1.html)
+
 ### HP
 * 暗夜精灵
   * [惠普暗影精灵9大面积黑屏到底什么情况？维修厮告诉答案！](https://www.bilibili.com/video/av1501303558)
