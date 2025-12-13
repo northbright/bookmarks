@@ -8,3 +8,4 @@
 * [前端新宠 Svelte 带来哪些新思想？赶紧学起来！](https://juejin.cn/post/7121759118070644772)
 * [为什么越来越多开发者偷偷用上了 Svelte？](https://juejin.cn/post/7530910560897155110)
 * [为什么感觉svelte其实才是vue3？](https://www.zhihu.com/question/459281340)
+* [看完 Svelte 纪录片才知道它为什么在国外比国内火](https://zhuanlan.zhihu.com/p/603217878)
