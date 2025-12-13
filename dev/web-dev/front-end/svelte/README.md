@@ -9,3 +9,4 @@
 * [为什么越来越多开发者偷偷用上了 Svelte？](https://juejin.cn/post/7530910560897155110)
 * [为什么感觉svelte其实才是vue3？](https://www.zhihu.com/question/459281340)
 * [看完 Svelte 纪录片才知道它为什么在国外比国内火](https://zhuanlan.zhihu.com/p/603217878)
+* [曾遭尤雨溪嫌弃的 Svelte 终于进化至 4.0](https://zhuanlan.zhihu.com/p/639377236)
