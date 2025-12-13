@@ -30,6 +30,7 @@
 
 ## 洗地机
 * [日本岳母：没想到被中国家电拯救….(云鲸J6热活水履带洗地机器人)](https://www.bilibili.com/video/BV1ZB4y1u7TE)
+* [扫地机需要上下水吗?](https://www.zhihu.com/question/658837674)
 
 ## 洗衣机
 * [为什么冷凝式的洗烘一体机都不配绒毛收集呢？](https://www.zhihu.com/question/427777885)
