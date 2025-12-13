@@ -7,3 +7,4 @@
 * [Svelte vs Vue:比较框架的内部结构](https://juejin.cn/post/7067855816283389965)
 * [前端新宠 Svelte 带来哪些新思想？赶紧学起来！](https://juejin.cn/post/7121759118070644772)
 * [为什么越来越多开发者偷偷用上了 Svelte？](https://juejin.cn/post/7530910560897155110)
+* [为什么感觉svelte其实才是vue3？](https://www.zhihu.com/question/459281340)
