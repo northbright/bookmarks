@@ -1,0 +1,2605 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://mkcontroller.com/blog/tutorials/unifi/unifi_required_ports/
+Subject: Required Ports for UniFi | Blog
+Date: Wed, 17 Dec 2025 07:00:20 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--TgyAaT7LhlN1PNkiQG5LwUqQ3hDqOzzljijWb4dWwg----"
+
+
+------MultipartBoundary--TgyAaT7LhlN1PNkiQG5LwUqQ3hDqOzzljijWb4dWwg----
+Content-Type: text/html
+Content-ID: <frame-23B82B7FBAF9BEAE7AA5C7BB8E464115@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://mkcontroller.com/blog/tutorials/unifi/unifi_required_ports/
+
+<!DOCTYPE html><html lang=3D"en" dir=3D"ltr" data-theme=3D"light" data-has-=
+toc=3D"" data-has-sidebar=3D"" class=3D"astro-bguv2lll"><head><meta http-eq=
+uiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><link rel=3D"st=
+ylesheet" type=3D"text/css" href=3D"cid:css-3319f396-cdf8-47b1-b5ae-6860502=
+77576@mhtml.blink" /><meta name=3D"viewport" content=3D"width=3Ddevice-widt=
+h,initial-scale=3D1"><title>Required Ports for UniFi | Blog</title><link re=
+l=3D"canonical" href=3D"https://mkcontroller.com/blog/tutorials/unifi/unifi=
+_required_ports/"><link rel=3D"sitemap" href=3D"https://mkcontroller.com/bl=
+og/sitemap-index.xml"><link rel=3D"icon shortcut" href=3D"https://mkcontrol=
+ler.com/blog/favicon.svg" type=3D"image/svg+xml"><meta name=3D"generator" c=
+ontent=3D"Astro v5.15.2"><meta name=3D"generator" content=3D"Starlight v0.3=
+3.0"><meta property=3D"og:title" content=3D"Required Ports for UniFi"><meta=
+ property=3D"og:type" content=3D"article"><meta property=3D"og:url" content=
+=3D"https://mkcontroller.com/blog/tutorials/unifi/unifi_required_ports/"><m=
+eta property=3D"og:locale" content=3D"en"><meta property=3D"og:description"=
+ content=3D"Comprehensive list of UDP and TCP ports used by UniFi Remote Ma=
+nagement, Network, Protect, Connect, and Access services, plus guidance on =
+changing default ports on self=E2=80=91hosted servers."><meta property=3D"o=
+g:site_name" content=3D"Blog"><meta name=3D"twitter:card" content=3D"summar=
+y_large_image"><template id=3D"theme-icons"><svg aria-hidden=3D"true" class=
+=3D"astro-c6vsoqas light" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" =
+fill=3D"currentColor" style=3D"--sl-icon-size: 1em;"><path d=3D"M5 12a1 1 0=
+ 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1=
+ 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0=
+v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.=
+66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0=
+ 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2=
+h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 =
+0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0=
+ 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0=
+v-1a1 1 0 0 0-1-1Z"></path></svg><svg aria-hidden=3D"true" class=3D"astro-c=
+6vsoqas dark" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"curr=
+entColor" style=3D"--sl-icon-size: 1em;"><path d=3D"M21.64 13a1 1 0 0 0-1.0=
+5-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .2=
+5-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.=
+69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 =
+0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"></path></svg><svg aria-hidde=
+n=3D"true" class=3D"astro-c6vsoqas auto" width=3D"16" height=3D"16" viewBox=
+=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-size: 1em;"><path d=
+=3D"M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0=
+ 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v=
+7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"></path></svg></templat=
+e><link rel=3D"stylesheet" href=3D"https://mkcontroller.com/blog/_astro/pri=
+nt.BJ0teN4y.css" media=3D"print"><link rel=3D"stylesheet" href=3D"https://m=
+kcontroller.com/blog/_astro/index.eKSSlRte.css"></head><body class=3D"astro=
+-bguv2lll"><a href=3D"https://mkcontroller.com/blog/tutorials/unifi/unifi_r=
+equired_ports/#_top" class=3D"astro-7q3lir66">Skip to content</a> <div clas=
+s=3D"astro-vrdttmbt page sl-flex"> <header class=3D"astro-vrdttmbt header">=
+<div class=3D"astro-kmkmnagf header sl-flex"> <div class=3D"astro-kmkmnagf =
+sl-flex title-wrapper"> <a href=3D"https://mkcontroller.com/blog/" class=3D=
+"astro-m46x6ez3 site-title sl-flex"> <img class=3D"astro-m46x6ez3" alt=3D""=
+ src=3D"https://mkcontroller.com/blog/_astro/logo.166_ZCcB.png" width=3D"10=
+80" height=3D"1081"> <span class=3D"astro-m46x6ez3" translate=3D"no"> Blog =
+</span> </a> </div> <div class=3D"astro-kmkmnagf print:hidden sl-flex"> <si=
+te-search class=3D"astro-kmkmnagf astro-v37mnknz" data-translations=3D"{&qu=
+ot;placeholder&quot;:&quot;Search&quot;}"> <button data-open-modal=3D"" ari=
+a-label=3D"Search" aria-keyshortcuts=3D"Meta+K" class=3D"astro-v37mnknz"> <=
+svg aria-hidden=3D"true" class=3D"astro-c6vsoqas astro-v37mnknz" width=3D"1=
+6" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-=
+icon-size: 1em;"><path d=3D"M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3=
+.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 =
+0 14Z"></path></svg> <span class=3D"astro-v37mnknz md:sl-block sl-hidden" a=
+ria-hidden=3D"true">Search</span> <kbd class=3D"astro-v37mnknz md:sl-flex s=
+l-hidden" style=3D""> <kbd class=3D"astro-v37mnknz">=E2=8C=98</kbd><kbd cla=
+ss=3D"astro-v37mnknz">K</kbd> </kbd> </button> <dialog style=3D"padding:0" =
+aria-label=3D"Search" class=3D"astro-v37mnknz"> <div class=3D"astro-v37mnkn=
+z dialog-frame sl-flex"> <button data-close-modal=3D"" class=3D"astro-v37mn=
+knz md:sl-hidden sl-flex"> Cancel </button> <div class=3D"astro-v37mnknz se=
+arch-container"> <div id=3D"starlight__search" class=3D"astro-v37mnknz"><di=
+v class=3D"pagefind-ui svelte-e9gkc3 pagefind-ui--reset"><form class=3D"pag=
+efind-ui__form svelte-e9gkc3" role=3D"search" aria-label=3D"Search this sit=
+e"><input class=3D"pagefind-ui__search-input svelte-e9gkc3" type=3D"text" p=
+laceholder=3D"Search" autocapitalize=3D"none" enterkeyhint=3D"search"> <but=
+ton class=3D"pagefind-ui__search-clear svelte-e9gkc3 pagefind-ui__suppresse=
+d">Clear</button> <div class=3D"pagefind-ui__drawer svelte-e9gkc3 pagefind-=
+ui__hidden"> </div></form></div></div> </div> </div> </dialog> </site-searc=
+h>   </div> <div class=3D"astro-kmkmnagf md:sl-flex print:hidden right-grou=
+p sl-hidden"> <div class=3D"astro-kmkmnagf sl-flex social-icons"> </div> <s=
+tarlight-theme-select> <label style=3D"--sl-select-width: 6.25em" class=3D"=
+astro-4yphtoen"> <span class=3D"astro-4yphtoen sr-only">Select theme</span>=
+ <svg aria-hidden=3D"true" class=3D"astro-4yphtoen astro-c6vsoqas icon labe=
+l-icon" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentCol=
+or" style=3D"--sl-icon-size: 1em;"><path d=3D"M21 14h-1V7a3 3 0 0 0-3-3H7a3=
+ 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 =
+0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 =
+0 0 1-1-1v-1h16v1Z"></path></svg> <select value=3D"auto" autocomplete=3D"of=
+f" class=3D"astro-4yphtoen"> <option value=3D"dark" class=3D"astro-4yphtoen=
+">Dark</option><option value=3D"light" class=3D"astro-4yphtoen">Light</opti=
+on><option value=3D"auto" selected=3D"" class=3D"astro-4yphtoen">Auto</opti=
+on> </select> <svg aria-hidden=3D"true" class=3D"astro-4yphtoen astro-c6vso=
+qas caret icon" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"cu=
+rrentColor" style=3D"--sl-icon-size: 1em;"><path d=3D"M17 9.17a1 1 0 0 0-1.=
+41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.4=
+2 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"></path></svg> </label> </starlight-=
+theme-select>   <div class=3D"mkc-lang-wrapper"> <starlight-lang-select><la=
+bel style=3D"--sl-select-width: 7em" class=3D"astro-4yphtoen"> <span class=
+=3D"astro-4yphtoen sr-only">Select language</span> <svg aria-hidden=3D"true=
+" class=3D"astro-4yphtoen astro-c6vsoqas icon label-icon" width=3D"16" heig=
+ht=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-si=
+ze: 1em;"><path fill-rule=3D"evenodd" d=3D"M8.516 3a.94.94 0 0 0-.941.94v1.=
+15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 =
+0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422=
+ 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 =
+9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77=
+a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.8=
+41l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1=
+.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a=
+.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.=
+068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule=3D"=
+evenodd"></path></svg> <select value=3D"/blog/tutorials/unifi/unifi_require=
+d_ports/" autocomplete=3D"off" class=3D"astro-4yphtoen"> <option value=3D"/=
+blog/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Englis=
+h</option><option value=3D"/blog/es/tutorials/unifi/unifi_required_ports/" =
+class=3D"astro-4yphtoen">Espa=C3=B1ol</option><option value=3D"/blog/pt/tut=
+orials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Portugu=C3=AAs=
+</option><option value=3D"/blog/af/tutorials/unifi/unifi_required_ports/" c=
+lass=3D"astro-4yphtoen">Afrikaans</option><option value=3D"/blog/ar/tutoria=
+ls/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=D8=A7=D9=84=D8=B9=
+=D8=B1=D8=A8=D9=8A=D8=A9</option><option value=3D"/blog/bg/tutorials/unifi/=
+unifi_required_ports/" class=3D"astro-4yphtoen">=D0=91=D1=8A=D0=BB=D0=B3=D0=
+=B0=D1=80=D1=81=D0=BA=D0=B8</option><option value=3D"/blog/ca/tutorials/uni=
+fi/unifi_required_ports/" class=3D"astro-4yphtoen">Catal=C3=A0</option><opt=
+ion value=3D"/blog/cs/tutorials/unifi/unifi_required_ports/" class=3D"astro=
+-4yphtoen">=C4=8Ce=C5=A1tina</option><option value=3D"/blog/da/tutorials/un=
+ifi/unifi_required_ports/" class=3D"astro-4yphtoen">Dansk</option><option v=
+alue=3D"/blog/de/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yph=
+toen">Deutsch</option><option value=3D"/blog/el/tutorials/unifi/unifi_requi=
+red_ports/" class=3D"astro-4yphtoen">=CE=95=CE=BB=CE=BB=CE=B7=CE=BD=CE=B9=
+=CE=BA=CE=AC</option><option value=3D"/blog/et/tutorials/unifi/unifi_requir=
+ed_ports/" class=3D"astro-4yphtoen">Eesti</option><option value=3D"/blog/fi=
+/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Suomi</opt=
+ion><option value=3D"/blog/fr/tutorials/unifi/unifi_required_ports/" class=
+=3D"astro-4yphtoen">Fran=C3=A7ais</option><option value=3D"/blog/he/tutoria=
+ls/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=D7=A2=D7=91=D7=A8=
+=D7=99=D7=AA</option><option value=3D"/blog/hr/tutorials/unifi/unifi_requir=
+ed_ports/" class=3D"astro-4yphtoen">Hrvatski</option><option value=3D"/blog=
+/hu/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Magyar<=
+/option><option value=3D"/blog/id/tutorials/unifi/unifi_required_ports/" cl=
+ass=3D"astro-4yphtoen">Indonesia</option><option value=3D"/blog/it/tutorial=
+s/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Italiano</option><o=
+ption value=3D"/blog/ja/tutorials/unifi/unifi_required_ports/" class=3D"ast=
+ro-4yphtoen">=E6=97=A5=E6=9C=AC=E8=AA=9E</option><option value=3D"/blog/ko/=
+tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=ED=95=9C=
+=EA=B5=AD=EC=96=B4</option><option value=3D"/blog/lt/tutorials/unifi/unifi_=
+required_ports/" class=3D"astro-4yphtoen">Lietuvi=C5=B3</option><option val=
+ue=3D"/blog/lv/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphto=
+en">Latvie=C5=A1u</option><option value=3D"/blog/nb/tutorials/unifi/unifi_r=
+equired_ports/" class=3D"astro-4yphtoen">Norsk bokm=C3=A5l</option><option =
+value=3D"/blog/nl/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yp=
+htoen">Nederlands</option><option value=3D"/blog/pl/tutorials/unifi/unifi_r=
+equired_ports/" class=3D"astro-4yphtoen">Polski</option><option value=3D"/b=
+log/ro/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Rom=
+=C3=A2n=C4=83</option><option value=3D"/blog/ru/tutorials/unifi/unifi_requi=
+red_ports/" class=3D"astro-4yphtoen">=D0=A0=D1=83=D1=81=D1=81=D0=BA=D0=B8=
+=D0=B9</option><option value=3D"/blog/sk/tutorials/unifi/unifi_required_por=
+ts/" class=3D"astro-4yphtoen">Sloven=C4=8Dina</option><option value=3D"/blo=
+g/sl/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Sloven=
+=C5=A1=C4=8Dina</option><option value=3D"/blog/sr/tutorials/unifi/unifi_req=
+uired_ports/" class=3D"astro-4yphtoen">=D0=A1=D1=80=D0=BF=D1=81=D0=BA=D0=B8=
+</option><option value=3D"/blog/sv/tutorials/unifi/unifi_required_ports/" c=
+lass=3D"astro-4yphtoen">Svenska</option><option value=3D"/blog/th/tutorials=
+/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=E0=B9=84=E0=B8=97=
+=E0=B8=A2</option><option value=3D"/blog/tr/tutorials/unifi/unifi_required_=
+ports/" class=3D"astro-4yphtoen">T=C3=BCrk=C3=A7e</option><option value=3D"=
+/blog/uk/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=
+=D0=A3=D0=BA=D1=80=D0=B0=D1=97=D0=BD=D1=81=D1=8C=D0=BA=D0=B0</option><optio=
+n value=3D"/blog/vi/tutorials/unifi/unifi_required_ports/" class=3D"astro-4=
+yphtoen">Ti=E1=BA=BFng Vi=E1=BB=87t</option> </select> <svg aria-hidden=3D"=
+true" class=3D"astro-4yphtoen astro-c6vsoqas caret icon" width=3D"16" heigh=
+t=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-siz=
+e: 1em;"><path d=3D"M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-=
+1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1=
+.42Z"></path></svg> </label> </starlight-lang-select> <a href=3D"https://ap=
+p.mkcontroller.com/mkcontroller-server/onboard/#/onboard/email" target=3D"_=
+blank" class=3D"mkc-signup-button"> Start free trial </a> </div> </div> </d=
+iv> </header> <nav class=3D"astro-vrdttmbt print:hidden sidebar" aria-label=
+=3D"Main"> <starlight-menu-button class=3D"astro-jif73yzw print:hidden"> <b=
+utton aria-expanded=3D"false" aria-label=3D"Menu" aria-controls=3D"starligh=
+t__sidebar" class=3D"astro-jif73yzw md:sl-hidden sl-flex"> <svg aria-hidden=
+=3D"true" class=3D"astro-c6vsoqas astro-jif73yzw open-menu" width=3D"16" he=
+ight=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-=
+size: 1em;"><path d=3D"M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 =
+0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"></path></s=
+vg> <svg aria-hidden=3D"true" class=3D"astro-c6vsoqas astro-jif73yzw close-=
+menu" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor=
+" style=3D"--sl-icon-size: 1em;"><path d=3D"m13.41 12 6.3-6.29a1.004 1.004 =
+0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3=
+ 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 =
+0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"></path></svg> </button> </starlight-me=
+nu-button>  <div id=3D"starlight__sidebar" class=3D"astro-vrdttmbt sidebar-=
+pane"> <div class=3D"astro-vrdttmbt sidebar-content sl-flex"> <sl-sidebar-s=
+tate-persist data-hash=3D"0g3hxan" class=3D"astro-kku4brbg">  <ul class=3D"=
+astro-3ii7xxms top-level"> <li class=3D"astro-3ii7xxms"> <details open=3D""=
+ class=3D"astro-3ii7xxms"> <sl-sidebar-restore data-index=3D"0"></sl-sideba=
+r-restore> <summary class=3D"astro-3ii7xxms"> <div class=3D"astro-3ii7xxms =
+group-label"> <span class=3D"astro-3ii7xxms large">News</span> </div> <svg =
+aria-hidden=3D"true" class=3D"astro-3ii7xxms astro-c6vsoqas caret" width=3D=
+"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--s=
+l-icon-size: 1.25rem;"><path d=3D"m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.4=
+1L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4=
+.24-4.24a1.002 1.002 0 0 0 0-1.42Z"></path></svg> </summary> <ul class=3D"a=
+stro-3ii7xxms"> </ul> </details> </li><li class=3D"astro-3ii7xxms"> <detail=
+s open=3D"" class=3D"astro-3ii7xxms"> <sl-sidebar-restore data-index=3D"1">=
+</sl-sidebar-restore> <summary class=3D"astro-3ii7xxms"> <div class=3D"astr=
+o-3ii7xxms group-label"> <span class=3D"astro-3ii7xxms large">Remote Access=
+</span> </div> <svg aria-hidden=3D"true" class=3D"astro-3ii7xxms astro-c6vs=
+oqas caret" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"curren=
+tColor" style=3D"--sl-icon-size: 1.25rem;"><path d=3D"m14.83 11.29-4.24-4.2=
+4a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29=
+ 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"></path></svg> </sum=
+mary> <ul class=3D"astro-3ii7xxms"> <li class=3D"astro-3ii7xxms"> <details =
+open=3D"" class=3D"astro-3ii7xxms"> <sl-sidebar-restore data-index=3D"2"></=
+sl-sidebar-restore> <summary class=3D"astro-3ii7xxms"> <div class=3D"astro-=
+3ii7xxms group-label"> <span class=3D"astro-3ii7xxms large">Mikrotik</span>=
+ </div> <svg aria-hidden=3D"true" class=3D"astro-3ii7xxms astro-c6vsoqas ca=
+ret" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor"=
+ style=3D"--sl-icon-size: 1.25rem;"><path d=3D"m14.83 11.29-4.24-4.24a1 1 0=
+ 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 =
+0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"></path></svg> </summary> <=
+ul class=3D"astro-3ii7xxms"> <li class=3D"astro-3ii7xxms"> <a href=3D"https=
+://mkcontroller.com/blog/remote_access/mikrotik/remote_mikrotik_management_=
+with_openvpn/" aria-current=3D"false" class=3D"astro-3ii7xxms"> <span class=
+=3D"astro-3ii7xxms">Managing your Mikrotik with OpenVPN</span> </a> </li><l=
+i class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/remote=
+_access/mikrotik/remote_mikrotik_management_via_vps/" aria-current=3D"false=
+" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Managing your Mi=
+krotik with VPS</span> </a> </li><li class=3D"astro-3ii7xxms"> <a href=3D"h=
+ttps://mkcontroller.com/blog/remote_access/mikrotik/remote_mikrotik_managem=
+ent_with_sstp/" aria-current=3D"false" class=3D"astro-3ii7xxms"> <span clas=
+s=3D"astro-3ii7xxms">Managing your Mikrotik with SSTP</span> </a> </li><li =
+class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/remote_a=
+ccess/mikrotik/remote_mikrotik_management_with_tailscale/" aria-current=3D"=
+false" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Managing yo=
+ur Mikrotik with Tailscale</span> </a> </li><li class=3D"astro-3ii7xxms"> <=
+a href=3D"https://mkcontroller.com/blog/remote_access/mikrotik/remote_mikro=
+tik_management_with_wireguard/" aria-current=3D"false" class=3D"astro-3ii7x=
+xms"> <span class=3D"astro-3ii7xxms">Managing your Mikrotik with WireGuard<=
+/span> </a> </li><li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontrol=
+ler.com/blog/remote_access/mikrotik/remote_mikrotik_management_with_zerotie=
+r/" aria-current=3D"false" class=3D"astro-3ii7xxms"> <span class=3D"astro-3=
+ii7xxms">Managing your Mikrotik with ZeroTier</span> </a> </li><li class=3D=
+"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/remote_access/mi=
+krotik/remote_mikrotik_management_with_tr_069/" aria-current=3D"false" clas=
+s=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Managing your Mikrotik=
+ with TR-069</span> </a> </li><li class=3D"astro-3ii7xxms"> <a href=3D"http=
+s://mkcontroller.com/blog/remote_access/mikrotik/tr_369_usp_modern_remote_m=
+anagement/" aria-current=3D"false" class=3D"astro-3ii7xxms"> <span class=3D=
+"astro-3ii7xxms">Managing with your Mikrotik TR-369 (USP)</span> </a> </li>=
+<li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/remo=
+te_access/mikrotik/monitoring_mikrotik_remotely_with_zabbix/" aria-current=
+=3D"false" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Monitor=
+ing your Mikrotik with Zabbix</span> </a> </li><li class=3D"astro-3ii7xxms"=
+> <a href=3D"https://mkcontroller.com/blog/remote_access/mikrotik/snmp_mikr=
+otik_monitoring/" aria-current=3D"false" class=3D"astro-3ii7xxms"> <span cl=
+ass=3D"astro-3ii7xxms">Monitoring your Mikrotik with SNMP</span> </a> </li>=
+ </ul> </details> </li><li class=3D"astro-3ii7xxms"> <details open=3D"" cla=
+ss=3D"astro-3ii7xxms"> <sl-sidebar-restore data-index=3D"3"></sl-sidebar-re=
+store> <summary class=3D"astro-3ii7xxms"> <div class=3D"astro-3ii7xxms grou=
+p-label"> <span class=3D"astro-3ii7xxms large">Intelbras</span> </div> <svg=
+ aria-hidden=3D"true" class=3D"astro-3ii7xxms astro-c6vsoqas caret" width=
+=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"=
+--sl-icon-size: 1.25rem;"><path d=3D"m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 =
+1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.2=
+9l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"></path></svg> </summary> <ul class=
+=3D"astro-3ii7xxms"> <li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcon=
+troller.com/blog/remote_access/intelbras/remote-intelbras-access-with-ddns/=
+" aria-current=3D"false" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii=
+7xxms">Remote Intelbras Access with DDNS (Step-by-Step)</span> </a> </li><l=
+i class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/remote=
+_access/intelbras/remote-intelbras-access-with-remotizze/" aria-current=3D"=
+false" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Remote Inte=
+lbras Access with Remotizze Cloud</span> </a> </li><li class=3D"astro-3ii7x=
+xms"> <a href=3D"https://mkcontroller.com/blog/remote_access/intelbras/remo=
+te-intelbras-device-management-with-tr069/" aria-current=3D"false" class=3D=
+"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Remote Intelbras Device Ma=
+nagement with TR-069</span> </a> </li><li class=3D"astro-3ii7xxms"> <a href=
+=3D"https://mkcontroller.com/blog/remote_access/intelbras/remote-intelbras-=
+ftth-management-with-omci/" aria-current=3D"false" class=3D"astro-3ii7xxms"=
+> <span class=3D"astro-3ii7xxms">Remote Intelbras FTTH Management with OMCI=
+</span> </a> </li><li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontro=
+ller.com/blog/remote_access/intelbras/remote-intelbras-management-with-iman=
+ager/" aria-current=3D"false" class=3D"astro-3ii7xxms"> <span class=3D"astr=
+o-3ii7xxms">Remote Intelbras OLT Management with iManager</span> </a> </li>=
+<li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/remo=
+te_access/intelbras/remote-intelbras-management-with-iolt-cloud/" aria-curr=
+ent=3D"false" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Remo=
+te Intelbras GPON Management with iOLT Cloud</span> </a> </li><li class=3D"=
+astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/remote_access/int=
+elbras/remote-intelbras-monitoring-with-snmp/" aria-current=3D"false" class=
+=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Remote Intelbras Monito=
+ring with SNMP</span> </a> </li> </ul> </details> </li> </ul> </details> </=
+li><li class=3D"astro-3ii7xxms"> <details open=3D"" class=3D"astro-3ii7xxms=
+"> <sl-sidebar-restore data-index=3D"4"></sl-sidebar-restore> <summary clas=
+s=3D"astro-3ii7xxms"> <div class=3D"astro-3ii7xxms group-label"> <span clas=
+s=3D"astro-3ii7xxms large">Reviews</span> </div> <svg aria-hidden=3D"true" =
+class=3D"astro-3ii7xxms astro-c6vsoqas caret" width=3D"16" height=3D"16" vi=
+ewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-size: 1.25rem;=
+"><path d=3D"m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54=
+a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 =
+0 0 0 0-1.42Z"></path></svg> </summary> <ul class=3D"astro-3ii7xxms"> <li c=
+lass=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/devices/m=
+ikrotik-css326/" aria-current=3D"false" class=3D"astro-3ii7xxms"> <span cla=
+ss=3D"astro-3ii7xxms">Mikrotik CSS326=E2=80=9124G=E2=80=912S+RM</span> </a>=
+ </li><li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blo=
+g/devices/mikrotik-rb5009ugsin/" aria-current=3D"false" class=3D"astro-3ii7=
+xxms"> <span class=3D"astro-3ii7xxms">Mikrotik RB5009UG+S+IN Review</span> =
+</a> </li><li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com=
+/blog/devices/mikrotik-rb750gr3/" aria-current=3D"false" class=3D"astro-3ii=
+7xxms"> <span class=3D"astro-3ii7xxms">MikroTik hEX with MKController Cloud=
+ Management</span> </a> </li><li class=3D"astro-3ii7xxms"> <a href=3D"https=
+://mkcontroller.com/blog/mikrotik-rb3011-performance-architecture-review/" =
+aria-current=3D"false" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7x=
+xms">MikroTik RB3011 Performance Architecture Review</span> </a> </li> </ul=
+> </details> </li><li class=3D"astro-3ii7xxms"> <details open=3D"" class=3D=
+"astro-3ii7xxms"> <sl-sidebar-restore data-index=3D"5"></sl-sidebar-restore=
+> <summary class=3D"astro-3ii7xxms"> <div class=3D"astro-3ii7xxms group-lab=
+el"> <span class=3D"astro-3ii7xxms large">Tutorials</span> </div> <svg aria=
+-hidden=3D"true" class=3D"astro-3ii7xxms astro-c6vsoqas caret" width=3D"16"=
+ height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-ic=
+on-size: 1.25rem;"><path d=3D"m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12=
+.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-=
+4.24a1.002 1.002 0 0 0 0-1.42Z"></path></svg> </summary> <ul class=3D"astro=
+-3ii7xxms"> <li class=3D"astro-3ii7xxms"> <details open=3D"" class=3D"astro=
+-3ii7xxms"> <sl-sidebar-restore data-index=3D"6"></sl-sidebar-restore> <sum=
+mary class=3D"astro-3ii7xxms"> <div class=3D"astro-3ii7xxms group-label"> <=
+span class=3D"astro-3ii7xxms large">Mikrotik</span> </div> <svg aria-hidden=
+=3D"true" class=3D"astro-3ii7xxms astro-c6vsoqas caret" width=3D"16" height=
+=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-size=
+: 1.25rem;"><path d=3D"m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l=
+-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.=
+002 1.002 0 0 0 0-1.42Z"></path></svg> </summary> <ul class=3D"astro-3ii7xx=
+ms"> <li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog=
+/tutorials/mikrotik/192168881/" aria-current=3D"false" class=3D"astro-3ii7x=
+xms"> <span class=3D"astro-3ii7xxms">Can=E2=80=99t Access 192.168.88.1 on M=
+ikroTik?</span> </a> </li><li class=3D"astro-3ii7xxms"> <a href=3D"https://=
+mkcontroller.com/blog/tutorials/mikrotik/configuring-wifi6-on-mikrotik-ax/"=
+ aria-current=3D"false" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7=
+xxms">Configuring Wi=E2=80=91Fi 6 on MikroTik AX</span> </a> </li><li class=
+=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/tutorials/mik=
+rotik/mikrotik_adlist_blog/" aria-current=3D"false" class=3D"astro-3ii7xxms=
+"> <span class=3D"astro-3ii7xxms">Block Ads on MikroTik with AdList</span> =
+</a> </li><li class=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com=
+/blog/tutorials/mikrotik/nat_on_mikrotik_configure_nat/" aria-current=3D"fa=
+lse" class=3D"astro-3ii7xxms"> <span class=3D"astro-3ii7xxms">Configuring N=
+AT on MikroTik to Access the Internet</span> </a> </li><li class=3D"astro-3=
+ii7xxms"> <a href=3D"https://mkcontroller.com/blog/tutorials/mikrotik/netin=
+stall_mikrotik_recovering_routeros/" aria-current=3D"false" class=3D"astro-=
+3ii7xxms"> <span class=3D"astro-3ii7xxms">Netinstall Mikrotik: Recovering R=
+outerOS Step=E2=80=91by=E2=80=91Step</span> </a> </li> </ul> </details> </l=
+i><li class=3D"astro-3ii7xxms"> <details open=3D"" class=3D"astro-3ii7xxms"=
+> <sl-sidebar-restore data-index=3D"7"></sl-sidebar-restore> <summary class=
+=3D"astro-3ii7xxms"> <div class=3D"astro-3ii7xxms group-label"> <span class=
+=3D"astro-3ii7xxms large">UniFi</span> </div> <svg aria-hidden=3D"true" cla=
+ss=3D"astro-3ii7xxms astro-c6vsoqas caret" width=3D"16" height=3D"16" viewB=
+ox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-size: 1.25rem;"><=
+path d=3D"m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 =
+1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0=
+ 0 0-1.42Z"></path></svg> </summary> <ul class=3D"astro-3ii7xxms"> <li clas=
+s=3D"astro-3ii7xxms"> <a href=3D"https://mkcontroller.com/blog/tutorials/un=
+ifi/unifi_required_ports/" aria-current=3D"page" class=3D"astro-3ii7xxms"> =
+<span class=3D"astro-3ii7xxms">Required Ports for UniFi</span> </a> </li> <=
+/ul> </details> </li> </ul> </details> </li><li class=3D"astro-3ii7xxms"> <=
+details class=3D"astro-3ii7xxms"> <sl-sidebar-restore data-index=3D"8"></sl=
+-sidebar-restore> <summary class=3D"astro-3ii7xxms"> <div class=3D"astro-3i=
+i7xxms group-label"> <span class=3D"astro-3ii7xxms large">Cases</span> </di=
+v> <svg aria-hidden=3D"true" class=3D"astro-3ii7xxms astro-c6vsoqas caret" =
+width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" styl=
+e=3D"--sl-icon-size: 1.25rem;"><path d=3D"m14.83 11.29-4.24-4.24a1 1 0 1 0-=
+1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .=
+71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"></path></svg> </summary> <ul cl=
+ass=3D"astro-3ii7xxms"> </ul> </details> </li> </ul>  </sl-sidebar-state-pe=
+rsist> <div class=3D"md:sl-hidden"> <div class=3D"astro-wu23bvmt mobile-pre=
+ferences sl-flex"> <div class=3D"astro-wu23bvmt sl-flex social-icons"> </di=
+v> <starlight-theme-select> <label style=3D"--sl-select-width: 6.25em" clas=
+s=3D"astro-4yphtoen"> <span class=3D"astro-4yphtoen sr-only">Select theme</=
+span> <svg aria-hidden=3D"true" class=3D"astro-4yphtoen astro-c6vsoqas icon=
+ label-icon" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"curre=
+ntColor" style=3D"--sl-icon-size: 1em;"><path d=3D"M21 14h-1V7a3 3 0 0 0-3-=
+3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1=
+ 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5=
+a1 1 0 0 1-1-1v-1h16v1Z"></path></svg> <select value=3D"auto" autocomplete=
+=3D"off" class=3D"astro-4yphtoen"> <option value=3D"dark" class=3D"astro-4y=
+phtoen">Dark</option><option value=3D"light" class=3D"astro-4yphtoen">Light=
+</option><option value=3D"auto" selected=3D"" class=3D"astro-4yphtoen">Auto=
+</option> </select> <svg aria-hidden=3D"true" class=3D"astro-4yphtoen astro=
+-c6vsoqas caret icon" width=3D"16" height=3D"16" viewBox=3D"0 0 24 24" fill=
+=3D"currentColor" style=3D"--sl-icon-size: 1em;"><path d=3D"M17 9.17a1 1 0 =
+0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0=
+ 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"></path></svg> </label> </star=
+light-theme-select>  <div class=3D"mkc-lang-wrapper"> <starlight-lang-selec=
+t><label style=3D"--sl-select-width: 7em" class=3D"astro-4yphtoen"> <span c=
+lass=3D"astro-4yphtoen sr-only">Select language</span> <svg aria-hidden=3D"=
+true" class=3D"astro-4yphtoen astro-c6vsoqas icon label-icon" width=3D"16" =
+height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-ico=
+n-size: 1em;"><path fill-rule=3D"evenodd" d=3D"M8.516 3a.94.94 0 0 0-.941.9=
+4v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7=
+.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7=
+.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.=
+855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 =
+2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.68=
+3-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 =
+0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.=
+894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.06=
+8 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule=
+=3D"evenodd"></path></svg> <select value=3D"/blog/tutorials/unifi/unifi_req=
+uired_ports/" autocomplete=3D"off" class=3D"astro-4yphtoen"> <option value=
+=3D"/blog/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">E=
+nglish</option><option value=3D"/blog/es/tutorials/unifi/unifi_required_por=
+ts/" class=3D"astro-4yphtoen">Espa=C3=B1ol</option><option value=3D"/blog/p=
+t/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Portugu=
+=C3=AAs</option><option value=3D"/blog/af/tutorials/unifi/unifi_required_po=
+rts/" class=3D"astro-4yphtoen">Afrikaans</option><option value=3D"/blog/ar/=
+tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=D8=A7=D9=
+=84=D8=B9=D8=B1=D8=A8=D9=8A=D8=A9</option><option value=3D"/blog/bg/tutoria=
+ls/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=D0=91=D1=8A=D0=BB=
+=D0=B3=D0=B0=D1=80=D1=81=D0=BA=D0=B8</option><option value=3D"/blog/ca/tuto=
+rials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Catal=C3=A0</op=
+tion><option value=3D"/blog/cs/tutorials/unifi/unifi_required_ports/" class=
+=3D"astro-4yphtoen">=C4=8Ce=C5=A1tina</option><option value=3D"/blog/da/tut=
+orials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Dansk</option>=
+<option value=3D"/blog/de/tutorials/unifi/unifi_required_ports/" class=3D"a=
+stro-4yphtoen">Deutsch</option><option value=3D"/blog/el/tutorials/unifi/un=
+ifi_required_ports/" class=3D"astro-4yphtoen">=CE=95=CE=BB=CE=BB=CE=B7=CE=
+=BD=CE=B9=CE=BA=CE=AC</option><option value=3D"/blog/et/tutorials/unifi/uni=
+fi_required_ports/" class=3D"astro-4yphtoen">Eesti</option><option value=3D=
+"/blog/fi/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">S=
+uomi</option><option value=3D"/blog/fr/tutorials/unifi/unifi_required_ports=
+/" class=3D"astro-4yphtoen">Fran=C3=A7ais</option><option value=3D"/blog/he=
+/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=D7=A2=D7=
+=91=D7=A8=D7=99=D7=AA</option><option value=3D"/blog/hr/tutorials/unifi/uni=
+fi_required_ports/" class=3D"astro-4yphtoen">Hrvatski</option><option value=
+=3D"/blog/hu/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen=
+">Magyar</option><option value=3D"/blog/id/tutorials/unifi/unifi_required_p=
+orts/" class=3D"astro-4yphtoen">Indonesia</option><option value=3D"/blog/it=
+/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">Italiano</=
+option><option value=3D"/blog/ja/tutorials/unifi/unifi_required_ports/" cla=
+ss=3D"astro-4yphtoen">=E6=97=A5=E6=9C=AC=E8=AA=9E</option><option value=3D"=
+/blog/ko/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=
+=ED=95=9C=EA=B5=AD=EC=96=B4</option><option value=3D"/blog/lt/tutorials/uni=
+fi/unifi_required_ports/" class=3D"astro-4yphtoen">Lietuvi=C5=B3</option><o=
+ption value=3D"/blog/lv/tutorials/unifi/unifi_required_ports/" class=3D"ast=
+ro-4yphtoen">Latvie=C5=A1u</option><option value=3D"/blog/nb/tutorials/unif=
+i/unifi_required_ports/" class=3D"astro-4yphtoen">Norsk bokm=C3=A5l</option=
+><option value=3D"/blog/nl/tutorials/unifi/unifi_required_ports/" class=3D"=
+astro-4yphtoen">Nederlands</option><option value=3D"/blog/pl/tutorials/unif=
+i/unifi_required_ports/" class=3D"astro-4yphtoen">Polski</option><option va=
+lue=3D"/blog/ro/tutorials/unifi/unifi_required_ports/" class=3D"astro-4ypht=
+oen">Rom=C3=A2n=C4=83</option><option value=3D"/blog/ru/tutorials/unifi/uni=
+fi_required_ports/" class=3D"astro-4yphtoen">=D0=A0=D1=83=D1=81=D1=81=D0=BA=
+=D0=B8=D0=B9</option><option value=3D"/blog/sk/tutorials/unifi/unifi_requir=
+ed_ports/" class=3D"astro-4yphtoen">Sloven=C4=8Dina</option><option value=
+=3D"/blog/sl/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen=
+">Sloven=C5=A1=C4=8Dina</option><option value=3D"/blog/sr/tutorials/unifi/u=
+nifi_required_ports/" class=3D"astro-4yphtoen">=D0=A1=D1=80=D0=BF=D1=81=D0=
+=BA=D0=B8</option><option value=3D"/blog/sv/tutorials/unifi/unifi_required_=
+ports/" class=3D"astro-4yphtoen">Svenska</option><option value=3D"/blog/th/=
+tutorials/unifi/unifi_required_ports/" class=3D"astro-4yphtoen">=E0=B9=84=
+=E0=B8=97=E0=B8=A2</option><option value=3D"/blog/tr/tutorials/unifi/unifi_=
+required_ports/" class=3D"astro-4yphtoen">T=C3=BCrk=C3=A7e</option><option =
+value=3D"/blog/uk/tutorials/unifi/unifi_required_ports/" class=3D"astro-4yp=
+htoen">=D0=A3=D0=BA=D1=80=D0=B0=D1=97=D0=BD=D1=81=D1=8C=D0=BA=D0=B0</option=
+><option value=3D"/blog/vi/tutorials/unifi/unifi_required_ports/" class=3D"=
+astro-4yphtoen">Ti=E1=BA=BFng Vi=E1=BB=87t</option> </select> <svg aria-hid=
+den=3D"true" class=3D"astro-4yphtoen astro-c6vsoqas caret icon" width=3D"16=
+" height=3D"16" viewBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-i=
+con-size: 1em;"><path d=3D"M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1=
+ 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 =
+0 0 0-1.42Z"></path></svg> </label> </starlight-lang-select> <a href=3D"htt=
+ps://app.mkcontroller.com/mkcontroller-server/onboard/#/onboard/email" targ=
+et=3D"_blank" class=3D"mkc-signup-button"> Start free trial </a> </div> </d=
+iv> </div> </div> </div> </nav> <div class=3D"astro-vrdttmbt main-frame">  =
+<div class=3D"astro-67yu43on lg:sl-flex"> <aside class=3D"astro-67yu43on pr=
+int:hidden right-sidebar-container"> <div class=3D"astro-67yu43on right-sid=
+ebar"> <div class=3D"astro-pb3aqygn lg:sl-hidden"><mobile-starlight-toc dat=
+a-min-h=3D"2" data-max-h=3D"3" class=3D"astro-doynk5tl"><nav aria-labelledb=
+y=3D"starlight__on-this-page--mobile" class=3D"astro-doynk5tl"><details id=
+=3D"starlight__mobile-toc" class=3D"astro-doynk5tl"><summary id=3D"starligh=
+t__on-this-page--mobile" class=3D"astro-doynk5tl sl-flex"><div class=3D"ast=
+ro-doynk5tl sl-flex toggle">On this page<svg aria-hidden=3D"true" class=3D"=
+astro-c6vsoqas astro-doynk5tl caret" width=3D"16" height=3D"16" viewBox=3D"=
+0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-size: 1rem;"><path d=3D=
+"m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0=
+ 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42=
+Z"></path></svg></div><span class=3D"astro-doynk5tl display-current"> Overv=
+iew </span></summary><div class=3D"astro-doynk5tl dropdown"><ul class=3D"as=
+tro-g2bywc46 isMobile" style=3D"--depth: 0;"> <li class=3D"astro-g2bywc46" =
+style=3D"--depth: 0;"> <a href=3D"https://mkcontroller.com/blog/tutorials/u=
+nifi/unifi_required_ports/#_top" class=3D"astro-g2bywc46" style=3D"--depth:=
+ 0;" aria-current=3D"true"> <span class=3D"astro-g2bywc46" style=3D"--depth=
+: 0;">Overview</span> </a> </li><li class=3D"astro-g2bywc46" style=3D"--dep=
+th: 0;"> <a href=3D"https://mkcontroller.com/blog/tutorials/unifi/unifi_req=
+uired_ports/#overview" class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <spa=
+n class=3D"astro-g2bywc46" style=3D"--depth: 0;">Overview</span> </a> </li>=
+<li class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <a href=3D"https://mkco=
+ntroller.com/blog/tutorials/unifi/unifi_required_ports/#remote-management" =
+class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <span class=3D"astro-g2bywc=
+46" style=3D"--depth: 0;">Remote Management</span> </a> </li><li class=3D"a=
+stro-g2bywc46" style=3D"--depth: 0;"> <a href=3D"https://mkcontroller.com/b=
+log/tutorials/unifi/unifi_required_ports/#unifinetwork" class=3D"astro-g2by=
+wc46" style=3D"--depth: 0;"> <span class=3D"astro-g2bywc46" style=3D"--dept=
+h: 0;">UniFi&nbsp;Network</span> </a> </li><li class=3D"astro-g2bywc46" sty=
+le=3D"--depth: 0;"> <a href=3D"https://mkcontroller.com/blog/tutorials/unif=
+i/unifi_required_ports/#unifiprotect" class=3D"astro-g2bywc46" style=3D"--d=
+epth: 0;"> <span class=3D"astro-g2bywc46" style=3D"--depth: 0;">UniFi&nbsp;=
+Protect</span> </a> <ul class=3D"astro-g2bywc46 isMobile" style=3D"--depth:=
+ 1;"> <li class=3D"astro-g2bywc46" style=3D"--depth: 1;"> <a href=3D"https:=
+//mkcontroller.com/blog/tutorials/unifi/unifi_required_ports/#stacked-nvrs-=
+msrmsp" class=3D"astro-g2bywc46" style=3D"--depth: 1;"> <span class=3D"astr=
+o-g2bywc46" style=3D"--depth: 1;">Stacked NVRs (MSR/MSP)</span> </a> </li> =
+</ul> </li><li class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <a href=3D"h=
+ttps://mkcontroller.com/blog/tutorials/unifi/unifi_required_ports/#unificon=
+nect" class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <span class=3D"astro-=
+g2bywc46" style=3D"--depth: 0;">UniFi&nbsp;Connect</span> </a> </li><li cla=
+ss=3D"astro-g2bywc46" style=3D"--depth: 0;"> <a href=3D"https://mkcontrolle=
+r.com/blog/tutorials/unifi/unifi_required_ports/#unifiaccess" class=3D"astr=
+o-g2bywc46" style=3D"--depth: 0;"> <span class=3D"astro-g2bywc46" style=3D"=
+--depth: 0;">UniFi&nbsp;Access</span> </a> </li><li class=3D"astro-g2bywc46=
+" style=3D"--depth: 0;"> <a href=3D"https://mkcontroller.com/blog/tutorials=
+/unifi/unifi_required_ports/#changing-default-ports-on-a-unifinetwork-serve=
+r" class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <span class=3D"astro-g2b=
+ywc46" style=3D"--depth: 0;">Changing Default Ports on a UniFi&nbsp;Network=
+ Server</span> </a> </li><li class=3D"astro-g2bywc46" style=3D"--depth: 0;"=
+> <a href=3D"https://mkcontroller.com/blog/tutorials/unifi/unifi_required_p=
+orts/#about-mkcontroller" class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <=
+span class=3D"astro-g2bywc46" style=3D"--depth: 0;">About MKController</spa=
+n> </a> </li> </ul> </div></details></nav></mobile-starlight-toc></div><div=
+ class=3D"astro-pb3aqygn lg:sl-block right-sidebar-panel sl-hidden"><div cl=
+ass=3D"astro-pb3aqygn sl-container"><starlight-toc data-min-h=3D"2" data-ma=
+x-h=3D"3"><nav aria-labelledby=3D"starlight__on-this-page"><h2 id=3D"starli=
+ght__on-this-page">On this page</h2><ul class=3D"astro-g2bywc46" style=3D"-=
+-depth: 0;"> <li class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <a href=3D=
+"https://mkcontroller.com/blog/tutorials/unifi/unifi_required_ports/#_top" =
+class=3D"astro-g2bywc46" style=3D"--depth: 0;" aria-current=3D"true"> <span=
+ class=3D"astro-g2bywc46" style=3D"--depth: 0;">Overview</span> </a> </li><=
+li class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <a href=3D"https://mkcon=
+troller.com/blog/tutorials/unifi/unifi_required_ports/#overview" class=3D"a=
+stro-g2bywc46" style=3D"--depth: 0;"> <span class=3D"astro-g2bywc46" style=
+=3D"--depth: 0;">Overview</span> </a> </li><li class=3D"astro-g2bywc46" sty=
+le=3D"--depth: 0;"> <a href=3D"https://mkcontroller.com/blog/tutorials/unif=
+i/unifi_required_ports/#remote-management" class=3D"astro-g2bywc46" style=
+=3D"--depth: 0;"> <span class=3D"astro-g2bywc46" style=3D"--depth: 0;">Remo=
+te Management</span> </a> </li><li class=3D"astro-g2bywc46" style=3D"--dept=
+h: 0;"> <a href=3D"https://mkcontroller.com/blog/tutorials/unifi/unifi_requ=
+ired_ports/#unifinetwork" class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <=
+span class=3D"astro-g2bywc46" style=3D"--depth: 0;">UniFi&nbsp;Network</spa=
+n> </a> </li><li class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <a href=3D=
+"https://mkcontroller.com/blog/tutorials/unifi/unifi_required_ports/#unifip=
+rotect" class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <span class=3D"astr=
+o-g2bywc46" style=3D"--depth: 0;">UniFi&nbsp;Protect</span> </a> <ul class=
+=3D"astro-g2bywc46" style=3D"--depth: 1;"> <li class=3D"astro-g2bywc46" sty=
+le=3D"--depth: 1;"> <a href=3D"https://mkcontroller.com/blog/tutorials/unif=
+i/unifi_required_ports/#stacked-nvrs-msrmsp" class=3D"astro-g2bywc46" style=
+=3D"--depth: 1;"> <span class=3D"astro-g2bywc46" style=3D"--depth: 1;">Stac=
+ked NVRs (MSR/MSP)</span> </a> </li> </ul> </li><li class=3D"astro-g2bywc46=
+" style=3D"--depth: 0;"> <a href=3D"https://mkcontroller.com/blog/tutorials=
+/unifi/unifi_required_ports/#unificonnect" class=3D"astro-g2bywc46" style=
+=3D"--depth: 0;"> <span class=3D"astro-g2bywc46" style=3D"--depth: 0;">UniF=
+i&nbsp;Connect</span> </a> </li><li class=3D"astro-g2bywc46" style=3D"--dep=
+th: 0;"> <a href=3D"https://mkcontroller.com/blog/tutorials/unifi/unifi_req=
+uired_ports/#unifiaccess" class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <=
+span class=3D"astro-g2bywc46" style=3D"--depth: 0;">UniFi&nbsp;Access</span=
+> </a> </li><li class=3D"astro-g2bywc46" style=3D"--depth: 0;"> <a href=3D"=
+https://mkcontroller.com/blog/tutorials/unifi/unifi_required_ports/#changin=
+g-default-ports-on-a-unifinetwork-server" class=3D"astro-g2bywc46" style=3D=
+"--depth: 0;"> <span class=3D"astro-g2bywc46" style=3D"--depth: 0;">Changin=
+g Default Ports on a UniFi&nbsp;Network Server</span> </a> </li><li class=
+=3D"astro-g2bywc46" style=3D"--depth: 0;"> <a href=3D"https://mkcontroller.=
+com/blog/tutorials/unifi/unifi_required_ports/#about-mkcontroller" class=3D=
+"astro-g2bywc46" style=3D"--depth: 0;"> <span class=3D"astro-g2bywc46" styl=
+e=3D"--depth: 0;">About MKController</span> </a> </li> </ul> </nav></starli=
+ght-toc></div></div> </div> </aside> <div class=3D"astro-67yu43on main-pane=
+"> <main data-pagefind-body=3D"" class=3D"astro-bguv2lll" lang=3D"en" dir=
+=3D"ltr"> <div class=3D"astro-7nkwcw3z content-panel"> <div class=3D"astro-=
+7nkwcw3z sl-container"> <h1 id=3D"_top" class=3D"astro-j6tvhyss">Required P=
+orts for UniFi</h1> </div> </div> <div class=3D"astro-7nkwcw3z content-pane=
+l"> <div class=3D"astro-7nkwcw3z sl-container"> <div class=3D"sl-markdown-c=
+ontent"> <blockquote> <p><strong>Summary</strong><br> This guide outlines t=
+he default UDP and TCP ports that power UniFi=E2=80=99s remote management, =
+Network, Protect, Connect and Access services. It=E2=80=99s meant for self=
+=E2=80=91hosted deployments or environments with restrictive firewalls and =
+covers how to change default ports on a UniFi Network server.</p> </blockqu=
+ote> <h2 id=3D"overview">Overview</h2> <p>UniFi applications rely on specif=
+ic network ports to communicate with devices, deliver remote management and=
+ provide services like the guest portal or video streaming. In typical depl=
+oyments with UniFi gateways these ports are opened automatically. Administr=
+ators using third=E2=80=91party gateways, self=E2=80=91hosting or hardened =
+firewalls should ensure the ports listed below remain accessible.</p> <h2 i=
+d=3D"remote-management">Remote Management</h2> <p>Remote management allows =
+administrators to monitor and manage UniFi devices over the internet. The f=
+ollowing ports are required to support remote access, DNS resolution and se=
+cure communication.</p> <table><thead><tr><th>Protocol &amp; Port</th><th>D=
+irection</th><th>Usage</th></tr></thead><tbody><tr><td><strong>TCP/UDP&nbsp=
+;53</strong></td><td>Both</td><td>DNS lookups for remote access, updates an=
+d Guest Portal redirection; also used by UniFi&nbsp;Network</td></tr><tr><t=
+d><strong>UDP&nbsp;123</strong></td><td>Egress</td><td>NTP time synchroniza=
+tion needed to establish secure connections</td></tr><tr><td><strong>UDP&nb=
+sp;3478</strong></td><td>Both</td><td>STUN service used for remote access; =
+also used by UniFi&nbsp;Network</td></tr><tr><td><strong>TCP&nbsp;443</stro=
+ng></td><td>Both</td><td>Remote&nbsp;Access service and web=E2=80=91based G=
+UI/API; also used by UniFi&nbsp;Network</td></tr><tr><td><strong>TCP&nbsp;8=
+883</strong></td><td>Egress</td><td>Remote&nbsp;Access service</td></tr><tr=
+><td><strong>TCP&nbsp;5349</strong></td><td>Ingress</td><td>Remote access s=
+upport</td></tr></tbody></table> <h2 id=3D"unifinetwork">UniFi&nbsp;Network=
+</h2> <p>UniFi&nbsp;Network is the central management platform for UniFi sw=
+itches, routers and Wi=E2=80=91Fi access points. These ports handle device =
+adoption, controller communication and management tasks.</p> <table><thead>=
+<tr><th>Protocol &amp; Port</th><th>Direction</th><th>Usage</th></tr></thea=
+d><tbody><tr><td><strong>TCP/UDP&nbsp;53</strong></td><td>Both</td><td>DNS =
+lookups for Guest Portal redirection and updates; also used by Remote&nbsp;=
+Management</td></tr><tr><td><strong>UDP&nbsp;3478</strong></td><td>Both</td=
+><td>STUN service for device adoption and communication; also used by Remot=
+e&nbsp;Management</td></tr><tr><td><strong>TCP&nbsp;8080</strong></td><td>I=
+ngress</td><td>Device and application communication</td></tr><tr><td><stron=
+g>TCP&nbsp;8443</strong></td><td>Ingress</td><td>Application GUI/API on the=
+ UniFi&nbsp;Console</td></tr><tr><td><strong>TCP&nbsp;8880=E2=80=938882</st=
+rong></td><td>Ingress</td><td>Hotspot portal redirection over HTTP</td></tr=
+><tr><td><strong>TCP&nbsp;8843</strong></td><td>Ingress</td><td>Hotspot por=
+tal redirection over HTTPS</td></tr><tr><td><strong>TCP&nbsp;8444</strong><=
+/td><td>Ingress</td><td>Secure portal for Hotspot</td></tr><tr><td><strong>=
+TCP&nbsp;6789</strong></td><td>Ingress</td><td>UniFi mobile speed test</td>=
+</tr><tr><td><strong>TCP&nbsp;27117</strong></td><td>Ingress</td><td>Local =
+database communication</td></tr><tr><td><strong>UDP&nbsp;10001</strong></td=
+><td>Ingress</td><td>Device discovery during adoption</td></tr><tr><td><str=
+ong>UDP&nbsp;1900</strong></td><td>Ingress</td><td>Layer=E2=80=912 discover=
+y (the =E2=80=9CMake application discoverable on L2 network=E2=80=9D settin=
+g)</td></tr><tr><td><strong>UDP&nbsp;5514</strong></td><td>Ingress</td><td>=
+Remote syslog capture</td></tr><tr><td><strong>TCP/UDP&nbsp;22</strong></td=
+><td>Both</td><td>SSH access used for manual management (disabled by defaul=
+t)</td></tr><tr><td><strong>TCP&nbsp;443</strong></td><td>Both</td><td>Appl=
+ication GUI/API via web browser; also used by Remote&nbsp;Management</td></=
+tr></tbody></table> <h2 id=3D"unifiprotect">UniFi&nbsp;Protect</h2> <p>UniF=
+i&nbsp;Protect handles video streaming and device communication for cameras=
+ and network video recorders (NVRs). Ensure the following ports are open.</=
+p> <table><thead><tr><th>Protocol &amp; Port</th><th>Direction</th><th>Usag=
+e</th></tr></thead><tbody><tr><td><strong>TCP&nbsp;7441</strong></td><td>In=
+gress</td><td>Outgoing RTSPS streams</td></tr><tr><td><strong>TCP&nbsp;7442=
+</strong></td><td>Both</td><td>WebSocket server for device communication</t=
+d></tr><tr><td><strong>TCP&nbsp;7443</strong></td><td>Both</td><td>REST API=
+ (HTTPS)</td></tr><tr><td><strong>TCP&nbsp;7444</strong></td><td>Both</td><=
+td>WebSocket server for camera communication</td></tr><tr><td><strong>TCP&n=
+bsp;7445</strong></td><td>Ingress</td><td>Outgoing Protect streams</td></tr=
+><tr><td><strong>TCP&nbsp;7447</strong></td><td>Ingress</td><td>Outgoing RT=
+SP streams</td></tr><tr><td><strong>TCP&nbsp;7550</strong></td><td>Ingress<=
+/td><td>Camera streams</td></tr><tr><td><strong>TCP&nbsp;7552</strong></td>=
+<td>Both</td><td>SSL camera connections</td></tr><tr><td><strong>TCP&nbsp;7=
+888</strong></td><td>Both</td><td>TCP bridge</td></tr></tbody></table> <h3 =
+id=3D"stacked-nvrs-msrmsp">Stacked NVRs (MSR/MSP)</h3> <p>The following add=
+itional ports are only required for physically stacked network video record=
+ers. They should be opened in addition to the base Protect ports.</p> <tabl=
+e><thead><tr><th>Protocol &amp; Port</th><th>Direction</th><th>Usage</th></=
+tr></thead><tbody><tr><td><strong>TCP&nbsp;7446</strong></td><td>Both</td><=
+td>Protect streams between consoles</td></tr><tr><td><strong>TCP&nbsp;7451<=
+/strong></td><td>Both</td><td>Protect streams between consoles</td></tr><tr=
+><td><strong>TCP&nbsp;7600</strong></td><td>Both</td><td>Protect applicatio=
+n communications</td></tr></tbody></table> <h2 id=3D"unificonnect">UniFi&nb=
+sp;Connect</h2> <p>UniFi&nbsp;Connect integrates with Lutron lighting proce=
+ssors and other automation devices. These ports support device discovery, W=
+ebSocket communication and proxies.</p> <table><thead><tr><th>Protocol &amp=
+; Port</th><th>Direction</th><th>Usage</th></tr></thead><tbody><tr><td><str=
+ong>UDP&nbsp;2647</strong></td><td>Ingress</td><td>Lutron Processor discove=
+ry for HomeWorks&nbsp;QSX, HomeWorks&nbsp;Wireless and RadioRA3</td></tr><t=
+r><td><strong>UDP&nbsp;5353</strong></td><td>Ingress</td><td>Lutron Process=
+or discovery for HomeWorks&nbsp;QS and RadioRA2</td></tr><tr><td><strong>TC=
+P&nbsp;18080</strong></td><td>Ingress</td><td>Application GUI/API on the Un=
+iFi&nbsp;Console</td></tr><tr><td><strong>TCP&nbsp;18443</strong></td><td>B=
+oth</td><td>WebSocket server for device communication (HTTPS)</td></tr><tr>=
+<td><strong>TCP&nbsp;18884</strong></td><td>Both</td><td>MQTT server for de=
+vice communication</td></tr><tr><td><strong>TCP&nbsp;18888</strong></td><td=
+>Both</td><td>Internal Lutron proxy between the Lutron Processor and UniFi&=
+nbsp;Connect</td></tr></tbody></table> <h2 id=3D"unifiaccess">UniFi&nbsp;Ac=
+cess</h2> <p>UniFi&nbsp;Access manages door controllers and readers. The fo=
+llowing ports enable secure communication between devices and the server.</=
+p> <table><thead><tr><th>Protocol &amp; Port</th><th>Direction</th><th>Usag=
+e</th></tr></thead><tbody><tr><td><strong>TCP&nbsp;12812</strong></td><td>B=
+oth</td><td>MQTT server for device communication</td></tr><tr><td><strong>T=
+CP&nbsp;12442</strong></td><td>Both</td><td>WebSocket server (UCP4) for dev=
+ice communication</td></tr><tr><td><strong>TCP&nbsp;12443</strong></td><td>=
+Both</td><td>HTTPS server for device communication</td></tr><tr><td><strong=
+>TCP&nbsp;12445</strong></td><td>Both</td><td>Open API</td></tr><tr><td><st=
+rong>TCP&nbsp;12478</strong></td><td>Both</td><td>WebRTC TURN server for de=
+vice communication</td></tr></tbody></table> <h2 id=3D"changing-default-por=
+ts-on-a-unifinetwork-server">Changing Default Ports on a UniFi&nbsp;Network=
+ Server</h2> <p>Default port assignments can be modified on self=E2=80=91ho=
+sted UniFi&nbsp;Network servers running on Windows, macOS or Linux. UniFi&n=
+bsp;Consoles (Cloud&nbsp;Keys, Dream&nbsp;Machines or other embedded contro=
+llers) do not allow port changes.</p> <ol> <li>Shut down any running UniFi&=
+nbsp;Network application.</li> <li>Locate and edit the <code dir=3D"auto">s=
+ystem.properties</code> file inside <code dir=3D"auto">&lt;unifi_base&gt;/d=
+ata/system.properties</code>. <ul> <li>For example, to change the shutdown =
+port from <strong>8081</strong> to <strong>8089</strong>, add or modify the=
+ line <code dir=3D"auto">unifi.shutdown.port=3D8089</code>.</li> </ul> </li=
+> <li>Restart the UniFi&nbsp;Network application.</li> </ol> <p>Ensure ther=
+e are no extra spaces, comments (<code dir=3D"auto">#</code>) or stray char=
+acters on the modified line; otherwise the change will be ignored.</p> <hr>=
+ <h2 id=3D"about-mkcontroller">About MKController</h2> <p>Hope the insights=
+ above helped you navigate your Mikrotik and Internet universe a little bet=
+ter! =F0=9F=9A=80<br> Whether you=E2=80=99re fine-tuning configs or just tr=
+ying to bring some order to the network madness, <strong>MKController</stro=
+ng> is here to make your life simpler.</p> <p>With centralized cloud manage=
+ment, automated security updates, and a dashboard that anyone can master, w=
+e=E2=80=99ve got what it takes to upgrade your operation.</p> <p>=F0=9F=91=
+=89 <a href=3D"https://mkcontroller.com/">Start your free 3-day trial now</=
+a> at <strong>mkcontroller.com</strong> =E2=80=94 and see what effortless n=
+etwork control really looks like.</p> </div> <footer class=3D"astro-3yyafb3=
+n sl-flex"> <div class=3D"astro-3yyafb3n meta sl-flex"> </div> <div class=
+=3D"astro-u2l5gyhi pagination-links print:hidden" dir=3D"ltr"> <a href=3D"h=
+ttps://mkcontroller.com/blog/tutorials/mikrotik/netinstall_mikrotik_recover=
+ing_routeros/" rel=3D"prev" class=3D"astro-u2l5gyhi"> <svg aria-hidden=3D"t=
+rue" class=3D"astro-c6vsoqas astro-u2l5gyhi" width=3D"16" height=3D"16" vie=
+wBox=3D"0 0 24 24" fill=3D"currentColor" style=3D"--sl-icon-size: 1.5rem;">=
+<path d=3D"M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-=
+.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 =
+1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"></path></svg> <span class=3D"=
+astro-u2l5gyhi"> Previous <br class=3D"astro-u2l5gyhi"> <span class=3D"astr=
+o-u2l5gyhi link-title">Netinstall Mikrotik: Recovering RouterOS Step=E2=80=
+=91by=E2=80=91Step</span> </span> </a> </div> </footer> </div> </div> </mai=
+n> </div> </div> </div> </div><iframe aria-hidden=3D"true" src=3D"cid:frame=
+-3685CF4F8BDE6EDC35128F6D44844ED7@mhtml.blink" style=3D"display: block; wid=
+th: 0px; height: 0px; border: 0px; visibility: hidden;"></iframe></body></h=
+tml>
+------MultipartBoundary--TgyAaT7LhlN1PNkiQG5LwUqQ3hDqOzzljijWb4dWwg----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-3319f396-cdf8-47b1-b5ae-686050277576@mhtml.blink
+
+@charset "utf-8";
+
+:root { --sl-badge-default-border: var(--sl-color-accent); --sl-badge-defau=
+lt-bg: var(--sl-color-accent-low); --sl-badge-default-text: #fff; --sl-badg=
+e-note-border: var(--sl-color-blue); --sl-badge-note-bg: var(--sl-color-blu=
+e-low); --sl-badge-note-text: #fff; --sl-badge-danger-border: var(--sl-colo=
+r-red); --sl-badge-danger-bg: var(--sl-color-red-low); --sl-badge-danger-te=
+xt: #fff; --sl-badge-success-border: var(--sl-color-green); --sl-badge-succ=
+ess-bg: var(--sl-color-green-low); --sl-badge-success-text: #fff; --sl-badg=
+e-caution-border: var(--sl-color-orange); --sl-badge-caution-bg: var(--sl-c=
+olor-orange-low); --sl-badge-caution-text: #fff; --sl-badge-tip-border: var=
+(--sl-color-purple); --sl-badge-tip-bg: var(--sl-color-purple-low); --sl-ba=
+dge-tip-text: #fff; }
+
+[data-theme=3D"light"]:root { --sl-badge-default-bg: var(--sl-color-accent-=
+high); --sl-badge-note-bg: var(--sl-color-blue-high); --sl-badge-danger-bg:=
+ var(--sl-color-red-high); --sl-badge-success-bg: var(--sl-color-green-high=
+); --sl-badge-caution-bg: var(--sl-color-orange-high); --sl-badge-tip-bg: v=
+ar(--sl-color-purple-high); }
+
+.sl-badge:where(.astro-avdet4wd) { border: 1px solid var(--sl-color-border-=
+badge); font-family: var(--sl-font-system-mono); color: var(--sl-color-text=
+-badge); background-color: var(--sl-color-bg-badge); overflow-wrap: anywher=
+e; border-radius: 0.25rem; line-height: normal; display: inline-block; }
+
+.sidebar-content .sl-badge:where(.astro-avdet4wd) { line-height: 1; font-si=
+ze: var(--sl-text-xs); padding: 0.125rem 0.375rem; }
+
+.sidebar-content a[aria-current=3D"page"] > .sl-badge:where(.astro-avdet4wd=
+) { --sl-color-bg-badge: transparent; --sl-color-border-badge: currentColor=
+; color: inherit; }
+
+.default:where(.astro-avdet4wd) { --sl-color-bg-badge: var(--sl-badge-defau=
+lt-bg); --sl-color-border-badge: var(--sl-badge-default-border); --sl-color=
+-text-badge: var(--sl-badge-default-text); }
+
+.note:where(.astro-avdet4wd) { --sl-color-bg-badge: var(--sl-badge-note-bg)=
+; --sl-color-border-badge: var(--sl-badge-note-border); --sl-color-text-bad=
+ge: var(--sl-badge-note-text); }
+
+.danger:where(.astro-avdet4wd) { --sl-color-bg-badge: var(--sl-badge-danger=
+-bg); --sl-color-border-badge: var(--sl-badge-danger-border); --sl-color-te=
+xt-badge: var(--sl-badge-danger-text); }
+
+.success:where(.astro-avdet4wd) { --sl-color-bg-badge: var(--sl-badge-succe=
+ss-bg); --sl-color-border-badge: var(--sl-badge-success-border); --sl-color=
+-text-badge: var(--sl-badge-success-text); }
+
+.tip:where(.astro-avdet4wd) { --sl-color-bg-badge: var(--sl-badge-tip-bg); =
+--sl-color-border-badge: var(--sl-badge-tip-border); --sl-color-text-badge:=
+ var(--sl-badge-tip-text); }
+
+.caution:where(.astro-avdet4wd) { --sl-color-bg-badge: var(--sl-badge-cauti=
+on-bg); --sl-color-border-badge: var(--sl-badge-caution-border); --sl-color=
+-text-badge: var(--sl-badge-caution-text); }
+
+.small:where(.astro-avdet4wd) { font-size: var(--sl-text-xs); padding: 0.12=
+5rem 0.25rem; }
+
+.medium:where(.astro-avdet4wd) { font-size: var(--sl-text-sm); padding: 0.1=
+75rem 0.35rem; }
+
+.large:where(.astro-avdet4wd) { font-size: var(--sl-text-base); padding: 0.=
+225rem 0.45rem; }
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) .sl-badge:where(.astro-avd=
+et4wd) { vertical-align: middle; }
+
+.card-grid:where(.astro-zntqmydn) { grid-template-columns: 100%; gap: 1rem;=
+ display: grid; }
+
+.card-grid:where(.astro-zntqmydn) > * { margin-top: 0px !important; }
+
+@media (width >=3D 50rem) {
+  .card-grid:where(.astro-zntqmydn) { grid-template-columns: 1fr 1fr; gap: =
+1.5rem; }
+  .stagger:where(.astro-zntqmydn) { --stagger-height: 5rem; padding-bottom:=
+ var(--stagger-height); }
+  .stagger:where(.astro-zntqmydn) > :nth-child(2n) { transform: translateY(=
+var(--stagger-height)); }
+}
+
+.card:where(.astro-v5tidmuc) { --sl-card-border: var(--sl-color-purple); --=
+sl-card-bg: var(--sl-color-purple-low); border: 1px solid var(--sl-color-gr=
+ay-5); background-color: var(--sl-color-black); flex-direction: column; gap=
+: clamp(0.5rem, 0.125rem + 1vw, 1rem); padding: clamp(1rem, 0.125rem + 3vw,=
+ 2.5rem); }
+
+.card:where(.astro-v5tidmuc):nth-child(4n+1) { --sl-card-border: var(--sl-c=
+olor-orange); --sl-card-bg: var(--sl-color-orange-low); }
+
+.card:where(.astro-v5tidmuc):nth-child(4n+3) { --sl-card-border: var(--sl-c=
+olor-green); --sl-card-bg: var(--sl-color-green-low); }
+
+.card:where(.astro-v5tidmuc):nth-child(4n+4) { --sl-card-border: var(--sl-c=
+olor-red); --sl-card-bg: var(--sl-color-red-low); }
+
+.card:where(.astro-v5tidmuc):nth-child(4n+5) { --sl-card-border: var(--sl-c=
+olor-blue); --sl-card-bg: var(--sl-color-blue-low); }
+
+.title:where(.astro-v5tidmuc) { font-weight: 600; font-size: var(--sl-text-=
+h4); color: var(--sl-color-white); line-height: var(--sl-line-height-headin=
+gs); align-items: center; gap: 1rem; }
+
+.card:where(.astro-v5tidmuc) .icon:where(.astro-v5tidmuc) { border: 1px sol=
+id var(--sl-card-border); background-color: var(--sl-card-bg); border-radiu=
+s: 0.25rem; padding: 0.2em; }
+
+.card:where(.astro-v5tidmuc) .body:where(.astro-v5tidmuc) { font-size: clam=
+p(var(--sl-text-sm),calc(.5rem + 1vw),var(--sl-text-body)); margin: 0px; }
+
+svg:where(.astro-c6vsoqas) { color: var(--sl-icon-color); font-size: var(--=
+sl-icon-size,1em); width: 1em; height: 1em; }
+
+.sl-steps { --bullet-size: calc(var(--sl-line-height)*1rem); --bullet-margi=
+n: .375rem; counter-reset: steps-counter var(--sl-steps-start,0); padding-i=
+nline-start: 0px; list-style: none; }
+
+.sl-steps > li { counter-increment: steps-counter 1; padding-inline-start: =
+calc(var(--bullet-size) + 1rem); min-height: calc(var(--bullet-size) + var(=
+--bullet-margin)); padding-bottom: 1px; position: relative; }
+
+.sl-steps > li + li { margin-top: 0px; }
+
+.sl-steps > li::before { content: counter(steps-counter); top: 0px; width: =
+var(--bullet-size); height: var(--bullet-size); line-height: var(--bullet-s=
+ize); font-size: var(--sl-text-xs); text-align: center; color: var(--sl-col=
+or-white); background-color: var(--sl-color-gray-6); box-shadow: inset 0 0 =
+0 1px var(--sl-color-gray-5); border-radius: 99rem; font-weight: 600; posit=
+ion: absolute; inset-inline-start: 0px; }
+
+.sl-steps > li::after { --guide-width: 1px; content: ""; top: calc(var(--bu=
+llet-size) + var(--bullet-margin)); bottom: var(--bullet-margin); width: va=
+r(--guide-width); background-color: var(--sl-color-hairline-light); positio=
+n: absolute; inset-inline-start: calc((var(--bullet-size) - var(--guide-wid=
+th))/2); }
+
+.sl-steps > li > :first-child { --lh: calc(1em*var(--sl-line-height)); --sh=
+ift-y: calc(.5*(var(--bullet-size) - var(--lh))); transform: translateY(var=
+(--shift-y)); margin-bottom: var(--shift-y); }
+
+.sl-steps > li > :first-child:where(h1, h2, h3, h4, h5, h6) { --lh: calc(1e=
+m*var(--sl-line-height-headings)); }
+
+@supports (--prop:1lh) {
+  .sl-steps > li > :first-child { --lh: 1lh; }
+}
+
+.sl-link-button:where(.astro-xwgiixxa) { font-size: var(--sl-text-sm); outl=
+ine-offset: 0.25rem; border: 1px solid rgba(0, 0, 0, 0); border-radius: 999=
+rem; align-items: center; gap: 0.5em; padding: 0.4375rem 1.125rem; line-hei=
+ght: 1.1875; text-decoration: none; display: inline-flex; }
+
+.sl-link-button:where(.astro-xwgiixxa).primary { background: var(--sl-color=
+-text-accent); border-color: var(--sl-color-text-accent); color: var(--sl-c=
+olor-black); }
+
+.sl-link-button:where(.astro-xwgiixxa).primary:hover { color: var(--sl-colo=
+r-black); }
+
+.sl-link-button:where(.astro-xwgiixxa).secondary { border-color: inherit; c=
+olor: var(--sl-color-white); }
+
+.sl-link-button:where(.astro-xwgiixxa).minimal { color: var(--sl-color-whit=
+e); padding-inline: 0px; }
+
+.sl-link-button:where(.astro-xwgiixxa) svg { flex-shrink: 0; }
+
+@media (width >=3D 50rem) {
+  .sl-link-button:where(.astro-xwgiixxa) { font-size: var(--sl-text-base); =
+padding: 0.9375rem 1.25rem; }
+}
+
+.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa) { margin-inline=
+-end: 1rem; }
+
+.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa):not(:where(p *)=
+) { margin-block: 1rem; }
+------MultipartBoundary--TgyAaT7LhlN1PNkiQG5LwUqQ3hDqOzzljijWb4dWwg----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://mkcontroller.com/blog/_astro/print.BJ0teN4y.css
+
+@charset "utf-8";
+
+@media print {
+  :root[data-theme]:is(:root) { --sl-color-white: hsl(224, 10%, 10%); --sl-=
+color-gray-1: hsl(224, 14%, 16%); --sl-color-gray-2: hsl(224, 10%, 23%); --=
+sl-color-gray-3: hsl(224, 7%, 36%); --sl-color-gray-4: hsl(224, 6%, 56%); -=
+-sl-color-gray-5: hsl(224, 6%, 77%); --sl-color-gray-6: hsl(224, 20%, 94%);=
+ --sl-color-gray-7: hsl(224, 19%, 97%); --sl-color-black: hsl(0, 0%, 100%);=
+ --sl-color-orange-high: hsl(var(--sl-hue-orange), 80%, 25%); --sl-color-or=
+ange: hsl(var(--sl-hue-orange), 90%, 60%); --sl-color-orange-low: hsl(var(-=
+-sl-hue-orange), 90%, 88%); --sl-color-green-high: hsl(var(--sl-hue-green),=
+ 80%, 22%); --sl-color-green: hsl(var(--sl-hue-green), 90%, 46%); --sl-colo=
+r-green-low: hsl(var(--sl-hue-green), 85%, 90%); --sl-color-blue-high: hsl(=
+var(--sl-hue-blue), 80%, 30%); --sl-color-blue: hsl(var(--sl-hue-blue), 90%=
+, 60%); --sl-color-blue-low: hsl(var(--sl-hue-blue), 88%, 90%); --sl-color-=
+purple-high: hsl(var(--sl-hue-purple), 90%, 30%); --sl-color-purple: hsl(va=
+r(--sl-hue-purple), 90%, 60%); --sl-color-purple-low: hsl(var(--sl-hue-purp=
+le), 80%, 90%); --sl-color-red-high: hsl(var(--sl-hue-red), 80%, 30%); --sl=
+-color-red: hsl(var(--sl-hue-red), 90%, 60%); --sl-color-red-low: hsl(var(-=
+-sl-hue-red), 80%, 90%); --sl-color-accent-high: hsl(234, 80%, 30%); --sl-c=
+olor-accent: hsl(234, 90%, 60%); --sl-color-accent-low: hsl(234, 88%, 90%);=
+ --sl-color-text-accent: var(--sl-color-accent); --sl-color-text-invert: va=
+r(--sl-color-black); --sl-color-bg-nav: var(--sl-color-gray-7); --sl-color-=
+bg-sidebar: var(--sl-color-bg); --sl-color-bg-inline-code: var(--sl-color-g=
+ray-6); --sl-color-bg-accent: var(--sl-color-accent); --sl-color-hairline-l=
+ight: var(--sl-color-gray-6); --sl-color-hairline-shade: var(--sl-color-gra=
+y-6); --sl-color-backdrop-overlay: hsla(225, 9%, 36%, .66); --sl-shadow-sm:=
+ none; --sl-shadow-md: none; --sl-shadow-lg: none; }
+  .print\:hidden { display: none !important; }
+  .print\:flex { display: flex !important; }
+  .print\:block { display: block !important; }
+  main { padding-bottom: 0px !important; }
+  main > .content-panel { padding-block-start: 0px !important; }
+  .content-panel + .content-panel { border: 0px !important; }
+  .page > header { position: relative !important; }
+  .page > .main-frame { padding-top: 0px; padding-inline-start: 0px; }
+  .main-pane { --sl-sidebar-width: 0px !important; --sl-content-width: 100%=
+ !important; }
+  .sl-banner { --sl-color-banner-text: var(--sl-color-white) !important; ba=
+ckground-color: transparent !important; }
+  .sl-markdown-content :is(h1, h2, h3, h4, h5, h6) { break-after: avoid; }
+  .sl-markdown-content :is(p, li) { orphans: 2; widows: 2; }
+  .sl-markdown-content pre { overflow-x: hidden !important; white-space: pr=
+e-wrap !important; }
+  .sl-markdown-content .expressive-code, .sl-markdown-content figure, .sl-m=
+arkdown-content pre { break-inside: avoid; }
+  .expressive-code .frame.is-terminal .header::before { box-shadow: inset 9=
+9rem 99rem var(--sl-color-gray-5); }
+  .expressive-code .frame.has-title:not(.is-terminal) .header { background:=
+ 0px 0px !important; border-bottom: 1px solid var(--sl-color-gray-6) !impor=
+tant; }
+  .expressive-code .frame.has-title:not(.is-terminal) .title { background: =
+0px 0px !important; }
+  .expressive-code .frame.has-title:not(.is-terminal) .title::after { borde=
+r-top: 0px !important; }
+  .expressive-code .copy { display: none !important; }
+  .sl-markdown-content code:not(:where(.not-content *)) { background-color:=
+ transparent !important; padding: 0px !important; margin-block: unset !impo=
+rtant; font-size: 0.9375em !important; }
+  .sl-badge { background: 0px 0px !important; color: var(--sl-color-white) =
+!important; }
+  starlight-file-tree { break-inside: avoid; }
+  starlight-file-tree .highlight { outline: 3px solid var(--sl-color-accent=
+-low); color: var(--sl-color-text) !important; background-color: transparen=
+t !important; }
+  .starlight-aside { break-inside: avoid; }
+  .sl-link-button.primary { background: 0px 0px !important; border-color: v=
+ar(--sl-color-white) !important; color: var(--sl-color-white) !important; }
+  starlight-tabs { break-inside: avoid; }
+  .sl-steps > li::after { box-shadow: inset 99rem 99rem var(--sl-color-hair=
+line-light); }
+}
+------MultipartBoundary--TgyAaT7LhlN1PNkiQG5LwUqQ3hDqOzzljijWb4dWwg----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://mkcontroller.com/blog/_astro/index.eKSSlRte.css
+
+@charset "utf-8";
+
+:root, ::backdrop { --sl-color-white: hsl(0, 0%, 100%); --sl-color-gray-1: =
+hsl(224, 20%, 94%); --sl-color-gray-2: hsl(224, 6%, 77%); --sl-color-gray-3=
+: hsl(224, 6%, 56%); --sl-color-gray-4: hsl(224, 7%, 36%); --sl-color-gray-=
+5: hsl(224, 10%, 23%); --sl-color-gray-6: hsl(224, 14%, 16%); --sl-color-bl=
+ack: hsl(224, 10%, 10%); --sl-hue-orange: 41; --sl-color-orange-low: hsl(va=
+r(--sl-hue-orange), 39%, 22%); --sl-color-orange: hsl(var(--sl-hue-orange),=
+ 82%, 63%); --sl-color-orange-high: hsl(var(--sl-hue-orange), 82%, 87%); --=
+sl-hue-green: 101; --sl-color-green-low: hsl(var(--sl-hue-green), 39%, 22%)=
+; --sl-color-green: hsl(var(--sl-hue-green), 82%, 63%); --sl-color-green-hi=
+gh: hsl(var(--sl-hue-green), 82%, 80%); --sl-hue-blue: 234; --sl-color-blue=
+-low: hsl(var(--sl-hue-blue), 54%, 20%); --sl-color-blue: hsl(var(--sl-hue-=
+blue), 100%, 60%); --sl-color-blue-high: hsl(var(--sl-hue-blue), 100%, 87%)=
+; --sl-hue-purple: 281; --sl-color-purple-low: hsl(var(--sl-hue-purple), 39=
+%, 22%); --sl-color-purple: hsl(var(--sl-hue-purple), 82%, 63%); --sl-color=
+-purple-high: hsl(var(--sl-hue-purple), 82%, 89%); --sl-hue-red: 339; --sl-=
+color-red-low: hsl(var(--sl-hue-red), 39%, 22%); --sl-color-red: hsl(var(--=
+sl-hue-red), 82%, 63%); --sl-color-red-high: hsl(var(--sl-hue-red), 82%, 87=
+%); --sl-color-accent-low: hsl(224, 54%, 20%); --sl-color-accent: hsl(224, =
+100%, 60%); --sl-color-accent-high: hsl(224, 100%, 85%); --sl-color-text: v=
+ar(--sl-color-gray-2); --sl-color-text-accent: var(--sl-color-accent-high);=
+ --sl-color-text-invert: var(--sl-color-accent-low); --sl-color-bg: var(--s=
+l-color-black); --sl-color-bg-nav: var(--sl-color-gray-6); --sl-color-bg-si=
+debar: var(--sl-color-gray-6); --sl-color-bg-inline-code: var(--sl-color-gr=
+ay-5); --sl-color-bg-accent: var(--sl-color-accent-high); --sl-color-hairli=
+ne-light: var(--sl-color-gray-5); --sl-color-hairline: var(--sl-color-gray-=
+6); --sl-color-hairline-shade: var(--sl-color-black); --sl-color-backdrop-o=
+verlay: hsla(223, 13%, 10%, .66); --sl-shadow-sm: 0px 1px 1px hsla(0, 0%, 0=
+%, .12), 0px 2px 1px hsla(0, 0%, 0%, .24); --sl-shadow-md: 0px 8px 4px hsla=
+(0, 0%, 0%, .08), 0px 5px 2px hsla(0, 0%, 0%, .08), 0px 3px 2px hsla(0, 0%,=
+ 0%, .12), 0px 1px 1px hsla(0, 0%, 0%, .15); --sl-shadow-lg: 0px 25px 7px h=
+sla(0, 0%, 0%, .03), 0px 16px 6px hsla(0, 0%, 0%, .1), 0px 9px 5px hsla(223=
+, 13%, 10%, .33), 0px 4px 4px hsla(0, 0%, 0%, .75), 0px 4px 2px hsla(0, 0%,=
+ 0%, .25); --sl-text-2xs: .75rem; --sl-text-xs: .8125rem; --sl-text-sm: .87=
+5rem; --sl-text-base: 1rem; --sl-text-lg: 1.125rem; --sl-text-xl: 1.25rem; =
+--sl-text-2xl: 1.5rem; --sl-text-3xl: 1.8125rem; --sl-text-4xl: 2.1875rem; =
+--sl-text-5xl: 2.625rem; --sl-text-6xl: 4rem; --sl-text-body: var(--sl-text=
+-base); --sl-text-body-sm: var(--sl-text-xs); --sl-text-code: var(--sl-text=
+-sm); --sl-text-code-sm: var(--sl-text-xs); --sl-text-h1: var(--sl-text-4xl=
+); --sl-text-h2: var(--sl-text-3xl); --sl-text-h3: var(--sl-text-2xl); --sl=
+-text-h4: var(--sl-text-xl); --sl-text-h5: var(--sl-text-lg); --sl-line-hei=
+ght: 1.75; --sl-line-height-headings: 1.2; --sl-font-system: ui-sans-serif,=
+ system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helveti=
+ca Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Em=
+oji", "Segoe UI Symbol", "Noto Color Emoji"; --sl-font-system-mono: ui-mono=
+space, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier=
+ New", monospace; --__sl-font: var(--sl-font, var(--sl-font-system)), var(-=
+-sl-font-system); --__sl-font-mono: var(--sl-font-mono, var(--sl-font-syste=
+m-mono)), var(--sl-font-system-mono); --sl-nav-height: 3.5rem; --sl-nav-pad=
+-x: 1rem; --sl-nav-pad-y: .75rem; --sl-mobile-toc-height: 3rem; --sl-sideba=
+r-width: 18.75rem; --sl-sidebar-pad-x: 1rem; --sl-content-width: 45rem; --s=
+l-content-pad-x: 1rem; --sl-menu-button-size: 2rem; --sl-nav-gap: var(--sl-=
+content-pad-x); --sl-outline-offset-inside: -.1875rem; --sl-z-index-toc: 4;=
+ --sl-z-index-menu: 5; --sl-z-index-navbar: 10; --sl-z-index-skiplink: 20; =
+}
+
+:root[data-theme=3D"light"], [data-theme=3D"light"] ::backdrop { --sl-color=
+-white: hsl(224, 10%, 10%); --sl-color-gray-1: hsl(224, 14%, 16%); --sl-col=
+or-gray-2: hsl(224, 10%, 23%); --sl-color-gray-3: hsl(224, 7%, 36%); --sl-c=
+olor-gray-4: hsl(224, 6%, 56%); --sl-color-gray-5: hsl(224, 6%, 77%); --sl-=
+color-gray-6: hsl(224, 20%, 94%); --sl-color-gray-7: hsl(224, 19%, 97%); --=
+sl-color-black: hsl(0, 0%, 100%); --sl-color-orange-high: hsl(var(--sl-hue-=
+orange), 80%, 25%); --sl-color-orange: hsl(var(--sl-hue-orange), 90%, 60%);=
+ --sl-color-orange-low: hsl(var(--sl-hue-orange), 90%, 88%); --sl-color-gre=
+en-high: hsl(var(--sl-hue-green), 80%, 22%); --sl-color-green: hsl(var(--sl=
+-hue-green), 90%, 46%); --sl-color-green-low: hsl(var(--sl-hue-green), 85%,=
+ 90%); --sl-color-blue-high: hsl(var(--sl-hue-blue), 80%, 30%); --sl-color-=
+blue: hsl(var(--sl-hue-blue), 90%, 60%); --sl-color-blue-low: hsl(var(--sl-=
+hue-blue), 88%, 90%); --sl-color-purple-high: hsl(var(--sl-hue-purple), 90%=
+, 30%); --sl-color-purple: hsl(var(--sl-hue-purple), 90%, 60%); --sl-color-=
+purple-low: hsl(var(--sl-hue-purple), 80%, 90%); --sl-color-red-high: hsl(v=
+ar(--sl-hue-red), 80%, 30%); --sl-color-red: hsl(var(--sl-hue-red), 90%, 60=
+%); --sl-color-red-low: hsl(var(--sl-hue-red), 80%, 90%); --sl-color-accent=
+-high: hsl(234, 80%, 30%); --sl-color-accent: hsl(234, 90%, 60%); --sl-colo=
+r-accent-low: hsl(234, 88%, 90%); --sl-color-text-accent: var(--sl-color-ac=
+cent); --sl-color-text-invert: var(--sl-color-black); --sl-color-bg-nav: va=
+r(--sl-color-gray-7); --sl-color-bg-sidebar: var(--sl-color-bg); --sl-color=
+-bg-inline-code: var(--sl-color-gray-6); --sl-color-bg-accent: var(--sl-col=
+or-accent); --sl-color-hairline-light: var(--sl-color-gray-6); --sl-color-h=
+airline-shade: var(--sl-color-gray-6); --sl-color-backdrop-overlay: hsla(22=
+5, 9%, 36%, .66); --sl-shadow-sm: 0px 1px 1px hsla(0, 0%, 0%, .06), 0px 2px=
+ 1px hsla(0, 0%, 0%, .06); --sl-shadow-md: 0px 8px 4px hsla(0, 0%, 0%, .03)=
+, 0px 5px 2px hsla(0, 0%, 0%, .03), 0px 3px 2px hsla(0, 0%, 0%, .06), 0px 1=
+px 1px hsla(0, 0%, 0%, .06); --sl-shadow-lg: 0px 25px 7px rgba(0, 0, 0, .01=
+), 0px 16px 6px hsla(0, 0%, 0%, .03), 0px 9px 5px hsla(223, 13%, 10%, .08),=
+ 0px 4px 4px hsla(0, 0%, 0%, .16), 0px 4px 2px hsla(0, 0%, 0%, .04); }
+
+@media (min-width: 50em) {
+  :root { --sl-nav-height: 4rem; --sl-nav-pad-x: 1.5rem; --sl-text-h1: var(=
+--sl-text-5xl); --sl-text-h2: var(--sl-text-4xl); --sl-text-h3: var(--sl-te=
+xt-3xl); --sl-text-h4: var(--sl-text-2xl); }
+}
+
+@media (min-width: 72rem) {
+  :root { --sl-content-pad-x: 1.5rem; --sl-mobile-toc-height: 0rem; }
+}
+
+*, ::before, ::after { box-sizing: border-box; }
+
+* { margin: 0px; }
+
+html { color-scheme: dark; accent-color: var(--sl-color-accent); }
+
+html[data-theme=3D"light"] { color-scheme: light; }
+
+body { font-family: var(--__sl-font); line-height: var(--sl-line-height); -=
+webkit-font-smoothing: antialiased; color: var(--sl-color-text); background=
+-color: var(--sl-color-bg); }
+
+input, button, textarea, select { font: inherit; }
+
+p, h1, h2, h3, h4, h5, h6, code { overflow-wrap: anywhere; }
+
+code { font-family: var(--__sl-font-mono); }
+
+:root { --astro-code-foreground: var(--sl-color-white); --astro-code-backgr=
+ound: var(--sl-color-gray-6); --astro-code-token-constant: var(--sl-color-b=
+lue-high); --astro-code-token-string: var(--sl-color-green-high); --astro-c=
+ode-token-comment: var(--sl-color-gray-2); --astro-code-token-keyword: var(=
+--sl-color-purple-high); --astro-code-token-parameter: var(--sl-color-red-h=
+igh); --astro-code-token-function: var(--sl-color-red-high); --astro-code-t=
+oken-string-expression: var(--sl-color-green-high); --astro-code-token-punc=
+tuation: var(--sl-color-gray-2); --astro-code-token-link: var(--sl-color-bl=
+ue-high); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0px; margi=
+n: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: now=
+rap; border-width: 0px; }
+
+.sl-hidden { display: none; }
+
+.sl-flex { display: flex; }
+
+.sl-block { display: block; }
+
+@media (min-width: 50rem) {
+  .md\:sl-hidden { display: none; }
+  .md\:sl-flex { display: flex; }
+  .md\:sl-block { display: block; }
+}
+
+@media (min-width: 72rem) {
+  .lg\:sl-hidden { display: none; }
+  .lg\:sl-flex { display: flex; }
+  .lg\:sl-block { display: block; }
+}
+
+[data-theme=3D"light"] .light\:sl-hidden, [data-theme=3D"dark"] .dark\:sl-h=
+idden { display: none; }
+
+[dir=3D"rtl"] .rtl\:flip:not(:where([dir=3D"rtl"] [dir=3D"ltr"] *)) { trans=
+form: scaleX(-1); }
+
+.sl-banner:where(.astro-laz2plt2) { --__sl-banner-text: var(--sl-color-bann=
+er-text, var(--sl-color-text-invert)); padding: var(--sl-nav-pad-y) var(--s=
+l-nav-pad-x); background-color: var(--sl-color-banner-bg, var(--sl-color-bg=
+-accent)); color: var(--__sl-banner-text); line-height: var(--sl-line-heigh=
+t-headings); text-align: center; text-wrap: balance; box-shadow: var(--sl-s=
+hadow-sm); }
+
+.sl-banner:where(.astro-laz2plt2) a { color: var(--__sl-banner-text); }
+
+.content-panel:where(.astro-7nkwcw3z) { padding: 1.5rem var(--sl-content-pa=
+d-x); }
+
+.content-panel:where(.astro-7nkwcw3z) + .content-panel:where(.astro-7nkwcw3=
+z) { border-top: 1px solid var(--sl-color-hairline); }
+
+.sl-container:where(.astro-7nkwcw3z) { max-width: var(--sl-content-width); =
+}
+
+.sl-container:where(.astro-7nkwcw3z) > * + * { margin-top: 1.5rem; }
+
+@media (min-width: 72rem) {
+  .sl-container:where(.astro-7nkwcw3z) { margin-inline: var(--sl-content-ma=
+rgin-inline, auto); }
+}
+
+p:where(.astro-opzsrvew) { border: 1px solid var(--sl-color-orange); paddin=
+g: 0.75em 1em; background-color: var(--sl-color-orange-low); color: var(--s=
+l-color-orange-high); width: max-content; max-width: 100%; align-items: cen=
+ter; gap: 0.75em; font-size: var(--sl-text-body-sm); line-height: var(--sl-=
+line-height-headings); }
+
+a:where(.astro-eez2twj6) { gap: 0.5rem; align-items: center; text-decoratio=
+n: none; color: var(--sl-color-gray-3); }
+
+a:where(.astro-eez2twj6):hover { color: var(--sl-color-white); }
+
+.pagination-links:where(.astro-u2l5gyhi) { display: grid; grid-template-col=
+umns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr)); gap: 1rem; }
+
+a:where(.astro-u2l5gyhi) { display: flex; align-items: center; justify-cont=
+ent: flex-start; gap: 0.5rem; width: 100%; flex-basis: calc(50% - 0.5rem); =
+flex-grow: 1; border: 1px solid var(--sl-color-gray-5); border-radius: 0.5r=
+em; padding: 1rem; text-decoration: none; color: var(--sl-color-gray-2); bo=
+x-shadow: var(--sl-shadow-md); overflow-wrap: anywhere; }
+
+:where(.astro-u2l5gyhi)[rel=3D"next"] { justify-content: end; text-align: e=
+nd; flex-direction: row-reverse; }
+
+a:where(.astro-u2l5gyhi):hover { border-color: var(--sl-color-gray-2); }
+
+.link-title:where(.astro-u2l5gyhi) { color: var(--sl-color-white); font-siz=
+e: var(--sl-text-2xl); line-height: var(--sl-line-height-headings); }
+
+svg:where(.astro-u2l5gyhi) { flex-shrink: 0; }
+
+footer:where(.astro-3yyafb3n) { flex-direction: column; gap: 1.5rem; }
+
+.meta:where(.astro-3yyafb3n) { gap: 0.75rem 3rem; justify-content: space-be=
+tween; flex-wrap: wrap; margin-top: 3rem; font-size: var(--sl-text-sm); col=
+or: var(--sl-color-gray-3); }
+
+.meta:where(.astro-3yyafb3n) > p:only-child { margin-inline-start: auto; }
+
+.kudos:where(.astro-3yyafb3n) { align-items: center; gap: 0.5em; margin: 1.=
+5rem auto; font-size: var(--sl-text-xs); text-decoration: none; color: var(=
+--sl-color-gray-3); }
+
+.kudos:where(.astro-3yyafb3n) svg { color: var(--sl-color-orange); }
+
+.kudos:where(.astro-3yyafb3n):hover { color: var(--sl-color-white); }
+
+label:where(.astro-4yphtoen) { --sl-label-icon-size: .875rem; --sl-caret-si=
+ze: 1.25rem; --sl-inline-padding: .5rem; position: relative; display: flex;=
+ align-items: center; gap: 0.25rem; color: var(--sl-color-gray-1); }
+
+label:where(.astro-4yphtoen):hover { color: var(--sl-color-gray-2); }
+
+.icon:where(.astro-4yphtoen) { position: absolute; top: 50%; transform: tra=
+nslateY(-50%); pointer-events: none; }
+
+.label-icon:where(.astro-4yphtoen) { font-size: var(--sl-label-icon-size); =
+inset-inline-start: 0px; }
+
+.caret:where(.astro-4yphtoen) { font-size: var(--sl-caret-size); inset-inli=
+ne-end: 0px; }
+
+select:where(.astro-4yphtoen) { border: 0px; padding-block: 0.625rem; paddi=
+ng-inline: calc(var(--sl-label-icon-size) + var(--sl-inline-padding) + .25r=
+em) calc(var(--sl-caret-size) + var(--sl-inline-padding) + .25rem); margin-=
+inline: calc(var(--sl-inline-padding)*-1); width: calc(var(--sl-select-widt=
+h) + var(--sl-inline-padding)*2); background-color: transparent; text-overf=
+low: ellipsis; color: inherit; cursor: pointer; appearance: none; }
+
+option:where(.astro-4yphtoen) { background-color: var(--sl-color-bg-nav); c=
+olor: var(--sl-color-gray-1); }
+
+@media (min-width: 50rem) {
+  select:where(.astro-4yphtoen) { font-size: var(--sl-text-sm); }
+}
+
+.pagefind-ui__result.svelte-j9e30.svelte-j9e30 { list-style-type: none; dis=
+play: flex; align-items: flex-start; gap: min(calc(40px*var(--pagefind-ui-s=
+cale)),3%); padding: calc(30px*var(--pagefind-ui-scale))0 calc(40px*var(--p=
+agefind-ui-scale)); border-top: solid var(--pagefind-ui-border-width) var(-=
+-pagefind-ui-border); }
+
+.pagefind-ui__result.svelte-j9e30.svelte-j9e30:last-of-type { border-bottom=
+: solid var(--pagefind-ui-border-width) var(--pagefind-ui-border); }
+
+.pagefind-ui__result-thumb.svelte-j9e30.svelte-j9e30 { width: min(30%,calc(=
+(30% - (100px*var(--pagefind-ui-scale)))*100000)); max-width: calc(120px*va=
+r(--pagefind-ui-scale)); margin-top: calc(10px*var(--pagefind-ui-scale)); a=
+spect-ratio: var(--pagefind-ui-image-box-ratio); position: relative; }
+
+.pagefind-ui__result-image.svelte-j9e30.svelte-j9e30 { display: block; posi=
+tion: absolute; left: 50%; transform: translate(-50%); font-size: 0px; widt=
+h: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: va=
+r(--pagefind-ui-image-border-radius); }
+
+.pagefind-ui__result-inner.svelte-j9e30.svelte-j9e30 { flex: 1 1 0%; displa=
+y: flex; flex-direction: column; align-items: flex-start; margin-top: calc(=
+10px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__result-title.svelte-j9e30.svelte-j9e30 { display: inline-bloc=
+k; font-weight: 700; font-size: calc(21px*var(--pagefind-ui-scale)); margin=
+-top: 0px; margin-bottom: 0px; }
+
+.pagefind-ui__result-title.svelte-j9e30 .pagefind-ui__result-link.svelte-j9=
+e30 { color: var(--pagefind-ui-text); text-decoration: none; }
+
+.pagefind-ui__result-title.svelte-j9e30 .pagefind-ui__result-link.svelte-j9=
+e30:hover { text-decoration: underline; }
+
+.pagefind-ui__result-excerpt.svelte-j9e30.svelte-j9e30 { display: inline-bl=
+ock; font-weight: 400; font-size: calc(16px*var(--pagefind-ui-scale)); marg=
+in-top: calc(4px*var(--pagefind-ui-scale)); margin-bottom: 0px; min-width: =
+calc(250px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__loading.svelte-j9e30.svelte-j9e30 { color: var(--pagefind-ui-=
+text); background-color: var(--pagefind-ui-text); border-radius: var(--page=
+find-ui-border-radius); opacity: 0.1; pointer-events: none; }
+
+.pagefind-ui__result-tags.svelte-j9e30.svelte-j9e30 { list-style-type: none=
+; padding: 0px; display: flex; gap: calc(20px*var(--pagefind-ui-scale)); fl=
+ex-wrap: wrap; margin-top: calc(20px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__result-tag.svelte-j9e30.svelte-j9e30 { padding: calc(4px*var(=
+--pagefind-ui-scale)) calc(8px*var(--pagefind-ui-scale)); font-size: calc(1=
+4px*var(--pagefind-ui-scale)); border-radius: var(--pagefind-ui-border-radi=
+us); background-color: var(--pagefind-ui-tag); }
+
+.pagefind-ui__result.svelte-4xnkmf.svelte-4xnkmf { list-style-type: none; d=
+isplay: flex; align-items: flex-start; gap: min(calc(40px*var(--pagefind-ui=
+-scale)),3%); padding: calc(30px*var(--pagefind-ui-scale))0 calc(40px*var(-=
+-pagefind-ui-scale)); border-top: solid var(--pagefind-ui-border-width) var=
+(--pagefind-ui-border); }
+
+.pagefind-ui__result.svelte-4xnkmf.svelte-4xnkmf:last-of-type { border-bott=
+om: solid var(--pagefind-ui-border-width) var(--pagefind-ui-border); }
+
+.pagefind-ui__result-nested.svelte-4xnkmf.svelte-4xnkmf { display: flex; fl=
+ex-direction: column; padding-left: calc(20px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__result-nested.svelte-4xnkmf.svelte-4xnkmf:first-of-type { pad=
+ding-top: calc(10px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__result-nested.svelte-4xnkmf .pagefind-ui__result-link.svelte-=
+4xnkmf { font-size: 0.9em; position: relative; }
+
+.pagefind-ui__result-nested.svelte-4xnkmf .pagefind-ui__result-link.svelte-=
+4xnkmf::before { content: "=E2=A4=B7 "; position: absolute; top: 0px; right=
+: calc(100% + 0.1em); }
+
+.pagefind-ui__result-thumb.svelte-4xnkmf.svelte-4xnkmf { width: min(30%,cal=
+c((30% - (100px*var(--pagefind-ui-scale)))*100000)); max-width: calc(120px*=
+var(--pagefind-ui-scale)); margin-top: calc(10px*var(--pagefind-ui-scale));=
+ aspect-ratio: var(--pagefind-ui-image-box-ratio); position: relative; }
+
+.pagefind-ui__result-image.svelte-4xnkmf.svelte-4xnkmf { display: block; po=
+sition: absolute; left: 50%; transform: translate(-50%); font-size: 0px; wi=
+dth: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: =
+var(--pagefind-ui-image-border-radius); }
+
+.pagefind-ui__result-inner.svelte-4xnkmf.svelte-4xnkmf { flex: 1 1 0%; disp=
+lay: flex; flex-direction: column; align-items: flex-start; margin-top: cal=
+c(10px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__result-title.svelte-4xnkmf.svelte-4xnkmf { display: inline-bl=
+ock; font-weight: 700; font-size: calc(21px*var(--pagefind-ui-scale)); marg=
+in-top: 0px; margin-bottom: 0px; }
+
+.pagefind-ui__result-title.svelte-4xnkmf .pagefind-ui__result-link.svelte-4=
+xnkmf { color: var(--pagefind-ui-text); text-decoration: none; }
+
+.pagefind-ui__result-title.svelte-4xnkmf .pagefind-ui__result-link.svelte-4=
+xnkmf:hover { text-decoration: underline; }
+
+.pagefind-ui__result-excerpt.svelte-4xnkmf.svelte-4xnkmf { display: inline-=
+block; font-weight: 400; font-size: calc(16px*var(--pagefind-ui-scale)); ma=
+rgin-top: calc(4px*var(--pagefind-ui-scale)); margin-bottom: 0px; min-width=
+: calc(250px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__loading.svelte-4xnkmf.svelte-4xnkmf { color: var(--pagefind-u=
+i-text); background-color: var(--pagefind-ui-text); border-radius: var(--pa=
+gefind-ui-border-radius); opacity: 0.1; pointer-events: none; }
+
+.pagefind-ui__result-tags.svelte-4xnkmf.svelte-4xnkmf { list-style-type: no=
+ne; padding: 0px; display: flex; gap: calc(20px*var(--pagefind-ui-scale)); =
+flex-wrap: wrap; margin-top: calc(20px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__result-tag.svelte-4xnkmf.svelte-4xnkmf { padding: calc(4px*va=
+r(--pagefind-ui-scale)) calc(8px*var(--pagefind-ui-scale)); font-size: calc=
+(14px*var(--pagefind-ui-scale)); border-radius: var(--pagefind-ui-border-ra=
+dius); background-color: var(--pagefind-ui-tag); }
+
+legend.svelte-1v2r7ls.svelte-1v2r7ls { position: absolute; clip: rect(0px, =
+0px, 0px, 0px); }
+
+.pagefind-ui__filter-panel.svelte-1v2r7ls.svelte-1v2r7ls { min-width: min(c=
+alc(260px*var(--pagefind-ui-scale)),100%); flex: 1 1 0%; display: flex; fle=
+x-direction: column; margin-top: calc(20px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__filter-group.svelte-1v2r7ls.svelte-1v2r7ls { border: 0px; pad=
+ding: 0px; }
+
+.pagefind-ui__filter-block.svelte-1v2r7ls.svelte-1v2r7ls { display: block; =
+border-bottom: solid calc(2px*var(--pagefind-ui-scale)) var(--pagefind-ui-b=
+order); padding: calc(20px*var(--pagefind-ui-scale))0; }
+
+.pagefind-ui__filter-name.svelte-1v2r7ls.svelte-1v2r7ls { font-size: calc(1=
+6px*var(--pagefind-ui-scale)); position: relative; display: flex; align-ite=
+ms: center; list-style: none; font-weight: 700; cursor: pointer; height: ca=
+lc(24px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__filter-name.svelte-1v2r7ls.svelte-1v2r7ls::-webkit-details-ma=
+rker { display: none; }
+
+.pagefind-ui__filter-name.svelte-1v2r7ls.svelte-1v2r7ls::after { position: =
+absolute; content: ""; right: calc(6px*var(--pagefind-ui-scale)); top: 50%;=
+ width: calc(8px*var(--pagefind-ui-scale)); height: calc(8px*var(--pagefind=
+-ui-scale)); border-bottom-color: ; border-bottom-style: ; border-bottom-wi=
+dth: ; border-left-color: ; border-left-style: ; border-left-width: ; borde=
+r-image-source: ; border-image-slice: ; border-image-width: ; border-image-=
+outset: ; border-image-repeat: ; border-right: 0px; border-top: 0px; transf=
+orm: translateY(-70%) rotate(-45deg); }
+
+.pagefind-ui__filter-block[open].svelte-1v2r7ls .pagefind-ui__filter-name.s=
+velte-1v2r7ls::after { transform: translateY(-70%) rotate(-225deg); }
+
+.pagefind-ui__filter-group.svelte-1v2r7ls.svelte-1v2r7ls { display: flex; f=
+lex-direction: column; gap: calc(20px*var(--pagefind-ui-scale)); padding-to=
+p: calc(30px*var(--pagefind-ui-scale)); }
+
+.pagefind-ui__filter-value.svelte-1v2r7ls.svelte-1v2r7ls { position: relati=
+ve; display: flex; align-items: center; gap: calc(8px*var(--pagefind-ui-sca=
+le)); }
+
+.pagefind-ui__filter-value.svelte-1v2r7ls.svelte-1v2r7ls::before { position=
+: absolute; content: ""; top: 50%; left: calc(8px*var(--pagefind-ui-scale))=
+; width: 0px; height: 0px; border-width: 0px 0px 1px 1px; border-bottom-sty=
+le: solid; border-left-style: solid; border-bottom-color: rgb(255, 255, 255=
+); border-left-color: rgb(255, 255, 255); border-image: initial; opacity: 0=
+; transform: translate(calc(4.5px*var(--pagefind-ui-scale)*-1),calc(.8px*va=
+r(--pagefind-ui-scale))) skew(-5deg) rotate(-45deg); transform-origin: left=
+ top; border-top-style: initial; border-top-color: initial; border-right-st=
+yle: initial; border-right-color: initial; pointer-events: none; }
+
+.pagefind-ui__filter-value.pagefind-ui__filter-value--checked.svelte-1v2r7l=
+s.svelte-1v2r7ls::before { opacity: 1; width: calc(9px*var(--pagefind-ui-sc=
+ale)); height: calc(4px*var(--pagefind-ui-scale)); transition: width 0.1s e=
+ase-out 0.1s, height 0.1s ease-in 0s; }
+
+.pagefind-ui__filter-checkbox.svelte-1v2r7ls.svelte-1v2r7ls { margin: 0px; =
+width: calc(16px*var(--pagefind-ui-scale)); height: calc(16px*var(--pagefin=
+d-ui-scale)); border: solid 1px var(--pagefind-ui-border); appearance: none=
+; border-radius: calc(var(--pagefind-ui-border-radius)/2); background-color=
+: var(--pagefind-ui-background); cursor: pointer; }
+
+.pagefind-ui__filter-checkbox.svelte-1v2r7ls.svelte-1v2r7ls:checked { backg=
+round-color: var(--pagefind-ui-primary); border: solid 1px var(--pagefind-u=
+i-primary); }
+
+.pagefind-ui__filter-label.svelte-1v2r7ls.svelte-1v2r7ls { cursor: pointer;=
+ font-size: calc(16px*var(--pagefind-ui-scale)); font-weight: 400; }
+
+.pagefind-ui--reset :where(:not(html, iframe, canvas, img, svg, video):not(=
+svg *, symbol *)) { color: unset; font: unset; font-palette: unset; font-sy=
+nthesis: unset; forced-color-adjust: unset; text-orientation: unset; text-r=
+endering: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -web=
+kit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: uns=
+et; zoom: unset; accent-color: unset; place-content: unset; place-items: un=
+set; place-self: unset; alignment-baseline: unset; animation-composition: u=
+nset; animation: unset; app-region: unset; appearance: unset; aspect-ratio:=
+ unset; backdrop-filter: unset; backface-visibility: unset; background: uns=
+et; background-blend-mode: unset; baseline-shift: unset; baseline-source: u=
+nset; block-size: unset; border-block: unset; border: unset; border-radius:=
+ unset; border-collapse: unset; border-end-end-radius: unset; border-end-st=
+art-radius: unset; border-inline: unset; border-start-end-radius: unset; bo=
+rder-start-start-radius: unset; inset: unset; box-shadow: unset; box-sizing=
+: unset; break-after: unset; break-before: unset; break-inside: unset; buff=
+ered-rendering: unset; caption-side: unset; caret-color: unset; clear: unse=
+t; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: un=
+set; color-interpolation-filters: unset; color-rendering: unset; color-sche=
+me: unset; columns: unset; column-fill: unset; gap: unset; column-rule: uns=
+et; column-span: unset; contain: unset; contain-intrinsic-block-size: unset=
+; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; cont=
+ainer: unset; content: unset; content-visibility: unset; counter-increment:=
+ unset; counter-reset: unset; counter-set: unset; cursor: unset; cx: unset;=
+ cy: unset; d: unset; display: revert; dominant-baseline: unset; empty-cell=
+s: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset=
+; flex: unset; flex-flow: unset; float: unset; flood-color: unset; flood-op=
+acity: unset; grid: unset; grid-area: unset; height: unset; hyphenate-chara=
+cter: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientatio=
+n: unset; image-rendering: unset; initial-letter: unset; inline-size: unset=
+; inset-block: unset; inset-inline: unset; isolation: unset; letter-spacing=
+: unset; lighting-color: unset; line-break: unset; list-style: unset; margi=
+n-block: unset; margin: unset; margin-inline: unset; marker: unset; mask: u=
+nset; mask-type: unset; math-depth: unset; math-shift: unset; math-style: u=
+nset; max-block-size: unset; max-height: unset; max-inline-size: unset; max=
+-width: unset; min-block-size: unset; min-height: unset; min-inline-size: u=
+nset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-po=
+sition: unset; object-view-box: unset; offset: unset; opacity: unset; order=
+: unset; orphans: unset; outline: revert; outline-offset: unset; overflow-a=
+nchor: unset; overflow-clip-margin: unset; overflow-wrap: unset; overflow: =
+unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavio=
+r-inline: unset; overscroll-behavior: unset; padding-block: unset; padding:=
+ unset; padding-inline: unset; page: unset; page-orientation: unset; paint-=
+order: unset; perspective: unset; perspective-origin: unset; pointer-events=
+: unset; position: unset; quotes: unset; r: unset; resize: unset; rotate: u=
+nset; ruby-position: unset; rx: unset; ry: unset; scale: unset; scroll-beha=
+vior: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margi=
+n-inline: unset; scroll-padding-block: unset; scroll-padding: unset; scroll=
+-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; =
+scroll-snap-type: unset; scroll-timeline: unset; scrollbar-gutter: unset; s=
+hape-image-threshold: unset; shape-margin: unset; shape-outside: unset; sha=
+pe-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opa=
+city: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: uns=
+et; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset=
+; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout=
+: unset; text-align: unset; text-align-last: unset; text-anchor: unset; tex=
+t-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink:=
+ unset; text-emphasis: unset; text-emphasis-position: unset; text-indent: u=
+nset; text-overflow: unset; text-shadow: unset; text-size-adjust: unset; te=
+xt-transform: unset; text-underline-offset: unset; text-underline-position:=
+ unset; white-space: unset; timeline-scope: unset; touch-action: unset; tra=
+nsform: unset; transform-box: unset; transform-origin: unset; transform-sty=
+le: unset; transition: unset; translate: unset; user-select: unset; vector-=
+effect: unset; vertical-align: unset; view-timeline: unset; view-transition=
+-name: unset; visibility: unset; border-spacing: unset; -webkit-box-align: =
+unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -=
+webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orien=
+t: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line=
+-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -w=
+ebkit-mask: unset; -webkit-mask-composite: unset; -webkit-print-color-adjus=
+t: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webki=
+t-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-dec=
+orations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-sec=
+urity: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; -webkit=
+-user-modify: unset; widows: unset; width: unset; will-change: unset; word-=
+break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; }
+
+.pagefind-ui--reset *, .pagefind-ui--reset ::before, .pagefind-ui--reset ::=
+after { box-sizing: border-box; }
+
+.pagefind-ui--reset a, .pagefind-ui--reset button { cursor: revert; }
+
+.pagefind-ui--reset ol, .pagefind-ui--reset ul, .pagefind-ui--reset menu { =
+list-style: none; }
+
+.pagefind-ui--reset img { max-width: 100%; }
+
+.pagefind-ui--reset table { border-collapse: collapse; }
+
+.pagefind-ui--reset input, .pagefind-ui--reset textarea { user-select: auto=
+; }
+
+.pagefind-ui--reset textarea { white-space: revert; }
+
+.pagefind-ui--reset meter { appearance: revert; }
+
+.pagefind-ui--reset ::placeholder { color: unset; }
+
+.pagefind-ui--reset :where([hidden]) { display: none; }
+
+.pagefind-ui--reset :where([contenteditable]:not([contenteditable=3D"false"=
+])) { -webkit-user-modify: read-write; overflow-wrap: break-word; -webkit-l=
+ine-break: after-white-space; user-select: auto; }
+
+.pagefind-ui--reset :where([draggable=3D"true"]) { -webkit-user-drag: eleme=
+nt; }
+
+.pagefind-ui--reset mark { all: revert; }
+
+:root { --pagefind-ui-scale: .8; --pagefind-ui-primary: #393939; --pagefind=
+-ui-text: #393939; --pagefind-ui-background: #ffffff; --pagefind-ui-border:=
+ #eeeeee; --pagefind-ui-tag: #eeeeee; --pagefind-ui-border-width: 2px; --pa=
+gefind-ui-border-radius: 8px; --pagefind-ui-image-border-radius: 8px; --pag=
+efind-ui-image-box-ratio: 3 / 2; --pagefind-ui-font: system, -apple-system,=
+ "BlinkMacSystemFont", ".SFNSText-Regular", "San Francisco", "Roboto", "Seg=
+oe UI", "Helvetica Neue", "Lucida Grande", "Ubuntu", "arial", sans-serif; }
+
+.pagefind-ui.svelte-e9gkc3 { width: 100%; color: var(--pagefind-ui-text); f=
+ont-family: var(--pagefind-ui-font); }
+
+.pagefind-ui__hidden.svelte-e9gkc3 { display: none !important; }
+
+.pagefind-ui__suppressed.svelte-e9gkc3 { opacity: 0; pointer-events: none; =
+}
+
+.pagefind-ui__form.svelte-e9gkc3 { position: relative; }
+
+.pagefind-ui__form.svelte-e9gkc3::before { background-color: var(--pagefind=
+-ui-text); width: calc(18px*var(--pagefind-ui-scale)); height: calc(18px*va=
+r(--pagefind-ui-scale)); top: calc(23px*var(--pagefind-ui-scale)); left: ca=
+lc(20px*var(--pagefind-ui-scale)); content: ""; position: absolute; display=
+: block; opacity: 0.7; -webkit-mask-image: url("data:image/svg+xml,%3Csvg w=
+idth=3D'18' height=3D'18' viewBox=3D'0 0 18 18' fill=3D'none' xmlns=3D'http=
+://www.w3.org/2000/svg'%3E%3Cpath d=3D'M12.7549 11.255H11.9649L11.6849 10.9=
+85C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005=
+ 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 1=
+0.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 1=
+1.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6=
+.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.=
+26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.25=
+49 9.245 9.24488 11.255 6.75488 11.255Z' fill=3D'%23000000'/%3E%3C/svg%3E%0=
+A"); -webkit-mask-size: 100%; z-index: 9; pointer-events: none; }
+
+.pagefind-ui__search-input.svelte-e9gkc3 { height: calc(64px*var(--pagefind=
+-ui-scale)); padding: 0 calc(70px*var(--pagefind-ui-scale))0 calc(54px*var(=
+--pagefind-ui-scale)); background-color: var(--pagefind-ui-background); bor=
+der: var(--pagefind-ui-border-width) solid var(--pagefind-ui-border); borde=
+r-radius: var(--pagefind-ui-border-radius); font-size: calc(21px*var(--page=
+find-ui-scale)); position: relative; appearance: none; display: flex; width=
+: 100%; box-sizing: border-box; font-weight: 700; }
+
+.pagefind-ui__search-input.svelte-e9gkc3::placeholder { opacity: 0.2; }
+
+.pagefind-ui__search-clear.svelte-e9gkc3 { position: absolute; top: calc(3p=
+x*var(--pagefind-ui-scale)); right: calc(3px*var(--pagefind-ui-scale)); hei=
+ght: calc(58px*var(--pagefind-ui-scale)); padding: 0 calc(15px*var(--pagefi=
+nd-ui-scale))0 calc(2px*var(--pagefind-ui-scale)); color: var(--pagefind-ui=
+-text); font-size: calc(14px*var(--pagefind-ui-scale)); cursor: pointer; ba=
+ckground-color: var(--pagefind-ui-background); border-radius: var(--pagefin=
+d-ui-border-radius); }
+
+.pagefind-ui__drawer.svelte-e9gkc3 { gap: calc(60px*var(--pagefind-ui-scale=
+)); display: flex; flex-flow: wrap; }
+
+.pagefind-ui__results-area.svelte-e9gkc3 { min-width: min(calc(400px*var(--=
+pagefind-ui-scale)),100%); flex: 1000 1 0%; margin-top: calc(20px*var(--pag=
+efind-ui-scale)); }
+
+.pagefind-ui__results.svelte-e9gkc3 { padding: 0px; }
+
+.pagefind-ui__message.svelte-e9gkc3 { box-sizing: content-box; font-size: c=
+alc(16px*var(--pagefind-ui-scale)); height: calc(24px*var(--pagefind-ui-sca=
+le)); padding: calc(20px*var(--pagefind-ui-scale))0; display: flex; align-i=
+tems: center; font-weight: 700; margin-top: 0px; }
+
+.pagefind-ui__button.svelte-e9gkc3 { margin-top: calc(40px*var(--pagefind-u=
+i-scale)); border: var(--pagefind-ui-border-width) solid var(--pagefind-ui-=
+border); border-radius: var(--pagefind-ui-border-radius); height: calc(48px=
+*var(--pagefind-ui-scale)); padding: 0 calc(12px*var(--pagefind-ui-scale));=
+ font-size: calc(16px*var(--pagefind-ui-scale)); color: var(--pagefind-ui-p=
+rimary); background: var(--pagefind-ui-background); width: 100%; text-align=
+: center; font-weight: 700; cursor: pointer; }
+
+.pagefind-ui__button.svelte-e9gkc3:hover { border-color: var(--pagefind-ui-=
+primary); color: var(--pagefind-ui-primary); background: var(--pagefind-ui-=
+background); }
+
+[data-search-modal-open] { overflow: hidden; }
+
+#starlight__search { --sl-search-result-spacing: calc(1.25rem * var(--pagef=
+ind-ui-scale)); --sl-search-result-pad-inline-start: calc(3.75rem * var(--p=
+agefind-ui-scale)); --sl-search-result-pad-inline-end: calc(1.25rem * var(-=
+-pagefind-ui-scale)); --sl-search-result-pad-block: calc(.9375rem * var(--p=
+agefind-ui-scale)); --sl-search-result-nested-pad-block: calc(.625rem * var=
+(--pagefind-ui-scale)); --sl-search-corners: calc(.3125rem * var(--pagefind=
+-ui-scale)); --sl-search-page-icon-size: calc(1.875rem * var(--pagefind-ui-=
+scale)); --sl-search-page-icon-inline-start: calc( (var(--sl-search-result-=
+pad-inline-start) - var(--sl-search-page-icon-size)) / 2 ); --sl-search-tre=
+e-diagram-size: calc(2.5rem * var(--pagefind-ui-scale)); --sl-search-tree-d=
+iagram-inline-start: calc( (var(--sl-search-result-pad-inline-start) - var(=
+--sl-search-tree-diagram-size)) / 2 ); }
+
+#starlight__search .pagefind-ui__form::before { --pagefind-ui-text: var(--s=
+l-color-gray-1); opacity: 1; }
+
+#starlight__search .pagefind-ui__search-input { color: var(--sl-color-white=
+); font-weight: 400; width: calc(100% - var(--sl-search-cancel-space)); }
+
+#starlight__search input:focus { --pagefind-ui-border: var(--sl-color-accen=
+t); }
+
+#starlight__search .pagefind-ui__search-clear { inset-inline-end: var(--sl-=
+search-cancel-space); width: calc(60px*var(--pagefind-ui-scale)); padding: =
+0px; background-color: transparent; overflow: hidden; }
+
+#starlight__search .pagefind-ui__search-clear:focus { outline: 1px solid va=
+r(--sl-color-accent); }
+
+#starlight__search .pagefind-ui__search-clear::before { content: ""; -webki=
+t-mask: url("data:image/svg+xml,%3Csvg xmlns=3D'http://www.w3.org/2000/svg'=
+ viewBox=3D'0 0 24 24'%3E%3Cpath d=3D'm13.41 12 6.3-6.29a1 1 0 1 0-1.42-1.4=
+2L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 .33 1.=
+64 1 1 0 0 0 1.09-.22l6.29-6.3 6.29 6.3a1 1 0 0 0 1.64-.33 1 1 0 0 0-.22-1.=
+09L13.41 12Z'/%3E%3C/svg%3E") center center / 50% no-repeat; background-col=
+or: var(--sl-color-text-accent); display: block; width: 100%; height: 100%;=
+ }
+
+#starlight__search .pagefind-ui__results > * + * { margin-top: var(--sl-sea=
+rch-result-spacing); }
+
+#starlight__search .pagefind-ui__result { border: 0px; padding: 0px; }
+
+#starlight__search .pagefind-ui__result-nested { position: relative; paddin=
+g: var(--sl-search-result-nested-pad-block) var(--sl-search-result-pad-inli=
+ne-end); padding-inline-start: var(--sl-search-result-pad-inline-start); }
+
+#starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__resu=
+lt-nested *)), #starlight__search .pagefind-ui__result-nested { position: r=
+elative; background-color: var(--sl-color-black); }
+
+#starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__resu=
+lt-nested *)):hover, #starlight__search .pagefind-ui__result-title:not(:whe=
+re(.pagefind-ui__result-nested *)):focus-within, #starlight__search .pagefi=
+nd-ui__result-nested:hover, #starlight__search .pagefind-ui__result-nested:=
+focus-within { outline: 1px solid var(--sl-color-accent-high); }
+
+#starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__resu=
+lt-nested *)):focus-within, #starlight__search .pagefind-ui__result-nested:=
+focus-within { background-color: var(--sl-color-accent-low); }
+
+#starlight__search .pagefind-ui__result-thumb, #starlight__search .pagefind=
+-ui__result-inner { margin-top: 0px; }
+
+#starlight__search .pagefind-ui__result-inner > :first-child { border-radiu=
+s: var(--sl-search-corners) var(--sl-search-corners)0 0; }
+
+#starlight__search .pagefind-ui__result-inner > :last-child { border-radius=
+: 0 0 var(--sl-search-corners) var(--sl-search-corners); }
+
+#starlight__search .pagefind-ui__result-inner > .pagefind-ui__result-title =
+{ padding: var(--sl-search-result-pad-block) var(--sl-search-result-pad-inl=
+ine-end); padding-inline-start: var(--sl-search-result-pad-inline-start); }
+
+#starlight__search .pagefind-ui__result-inner > .pagefind-ui__result-title:=
+:before { content: ""; position: absolute; inset-block: 0px; inset-inline-s=
+tart: var(--sl-search-page-icon-inline-start); width: var(--sl-search-page-=
+icon-size); background: var(--sl-color-gray-3); -webkit-mask: url("data:ima=
+ge/svg+xml,%3Csvg xmlns=3D'http://www.w3.org/2000/svg' fill=3D'currentColor=
+' viewBox=3D'0 0 24 24'%3E%3Cpath d=3D'M9 10h1a1 1 0 1 0 0-2H9a1 1 0 0 0 0 =
+2Zm0 2a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2H9Zm11-3V8l-6-6a1 1 0 0 0-1 0H7a3 3 0 0=
+ 0-3 3v14a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9Zm-6-4 3 3h-2a1 1 0 0 1-1-1V5Zm4 =
+14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5v3a3 3 0 0 0 3 3h3v9Zm-3-=
+3H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2Z'/%3E%3C/svg%3E") center center no-repeat=
+; }
+
+#starlight__search .pagefind-ui__result-inner { align-items: stretch; gap: =
+1px; }
+
+#starlight__search .pagefind-ui__result-link { position: unset; --pagefind-=
+ui-text: var(--sl-color-white); font-weight: 600; }
+
+#starlight__search .pagefind-ui__result-link:hover { text-decoration: none;=
+ }
+
+#starlight__search .pagefind-ui__result-nested .pagefind-ui__result-link::b=
+efore { content: unset; }
+
+#starlight__search .pagefind-ui__result-nested::before { content: ""; posit=
+ion: absolute; inset-block: 0px; inset-inline-start: var(--sl-search-tree-d=
+iagram-inline-start); width: var(--sl-search-tree-diagram-size); background=
+: var(--sl-color-gray-4); -webkit-mask: url("data:image/svg+xml,%3Csvg xmln=
+s=3D'http://www.w3.org/2000/svg' fill=3D'none' stroke=3D'currentColor' stro=
+ke-linecap=3D'round' viewBox=3D'0 0 16 1000' preserveAspectRatio=3D'xMinYMi=
+n slice'%3E%3Cpath d=3D'M8 0v1000m6-988H8'/%3E%3C/svg%3E") 0px 0px / 100% n=
+o-repeat; }
+
+#starlight__search .pagefind-ui__result-nested:last-of-type::before { -webk=
+it-mask-image: url("data:image/svg+xml,%3Csvg xmlns=3D'http://www.w3.org/20=
+00/svg' fill=3D'none' stroke=3D'currentColor' stroke-linecap=3D'round' stro=
+ke-linejoin=3D'round' viewBox=3D'0 0 16 16'%3E%3Cpath d=3D'M8 0v12m6 0H8'/%=
+3E%3C/svg%3E"); }
+
+[dir=3D"rtl"] .pagefind-ui__result-title::before, [dir=3D"rtl"] .pagefind-u=
+i__result-nested::before { transform: scaleX(-1); }
+
+#starlight__search .pagefind-ui__result-link::after { content: ""; position=
+: absolute; inset: 0px; }
+
+#starlight__search .pagefind-ui__result-excerpt { font-size: calc(1rem*var(=
+--pagefind-ui-scale)); overflow-wrap: anywhere; }
+
+#starlight__search mark { color: var(--sl-color-gray-2); background-color: =
+transparent; font-weight: 600; }
+
+#starlight__search .pagefind-ui__filter-value::before { border-color: var(-=
+-sl-color-text-invert); }
+
+#starlight__search .pagefind-ui__result-tags { background-color: var(--sl-c=
+olor-black); margin-top: 0px; padding: var(--sl-search-result-nested-pad-bl=
+ock) var(--sl-search-result-pad-inline-end); }
+
+site-search:where(.astro-v37mnknz) { display: contents; }
+
+button:where(.astro-v37mnknz)[data-open-modal] { display: flex; align-items=
+: center; gap: 0.5rem; border: 0px; background-color: transparent; color: v=
+ar(--sl-color-gray-1); cursor: pointer; height: 2.5rem; font-size: var(--sl=
+-text-xl); }
+
+@media (min-width: 50rem) {
+  button:where(.astro-v37mnknz)[data-open-modal] { border: 1px solid var(--=
+sl-color-gray-5); border-radius: 0.5rem; padding-inline: 0.75rem 0.5rem; ba=
+ckground-color: var(--sl-color-black); color: var(--sl-color-gray-2); font-=
+size: var(--sl-text-sm); width: 100%; max-width: 22rem; }
+  button:where(.astro-v37mnknz)[data-open-modal]:hover { border-color: var(=
+--sl-color-gray-2); color: var(--sl-color-white); }
+  button:where(.astro-v37mnknz)[data-open-modal] > :last-child:where(.astro=
+-v37mnknz) { margin-inline-start: auto; }
+}
+
+button:where(.astro-v37mnknz) > kbd:where(.astro-v37mnknz) { border-radius:=
+ 0.25rem; font-size: var(--sl-text-2xs); gap: 0.25em; padding-inline: 0.375=
+rem; background-color: var(--sl-color-gray-6); }
+
+kbd:where(.astro-v37mnknz) { font-family: var(--__sl-font); }
+
+dialog:where(.astro-v37mnknz) { margin: 0px; background-color: var(--sl-col=
+or-gray-6); border: 1px solid var(--sl-color-gray-5); width: 100%; max-widt=
+h: 100%; height: 100%; max-height: 100%; box-shadow: var(--sl-shadow-lg); }
+
+dialog:where(.astro-v37mnknz)[open] { display: flex; }
+
+dialog:where(.astro-v37mnknz)::backdrop { background-color: var(--sl-color-=
+backdrop-overlay); backdrop-filter: blur(0.25rem); }
+
+.dialog-frame:where(.astro-v37mnknz) { position: relative; overflow: auto; =
+flex-direction: column; flex-grow: 1; gap: 1rem; padding: 1rem; }
+
+button:where(.astro-v37mnknz)[data-close-modal] { position: absolute; z-ind=
+ex: 1; align-items: center; align-self: flex-end; height: calc(64px*var(--p=
+agefind-ui-scale)); padding: 0.25rem; border: 0px; background: 0px 0px; cur=
+sor: pointer; color: var(--sl-color-text-accent); }
+
+#starlight__search:where(.astro-v37mnknz) { --pagefind-ui-primary: var(--sl=
+-color-text); --pagefind-ui-text: var(--sl-color-gray-2); --pagefind-ui-fon=
+t: var(--__sl-font); --pagefind-ui-background: var(--sl-color-black); --pag=
+efind-ui-border: var(--sl-color-gray-5); --pagefind-ui-border-width: 1px; -=
+-pagefind-ui-tag: var(--sl-color-gray-5); --sl-search-cancel-space: 5rem; }
+
+:root[data-theme=3D"light"] #starlight__search:where(.astro-v37mnknz) { --p=
+agefind-ui-tag: var(--sl-color-gray-6); }
+
+@media (min-width: 50rem) {
+  #starlight__search:where(.astro-v37mnknz) { --sl-search-cancel-space: 0px=
+; }
+  dialog:where(.astro-v37mnknz) { margin: 4rem auto auto; border-radius: 0.=
+5rem; width: 90%; max-width: 40rem; height: max-content; min-height: 15rem;=
+ max-height: calc(100% - 8rem); }
+  .dialog-frame:where(.astro-v37mnknz) { padding: 1.5rem; }
+}
+
+.site-title:where(.astro-m46x6ez3) { align-items: center; gap: var(--sl-nav=
+-gap); font-size: var(--sl-text-h4); font-weight: 600; color: var(--sl-colo=
+r-text-accent); text-decoration: none; white-space: nowrap; }
+
+img:where(.astro-m46x6ez3) { height: calc(var(--sl-nav-height) - 2*var(--sl=
+-nav-pad-y)); width: auto; max-width: 100%; object-fit: contain; object-pos=
+ition: 0px 50%; }
+
+a:where(.astro-wy4te6ga) { color: var(--sl-color-text-accent); padding: 0.5=
+em; margin: -0.5em; }
+
+a:where(.astro-wy4te6ga):hover { opacity: 0.66; }
+
+.header:where(.astro-kmkmnagf) { gap: var(--sl-nav-gap); justify-content: s=
+pace-between; align-items: center; height: 100%; }
+
+.title-wrapper:where(.astro-kmkmnagf) { overflow: clip; padding: 0.25rem; m=
+argin: -0.25rem; min-width: 0px; }
+
+.right-group:where(.astro-kmkmnagf), .social-icons:where(.astro-kmkmnagf) {=
+ gap: 1rem; align-items: center; }
+
+.social-icons:where(.astro-kmkmnagf)::after { content: ""; height: 2rem; bo=
+rder-inline-end: 1px solid var(--sl-color-gray-5); }
+
+@media (min-width: 50rem) {
+  :root[data-has-sidebar] { --__sidebar-pad: calc(2 * var(--sl-nav-pad-x));=
+ }
+  :root:not([data-has-toc]) { --__toc-width: 0rem; }
+  .header:where(.astro-kmkmnagf) { --__sidebar-width: max(0rem, var(--sl-co=
+ntent-inline-start, 0rem) - var(--sl-nav-pad-x)); --__main-column-fr: calc(=
+ ( 100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-=
+width)) - (2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-=
+inline-start, 0rem) - var(--sl-content-width) ) / 2 ); display: grid; grid-=
+template-columns: minmax(calc(var(--__sidebar-width) + max(0rem,var(--__mai=
+n-column-fr) - var(--sl-nav-gap))),auto) 1fr auto; align-content: center; }
+}
+
+.hero:where(.astro-jbfsktt5) { display: grid; align-items: center; gap: 1re=
+m; padding-bottom: 1rem; }
+
+.hero:where(.astro-jbfsktt5) > img:where(.astro-jbfsktt5), .hero:where(.ast=
+ro-jbfsktt5) > .hero-html:where(.astro-jbfsktt5) { object-fit: contain; wid=
+th: min(70%, 20rem); height: auto; margin-inline: auto; }
+
+.stack:where(.astro-jbfsktt5) { flex-direction: column; gap: clamp(1.5rem, =
+1.5rem + 1vw, 2rem); text-align: center; }
+
+.copy:where(.astro-jbfsktt5) { flex-direction: column; gap: 1rem; align-ite=
+ms: center; }
+
+.copy:where(.astro-jbfsktt5) > :where(.astro-jbfsktt5) { max-width: 50ch; }
+
+h1:where(.astro-jbfsktt5) { font-size: clamp(var(--sl-text-3xl),calc(.25rem=
+ + 5vw),var(--sl-text-6xl)); line-height: var(--sl-line-height-headings); f=
+ont-weight: 600; color: var(--sl-color-white); }
+
+.tagline:where(.astro-jbfsktt5) { font-size: clamp(var(--sl-text-base),calc=
+(.0625rem + 2vw),var(--sl-text-xl)); color: var(--sl-color-gray-2); }
+
+.actions:where(.astro-jbfsktt5) { gap: 1rem 2rem; flex-wrap: wrap; justify-=
+content: center; }
+
+@media (min-width: 50rem) {
+  .hero:where(.astro-jbfsktt5) { grid-template-columns: 7fr 4fr; gap: 3%; p=
+adding-block: clamp(2.5rem, 1rem + 10vmin, 10rem); }
+  .hero:where(.astro-jbfsktt5) > img:where(.astro-jbfsktt5), .hero:where(.a=
+stro-jbfsktt5) > .hero-html:where(.astro-jbfsktt5) { order: 2; width: min(1=
+00%, 25rem); }
+  .stack:where(.astro-jbfsktt5) { text-align: start; }
+  .copy:where(.astro-jbfsktt5) { align-items: flex-start; }
+  .actions:where(.astro-jbfsktt5) { justify-content: flex-start; }
+}
+
+.sl-markdown-content :not(a, strong, em, del, span, input, code, br) + :not=
+(a, strong, em, del, span, input, code, br, :where(.not-content *)) { margi=
+n-top: 1rem; }
+
+.sl-markdown-content :not(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5,=
+ h6):not(:where(.not-content *)) { margin-top: 1.5em; }
+
+.sl-markdown-content li + li:not(:where(.not-content *)), .sl-markdown-cont=
+ent dt + dt:not(:where(.not-content *)), .sl-markdown-content dt + dd:not(:=
+where(.not-content *)), .sl-markdown-content dd + dd:not(:where(.not-conten=
+t *)) { margin-top: 0.25rem; }
+
+.sl-markdown-content li:not(:where(.not-content *)) { overflow-wrap: anywhe=
+re; }
+
+.sl-markdown-content li > :is(:last-child:not(li, ul, ol, a, strong, em, de=
+l, span, input, code, br, script, :where(.not-content *)), :not(script):has=
+(~ script:last-child):not(:has(~ :not(script)))) { margin-bottom: 1.25rem; =
+}
+
+.sl-markdown-content dt:not(:where(.not-content *)) { font-weight: 700; }
+
+.sl-markdown-content dd:not(:where(.not-content *)) { padding-inline-start:=
+ 1rem; }
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6):not(:where(.not-content *)=
+) { color: var(--sl-color-white); line-height: var(--sl-line-height-heading=
+s); font-weight: 600; }
+
+.sl-markdown-content :is(img, picture, video, canvas, svg, iframe):not(:whe=
+re(.not-content *)) { display: block; max-width: 100%; height: auto; }
+
+.sl-markdown-content h1:not(:where(.not-content *)) { font-size: var(--sl-t=
+ext-h1); }
+
+.sl-markdown-content h2:not(:where(.not-content *)) { font-size: var(--sl-t=
+ext-h2); }
+
+.sl-markdown-content h3:not(:where(.not-content *)) { font-size: var(--sl-t=
+ext-h3); }
+
+.sl-markdown-content h4:not(:where(.not-content *)) { font-size: var(--sl-t=
+ext-h4); }
+
+.sl-markdown-content h5:not(:where(.not-content *)) { font-size: var(--sl-t=
+ext-h5); }
+
+.sl-markdown-content h6:not(:where(.not-content *)) { font-size: var(--sl-t=
+ext-h6); }
+
+.sl-markdown-content a:not(:where(.not-content *)) { color: var(--sl-color-=
+text-accent); }
+
+.sl-markdown-content a:hover:not(:where(.not-content *)) { color: var(--sl-=
+color-white); }
+
+.sl-markdown-content code:not(:where(.not-content *)) { background-color: v=
+ar(--sl-color-bg-inline-code); margin-block: -0.125rem; padding: 0.125rem 0=
+.375rem; font-size: var(--sl-text-code-sm); }
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) code { font-size: inherit;=
+ }
+
+.sl-markdown-content pre:not(:where(.not-content *)) { border: 1px solid va=
+r(--sl-color-gray-5); padding: 0.75rem 1rem; font-size: var(--sl-text-code)=
+; tab-size: 2; }
+
+.sl-markdown-content pre code:not(:where(.not-content *)) { color: unset; f=
+ont-family: var(--__sl-font-mono); font-feature-settings: unset; font-kerni=
+ng: unset; font-optical-sizing: unset; font-palette: unset; font-size: unse=
+t; font-stretch: unset; font-style: unset; font-synthesis: unset; font-vari=
+ant: unset; font-variation-settings: unset; font-weight: unset; forced-colo=
+r-adjust: unset; text-orientation: unset; text-rendering: unset; -webkit-fo=
+nt-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset=
+; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-col=
+or: unset; place-content: unset; place-items: unset; place-self: unset; ali=
+gnment-baseline: unset; animation-composition: unset; animation: unset; app=
+-region: unset; appearance: unset; aspect-ratio: unset; backdrop-filter: un=
+set; backface-visibility: unset; background: unset; background-blend-mode: =
+unset; baseline-shift: unset; baseline-source: unset; block-size: unset; bo=
+rder-block: unset; border: unset; border-radius: unset; border-collapse: un=
+set; border-end-end-radius: unset; border-end-start-radius: unset; border-i=
+nline: unset; border-start-end-radius: unset; border-start-start-radius: un=
+set; inset: unset; box-shadow: unset; box-sizing: unset; break-after: unset=
+; break-before: unset; break-inside: unset; buffered-rendering: unset; capt=
+ion-side: unset; caret-color: unset; clear: unset; clip: unset; clip-path: =
+unset; clip-rule: unset; color-interpolation: unset; color-interpolation-fi=
+lters: unset; color-rendering: unset; color-scheme: unset; columns: unset; =
+column-fill: unset; gap: unset; column-rule: unset; column-span: unset; con=
+tain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: u=
+nset; contain-intrinsic-inline-size: unset; container: unset; content: unse=
+t; content-visibility: unset; counter-increment: unset; counter-reset: unse=
+t; counter-set: unset; cursor: unset; cx: unset; cy: unset; d: unset; displ=
+ay: unset; dominant-baseline: unset; empty-cells: unset; fill: unset; fill-=
+opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-flow: un=
+set; float: unset; flood-color: unset; flood-opacity: unset; grid: unset; g=
+rid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit=
+-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: u=
+nset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-=
+inline: unset; isolation: unset; letter-spacing: unset; lighting-color: uns=
+et; line-break: unset; line-height: unset; list-style: unset; margin-block:=
+ unset; margin: unset; margin-inline: unset; marker: unset; mask: unset; ma=
+sk-type: unset; math-depth: unset; math-shift: unset; math-style: unset; ma=
+x-block-size: unset; max-height: unset; max-inline-size: unset; max-width: =
+unset; min-block-size: unset; min-height: unset; min-inline-size: unset; mi=
+n-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: =
+unset; object-view-box: unset; offset: unset; opacity: unset; order: unset;=
+ orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: un=
+set; overflow-clip-margin: unset; overflow-wrap: unset; overflow: unset; ov=
+erlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline:=
+ unset; overscroll-behavior: unset; padding-block: unset; padding: unset; p=
+adding-inline: unset; page: unset; page-orientation: unset; paint-order: un=
+set; perspective: unset; perspective-origin: unset; pointer-events: unset; =
+position: unset; quotes: unset; r: unset; resize: unset; rotate: unset; rub=
+y-position: unset; rx: unset; ry: unset; scale: unset; scroll-behavior: uns=
+et; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline:=
+ unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-=
+inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-sn=
+ap-type: unset; scroll-timeline: unset; scrollbar-gutter: unset; shape-imag=
+e-threshold: unset; shape-margin: unset; shape-outside: unset; shape-render=
+ing: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: uns=
+et; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; strok=
+e-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-=
+opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; =
+text-align: unset; text-align-last: unset; text-anchor: unset; text-combine=
+-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; t=
+ext-emphasis: unset; text-emphasis-position: unset; text-indent: unset; tex=
+t-overflow: unset; text-shadow: unset; text-size-adjust: unset; text-transf=
+orm: unset; text-underline-offset: unset; text-underline-position: unset; w=
+hite-space: unset; timeline-scope: unset; touch-action: unset; transform: u=
+nset; transform-box: unset; transform-origin: unset; transform-style: unset=
+; transition: unset; translate: unset; user-select: unset; vector-effect: u=
+nset; vertical-align: unset; view-timeline: unset; view-transition-name: un=
+set; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -w=
+ebkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-bo=
+x-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset;=
+ -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: u=
+nset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-mas=
+k: unset; -webkit-mask-composite: unset; -webkit-print-color-adjust: unset;=
+ -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-hig=
+hlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-=
+in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: un=
+set; -webkit-text-stroke: unset; -webkit-user-drag: unset; -webkit-user-mod=
+ify: unset; widows: unset; width: unset; will-change: unset; word-break: un=
+set; word-spacing: unset; x: unset; y: unset; z-index: unset; }
+
+.sl-markdown-content blockquote:not(:where(.not-content *)) { border-inline=
+-start: 1px solid var(--sl-color-gray-5); padding-inline-start: 1rem; }
+
+.sl-markdown-content table:not(:where(.not-content *)) { display: block; ov=
+erflow: auto; border-spacing: 0px; }
+
+.sl-markdown-content :is(th, td):not(:where(.not-content *)) { border-botto=
+m: 1px solid var(--sl-color-gray-5); padding: 0.5rem 1rem; vertical-align: =
+baseline; }
+
+.sl-markdown-content :is(th:first-child, td:first-child):not(:where(.not-co=
+ntent *)) { padding-inline-start: 0px; }
+
+.sl-markdown-content :is(th:last-child, td:last-child):not(:where(.not-cont=
+ent *)) { padding-inline-end: 0px; }
+
+.sl-markdown-content th:not(:where(.not-content *)) { color: var(--sl-color=
+-white); font-weight: 600; }
+
+.sl-markdown-content th:not([align]):not(:where(.not-content *)) { text-ali=
+gn: start; }
+
+.sl-markdown-content .starlight-aside :is(th, td, hr, blockquote):not(:wher=
+e(.not-content *)) { border-color: var(--sl-color-gray-4); }
+
+@supports (border-color:color-mix(in srgb,var(--sl-color-asides-text-accent=
+) 30%,transparent)) {
+  .sl-markdown-content .starlight-aside :is(th, td, hr, blockquote):not(:wh=
+ere(.not-content *)) { border-color: color-mix(in srgb,var(--sl-color-aside=
+s-text-accent) 30%,transparent); }
+}
+
+@supports (border-color:color-mix(in srgb,var(--sl-color-asides-text-accent=
+) 12%,transparent)) {
+  .sl-markdown-content .starlight-aside code:not(:where(.not-content *)) { =
+background-color: color-mix(in srgb,var(--sl-color-asides-text-accent) 12%,=
+transparent); }
+}
+
+.sl-markdown-content hr:not(:where(.not-content *)) { border-top: 0px; bord=
+er-right: 0px; border-left: 0px; border-image: initial; border-bottom: 1px =
+solid var(--sl-color-hairline); }
+
+.sl-markdown-content details:not(:where(.not-content *)) { --sl-details-bor=
+der-color: var(--sl-color-gray-5); --sl-details-border-color--hover: var(--=
+sl-color-text-accent); border-inline-start: 2px solid var(--sl-details-bord=
+er-color); padding-inline-start: 1rem; }
+
+.sl-markdown-content details:not([open]):hover:not(:where(.not-content *)),=
+ .sl-markdown-content details:has(> summary:hover):not(:where(.not-content =
+*)) { border-color: var(--sl-details-border-color--hover); }
+
+.sl-markdown-content summary:not(:where(.not-content *)) { color: var(--sl-=
+color-white); cursor: pointer; display: block; font-weight: 600; margin-inl=
+ine-start: -0.5rem; padding-inline-start: 0.5rem; }
+
+.sl-markdown-content details[open] > summary:not(:where(.not-content *)) { =
+margin-bottom: 1rem; }
+
+.sl-markdown-content summary:not(:where(.not-content *))::marker, .sl-markd=
+own-content summary:not(:where(.not-content *))::-webkit-details-marker { d=
+isplay: none; }
+
+.sl-markdown-content summary:not(:where(.not-content *))::before { --sl-det=
+ails-marker-size: 1.25rem; background-color: currentcolor; content: ""; dis=
+play: inline-block; height: var(--sl-details-marker-size); width: var(--sl-=
+details-marker-size); margin-inline: calc((var(--sl-details-marker-size)/4)=
+*-1) .25rem; vertical-align: middle; -webkit-mask-image: url("data:image/sv=
+g+xml,%3Csvg xmlns=3D'http://www.w3.org/2000/svg' viewBox=3D'0 0 24 24'%3E%=
+3Cpath d=3D'M14.8 11.3 10.6 7a1 1 0 1 0-1.4 1.5l3.5 3.5-3.5 3.5a1 1 0 0 0 0=
+ 1.4 1 1 0 0 0 .7.3 1 1 0 0 0 .7-.3l4.2-4.2a1 1 0 0 0 0-1.4Z'/%3E%3C/svg%3E=
+%0A"); -webkit-mask-repeat: no-repeat; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .sl-markdown-content summary:not(:where(.not-content *))::before { transi=
+tion: transform 0.2s ease-in-out 0s; }
+}
+
+.sl-markdown-content details[open] > summary:not(:where(.not-content *))::b=
+efore { transform: rotate(90deg); }
+
+[dir=3D"rtl"] .sl-markdown-content summary:not(:where(.not-content *))::bef=
+ore, .sl-markdown-content [dir=3D"rtl"] summary:not(:where(.not-content *))=
+::before { transform: rotate(180deg); }
+
+.sl-markdown-content summary:not(:where(.not-content *)) p:only-child { dis=
+play: inline; }
+
+.sl-markdown-content .starlight-aside details:not(:where(.not-content *)) {=
+ --sl-details-border-color: var(--sl-color-asides-border); --sl-details-bor=
+der-color--hover: var(--sl-color-asides-text-accent); }
+
+[data-mobile-menu-expanded] { overflow: hidden; }
+
+@media (min-width: 50rem) {
+  [data-mobile-menu-expanded] { overflow: auto; }
+}
+
+button:where(.astro-jif73yzw) { position: fixed; top: calc((var(--sl-nav-he=
+ight) - var(--sl-menu-button-size))/2); inset-inline-end: var(--sl-nav-pad-=
+x); z-index: var(--sl-z-index-navbar); border: 0px; border-radius: 50%; wid=
+th: var(--sl-menu-button-size); height: var(--sl-menu-button-size); padding=
+: 0.5rem; background-color: var(--sl-color-white); color: var(--sl-color-bl=
+ack); box-shadow: var(--sl-shadow-md); cursor: pointer; }
+
+:where(.astro-jif73yzw)[aria-expanded=3D"true"] button:where(.astro-jif73yz=
+w) { background-color: var(--sl-color-gray-2); box-shadow: none; }
+
+:where(.astro-jif73yzw)[aria-expanded=3D"true"] button:where(.astro-jif73yz=
+w) .open-menu:where(.astro-jif73yzw) { display: none; }
+
+:not([aria-expanded=3D"true"]):where(.astro-jif73yzw) button:where(.astro-j=
+if73yzw) .close-menu:where(.astro-jif73yzw) { display: none; }
+
+[data-theme=3D"light"] button:where(.astro-jif73yzw) { background-color: va=
+r(--sl-color-black); color: var(--sl-color-white); }
+
+[data-theme=3D"light"] :where(.astro-jif73yzw)[aria-expanded=3D"true"] butt=
+on:where(.astro-jif73yzw) { background-color: var(--sl-color-gray-5); }
+
+.page:where(.astro-vrdttmbt) { flex-direction: column; min-height: 100vh; }
+
+.header:where(.astro-vrdttmbt) { z-index: var(--sl-z-index-navbar); positio=
+n: fixed; inset-inline-start: 0px; inset-block-start: 0px; width: 100%; hei=
+ght: var(--sl-nav-height); border-bottom: 1px solid var(--sl-color-hairline=
+-shade); padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x); padding-inline-e=
+nd: var(--sl-nav-pad-x); background-color: var(--sl-color-bg-nav); }
+
+[data-has-sidebar] .header:where(.astro-vrdttmbt) { padding-inline-end: cal=
+c(var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size)); }
+
+.sidebar-pane:where(.astro-vrdttmbt) { visibility: var(--sl-sidebar-visibil=
+ity, hidden); position: fixed; z-index: var(--sl-z-index-menu); inset-block=
+: var(--sl-nav-height)0; inset-inline-start: 0px; width: 100%; background-c=
+olor: var(--sl-color-black); overflow-y: auto; }
+
+[aria-expanded=3D"true"] ~ .sidebar-pane:where(.astro-vrdttmbt) { --sl-side=
+bar-visibility: visible; }
+
+.sidebar-content:where(.astro-vrdttmbt) { height: 100%; min-height: max-con=
+tent; padding: 1rem var(--sl-sidebar-pad-x)0; flex-direction: column; gap: =
+1rem; }
+
+@media (min-width: 50rem) {
+  .sidebar-content:where(.astro-vrdttmbt)::after { content: ""; padding-bot=
+tom: 1px; }
+}
+
+.main-frame:where(.astro-vrdttmbt) { padding-top: calc(var(--sl-nav-height)=
+ + var(--sl-mobile-toc-height)); padding-inline-start: var(--sl-content-inl=
+ine-start); }
+
+@media (min-width: 50rem) {
+  [data-has-sidebar] .header:where(.astro-vrdttmbt) { padding-inline-end: v=
+ar(--sl-nav-pad-x); }
+  .sidebar-pane:where(.astro-vrdttmbt) { --sl-sidebar-visibility: visible; =
+width: var(--sl-sidebar-width); background-color: var(--sl-color-bg-sidebar=
+); border-inline-end: 1px solid var(--sl-color-hairline-shade); }
+}
+
+ul:where(.astro-g2bywc46) { padding: 0px; list-style: none; }
+
+a:where(.astro-g2bywc46) { --pad-inline: .5rem; display: block; border-radi=
+us: 0.25rem; padding-block: 0.25rem; padding-inline: calc(1rem*var(--depth)=
+ + var(--pad-inline)) var(--pad-inline); line-height: 1.25; }
+
+a:where(.astro-g2bywc46)[aria-current=3D"true"] { color: var(--sl-color-tex=
+t-accent); }
+
+.isMobile:where(.astro-g2bywc46) a:where(.astro-g2bywc46) { --pad-inline: 1=
+rem; display: flex; justify-content: space-between; gap: var(--pad-inline);=
+ border-top: 1px solid var(--sl-color-gray-6); border-radius: 0px; padding-=
+block: 0.5rem; color: var(--sl-color-text); font-size: var(--sl-text-sm); t=
+ext-decoration: none; outline-offset: var(--sl-outline-offset-inside); }
+
+.isMobile:where(.astro-g2bywc46):first-child > li:where(.astro-g2bywc46):fi=
+rst-child > a:where(.astro-g2bywc46) { border-top: 0px; }
+
+.isMobile:where(.astro-g2bywc46) a:where(.astro-g2bywc46)[aria-current=3D"t=
+rue"], .isMobile:where(.astro-g2bywc46) a:where(.astro-g2bywc46)[aria-curre=
+nt=3D"true"]:hover, .isMobile:where(.astro-g2bywc46) a:where(.astro-g2bywc4=
+6)[aria-current=3D"true"]:focus { color: var(--sl-color-white); background-=
+color: unset; }
+
+.isMobile:where(.astro-g2bywc46) a:where(.astro-g2bywc46)[aria-current=3D"t=
+rue"]::after { content: ""; width: 1rem; background-color: var(--sl-color-t=
+ext-accent); -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWx=
+ucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNCAxNCc+PHBhdG=
+ggZD0nTTEwLjkxNCA0LjIwNmEuNTgzLjU4MyAwIDAgMC0uODI4IDBMNS43NCA4LjU1NyAzLjkxN=
+CA2LjcyNmEuNTk2LjU5NiAwIDAgMC0uODI4Ljg1N2wyLjI0IDIuMjRhLjU4My41ODMgMCAwIDAg=
+LjgyOCAwbDQuNzYtNC43NmEuNTgzLjU4MyAwIDAgMCAwLS44NTdaJy8+PC9zdmc+Cg=3D=3D");=
+ -webkit-mask-repeat: no-repeat; flex-shrink: 0; }
+
+nav:where(.astro-doynk5tl) { position: fixed; z-index: var(--sl-z-index-toc=
+); top: calc(var(--sl-nav-height) - 1px); inset-inline: 0px; border-top: 1p=
+x solid var(--sl-color-gray-5); background-color: var(--sl-color-bg-nav); }
+
+@media (min-width: 50rem) {
+  nav:where(.astro-doynk5tl) { inset-inline-start: var(--sl-content-inline-=
+start, 0); }
+}
+
+summary:where(.astro-doynk5tl) { gap: 0.5rem; align-items: center; height: =
+var(--sl-mobile-toc-height); border-bottom: 1px solid var(--sl-color-hairli=
+ne-shade); padding: 0.5rem 1rem; font-size: var(--sl-text-xs); outline-offs=
+et: var(--sl-outline-offset-inside); }
+
+summary:where(.astro-doynk5tl)::marker, summary:where(.astro-doynk5tl)::-we=
+bkit-details-marker { display: none; }
+
+.toggle:where(.astro-doynk5tl) { flex-shrink: 0; gap: 1rem; align-items: ce=
+nter; justify-content: space-between; border: 1px solid var(--sl-color-gray=
+-5); border-radius: 0.5rem; padding-block: 0.5rem; padding-inline: 0.75rem =
+0.5rem; line-height: 1; background-color: var(--sl-color-black); user-selec=
+t: none; cursor: pointer; }
+
+details:where(.astro-doynk5tl)[open] .toggle:where(.astro-doynk5tl) { color=
+: var(--sl-color-white); border-color: var(--sl-color-accent); }
+
+details:where(.astro-doynk5tl) .toggle:where(.astro-doynk5tl):hover { color=
+: var(--sl-color-white); border-color: var(--sl-color-gray-2); }
+
+[dir=3D"rtl"] .caret:where(.astro-doynk5tl) { transform: rotate(180deg); }
+
+details:where(.astro-doynk5tl)[open] .caret:where(.astro-doynk5tl) { transf=
+orm: rotate(90deg); }
+
+.display-current:where(.astro-doynk5tl) { white-space: nowrap; text-overflo=
+w: ellipsis; overflow: hidden; color: var(--sl-color-white); }
+
+.dropdown:where(.astro-doynk5tl) { --border-top: 1px; margin-top: calc(-1*v=
+ar(--border-top)); border-top-style: ; border-top-width: ; border-right-col=
+or: ; border-right-style: ; border-right-width: ; border-bottom-color: ; bo=
+rder-bottom-style: ; border-bottom-width: ; border-left-color: ; border-lef=
+t-style: ; border-left-width: ; border-image-source: ; border-image-slice: =
+; border-image-width: ; border-image-outset: ; border-image-repeat: ; borde=
+r-top-color: var(--sl-color-hairline-shade); max-height: calc(85vh - var(--=
+sl-nav-height) - var(--sl-mobile-toc-height)); overflow-y: auto; background=
+-color: var(--sl-color-black); box-shadow: var(--sl-shadow-md); overscroll-=
+behavior: contain; }
+
+.right-sidebar-panel:where(.astro-pb3aqygn) { padding: 1rem var(--sl-sideba=
+r-pad-x); }
+
+.sl-container:where(.astro-pb3aqygn) { width: calc(var(--sl-sidebar-width) =
+- 2*var(--sl-sidebar-pad-x)); }
+
+.right-sidebar-panel:where(.astro-pb3aqygn) h2 { color: var(--sl-color-whit=
+e); font-size: var(--sl-text-h5); font-weight: 600; line-height: var(--sl-l=
+ine-height-headings); margin-bottom: 0.5rem; }
+
+.right-sidebar-panel:where(.astro-pb3aqygn) :where(a) { display: block; fon=
+t-size: var(--sl-text-xs); text-decoration: none; color: var(--sl-color-gra=
+y-3); overflow-wrap: anywhere; }
+
+.right-sidebar-panel:where(.astro-pb3aqygn) :where(a):hover { color: var(--=
+sl-color-white); }
+
+@media (min-width: 72rem) {
+  .sl-container:where(.astro-pb3aqygn) { max-width: calc(((100vw - var(--sl=
+-sidebar-width) - 2*var(--sl-content-pad-x) - 2*var(--sl-sidebar-pad-x))*.2=
+5)); }
+}
+
+h1:where(.astro-j6tvhyss) { margin-top: 1rem; font-size: var(--sl-text-h1);=
+ line-height: var(--sl-line-height-headings); font-weight: 600; color: var(=
+--sl-color-white); }
+
+.social-icons:where(.astro-wu23bvmt) { margin-inline-end: auto; gap: 1rem; =
+align-items: center; padding-block: 1rem; }
+
+.social-icons:where(.astro-wu23bvmt):empty { display: none; }
+
+.mobile-preferences:where(.astro-wu23bvmt) { justify-content: space-between=
+; flex-wrap: wrap; border-top: 1px solid var(--sl-color-gray-6); column-gap=
+: 1rem; padding: 0.5rem 0px; }
+
+sl-sidebar-state-persist:where(.astro-kku4brbg) { display: contents; }
+
+ul:where(.astro-3ii7xxms) { --sl-sidebar-item-padding-inline: .5rem; list-s=
+tyle: none; padding: 0px; }
+
+li:where(.astro-3ii7xxms) { overflow-wrap: anywhere; }
+
+ul:where(.astro-3ii7xxms) ul:where(.astro-3ii7xxms) li:where(.astro-3ii7xxm=
+s) { margin-inline-start: var(--sl-sidebar-item-padding-inline); border-inl=
+ine-start: 1px solid var(--sl-color-hairline-light); padding-inline-start: =
+var(--sl-sidebar-item-padding-inline); }
+
+.large:where(.astro-3ii7xxms) { font-size: var(--sl-text-lg); font-weight: =
+600; color: var(--sl-color-white); }
+
+.top-level:where(.astro-3ii7xxms) > li:where(.astro-3ii7xxms) + li:where(.a=
+stro-3ii7xxms) { margin-top: 0.75rem; }
+
+summary:where(.astro-3ii7xxms) { display: flex; align-items: center; justif=
+y-content: space-between; padding: .2em var(--sl-sidebar-item-padding-inlin=
+e); line-height: 1.4; cursor: pointer; user-select: none; }
+
+summary:where(.astro-3ii7xxms)::marker, summary:where(.astro-3ii7xxms)::-we=
+bkit-details-marker { display: none; }
+
+.caret:where(.astro-3ii7xxms) { transition: transform 0.2s ease-in-out 0s; =
+flex-shrink: 0; }
+
+[dir=3D"rtl"] .caret:where(.astro-3ii7xxms) { transform: rotate(180deg); }
+
+:where(.astro-3ii7xxms)[open] > summary:where(.astro-3ii7xxms) .caret:where=
+(.astro-3ii7xxms) { transform: rotate(90deg); }
+
+a:where(.astro-3ii7xxms) { display: block; border-radius: 0.25rem; text-dec=
+oration: none; color: var(--sl-color-gray-2); padding: .3em var(--sl-sideba=
+r-item-padding-inline); line-height: 1.4; }
+
+a:where(.astro-3ii7xxms):hover, a:where(.astro-3ii7xxms):focus { color: var=
+(--sl-color-white); }
+
+:where(.astro-3ii7xxms)[aria-current=3D"page"], :where(.astro-3ii7xxms)[ari=
+a-current=3D"page"]:hover, :where(.astro-3ii7xxms)[aria-current=3D"page"]:f=
+ocus { font-weight: 600; color: var(--sl-color-text-invert); background-col=
+or: var(--sl-color-text-accent); }
+
+a:where(.astro-3ii7xxms) > :where(.astro-3ii7xxms):not(:last-child), .group=
+-label:where(.astro-3ii7xxms) > :where(.astro-3ii7xxms):not(:last-child) { =
+margin-inline-end: 0.25em; }
+
+@media (min-width: 50rem) {
+  .top-level:where(.astro-3ii7xxms) > li:where(.astro-3ii7xxms) + li:where(=
+.astro-3ii7xxms) { margin-top: 0.5rem; }
+  .large:where(.astro-3ii7xxms) { font-size: var(--sl-text-base); }
+  a:where(.astro-3ii7xxms) { font-size: var(--sl-text-sm); }
+}
+
+a:where(.astro-7q3lir66) { clip: rect(0px, 0px, 0px, 0px); position: fixed;=
+ top: 0.75rem; inset-inline-start: 0.75rem; }
+
+a:where(.astro-7q3lir66):focus { clip: unset; z-index: var(--sl-z-index-ski=
+plink); display: block; padding: 0.5rem 1rem; text-decoration: none; color:=
+ var(--sl-color-text-invert); background-color: var(--sl-color-text-accent)=
+; box-shadow: var(--sl-shadow-lg); }
+
+.main-pane:where(.astro-67yu43on) { isolation: isolate; }
+
+@media (min-width: 72rem) {
+  .right-sidebar-container:where(.astro-67yu43on) { order: 2; position: rel=
+ative; width: calc(var(--sl-sidebar-width) + (100% - var(--sl-content-width=
+) - var(--sl-sidebar-width))/2); }
+  .right-sidebar:where(.astro-67yu43on) { position: fixed; top: 0px; border=
+-inline-start: 1px solid var(--sl-color-hairline); padding-top: var(--sl-na=
+v-height); width: 100%; height: 100vh; overflow-y: auto; }
+  .main-pane:where(.astro-67yu43on) { width: 100%; }
+  [data-has-sidebar][data-has-toc] .main-pane:where(.astro-67yu43on) { --sl=
+-content-margin-inline: auto 0; order: 1; width: calc(var(--sl-content-widt=
+h) + (100% - var(--sl-content-width) - var(--sl-sidebar-width))/2); }
+}
+
+.starlight-aside { padding: 1rem; border-inline-start: .25rem solid var(--s=
+l-color-asides-border); color: var(--sl-color-white); }
+
+.starlight-aside--note { --sl-color-asides-text-accent: var(--sl-color-blue=
+-high); --sl-color-asides-border: var(--sl-color-blue); background-color: v=
+ar(--sl-color-blue-low); }
+
+.starlight-aside--tip { --sl-color-asides-text-accent: var(--sl-color-purpl=
+e-high); --sl-color-asides-border: var(--sl-color-purple); background-color=
+: var(--sl-color-purple-low); }
+
+.starlight-aside--caution { --sl-color-asides-text-accent: var(--sl-color-o=
+range-high); --sl-color-asides-border: var(--sl-color-orange); background-c=
+olor: var(--sl-color-orange-low); }
+
+.starlight-aside--danger { --sl-color-asides-text-accent: var(--sl-color-re=
+d-high); --sl-color-asides-border: var(--sl-color-red); background-color: v=
+ar(--sl-color-red-low); }
+
+.starlight-aside__title { display: flex; gap: 0.5rem; align-items: center; =
+font-size: var(--sl-text-h5); font-weight: 600; line-height: var(--sl-line-=
+height-headings); color: var(--sl-color-asides-text-accent); }
+
+.starlight-aside__icon { font-size: 1.333em; width: 1em; height: 1em; }
+
+.starlight-aside__title + .starlight-aside__content { margin-top: 0.5rem; }
+
+.starlight-aside__content a { color: var(--sl-color-asides-text-accent); }
+
+:root { --sl-color-accent-low: #00273d; --sl-color-accent: #0071a7; --sl-co=
+lor-accent-high: #92d1fe; --sl-color-white: #ffffff; --sl-color-gray-1: #e7=
+eff2; --sl-color-gray-2: #bac4c8; --sl-color-gray-3: #7b8f96; --sl-color-gr=
+ay-4: #495c62; --sl-color-gray-5: #2a3b41; --sl-color-gray-6: #182a2f; --sl=
+-color-black: #121a1c; }
+
+:root[data-theme=3D"light"] { --sl-color-accent-low: #b0deff; --sl-color-ac=
+cent: #0073aa; --sl-color-accent-high: #003653; --sl-color-white: #121a1c; =
+--sl-color-gray-1: #182a2f; --sl-color-gray-2: #2a3b41; --sl-color-gray-3: =
+#495c62; --sl-color-gray-4: #7b8f96; --sl-color-gray-5: #bac4c8; --sl-color=
+-gray-6: #e7eff2; --sl-color-gray-7: #f3f7f9; --sl-color-black: #ffffff; }
+
+.mkc-lang-wrapper { display: inline-flex; align-items: center; gap: 0.75rem=
+; }
+
+.mkc-signup-button { padding: 0.4rem 1rem; border-radius: 999px; background=
+-color: rgb(67, 123, 209); color: rgb(255, 255, 255); font-weight: 600; fon=
+t-size: 0.9rem; text-decoration: none; border: 1px solid transparent; white=
+-space: nowrap; }
+
+.mkc-signup-button:hover, .mkc-signup-button:focus-visible { background-col=
+or: rgb(50, 94, 165); }
+
+@media (max-width: 480px) {
+  .mkc-signup-button { padding: 0.3rem 0.8rem; font-size: 0.8rem; }
+}
+
+html:not([data-has-toc]) { --sl-mobile-toc-height: 0rem; }
+
+html:not([data-has-sidebar]) { --sl-content-width: 67.5rem; }
+
+html { scroll-padding-top: calc(1.5rem + var(--sl-nav-height) + var(--sl-mo=
+bile-toc-height)); }
+
+main:where(.astro-bguv2lll) { padding-bottom: 3vh; }
+
+@media (min-width: 50em) {
+  :where(.astro-bguv2lll)[data-has-sidebar] { --sl-content-inline-start: va=
+r(--sl-sidebar-width); }
+}
+
+@media (min-width: 72em) {
+  html { scroll-padding-top: calc(1.5rem + var(--sl-nav-height)); }
+}
+------MultipartBoundary--TgyAaT7LhlN1PNkiQG5LwUqQ3hDqOzzljijWb4dWwg----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://mkcontroller.com/blog/_astro/logo.166_ZCcB.png
+
+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
+s3Aoh4/Ul1+dUTiEQzm6mzRXDuFQDpPmyiEcrk2T5sohHKQrRyeT5sohHMph0lw5hMO1uaabV0c5
+hEM5TJorh3Aoh0lz5RAO12a0hdGjV0c5hEM5TJq/7rWzG3stx/HwZy6lOVw3//T//84v7IHuf3nJ
+Dpvf7H7gx1tvlGPrWxqgHIByAMoBKAegHIByKAegHIByAMoBFPC1VQ7gVcet3/oAygEoB6AcgHIA
+yqEcgHIAygEoB6AcQHfluCgH8J5Hp8pfHxwkf/OnAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAf8JI3ZHGio8L5MAAAAASUVORK5CYII=
+
+------MultipartBoundary--TgyAaT7LhlN1PNkiQG5LwUqQ3hDqOzzljijWb4dWwg----
+Content-Type: text/html
+Content-ID: <frame-3685CF4F8BDE6EDC35128F6D44844ED7@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://mkcontroller.com/blog/~partytown/partytown-sandbox-sw.html?1765952269769
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"></head><body></body></html>
+------MultipartBoundary--TgyAaT7LhlN1PNkiQG5LwUqQ3hDqOzzljijWb4dWwg------
