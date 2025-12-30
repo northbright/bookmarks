@@ -91,6 +91,7 @@
 * [微信小商店](minishop/README.md)
 * [SVG](svg/README.md)
 * [Electron](electron/README.md)
+* [Wails](wails/README.md)
 * [Hugo](hugo/README.md)
 * [acme.sh](acme-sh/README.md)
 * [GoAccess](goaccess/README.md)
