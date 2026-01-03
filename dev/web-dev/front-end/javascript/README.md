@@ -39,3 +39,6 @@
 
 ## Function
 * [JavaScript Anonymous Functions](https://www.geeksforgeeks.org/javascript-anonymous-functions/)
+
+## Blob
+* [前端高手才知道的秘密：Blob 居然这么强大！](https://juejin.cn/post/7523065182429904915)
