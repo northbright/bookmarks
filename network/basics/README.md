@@ -10,6 +10,7 @@
 * [弱电项目中，核心交换机主要参数如何计算？如何选择？](https://zhuanlan.zhihu.com/p/265298548)
 * [5分钟看懂access、trunk和hybrid三种链路类型](https://www.bilibili.com/video/BV1bg411a7Gd)
 * [这样连交换机和路由器，多少网工没试过？](https://zhuanlan.zhihu.com/p/629479777)
+* [网络互连：什么是静态路由、默认路由与特定主机路由？](https://zhuanlan.zhihu.com/p/1889065333920338622)
 
 ## DHCP
 * [DHCP一般是放在路由上还是核心交换上？](http://bbs.51cto.com/viewthread.php?tid=916731&extra=&page=1)
