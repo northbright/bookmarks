@@ -152,3 +152,5 @@
 * [一直没搞清，曝光补偿和ISO有什么区别](https://forum.xitek.com/forum-viewthread-tid-717223-extra-page%3D1-ordertype-2-t-1594102929.html)
 * [求教曝光补偿和ISO的关系](http://forum.xitek.com/thread-1301850-1-1-2.html)
 
+## 动态范围
+* [相机说明书中的动态范围是什么？](https://m.ithome.com/html/912255.htm)
