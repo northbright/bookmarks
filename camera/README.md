@@ -104,10 +104,6 @@
 * [请问各位买镜头有没有好一点的淘宝店介绍](http://forum.xitek.com/forum-viewthread-tid-1782925-extra-page%3D1-ordertype-2-t-1594011547.html)
 * [被奥林巴斯东众电子旗舰店给坑了](http://forum.xitek.com/forum-viewthread-tid-1618937-extra--ordertype-2-t-1594013021.html)
 
-## 摄影技术
-* [一直没搞清，曝光补偿和ISO有什么区别](https://forum.xitek.com/forum-viewthread-tid-717223-extra-page%3D1-ordertype-2-t-1594102929.html)
-* [求教曝光补偿和ISO的关系](http://forum.xitek.com/thread-1301850-1-1-2.html)
-
 ## 拍立得
 * [2021年买哪款拍立得相机？拍立得相机推荐与入坑指南（2021.11）](https://zhuanlan.zhihu.com/p/205175800)
 * [【拍立得intax mini90】使用教程](https://zhuanlan.zhihu.com/p/145779246)
@@ -151,3 +147,8 @@
   * [闲的无聊，又入了一台D3S，看看和D700究竟有多大的区别？](https://forum.xitek.com/thread-1913076-1-1.html)
 * D5
   * [年轻人近在咫尺的旗舰梦 尼康D5](https://www.bilibili.com/video/BV16d4y1C7nz/)
+
+## 曝光补偿
+* [一直没搞清，曝光补偿和ISO有什么区别](https://forum.xitek.com/forum-viewthread-tid-717223-extra-page%3D1-ordertype-2-t-1594102929.html)
+* [求教曝光补偿和ISO的关系](http://forum.xitek.com/thread-1301850-1-1-2.html)
+
