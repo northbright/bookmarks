@@ -6,6 +6,7 @@
 * [H3C ER5200，两个wan口都在用，内网有一台主机需要固定通过wan2连通外网，具体设置标签在那个位置](http://ask.zol.com.cn/q/169207.html)
 * [H3C ER3200G2 路由器 如何禁止外网直接访问路由器？？？](https://zhiliao.h3c.com/questions/dispcont/95206)
 * [请问华三的F100-A-G这个防火墙，启用了http后，默认开启了公网访问，怎样禁止公网访问路由器管理页面呢？只想开启SSH远程访问](https://zhiliao.h3c.com/questions/dispcont/95937)
+* [H3C ER系列路由器常见问题处理指南-V1.03](https://www.h3c.com/cn/Service/Document_Software/Document_Center/Routers/Catalog/ER/ER5200/Quick_Starts/Quick_Maintenance/H3C_ER(V1.03))
 
 ## Switch
 * [H3C华三S7506E系列交换机万兆IRF堆叠虚拟化](https://www.tracert.cn/h3c-s7506-irf.html)
