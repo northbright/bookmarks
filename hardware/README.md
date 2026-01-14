@@ -220,3 +220,4 @@
 
 ## 无线网卡
 * [已解决！AX200和AX210如何选择](https://www.chiphell.com/forum.php?mod=viewthread&tid=2461107)
+* [升级AX210无线WiFi 6E网卡，体验WIFI 6极速，体验真是不错，大家会考虑升级WiFi 6网卡吗？](https://post.smzdm.com/p/a7dzk7vo/)
