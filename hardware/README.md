@@ -222,3 +222,6 @@
 * [已解决！AX200和AX210如何选择](https://www.chiphell.com/forum.php?mod=viewthread&tid=2461107)
 * [升级AX210无线WiFi 6E网卡，体验WIFI 6极速，体验真是不错，大家会考虑升级WiFi 6网卡吗？](https://post.smzdm.com/p/a7dzk7vo/)
 * [台式电脑升级wifi6，哪款网卡好？](https://www.zhihu.com/tardis/bd/ans/2803624853)
+
+## M.2 接口
+* [笔电、NUC和NAS都用得上，M.2（NGFF）扩展卡盘点](https://post.smzdm.com/p/a3d2vq05/)
