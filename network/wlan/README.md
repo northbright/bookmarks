@@ -35,3 +35,6 @@
 
 ## BSSID
 * [SSID、BSSID、ESSID区别？](https://www.zhihu.com/question/24362037)
+
+## 频率
+* [双频网卡能不能同时连接2个不同频率的网络?](https://www.zhihu.com/question/655151638)
