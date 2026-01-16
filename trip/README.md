@@ -29,3 +29,4 @@
 ## 新加坡
 * [中国人在新加坡容易跳的坑之一：换外汇](https://zhuanlan.zhihu.com/p/23922353)
 * [2024年，新加坡马上就要免签了，去新加波旅游你有什么建议?](https://www.zhihu.com/question/642161037/answer/3476755251)
+* [去新加坡旅游可以自由行吗，需要多少钱呢。大概5-6天？](https://www.zhihu.com/question/332924814)
