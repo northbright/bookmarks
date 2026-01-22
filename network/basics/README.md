@@ -13,6 +13,7 @@
 * [网络互连：什么是静态路由、默认路由与特定主机路由？](https://zhuanlan.zhihu.com/p/1889065333920338622)
 * [通过ensp实验分析二三层数据包转发过程](https://www.cnblogs.com/Mourinkun/p/18170109)
 * [静态路由优先级到底怎么算？用不对就会“被覆盖”！](https://zhuanlan.zhihu.com/p/1930762901620241156)
+* [路由选择难点解析：如何区分最长匹配和默认路由？](https://rk.51cto.com/article/500689.html)
 
 ## DHCP
 * [DHCP一般是放在路由上还是核心交换上？](http://bbs.51cto.com/viewthread.php?tid=916731&extra=&page=1)
