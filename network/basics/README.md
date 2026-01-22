@@ -12,6 +12,7 @@
 * [这样连交换机和路由器，多少网工没试过？](https://zhuanlan.zhihu.com/p/629479777)
 * [网络互连：什么是静态路由、默认路由与特定主机路由？](https://zhuanlan.zhihu.com/p/1889065333920338622)
 * [通过ensp实验分析二三层数据包转发过程](https://www.cnblogs.com/Mourinkun/p/18170109)
+* [静态路由优先级到底怎么算？用不对就会“被覆盖”！](https://zhuanlan.zhihu.com/p/1930762901620241156)
 
 ## DHCP
 * [DHCP一般是放在路由上还是核心交换上？](http://bbs.51cto.com/viewthread.php?tid=916731&extra=&page=1)
