@@ -15,6 +15,7 @@
 * [静态路由优先级到底怎么算？用不对就会“被覆盖”！](https://zhuanlan.zhihu.com/p/1930762901620241156)
 * [实现VLAN间通信](https://bbs.huaweicloud.com/blogs/458562)
 * [使用VLANIF实现三层通信：高效替代单臂路由的解决方案](https://edu.51cto.com/article/note/33895.html)
+* [三层交换机VLAN路由简答 三层交换机vlanif](https://blog.51cto.com/u_16099349/10713699)
 
 ## DHCP
 * [DHCP一般是放在路由上还是核心交换上？](http://bbs.51cto.com/viewthread.php?tid=916731&extra=&page=1)
