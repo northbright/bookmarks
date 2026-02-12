@@ -107,6 +107,7 @@
 * [SQLite](sqlite/README.md)
 * [Subtitle](subtitle/README.md)
 * [Semantic Versioning](semantic-versioning/README.md)
+* [Vercel](vercel/README.md)
 
 ## Blogs
 * [bindog](http://bindog.github.io/archive/)
