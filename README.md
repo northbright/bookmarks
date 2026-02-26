@@ -50,3 +50,4 @@ Bookmarks of development and more...
   * [软件著作权登记](renzheng/ruanzhu/README.md)
   * [双软企业](renzheng/shuangruan/README.md)
 * [Shareware(共享软件)](shareware/README.md)
+* [Payment(支付)](payment/README.md)
