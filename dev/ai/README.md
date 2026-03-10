@@ -8,3 +8,6 @@
 * [如何在本地部署DeepSeek-R1模型？](https://www.zhihu.com/question/10630134422)
 * [如何在本地部署DeepSeek-R1模型？(Teenage的回答，注意看评论)](https://www.zhihu.com/question/10630134422/answer/89392959502)
 * [如何在本地部署DeepSeek-R1模型？(qin meng的回答)](https://www.zhihu.com/question/10630134422/answer/89324504716)
+
+## OpenClaw
+* [OpenClaw的安装与配置详细教程（Windows11+WSL2+Deepseek）](https://zhuanlan.zhihu.com/p/2008182925712183676)
