@@ -125,4 +125,4 @@
 ## 化妆
 * 菠丹妮
   * [【白饭三勺】捷克芳疗品牌菠丹妮特辑20190811](https://www.bilibili.com/video/BV1y4411D7Sa)
-
+  * [【白饭三勺】捷克有机芳疗菠丹妮特辑2](https://www.bilibili.com/video/BV1hE411b7aV)
