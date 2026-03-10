@@ -14,3 +14,4 @@
 
 ## 生成图片
 * [【Mac使用Z-Image生图教程】Draw Things配置方法与真实测试效果 Mac 下如何使用 Z-Image-Turbo？从安装到生图的完整教程](https://blog.csdn.net/weixin_41961749/article/details/155818077)
+* [千问生图 Qwen image 在 Mac平台 Draw Things软件使用参数分享 | 本地能跑吗？快不快？](https://www.bilibili.com/video/BV1WMvwzEEDC)
