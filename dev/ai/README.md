@@ -19,3 +19,6 @@
 * [【Mac使用Z-Image生图教程】Draw Things配置方法与真实测试效果 Mac 下如何使用 Z-Image-Turbo？从安装到生图的完整教程](https://blog.csdn.net/weixin_41961749/article/details/155818077)
 * [千问生图 Qwen image 在 Mac平台 Draw Things软件使用参数分享 | 本地能跑吗？快不快？](https://www.bilibili.com/video/BV1WMvwzEEDC)
 * [更优秀的换脸方案，更好的扩图选择！Flux.2 klein draw things实现方法](https://www.bilibili.com/video/BV1iA6iBtE6q)
+
+## OpenCode
+* [OpenCode 超级详细入门指南，打造你的高效 AI 编程助手](https://zhuanlan.zhihu.com/p/1991988522329085820)
