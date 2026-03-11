@@ -10,15 +10,24 @@
 * [如何在本地部署DeepSeek-R1模型？(qin meng的回答)](https://www.zhihu.com/question/10630134422/answer/89324504716)
 
 ## OpenClaw
+
+#### Setup
 * [OpenClaw的安装与配置详细教程（Windows11+WSL2+Deepseek）](https://zhuanlan.zhihu.com/p/2008182925712183676)
 * [OpenClaw WSL 安装指南](https://github.com/spoto-team/openclaw-wsl-guide/tree/main)
   * [OpenClaw 国内 API 配置指南](https://github.com/spoto-team/openclaw-minimax-guide)
   * [Ubuntu 虚拟机安装 OpenClaw 完整流程](https://github.com/spoto-team/openclaw-ubuntu-guide)
-* Channel
-  * 飞书
-    * [飞书](https://docs.openclaw.ai/zh-CN/channels/feishu)
-    * [Clawdbot 对接飞书详细教程 手把手搭建你的专属 AI 助手](https://blog.csdn.net/qq_31470439/article/details/157502232)
 * [OpenClaw保姆级教程：带你免费调用Qwen3.5，小白也能懂！(ollama)](https://www.bilibili.com/video/BV19CZeBPEfa)
+
+#### Channel
+* 飞书
+  * [飞书](https://docs.openclaw.ai/zh-CN/channels/feishu)
+  * [Clawdbot 对接飞书详细教程 手把手搭建你的专属 AI 助手](https://blog.csdn.net/qq_31470439/article/details/157502232)
+
+#### Skills
+* [建议收藏！OpenClaw一定要装的10个技能！](https://www.bilibili.com/video/BV1NGPWzTEtb)
+
+#### Security
+* [赶快避坑！新版龙虾变傻了？](https://www.bilibili.com/video/BV1ATPQz5EMT)
 
 ## 生成图片
 * [【Mac使用Z-Image生图教程】Draw Things配置方法与真实测试效果 Mac 下如何使用 Z-Image-Turbo？从安装到生图的完整教程](https://blog.csdn.net/weixin_41961749/article/details/155818077)
