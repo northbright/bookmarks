@@ -18,7 +18,7 @@
   * 飞书
     * [飞书](https://docs.openclaw.ai/zh-CN/channels/feishu)
     * [Clawdbot 对接飞书详细教程 手把手搭建你的专属 AI 助手](https://blog.csdn.net/qq_31470439/article/details/157502232)
-* [OpenClaw保姆级教程：带你免费调用Qwen3.5，小白也能懂！(ollama)](https://www.zhihu.com/pin/2007867629289881914)
+* [OpenClaw保姆级教程：带你免费调用Qwen3.5，小白也能懂！(ollama)](https://www.bilibili.com/video/BV19CZeBPEfa)
 
 ## 生成图片
 * [【Mac使用Z-Image生图教程】Draw Things配置方法与真实测试效果 Mac 下如何使用 Z-Image-Turbo？从安装到生图的完整教程](https://blog.csdn.net/weixin_41961749/article/details/155818077)
