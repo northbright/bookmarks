@@ -16,6 +16,7 @@
   * [Ubuntu 虚拟机安装 OpenClaw 完整流程](https://github.com/spoto-team/openclaw-ubuntu-guide)
 * Channel
   * 飞书
+    * [飞书](https://docs.openclaw.ai/zh-CN/channels/feishu)
     * [Clawdbot 对接飞书详细教程 手把手搭建你的专属 AI 助手](https://blog.csdn.net/qq_31470439/article/details/157502232)
 
 ## 生成图片
