@@ -14,6 +14,9 @@
 * [OpenClaw WSL 安装指南](https://github.com/spoto-team/openclaw-wsl-guide/tree/main)
   * [OpenClaw 国内 API 配置指南](https://github.com/spoto-team/openclaw-minimax-guide)
   * [Ubuntu 虚拟机安装 OpenClaw 完整流程](https://github.com/spoto-team/openclaw-ubuntu-guide)
+* Channel
+  * 飞书
+    * [Clawdbot 对接飞书详细教程 手把手搭建你的专属 AI 助手](https://blog.csdn.net/qq_31470439/article/details/157502232)
 
 ## 生成图片
 * [【Mac使用Z-Image生图教程】Draw Things配置方法与真实测试效果 Mac 下如何使用 Z-Image-Turbo？从安装到生图的完整教程](https://blog.csdn.net/weixin_41961749/article/details/155818077)
