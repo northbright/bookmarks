@@ -13,6 +13,7 @@
 * [OpenClaw的安装与配置详细教程（Windows11+WSL2+Deepseek）](https://zhuanlan.zhihu.com/p/2008182925712183676)
 * [OpenClaw WSL 安装指南](https://github.com/spoto-team/openclaw-wsl-guide/tree/main)
   * [OpenClaw 国内 API 配置指南](https://github.com/spoto-team/openclaw-minimax-guide)
+  * [Ubuntu 虚拟机安装 OpenClaw 完整流程](https://github.com/spoto-team/openclaw-ubuntu-guide)
 
 ## 生成图片
 * [【Mac使用Z-Image生图教程】Draw Things配置方法与真实测试效果 Mac 下如何使用 Z-Image-Turbo？从安装到生图的完整教程](https://blog.csdn.net/weixin_41961749/article/details/155818077)
