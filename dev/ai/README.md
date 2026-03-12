@@ -36,6 +36,7 @@
   * [飞书](https://docs.openclaw.ai/zh-CN/channels/feishu)
   * [Clawdbot 对接飞书详细教程 手把手搭建你的专属 AI 助手](https://blog.csdn.net/qq_31470439/article/details/157502232)
   * [一文完全搞懂OpenClaw（Clawdbot）附飞书对接教程！](https://www.feishu.cn/content/article/7602519239445974205)
+  * [OpenClaw飞书官方插件使用指南（公开版）](https://bytedance.larkoffice.com/docx/MFK7dDFLFoVlOGxWCv5cTXKmnMh)
 
 #### Skills
 * [建议收藏！OpenClaw一定要装的10个技能！](https://www.bilibili.com/video/BV1NGPWzTEtb)
