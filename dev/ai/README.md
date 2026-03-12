@@ -22,6 +22,7 @@
 
 #### Models
 * [Openclaw+Minimax使用体验指南](https://blog.csdn.net/weixin_45970022/article/details/158650269)
+* [OpenClaw大模型切换踩坑指南：从Kimi2.5到MiniMax2.1的配置经验分享](https://zhuanlan.zhihu.com/p/2004167342167434258)
 
 #### Channel
 * 飞书
