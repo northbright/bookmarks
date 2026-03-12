@@ -25,6 +25,7 @@
 * [OpenClaw大模型切换踩坑指南：从Kimi2.5到MiniMax2.1的配置经验分享](https://zhuanlan.zhihu.com/p/2004167342167434258)
 * [Openclaw+Minimax使用体验指南](https://blog.csdn.net/weixin_45970022/article/details/158650269)
 * [配置国产大模型：通义千问 / 智谱 GLM / Moonshot 接入指南](https://clawcn.net/guides/domestic-models)
+* [MiniMax又又来吃龙虾肉了！OpenClaw真·一键部署，还有上万专家智能体等你差遣](https://zhuanlan.zhihu.com/p/2010135021806195410)
 
 #### Channel
 * 飞书
