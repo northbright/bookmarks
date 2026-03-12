@@ -18,6 +18,7 @@
   * [Ubuntu 虚拟机安装 OpenClaw 完整流程](https://github.com/spoto-team/openclaw-ubuntu-guide)
 * [OpenClaw保姆级教程：带你免费调用Qwen3.5，小白也能懂！(ollama)](https://www.bilibili.com/video/BV19CZeBPEfa)
 * [OpenClaw 用 npm 全局安装总失败，明明 Git 和 Node 都装好了，到底卡在哪一步？](https://wenku.csdn.net/answer/59vsevto4tyo)
+* [[Bug]: Open claw installation fails on npm: ! npm install failed for openclaw@latest #23861](https://github.com/openclaw/openclaw/issues/23861)
 
 #### Channel
 * 飞书
