@@ -20,6 +20,9 @@
 * [OpenClaw 用 npm 全局安装总失败，明明 Git 和 Node 都装好了，到底卡在哪一步？](https://wenku.csdn.net/answer/59vsevto4tyo)
 * [[Bug]: Open claw installation fails on npm: ! npm install failed for openclaw@latest #23861](https://github.com/openclaw/openclaw/issues/23861)
 
+#### Models
+* [Openclaw+Minimax使用体验指南](https://blog.csdn.net/weixin_45970022/article/details/158650269)
+
 #### Channel
 * 飞书
   * [飞书](https://docs.openclaw.ai/zh-CN/channels/feishu)
