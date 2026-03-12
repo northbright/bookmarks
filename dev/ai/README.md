@@ -17,6 +17,7 @@
   * [OpenClaw 国内 API 配置指南](https://github.com/spoto-team/openclaw-minimax-guide)
   * [Ubuntu 虚拟机安装 OpenClaw 完整流程](https://github.com/spoto-team/openclaw-ubuntu-guide)
 * [OpenClaw保姆级教程：带你免费调用Qwen3.5，小白也能懂！(ollama)](https://www.bilibili.com/video/BV19CZeBPEfa)
+* [OpenClaw 用 npm 全局安装总失败，明明 Git 和 Node 都装好了，到底卡在哪一步？](https://wenku.csdn.net/answer/59vsevto4tyo)
 
 #### Channel
 * 飞书
