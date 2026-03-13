@@ -51,3 +51,6 @@
 
 ## OpenCode
 * [OpenCode 超级详细入门指南，打造你的高效 AI 编程助手](https://zhuanlan.zhihu.com/p/1991988522329085820)
+
+## Skills
+* [find-skills 深度测评：Claude Code 生态第一的 Skill，让你的工具搜索效率提升10倍](https://zhuanlan.zhihu.com/p/2015169769431639857)
