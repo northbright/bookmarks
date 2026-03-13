@@ -54,3 +54,4 @@
 * [OpenClaw小龙虾技能包大全｜最新整理版：100+必装技能、安装命令与用法（持续更新）](https://blog.axiaoxin.com/post/openclaw-skills/)
 * [OpenClaw Skills 去哪找？我常用的 6 个渠道与实用命令](https://silenceper.com/article/2026-03-10-where-to-find-openclaw-skills/)
 * [find-skills 深度测评：Claude Code 生态第一的 Skill，让你的工具搜索效率提升10倍](https://zhuanlan.zhihu.com/p/2015169769431639857)
+* [OpenClaw Skills 安装指南：四种方法详解](https://blog.csdn.net/qq_39329902/article/details/158805774)
