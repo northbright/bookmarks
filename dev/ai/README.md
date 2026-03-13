@@ -40,6 +40,7 @@
 
 #### Skills
 * [建议收藏！OpenClaw一定要装的10个技能！](https://www.bilibili.com/video/BV1NGPWzTEtb)
+* [OpenClaw小龙虾技能包大全｜最新整理版：100+必装技能、安装命令与用法（持续更新）](https://blog.axiaoxin.com/post/openclaw-skills/)
 
 #### Security
 * [赶快避坑！新版龙虾变傻了？](https://www.bilibili.com/video/BV1ATPQz5EMT)
