@@ -38,10 +38,6 @@
   * [一文完全搞懂OpenClaw（Clawdbot）附飞书对接教程！](https://www.feishu.cn/content/article/7602519239445974205)
   * [OpenClaw飞书官方插件使用指南（公开版）](https://bytedance.larkoffice.com/docx/MFK7dDFLFoVlOGxWCv5cTXKmnMh)
 
-#### Skills
-* [建议收藏！OpenClaw一定要装的10个技能！](https://www.bilibili.com/video/BV1NGPWzTEtb)
-* [OpenClaw小龙虾技能包大全｜最新整理版：100+必装技能、安装命令与用法（持续更新）](https://blog.axiaoxin.com/post/openclaw-skills/)
-
 #### Security
 * [赶快避坑！新版龙虾变傻了？](https://www.bilibili.com/video/BV1ATPQz5EMT)
 
@@ -54,4 +50,7 @@
 * [OpenCode 超级详细入门指南，打造你的高效 AI 编程助手](https://zhuanlan.zhihu.com/p/1991988522329085820)
 
 ## Skills
+* [建议收藏！OpenClaw一定要装的10个技能！](https://www.bilibili.com/video/BV1NGPWzTEtb)
+* [OpenClaw小龙虾技能包大全｜最新整理版：100+必装技能、安装命令与用法（持续更新）](https://blog.axiaoxin.com/post/openclaw-skills/)
+* [OpenClaw Skills 去哪找？我常用的 6 个渠道与实用命令](https://silenceper.com/article/2026-03-10-where-to-find-openclaw-skills/)
 * [find-skills 深度测评：Claude Code 生态第一的 Skill，让你的工具搜索效率提升10倍](https://zhuanlan.zhihu.com/p/2015169769431639857)
