@@ -68,3 +68,6 @@
 
 ## Avatar（头像)
 * [[Bug] Webchat avatar endpoint /avatar/{agentId} returns 404 even with valid IDENTITY.md avatar #38439(看zhuSilence的回答：大小在2M以内才可以显示)](https://github.com/openclaw/openclaw/issues/38439)
+
+## 应用
+* [Awesome OpenClaw 最佳用例合集（中文版）](https://github.com/AlexAnys/awesome-openclaw-usecases-zh0
