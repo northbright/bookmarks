@@ -38,6 +38,7 @@
   * [一文完全搞懂OpenClaw（Clawdbot）附飞书对接教程！](https://www.feishu.cn/content/article/7602519239445974205)
   * [OpenClaw飞书官方插件使用指南（公开版）](https://bytedance.larkoffice.com/docx/MFK7dDFLFoVlOGxWCv5cTXKmnMh)
   * [OpenClaw 完整安装与配置文档（包含Minimax/deepseek模型接入、飞书机器人接入）](https://zhuanlan.zhihu.com/p/2012898191738156487)
+  * [飞书 AI 助手](https://github.com/AlexAnys/awesome-openclaw-usecases-zh/blob/main/usecases/cn-feishu-ai-assistant.md)
 
 #### Security
 * [赶快避坑！新版龙虾变傻了？](https://www.bilibili.com/video/BV1ATPQz5EMT)
