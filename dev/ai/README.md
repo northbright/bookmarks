@@ -41,6 +41,7 @@
 
 #### Security
 * [赶快避坑！新版龙虾变傻了？](https://www.bilibili.com/video/BV1ATPQz5EMT)
+* [局域网访问 OpenClaw 配置指南](https://blog.csdn.net/liuzi511/article/details/158928391)
 
 #### Browser
 * [OpenClaw浏览器在Linux中的配置指南](https://juejin.cn/post/7615932190786748470)
