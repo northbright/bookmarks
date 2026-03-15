@@ -47,6 +47,7 @@
 * [OpenClaw 完全部署指南：从入门到安全加固](https://zhuanlan.zhihu.com/p/2004187601276540473)
 * [别等被盗了才后悔：AI 项目必做的 API Key 安全配置，10 分钟搞定](https://zhuanlan.zhihu.com/p/2012152136667002644)
 * [Keep your API keys safe in OpenClaw: A guide to secrets](https://lumadock.com/tutorials/openclaw-secrets-management)
+* [API Key Management and Secret Rotation for Openclaw](https://www.openclawsetuppro.com/learn/openclaw-api-key-management)
 
 #### Browser
 * [OpenClaw浏览器在Linux中的配置指南](https://juejin.cn/post/7615932190786748470)
