@@ -40,6 +40,7 @@
   * [OpenClaw 完整安装与配置文档（包含Minimax/deepseek模型接入、飞书机器人接入）](https://zhuanlan.zhihu.com/p/2012898191738156487)
   * [飞书 AI 助手](https://github.com/AlexAnys/awesome-openclaw-usecases-zh/blob/main/usecases/cn-feishu-ai-assistant.md)
   * [飞书官方插件安装指南](https://github.com/AlexAnys/openclaw-feishu/blob/main/docs/feishu-official-plugin.md)
+* [OpenClaw 里 TAVILY_API_KEY 明明写在 ~/.bashrc，为什么还是失效？一次完整排查与修复](https://blog.csdn.net/weixin_41736460/article/details/158769952)
 
 #### Security
 * [赶快避坑！新版龙虾变傻了？](https://www.bilibili.com/video/BV1ATPQz5EMT)
