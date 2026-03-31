@@ -32,3 +32,6 @@
 ## 收款
 * [开发者 App Store 收款的科学姿势](https://juejin.cn/post/6844903709470638094)
 * [appstore开发者收入超过5万刀后怎么收款?](https://www.zhihu.com/question/280290897)
+
+## Log
+* [最简单的方法教你查看 iOS 手机上的日志](https://zhuanlan.zhihu.com/p/408695394)
