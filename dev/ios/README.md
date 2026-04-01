@@ -32,13 +32,3 @@
 ## 收款
 * [开发者 App Store 收款的科学姿势](https://juejin.cn/post/6844903709470638094)
 * [appstore开发者收入超过5万刀后怎么收款?](https://www.zhihu.com/question/280290897)
-
-## Log
-* [最简单的方法教你查看 iOS 手机上的日志](https://zhuanlan.zhihu.com/p/408695394)
-
-## 漏洞
-* Coruna
-  * [23个IOS漏洞打包的Coruna工具包，已完成从国家级到黑产的三级扩散](https://zhuanlan.zhihu.com/p/2012676852653781784)
-  * [Coruna: Inside the Nation-State-Grade iOS Exploit Kit We've Been Tracking](https://iverify.io/blog/coruna-inside-the-nation-state-grade-ios-exploit-kit-we-ve-been-tracking)
-  * [Coruna iOS Exploit: How to Detect and Prevent Infection](https://iverify.io/blog/coruna-ios-exploit-how-to-detect-and-prevent-infection)
-  * [Coruna: The iOS Exploit Kit That Went From Spyware Vendor to Mass Crypto Theft](https://blogs.anir0y.in/posts/2026-03-08-coruna-ios-exploit-kit/)
