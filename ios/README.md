@@ -35,6 +35,7 @@
 
 ## Log
 * [最简单的方法教你查看 iOS 手机上的日志](https://zhuanlan.zhihu.com/p/408695394)
+* [Investigating realtime detections on iOS using Unified Logging](https://blog.tofile.dev/2024/10/24/ios-detections.html)
 
 ## 漏洞
 * Coruna
