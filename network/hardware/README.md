@@ -6,6 +6,7 @@
 * [Huawei(华为)](huawei/README.md)
 * [TP-Link](tp-link/README.md)
 * [Intel](intel/README.md)
+* [ZTE](zte/README.md)
 
 ## 光模块
 * [关于光模块，看这一篇就够啦！](https://www.zhihu.com/tardis/bd/art/101607360)
