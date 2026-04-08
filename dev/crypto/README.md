@@ -20,3 +20,6 @@
 
 ## Articles
 * [不止中本聪，区块链“鼻祖”其实是位深藏功与名的神秘华人](https://www.cnbeta.com/articles/tech/1279225.htm)
+
+## Online Tools
+* [AES Encryption / Decryption Tool](https://anycript.com/crypto)
