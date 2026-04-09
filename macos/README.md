@@ -132,3 +132,6 @@
 * MAC Address
   * [search macos change MAC address on bing](https://cn.bing.com/search?q=macos+change+MAC+address&form=QBLH&sp=-1&lq=0&pq=macos+change+mac+address&sc=11-24&qs=n&sk=&cvid=E0A9BAD2AD7B42DEB241227AE9989482)
   * [How to change your MAC address in macOS](https://www.tomsguide.com/how-to/how-to-change-your-mac-address-in-macos)
+
+## Telnet
+* [How to Install Telnet on Mac [2025]](https://hakk.dev/blog/posts/getting-telnet-on-macos-catalina/)
