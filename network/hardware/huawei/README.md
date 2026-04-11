@@ -26,3 +26,4 @@
 * [如何限制外网用户访问WEB网管](https://support.huawei.com/enterprise/zh/doc/EDOC1100112344/27b23597)
 * [(多媒体) S系列交换机如何批量配置交换机的端口](https://support.huawei.com/enterprise/zh/doc/EDOC1000081930)
 * [S380 产品文档](https://support.huawei.com/hedex/hdx.do?docid=EDOC1100409534&tocURL=resources%2Fhedex-homepage.html)
+* [如何修改Web登录密码？](https://support.huawei.com/enterprise/zh/doc/EDOC1000178156/e06c7721)
