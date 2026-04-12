@@ -226,3 +226,6 @@
 
 ## M.2 接口
 * [笔电、NUC和NAS都用得上，M.2（NGFF）扩展卡盘点](https://post.smzdm.com/p/a3d2vq05/)
+
+## Surface
+* [关于微软苏菲SURFACE PRO/BOOK黑屏假死修复的一种思路/方法](https://zhuanlan.zhihu.com/p/573493215)
