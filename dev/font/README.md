@@ -27,3 +27,4 @@
 
 ## License
 * [字体侵权越来越严，你确定你用的字体真的能商用吗？](https://zhuanlan.zhihu.com/p/1928476675848513110)
+* [关注设计版权](https://js.design/fontright?source=OMG&plan=bz)
