@@ -24,3 +24,6 @@
 
 ## Web Fonts
 * [Web 字体 font-family 该如何设置？](https://zhuanlan.zhihu.com/p/313284552)
+
+## License
+* [字体侵权越来越严，你确定你用的字体真的能商用吗？](https://zhuanlan.zhihu.com/p/1928476675848513110)
