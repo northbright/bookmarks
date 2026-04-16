@@ -10,3 +10,4 @@
 * [光猫超级管理员账号密码和Telnet登陆](https://blog.csdn.net/zhiyuan411/article/details/128728958)
 * [中兴光猫通用Telnet命令(G7615 F7015 F7005 F7607等)](https://blog.katck.com/2023/)
 * [中兴ZXHN G7611V2怎么开DMZ或UPNP?](https://tieba.baidu.com/p/9514036250#/)
+* [移动不给超管密码,那我们自己获取吧！](https://www.bilibili.com/video/BV1axUhYTEts/)
