@@ -19,3 +19,6 @@
 ## 弹丸论破
 * [弹丸论破系列全作品及游玩（观看）顺序](https://www.bilibili.com/opus/127226715243268942)
 * [弹丸论破历代剧情是什么顺序？新手入坑先玩那一款？](https://www.zhihu.com/question/384854716/answer/1288432713)
+
+## Articles
+* [有哪些特别好看的恋爱漫画？](https://www.zhihu.com/question/365465254/answer/1614760096)
