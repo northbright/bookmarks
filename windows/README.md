@@ -10,6 +10,7 @@
 * [Use Cipher.exe to overwrite deleted data in Windows Server 2003](https://docs.microsoft.com/en-us/troubleshoot/windows-server/windows-security/use-cipher-to-overwrite-deleted-data)
 * [Cipher.exe 安全工具，用于加密文件系统](https://support.microsoft.com/zh-cn/help/298009/cipher-exe-security-tool-for-the-encrypting-file-system)
 * [Win10/Win11 “安检员”换岗：15 年期旧证书 6 月过期，微软全球升级安全启动](https://www.ithome.com/0/920/966.htm)
+* [慎更微软 2 月累积更新：部分 Win11 用户反馈无限重启](https://www.ithome.com/0/921/590.htm)
 
 ## Input Method
 * [定制化Windows10搜索和输入法快捷键Ctrl+空格](http://www.jianshu.com/p/15efa7783398)
