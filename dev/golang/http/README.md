@@ -40,6 +40,8 @@
 ## Cookie
 * [6.1 Session and cookies](https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/06.1.html)
 * [Package securecookie encodes and decodes authenticated and optionally encrypted cookie values.](http://www.gorillatoolkit.org/pkg/securecookie)
+* [golang关于cookiejar用法的疑问](https://segmentfault.com/q/1010000010339661)
+* [纯golang爬虫实战－（六）－关于cookiejar的理解 (2020-02-14 13:50)](https://www.cnblogs.com/pu369/p/12318490.html)
 
 ## HTML Templating
 * [HTML templating in Go](https://hakk.dev/docs/golang-html-template/)
