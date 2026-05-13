@@ -12,6 +12,7 @@
 * [空调冷媒R22，R410A，R32的区别和选择](https://zhuanlan.zhihu.com/p/137596144)
 * 格力
   * [格力天仪空调怎么样，和格力云欢、云锦哪个好？格力天仪拆机分析，看看哪款更值得买](https://www.zhihu.com/tardis/bd/art/1918228948090852931)
+  * [【拆机测评】格力天仪，最便宜的格力1.5匹新一级挂机！](https://www.zhihu.com/tardis/bd/art/711564077)
 
 ## 电视
 * Articles
