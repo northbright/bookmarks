@@ -13,6 +13,7 @@
 * 格力
   * [格力天仪空调怎么样，和格力云欢、云锦哪个好？格力天仪拆机分析，看看哪款更值得买](https://www.zhihu.com/tardis/bd/art/1918228948090852931)
   * [【拆机测评】格力天仪，最便宜的格力1.5匹新一级挂机！](https://www.zhihu.com/tardis/bd/art/711564077)
+  * [格力天仪空调怎么样](https://www.zhihu.com/tardis/bd/art/1928373957142220846)
 
 ## 电视
 * Articles
