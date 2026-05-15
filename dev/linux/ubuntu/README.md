@@ -53,3 +53,4 @@
 
 ## Upgrade
 * [How to upgrade from Ubuntu 20.04 LTS to 22.04 LTS](https://www.cyberciti.biz/faq/upgrade-ubuntu-20-04-lts-to-22-04-lts/)
+* [How To Upgrade to Ubuntu 22.04 Jammy Jellyfish](https://www.digitalocean.com/community/tutorials/how-to-upgrade-to-ubuntu-22-04-jammy-jellyfish)
