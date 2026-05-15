@@ -76,4 +76,7 @@
 * [死磕nginx系列--nginx 限流配置](https://zhuanlan.zhihu.com/p/139735401)
 
 ## Security
-* [藏了 13 年的 NGINX “上古漏洞” 一个问号就能远程拿下你的服务器](https://www.tjsky.net/tutorial/1546)
+* CVE-2026-42945
+  * [藏了 13 年的 NGINX “上古漏洞” 一个问号就能远程拿下你的服务器](https://www.tjsky.net/tutorial/1546)
+  * [CVE-2026-42945](https://ubuntu.com/security/CVE-2026-42945)
+
