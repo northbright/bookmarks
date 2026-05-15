@@ -50,3 +50,6 @@
 
 ## Service
 * [how to make a binary file to start as a service](https://askubuntu.com/questions/1314936/how-to-make-a-binary-file-to-start-as-a-service)
+
+## Upgrade
+* [How to upgrade from Ubuntu 20.04 LTS to 22.04 LTS](https://www.cyberciti.biz/faq/upgrade-ubuntu-20-04-lts-to-22-04-lts/)
