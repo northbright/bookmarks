@@ -74,3 +74,6 @@
 * [nginx篇11-限速三剑客之limit_conn](https://zhuanlan.zhihu.com/p/389727940)
 * [nginx篇12-限速三剑客之limit_rate](https://zhuanlan.zhihu.com/p/389728216)
 * [死磕nginx系列--nginx 限流配置](https://zhuanlan.zhihu.com/p/139735401)
+
+## Security
+* [藏了 13 年的 NGINX “上古漏洞” 一个问号就能远程拿下你的服务器](https://www.tjsky.net/tutorial/1546)
