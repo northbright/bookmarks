@@ -80,3 +80,4 @@
   * [藏了 13 年的 NGINX “上古漏洞” 一个问号就能远程拿下你的服务器](https://www.tjsky.net/tutorial/1546)
   * [CVE-2026-42945](https://ubuntu.com/security/CVE-2026-42945)
   * [NGINX Rift (CVE-2026-42945): The 18-Year-Old Rewrite Bug That Hands an Attacker Your Worker Process](https://devops-daily.com/posts/nginx-rift-cve-2026-42945-rewrite-rce)
+  * [K000161019: NGINX ngx_http_rewrite_module vulnerability CVE-2026-42945](https://my.f5.com/manage/s/article/K000161019)
