@@ -11,6 +11,7 @@
   * [Golang ORMs](http://jmoiron.net/blog/golang-orms/)
   * [Jmoiron SQLX Golang common interface](https://stackoverflow.com/questions/38994419/jmoiron-sqlx-golang-common-interface)
   * [Built In Interfaces(sql.Scanner and driver.Valuer)](http://jmoiron.net/blog/built-in-interfaces)
+  * [SQLx: Your Go-To Database Toolkit for Go Developers](https://dev.to/jones_charles_ad50858dbc0/sqlx-your-go-to-database-toolkit-for-go-developers-53n8)
 
 ## 3rd Party Drivers
 * [MySQL](mysql/README.md)
