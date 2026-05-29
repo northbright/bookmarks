@@ -27,6 +27,7 @@ Bookmarks of development and more...
 * [Websites](websites/README.md)
 * [Web Tools（网络工具）](web-tools/README.md)
 * [Music](music/README.md)
+* [Drama（日剧）](drama/README.md)
 * [Study（学习）](study/README.md)
 * [Health（健康）](health/README.md)
 * [Anime（动画）](anime/README.md)
