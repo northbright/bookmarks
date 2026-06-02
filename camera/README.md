@@ -153,6 +153,7 @@
   * [如何评价富士xhalf获得PetaPixel年度最差相机？](https://www.zhihu.com/tardis/bd/ans/1983622481806905493)
   * [柯达推出微型钥匙串相机 charmera，该产品都有哪些新特性？](https://www.zhihu.com/question/1949516299823748686)  
   * [柯达新相机体验：160万像素、钥匙扣大小，凭什么卖爆？](https://zhuanlan.zhihu.com/p/1990449320948938026)
+  * [200元买了台柯达，效果绝了！柯达Charmera钥匙链盲盒相机开箱真实体验 by 极地手记](https://www.bilibili.com/video/BV1ddzVBfE4i)
 
 ## 曝光补偿
 * [一直没搞清，曝光补偿和ISO有什么区别](https://forum.xitek.com/forum-viewthread-tid-717223-extra-page%3D1-ordertype-2-t-1594102929.html)
