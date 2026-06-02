@@ -148,6 +148,11 @@
 * D5
   * [年轻人近在咫尺的旗舰梦 尼康D5](https://www.bilibili.com/video/BV16d4y1C7nz/)
 
+## 柯达
+* Charmera
+  * [如何评价富士xhalf获得PetaPixel年度最差相机？](https://www.zhihu.com/tardis/bd/ans/1983622481806905493)
+  * [柯达推出微型钥匙串相机 charmera，该产品都有哪些新特性？](https://www.zhihu.com/question/1949516299823748686)  
+
 ## 曝光补偿
 * [一直没搞清，曝光补偿和ISO有什么区别](https://forum.xitek.com/forum-viewthread-tid-717223-extra-page%3D1-ordertype-2-t-1594102929.html)
 * [求教曝光补偿和ISO的关系](http://forum.xitek.com/thread-1301850-1-1-2.html)
