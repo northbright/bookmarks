@@ -131,6 +131,7 @@
 * [疾病防治｜小猫这个月遭老罪了，终于被我找到了罪魁祸首！ ](https://www.douban.com/group/topic/305403836)
 * [车前子壳能帮猫咪排毛？正确用对才有效，这些误区别踩！](https://baijiahao.baidu.com/s?id=1842490561796154682)
 * [讨论/科普｜【讨论】吐毛球、化毛选择及浅谈化毛](https://www.douban.com/group/topic/169762581)
+* [猫咪到底能不能吃鸡蛋？](https://www.douban.com/note/786686517)
 
 ## 遛猫
 * [正确遛猫指南！敲黑板，不是所有的猫都能遛的](https://zhuanlan.zhihu.com/p/65195155)
