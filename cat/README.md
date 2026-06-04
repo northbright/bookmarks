@@ -127,6 +127,7 @@
 * [猫草、化毛膏和化毛片的区别及用法](https://zhuanlan.zhihu.com/p/336443539)
 * [如何在阳台种小麦草？收小麦穗，可持续种植食物](https://zhuanlan.zhihu.com/p/363592028)
 * [猫咪排毛产品怎么选？猫草、猫草冻干、化毛膏、化毛片、洋车前子壳粉、排毛罐头6款排毛产品对比~](https://www.bilibili.com/video/BV1Lh4y1V7gz)
+* [猫咪吐毛，猫草片，化毛膏，猫草真的是必需品吗？](https://www.douban.com/group/topic/240263771)
 
 ## 遛猫
 * [正确遛猫指南！敲黑板，不是所有的猫都能遛的](https://zhuanlan.zhihu.com/p/65195155)
