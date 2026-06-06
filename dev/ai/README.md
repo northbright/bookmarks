@@ -14,6 +14,9 @@
     * RPMD: 目前ai工具淘汰非常快，普通人没必要额外学第三方的各种工具，认准大模型公司自家的工具就行，从openai公司推出的codex桌面端就能看出来，它的能力越来越强，也越来越适合小白使用，完全没必要搞年初时兴起的小龙虾爱马仕。目前最好用的agent和大模型搭配就是claude code+opus或者codex+gpt。你要是没海外购买的渠道，就用cc switch换成国产模型或者使用中转站。
 * [codex增强教程 对话丢失？装不了插件？想接deepseek？一个视频讲清楚](https://www.bilibili.com/video/BV1y17C6GEQX)
 
+## Sub2API
+* [自建 API 中转站：告别模型造假和跑路，Sub2Api 一站搞定](https://1opc.ai/article/731/openclaw-api-sub2api-cloudflare-docker-codex-claud)
+
 ## DeepSeek
 * [告别ChatGPT，本地免费部署DeepSeek？（自测可用）](https://zhuanlan.zhihu.com/p/20999187883)
 * [如何在本地部署DeepSeek-R1模型？](https://www.zhihu.com/question/10630134422)
