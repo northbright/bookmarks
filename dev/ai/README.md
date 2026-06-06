@@ -72,6 +72,8 @@
 * [OpenClaw Skills 安装指南：四种方法详解](https://blog.csdn.net/qq_39329902/article/details/158805774)
 * [openclaw问题解决，Rate limit exceeded Error: Rate limit exceeded](https://blog.51cto.com/u_15304255/14503709)
 * [安装登录ClawHub并给OpenClaw接入skills](https://cloud.tencent.com/developer/article/2634137)
+* Frontend
+  * [一个 Skill 文件，彻底解决 AI 写前端”又丑又土”的问题](https://zhuanlan.zhihu.com/p/2003753772518753567)
 
 ## Avatar（头像)
 * [[Bug] Webchat avatar endpoint /avatar/{agentId} returns 404 even with valid IDENTITY.md avatar #38439(看zhuSilence的回答：大小在2M以内才可以显示)](https://github.com/openclaw/openclaw/issues/38439)
