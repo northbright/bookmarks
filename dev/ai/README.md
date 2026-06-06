@@ -16,6 +16,7 @@
 
 ## Sub2API
 * [自建 API 中转站：告别模型造假和跑路，Sub2Api 一站搞定](https://1opc.ai/article/731/openclaw-api-sub2api-cloudflare-docker-codex-claud)
+* [小白自建中转站，应该选什么项目？一篇讲清 CPA、NewAPI 和 sub2api](https://zhuanlan.zhihu.com/p/2025962117715477263)
 
 ## DeepSeek
 * [告别ChatGPT，本地免费部署DeepSeek？（自测可用）](https://zhuanlan.zhihu.com/p/20999187883)
