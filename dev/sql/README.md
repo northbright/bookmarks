@@ -18,3 +18,8 @@
 * [数据库该不该用外键](https://blog.csdn.net/yangzhongwei1031/article/details/5459583)
 * [设计的时候，如果去掉外键关联，postgresql和mysql，哪个更有优势？](https://www.zhihu.com/question/34617822)
 * [How to implement a many-to-many relationship in PostgreSQL?](https://stackoverflow.com/questions/9789736/how-to-implement-a-many-to-many-relationship-in-postgresql)
+
+## Tools
+
+#### [DBX](https://github.com/t8y2/dbx)
+* [DBX：一个 15MB 的开源数据库管理工具，把 Navicat 和 DataGrip 的活都干了](https://blog.csdn.net/2401_88055648/article/details/161620570)
