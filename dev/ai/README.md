@@ -3,6 +3,7 @@
 ## Articles
 * [AI、模型、Agent 与智能体——从能力到系统形态的一次性讲清](https://zhuanlan.zhihu.com/p/2001280618865116711)
 * [Hermes、Codex、Claude Code、OpenClaw 深度对比：四大终端 AI Agent 完整选型指南](https://segmentfault.com/a/1190000047758441)
+* [继OpenClaw养虾爆火后](https://baijiahao.baidu.com/s?id=1866964379132575190)
 
 ## Harness Engineering
 * [为什么 2026 年真正重要的是 Harness Engineering？](https://mp.weixin.qq.com/s/RwWfknFIFvJPIdsJMgeNiQ)
