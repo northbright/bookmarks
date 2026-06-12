@@ -3,6 +3,9 @@
 ## Articles
 * [AI、模型、Agent 与智能体——从能力到系统形态的一次性讲清](https://zhuanlan.zhihu.com/p/2001280618865116711)
 
+## Harness Engineering
+* [为什么 2026 年真正重要的是 Harness Engineering？](https://mp.weixin.qq.com/s/RwWfknFIFvJPIdsJMgeNiQ)
+
 ## GPT
 * [13 条咒语挖掘 GPT-4 最大潜力，Github 万星 AI 导师火了，网友：隔行再也不隔山了](https://m.ithome.com/html/699834.htm)
 
