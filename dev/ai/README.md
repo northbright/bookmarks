@@ -32,6 +32,9 @@
 
 ## OpenClaw
 
+#### Articles
+* [OpenClaw 凉了吗？我们和它的核心开发者聊了聊](https://baijiahao.baidu.com/s?id=1865492701930414645)
+
 #### Setup
 * [OpenClaw的安装与配置详细教程（Windows11+WSL2+Deepseek）](https://zhuanlan.zhihu.com/p/2008182925712183676)
 * [OpenClaw WSL 安装指南](https://github.com/spoto-team/openclaw-wsl-guide/tree/main)
