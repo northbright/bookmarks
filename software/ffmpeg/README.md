@@ -11,6 +11,9 @@
 * [Build a cross-platform video player in 7 days](https://aaaron7.github.io/blog/video/tech/Build-a-cross-platform(iOS-Android)-video-player-in-7-days)
 * [Mac平台 编译FFmpeg iOS lib](https://www.jianshu.com/p/3dca7663fb68)
 
+## Security
+* [开源多媒体框架 FFmpeg 被曝高危漏洞：编解码恶意视频可致系统被黑客控制，官方已修复](https://m.ithome.com/html/967699.htm)
+
 ## Projects
 * [FFmpeg iOS build script](https://github.com/kewlbear/FFmpeg-iOS-build-script)
 * [FFmpegKit](https://github.com/tanersener/ffmpeg-kit)
