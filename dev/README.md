@@ -96,6 +96,7 @@
 * [acme.sh](acme-sh/README.md)
 * [GoAccess](goaccess/README.md)
 * [FFmpeg](ffmpeg/README.md)
+* [M3U8](m3u8/README.md)
 * [Translation](translation/README.md)
 * [Fyne](fyne/README.md)
 * [Samba](samba/README.md)
