@@ -20,6 +20,7 @@
 * [粉丝已哭瞎！刚买的全新iPhone17Pro Max被苹果拉黑！](https://zhuanlan.zhihu.com/p/2054834021608247506)
 * [差价4000块！美版iPhone17 Pro Max到底能不能买？看完这篇再决定](https://post.smzdm.com/p/ad7475vn/)
 * [如何评价/入手美版 iPhone 17 Pro Max？分享一些个人的真实使用体验与避坑指南](https://zhuanlan.zhihu.com/p/2044111229208229500)
+* [全新仅大修？美版iPhone17ProMAX深度体验报告](https://www.bilibili.com/video/BV148zeBMELc)
 
 ## 二手
 * [2022年（1月）二手手机 iPhone 购买、验机、省钱、避坑全攻略！](https://zhuanlan.zhihu.com/p/362957819)
