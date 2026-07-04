@@ -10,6 +10,9 @@
 * 电池
   * [诺希手机电池怎么样？](https://www.zhihu.com/question/263677649/answer/1839604700)
 
+#### iPhone 17 Pro Max
+* [带你看6000块的美版的17PM是怎么样改卡的~](https://www.bilibili.com/video/BV1Xa7V6zELY/)
+
 ## 二手
 * [2022年（1月）二手手机 iPhone 购买、验机、省钱、避坑全攻略！](https://zhuanlan.zhihu.com/p/362957819)
 * [资源机、富士康机、1978机、BS机这种机器到底能不能买？](https://zhuanlan.zhihu.com/p/107396680)
