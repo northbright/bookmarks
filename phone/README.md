@@ -10,6 +10,9 @@
 * 电池
   * [诺希手机电池怎么样？](https://www.zhihu.com/question/263677649/answer/1839604700)
 
+#### iPhone 16 Pro Max
+* [5折买的全新 iPhone16 Pro Max，美版为啥这么便宜？](https://www.bilibili.com/video/BV1kt7WzAEZB)
+
 #### iPhone 17 Pro Max
 * [带你看6000块的美版的17PM是怎么样改卡的~](https://www.bilibili.com/video/BV1Xa7V6zELY/)
 
