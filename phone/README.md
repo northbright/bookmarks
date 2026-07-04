@@ -16,6 +16,7 @@
 #### iPhone 17 Pro Max
 * [带你看6000块的美版的17PM是怎么样改卡的~](https://www.bilibili.com/video/BV1Xa7V6zELY/)
 * [下单17pm1tb的兄弟想看一下沉浸式长远改卡，满足他～](https://www.bilibili.com/video/BV1pEE26HE26)
+* [粉丝6500拿下美版iPhone17Pro Max！网友：不推荐！](https://zhuanlan.zhihu.com/p/1999194119369683175)
 
 ## 二手
 * [2022年（1月）二手手机 iPhone 购买、验机、省钱、避坑全攻略！](https://zhuanlan.zhihu.com/p/362957819)
