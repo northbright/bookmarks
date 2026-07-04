@@ -9,3 +9,6 @@
 * [2023年苹果数据线怎么选？| 哪些品牌苹果快充线值得入手？| 真实使用体验总结+实用避坑指南（附多款iPhone备用数据线推荐）](https://www.zhihu.com/tardis/bd/art/502460172)
 * 电池
   * [诺希手机电池怎么样？](https://www.zhihu.com/question/263677649/answer/1839604700)
+
+## 二手
+* [2022年（1月）二手手机 iPhone 购买、验机、省钱、避坑全攻略！](https://zhuanlan.zhihu.com/p/362957819)
