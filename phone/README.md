@@ -21,6 +21,7 @@
 * [差价4000块！美版iPhone17 Pro Max到底能不能买？看完这篇再决定](https://post.smzdm.com/p/ad7475vn/)
 * [如何评价/入手美版 iPhone 17 Pro Max？分享一些个人的真实使用体验与避坑指南](https://zhuanlan.zhihu.com/p/2044111229208229500)
 * [全新仅大修？美版iPhone17ProMAX深度体验报告](https://www.bilibili.com/video/BV148zeBMELc)
+* [美丽版的17Promax，长远方案的改卡体验怎么样？(蓓恩的评论：不方便，有时候信号丢失，靠设置点蜂窝数据想恢复信号，只能恢复个几秒然后一下子就又没信号了，只能重启手机才行，很麻烦)](https://www.bilibili.com/video/BV1y1AozfEvC)
 
 ## 二手
 * [2022年（1月）二手手机 iPhone 购买、验机、省钱、避坑全攻略！](https://zhuanlan.zhihu.com/p/362957819)
