@@ -10,6 +10,9 @@
 * 电池
   * [诺希手机电池怎么样？](https://www.zhihu.com/question/263677649/answer/1839604700)
 
+#### iPhone 14 Pro Max
+* [iPhone 14PM只要拆机，就有很大风险损失一块屏幕](https://www.bilibili.com/video/BV1WeYPzHE1h/)
+
 #### iPhone 15 Pro Max
 * [购买iPhone15 Pro/Pro Max前，一定要了解的3大缺陷！（实际测试）feat. 碎屏/发热/续航/摄像头｜大耳朵TV](https://www.bilibili.com/video/BV1Aj411b7dS)
 
