@@ -10,6 +10,9 @@
 * 电池
   * [诺希手机电池怎么样？](https://www.zhihu.com/question/263677649/answer/1839604700)
 
+#### iPhone 15 Pro Max
+* [购买iPhone15 Pro/Pro Max前，一定要了解的3大缺陷！（实际测试）feat. 碎屏/发热/续航/摄像头｜大耳朵TV](https://www.bilibili.com/video/BV1Aj411b7dS)
+
 #### iPhone 16 Pro Max
 * [5折买的全新 iPhone16 Pro Max，美版为啥这么便宜？](https://www.bilibili.com/video/BV1kt7WzAEZB)
 
