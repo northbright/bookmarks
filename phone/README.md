@@ -40,3 +40,4 @@
   * [星期四数码店真的靠谱吗?](https://www.zhihu.com/question/370019436)
 * 李赔十
   * [写一下李赔十学长家上车记录](https://zhuanlan.zhihu.com/p/494531493)
+  * [【买前必看】买二手iPhone苹果手机什么时候最划算？行业圈内人偷偷告诉你！](https://zhuanlan.zhihu.com/p/415421380)
