@@ -38,3 +38,5 @@
   * [有在某宝“星期四数码店”入iPad的大兄弟吗？不知道那里靠不靠谱？](https://tieba.baidu.com/p/6201556901)
   * [淘宝星期四数码店卖的官换机是真的吗？](https://tieba.baidu.com/p/5728752217)
   * [星期四数码店真的靠谱吗?](https://www.zhihu.com/question/370019436)
+* 李赔十
+  * [写一下李赔十学长家上车记录](https://zhuanlan.zhihu.com/p/494531493)
