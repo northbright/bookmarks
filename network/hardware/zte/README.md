@@ -11,3 +11,4 @@
 * [中兴光猫通用Telnet命令(G7615 F7015 F7005 F7607等)](https://blog.katck.com/2023/)
 * [中兴ZXHN G7611V2怎么开DMZ或UPNP?](https://tieba.baidu.com/p/9514036250#/)
 * [移动不给超管密码,那我们自己获取吧！](https://www.bilibili.com/video/BV1axUhYTEts/)
+* [新的F7005MV3使用zteONU无法开启telnet](https://www.right.com.cn/FORUM/forum.php?mod=viewthread&tid=8413587)
