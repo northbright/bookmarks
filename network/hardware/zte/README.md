@@ -4,6 +4,7 @@
 * [zteOnu](https://github.com/Septrum101/zteOnu)
   * [zteOnu](https://github.com/stich86/zteOnu)
 * [中兴zteonu超级密码获取工具安全问题的联想](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=8427540&fromuid=76953)
+  * [github Bittorrent 软件 恶意占用用户宽带PCDN 事件](https://zhuanlan.zhihu.com/p/690737125)
 * [对中兴光猫zteOnu.exe项目的简单分析(提供下载地址)](https://blog.csdn.net/weixin_46337464/article/details/153938831)
 * [隔壁中兴开telnet最新工具出来了。支持7615V2，7615tv3，7015tv3，7005tv3新光猫](https://www.chiphell.com/forum.php?mod=viewthread&tid=2609434)
 * [[技术]中兴G7615V2等光猫开启并固化 Telnet 教程（附常用命令）及工具下载](https://hackliu.com/?p=258)
