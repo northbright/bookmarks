@@ -136,3 +136,4 @@
 
 ## Telnet
 * [How to Install Telnet on Mac [2025]](https://hakk.dev/blog/posts/getting-telnet-on-macos-catalina/)
+* [Is there still a way to load Telnet on OS10.13](https://discussions.apple.com/thread/255344319?sortBy=rank)
