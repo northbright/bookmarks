@@ -8,3 +8,4 @@
 
 ## 宽带
 * [【210408】折腾了好几天移动宽带，真是心碎](https://tieba.baidu.com/p/7293650517)
+* [大内网宽带入坑小记——修改光猫桥接并配置IPv6实现外网访问NAS](https://post.smzdm.com/p/av732ex4/)
