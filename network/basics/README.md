@@ -30,5 +30,7 @@
 * 4.2.2.2
   * [Who does the nameserver 4.2.2.2 belong to?](https://serverfault.com/questions/88115/who-does-the-nameserver-4-2-2-2-belong-to)
   * [Why do we ping the IP 4.2.2.2 to test connectivity?](https://serverfault.com/questions/132805/why-do-we-ping-the-ip-4-2-2-2-to-test-connectivity)
-* [解析DNS与SNI加密技术](https://www.cnblogs.com/timskt/p/19223503)
-* [L站被墙了？一文搞懂DNS污染、SNI阻断（上篇）](https://www.micu.wiki/t/topic/157)
+
+* DNS 污染
+  * [解析DNS与SNI加密技术](https://www.cnblogs.com/timskt/p/19223503)
+  * [L站被墙了？一文搞懂DNS污染、SNI阻断（上篇）](https://www.micu.wiki/t/topic/157)
