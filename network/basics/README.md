@@ -34,3 +34,4 @@
 * DNS 污染
   * [解析DNS与SNI加密技术](https://www.cnblogs.com/timskt/p/19223503)
   * [L站被墙了？一文搞懂DNS污染、SNI阻断（上篇）](https://www.micu.wiki/t/topic/157)
+  * [通过配置 Edge 浏览器 DoH 和 ECH 实现特定网站如linuxdo裸连访问](https://blog.csdn.net/fjh1997/article/details/159118405)
