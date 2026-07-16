@@ -29,3 +29,6 @@
 * [手把手教你换中兴光猫F7015TV3，网速提升20%！](https://www.bilibili.com/video/BV1St421c7bj)
 * [没有最小只有更小中兴7015TV5弱电箱光猫](https://www.bilibili.com/video/BV1Bj7a6YEGG)
 * [推荐几个2.5g网口的光猫](https://www.bilibili.com/video/BV11QQdYTEKA)
+
+* IPv4
+  * [中国移动到底怎么获得ipv4公网ip？](https://www.zhihu.com/question/447408530)
