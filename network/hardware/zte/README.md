@@ -16,3 +16,4 @@
 * [新的F7005MV3使用zteONU无法开启telnet](https://www.right.com.cn/FORUM/forum.php?mod=viewthread&tid=8413587)
 * [F7005TV3-XE开启Telnet并关闭TR069与ITMS](https://www.cnblogs.com/alghamburger/p/20657571)
 * [中兴F7015百元万兆光猫，弱电箱神器](https://www.bilibili.com/video/BV1Nw4m1C7vN)
+* [光猫7015更换 注意事项！](https://www.bilibili.com/video/BV17M4m1f71p)
