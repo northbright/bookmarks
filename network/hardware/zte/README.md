@@ -15,3 +15,4 @@
 * [移动不给超管密码,那我们自己获取吧！](https://www.bilibili.com/video/BV1axUhYTEts/)
 * [新的F7005MV3使用zteONU无法开启telnet](https://www.right.com.cn/FORUM/forum.php?mod=viewthread&tid=8413587)
 * [F7005TV3-XE开启Telnet并关闭TR069与ITMS](https://www.cnblogs.com/alghamburger/p/20657571)
+* [中兴F7015百元万兆光猫，弱电箱神器](https://www.bilibili.com/video/BV1Nw4m1C7vN)
