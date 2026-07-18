@@ -32,6 +32,7 @@
 * [[中兴] 电信版G7615V2 2024/10 V3.0.0P1T1开telnet并固化步骤(只看作者)](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=8453647&page=1&authorid=83034)
 * [7615V2免费开启telnet的方法来了](https://www.chinadsl.net/thread-177570-1-1.html)
 * [iTMS 全光网管理 - 快速入门](http://i.mqrouter.com/help/itms-fast-book/itms-fast.html)
+* [iRouter 路由安装说明（X86）](http://wiki.mqrouter.com/doku.php?id=install:start)
 * [[中兴] 关于G7615开T，还是建议大家采用开盒TTL方式，原因是](https://www.right.com.cn/FORUM/thread-8467124-1-1.html)
 
 * IPv4
