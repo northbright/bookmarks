@@ -5,3 +5,4 @@
 * [After pasting a yanked line in Vim, why can't I paste it again?](https://stackoverflow.com/questions/25267062/after-pasting-a-yanked-line-in-vim-why-cant-i-paste-it-again)
 * [What does [converted] mean at the bottom of vim?](https://unix.stackexchange.com/questions/126238/what-does-converted-mean-at-the-bottom-of-vim)
 * [How to replace tabs with spaces?](https://vi.stackexchange.com/questions/495/how-to-replace-tabs-with-spaces)
+* [Working with long lines](https://vim.fandom.com/wiki/Working_with_long_lines)
