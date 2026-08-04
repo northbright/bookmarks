@@ -13,6 +13,7 @@
 ## 全国计算机等级考试
 * 一级
   * [【突击必过】7小时拿下计算机一级 MS 高频考点](https://www.bilibili.com/video/BV1kFPszPEk7)
+  * [计算机一级Ms真题视频解析（适应于26年3月版）](https://www.bilibili.com/video/BV1CieyzKEWK/)
 * 二级
   * [（2026年9月）MS 计算机二级真题讲解](https://www.bilibili.com/video/BV1xB4y1P7Cc)
 
