@@ -10,6 +10,9 @@
 ## 专升本
 * [你不会不知道上海专升本无计算机可以加试吧](https://zhuanlan.zhihu.com/p/431312259)
 
+## 全国计算机等级考试
+* [（2026年9月）MS 计算机二级真题讲解](https://www.bilibili.com/video/BV1xB4y1P7Cc)
+
 ## 教材
 * 上海牛津英语教材 MP3 下载
   * [上海中小学教材配套音频资料下载中心](http://mp3.bookmall.com.cn/)
