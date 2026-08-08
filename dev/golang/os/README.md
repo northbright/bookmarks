@@ -32,3 +32,4 @@
   * [golang-cmd-exit-demo](https://github.com/gouravkrosx/golang-cmd-exit-demo)
 * [Go 1.20で入ったexec.CommandのCancelとWaitDelayで外部コマンドを正しく終了させる](https://poyo.hatenablog.jp/entry/2023/03/11/114225)
 * [Go exec 包执行命令超时失效问题分析及解决方案](https://www.lixueduan.com/posts/go/exex-cmd-timeout/)
+* [Shell Escaping in Go](https://mojoauth.com/escaping/shell-escaping-in-go/)
