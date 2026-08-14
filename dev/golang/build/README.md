@@ -10,6 +10,7 @@
 
 ## Executable Name
 * [How to Build a Golang Executable with a Custom Name Different from Your Package](https://www.tutorialpedia.org/blog/how-to-build-executable-with-name-other-than-golang-package/)
+* [How to Change the Go Build Executable Binary Name and Output Path (My Learning Experience)](https://golangtutorial.dev/tips/change-the-go-build-executable-name-output-path/)
 
 ## Makefile
 * [Creating a Golang Makefile](https://earthly.dev/blog/golang-makefile/)
