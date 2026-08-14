@@ -8,6 +8,9 @@
 * [How To Build and Install Go Programs](https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs)
 * [Building Go Applications for Different Operating Systems and Architectures](https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures)
 
+## Executable Name
+* [How to Build a Golang Executable with a Custom Name Different from Your Package](https://www.tutorialpedia.org/blog/how-to-build-executable-with-name-other-than-golang-package/)
+
 ## Makefile
 * [Creating a Golang Makefile](https://earthly.dev/blog/golang-makefile/)
 * [Quick tip: A time-saving Makefile for your Go projects](https://www.alexedwards.net/blog/a-time-saving-makefile-for-your-go-projects)
