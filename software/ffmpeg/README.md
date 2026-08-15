@@ -73,6 +73,7 @@
 * [FFmpeg Concat Guide: Demuxer, Filter, Protocol and API](https://renderio.dev/blogs/ffmpeg-concat-guide/)
 
 ## HLS
+* [FFmpeg hls设置hls_time切片时间不准确的解决方案-ts流强制gop](https://blog.csdn.net/u010029439/article/details/111186133)
 * [使用FFmpeg命令进行hls切片，得到的ts文件时长不准确](https://blog.csdn.net/u014552102/article/details/103302731)
 * [Segmenting Video with ffmpeg – Part 2](https://hlsbook.net/segmenting-video-with-ffmpeg-part-2/)
 
