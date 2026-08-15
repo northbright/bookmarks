@@ -72,6 +72,9 @@
 * [How to concatenate two MP4 files using FFmpeg?](https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg)
 * [FFmpeg Concat Guide: Demuxer, Filter, Protocol and API](https://renderio.dev/blogs/ffmpeg-concat-guide/)
 
+## HLS
+* [使用FFmpeg命令进行hls切片，得到的ts文件时长不准确](https://blog.csdn.net/u014552102/article/details/103302731)
+
 ## Trim
 * [FFmpeg: To trim a video using 'trim' and specify time using HH:MM:SS format](https://superuser.com/questions/1846340/ffmpeg-to-trim-a-video-using-trim-and-specify-time-using-hhmmss-format)
 
