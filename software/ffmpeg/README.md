@@ -77,6 +77,9 @@
 * [使用FFmpeg命令进行hls切片，得到的ts文件时长不准确](https://blog.csdn.net/u014552102/article/details/103302731)
 * [Segmenting Video with ffmpeg – Part 2](https://hlsbook.net/segmenting-video-with-ffmpeg-part-2/)
 
+## Key Frame
+* [How to Extract Key Frames from A Video with FFmpeg](https://jdhao.github.io/2021/12/25/ffmpeg-extract-key-frame-video/)
+
 ## Trim
 * [FFmpeg: To trim a video using 'trim' and specify time using HH:MM:SS format](https://superuser.com/questions/1846340/ffmpeg-to-trim-a-video-using-trim-and-specify-time-using-hhmmss-format)
 
