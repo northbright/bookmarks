@@ -10,6 +10,7 @@
 * [太甜啦](https://www.chiphell.com/thread-2670634-1-1.html)
 * [我眼中的日本 Part1 北境的浪漫](https://www.chiphell.com/thread-2671293-1-1.html)
 * [杭州良渚-半日打卡](https://www.chiphell.com/thread-2697094-1-1.html)
+* [暑假带娃游大理~~](https://www.chiphell.com/forum.php?mod=viewthread&tid=2871399)
 
 ## PPI and DPI
 * [别乱用dpi，ppi才是图像分辨率单位，很多人都搞错了](https://zhuanlan.zhihu.com/p/146713168)
