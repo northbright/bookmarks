@@ -132,6 +132,7 @@
 * [别再往 Go 里塞 Java 了：拆解 spf13 的 Idiomatic Go 信仰](https://tonybai.com/2026/07/13/spf13-idiomatic-go/)
 * [Go早期的那些布道者](https://tonybai.com/2024/05/17/the-early-evangelists-of-go/)
 * [Go 1.27新特性前瞻：泛型方法落地，标准库内建 UUID](https://tonybai.com/2026/06/24/go-1-27-foresight/)
+* [浏览器里的“安全阴谋”：为什么 Go 1.27 的 UUIDv7 会离奇丧失随机性？](https://tonybai.com/2026/06/25/go-1-27-uuid-newv7-always-generates-uuid-with-7000-on-browsers/)
 
 
 ## Effective Go
