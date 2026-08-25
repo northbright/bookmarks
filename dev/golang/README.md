@@ -126,6 +126,7 @@
 * [Go 1.27发布：8年UUID转正 泛型方法来了 还提速30%](https://www.jdon.com/94101-go-1270-released.html)
 * [ACM专访Russ Cox：管理者若不谨慎，AI agent会变成“终极战术龙卷风”](https://tonybai.com/2026/08/23/russ-cox-acm-interview-tactical-tornado-ai-agent-warning/)
 * [Go 密码学前掌门人亲自提案：crypto/passkey 要把“免密登录”这件事一次性做对](https://tonybai.com/2026/08/07/go-crypto-passkey-proposal-explained/)
+* [Go 正在背离初心？一条 Reddit 热帖，暴露了 Go 社区最深的分歧：简单，到底能坚持多久？](https://tonybai.com/2026/08/03/go-simplicity-philosophy-debate-reddit/)
 
 
 ## Effective Go
