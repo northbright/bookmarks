@@ -131,6 +131,7 @@
 * [Go 1.28 大动作：泛型集合终于要进标准库了，Set、树形Map、堆一次性标准化](https://tonybai.com/2026/07/29/go-1-28-generic-collections-proposal/)
 * [别再往 Go 里塞 Java 了：拆解 spf13 的 Idiomatic Go 信仰](https://tonybai.com/2026/07/13/spf13-idiomatic-go/)
 * [Go早期的那些布道者](https://tonybai.com/2024/05/17/the-early-evangelists-of-go/)
+* [Go 1.27新特性前瞻：泛型方法落地，标准库内建 UUID](https://tonybai.com/2026/06/24/go-1-27-foresight/)
 
 
 ## Effective Go
