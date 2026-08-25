@@ -130,6 +130,7 @@
 * [三年磨一剑！Go 桌面框架 Wails 发布 v3公测版：多窗口、AST 绑定、透明构建系统一次到位](https://tonybai.com/2026/08/04/wails-v3-go-desktop-framework/)
 * [Go 1.28 大动作：泛型集合终于要进标准库了，Set、树形Map、堆一次性标准化](https://tonybai.com/2026/07/29/go-1-28-generic-collections-proposal/)
 * [别再往 Go 里塞 Java 了：拆解 spf13 的 Idiomatic Go 信仰](https://tonybai.com/2026/07/13/spf13-idiomatic-go/)
+* [Go早期的那些布道者](https://tonybai.com/2024/05/17/the-early-evangelists-of-go/)
 
 
 ## Effective Go
