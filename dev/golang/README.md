@@ -128,6 +128,7 @@
 * [Go 密码学前掌门人亲自提案：crypto/passkey 要把“免密登录”这件事一次性做对](https://tonybai.com/2026/08/07/go-crypto-passkey-proposal-explained/)
 * [Go 正在背离初心？一条 Reddit 热帖，暴露了 Go 社区最深的分歧：简单，到底能坚持多久？](https://tonybai.com/2026/08/03/go-simplicity-philosophy-debate-reddit/)
 * [三年磨一剑！Go 桌面框架 Wails 发布 v3公测版：多窗口、AST 绑定、透明构建系统一次到位](https://tonybai.com/2026/08/04/wails-v3-go-desktop-framework/)
+* [Go 1.28 大动作：泛型集合终于要进标准库了，Set、树形Map、堆一次性标准化](https://tonybai.com/2026/07/29/go-1-28-generic-collections-proposal/)
 
 
 ## Effective Go
