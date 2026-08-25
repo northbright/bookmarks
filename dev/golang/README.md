@@ -124,6 +124,7 @@
 * [Go语言设计和工具链核心团队成员介绍](https://zhuanlan.zhihu.com/p/75373075)
 * [Go 1.24引爆升级：新特性全解析！](https://www.bilibili.com/video/BV1JDFdejETc/)
 * [Go 1.27发布：8年UUID转正 泛型方法来了 还提速30%](https://www.jdon.com/94101-go-1270-released.html)
+* [ACM专访Russ Cox：管理者若不谨慎，AI agent会变成“终极战术龙卷风”](https://tonybai.com/2026/08/23/russ-cox-acm-interview-tactical-tornado-ai-agent-warning/)
 
 
 ## Effective Go
