@@ -229,3 +229,9 @@
 
 ## Surface
 * [关于微软苏菲SURFACE PRO/BOOK黑屏假死修复的一种思路/方法](https://zhuanlan.zhihu.com/p/573493215)
+
+## 微型摄像头
+* A9
+
+  发现微型摄像头，淘宝照片搜索，可能是 A9 型号，使用 V720 软件
+  * [A9--V720APP操作视频](https://www.bilibili.com/video/BV1wu4y127Lm)
