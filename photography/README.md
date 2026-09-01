@@ -24,3 +24,6 @@
 
 ## EXIF
 * [Online EXIF Viewer](https://onlineexifviewer.com/)
+
+## YUV Sampling
+* [一文读懂 YUV 的采样与格式](https://zhuanlan.zhihu.com/p/113122344)
