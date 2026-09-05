@@ -1,0 +1,3439 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://ffhub.io/blog/how-to-add-subtitles-to-video-with-ffmpeg
+Subject: How to Add Subtitles to Video with FFmpeg | FFHub
+Date: Sat, 5 Sep 2026 04:29:57 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--QlmCFcLQ9ckzjww8VuLEA1H2GmmDhVHAbJcHx5Yetd----"
+
+
+------MultipartBoundary--QlmCFcLQ9ckzjww8VuLEA1H2GmmDhVHAbJcHx5Yetd----
+Content-Type: text/html
+Content-ID: <frame-1FD4332BD2C4D33F765DDCED5B9E3C38@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ffhub.io/blog/how-to-add-subtitles-to-video-with-ffmpeg
+
+<!DOCTYPE html><!--kYvbp18YlsHWoHyOoCqpM--><html lang=3D"en" class=3D"__var=
+iable_5ca87d __variable_6d24ac __variable_9f4838"><head><meta http-equiv=3D=
+"Content-Type" content=3D"text/html; charset=3DUTF-8"><link rel=3D"styleshe=
+et" type=3D"text/css" href=3D"cid:css-f28833fe-2bbe-4f88-a463-f0c5097f5489@=
+mhtml.blink" /><meta name=3D"viewport" content=3D"width=3Ddevice-width, ini=
+tial-scale=3D1"><link rel=3D"preload" href=3D"https://ffhub.io/_next/static=
+/media/103fc5fac08dcb15-s.p.woff2" as=3D"font" crossorigin=3D"" type=3D"fon=
+t/woff2"><link rel=3D"preload" href=3D"https://ffhub.io/_next/static/media/=
+558ca1a6aa3cb55e-s.p.woff2" as=3D"font" crossorigin=3D"" type=3D"font/woff2=
+"><link rel=3D"preload" href=3D"https://ffhub.io/_next/static/media/9cc5b37=
+ab1350db7-s.p.woff2" as=3D"font" crossorigin=3D"" type=3D"font/woff2"><link=
+ rel=3D"preload" as=3D"image" href=3D"https://ffhub.io/imgs/blog/how-to-add=
+-subtitles-to-video-with-ffmpeg.webp"><link rel=3D"stylesheet" href=3D"http=
+s://ffhub.io/_next/static/css/32abab1024c8065f.css" data-precedence=3D"next=
+"><link rel=3D"stylesheet" href=3D"https://ffhub.io/_next/static/css/69f447=
+9f6c83366d.css" data-precedence=3D"next"><link rel=3D"preload" as=3D"script=
+" fetchpriority=3D"low" href=3D"https://ffhub.io/_next/static/chunks/webpac=
+k-b4978937dc3e9e3e.js"><link rel=3D"preload" href=3D"https://www.googletagm=
+anager.com/gtag/js?id=3DAW-18030129897" as=3D"script"><link rel=3D"preload"=
+ href=3D"https://www.statcounter.com/counter/counter.js" as=3D"script"><met=
+a name=3D"next-size-adjust" content=3D""><title>How to Add Subtitles to Vid=
+eo with FFmpeg | FFHub</title><meta name=3D"description" content=3D"Complet=
+e guide to adding subtitles with FFmpeg =E2=80=94 hardcode SRT/ASS, softcod=
+e subtitle tracks, style customization, multi-language support, and subtitl=
+e extraction."><meta name=3D"robots" content=3D"index, follow"><meta name=
+=3D"google" content=3D"notranslate"><link rel=3D"canonical" href=3D"https:/=
+/ffhub.io/blog/how-to-add-subtitles-to-video-with-ffmpeg"><link rel=3D"alte=
+rnate" hreflang=3D"x-default" href=3D"https://ffhub.io/blog/how-to-add-subt=
+itles-to-video-with-ffmpeg"><link rel=3D"alternate" hreflang=3D"en" href=3D=
+"https://ffhub.io/blog/how-to-add-subtitles-to-video-with-ffmpeg"><link rel=
+=3D"alternate" hreflang=3D"zh" href=3D"https://ffhub.io/zh/blog/how-to-add-=
+subtitles-to-video-with-ffmpeg"><link rel=3D"alternate" hreflang=3D"ja" hre=
+f=3D"https://ffhub.io/ja/blog/how-to-add-subtitles-to-video-with-ffmpeg"><l=
+ink rel=3D"alternate" hreflang=3D"pt" href=3D"https://ffhub.io/pt/blog/how-=
+to-add-subtitles-to-video-with-ffmpeg"><link rel=3D"alternate" hreflang=3D"=
+de" href=3D"https://ffhub.io/de/blog/how-to-add-subtitles-to-video-with-ffm=
+peg"><link rel=3D"alternate" hreflang=3D"es" href=3D"https://ffhub.io/es/bl=
+og/how-to-add-subtitles-to-video-with-ffmpeg"><meta property=3D"og:title" c=
+ontent=3D"How to Add Subtitles to Video with FFmpeg | FFHub"><meta property=
+=3D"og:description" content=3D"Complete guide to adding subtitles with FFmp=
+eg =E2=80=94 hardcode SRT/ASS, softcode subtitle tracks, style customizatio=
+n, multi-language support, and subtitle extraction."><meta property=3D"og:u=
+rl" content=3D"https://ffhub.io/blog/how-to-add-subtitles-to-video-with-ffm=
+peg"><meta property=3D"og:site_name" content=3D"FFHub"><meta property=3D"og=
+:image" content=3D"https://ffhub.io/og-image.png"><meta property=3D"og:imag=
+e:width" content=3D"1200"><meta property=3D"og:image:height" content=3D"630=
+"><meta property=3D"og:image:alt" content=3D"FFHub"><meta property=3D"og:ty=
+pe" content=3D"article"><meta name=3D"twitter:card" content=3D"summary_larg=
+e_image"><meta name=3D"twitter:title" content=3D"How to Add Subtitles to Vi=
+deo with FFmpeg | FFHub"><meta name=3D"twitter:description" content=3D"Comp=
+lete guide to adding subtitles with FFmpeg =E2=80=94 hardcode SRT/ASS, soft=
+code subtitle tracks, style customization, multi-language support, and subt=
+itle extraction."><meta name=3D"twitter:image" content=3D"https://ffhub.io/=
+og-image.png"><link rel=3D"icon" href=3D"https://ffhub.io/favicon.ico"><lin=
+k rel=3D"icon" href=3D"https://ffhub.io/favicon-16x16.png" sizes=3D"16x16" =
+type=3D"image/png"><link rel=3D"icon" href=3D"https://ffhub.io/favicon-32x3=
+2.png" sizes=3D"32x32" type=3D"image/png"></head><body class=3D"min-h-scree=
+n bg-background antialiased"><div class=3D"flex min-h-screen flex-col"><hea=
+der class=3D"sticky top-0 z-50 border-b backdrop-blur" style=3D"background:=
+color-mix(in oklab, var(--bg) 80%, transparent);border-color:color-mix(in o=
+klab, var(--line) 80%, transparent)"><div class=3D"container mx-auto flex h=
+-[60px] max-w-[1200px] items-center justify-between gap-6 px-8"><a class=3D=
+"flex items-center gap-2.5 text-[15px] font-semibold tracking-tight" href=
+=3D"https://ffhub.io/"><span class=3D"grid h-[26px] w-[26px] place-items-ce=
+nter rounded-md bg-primary font-mono text-[12px] font-semibold text-primary=
+-foreground">=C6=92=C6=92</span><span>ffhub<span class=3D"font-normal text-=
+muted-foreground">.io</span></span></a><div class=3D"flex items-center gap-=
+6"><nav class=3D"hidden items-center gap-5 text-sm text-ink-2 md:flex" aria=
+-label=3D"Primary"><a class=3D"transition-colors hover:text-foreground" hre=
+f=3D"https://ffhub.io/ffmpeg-api">API</a><a class=3D"transition-colors hove=
+r:text-foreground" href=3D"https://ffhub.io/docs/cli">CLI</a><a class=3D"tr=
+ansition-colors hover:text-foreground" href=3D"https://ffhub.io/tools">Tool=
+s</a><a class=3D"transition-colors hover:text-foreground" href=3D"https://f=
+fhub.io/pricing">Pricing</a></nav><div class=3D"flex items-center gap-2"><d=
+iv class=3D"relative"><button type=3D"button" class=3D"grid h-8 w-8 place-i=
+tems-center rounded-md text-muted-foreground hover:bg-muted hover:text-fore=
+ground" aria-label=3D"Switch language" title=3D"English"><svg xmlns=3D"http=
+://www.w3.org/2000/svg" width=3D"24" height=3D"24" viewBox=3D"0 0 24 24" fi=
+ll=3D"none" stroke=3D"currentColor" stroke-width=3D"2" stroke-linecap=3D"ro=
+und" stroke-linejoin=3D"round" class=3D"lucide lucide-languages h-4 w-4"><p=
+ath d=3D"m5 8 6 6"></path><path d=3D"m4 14 6-6 2-3"></path><path d=3D"M2 5h=
+12"></path><path d=3D"M7 2h1"></path><path d=3D"m22 22-5-10-5 10"></path><p=
+ath d=3D"M14 18h6"></path></svg></button></div><button type=3D"button" clas=
+s=3D"ml-1 inline-flex h-8 items-center rounded-[10px] bg-primary px-3 text-=
+[13px] font-medium text-primary-foreground transition-opacity hover:opacity=
+-90">Sign in</button><button type=3D"button" class=3D"-mr-2.5 flex h-11 w-1=
+1 flex-col items-center justify-center gap-[5px] md:hidden" aria-label=3D"M=
+enu" aria-expanded=3D"false"><span class=3D"block h-[1.5px] w-[18px] bg-for=
+eground"></span><span class=3D"block h-[1.5px] w-[18px] bg-foreground"></sp=
+an></button></div></div></div></header><article class=3D"container mx-auto =
+w-full max-w-3xl flex-1 px-8 py-12"><a class=3D"text-sm text-muted-foregrou=
+nd hover:text-foreground" href=3D"https://ffhub.io/blog">=E2=86=90 All post=
+s</a><header class=3D"mt-6 mb-8"><h1 class=3D"text-4xl font-medium tracking=
+-[-0.025em]">How to Add Subtitles to Video with FFmpeg</h1><p class=3D"mt-3=
+ text-lg text-muted-foreground">Complete guide to adding subtitles with FFm=
+peg =E2=80=94 hardcode SRT/ASS, softcode subtitle tracks, style customizati=
+on, multi-language support, and subtitle extraction.</p><div class=3D"mt-4 =
+flex items-center gap-2 font-mono text-sm text-muted-foreground"><span>FFHu=
+b</span><span>=C2=B7</span><span>2026-04-28</span></div></header><img src=
+=3D"https://ffhub.io/imgs/blog/how-to-add-subtitles-to-video-with-ffmpeg.we=
+bp" alt=3D"How to Add Subtitles to Video with FFmpeg" class=3D"mb-8 w-full =
+rounded-lg object-cover"><div class=3D"space-y-2"><p class=3D"my-4 leading-=
+relaxed">Subtitles make videos accessible, searchable, and watchable in noi=
+sy environments. FFmpeg can hardcode subtitles directly into the video, emb=
+ed them as selectable tracks, extract existing subtitles, and convert betwe=
+en subtitle formats. This guide covers all of it with practical commands.</=
+p>
+<h2 class=3D"mt-8 text-2xl font-semibold">Hardcode vs Softcode: Which to Ch=
+oose?</h2>
+<p class=3D"my-4 leading-relaxed">Before adding subtitles, you need to deci=
+de how:</p>
+<table class=3D"my-4 w-full border-collapse text-sm"><thead><tr><th class=
+=3D"border border-foreground/20 bg-foreground/5 px-3 py-2 text-left">Method=
+</th><th class=3D"border border-foreground/20 bg-foreground/5 px-3 py-2 tex=
+t-left">Description</th><th class=3D"border border-foreground/20 bg-foregro=
+und/5 px-3 py-2 text-left">Pros</th><th class=3D"border border-foreground/2=
+0 bg-foreground/5 px-3 py-2 text-left">Cons</th></tr></thead><tbody><tr><td=
+ class=3D"border border-foreground/20 px-3 py-2"><strong>Hardcode</strong> =
+(burn-in)</td><td class=3D"border border-foreground/20 px-3 py-2">Subtitles=
+ rendered into the video pixels</td><td class=3D"border border-foreground/2=
+0 px-3 py-2">Always visible, universal playback</td><td class=3D"border bor=
+der-foreground/20 px-3 py-2">Can't turn off, requires re-encoding</td></tr>=
+<tr><td class=3D"border border-foreground/20 px-3 py-2"><strong>Softcode</s=
+trong> (embedded)</td><td class=3D"border border-foreground/20 px-3 py-2">S=
+ubtitles stored as a separate track</td><td class=3D"border border-foregrou=
+nd/20 px-3 py-2">Toggleable, multiple languages</td><td class=3D"border bor=
+der-foreground/20 px-3 py-2">Player must support it</td></tr></tbody></tabl=
+e>
+<p class=3D"my-4 leading-relaxed"><strong>Rule of thumb:</strong> Hardcode =
+for social media and maximum compatibility. Softcode for long-form content =
+and multi-language support. If you're building a <a class=3D"text-blue-600 =
+underline hover:text-blue-800" href=3D"https://ffhub.io/blog/video-processi=
+ng-for-ugc-platforms">UGC platform that processes user-uploaded videos</a>,=
+ softcode is usually the better choice.</p>
+<h2 class=3D"mt-8 text-2xl font-semibold">Hardcode SRT Subtitles</h2>
+<p class=3D"my-4 leading-relaxed">SRT is the most common subtitle format. T=
+o burn it into the video:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Hardcode SRT subtitles
+ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt" output.mp4
+</code></pre>
+<p class=3D"my-4 leading-relaxed">That's it. FFmpeg uses the <code class=3D=
+"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm">subtitles</code> f=
+ilter (powered by libass) to render the SRT file directly onto each frame.<=
+/p>
+<h3 class=3D"mt-6 text-xl font-semibold">Customize SRT Appearance</h3>
+<p class=3D"my-4 leading-relaxed">The default SRT rendering is plain. You c=
+an style it with the <code class=3D"rounded bg-foreground/10 px-1 py-0.5 fo=
+nt-mono text-sm">force_style</code> option:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Custom font, size, and color
+ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt:force_style=3D'FontName=3DAri=
+al,FontSize=3D24,PrimaryColour=3D&amp;H00FFFFFF,OutlineColour=3D&amp;H00000=
+000,Outline=3D2,Shadow=3D1'" output.mp4
+</code></pre>
+<p class=3D"my-4 leading-relaxed">Common style parameters:</p>
+<table class=3D"my-4 w-full border-collapse text-sm"><thead><tr><th class=
+=3D"border border-foreground/20 bg-foreground/5 px-3 py-2 text-left">Parame=
+ter</th><th class=3D"border border-foreground/20 bg-foreground/5 px-3 py-2 =
+text-left">Example</th><th class=3D"border border-foreground/20 bg-foregrou=
+nd/5 px-3 py-2 text-left">Description</th></tr></thead><tbody><tr><td class=
+=3D"border border-foreground/20 px-3 py-2">FontName</td><td class=3D"border=
+ border-foreground/20 px-3 py-2">Arial</td><td class=3D"border border-foreg=
+round/20 px-3 py-2">Font face</td></tr><tr><td class=3D"border border-foreg=
+round/20 px-3 py-2">FontSize</td><td class=3D"border border-foreground/20 p=
+x-3 py-2">24</td><td class=3D"border border-foreground/20 px-3 py-2">Size i=
+n points</td></tr><tr><td class=3D"border border-foreground/20 px-3 py-2">P=
+rimaryColour</td><td class=3D"border border-foreground/20 px-3 py-2">&amp;H=
+00FFFFFF</td><td class=3D"border border-foreground/20 px-3 py-2">Text color=
+ (ABGR hex)</td></tr><tr><td class=3D"border border-foreground/20 px-3 py-2=
+">OutlineColour</td><td class=3D"border border-foreground/20 px-3 py-2">&am=
+p;H00000000</td><td class=3D"border border-foreground/20 px-3 py-2">Outline=
+ color</td></tr><tr><td class=3D"border border-foreground/20 px-3 py-2">Bac=
+kColour</td><td class=3D"border border-foreground/20 px-3 py-2">&amp;H80000=
+000</td><td class=3D"border border-foreground/20 px-3 py-2">Shadow/backgrou=
+nd color</td></tr><tr><td class=3D"border border-foreground/20 px-3 py-2">O=
+utline</td><td class=3D"border border-foreground/20 px-3 py-2">2</td><td cl=
+ass=3D"border border-foreground/20 px-3 py-2">Outline thickness</td></tr><t=
+r><td class=3D"border border-foreground/20 px-3 py-2">Shadow</td><td class=
+=3D"border border-foreground/20 px-3 py-2">1</td><td class=3D"border border=
+-foreground/20 px-3 py-2">Shadow depth</td></tr><tr><td class=3D"border bor=
+der-foreground/20 px-3 py-2">Bold</td><td class=3D"border border-foreground=
+/20 px-3 py-2">1</td><td class=3D"border border-foreground/20 px-3 py-2">Bo=
+ld text (0 or 1)</td></tr><tr><td class=3D"border border-foreground/20 px-3=
+ py-2">Alignment</td><td class=3D"border border-foreground/20 px-3 py-2">2<=
+/td><td class=3D"border border-foreground/20 px-3 py-2">Position (2=3Dbotto=
+m center)</td></tr><tr><td class=3D"border border-foreground/20 px-3 py-2">=
+MarginV</td><td class=3D"border border-foreground/20 px-3 py-2">30</td><td =
+class=3D"border border-foreground/20 px-3 py-2">Vertical margin from edge</=
+td></tr></tbody></table>
+<p class=3D"my-4 leading-relaxed">Note: Colors use <strong>ABGR</strong> fo=
+rmat (Alpha, Blue, Green, Red), not the usual RGB.</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Yellow text with black outline, larger font, positioned h=
+igher
+ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt:force_style=3D'FontSize=3D28,=
+PrimaryColour=3D&amp;H0000FFFF,OutlineColour=3D&amp;H00000000,Outline=3D3,M=
+arginV=3D40'" output.mp4
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Handle Special Characters in File =
+Paths</h3>
+<p class=3D"my-4 leading-relaxed">If your subtitle file path contains speci=
+al characters, escape them:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Escape colons in Windows paths or special characters
+ffmpeg -i input.mp4 -vf "subtitles=3D'my\ subtitles.srt'" output.mp4
+
+# Or use the subtitle file index approach
+ffmpeg -i input.mp4 -i subs.srt -filter_complex "[0:v][1:s]overlay" output.=
+mp4
+</code></pre>
+<h2 class=3D"mt-8 text-2xl font-semibold">Hardcode ASS/SSA Styled Subtitles=
+</h2>
+<p class=3D"my-4 leading-relaxed">ASS (Advanced SubStation Alpha) subtitles=
+ support rich styling =E2=80=94 fonts, colors, animations, and positioning =
+per line. When hardcoding ASS files, all styling is preserved:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Hardcode ASS subtitles (all styling preserved)
+ffmpeg -i input.mp4 -vf "ass=3Dsubs.ass" output.mp4
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Create a Simple ASS File</h3>
+<p class=3D"my-4 leading-relaxed">Here's an example ASS file structure:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-text">[Script Info]
+Title: My Subtitles
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineCo=
+lour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spaci=
+ng, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, Margi=
+nV, Encoding
+Style: Default,Arial,48,&amp;H00FFFFFF,&amp;H000000FF,&amp;H00000000,&amp;H=
+80000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, =
+Text
+Dialogue: 0,0:00:01.00,0:00:04.00,Default,,0,0,0,,Hello, this is a subtitle=
+.
+Dialogue: 0,0:00:05.00,0:00:08.00,Default,,0,0,0,,This line has {\b1}bold{\=
+b0} text.
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Convert SRT to ASS with Custom Sty=
+ling</h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Convert SRT to ASS (then you can edit the ASS styles)
+ffmpeg -i subs.srt subs.ass
+</code></pre>
+<p class=3D"my-4 leading-relaxed">After converting, edit the <code class=3D=
+"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm">[V4+ Styles]</code=
+> section in the ASS file to customize appearance. You may also want to <a =
+class=3D"text-blue-600 underline hover:text-blue-800" href=3D"https://ffhub=
+.io/blog/how-to-convert-video-format-with-ffmpeg">convert your video to a d=
+ifferent format</a> before adding subtitles, depending on your target platf=
+orm.</p>
+<h2 class=3D"mt-8 text-2xl font-semibold">Softcode Subtitles (Embedded Trac=
+ks)</h2>
+<p class=3D"my-4 leading-relaxed">Softcoded subtitles are stored as a separ=
+ate stream inside the container. The viewer can toggle them on/off.</p>
+<h3 class=3D"mt-6 text-xl font-semibold">Add SRT as a Subtitle Track</h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Add SRT subtitle track to MP4
+ffmpeg -i input.mp4 -i subs.srt -c copy -c:s mov_text output.mp4
+
+# Add SRT subtitle track to MKV (MKV supports SRT natively)
+ffmpeg -i input.mp4 -i subs.srt -c copy -c:s srt output.mkv
+</code></pre>
+<p class=3D"my-4 leading-relaxed">Important: MP4 containers require <code c=
+lass=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm">mov_text</c=
+ode> codec for subtitles. MKV supports SRT, ASS, and many other formats nat=
+ively.</p>
+<h3 class=3D"mt-6 text-xl font-semibold">Add Multiple Subtitle Languages</h=
+3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Add English and Spanish subtitle tracks to MKV
+ffmpeg -i input.mp4 -i english.srt -i spanish.srt \
+  -map 0:v -map 0:a -map 1 -map 2 \
+  -c copy -c:s srt \
+  -metadata:s:s:0 language=3Deng -metadata:s:s:0 title=3D"English" \
+  -metadata:s:s:1 language=3Dspa -metadata:s:s:1 title=3D"Spanish" \
+  output.mkv
+</code></pre>
+<p class=3D"my-4 leading-relaxed">For MP4:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Add multiple subtitle tracks to MP4
+ffmpeg -i input.mp4 -i english.srt -i chinese.srt \
+  -map 0:v -map 0:a -map 1 -map 2 \
+  -c copy -c:s mov_text \
+  -metadata:s:s:0 language=3Deng -metadata:s:s:0 title=3D"English" \
+  -metadata:s:s:1 language=3Dchi -metadata:s:s:1 title=3D"Chinese" \
+  output.mp4
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Set Default Subtitle Track</h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Mark the first subtitle track as default
+ffmpeg -i input.mp4 -i subs.srt \
+  -map 0 -map 1 \
+  -c copy -c:s mov_text \
+  -disposition:s:0 default \
+  output.mp4
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Add ASS Subtitles as Soft Track</h=
+3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Add ASS to MKV (preserves all styling for compatible play=
+ers)
+ffmpeg -i input.mp4 -i subs.ass -map 0 -map 1 -c copy -c:s ass output.mkv
+</code></pre>
+<h2 class=3D"mt-8 text-2xl font-semibold">Extract Subtitles from Video</h2>
+<h3 class=3D"mt-6 text-xl font-semibold">Extract to SRT</h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Extract the first subtitle track to SRT
+ffmpeg -i input.mkv -map 0:s:0 output.srt
+
+# Extract the second subtitle track
+ffmpeg -i input.mkv -map 0:s:1 output.srt
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Extract to ASS</h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Extract subtitle track as ASS (preserves styling)
+ffmpeg -i input.mkv -map 0:s:0 output.ass
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">List Available Subtitle Tracks</h3=
+>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Show all streams including subtitles
+ffprobe -v error -show_entries stream=3Dindex,codec_name,codec_type -of csv=
+ input.mkv
+
+# More detailed subtitle info
+ffprobe -v error -select_streams s -show_entries stream=3Dindex,codec_name:=
+stream_tags=3Dlanguage,title -of json input.mkv
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Extract All Subtitle Tracks</h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash">#!/bin/bash
+# Extract all subtitle tracks from a video
+INPUT=3D"input.mkv"
+
+# Count subtitle streams
+COUNT=3D$(ffprobe -v error -select_streams s -show_entries stream=3Dindex -=
+of csv=3Dp=3D0 "$INPUT" | wc -l)
+
+for i in $(seq 0 $((COUNT - 1))); do
+  # Get language tag
+  LANG=3D$(ffprobe -v error -select_streams s:$i -show_entries stream_tags=
+=3Dlanguage -of csv=3Dp=3D0 "$INPUT")
+  LANG=3D${LANG:-"track$i"}
+  ffmpeg -i "$INPUT" -map 0:s:$i "${INPUT%.*}_${LANG}.srt"
+done
+</code></pre>
+<h2 class=3D"mt-8 text-2xl font-semibold">Convert Subtitle Formats</h2>
+<p class=3D"my-4 leading-relaxed">FFmpeg can convert between subtitle forma=
+ts:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># SRT to ASS
+ffmpeg -i subs.srt subs.ass
+
+# ASS to SRT (loses styling)
+ffmpeg -i subs.ass subs.srt
+
+# SRT to WebVTT
+ffmpeg -i subs.srt subs.vtt
+
+# SUB/IDX (DVD) to SRT (requires OCR =E2=80=94 FFmpeg can't do this directl=
+y)
+# Use a tool like SubtitleEdit or Tesseract for bitmap-to-text conversion
+</code></pre>
+<table class=3D"my-4 w-full border-collapse text-sm"><thead><tr><th class=
+=3D"border border-foreground/20 bg-foreground/5 px-3 py-2 text-left">From</=
+th><th class=3D"border border-foreground/20 bg-foreground/5 px-3 py-2 text-=
+left">To</th><th class=3D"border border-foreground/20 bg-foreground/5 px-3 =
+py-2 text-left">Preserves Styling?</th></tr></thead><tbody><tr><td class=3D=
+"border border-foreground/20 px-3 py-2">SRT =E2=86=92 ASS</td><td class=3D"=
+border border-foreground/20 px-3 py-2">Yes</td><td class=3D"border border-f=
+oreground/20 px-3 py-2">Adds default styling</td></tr><tr><td class=3D"bord=
+er border-foreground/20 px-3 py-2">ASS =E2=86=92 SRT</td><td class=3D"borde=
+r border-foreground/20 px-3 py-2">No</td><td class=3D"border border-foregro=
+und/20 px-3 py-2">Loses all styling</td></tr><tr><td class=3D"border border=
+-foreground/20 px-3 py-2">SRT =E2=86=92 VTT</td><td class=3D"border border-=
+foreground/20 px-3 py-2">Partial</td><td class=3D"border border-foreground/=
+20 px-3 py-2">Basic formatting kept</td></tr><tr><td class=3D"border border=
+-foreground/20 px-3 py-2">VTT =E2=86=92 SRT</td><td class=3D"border border-=
+foreground/20 px-3 py-2">Partial</td><td class=3D"border border-foreground/=
+20 px-3 py-2">Loses VTT-specific features</td></tr></tbody></table>
+<h2 class=3D"mt-8 text-2xl font-semibold">Subtitle Timing Adjustments</h2>
+<h3 class=3D"mt-6 text-xl font-semibold">Delay or Advance Subtitles</h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Delay subtitles by 2.5 seconds
+ffmpeg -i input.mp4 -itsoffset 2.5 -i subs.srt -map 0 -map 1 -c copy -c:s m=
+ov_text output.mp4
+</code></pre>
+<p class=3D"my-4 leading-relaxed">For hardcoded subtitles, use the <code cl=
+ass=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm">setpts</code=
+> filter or adjust the SRT file directly (if you need to <a class=3D"text-b=
+lue-600 underline hover:text-blue-800" href=3D"https://ffhub.io/blog/how-to=
+-trim-and-merge-videos-with-ffmpeg">trim or merge video segments</a>, timin=
+g adjustments become especially important):</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Shift hardcoded subtitles (using subtitle filter with off=
+set)
+ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt" -ss 00:00:02.500 output.mp4
+</code></pre>
+<h2 class=3D"mt-8 text-2xl font-semibold">Hardcode Subtitles with Resolutio=
+n Control</h2>
+<p class=3D"my-4 leading-relaxed">When hardcoding, subtitle rendering quali=
+ty depends on the video resolution. For best results, match the original re=
+solution:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Hardcode subtitles while keeping original resolution
+ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt" -c:v libx264 -crf 23 -c:a co=
+py output.mp4
+
+# Hardcode and scale to 1080p
+ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt,scale=3D-2:1080" -c:v libx264=
+ -crf 23 -c:a copy output.mp4
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Subtitle Font Rendering for Differ=
+ent Resolutions</h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># For 720p video =E2=80=94 smaller font
+ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt:force_style=3D'FontSize=3D20'=
+" -c:v libx264 -crf 23 output.mp4
+
+# For 4K video =E2=80=94 larger font
+ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt:force_style=3D'FontSize=3D48,=
+Outline=3D3'" -c:v libx264 -crf 23 output.mp4
+</code></pre>
+<h2 class=3D"mt-8 text-2xl font-semibold">Batch Subtitle Operations</h2>
+<h3 class=3D"mt-6 text-xl font-semibold">Hardcode Subtitles for All Videos<=
+/h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Assumes each video has a matching .srt file
+for f in *.mp4; do
+  srt=3D"${f%.mp4}.srt"
+  if [ -f "$srt" ]; then
+    ffmpeg -i "$f" -vf "subtitles=3D$srt" -c:v libx264 -crf 23 -c:a copy "s=
+ubtitled_${f}"
+  fi
+done
+</code></pre>
+<h3 class=3D"mt-6 text-xl font-semibold">Softcode Subtitles for All Videos<=
+/h3>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Add matching SRT files as subtitle tracks
+for f in *.mp4; do
+  srt=3D"${f%.mp4}.srt"
+  if [ -f "$srt" ]; then
+    ffmpeg -i "$f" -i "$srt" -c copy -c:s mov_text "soft_${f}"
+  fi
+done
+</code></pre>
+<h2 class=3D"mt-8 text-2xl font-semibold">Troubleshooting</h2>
+<p class=3D"my-4 leading-relaxed"><strong>"No such filter: subtitles"</stro=
+ng> =E2=80=94 FFmpeg was compiled without libass support. Install a full bu=
+ild:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># macOS
+brew install ffmpeg
+
+# Ubuntu/Debian
+sudo apt install ffmpeg libass-dev
+</code></pre>
+<p class=3D"my-4 leading-relaxed"><strong>Subtitles don't appear</strong> =
+=E2=80=94 Check the subtitle file encoding. FFmpeg expects UTF-8:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash"># Convert subtitle encoding to UTF-8
+iconv -f ISO-8859-1 -t UTF-8 subs_latin.srt &gt; subs_utf8.srt
+</code></pre>
+<p class=3D"my-4 leading-relaxed"><strong>Wrong subtitle position or size</=
+strong> =E2=80=94 The video resolution doesn't match the subtitle's assumed=
+ resolution. Use <code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-m=
+ono text-sm">force_style</code> to override:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash">ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt:force_style=
+=3D'FontSize=3D24,MarginV=3D30'" output.mp4
+</code></pre>
+<p class=3D"my-4 leading-relaxed"><strong>Special characters display as box=
+es</strong> =E2=80=94 The font doesn't support the characters. Specify a fo=
+nt that supports your language:</p>
+<pre class=3D"my-4 overflow-x-auto rounded-md bg-foreground/5 p-4 font-mono=
+ text-sm [&amp;>code]:bg-transparent [&amp;>code]:p-0 [&amp;>code]:text-inh=
+erit"><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mono text-sm=
+ language-bash">ffmpeg -i input.mp4 -vf "subtitles=3Dsubs.srt:force_style=
+=3D'FontName=3DNoto Sans CJK SC'" output.mp4
+</code></pre>
+<p class=3D"my-4 leading-relaxed"><strong>MP4 output fails with "unknown co=
+dec" for subtitles</strong> =E2=80=94 MP4 only supports <code class=3D"roun=
+ded bg-foreground/10 px-1 py-0.5 font-mono text-sm">mov_text</code>. Use MK=
+V for other subtitle formats, or hardcode instead.</p>
+<h2 class=3D"mt-8 text-2xl font-semibold">Cloud Alternative with FFHub</h2>
+<p class=3D"my-4 leading-relaxed">Hardcoding subtitles requires re-encoding=
+, which is CPU-intensive =E2=80=94 a 1-hour video can take 20+ minutes on a=
+ standard machine. <a class=3D"text-blue-600 underline hover:text-blue-800"=
+ href=3D"https://ffhub.io/">FFHub</a> runs FFmpeg in the cloud via API, so =
+you can offload subtitle burning to fast cloud servers while your machine s=
+tays free.</p>
+<p class=3D"my-4 leading-relaxed">This is especially useful when you need t=
+o generate multiple subtitle versions (different languages, different style=
+s) from the same source video.</p>
+<h2 class=3D"mt-8 text-2xl font-semibold">Summary</h2>
+<ul class=3D"my-4 list-disc pl-6 space-y-1">
+<li><strong>Hardcode</strong> (<code class=3D"rounded bg-foreground/10 px-1=
+ py-0.5 font-mono text-sm">-vf "subtitles=3Dsubs.srt"</code>) for guarantee=
+d visibility on all platforms</li>
+<li><strong>Softcode</strong> (<code class=3D"rounded bg-foreground/10 px-1=
+ py-0.5 font-mono text-sm">-c:s mov_text</code> for MP4, <code class=3D"rou=
+nded bg-foreground/10 px-1 py-0.5 font-mono text-sm">-c:s srt</code> for MK=
+V) for toggleable tracks</li>
+<li>Use <strong><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mo=
+no text-sm">force_style</code></strong> to customize SRT subtitle appearanc=
+e</li>
+<li>Use <strong>ASS format</strong> when you need rich styling and animatio=
+ns</li>
+<li>Use <strong><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mo=
+no text-sm">-map</code></strong> to add multiple subtitle languages</li>
+<li>Use <strong><code class=3D"rounded bg-foreground/10 px-1 py-0.5 font-mo=
+no text-sm">ffprobe</code></strong> to inspect existing subtitle tracks bef=
+ore extraction</li>
+<li>Always ensure subtitle files are <strong>UTF-8</strong> encoded</li>
+</ul>
+<h2 class=3D"mt-8 text-2xl font-semibold">Related Articles</h2>
+<ul class=3D"my-4 list-disc pl-6 space-y-1">
+<li><a class=3D"text-blue-600 underline hover:text-blue-800" href=3D"https:=
+//ffhub.io/blog/how-to-trim-and-merge-videos-with-ffmpeg">How to Trim and M=
+erge Videos with FFmpeg</a> - Cut, split, and concatenate video clips while=
+ keeping subtitle timing in sync</li>
+<li><a class=3D"text-blue-600 underline hover:text-blue-800" href=3D"https:=
+//ffhub.io/blog/how-to-convert-video-format-with-ffmpeg">How to Convert Vid=
+eo Format with FFmpeg</a> - Switch between MP4, MKV, and WebM containers th=
+at each handle subtitles differently</li>
+<li><a class=3D"text-blue-600 underline hover:text-blue-800" href=3D"https:=
+//ffhub.io/blog/how-to-extract-audio-from-video-with-ffmpeg">How to Extract=
+ Audio from Video with FFmpeg</a> - Pull audio tracks from video for transc=
+ription and subtitle generation</li>
+</ul></div></article><footer class=3D"border-t pb-10 pt-14" style=3D"backgr=
+ound:var(--tint)"><div class=3D"container mx-auto max-w-[1200px] px-8"><div=
+ class=3D"grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] l=
+g:gap-8"><div><a class=3D"flex items-center gap-2.5 text-[14.5px] font-semi=
+bold" href=3D"https://ffhub.io/"><span class=3D"grid h-[24px] w-[24px] plac=
+e-items-center rounded-md bg-primary font-mono text-[11px] font-semibold te=
+xt-primary-foreground">=C6=92=C6=92</span><span>ffhub<span class=3D"font-no=
+rmal text-muted-foreground">.io</span></span></a><p class=3D"mt-3 max-w-[22=
+0px] text-[13px] leading-[1.6] text-muted-foreground">Cloud FFmpeg API for =
+video and audio processing.</p></div><div class=3D"flex flex-col gap-[9px] =
+text-[13px]"><span class=3D"font-mono text-[11px] uppercase tracking-[0.06e=
+m] text-muted-foreground">Product</span><a class=3D"text-ink-2 transition-c=
+olors hover:text-foreground" href=3D"https://ffhub.io/ffmpeg-api">API</a><a=
+ class=3D"text-ink-2 transition-colors hover:text-foreground" href=3D"https=
+://ffhub.io/playground">Playground</a><a class=3D"text-ink-2 transition-col=
+ors hover:text-foreground" href=3D"https://ffhub.io/docs/cli">CLI</a><a cla=
+ss=3D"text-ink-2 transition-colors hover:text-foreground" href=3D"https://f=
+fhub.io/pricing">Pricing</a></div><div class=3D"flex flex-col gap-[9px] tex=
+t-[13px]"><span class=3D"font-mono text-[11px] uppercase tracking-[0.06em] =
+text-muted-foreground">Tools</span><a class=3D"text-ink-2 transition-colors=
+ hover:text-foreground" href=3D"https://ffhub.io/tools/compress">Compress v=
+ideo</a><a class=3D"text-ink-2 transition-colors hover:text-foreground" hre=
+f=3D"https://ffhub.io/tools/convert">Convert video</a><a class=3D"text-ink-=
+2 transition-colors hover:text-foreground" href=3D"https://ffhub.io/tools/e=
+xtract-audio">Extract audio</a><a class=3D"text-ink-2 transition-colors hov=
+er:text-foreground" href=3D"https://ffhub.io/tools">All tools</a></div><div=
+ class=3D"flex flex-col gap-[9px] text-[13px]"><span class=3D"font-mono tex=
+t-[11px] uppercase tracking-[0.06em] text-muted-foreground">Learn</span><a =
+class=3D"text-ink-2 transition-colors hover:text-foreground" href=3D"https:=
+//ffhub.io/docs/quickstart">Quickstart</a><a class=3D"text-ink-2 transition=
+-colors hover:text-foreground" href=3D"https://ffhub.io/docs">Docs</a><a cl=
+ass=3D"text-ink-2 transition-colors hover:text-foreground" href=3D"https://=
+ffhub.io/docs/examples">Examples</a><a class=3D"text-ink-2 transition-color=
+s hover:text-foreground" href=3D"https://ffhub.io/blog">Blog</a><a class=3D=
+"text-ink-2 transition-colors hover:text-foreground" href=3D"https://ffhub.=
+io/contact">Contact</a></div><div class=3D"flex flex-col gap-[9px] text-[13=
+px]"><span class=3D"font-mono text-[11px] uppercase tracking-[0.06em] text-=
+muted-foreground">Language</span><a class=3D"transition-colors hover:text-f=
+oreground text-foreground" href=3D"https://ffhub.io/en/blog/how-to-add-subt=
+itles-to-video-with-ffmpeg">English</a><a hreflang=3D"zh" class=3D"transiti=
+on-colors hover:text-foreground text-ink-2" href=3D"https://ffhub.io/zh/blo=
+g/how-to-add-subtitles-to-video-with-ffmpeg">=E4=B8=AD=E6=96=87</a><a hrefl=
+ang=3D"ja" class=3D"transition-colors hover:text-foreground text-ink-2" hre=
+f=3D"https://ffhub.io/ja/blog/how-to-add-subtitles-to-video-with-ffmpeg">=
+=E6=97=A5=E6=9C=AC=E8=AA=9E</a><a hreflang=3D"pt" class=3D"transition-color=
+s hover:text-foreground text-ink-2" href=3D"https://ffhub.io/pt/blog/how-to=
+-add-subtitles-to-video-with-ffmpeg">Portugu=C3=AAs</a><a hreflang=3D"de" c=
+lass=3D"transition-colors hover:text-foreground text-ink-2" href=3D"https:/=
+/ffhub.io/de/blog/how-to-add-subtitles-to-video-with-ffmpeg">Deutsch</a><a =
+hreflang=3D"es" class=3D"transition-colors hover:text-foreground text-ink-2=
+" href=3D"https://ffhub.io/es/blog/how-to-add-subtitles-to-video-with-ffmpe=
+g">Espa=C3=B1ol</a></div></div><div class=3D"mt-9 flex flex-col gap-3 borde=
+r-t pt-5 font-mono text-[12.5px] text-muted-foreground sm:flex-row sm:items=
+-center sm:justify-between"><span>=C2=A9 <!-- -->2026<!-- --> ffhub.io</spa=
+n><nav class=3D"flex flex-wrap gap-5"><a class=3D"transition-colors hover:t=
+ext-foreground" href=3D"https://ffhub.io/terms">Terms</a><a class=3D"transi=
+tion-colors hover:text-foreground" href=3D"https://ffhub.io/privacy">Privac=
+y</a><a href=3D"https://ffhub.io/llms.txt" class=3D"transition-colors hover=
+:text-foreground" title=3D"LLM-readable project summary">llms.txt</a></nav>=
+</div></div></footer></div><!--$--><!--/$--><section aria-label=3D"Notifica=
+tions alt+T" tabindex=3D"-1" aria-live=3D"polite" aria-relevant=3D"addition=
+s text" aria-atomic=3D"false"></section>
+<next-route-announcer style=3D"position: absolute;"><template shadowmode=3D=
+"open"><div aria-live=3D"assertive" id=3D"__next-route-announcer__" role=3D=
+"alert" style=3D"position: absolute; border: 0px; height: 1px; margin: -1px=
+; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidde=
+n; white-space: nowrap; overflow-wrap: normal;"></div></template></next-rou=
+te-announcer></body></html>
+------MultipartBoundary--QlmCFcLQ9ckzjww8VuLEA1H2GmmDhVHAbJcHx5Yetd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-f28833fe-2bbe-4f88-a463-f0c5097f5489@mhtml.blink
+
+@charset "utf-8";
+
+[data-sonner-toaster][dir=3D"ltr"], html[dir=3D"ltr"] { --toast-icon-margin=
+-start: -3px; --toast-icon-margin-end: 4px; --toast-svg-margin-start: -1px;=
+ --toast-svg-margin-end: 0px; --toast-button-margin-start: auto; --toast-bu=
+tton-margin-end: 0; --toast-close-button-start: 0; --toast-close-button-end=
+: unset; --toast-close-button-transform: translate(-35%, -35%); }
+
+[data-sonner-toaster][dir=3D"rtl"], html[dir=3D"rtl"] { --toast-icon-margin=
+-start: 4px; --toast-icon-margin-end: -3px; --toast-svg-margin-start: 0px; =
+--toast-svg-margin-end: -1px; --toast-button-margin-start: 0; --toast-butto=
+n-margin-end: auto; --toast-close-button-start: unset; --toast-close-button=
+-end: 0; --toast-close-button-transform: translate(35%, -35%); }
+
+[data-sonner-toaster] { position: fixed; width: var(--width); font-family: =
+ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Ro=
+boto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji"=
+, "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; --gray1: hsl(0, =
+0%, 99%); --gray2: hsl(0, 0%, 97.3%); --gray3: hsl(0, 0%, 95.1%); --gray4: =
+hsl(0, 0%, 93%); --gray5: hsl(0, 0%, 90.9%); --gray6: hsl(0, 0%, 88.7%); --=
+gray7: hsl(0, 0%, 85.8%); --gray8: hsl(0, 0%, 78%); --gray9: hsl(0, 0%, 56.=
+1%); --gray10: hsl(0, 0%, 52.3%); --gray11: hsl(0, 0%, 43.5%); --gray12: hs=
+l(0, 0%, 9%); --border-radius: 8px; box-sizing: border-box; padding: 0px; m=
+argin: 0px; list-style: none; outline: 0px; z-index: 999999999; transition:=
+ transform 0.4s ease 0s; }
+
+@media (hover: none) and (pointer: coarse) {
+  [data-sonner-toaster][data-lifted=3D"true"] { transform: none; }
+}
+
+[data-sonner-toaster][data-x-position=3D"right"] { right: var(--offset-righ=
+t); }
+
+[data-sonner-toaster][data-x-position=3D"left"] { left: var(--offset-left);=
+ }
+
+[data-sonner-toaster][data-x-position=3D"center"] { left: 50%; transform: t=
+ranslateX(-50%); }
+
+[data-sonner-toaster][data-y-position=3D"top"] { top: var(--offset-top); }
+
+[data-sonner-toaster][data-y-position=3D"bottom"] { bottom: var(--offset-bo=
+ttom); }
+
+[data-sonner-toast] { --y: translateY(100%); --lift-amount: calc(var(--lift=
+) * var(--gap)); z-index: var(--z-index); position: absolute; opacity: 0; t=
+ransform: var(--y); touch-action: none; transition: transform 0.4s ease 0s,=
+ opacity 0.4s ease 0s, height 0.4s ease 0s, box-shadow 0.2s ease 0s; box-si=
+zing: border-box; outline: 0px; overflow-wrap: anywhere; }
+
+[data-sonner-toast][data-styled=3D"true"] { padding: 16px; background: var(=
+--normal-bg); border: 1px solid var(--normal-border); color: var(--normal-t=
+ext); border-radius: var(--border-radius); box-shadow: rgba(0, 0, 0, 0.1) 0=
+px 4px 12px; width: var(--width); font-size: 13px; display: flex; align-ite=
+ms: center; gap: 6px; }
+
+[data-sonner-toast]:focus-visible { box-shadow: rgba(0, 0, 0, 0.1) 0px 4px =
+12px, rgba(0, 0, 0, 0.2) 0px 0px 0px 2px; }
+
+[data-sonner-toast][data-y-position=3D"top"] { top: 0px; --y: translateY(-1=
+00%); --lift: 1; --lift-amount: calc(1 * var(--gap)); }
+
+[data-sonner-toast][data-y-position=3D"bottom"] { bottom: 0px; --y: transla=
+teY(100%); --lift: -1; --lift-amount: calc(var(--lift) * var(--gap)); }
+
+[data-sonner-toast][data-styled=3D"true"] [data-description] { font-weight:=
+ 400; line-height: 1.4; color: rgb(63, 63, 63); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-styled=3D"true"] [data-=
+description] { color: inherit; }
+
+[data-sonner-toaster][data-sonner-theme=3D"dark"] [data-description] { colo=
+r: rgb(232, 232, 232); }
+
+[data-sonner-toast][data-styled=3D"true"] [data-title] { font-weight: 500; =
+line-height: 1.5; color: inherit; }
+
+[data-sonner-toast][data-styled=3D"true"] [data-icon] { display: flex; heig=
+ht: 16px; width: 16px; position: relative; justify-content: flex-start; ali=
+gn-items: center; flex-shrink: 0; margin-left: var(--toast-icon-margin-star=
+t); margin-right: var(--toast-icon-margin-end); }
+
+[data-sonner-toast][data-promise=3D"true"] [data-icon] > svg { opacity: 0; =
+transform: scale(0.8); transform-origin: center center; animation: 0.3s eas=
+e 0s 1 normal forwards running sonner-fade-in; }
+
+[data-sonner-toast][data-styled=3D"true"] [data-icon] > * { flex-shrink: 0;=
+ }
+
+[data-sonner-toast][data-styled=3D"true"] [data-icon] svg { margin-left: va=
+r(--toast-svg-margin-start); margin-right: var(--toast-svg-margin-end); }
+
+[data-sonner-toast][data-styled=3D"true"] [data-content] { display: flex; f=
+lex-direction: column; gap: 2px; }
+
+[data-sonner-toast][data-styled=3D"true"] [data-button] { border-radius: 4p=
+x; padding-left: 8px; padding-right: 8px; height: 24px; font-size: 12px; co=
+lor: var(--normal-bg); background: var(--normal-text); margin-left: var(--t=
+oast-button-margin-start); margin-right: var(--toast-button-margin-end); bo=
+rder: none; font-weight: 500; cursor: pointer; outline: 0px; display: flex;=
+ align-items: center; flex-shrink: 0; transition: opacity 0.4s ease 0s, box=
+-shadow 0.2s ease 0s; }
+
+[data-sonner-toast][data-styled=3D"true"] [data-button]:focus-visible { box=
+-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px 2px; }
+
+[data-sonner-toast][data-styled=3D"true"] [data-button]:first-of-type { mar=
+gin-left: var(--toast-button-margin-start); margin-right: var(--toast-butto=
+n-margin-end); }
+
+[data-sonner-toast][data-styled=3D"true"] [data-cancel] { color: var(--norm=
+al-text); background: rgba(0, 0, 0, 0.08); }
+
+[data-sonner-toaster][data-sonner-theme=3D"dark"] [data-sonner-toast][data-=
+styled=3D"true"] [data-cancel] { background: rgba(255, 255, 255, 0.3); }
+
+[data-sonner-toast][data-styled=3D"true"] [data-close-button] { position: a=
+bsolute; left: var(--toast-close-button-start); right: var(--toast-close-bu=
+tton-end); top: 0px; height: 20px; width: 20px; display: flex; justify-cont=
+ent: center; align-items: center; padding: 0px; color: var(--gray12); backg=
+round: var(--normal-bg); border: 1px solid var(--gray4); transform: var(--t=
+oast-close-button-transform); border-radius: 50%; cursor: pointer; z-index:=
+ 1; transition: opacity 0.1s ease 0s, background 0.2s ease 0s, border-color=
+ 0.2s ease 0s; }
+
+[data-sonner-toast][data-styled=3D"true"] [data-close-button]:focus-visible=
+ { box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px, rgba(0, 0, 0, 0.2) 0px 0px =
+0px 2px; }
+
+[data-sonner-toast][data-styled=3D"true"] [data-disabled=3D"true"] { cursor=
+: not-allowed; }
+
+[data-sonner-toast][data-styled=3D"true"]:hover [data-close-button]:hover {=
+ background: var(--gray2); border-color: var(--gray5); }
+
+[data-sonner-toast][data-swiping=3D"true"]::before { content: ""; position:=
+ absolute; left: -100%; right: -100%; height: 100%; z-index: -1; }
+
+[data-sonner-toast][data-y-position=3D"top"][data-swiping=3D"true"]::before=
+ { bottom: 50%; transform: scaleY(3) translateY(50%); }
+
+[data-sonner-toast][data-y-position=3D"bottom"][data-swiping=3D"true"]::bef=
+ore { top: 50%; transform: scaleY(3) translateY(-50%); }
+
+[data-sonner-toast][data-swiping=3D"false"][data-removed=3D"true"]::before =
+{ content: ""; position: absolute; inset: 0px; transform: scaleY(2); }
+
+[data-sonner-toast][data-expanded=3D"true"]::after { content: ""; position:=
+ absolute; left: 0px; height: calc(var(--gap) + 1px); bottom: 100%; width: =
+100%; }
+
+[data-sonner-toast][data-mounted=3D"true"] { --y: translateY(0); opacity: 1=
+; }
+
+[data-sonner-toast][data-expanded=3D"false"][data-front=3D"false"] { --scal=
+e: var(--toasts-before) * 0.05 + 1; --y: translateY(calc(var(--lift-amount)=
+ * var(--toasts-before))) scale(calc(-1 * var(--scale))); height: var(--fro=
+nt-toast-height); }
+
+[data-sonner-toast] > * { transition: opacity 0.4s ease 0s; }
+
+[data-sonner-toast][data-x-position=3D"right"] { right: 0px; }
+
+[data-sonner-toast][data-x-position=3D"left"] { left: 0px; }
+
+[data-sonner-toast][data-expanded=3D"false"][data-front=3D"false"][data-sty=
+led=3D"true"] > * { opacity: 0; }
+
+[data-sonner-toast][data-visible=3D"false"] { opacity: 0; pointer-events: n=
+one; }
+
+[data-sonner-toast][data-mounted=3D"true"][data-expanded=3D"true"] { --y: t=
+ranslateY(calc(var(--lift) * var(--offset))); height: var(--initial-height)=
+; }
+
+[data-sonner-toast][data-removed=3D"true"][data-front=3D"true"][data-swipe-=
+out=3D"false"] { --y: translateY(calc(var(--lift) * -100%)); opacity: 0; }
+
+[data-sonner-toast][data-removed=3D"true"][data-front=3D"false"][data-swipe=
+-out=3D"false"][data-expanded=3D"true"] { --y: translateY(calc(var(--lift) =
+* var(--offset) + var(--lift) * -100%)); opacity: 0; }
+
+[data-sonner-toast][data-removed=3D"true"][data-front=3D"false"][data-swipe=
+-out=3D"false"][data-expanded=3D"false"] { --y: translateY(40%); opacity: 0=
+; transition: transform 0.5s ease 0s, opacity 0.2s ease 0s; }
+
+[data-sonner-toast][data-removed=3D"true"][data-front=3D"false"]::before { =
+height: calc(var(--initial-height) + 20%); }
+
+[data-sonner-toast][data-swiping=3D"true"] { transform: var(--y) translateY=
+(var(--swipe-amount-y,0)) translateX(var(--swipe-amount-x,0)); transition: =
+none 0s ease 0s; }
+
+[data-sonner-toast][data-swiped=3D"true"] { user-select: none; }
+
+[data-sonner-toast][data-swipe-out=3D"true"][data-y-position=3D"bottom"], [=
+data-sonner-toast][data-swipe-out=3D"true"][data-y-position=3D"top"] { anim=
+ation-duration: 0.2s; animation-timing-function: ease-out; animation-fill-m=
+ode: forwards; }
+
+[data-sonner-toast][data-swipe-out=3D"true"][data-swipe-direction=3D"left"]=
+ { animation-name: swipe-out-left; }
+
+[data-sonner-toast][data-swipe-out=3D"true"][data-swipe-direction=3D"right"=
+] { animation-name: swipe-out-right; }
+
+[data-sonner-toast][data-swipe-out=3D"true"][data-swipe-direction=3D"up"] {=
+ animation-name: swipe-out-up; }
+
+[data-sonner-toast][data-swipe-out=3D"true"][data-swipe-direction=3D"down"]=
+ { animation-name: swipe-out-down; }
+
+@keyframes swipe-out-left {=20
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%))=
+; opacity: 0; }
+}
+
+@keyframes swipe-out-right {=20
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%))=
+; opacity: 0; }
+}
+
+@keyframes swipe-out-up {=20
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%))=
+; opacity: 0; }
+}
+
+@keyframes swipe-out-down {=20
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%))=
+; opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  [data-sonner-toaster] { position: fixed; right: var(--mobile-offset-right=
+); left: var(--mobile-offset-left); width: 100%; }
+  [data-sonner-toaster][dir=3D"rtl"] { left: calc(var(--mobile-offset-left)=
+ * -1); }
+  [data-sonner-toaster] [data-sonner-toast] { left: 0px; right: 0px; width:=
+ calc(100% - var(--mobile-offset-left) * 2); }
+  [data-sonner-toaster][data-x-position=3D"left"] { left: var(--mobile-offs=
+et-left); }
+  [data-sonner-toaster][data-y-position=3D"bottom"] { bottom: var(--mobile-=
+offset-bottom); }
+  [data-sonner-toaster][data-y-position=3D"top"] { top: var(--mobile-offset=
+-top); }
+  [data-sonner-toaster][data-x-position=3D"center"] { left: var(--mobile-of=
+fset-left); right: var(--mobile-offset-right); transform: none; }
+}
+
+[data-sonner-toaster][data-sonner-theme=3D"light"] { --normal-bg: #fff; --n=
+ormal-border: var(--gray4); --normal-text: var(--gray12); --success-bg: hsl=
+(143, 85%, 96%); --success-border: hsl(145, 92%, 87%); --success-text: hsl(=
+140, 100%, 27%); --info-bg: hsl(208, 100%, 97%); --info-border: hsl(221, 91=
+%, 93%); --info-text: hsl(210, 92%, 45%); --warning-bg: hsl(49, 100%, 97%);=
+ --warning-border: hsl(49, 91%, 84%); --warning-text: hsl(31, 92%, 45%); --=
+error-bg: hsl(359, 100%, 97%); --error-border: hsl(359, 100%, 94%); --error=
+-text: hsl(360, 100%, 45%); }
+
+[data-sonner-toaster][data-sonner-theme=3D"light"] [data-sonner-toast][data=
+-invert=3D"true"] { --normal-bg: #000; --normal-border: hsl(0, 0%, 20%); --=
+normal-text: var(--gray1); }
+
+[data-sonner-toaster][data-sonner-theme=3D"dark"] [data-sonner-toast][data-=
+invert=3D"true"] { --normal-bg: #fff; --normal-border: var(--gray3); --norm=
+al-text: var(--gray12); }
+
+[data-sonner-toaster][data-sonner-theme=3D"dark"] { --normal-bg: #000; --no=
+rmal-bg-hover: hsl(0, 0%, 12%); --normal-border: hsl(0, 0%, 20%); --normal-=
+border-hover: hsl(0, 0%, 25%); --normal-text: var(--gray1); --success-bg: h=
+sl(150, 100%, 6%); --success-border: hsl(147, 100%, 12%); --success-text: h=
+sl(150, 86%, 65%); --info-bg: hsl(215, 100%, 6%); --info-border: hsl(223, 4=
+3%, 17%); --info-text: hsl(216, 87%, 65%); --warning-bg: hsl(64, 100%, 6%);=
+ --warning-border: hsl(60, 100%, 9%); --warning-text: hsl(46, 87%, 65%); --=
+error-bg: hsl(358, 76%, 10%); --error-border: hsl(357, 89%, 16%); --error-t=
+ext: hsl(358, 100%, 81%); }
+
+[data-sonner-toaster][data-sonner-theme=3D"dark"] [data-sonner-toast] [data=
+-close-button] { background: var(--normal-bg); border-color: var(--normal-b=
+order); color: var(--normal-text); }
+
+[data-sonner-toaster][data-sonner-theme=3D"dark"] [data-sonner-toast] [data=
+-close-button]:hover { background: var(--normal-bg-hover); border-color: va=
+r(--normal-border-hover); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-type=3D"success"] { bac=
+kground: var(--success-bg); border-color: var(--success-border); color: var=
+(--success-text); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-type=3D"success"] [data=
+-close-button] { background: var(--success-bg); border-color: var(--success=
+-border); color: var(--success-text); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-type=3D"info"] { backgr=
+ound: var(--info-bg); border-color: var(--info-border); color: var(--info-t=
+ext); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-type=3D"info"] [data-cl=
+ose-button] { background: var(--info-bg); border-color: var(--info-border);=
+ color: var(--info-text); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-type=3D"warning"] { bac=
+kground: var(--warning-bg); border-color: var(--warning-border); color: var=
+(--warning-text); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-type=3D"warning"] [data=
+-close-button] { background: var(--warning-bg); border-color: var(--warning=
+-border); color: var(--warning-text); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-type=3D"error"] { backg=
+round: var(--error-bg); border-color: var(--error-border); color: var(--err=
+or-text); }
+
+[data-rich-colors=3D"true"][data-sonner-toast][data-type=3D"error"] [data-c=
+lose-button] { background: var(--error-bg); border-color: var(--error-borde=
+r); color: var(--error-text); }
+
+.sonner-loading-wrapper { --size: 16px; height: var(--size); width: var(--s=
+ize); position: absolute; inset: 0px; z-index: 10; }
+
+.sonner-loading-wrapper[data-visible=3D"false"] { transform-origin: center =
+center; animation: 0.2s ease 0s 1 normal forwards running sonner-fade-out; =
+}
+
+.sonner-spinner { position: relative; top: 50%; left: 50%; height: var(--si=
+ze); width: var(--size); }
+
+.sonner-loading-bar { animation: 1.2s linear 0s infinite normal none runnin=
+g sonner-spin; background: var(--gray11); border-radius: 6px; height: 8%; l=
+eft: -10%; position: absolute; top: -3.9%; width: 24%; }
+
+.sonner-loading-bar:first-child { animation-delay: -1.2s; transform: rotate=
+(0.0001deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(2) { animation-delay: -1.1s; transform: rotat=
+e(30deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(3) { animation-delay: -1s; transform: rotate(=
+60deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(4) { animation-delay: -0.9s; transform: rotat=
+e(90deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(5) { animation-delay: -0.8s; transform: rotat=
+e(120deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(6) { animation-delay: -0.7s; transform: rotat=
+e(150deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(7) { animation-delay: -0.6s; transform: rotat=
+e(180deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(8) { animation-delay: -0.5s; transform: rotat=
+e(210deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(9) { animation-delay: -0.4s; transform: rotat=
+e(240deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(10) { animation-delay: -0.3s; transform: rota=
+te(270deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(11) { animation-delay: -0.2s; transform: rota=
+te(300deg) translate(146%); }
+
+.sonner-loading-bar:nth-child(12) { animation-delay: -0.1s; transform: rota=
+te(330deg) translate(146%); }
+
+@keyframes sonner-fade-in {=20
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes sonner-fade-out {=20
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes sonner-spin {=20
+  0% { opacity: 1; }
+  100% { opacity: 0.15; }
+}
+
+@media (prefers-reduced-motion) {
+  .sonner-loading-bar, [data-sonner-toast], [data-sonner-toast] > * { trans=
+ition: none 0s ease 0s !important; animation: auto ease 0s 1 normal none ru=
+nning none !important; }
+}
+
+.sonner-loader { position: absolute; top: 50%; left: 50%; transform: transl=
+ate(-50%, -50%); transform-origin: center center; transition: opacity 0.2s =
+ease 0s, transform 0.2s ease 0s; }
+
+.sonner-loader[data-visible=3D"false"] { opacity: 0; transform: scale(0.8) =
+translate(-50%, -50%); }
+------MultipartBoundary--QlmCFcLQ9ckzjww8VuLEA1H2GmmDhVHAbJcHx5Yetd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ffhub.io/_next/static/css/32abab1024c8065f.css
+
+@charset "utf-8";
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("/_next/static/media/c95a17d6aa1ccc69-s.wo=
+ff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE=
+0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("/_next/static/media/84792440f5374347-s.wo=
+ff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B=
+1, U+2116; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("/_next/static/media/10735954b8957dce-s.wo=
+ff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("/_next/static/media/69c8297e91a203ed-s.wo=
+ff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38=
+C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("/_next/static/media/32ec8d161d520037-s.wo=
+ff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+16=
+8-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329,=
+ U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("/_next/static/media/ceda3e828136e1b8-s.wo=
+ff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2C=
+E-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EF=
+F, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("/_next/static/media/103fc5fac08dcb15-s.p.=
+woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC=
+, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+=
+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 5=
+00; font-display: swap; src: url("/_next/static/media/c95a17d6aa1ccc69-s.wo=
+ff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE=
+0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 5=
+00; font-display: swap; src: url("/_next/static/media/84792440f5374347-s.wo=
+ff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B=
+1, U+2116; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 5=
+00; font-display: swap; src: url("/_next/static/media/10735954b8957dce-s.wo=
+ff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 5=
+00; font-display: swap; src: url("/_next/static/media/69c8297e91a203ed-s.wo=
+ff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38=
+C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 5=
+00; font-display: swap; src: url("/_next/static/media/32ec8d161d520037-s.wo=
+ff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+16=
+8-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329,=
+ U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 5=
+00; font-display: swap; src: url("/_next/static/media/ceda3e828136e1b8-s.wo=
+ff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2C=
+E-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EF=
+F, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 5=
+00; font-display: swap; src: url("/_next/static/media/103fc5fac08dcb15-s.p.=
+woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC=
+, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+=
+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 6=
+00; font-display: swap; src: url("/_next/static/media/c95a17d6aa1ccc69-s.wo=
+ff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE=
+0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 6=
+00; font-display: swap; src: url("/_next/static/media/84792440f5374347-s.wo=
+ff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B=
+1, U+2116; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 6=
+00; font-display: swap; src: url("/_next/static/media/10735954b8957dce-s.wo=
+ff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 6=
+00; font-display: swap; src: url("/_next/static/media/69c8297e91a203ed-s.wo=
+ff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38=
+C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 6=
+00; font-display: swap; src: url("/_next/static/media/32ec8d161d520037-s.wo=
+ff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+16=
+8-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329,=
+ U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 6=
+00; font-display: swap; src: url("/_next/static/media/ceda3e828136e1b8-s.wo=
+ff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2C=
+E-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EF=
+F, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 6=
+00; font-display: swap; src: url("/_next/static/media/103fc5fac08dcb15-s.p.=
+woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC=
+, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+=
+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Inter Tight Fallback"; src: local("Arial"); asce=
+nt-override: 100.51%; descent-override: 25.03%; line-gap-override: 0%; size=
+-adjust: 96.39%; }
+
+.__className_5ca87d { font-family: "Inter Tight", "Inter Tight Fallback"; f=
+ont-style: normal; }
+
+.__variable_5ca87d { --font-sans: "Inter Tight","Inter Tight Fallback"; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 400; font-display: swap; src: url("/_next/static/media/edc640959b0c7826-s=
+.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+=
+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 400; font-display: swap; src: url("/_next/static/media/ac0e76ddaeeb7981-s=
+.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0=
+-4B1, U+2116; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 400; font-display: swap; src: url("/_next/static/media/64d784ea54a4acde-s=
+.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U=
++38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 400; font-display: swap; src: url("/_next/static/media/ff71da380fbe67dd-s=
+.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U=
++168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+3=
+29, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 400; font-display: swap; src: url("/_next/static/media/6d831b18ae5b01dc-s=
+.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U=
++2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-=
+1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 400; font-display: swap; src: url("/_next/static/media/558ca1a6aa3cb55e-s=
+.p.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-=
+2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122,=
+ U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 500; font-display: swap; src: url("/_next/static/media/edc640959b0c7826-s=
+.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+=
+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 500; font-display: swap; src: url("/_next/static/media/ac0e76ddaeeb7981-s=
+.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0=
+-4B1, U+2116; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 500; font-display: swap; src: url("/_next/static/media/64d784ea54a4acde-s=
+.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U=
++38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 500; font-display: swap; src: url("/_next/static/media/ff71da380fbe67dd-s=
+.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U=
++168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+3=
+29, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 500; font-display: swap; src: url("/_next/static/media/6d831b18ae5b01dc-s=
+.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U=
++2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-=
+1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight=
+: 500; font-display: swap; src: url("/_next/static/media/558ca1a6aa3cb55e-s=
+.p.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-=
+2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122,=
+ U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "JetBrains Mono Fallback"; src: local("Arial"); a=
+scent-override: 75.79%; descent-override: 22.29%; line-gap-override: 0%; si=
+ze-adjust: 134.59%; }
+
+.__className_6d24ac { font-family: "JetBrains Mono", "JetBrains Mono Fallba=
+ck"; font-style: normal; }
+
+.__variable_6d24ac { --font-mono: "JetBrains Mono","JetBrains Mono Fallback=
+"; }
+
+@font-face { font-family: "Instrument Serif"; font-style: italic; font-weig=
+ht: 400; font-display: swap; src: url("/_next/static/media/5ece437c7024c161=
+-s.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC,=
+ U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF=
+2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;=
+ }
+
+@font-face { font-family: "Instrument Serif"; font-style: italic; font-weig=
+ht: 400; font-display: swap; src: url("/_next/static/media/9cc5b37ab1350db7=
+-s.p.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2B=
+B-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+212=
+2, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Instrument Serif Fallback"; src: local("Times Ne=
+w Roman"); ascent-override: 117.94%; descent-override: 36.93%; line-gap-ove=
+rride: 0%; size-adjust: 83.94%; }
+
+.__className_9f4838 { font-family: "Instrument Serif", "Instrument Serif Fa=
+llback"; font-weight: 400; font-style: italic; }
+
+.__variable_9f4838 { --font-serif: "Instrument Serif","Instrument Serif Fal=
+lback"; }
+------MultipartBoundary--QlmCFcLQ9ckzjww8VuLEA1H2GmmDhVHAbJcHx5Yetd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ffhub.io/_next/static/css/69f4479f6c83366d.css
+
+@charset "utf-8";
+
+@layer properties {
+  @supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((=
+-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
+  *, ::backdrop, ::after, ::before { --tw-translate-x: 0; --tw-translate-y:=
+ 0; --tw-translate-z: 0; --tw-rotate-x: initial; --tw-rotate-y: initial; --=
+tw-rotate-z: initial; --tw-skew-x: initial; --tw-skew-y: initial; --tw-spac=
+e-y-reverse: 0; --tw-divide-y-reverse: 0; --tw-border-style: solid; --tw-le=
+ading: initial; --tw-font-weight: initial; --tw-tracking: initial; --tw-ord=
+inal: initial; --tw-slashed-zero: initial; --tw-numeric-figure: initial; --=
+tw-numeric-spacing: initial; --tw-numeric-fraction: initial; --tw-shadow: 0=
+ 0 #0000; --tw-shadow-color: initial; --tw-shadow-alpha: 100%; --tw-inset-s=
+hadow: 0 0 #0000; --tw-inset-shadow-color: initial; --tw-inset-shadow-alpha=
+: 100%; --tw-ring-color: initial; --tw-ring-shadow: 0 0 #0000; --tw-inset-r=
+ing-color: initial; --tw-inset-ring-shadow: 0 0 #0000; --tw-ring-inset: ini=
+tial; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-=
+offset-shadow: 0 0 #0000; --tw-outline-style: solid; --tw-blur: initial; --=
+tw-brightness: initial; --tw-contrast: initial; --tw-grayscale: initial; --=
+tw-hue-rotate: initial; --tw-invert: initial; --tw-opacity: initial; --tw-s=
+aturate: initial; --tw-sepia: initial; --tw-drop-shadow: initial; --tw-drop=
+-shadow-color: initial; --tw-drop-shadow-alpha: 100%; --tw-drop-shadow-size=
+: initial; --tw-backdrop-blur: initial; --tw-backdrop-brightness: initial; =
+--tw-backdrop-contrast: initial; --tw-backdrop-grayscale: initial; --tw-bac=
+kdrop-hue-rotate: initial; --tw-backdrop-invert: initial; --tw-backdrop-opa=
+city: initial; --tw-backdrop-saturate: initial; --tw-backdrop-sepia: initia=
+l; --tw-duration: initial; }
+}
+}
+
+@layer theme {
+  :host, :root { --font-sans: var(--font-sans); --font-serif: var(--font-se=
+rif); --font-mono: var(--font-mono); --color-red-300: oklch(80.8% .114 19.5=
+71); --color-red-400: oklch(70.4% .191 22.216); --color-red-500: oklch(63.7=
+% .237 25.331); --color-red-600: oklch(57.7% .245 27.325); --color-red-700:=
+ oklch(50.5% .213 27.518); --color-amber-400: oklch(82.8% .189 84.429); --c=
+olor-amber-500: oklch(76.9% .188 70.08); --color-amber-600: oklch(66.6% .17=
+9 58.318); --color-amber-700: oklch(55.5% .163 48.998); --color-yellow-400:=
+ oklch(85.2% .199 91.936); --color-yellow-500: oklch(79.5% .184 86.047); --=
+color-yellow-700: oklch(55.4% .135 66.442); --color-green-400: oklch(79.2% =
+.209 151.711); --color-green-500: oklch(72.3% .219 149.579); --color-green-=
+600: oklch(62.7% .194 149.214); --color-green-700: oklch(52.7% .154 150.069=
+); --color-emerald-400: oklch(76.5% .177 163.223); --color-emerald-500: okl=
+ch(69.6% .17 162.48); --color-emerald-600: oklch(59.6% .145 163.225); --col=
+or-emerald-700: oklch(50.8% .118 165.612); --color-sky-400: oklch(74.6% .16=
+ 232.661); --color-sky-500: oklch(68.5% .169 237.323); --color-sky-600: okl=
+ch(58.8% .158 241.966); --color-sky-700: oklch(50% .134 242.749); --color-b=
+lue-400: oklch(70.7% .165 254.624); --color-blue-500: oklch(62.3% .214 259.=
+815); --color-blue-600: oklch(54.6% .245 262.881); --color-blue-700: oklch(=
+48.8% .243 264.376); --color-blue-800: oklch(42.4% .199 265.638); --color-v=
+iolet-400: oklch(70.2% .183 293.541); --color-violet-500: oklch(60.6% .25 2=
+92.717); --color-violet-700: oklch(49.1% .27 292.581); --color-zinc-100: ok=
+lch(96.7% .001 286.375); --color-zinc-600: oklch(44.2% .017 285.786); --col=
+or-zinc-700: oklch(37% .013 285.805); --color-zinc-900: oklch(21% .006 285.=
+885); --color-black: #000; --color-white: #fff; --spacing: .25rem; --contai=
+ner-sm: 24rem; --container-md: 28rem; --container-lg: 32rem; --container-xl=
+: 36rem; --container-2xl: 42rem; --container-3xl: 48rem; --container-4xl: 5=
+6rem; --container-5xl: 64rem; --text-xs: .75rem; --text-xs--line-height: ca=
+lc(1 / .75); --text-sm: .875rem; --text-sm--line-height: calc(1.25 / .875);=
+ --text-base: 1rem; --text-base--line-height: calc(1.5 / 1); --text-lg: 1.1=
+25rem; --text-lg--line-height: calc(1.75 / 1.125); --text-xl: 1.25rem; --te=
+xt-xl--line-height: calc(1.75 / 1.25); --text-2xl: 1.5rem; --text-2xl--line=
+-height: calc(2 / 1.5); --text-3xl: 1.875rem; --text-3xl--line-height: calc=
+(2.25 / 1.875); --text-4xl: 2.25rem; --text-4xl--line-height: calc(2.5 / 2.=
+25); --text-5xl: 3rem; --text-5xl--line-height: 1; --font-weight-normal: 40=
+0; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bo=
+ld: 700; --tracking-tight: -.025em; --tracking-wider: .05em; --leading-tigh=
+t: 1.25; --leading-relaxed: 1.625; --radius-md: .375rem; --radius-lg: .5rem=
+; --radius-xl: .75rem; --animate-spin: spin 1s linear infinite; --blur-sm: =
+8px; --aspect-video: 16/9; --default-transition-duration: .15s; --default-t=
+ransition-timing-function: cubic-bezier(.4,0,.2,1); --default-font-family: =
+var(--font-sans); --default-mono-font-family: var(--font-mono); --radius: v=
+ar(--radius); }
+}
+
+@layer base {
+  *, ::backdrop, ::after, ::before { box-sizing: border-box; border: 0px so=
+lid; margin: 0px; padding: 0px; }
+  ::file-selector-button { box-sizing: border-box; border: 0px solid; margi=
+n: 0px; padding: 0px; }
+  :host, html { text-size-adjust: 100%; tab-size: 4; line-height: 1.5; font=
+-family: var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Appl=
+e Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"); font=
+-feature-settings: var(--default-font-feature-settings,normal); font-variat=
+ion-settings: var(--default-font-variation-settings,normal); -webkit-tap-hi=
+ghlight-color: transparent; }
+  hr { height: 0px; color: inherit; border-top-width: 1px; }
+  abbr:where([title]) { text-decoration: underline dotted; }
+  h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+  a { color: inherit; text-decoration: inherit; }
+  b, strong { font-weight: bolder; }
+  code, kbd, pre, samp { font-family: var(--default-mono-font-family,ui-mon=
+ospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New"=
+,monospace); font-feature-settings: var(--default-mono-font-feature-setting=
+s,normal); font-variation-settings: var(--default-mono-font-variation-setti=
+ngs,normal); font-size: 1em; }
+  small { font-size: 80%; }
+  sub, sup { vertical-align: baseline; font-size: 75%; line-height: 0; posi=
+tion: relative; }
+  sub { bottom: -0.25em; }
+  sup { top: -0.5em; }
+  table { text-indent: 0px; border-color: inherit; border-collapse: collaps=
+e; }
+  progress { vertical-align: baseline; }
+  summary { display: list-item; }
+  menu, ol, ul { list-style: none; }
+  audio, canvas, embed, iframe, img, object, svg, video { vertical-align: m=
+iddle; display: block; }
+  img, video { max-width: 100%; height: auto; }
+  button, input, optgroup, select, textarea { font: inherit; letter-spacing=
+: inherit; color: inherit; opacity: 1; background-color: rgba(0, 0, 0, 0); =
+border-radius: 0px; }
+  ::file-selector-button { font: inherit; letter-spacing: inherit; color: i=
+nherit; opacity: 1; background-color: rgba(0, 0, 0, 0); border-radius: 0px;=
+ }
+  :where(select:is([multiple], [size])) optgroup { font-weight: bolder; }
+  :where(select:is([multiple], [size])) optgroup option { padding-inline-st=
+art: 20px; }
+  ::file-selector-button { margin-inline-end: 4px; }
+  ::placeholder { opacity: 1; }
+  @supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intr=
+insic-size:1px) {
+  ::placeholder { color: currentcolor; }
+  @supports (color:color-mix(in lab,red,red)) {
+  ::placeholder { color: color-mix(in oklab, currentcolor, transparent); }
+}
+}
+  textarea { resize: vertical; }
+  ::-webkit-search-decoration { appearance: none; }
+  ::-webkit-date-and-time-value { min-height: 1lh; text-align: inherit; }
+  ::-webkit-datetime-edit { display: inline-flex; }
+  ::-webkit-datetime-edit-fields-wrapper { padding: 0px; }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field { padding-blo=
+ck: 0px; }
+  ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-month-field { =
+padding-block: 0px; }
+  ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field =
+{ padding-block: 0px; }
+  ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-second=
+-field { padding-block: 0px; }
+  ::-webkit-datetime-edit-meridiem-field { padding-block: 0px; }
+  ::-webkit-calendar-picker-indicator { line-height: 1; }
+  button, input:where([type=3D"button"], [type=3D"reset"], [type=3D"submit"=
+]) { appearance: button; }
+  ::file-selector-button { appearance: button; }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; =
+}
+  [hidden]:where(:not([hidden=3D"until-found"])) { display: none !important=
+; }
+}
+
+@layer components;
+
+@layer utilities {
+  .pointer-events-none { pointer-events: none; }
+  .collapse { visibility: collapse; }
+  .invisible { visibility: hidden; }
+  .visible { visibility: visible; }
+  .absolute { position: absolute; }
+  .fixed { position: fixed; }
+  .relative { position: relative; }
+  .static { position: static; }
+  .sticky { position: sticky; }
+  .inset-0 { inset: calc(var(--spacing) * 0); }
+  .start { inset-inline-start: var(--spacing); }
+  .end { inset-inline-end: var(--spacing); }
+  .-top-2 { top: calc(var(--spacing) * -2); }
+  .-top-3 { top: calc(var(--spacing) * -3); }
+  .top-0 { top: calc(var(--spacing) * 0); }
+  .top-1\.5 { top: calc(var(--spacing) * 1.5); }
+  .top-3 { top: calc(var(--spacing) * 3); }
+  .top-20 { top: calc(var(--spacing) * 20); }
+  .-right-2 { right: calc(var(--spacing) * -2); }
+  .right-0 { right: calc(var(--spacing) * 0); }
+  .right-1\.5 { right: calc(var(--spacing) * 1.5); }
+  .right-3 { right: calc(var(--spacing) * 3); }
+  .right-6 { right: calc(var(--spacing) * 6); }
+  .bottom-1\.5 { bottom: calc(var(--spacing) * 1.5); }
+  .bottom-full { bottom: 100%; }
+  .left-0 { left: calc(var(--spacing) * 0); }
+  .left-6 { left: calc(var(--spacing) * 6); }
+  .z-20 { z-index: 20; }
+  .z-30 { z-index: 30; }
+  .z-40 { z-index: 40; }
+  .z-50 { z-index: 50; }
+  .z-\[100\] { z-index: 100; }
+  .order-1 { order: 1; }
+  .order-2 { order: 2; }
+  .container { width: 100%; }
+  @media (min-width: 40rem) {
+  .container { max-width: 40rem; }
+}
+  @media (min-width: 48rem) {
+  .container { max-width: 48rem; }
+}
+  @media (min-width: 64rem) {
+  .container { max-width: 64rem; }
+}
+  @media (min-width: 80rem) {
+  .container { max-width: 80rem; }
+}
+  @media (min-width: 96rem) {
+  .container { max-width: 96rem; }
+}
+  .m-0 { margin: calc(var(--spacing) * 0); }
+  .mx-auto { margin-inline: auto; }
+  .my-4 { margin-block: calc(var(--spacing) * 4); }
+  .my-8 { margin-block: calc(var(--spacing) * 8); }
+  .my-\[18px\] { margin-block: 18px; }
+  .mt-0\.5 { margin-top: calc(var(--spacing) * .5); }
+  .mt-1 { margin-top: calc(var(--spacing) * 1); }
+  .mt-1\.5 { margin-top: calc(var(--spacing) * 1.5); }
+  .mt-2 { margin-top: calc(var(--spacing) * 2); }
+  .mt-2\.5 { margin-top: calc(var(--spacing) * 2.5); }
+  .mt-3 { margin-top: calc(var(--spacing) * 3); }
+  .mt-4 { margin-top: calc(var(--spacing) * 4); }
+  .mt-5 { margin-top: calc(var(--spacing) * 5); }
+  .mt-6 { margin-top: calc(var(--spacing) * 6); }
+  .mt-8 { margin-top: calc(var(--spacing) * 8); }
+  .mt-9 { margin-top: calc(var(--spacing) * 9); }
+  .mt-10 { margin-top: calc(var(--spacing) * 10); }
+  .mt-12 { margin-top: calc(var(--spacing) * 12); }
+  .mt-16 { margin-top: calc(var(--spacing) * 16); }
+  .mt-auto { margin-top: auto; }
+  .-mr-2\.5 { margin-right: calc(var(--spacing) * -2.5); }
+  .mr-1 { margin-right: calc(var(--spacing) * 1); }
+  .-mb-px { margin-bottom: -1px; }
+  .mb-1 { margin-bottom: calc(var(--spacing) * 1); }
+  .mb-1\.5 { margin-bottom: calc(var(--spacing) * 1.5); }
+  .mb-2 { margin-bottom: calc(var(--spacing) * 2); }
+  .mb-2\.5 { margin-bottom: calc(var(--spacing) * 2.5); }
+  .mb-3 { margin-bottom: calc(var(--spacing) * 3); }
+  .mb-4 { margin-bottom: calc(var(--spacing) * 4); }
+  .mb-5 { margin-bottom: calc(var(--spacing) * 5); }
+  .mb-6 { margin-bottom: calc(var(--spacing) * 6); }
+  .mb-8 { margin-bottom: calc(var(--spacing) * 8); }
+  .mb-10 { margin-bottom: calc(var(--spacing) * 10); }
+  .mb-12 { margin-bottom: calc(var(--spacing) * 12); }
+  .ml-1 { margin-left: calc(var(--spacing) * 1); }
+  .ml-2 { margin-left: calc(var(--spacing) * 2); }
+  .ml-4 { margin-left: calc(var(--spacing) * 4); }
+  .ml-auto { margin-left: auto; }
+  .line-clamp-3 { -webkit-line-clamp: 3; -webkit-box-orient: vertical; disp=
+lay: -webkit-box; overflow: hidden; }
+  .block { display: block; }
+  .flex { display: flex; }
+  .grid { display: grid; }
+  .hidden { display: none; }
+  .inline { display: inline; }
+  .inline-block { display: inline-block; }
+  .inline-flex { display: inline-flex; }
+  .table { display: table; }
+  .aspect-square { aspect-ratio: 1 / 1; }
+  .aspect-video { aspect-ratio: var(--aspect-video); }
+  .h-1\.5 { height: calc(var(--spacing) * 1.5); }
+  .h-2 { height: calc(var(--spacing) * 2); }
+  .h-3 { height: calc(var(--spacing) * 3); }
+  .h-3\.5 { height: calc(var(--spacing) * 3.5); }
+  .h-4 { height: calc(var(--spacing) * 4); }
+  .h-5 { height: calc(var(--spacing) * 5); }
+  .h-6 { height: calc(var(--spacing) * 6); }
+  .h-7 { height: calc(var(--spacing) * 7); }
+  .h-8 { height: calc(var(--spacing) * 8); }
+  .h-9 { height: calc(var(--spacing) * 9); }
+  .h-10 { height: calc(var(--spacing) * 10); }
+  .h-11 { height: calc(var(--spacing) * 11); }
+  .h-12 { height: calc(var(--spacing) * 12); }
+  .h-14 { height: calc(var(--spacing) * 14); }
+  .h-48 { height: calc(var(--spacing) * 48); }
+  .h-\[1\.5px\] { height: 1.5px; }
+  .h-\[24px\] { height: 24px; }
+  .h-\[26px\] { height: 26px; }
+  .h-\[42px\] { height: 42px; }
+  .h-\[46px\] { height: 46px; }
+  .h-\[60px\] { height: 60px; }
+  .h-\[280px\] { height: 280px; }
+  .h-full { height: 100%; }
+  .h-px { height: 1px; }
+  .h-screen { height: 100vh; }
+  .max-h-24 { max-height: calc(var(--spacing) * 24); }
+  .max-h-32 { max-height: calc(var(--spacing) * 32); }
+  .max-h-40 { max-height: calc(var(--spacing) * 40); }
+  .max-h-48 { max-height: calc(var(--spacing) * 48); }
+  .max-h-\[80vh\] { max-height: 80vh; }
+  .max-h-\[480px\] { max-height: 480px; }
+  .min-h-\[60vh\] { min-height: 60vh; }
+  .min-h-\[176px\] { min-height: 176px; }
+  .min-h-\[220px\] { min-height: 220px; }
+  .min-h-\[calc\(100svh-60px\)\] { min-height: calc(100svh - 60px); }
+  .min-h-screen { min-height: 100vh; }
+  .w-1\.5 { width: calc(var(--spacing) * 1.5); }
+  .w-2 { width: calc(var(--spacing) * 2); }
+  .w-3 { width: calc(var(--spacing) * 3); }
+  .w-3\.5 { width: calc(var(--spacing) * 3.5); }
+  .w-4 { width: calc(var(--spacing) * 4); }
+  .w-5 { width: calc(var(--spacing) * 5); }
+  .w-6 { width: calc(var(--spacing) * 6); }
+  .w-7 { width: calc(var(--spacing) * 7); }
+  .w-8 { width: calc(var(--spacing) * 8); }
+  .w-9 { width: calc(var(--spacing) * 9); }
+  .w-10 { width: calc(var(--spacing) * 10); }
+  .w-11 { width: calc(var(--spacing) * 11); }
+  .w-12 { width: calc(var(--spacing) * 12); }
+  .w-14 { width: calc(var(--spacing) * 14); }
+  .w-24 { width: calc(var(--spacing) * 24); }
+  .w-32 { width: calc(var(--spacing) * 32); }
+  .w-48 { width: calc(var(--spacing) * 48); }
+  .w-56 { width: calc(var(--spacing) * 56); }
+  .w-64 { width: calc(var(--spacing) * 64); }
+  .w-\[2px\] { width: 2px; }
+  .w-\[18px\] { width: 18px; }
+  .w-\[22\%\] { width: 22%; }
+  .w-\[24px\] { width: 24px; }
+  .w-\[26px\] { width: 26px; }
+  .w-\[220px\] { width: 220px; }
+  .w-\[240px\] { width: 240px; }
+  .w-full { width: 100%; }
+  .w-max { width: max-content; }
+  .w-screen { width: 100vw; }
+  .max-w-2xl { max-width: var(--container-2xl); }
+  .max-w-3xl { max-width: var(--container-3xl); }
+  .max-w-4xl { max-width: var(--container-4xl); }
+  .max-w-5xl { max-width: var(--container-5xl); }
+  .max-w-\[200px\] { max-width: 200px; }
+  .max-w-\[220px\] { max-width: 220px; }
+  .max-w-\[240px\] { max-width: 240px; }
+  .max-w-\[420px\] { max-width: 420px; }
+  .max-w-\[620px\] { max-width: 620px; }
+  .max-w-\[640px\] { max-width: 640px; }
+  .max-w-\[650px\] { max-width: 650px; }
+  .max-w-\[720px\] { max-width: 720px; }
+  .max-w-\[760px\] { max-width: 760px; }
+  .max-w-\[900px\] { max-width: 900px; }
+  .max-w-\[960px\] { max-width: 960px; }
+  .max-w-\[1200px\] { max-width: 1200px; }
+  .max-w-full { max-width: 100%; }
+  .max-w-lg { max-width: var(--container-lg); }
+  .max-w-md { max-width: var(--container-md); }
+  .max-w-sm { max-width: var(--container-sm); }
+  .max-w-xl { max-width: var(--container-xl); }
+  .min-w-0 { min-width: calc(var(--spacing) * 0); }
+  .min-w-\[62px\] { min-width: 62px; }
+  .min-w-\[200px\] { min-width: 200px; }
+  .min-w-\[260px\] { min-width: 260px; }
+  .min-w-\[760px\] { min-width: 760px; }
+  .flex-1 { flex: 1 1 0%; }
+  .shrink { flex-shrink: 1; }
+  .shrink-0 { flex-shrink: 0; }
+  .grow { flex-grow: 1; }
+  .border-collapse { border-collapse: collapse; }
+  .translate-x-0\.5 { --tw-translate-x: calc(var(--spacing) * .5); translat=
+e: var(--tw-translate-x) var(--tw-translate-y); }
+  .transform { transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-=
+rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,); }
+  .animate-spin { animation: var(--animate-spin); }
+  .cursor-default { cursor: default; }
+  .cursor-grab { cursor: grab; }
+  .cursor-not-allowed { cursor: not-allowed; }
+  .cursor-pointer { cursor: pointer; }
+  .touch-none { touch-action: none; }
+  .resize { resize: both; }
+  .resize-none { resize: none; }
+  .list-decimal { list-style-type: decimal; }
+  .list-disc { list-style-type: disc; }
+  .grid-cols-1 { grid-template-columns: repeat(1, minmax(0px, 1fr)); }
+  .grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+  .grid-cols-\[18px_1fr_auto\] { grid-template-columns: 18px 1fr auto; }
+  .flex-col { flex-direction: column; }
+  .flex-wrap { flex-wrap: wrap; }
+  .place-items-center { place-items: center; }
+  .items-baseline { align-items: baseline; }
+  .items-center { align-items: center; }
+  .items-end { align-items: flex-end; }
+  .items-start { align-items: flex-start; }
+  .items-stretch { align-items: stretch; }
+  .justify-between { justify-content: space-between; }
+  .justify-center { justify-content: center; }
+  .justify-end { justify-content: flex-end; }
+  .gap-0 { gap: calc(var(--spacing) * 0); }
+  .gap-0\.5 { gap: calc(var(--spacing) * .5); }
+  .gap-1 { gap: calc(var(--spacing) * 1); }
+  .gap-1\.5 { gap: calc(var(--spacing) * 1.5); }
+  .gap-2 { gap: calc(var(--spacing) * 2); }
+  .gap-2\.5 { gap: calc(var(--spacing) * 2.5); }
+  .gap-3 { gap: calc(var(--spacing) * 3); }
+  .gap-4 { gap: calc(var(--spacing) * 4); }
+  .gap-5 { gap: calc(var(--spacing) * 5); }
+  .gap-6 { gap: calc(var(--spacing) * 6); }
+  .gap-7 { gap: calc(var(--spacing) * 7); }
+  .gap-8 { gap: calc(var(--spacing) * 8); }
+  .gap-9 { gap: calc(var(--spacing) * 9); }
+  .gap-10 { gap: calc(var(--spacing) * 10); }
+  .gap-12 { gap: calc(var(--spacing) * 12); }
+  .gap-16 { gap: calc(var(--spacing) * 16); }
+  .gap-\[5px\] { gap: 5px; }
+  .gap-\[7px\] { gap: 7px; }
+  .gap-\[9px\] { gap: 9px; }
+  :where(.space-y-0\.5 > :not(:last-child)) { --tw-space-y-reverse: 0; marg=
+in-block-start: calc(calc(var(--spacing) * .5) * var(--tw-space-y-reverse))=
+; margin-block-end: calc(calc(var(--spacing) * .5) * calc(1 - var(--tw-spac=
+e-y-reverse))); }
+  :where(.space-y-1 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-=
+block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse)); ma=
+rgin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-r=
+everse))); }
+  :where(.space-y-1\.5 > :not(:last-child)) { --tw-space-y-reverse: 0; marg=
+in-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse)=
+); margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-sp=
+ace-y-reverse))); }
+  :where(.space-y-2 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-=
+block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse)); ma=
+rgin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-r=
+everse))); }
+  :where(.space-y-3 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-=
+block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse)); ma=
+rgin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-r=
+everse))); }
+  :where(.space-y-4 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-=
+block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse)); ma=
+rgin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-r=
+everse))); }
+  :where(.space-y-5 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-=
+block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse)); ma=
+rgin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-r=
+everse))); }
+  :where(.space-y-6 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-=
+block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse)); ma=
+rgin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-r=
+everse))); }
+  :where(.space-y-8 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-=
+block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse)); ma=
+rgin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-r=
+everse))); }
+  :where(.space-y-10 > :not(:last-child)) { --tw-space-y-reverse: 0; margin=
+-block-start: calc(calc(var(--spacing) * 10) * var(--tw-space-y-reverse)); =
+margin-block-end: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-=
+y-reverse))); }
+  :where(.space-y-16 > :not(:last-child)) { --tw-space-y-reverse: 0; margin=
+-block-start: calc(calc(var(--spacing) * 16) * var(--tw-space-y-reverse)); =
+margin-block-end: calc(calc(var(--spacing) * 16) * calc(1 - var(--tw-space-=
+y-reverse))); }
+  .gap-x-4 { column-gap: calc(var(--spacing) * 4); }
+  .gap-x-5 { column-gap: calc(var(--spacing) * 5); }
+  .gap-x-6 { column-gap: calc(var(--spacing) * 6); }
+  .gap-x-7 { column-gap: calc(var(--spacing) * 7); }
+  .gap-x-12 { column-gap: calc(var(--spacing) * 12); }
+  .gap-y-2 { row-gap: calc(var(--spacing) * 2); }
+  .gap-y-3 { row-gap: calc(var(--spacing) * 3); }
+  .gap-y-7 { row-gap: calc(var(--spacing) * 7); }
+  :where(.divide-y > :not(:last-child)) { --tw-divide-y-reverse: 0; border-=
+bottom-style: var(--tw-border-style); border-top-style: var(--tw-border-sty=
+le); border-top-width: calc(1px * var(--tw-divide-y-reverse)); border-botto=
+m-width: calc(1px * calc(1 - var(--tw-divide-y-reverse))); }
+  .truncate { text-overflow: ellipsis; white-space: nowrap; overflow: hidde=
+n; }
+  .overflow-auto { overflow: auto; }
+  .overflow-hidden { overflow: hidden; }
+  .overflow-x-auto { overflow-x: auto; }
+  .overflow-y-auto { overflow-y: auto; }
+  .rounded { border-radius: var(--radius); }
+  .rounded-\[6px\] { border-radius: 6px; }
+  .rounded-\[7px\] { border-radius: 7px; }
+  .rounded-\[10px\] { border-radius: 10px; }
+  .rounded-\[16px\] { border-radius: 16px; }
+  .rounded-full { border-radius: 3.40282e+38px; }
+  .rounded-lg { border-radius: var(--radius-lg); }
+  .rounded-md { border-radius: var(--radius-md); }
+  .rounded-xl { border-radius: var(--radius-xl); }
+  .rounded-r-full { border-top-right-radius: 3.40282e+38px; border-bottom-r=
+ight-radius: 3.40282e+38px; }
+  .border { border-style: var(--tw-border-style); border-width: 1px; }
+  .border-2 { border-style: var(--tw-border-style); border-width: 2px; }
+  .border-t { border-top-style: var(--tw-border-style); border-top-width: 1=
+px; }
+  .border-r { border-right-style: var(--tw-border-style); border-right-widt=
+h: 1px; }
+  .border-b { border-bottom-style: var(--tw-border-style); border-bottom-wi=
+dth: 1px; }
+  .border-b-2 { border-bottom-style: var(--tw-border-style); border-bottom-=
+width: 2px; }
+  .border-l-2 { border-left-style: var(--tw-border-style); border-left-widt=
+h: 2px; }
+  .border-l-4 { border-left-style: var(--tw-border-style); border-left-widt=
+h: 4px; }
+  .border-dashed { --tw-border-style: dashed; border-style: dashed; }
+  .border-amber-500\/30 { border-color: rgba(249, 156, 0, 0.3); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-amber-500\/30 { border-color: color-mix(in oklab,var(--color-ambe=
+r-500) 30%,transparent); }
+}
+  .border-amber-500\/40 { border-color: rgba(249, 156, 0, 0.4); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-amber-500\/40 { border-color: color-mix(in oklab,var(--color-ambe=
+r-500) 40%,transparent); }
+}
+  .border-black\/10 { border-color: rgba(0, 0, 0, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-black\/10 { border-color: color-mix(in oklab,var(--color-black) 1=
+0%,transparent); }
+}
+  .border-border, .border-border\/60 { border-color: var(--border); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-border\/60 { border-color: color-mix(in oklab,var(--border) 60%,t=
+ransparent); }
+}
+  .border-foreground, .border-foreground\/10 { border-color: var(--foregrou=
+nd); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-foreground\/10 { border-color: color-mix(in oklab,var(--foregroun=
+d) 10%,transparent); }
+}
+  .border-foreground\/20 { border-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-foreground\/20 { border-color: color-mix(in oklab,var(--foregroun=
+d) 20%,transparent); }
+}
+  .border-foreground\/40 { border-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-foreground\/40 { border-color: color-mix(in oklab,var(--foregroun=
+d) 40%,transparent); }
+}
+  .border-green-500\/30 { border-color: rgba(0, 199, 88, 0.3); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-green-500\/30 { border-color: color-mix(in oklab,var(--color-gree=
+n-500) 30%,transparent); }
+}
+  .border-primary, .border-primary\/30 { border-color: var(--primary); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-primary\/30 { border-color: color-mix(in oklab,var(--primary) 30%=
+,transparent); }
+}
+  .border-red-500\/30 { border-color: rgba(251, 44, 54, 0.3); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-red-500\/30 { border-color: color-mix(in oklab,var(--color-red-50=
+0) 30%,transparent); }
+}
+  .border-red-500\/50 { border-color: rgba(251, 44, 54, 0.5); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-red-500\/50 { border-color: color-mix(in oklab,var(--color-red-50=
+0) 50%,transparent); }
+}
+  .border-red-500\/60 { border-color: rgba(251, 44, 54, 0.6); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .border-red-500\/60 { border-color: color-mix(in oklab,var(--color-red-50=
+0) 60%,transparent); }
+}
+  .border-transparent { border-color: rgba(0, 0, 0, 0); }
+  .bg-accent-soft { background-color: var(--accent-soft); }
+  .bg-amber-500 { background-color: var(--color-amber-500); }
+  .bg-amber-500\/5 { background-color: rgba(249, 156, 0, 0.05); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-amber-500\/5 { background-color: color-mix(in oklab,var(--color-amber=
+-500) 5%,transparent); }
+}
+  .bg-amber-500\/10 { background-color: rgba(249, 156, 0, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-amber-500\/10 { background-color: color-mix(in oklab,var(--color-ambe=
+r-500) 10%,transparent); }
+}
+  .bg-amber-500\/15 { background-color: rgba(249, 156, 0, 0.15); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-amber-500\/15 { background-color: color-mix(in oklab,var(--color-ambe=
+r-500) 15%,transparent); }
+}
+  .bg-background, .bg-background\/60 { background-color: var(--background);=
+ }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-background\/60 { background-color: color-mix(in oklab,var(--backgroun=
+d) 60%,transparent); }
+}
+  .bg-background\/80 { background-color: var(--background); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-background\/80 { background-color: color-mix(in oklab,var(--backgroun=
+d) 80%,transparent); }
+}
+  .bg-black { background-color: var(--color-black); }
+  .bg-black\/0 { background-color: rgba(0, 0, 0, 0); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-black\/0 { background-color: color-mix(in oklab,var(--color-black) 0%=
+,transparent); }
+}
+  .bg-black\/5 { background-color: rgba(0, 0, 0, 0.05); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-black\/5 { background-color: color-mix(in oklab,var(--color-black) 5%=
+,transparent); }
+}
+  .bg-black\/40 { background-color: rgba(0, 0, 0, 0.4); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-black\/40 { background-color: color-mix(in oklab,var(--color-black) 4=
+0%,transparent); }
+}
+  .bg-blue-500\/10 { background-color: rgba(48, 128, 255, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-blue-500\/10 { background-color: color-mix(in oklab,var(--color-blue-=
+500) 10%,transparent); }
+}
+  .bg-card, .bg-card\/50 { background-color: var(--card); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-card\/50 { background-color: color-mix(in oklab,var(--card) 50%,trans=
+parent); }
+}
+  .bg-destructive\/30 { background-color: var(--destructive); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-destructive\/30 { background-color: color-mix(in oklab,var(--destruct=
+ive) 30%,transparent); }
+}
+  .bg-emerald-500 { background-color: var(--color-emerald-500); }
+  .bg-emerald-500\/10 { background-color: rgba(0, 187, 127, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-emerald-500\/10 { background-color: color-mix(in oklab,var(--color-em=
+erald-500) 10%,transparent); }
+}
+  .bg-emerald-500\/15 { background-color: rgba(0, 187, 127, 0.15); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-emerald-500\/15 { background-color: color-mix(in oklab,var(--color-em=
+erald-500) 15%,transparent); }
+}
+  .bg-emerald-600 { background-color: var(--color-emerald-600); }
+  .bg-foreground, .bg-foreground\/5 { background-color: var(--foreground); =
+}
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-foreground\/5 { background-color: color-mix(in oklab,var(--foreground=
+) 5%,transparent); }
+}
+  .bg-foreground\/10 { background-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-foreground\/10 { background-color: color-mix(in oklab,var(--foregroun=
+d) 10%,transparent); }
+}
+  .bg-foreground\/30 { background-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-foreground\/30 { background-color: color-mix(in oklab,var(--foregroun=
+d) 30%,transparent); }
+}
+  .bg-foreground\/40 { background-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-foreground\/40 { background-color: color-mix(in oklab,var(--foregroun=
+d) 40%,transparent); }
+}
+  .bg-foreground\/\[0\.02\] { background-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-foreground\/\[0\.02\] { background-color: color-mix(in oklab,var(--fo=
+reground) 2%,transparent); }
+}
+  .bg-foreground\/\[0\.025\] { background-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-foreground\/\[0\.025\] { background-color: color-mix(in oklab,var(--f=
+oreground) 2.5%,transparent); }
+}
+  .bg-green-500\/5 { background-color: rgba(0, 199, 88, 0.05); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-green-500\/5 { background-color: color-mix(in oklab,var(--color-green=
+-500) 5%,transparent); }
+}
+  .bg-green-500\/10 { background-color: rgba(0, 199, 88, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-green-500\/10 { background-color: color-mix(in oklab,var(--color-gree=
+n-500) 10%,transparent); }
+}
+  .bg-muted, .bg-muted\/30 { background-color: var(--muted); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-muted\/30 { background-color: color-mix(in oklab,var(--muted) 30%,tra=
+nsparent); }
+}
+  .bg-muted\/50 { background-color: var(--muted); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-muted\/50 { background-color: color-mix(in oklab,var(--muted) 50%,tra=
+nsparent); }
+}
+  .bg-popover { background-color: var(--popover); }
+  .bg-primary, .bg-primary\/5 { background-color: var(--primary); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-primary\/5 { background-color: color-mix(in oklab,var(--primary) 5%,t=
+ransparent); }
+}
+  .bg-primary\/30 { background-color: var(--primary); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-primary\/30 { background-color: color-mix(in oklab,var(--primary) 30%=
+,transparent); }
+}
+  .bg-red-500 { background-color: var(--color-red-500); }
+  .bg-red-500\/5 { background-color: rgba(251, 44, 54, 0.05); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-red-500\/5 { background-color: color-mix(in oklab,var(--color-red-500=
+) 5%,transparent); }
+}
+  .bg-red-500\/10 { background-color: rgba(251, 44, 54, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-red-500\/10 { background-color: color-mix(in oklab,var(--color-red-50=
+0) 10%,transparent); }
+}
+  .bg-sky-500 { background-color: var(--color-sky-500); }
+  .bg-sky-500\/10 { background-color: rgba(0, 165, 239, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-sky-500\/10 { background-color: color-mix(in oklab,var(--color-sky-50=
+0) 10%,transparent); }
+}
+  .bg-sky-600 { background-color: var(--color-sky-600); }
+  .bg-transparent { background-color: rgba(0, 0, 0, 0); }
+  .bg-violet-500\/10 { background-color: rgba(141, 84, 255, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-violet-500\/10 { background-color: color-mix(in oklab,var(--color-vio=
+let-500) 10%,transparent); }
+}
+  .bg-white { background-color: var(--color-white); }
+  .bg-white\/90 { background-color: rgba(255, 255, 255, 0.9); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-white\/90 { background-color: color-mix(in oklab,var(--color-white) 9=
+0%,transparent); }
+}
+  .bg-yellow-500\/10 { background-color: rgba(237, 178, 0, 0.1); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .bg-yellow-500\/10 { background-color: color-mix(in oklab,var(--color-yel=
+low-500) 10%,transparent); }
+}
+  .bg-zinc-700 { background-color: var(--color-zinc-700); }
+  .bg-zinc-900 { background-color: var(--color-zinc-900); }
+  .fill-foreground\/40 { fill: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .fill-foreground\/40 { fill: color-mix(in oklab,var(--foreground) 40%,tra=
+nsparent); }
+}
+  .object-contain { object-fit: contain; }
+  .object-cover { object-fit: cover; }
+  .p-1 { padding: calc(var(--spacing) * 1); }
+  .p-2 { padding: calc(var(--spacing) * 2); }
+  .p-3 { padding: calc(var(--spacing) * 3); }
+  .p-4 { padding: calc(var(--spacing) * 4); }
+  .p-5 { padding: calc(var(--spacing) * 5); }
+  .p-6 { padding: calc(var(--spacing) * 6); }
+  .p-7 { padding: calc(var(--spacing) * 7); }
+  .p-8 { padding: calc(var(--spacing) * 8); }
+  .p-10 { padding: calc(var(--spacing) * 10); }
+  .px-0\.5 { padding-inline: calc(var(--spacing) * .5); }
+  .px-1 { padding-inline: calc(var(--spacing) * 1); }
+  .px-1\.5 { padding-inline: calc(var(--spacing) * 1.5); }
+  .px-2 { padding-inline: calc(var(--spacing) * 2); }
+  .px-2\.5 { padding-inline: calc(var(--spacing) * 2.5); }
+  .px-3 { padding-inline: calc(var(--spacing) * 3); }
+  .px-3\.5 { padding-inline: calc(var(--spacing) * 3.5); }
+  .px-4 { padding-inline: calc(var(--spacing) * 4); }
+  .px-5 { padding-inline: calc(var(--spacing) * 5); }
+  .px-6 { padding-inline: calc(var(--spacing) * 6); }
+  .px-7 { padding-inline: calc(var(--spacing) * 7); }
+  .px-8 { padding-inline: calc(var(--spacing) * 8); }
+  .px-\[11px\] { padding-inline: 11px; }
+  .px-\[22px\] { padding-inline: 22px; }
+  .py-0\.5 { padding-block: calc(var(--spacing) * .5); }
+  .py-1 { padding-block: calc(var(--spacing) * 1); }
+  .py-1\.5 { padding-block: calc(var(--spacing) * 1.5); }
+  .py-2 { padding-block: calc(var(--spacing) * 2); }
+  .py-2\.5 { padding-block: calc(var(--spacing) * 2.5); }
+  .py-3 { padding-block: calc(var(--spacing) * 3); }
+  .py-3\.5 { padding-block: calc(var(--spacing) * 3.5); }
+  .py-4 { padding-block: calc(var(--spacing) * 4); }
+  .py-5 { padding-block: calc(var(--spacing) * 5); }
+  .py-6 { padding-block: calc(var(--spacing) * 6); }
+  .py-8 { padding-block: calc(var(--spacing) * 8); }
+  .py-9 { padding-block: calc(var(--spacing) * 9); }
+  .py-12 { padding-block: calc(var(--spacing) * 12); }
+  .py-16 { padding-block: calc(var(--spacing) * 16); }
+  .py-20 { padding-block: calc(var(--spacing) * 20); }
+  .py-24 { padding-block: calc(var(--spacing) * 24); }
+  .py-\[1px\] { padding-block: 1px; }
+  .py-\[5px\] { padding-block: 5px; }
+  .pt-0\.5 { padding-top: calc(var(--spacing) * .5); }
+  .pt-2 { padding-top: calc(var(--spacing) * 2); }
+  .pt-3 { padding-top: calc(var(--spacing) * 3); }
+  .pt-4 { padding-top: calc(var(--spacing) * 4); }
+  .pt-5 { padding-top: calc(var(--spacing) * 5); }
+  .pt-12 { padding-top: calc(var(--spacing) * 12); }
+  .pt-14 { padding-top: calc(var(--spacing) * 14); }
+  .pt-20 { padding-top: calc(var(--spacing) * 20); }
+  .pt-\[18px\] { padding-top: 18px; }
+  .pt-\[22px\] { padding-top: 22px; }
+  .pr-2\.5 { padding-right: calc(var(--spacing) * 2.5); }
+  .pr-3 { padding-right: calc(var(--spacing) * 3); }
+  .pb-1\.5 { padding-bottom: calc(var(--spacing) * 1.5); }
+  .pb-3\.5 { padding-bottom: calc(var(--spacing) * 3.5); }
+  .pb-6 { padding-bottom: calc(var(--spacing) * 6); }
+  .pb-10 { padding-bottom: calc(var(--spacing) * 10); }
+  .pb-16 { padding-bottom: calc(var(--spacing) * 16); }
+  .pl-3 { padding-left: calc(var(--spacing) * 3); }
+  .pl-4 { padding-left: calc(var(--spacing) * 4); }
+  .pl-5 { padding-left: calc(var(--spacing) * 5); }
+  .pl-6 { padding-left: calc(var(--spacing) * 6); }
+  .text-center { text-align: center; }
+  .text-left { text-align: left; }
+  .text-right { text-align: right; }
+  .align-top { vertical-align: top; }
+  .font-mono { font-family: var(--font-mono); }
+  .font-serif { font-family: var(--font-serif); }
+  .text-2xl { font-size: var(--text-2xl); line-height: var(--tw-leading,var=
+(--text-2xl--line-height)); }
+  .text-3xl { font-size: var(--text-3xl); line-height: var(--tw-leading,var=
+(--text-3xl--line-height)); }
+  .text-4xl { font-size: var(--text-4xl); line-height: var(--tw-leading,var=
+(--text-4xl--line-height)); }
+  .text-base { font-size: var(--text-base); line-height: var(--tw-leading,v=
+ar(--text-base--line-height)); }
+  .text-lg { font-size: var(--text-lg); line-height: var(--tw-leading,var(-=
+-text-lg--line-height)); }
+  .text-sm { font-size: var(--text-sm); line-height: var(--tw-leading,var(-=
+-text-sm--line-height)); }
+  .text-xl { font-size: var(--text-xl); line-height: var(--tw-leading,var(-=
+-text-xl--line-height)); }
+  .text-xs { font-size: var(--text-xs); line-height: var(--tw-leading,var(-=
+-text-xs--line-height)); }
+  .text-\[9px\] { font-size: 9px; }
+  .text-\[10\.5px\] { font-size: 10.5px; }
+  .text-\[10px\] { font-size: 10px; }
+  .text-\[11\.5px\] { font-size: 11.5px; }
+  .text-\[11px\] { font-size: 11px; }
+  .text-\[12\.5px\] { font-size: 12.5px; }
+  .text-\[12px\] { font-size: 12px; }
+  .text-\[13\.5px\] { font-size: 13.5px; }
+  .text-\[13\.8px\] { font-size: 13.8px; }
+  .text-\[13px\] { font-size: 13px; }
+  .text-\[14\.5px\] { font-size: 14.5px; }
+  .text-\[14px\] { font-size: 14px; }
+  .text-\[15px\] { font-size: 15px; }
+  .text-\[16\.5px\] { font-size: 16.5px; }
+  .text-\[17px\] { font-size: 17px; }
+  .text-\[18px\] { font-size: 18px; }
+  .text-\[20px\] { font-size: 20px; }
+  .text-\[22px\] { font-size: 22px; }
+  .text-\[clamp\(22px\,2\.4vw\,26px\)\] { font-size: clamp(22px, 2.4vw, 26p=
+x); }
+  .text-\[clamp\(24px\,3\.2vw\,34px\)\] { font-size: clamp(24px, 3.2vw, 34p=
+x); }
+  .text-\[clamp\(24px\,3vw\,32px\)\] { font-size: clamp(24px, 3vw, 32px); }
+  .text-\[clamp\(28px\,3\.4vw\,44px\)\] { font-size: clamp(28px, 3.4vw, 44p=
+x); }
+  .text-\[clamp\(36px\,4\.8vw\,60px\)\] { font-size: clamp(36px, 4.8vw, 60p=
+x); }
+  .text-\[clamp\(36px\,5\.2vw\,58px\)\] { font-size: clamp(36px, 5.2vw, 58p=
+x); }
+  .text-\[clamp\(42px\,5\.4vw\,74px\)\] { font-size: clamp(42px, 5.4vw, 74p=
+x); }
+  .leading-\[1\.1\] { --tw-leading: 1.1; line-height: 1.1; }
+  .leading-\[1\.02\] { --tw-leading: 1.02; line-height: 1.02; }
+  .leading-\[1\.2\] { --tw-leading: 1.2; line-height: 1.2; }
+  .leading-\[1\.03\] { --tw-leading: 1.03; line-height: 1.03; }
+  .leading-\[1\.05\] { --tw-leading: 1.05; line-height: 1.05; }
+  .leading-\[1\.5\] { --tw-leading: 1.5; line-height: 1.5; }
+  .leading-\[1\.6\] { --tw-leading: 1.6; line-height: 1.6; }
+  .leading-\[1\.7\] { --tw-leading: 1.7; line-height: 1.7; }
+  .leading-\[1\.15\] { --tw-leading: 1.15; line-height: 1.15; }
+  .leading-\[1\.55\] { --tw-leading: 1.55; line-height: 1.55; }
+  .leading-\[1\.65\] { --tw-leading: 1.65; line-height: 1.65; }
+  .leading-\[1\.75\] { --tw-leading: 1.75; line-height: 1.75; }
+  .leading-none { --tw-leading: 1; line-height: 1; }
+  .leading-relaxed { --tw-leading: var(--leading-relaxed); line-height: var=
+(--leading-relaxed); }
+  .leading-tight { --tw-leading: var(--leading-tight); line-height: var(--l=
+eading-tight); }
+  .font-bold { --tw-font-weight: var(--font-weight-bold); font-weight: var(=
+--font-weight-bold); }
+  .font-medium { --tw-font-weight: var(--font-weight-medium); font-weight: =
+var(--font-weight-medium); }
+  .font-normal { --tw-font-weight: var(--font-weight-normal); font-weight: =
+var(--font-weight-normal); }
+  .font-semibold { --tw-font-weight: var(--font-weight-semibold); font-weig=
+ht: var(--font-weight-semibold); }
+  .tracking-\[-0\.01em\] { --tw-tracking: -.01em; letter-spacing: -0.01em; =
+}
+  .tracking-\[-0\.02em\] { --tw-tracking: -.02em; letter-spacing: -0.02em; =
+}
+  .tracking-\[-0\.03em\] { --tw-tracking: -.03em; letter-spacing: -0.03em; =
+}
+  .tracking-\[-0\.015em\] { --tw-tracking: -.015em; letter-spacing: -0.015e=
+m; }
+  .tracking-\[-0\.025em\] { --tw-tracking: -.025em; letter-spacing: -0.025e=
+m; }
+  .tracking-\[-0\.028em\] { --tw-tracking: -.028em; letter-spacing: -0.028e=
+m; }
+  .tracking-\[-0\.035em\] { --tw-tracking: -.035em; letter-spacing: -0.035e=
+m; }
+  .tracking-\[0\.05em\] { --tw-tracking: .05em; letter-spacing: 0.05em; }
+  .tracking-\[0\.06em\] { --tw-tracking: .06em; letter-spacing: 0.06em; }
+  .tracking-\[0\.08em\] { --tw-tracking: .08em; letter-spacing: 0.08em; }
+  .tracking-\[0\.18em\] { --tw-tracking: .18em; letter-spacing: 0.18em; }
+  .tracking-tight { --tw-tracking: var(--tracking-tight); letter-spacing: v=
+ar(--tracking-tight); }
+  .tracking-wider { --tw-tracking: var(--tracking-wider); letter-spacing: v=
+ar(--tracking-wider); }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  .text-wrap { text-wrap: wrap; }
+  .break-all { word-break: break-all; }
+  .whitespace-nowrap { white-space: nowrap; }
+  .whitespace-pre { white-space: pre; }
+  .whitespace-pre-wrap { white-space: pre-wrap; }
+  .text-accent-ink { color: var(--accent-ink); }
+  .text-amber-600 { color: var(--color-amber-600); }
+  .text-amber-700 { color: var(--color-amber-700); }
+  .text-background { color: var(--background); }
+  .text-black { color: var(--color-black); }
+  .text-blue-600 { color: var(--color-blue-600); }
+  .text-blue-700 { color: var(--color-blue-700); }
+  .text-destructive { color: var(--destructive); }
+  .text-emerald-600 { color: var(--color-emerald-600); }
+  .text-emerald-700 { color: var(--color-emerald-700); }
+  .text-foreground, .text-foreground\/40 { color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-foreground\/40 { color: color-mix(in oklab,var(--foreground) 40%,tr=
+ansparent); }
+}
+  .text-foreground\/50 { color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-foreground\/50 { color: color-mix(in oklab,var(--foreground) 50%,tr=
+ansparent); }
+}
+  .text-foreground\/60 { color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-foreground\/60 { color: color-mix(in oklab,var(--foreground) 60%,tr=
+ansparent); }
+}
+  .text-foreground\/70 { color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-foreground\/70 { color: color-mix(in oklab,var(--foreground) 70%,tr=
+ansparent); }
+}
+  .text-foreground\/80 { color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-foreground\/80 { color: color-mix(in oklab,var(--foreground) 80%,tr=
+ansparent); }
+}
+  .text-foreground\/85 { color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-foreground\/85 { color: color-mix(in oklab,var(--foreground) 85%,tr=
+ansparent); }
+}
+  .text-green-600 { color: var(--color-green-600); }
+  .text-green-700 { color: var(--color-green-700); }
+  .text-ink-2 { color: var(--ink-2); }
+  .text-muted-foreground, .text-muted-foreground\/60 { color: var(--muted-f=
+oreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-muted-foreground\/60 { color: color-mix(in oklab,var(--muted-foregr=
+ound) 60%,transparent); }
+}
+  .text-muted-foreground\/70 { color: var(--muted-foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-muted-foreground\/70 { color: color-mix(in oklab,var(--muted-foregr=
+ound) 70%,transparent); }
+}
+  .text-muted-foreground\/80 { color: var(--muted-foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .text-muted-foreground\/80 { color: color-mix(in oklab,var(--muted-foregr=
+ound) 80%,transparent); }
+}
+  .text-primary { color: var(--primary); }
+  .text-primary-foreground { color: var(--primary-foreground); }
+  .text-red-500 { color: var(--color-red-500); }
+  .text-red-600 { color: var(--color-red-600); }
+  .text-red-700 { color: var(--color-red-700); }
+  .text-sky-700 { color: var(--color-sky-700); }
+  .text-violet-700 { color: var(--color-violet-700); }
+  .text-white { color: var(--color-white); }
+  .text-yellow-700 { color: var(--color-yellow-700); }
+  .text-zinc-100 { color: var(--color-zinc-100); }
+  .uppercase { text-transform: uppercase; }
+  .italic { font-style: italic; }
+  .tabular-nums { --tw-numeric-spacing: tabular-nums; font-variant-numeric:=
+ var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(-=
+-tw-numeric-spacing,) var(--tw-numeric-fraction,); }
+  .underline { text-decoration-line: underline; }
+  .decoration-muted-foreground\/40 { text-decoration-color: var(--muted-for=
+eground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .decoration-muted-foreground\/40 { text-decoration-color: color-mix(in ok=
+lab,var(--muted-foreground) 40%,transparent); }
+}
+  .underline-offset-2 { text-underline-offset: 2px; }
+  .underline-offset-4 { text-underline-offset: 4px; }
+  .antialiased { -webkit-font-smoothing: antialiased; }
+  .opacity-0 { opacity: 0; }
+  .opacity-40 { opacity: 0.4; }
+  .opacity-50 { opacity: 0.5; }
+  .opacity-85 { opacity: 0.85; }
+  .shadow { --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px=
+ 2px -1px var(--tw-shadow-color,#0000001a); }
+  .shadow, .shadow-\[0_1px_2px_rgba\(20\,18\,14\,0\.05\)\,0_18px_40px_-24px=
+_rgba\(20\,18\,14\,0\.35\)\] { box-shadow: var(--tw-inset-shadow),var(--tw-=
+inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(-=
+-tw-shadow); }
+  .shadow-\[0_1px_2px_rgba\(20\,18\,14\,0\.05\)\,0_18px_40px_-24px_rgba\(20=
+\,18\,14\,0\.35\)\] { --tw-shadow: 0 1px 2px var(--tw-shadow-color,#14120e0=
+d),0 18px 40px -24px var(--tw-shadow-color,#14120e59); }
+  .shadow-\[0_8px_24px_-12px_rgba\(14\,14\,12\,0\.18\)\] { --tw-shadow: 0 8=
+px 24px -12px var(--tw-shadow-color,#0e0e0c2e); }
+  .shadow-\[0_8px_24px_-12px_rgba\(14\,14\,12\,0\.18\)\], .shadow-lg { box-=
+shadow: var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-of=
+fset-shadow),var(--tw-ring-shadow),var(--tw-shadow); }
+  .shadow-lg { --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color,#0000001=
+a),0 4px 6px -4px var(--tw-shadow-color,#0000001a); }
+  .shadow-none { --tw-shadow: 0 0 #0000; }
+  .shadow-none, .shadow-sm { box-shadow: var(--tw-inset-shadow),var(--tw-in=
+set-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--t=
+w-shadow); }
+  .shadow-sm { --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 =
+1px 2px -1px var(--tw-shadow-color,#0000001a); }
+  .ring-2 { --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--=
+tw-ring-offset-width)) var(--tw-ring-color,currentcolor); box-shadow: var(-=
+-tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),=
+var(--tw-ring-shadow),var(--tw-shadow); }
+  .ring-destructive { --tw-ring-color: var(--destructive); }
+  .ring-primary { --tw-ring-color: var(--primary); }
+  .outline { outline-style: var(--tw-outline-style); outline-width: 1px; }
+  .invert { --tw-invert: invert(100%); }
+  .filter, .invert { filter: var(--tw-blur,) var(--tw-brightness,) var(--tw=
+-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) va=
+r(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,); }
+  .backdrop-blur { --tw-backdrop-blur: blur(8px); }
+  .backdrop-blur, .backdrop-blur-sm { backdrop-filter: var(--tw-backdrop-bl=
+ur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-b=
+ackdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert=
+,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdr=
+op-sepia,); }
+  .backdrop-blur-sm { --tw-backdrop-blur: blur(var(--blur-sm)); }
+  .backdrop-filter { backdrop-filter: var(--tw-backdrop-blur,) var(--tw-bac=
+kdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale=
+,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backd=
+rop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,); }
+  .transition { transition-property: color, background-color, border-color,=
+ outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --=
+tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translat=
+e, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display=
+, content-visibility, overlay, pointer-events; transition-timing-function: =
+var(--tw-ease,var(--default-transition-timing-function)); transition-durati=
+on: var(--tw-duration,var(--default-transition-duration)); }
+  .transition-\[width\] { transition-property: width; transition-timing-fun=
+ction: var(--tw-ease,var(--default-transition-timing-function)); transition=
+-duration: var(--tw-duration,var(--default-transition-duration)); }
+  .transition-all { transition-property: all; transition-timing-function: v=
+ar(--tw-ease,var(--default-transition-timing-function)); transition-duratio=
+n: var(--tw-duration,var(--default-transition-duration)); }
+  .transition-colors { transition-property: color, background-color, border=
+-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-f=
+rom, --tw-gradient-via, --tw-gradient-to; transition-timing-function: var(-=
+-tw-ease,var(--default-transition-timing-function)); transition-duration: v=
+ar(--tw-duration,var(--default-transition-duration)); }
+  .transition-opacity { transition-property: opacity; transition-timing-fun=
+ction: var(--tw-ease,var(--default-transition-timing-function)); transition=
+-duration: var(--tw-duration,var(--default-transition-duration)); }
+  .transition-transform { transition-property: transform, translate, scale,=
+ rotate; transition-timing-function: var(--tw-ease,var(--default-transition=
+-timing-function)); transition-duration: var(--tw-duration,var(--default-tr=
+ansition-duration)); }
+  .duration-100 { --tw-duration: .1s; transition-duration: 0.1s; }
+  .duration-150 { --tw-duration: .15s; transition-duration: 0.15s; }
+  .duration-300 { --tw-duration: .3s; transition-duration: 0.3s; }
+  .outline-none { --tw-outline-style: none; outline-style: none; }
+  .select-none { user-select: none; }
+  @media (hover: hover) {
+  .group-hover\:translate-x-0\.5:is(:where(.group):hover *) { --tw-translat=
+e-x: calc(var(--spacing) * .5); translate: var(--tw-translate-x) var(--tw-t=
+ranslate-y); }
+  .group-hover\:text-foreground\/60:is(:where(.group):hover *) { color: var=
+(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .group-hover\:text-foreground\/60:is(:where(.group):hover *) { color: col=
+or-mix(in oklab,var(--foreground) 60%,transparent); }
+}
+  .group-hover\:underline:is(:where(.group):hover *) { text-decoration-line=
+: underline; }
+  .group-hover\:opacity-100:is(:where(.group):hover *) { opacity: 1; }
+  .group-hover\/crf\:visible:is(:where(.group\/crf):hover *) { visibility: =
+visible; }
+  .group-hover\/crf\:opacity-100:is(:where(.group\/crf):hover *) { opacity:=
+ 1; }
+}
+  .placeholder\:text-foreground\/40::placeholder { color: var(--foreground)=
+; }
+  @supports (color:color-mix(in lab,red,red)) {
+  .placeholder\:text-foreground\/40::placeholder { color: color-mix(in okla=
+b,var(--foreground) 40%,transparent); }
+}
+  .placeholder\:text-muted-foreground::placeholder { color: var(--muted-for=
+eground); }
+  .last\:border-0:last-child { border-style: var(--tw-border-style); border=
+-width: 0px; }
+  @media (hover: hover) {
+  .hover\:border-border:hover { border-color: var(--border); }
+  .hover\:border-foreground:hover, .hover\:border-foreground\/30:hover { bo=
+rder-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:border-foreground\/30:hover { border-color: color-mix(in oklab,va=
+r(--foreground) 30%,transparent); }
+}
+  .hover\:border-foreground\/40:hover { border-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:border-foreground\/40:hover { border-color: color-mix(in oklab,va=
+r(--foreground) 40%,transparent); }
+}
+  .hover\:border-foreground\/60:hover { border-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:border-foreground\/60:hover { border-color: color-mix(in oklab,va=
+r(--foreground) 60%,transparent); }
+}
+  .hover\:bg-black\/20:hover { background-color: rgba(0, 0, 0, 0.2); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:bg-black\/20:hover { background-color: color-mix(in oklab,var(--c=
+olor-black) 20%,transparent); }
+}
+  .hover\:bg-foreground\/5:hover { background-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:bg-foreground\/5:hover { background-color: color-mix(in oklab,var=
+(--foreground) 5%,transparent); }
+}
+  .hover\:bg-foreground\/\[0\.02\]:hover { background-color: var(--foregrou=
+nd); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:bg-foreground\/\[0\.02\]:hover { background-color: color-mix(in o=
+klab,var(--foreground) 2%,transparent); }
+}
+  .hover\:bg-muted:hover, .hover\:bg-muted\/30:hover { background-color: va=
+r(--muted); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:bg-muted\/30:hover { background-color: color-mix(in oklab,var(--m=
+uted) 30%,transparent); }
+}
+  .hover\:bg-muted\/40:hover { background-color: var(--muted); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:bg-muted\/40:hover { background-color: color-mix(in oklab,var(--m=
+uted) 40%,transparent); }
+}
+  .hover\:bg-red-500\/10:hover { background-color: rgba(251, 44, 54, 0.1); =
+}
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:bg-red-500\/10:hover { background-color: color-mix(in oklab,var(-=
+-color-red-500) 10%,transparent); }
+}
+  .hover\:bg-red-500\/20:hover { background-color: rgba(251, 44, 54, 0.2); =
+}
+  @supports (color:color-mix(in lab,red,red)) {
+  .hover\:bg-red-500\/20:hover { background-color: color-mix(in oklab,var(-=
+-color-red-500) 20%,transparent); }
+}
+  .hover\:bg-tint:hover { background-color: var(--tint); }
+  .hover\:bg-zinc-600:hover { background-color: var(--color-zinc-600); }
+  .hover\:text-blue-800:hover { color: var(--color-blue-800); }
+  .hover\:text-foreground:hover { color: var(--foreground); }
+  .hover\:text-red-600:hover { color: var(--color-red-600); }
+  .hover\:underline:hover { text-decoration-line: underline; }
+  .hover\:decoration-foreground:hover { text-decoration-color: var(--foregr=
+ound); }
+  .hover\:opacity-80:hover { opacity: 0.8; }
+  .hover\:opacity-90:hover { opacity: 0.9; }
+  .hover\:opacity-100:hover { opacity: 1; }
+}
+  .focus\:border-foreground\/30:focus { border-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .focus\:border-foreground\/30:focus { border-color: color-mix(in oklab,va=
+r(--foreground) 30%,transparent); }
+}
+  .focus\:border-foreground\/40:focus { border-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .focus\:border-foreground\/40:focus { border-color: color-mix(in oklab,va=
+r(--foreground) 40%,transparent); }
+}
+  .focus\:border-foreground\/60:focus { border-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .focus\:border-foreground\/60:focus { border-color: color-mix(in oklab,va=
+r(--foreground) 60%,transparent); }
+}
+  .focus\:border-red-500:focus { border-color: var(--color-red-500); }
+  .focus\:opacity-100:focus { opacity: 1; }
+  .focus\:ring-2:focus { --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc=
+(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor); box-=
+shadow: var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-of=
+fset-shadow),var(--tw-ring-shadow),var(--tw-shadow); }
+  .focus\:ring-foreground\/20:focus { --tw-ring-color: var(--foreground); }
+  @supports (color:color-mix(in lab,red,red)) {
+  .focus\:ring-foreground\/20:focus { --tw-ring-color: color-mix(in oklab,v=
+ar(--foreground) 20%,transparent); }
+}
+  .focus\:outline-none:focus { --tw-outline-style: none; outline-style: non=
+e; }
+  .active\:cursor-grabbing:active { cursor: grabbing; }
+  .disabled\:cursor-not-allowed:disabled { cursor: not-allowed; }
+  .disabled\:opacity-30:disabled { opacity: 0.3; }
+  .disabled\:opacity-40:disabled { opacity: 0.4; }
+  .disabled\:opacity-50:disabled { opacity: 0.5; }
+  @media (min-width: 40rem) {
+  .sm\:col-span-3 { grid-column: span 3 / span 3; }
+  .sm\:mt-14 { margin-top: calc(var(--spacing) * 14); }
+  .sm\:mt-16 { margin-top: calc(var(--spacing) * 16); }
+  .sm\:block { display: block; }
+  .sm\:hidden { display: none; }
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0px, 1fr)); }
+  .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0px, 1fr)); }
+  .sm\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0px, 1fr)); }
+  .sm\:grid-cols-\[200px_1fr\] { grid-template-columns: 200px 1fr; }
+  .sm\:flex-row { flex-direction: row; }
+  .sm\:items-baseline { align-items: baseline; }
+  .sm\:items-center { align-items: center; }
+  .sm\:justify-between { justify-content: space-between; }
+  .sm\:justify-center { justify-content: center; }
+  .sm\:gap-5 { gap: calc(var(--spacing) * 5); }
+  .sm\:gap-6 { gap: calc(var(--spacing) * 6); }
+  .sm\:gap-14 { gap: calc(var(--spacing) * 14); }
+  .sm\:gap-20 { gap: calc(var(--spacing) * 20); }
+  .sm\:border-0 { border-style: var(--tw-border-style); border-width: 0px; =
+}
+  .sm\:p-9 { padding: calc(var(--spacing) * 9); }
+  .sm\:p-\[18px\] { padding: 18px; }
+  .sm\:px-0 { padding-inline: calc(var(--spacing) * 0); }
+  .sm\:px-5 { padding-inline: calc(var(--spacing) * 5); }
+  .sm\:px-6 { padding-inline: calc(var(--spacing) * 6); }
+  .sm\:px-8 { padding-inline: calc(var(--spacing) * 8); }
+  .sm\:px-12 { padding-inline: calc(var(--spacing) * 12); }
+  .sm\:py-11 { padding-block: calc(var(--spacing) * 11); }
+  .sm\:py-16 { padding-block: calc(var(--spacing) * 16); }
+  .sm\:py-24 { padding-block: calc(var(--spacing) * 24); }
+  .sm\:py-\[22px\] { padding-block: 22px; }
+  .sm\:pt-12 { padding-top: calc(var(--spacing) * 12); }
+  .sm\:text-5xl { font-size: var(--text-5xl); line-height: var(--tw-leading=
+,var(--text-5xl--line-height)); }
+  .sm\:text-sm { font-size: var(--text-sm); line-height: var(--tw-leading,v=
+ar(--text-sm--line-height)); }
+  .sm\:text-\[12\.5px\] { font-size: 12.5px; }
+  .sm\:text-\[13px\] { font-size: 13px; }
+  .sm\:text-\[15px\] { font-size: 15px; }
+  .sm\:text-\[19\.5px\] { font-size: 19.5px; }
+  .sm\:first\:pl-0:first-child { padding-left: calc(var(--spacing) * 0); }
+}
+  @media (min-width: 48rem) {
+  .md\:sticky { position: sticky; }
+  .md\:top-0 { top: calc(var(--spacing) * 0); }
+  .md\:block { display: block; }
+  .md\:flex { display: flex; }
+  .md\:grid { display: grid; }
+  .md\:hidden { display: none; }
+  .md\:h-\[350px\] { height: 350px; }
+  .md\:w-1\/2 { width: 50%; }
+  .md\:w-\[350px\] { width: 350px; }
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0px, 1fr)); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0px, 1fr)); }
+  .md\:grid-cols-\[0\.95fr_1fr\] { grid-template-columns: 0.95fr 1fr; }
+  .md\:grid-cols-\[1\.2fr_0\.8fr\] { grid-template-columns: 1.2fr 0.8fr; }
+  .md\:grid-cols-\[240px_1fr\] { grid-template-columns: 240px 1fr; }
+  .md\:items-end { align-items: flex-end; }
+  .md\:justify-end { justify-content: flex-end; }
+}
+  @media (min-width: 64rem) {
+  .lg\:order-1 { order: 1; }
+  .lg\:order-2 { order: 2; }
+  .lg\:col-span-1 { grid-column: span 1 / span 1; }
+  .lg\:h-\[400px\] { height: 400px; }
+  .lg\:w-\[400px\] { width: 400px; }
+  .lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0px, 1fr)); }
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0px, 1fr)); }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0px, 1fr)); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0px, 1fr)); }
+  .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0px, 1fr)); }
+  .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0px, 1fr)); }
+  .lg\:grid-cols-7 { grid-template-columns: repeat(7, minmax(0px, 1fr)); }
+  .lg\:grid-cols-8 { grid-template-columns: repeat(8, minmax(0px, 1fr)); }
+  .lg\:grid-cols-\[0\.9fr_1\.1fr\] { grid-template-columns: 0.9fr 1.1fr; }
+  .lg\:grid-cols-\[0\.95fr_1\.05fr\] { grid-template-columns: 0.95fr 1.05fr=
+; }
+  .lg\:grid-cols-\[1\.1fr_1fr\] { grid-template-columns: 1.1fr 1fr; }
+  .lg\:grid-cols-\[1\.4fr_1fr_1fr_1fr_1fr\] { grid-template-columns: 1.4fr =
+1fr 1fr 1fr 1fr; }
+  .lg\:flex-row { flex-direction: row; }
+  .lg\:items-center { align-items: center; }
+  .lg\:justify-between { justify-content: space-between; }
+  .lg\:gap-8 { gap: calc(var(--spacing) * 8); }
+  .lg\:gap-10 { gap: calc(var(--spacing) * 10); }
+  .lg\:gap-14 { gap: calc(var(--spacing) * 14); }
+  .lg\:gap-16 { gap: calc(var(--spacing) * 16); }
+  .lg\:gap-x-0 { column-gap: calc(var(--spacing) * 0); }
+  .lg\:border-l { border-left-style: var(--tw-border-style); border-left-wi=
+dth: 1px; }
+  .lg\:p-11 { padding: calc(var(--spacing) * 11); }
+  .lg\:px-0 { padding-inline: calc(var(--spacing) * 0); }
+  .lg\:pr-7 { padding-right: calc(var(--spacing) * 7); }
+  .lg\:pl-7 { padding-left: calc(var(--spacing) * 7); }
+}
+  @media (min-width: 80rem) {
+  .xl\:h-\[600px\] { height: 600px; }
+  .xl\:w-\[600px\] { width: 600px; }
+  .xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0px, 1fr)); }
+}
+  @media (prefers-color-scheme: dark) {
+  .dark\:text-amber-400 { color: var(--color-amber-400); }
+  .dark\:text-blue-400 { color: var(--color-blue-400); }
+  .dark\:text-emerald-400 { color: var(--color-emerald-400); }
+  .dark\:text-green-400 { color: var(--color-green-400); }
+  .dark\:text-red-300 { color: var(--color-red-300); }
+  .dark\:text-red-400 { color: var(--color-red-400); }
+  .dark\:text-sky-400 { color: var(--color-sky-400); }
+  .dark\:text-violet-400 { color: var(--color-violet-400); }
+  .dark\:text-yellow-400 { color: var(--color-yellow-400); }
+}
+  .\[\&\>code\]\:bg-transparent > code { background-color: rgba(0, 0, 0, 0)=
+; }
+  .\[\&\>code\]\:p-0 > code { padding: calc(var(--spacing) * 0); }
+  .\[\&\>code\]\:text-inherit > code { color: inherit; }
+}
+
+:root { --bg: #fafaf7; --ink: #0e0e0c; --ink-2: #2a2823; --muted-warm: #6b6=
+55a; --muted-2: #93887a; --line: #e6e2d8; --line-2: #efebe2; --surface: #ff=
+f; --tint: #f4f0e6; --brand: oklch(69.6% .17 162.48); --brand-soft: oklch(6=
+9.6% .17 162.48/.14); --brand-ink: oklch(42% .12 162.48); --accent-green: v=
+ar(--brand); --accent-soft: var(--brand-soft); --accent-ink: var(--brand-in=
+k); --background: var(--bg); --foreground: var(--ink); --card: var(--surfac=
+e); --card-foreground: var(--ink); --popover: var(--surface); --popover-for=
+eground: var(--ink); --primary: var(--brand); --primary-foreground: #fff; -=
+-secondary: var(--tint); --secondary-foreground: var(--ink-2); --muted: var=
+(--tint); --muted-foreground: var(--muted-warm); --accent: var(--brand); --=
+accent-foreground: #fff; --destructive: oklch(63.68% .2078 25.3313); --dest=
+ructive-foreground: #fff; --border: var(--line); --input: var(--line); --ri=
+ng: var(--ink); --radius-sm: 6px; --radius: 10px; --radius-lg: 16px; --shad=
+ow-sm: 0 1px 0 #0e0e0c0a,0 1px 2px #0e0e0c0a; --shadow: 0 1px 0 #0e0e0c0a,0=
+ 8px 24px -12px #0e0e0c1f; --container: 1200px; --gutter: 32px; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0e0e0c; --ink: #fafaf7; --ink-2: #e0dcd2; --muted-warm: #9=
+3887a; --muted-2: #6b655a; --line: #2a2823; --line-2: #1f1d19; --surface: #=
+15140f; --tint: #1a1814; --brand: oklch(78% .16 162.48); --brand-soft: oklc=
+h(78% .16 162.48/.2); --brand-ink: oklch(88% .12 162.48); --accent-green: v=
+ar(--brand); --accent-soft: var(--brand-soft); --accent-ink: var(--brand-in=
+k); }
+}
+
+body { background-color: var(--background); color: var(--foreground); font-=
+family: var(--font-sans),ui-sans-serif,system-ui,-apple-system,"Helvetica N=
+eue",Arial,sans-serif; font-feature-settings: "ss01", "cv11"; -webkit-font-=
+smoothing: antialiased; text-rendering: optimizelegibility; font-size: 15px=
+; line-height: 1.55; }
+
+* { border-color: var(--border); }
+
+::selection { background: var(--accent-soft); color: var(--accent-ink); }
+
+.eyebrow { font-family: var(--font-mono); letter-spacing: 0.04em; color: va=
+r(--muted-warm); text-transform: uppercase; align-items: center; gap: 8px; =
+font-size: 11.5px; display: inline-flex; }
+
+.eyebrow .dot { background: var(--accent-green); width: 6px; height: 6px; b=
+ox-shadow: 0 0 0 3px var(--accent-soft); border-radius: 999px; }
+
+.serif-accent { font-family: var(--font-serif),"Times New Roman",serif; col=
+or: var(--accent-ink); font-style: italic; font-weight: 400; }
+
+.hairline-grid { background: var(--line); border: 1px solid var(--line); bo=
+rder-radius: var(--radius-lg); gap: 1px; display: grid; overflow: hidden; }
+
+.hairline-grid > * { background: var(--surface); }
+
+@property --tw-translate-x { syntax: "*"; inherits: false; initial-value: 0=
+; }
+
+@property --tw-translate-y { syntax: "*"; inherits: false; initial-value: 0=
+; }
+
+@property --tw-translate-z { syntax: "*"; inherits: false; initial-value: 0=
+; }
+
+@property --tw-rotate-x { syntax: "*"; inherits: false; }
+
+@property --tw-rotate-y { syntax: "*"; inherits: false; }
+
+@property --tw-rotate-z { syntax: "*"; inherits: false; }
+
+@property --tw-skew-x { syntax: "*"; inherits: false; }
+
+@property --tw-skew-y { syntax: "*"; inherits: false; }
+
+@property --tw-space-y-reverse { syntax: "*"; inherits: false; initial-valu=
+e: 0; }
+
+@property --tw-divide-y-reverse { syntax: "*"; inherits: false; initial-val=
+ue: 0; }
+
+@property --tw-border-style { syntax: "*"; inherits: false; initial-value: =
+solid; }
+
+@property --tw-leading { syntax: "*"; inherits: false; }
+
+@property --tw-font-weight { syntax: "*"; inherits: false; }
+
+@property --tw-tracking { syntax: "*"; inherits: false; }
+
+@property --tw-ordinal { syntax: "*"; inherits: false; }
+
+@property --tw-slashed-zero { syntax: "*"; inherits: false; }
+
+@property --tw-numeric-figure { syntax: "*"; inherits: false; }
+
+@property --tw-numeric-spacing { syntax: "*"; inherits: false; }
+
+@property --tw-numeric-fraction { syntax: "*"; inherits: false; }
+
+@property --tw-shadow { syntax: "*"; inherits: false; initial-value: 0 0 #0=
+000; }
+
+@property --tw-shadow-color { syntax: "*"; inherits: false; }
+
+@property --tw-shadow-alpha { syntax: "<percentage>"; inherits: false; init=
+ial-value: 100%; }
+
+@property --tw-inset-shadow { syntax: "*"; inherits: false; initial-value: =
+0 0 #0000; }
+
+@property --tw-inset-shadow-color { syntax: "*"; inherits: false; }
+
+@property --tw-inset-shadow-alpha { syntax: "<percentage>"; inherits: false=
+; initial-value: 100%; }
+
+@property --tw-ring-color { syntax: "*"; inherits: false; }
+
+@property --tw-ring-shadow { syntax: "*"; inherits: false; initial-value: 0=
+ 0 #0000; }
+
+@property --tw-inset-ring-color { syntax: "*"; inherits: false; }
+
+@property --tw-inset-ring-shadow { syntax: "*"; inherits: false; initial-va=
+lue: 0 0 #0000; }
+
+@property --tw-ring-inset { syntax: "*"; inherits: false; }
+
+@property --tw-ring-offset-width { syntax: "<length>"; inherits: false; ini=
+tial-value: 0; }
+
+@property --tw-ring-offset-color { syntax: "*"; inherits: false; initial-va=
+lue: #fff; }
+
+@property --tw-ring-offset-shadow { syntax: "*"; inherits: false; initial-v=
+alue: 0 0 #0000; }
+
+@property --tw-outline-style { syntax: "*"; inherits: false; initial-value:=
+ solid; }
+
+@property --tw-blur { syntax: "*"; inherits: false; }
+
+@property --tw-brightness { syntax: "*"; inherits: false; }
+
+@property --tw-contrast { syntax: "*"; inherits: false; }
+
+@property --tw-grayscale { syntax: "*"; inherits: false; }
+
+@property --tw-hue-rotate { syntax: "*"; inherits: false; }
+
+@property --tw-invert { syntax: "*"; inherits: false; }
+
+@property --tw-opacity { syntax: "*"; inherits: false; }
+
+@property --tw-saturate { syntax: "*"; inherits: false; }
+
+@property --tw-sepia { syntax: "*"; inherits: false; }
+
+@property --tw-drop-shadow { syntax: "*"; inherits: false; }
+
+@property --tw-drop-shadow-color { syntax: "*"; inherits: false; }
+
+@property --tw-drop-shadow-alpha { syntax: "<percentage>"; inherits: false;=
+ initial-value: 100%; }
+
+@property --tw-drop-shadow-size { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-blur { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-brightness { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-contrast { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-grayscale { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-hue-rotate { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-invert { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-opacity { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-saturate { syntax: "*"; inherits: false; }
+
+@property --tw-backdrop-sepia { syntax: "*"; inherits: false; }
+
+@property --tw-duration { syntax: "*"; inherits: false; }
+
+@keyframes spin {=20
+  100% { transform: rotate(1turn); }
+}
+------MultipartBoundary--QlmCFcLQ9ckzjww8VuLEA1H2GmmDhVHAbJcHx5Yetd----
+Content-Type: image/webp
+Content-Transfer-Encoding: base64
+Content-Location: https://ffhub.io/imgs/blog/how-to-add-subtitles-to-video-with-ffmpeg.webp
+
+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
+
+------MultipartBoundary--QlmCFcLQ9ckzjww8VuLEA1H2GmmDhVHAbJcHx5Yetd------
