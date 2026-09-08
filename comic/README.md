@@ -20,4 +20,7 @@
 * [《爆漫王》—漫画家们热血追梦背后的一些八卦花絮](https://zhuanlan.zhihu.com/p/138245851)
 
 ## 黑猫警长
-* [为什么《黑猫警长》五集后就停播了？（中原一点点的回答）](https://www.zhihu.com/question/21396519/answer/1944798630448980668)
+* [为什么《黑猫警长》五集后就停播了？](https://www.zhihu.com/question/21396519)
+  * [中原一点点的回答](https://www.zhihu.com/question/21396519/answer/1944798630448980668)
+  * [德川咪咪的回答](https://www.zhihu.com/question/21396519/answer/33361101)
+  * [轩辕青阳的回答](https://www.zhihu.com/question/21396519/answer/35633798)
