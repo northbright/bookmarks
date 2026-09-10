@@ -47,6 +47,7 @@
 * [FFmpeg hardsubbing using force_style, fontname fontsdir, subtitles, and ass filter](https://askubuntu.com/questions/1336927/ffmpeg-hardsubbing-using-force-style-fontname-fontsdir-subtitles-and-ass-filt)
 * [How to Add SRT to Video Without Encoding Using FFmpeg](https://salivity.github.io/ffmpeg/article/how-to-add-srt-to-video-without-encoding-using-ffmpeg)
 * [How to Add Subtitles to Video with FFmpeg](https://ffhub.io/blog/how-to-add-subtitles-to-video-with-ffmpeg)
+* [Is there an option in ffmpeg to specify a subtitle track that should be shown by default?](https://superuser.com/questions/700082/is-there-an-option-in-ffmpeg-to-specify-a-subtitle-track-that-should-be-shown-by)
 
 ## Cut
 * [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
