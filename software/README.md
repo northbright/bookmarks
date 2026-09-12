@@ -40,3 +40,4 @@
 * [curl](curl/README.md)
 * [Feishu](feishu/README.md)
 * [ToDesk](todesk/README.md)
+* [Duolingo(多邻国)](duolingo/README.md)
