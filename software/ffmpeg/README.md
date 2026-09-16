@@ -49,6 +49,7 @@
 * [How to Add Subtitles to Video with FFmpeg](https://ffhub.io/blog/how-to-add-subtitles-to-video-with-ffmpeg)
 * [Is there an option in ffmpeg to specify a subtitle track that should be shown by default?](https://superuser.com/questions/700082/is-there-an-option-in-ffmpeg-to-specify-a-subtitle-track-that-should-be-shown-by)
 * [Subtitle File Formats and Video Containers](https://docs.picsart.io/docs/subtitle-formats)
+* [Override SRT Subtitle Styles in FFmpeg Using force_style](https://salivity.github.io/ffmpeg/article/override-srt-subtitle-styles-in-ffmpeg-using-force-style)
 
 ## Cut
 * [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
