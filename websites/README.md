@@ -26,3 +26,6 @@
 
 ## Subtitles（字幕）
 * [SubHero 免费工具](https://subhero.io/zh-Hans/tools)
+
+## Color Palettes（调色板）
+* [ColorKit](https://colorkit.co/)
