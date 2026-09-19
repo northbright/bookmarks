@@ -60,6 +60,7 @@
 * [Slideshow](https://trac.ffmpeg.org/wiki/Slideshow)
 * [[FFmpeg-user]deprecated pixel format used, make sure you did set range correctly](https://lists.ffmpeg.org/pipermail/ffmpeg-user/2023-June/056488.html)
 * [deprecated pixel format used, make sure you did set range correctly](https://superuser.com/questions/1273920/deprecated-pixel-format-used-make-sure-you-did-set-range-correctly)
+* [【FFmpeg】ffprobeでHEICのサイズが違う件](https://mohhh-ok.github.io/blog/posts/2026/05-22-ffmpegffprobe%E3%81%A7heic%E3%81%AE%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%8C%E9%81%95%E3%81%86%E4%BB%B6/)
 
 ## Fade
 * [Add Fade In and Fade Out Effects With ffmpeg!](https://dev.to/dak425/add-fade-in-and-fade-out-effects-with-ffmpeg-2bj7)
