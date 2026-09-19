@@ -29,3 +29,6 @@
 
 ## Color Palettes（调色板）
 * [ColorKit](https://colorkit.co/)
+
+## JPEGXL
+* [JXL Convert](https://jpegxlconvert.com/)
