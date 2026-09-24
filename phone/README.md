@@ -41,3 +41,4 @@
 * 李赔十
   * [写一下李赔十学长家上车记录](https://zhuanlan.zhihu.com/p/494531493)
   * [【买前必看】买二手iPhone苹果手机什么时候最划算？行业圈内人偷偷告诉你！](https://zhuanlan.zhihu.com/p/415421380)
+  * [《记录我在淘宝李赔十店买苹果手机的经历》---真实经历给大家做个参考](https://zhuanlan.zhihu.com/p/362256968)
