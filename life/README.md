@@ -135,6 +135,7 @@
 * [关镇铨装潢设计装修质量怎么样？](https://www.zhihu.com/question/51283511)
 * 莱姆石
   * [什么是莱姆石？现有哪些莱姆石？科普篇~](https://zhuanlan.zhihu.com/p/432531604)
+  * [什么是莱姆石？](https://zhuanlan.zhihu.com/p/2063561985896212055)
 
 ## 化妆
 * 菠丹妮
