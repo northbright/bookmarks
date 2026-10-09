@@ -32,7 +32,9 @@
 * [windows7(X64)下文件夹无法删除](https://answers.microsoft.com/zh-hans/windows/forum/windows_7-files/windows7x64%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%B9/920e2d33-5ed2-4df2-a13b-97dca5176465?auth=1)
 * [在 Windows 10 中，在安全模式下启动电脑](https://support.microsoft.com/zh-cn/help/12376/windows-10-start-your-pc-in-safe-mode)
 * [如何修复Windows蓝屏错误“STOP 0x00000124”](https://www.dell.com/support/article/zh-cn/sln163406/%E5%A6%82%E4%BD%95%E4%BF%AE%E5%A4%8Dwindows%E8%93%9D%E5%B1%8F%E9%94%99%E8%AF%AF-stop-0x00000124?lang=zh)
-
+* dxgmms2.sys BSOD
+  * [BSOD dxgmms2.sys](https://learn.microsoft.com/en-us/answers/questions/5681434/bsod-dxgmms2-sys)
+  * [Dxgmms2.sys Blue Screen on Laptops? 5 Quick Fixes](https://thegeekpage.com/dxgmms2-sys-blue-screen-on-laptops-5-quick-fixes/)
 
 ## ISO
 * [Windows 10 business 和 consumer 中的专业版有什么不同？](https://www.zhihu.com/question/379426445)
