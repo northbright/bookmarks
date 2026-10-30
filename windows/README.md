@@ -35,6 +35,7 @@
 * dxgmms2.sys BSOD
   * [BSOD dxgmms2.sys](https://learn.microsoft.com/en-us/answers/questions/5681434/bsod-dxgmms2-sys)
   * [Dxgmms2.sys Blue Screen on Laptops? 5 Quick Fixes](https://thegeekpage.com/dxgmms2-sys-blue-screen-on-laptops-5-quick-fixes/)
+* [I have discovered on a new Windows 11 system, Ctrl-Alt-Del will not launch dialog to Lock, Switch User, Sign out, etc. like it has on all Windows systems I have used in the past.](https://learn.microsoft.com/en-us/answers/questions/3985371/i-have-discovered-on-a-new-windows-11-system-ctrl?page=5#answers)
 
 ## ISO
 * [Windows 10 business 和 consumer 中的专业版有什么不同？](https://www.zhihu.com/question/379426445)
