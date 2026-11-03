@@ -12,6 +12,7 @@
 * [空调冷媒R22，R410A，R32的区别和选择](https://zhuanlan.zhihu.com/p/137596144)
 * [大1匹空调什么品牌好？老电工熬夜整理空调避坑指南，5款高性价比大1匹空调实测推荐](https://www.zhihu.com/tardis/bd/art/2023405968227141188)
 * [客厅立式空调怎么选?——2025年5款口碑最好的3匹立式空调柜机推荐，几乎零差评](https://www.zhihu.com/tardis/bd/art/1937318009736771078)
+* [冬天到了，电暖器和空调谁更省电？答案可能和你想的不一样](https://www.bilibili.com/video/BV1jT4y1x7bD)
 * 格力
   * [格力天仪空调怎么样，和格力云欢、云锦哪个好？格力天仪拆机分析，看看哪款更值得买](https://www.zhihu.com/tardis/bd/art/1918228948090852931)
   * [【拆机测评】格力天仪，最便宜的格力1.5匹新一级挂机！](https://www.zhihu.com/tardis/bd/art/711564077)
