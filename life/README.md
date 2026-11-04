@@ -50,6 +50,9 @@
 #### 实木家具
 * [口碑最好的实木家具品牌有哪些？](https://www.zhihu.com/tardis/bd/ans/3602993357)
 * [国内有哪些做工精湛、用料讲究的实木家具品牌？](https://zhuanlan.zhihu.com/p/423236265)
+* 源氏木语
+  * [源氏木语家具怎么样？有没有买过的铁子，来分享一下呀？ - 纳德性的回答](https://www.zhihu.com/question/636486245/answer/3608479954)
+  * [浅谈如何看待源氏木语](https://zhuanlan.zhihu.com/p/412204660)
 
 #### 椅子
 * [有没有人用过宜家这两个款椅子?](https://www.zhihu.com/question/438907166/answer/2154287205)
