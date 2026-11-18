@@ -32,6 +32,7 @@
 ## 二手
 * [2022年（1月）二手手机 iPhone 购买、验机、省钱、避坑全攻略！](https://zhuanlan.zhihu.com/p/362957819)
 * [资源机、富士康机、1978机、BS机这种机器到底能不能买？](https://zhuanlan.zhihu.com/p/107396680)
+* [【干货】可能是全网最客观苹果资源机解析 1978富士康BS机到底能买吗？](https://www.bilibili.com/video/BV1x3411h79L)
 * [26年二手iPhone怎么选？10年资深果粉带你避坑！](https://www.bilibili.com/video/BV1CXcczfEyb)
 * 星期四数码
   * [淘宝的星期四数码靠谱吗？](https://www.zhihu.com/question/488108308)
