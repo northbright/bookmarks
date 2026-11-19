@@ -11,6 +11,7 @@
 * [烂泥：nginx、php-fpm、mysql用户权限解析](http://blog.51cto.com/ilanni/1561097)
 * [Compile nginx with existing pcre?](https://stackoverflow.com/questions/11824772/compile-nginx-with-existing-pcre)
 * [How to Upgrade/Install Nginx Stable or Mainline on Ubuntu 20.04 LTS](https://www.linuxcompatible.org/story/how-to-upgrade-install-nginx-stable-mainline-on-ubuntu-2004-lts)
+* [Install/Update Nginx to the latest stable version on Ubuntu](https://developerinsider.co/install-update-nginx-to-the-latest-stable-version-on-ubuntu/)
 
 ## Config
 * [Difference in sites-available vs sites-enabled vs conf.d directories (Nginx)?](https://serverfault.com/questions/527630/difference-in-sites-available-vs-sites-enabled-vs-conf-d-directories-nginx)
