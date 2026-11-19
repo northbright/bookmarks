@@ -16,6 +16,7 @@
 * [Difference in sites-available vs sites-enabled vs conf.d directories (Nginx)?](https://serverfault.com/questions/527630/difference-in-sites-available-vs-sites-enabled-vs-conf-d-directories-nginx)
 * [Home directory for the www-data user?](https://askubuntu.com/questions/750509/home-directory-for-the-www-data-user)
 * [Nginx doesn't have permission to access files with the same ownership](https://serverfault.com/questions/748561/nginx-doesnt-have-permission-to-access-files-with-the-same-ownership)
+* [How to Start, Stop, or Restart Nginx](https://linuxize.com/post/start-stop-restart-nginx/)
 
 ## Articles
 * [CentOS7安装维护Nginx](https://github.com/jaywcjlove/handbook/blob/master/CentOS/CentOS7%E5%AE%89%E8%A3%85%E7%BB%B4%E6%8A%A4Nginx.md)
