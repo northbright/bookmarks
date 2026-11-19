@@ -81,3 +81,5 @@
   * [CVE-2026-42945](https://ubuntu.com/security/CVE-2026-42945)
   * [NGINX Rift (CVE-2026-42945): The 18-Year-Old Rewrite Bug That Hands an Attacker Your Worker Process](https://devops-daily.com/posts/nginx-rift-cve-2026-42945-rewrite-rce)
   * [K000161019: NGINX ngx_http_rewrite_module vulnerability CVE-2026-42945](https://my.f5.com/manage/s/article/K000161019)
+* CVE-2026-123633 and CVE-2026-123007
+  * [NGINX 两处漏洞可导致未经身份验证的远程代码执行（CVE-2026-123633 和 CVE-2026-123007）](https://www.cnblogs.com/catchadmin/p/23714323)
