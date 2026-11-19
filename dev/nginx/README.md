@@ -53,6 +53,9 @@
 * [Strong SSL Security on nginx](https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html)
 * [Nginx + TLS 1.3 如何设置默认 AES_128_GCM？](https://www.v2ex.com/t/547650)
 
+## HTTP/2
+* [轻松让你的nginx服务器支持HTTP2协议](https://www.cnblogs.com/flydean/p/15196067.html)
+
 ## Problems
 * [centos7 中关于 nginx 的权限问题](https://www.v2ex.com/t/171804)
 * [Nginx proxy_pass not working in selinux](https://stackoverflow.com/questions/27435655/nginx-proxy-pass-not-working-in-selinux)
