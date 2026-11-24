@@ -169,3 +169,4 @@
 * [Fuji X Weekly](https://fujixweekly.com/)
 * [XT3富士最具性价比微单相机](https://www.bilibili.com/video/BV1Vt3QzLED9)
 * [富士十台高性价比微单推荐！富家子弟多多点赞收藏哦~](https://www.bilibili.com/video/BV13chw6uEtt)
+* [【穷玩摄影】二手相机终于崩盘！千元出头富士XT1真香](https://www.bilibili.com/video/BV1CqL46dEyi/)
