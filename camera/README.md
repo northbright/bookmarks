@@ -171,3 +171,4 @@
 * [富士十台高性价比微单推荐！富家子弟多多点赞收藏哦~](https://www.bilibili.com/video/BV13chw6uEtt)
 * [【穷玩摄影】二手相机终于崩盘！千元出头富士XT1真香](https://www.bilibili.com/video/BV1CqL46dEyi/)
 * [富士XT3怎么刷NC滤镜](https://www.bilibili.com/video/BV1wFyYztE3r)
+* [老相机新体验，11年前的富士X100T还能打吗？](https://www.bilibili.com/video/BV1jrWJz8EC5)
