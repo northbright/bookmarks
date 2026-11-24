@@ -168,3 +168,4 @@
 ## 富士
 * [Fuji X Weekly](https://fujixweekly.com/)
 * [XT3富士最具性价比微单相机](https://www.bilibili.com/video/BV1Vt3QzLED9)
+* [富士十台高性价比微单推荐！富家子弟多多点赞收藏哦~](https://www.bilibili.com/video/BV13chw6uEtt)
