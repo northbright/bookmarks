@@ -164,3 +164,6 @@
 
 ## 动态范围
 * [相机说明书中的动态范围是什么？](https://m.ithome.com/html/912255.htm)
+
+## 富士
+* [Fuji X Weekly](https://fujixweekly.com/)
