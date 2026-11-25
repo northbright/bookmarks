@@ -190,3 +190,4 @@
 * [富士直出参数解说 | 超好用夜景NN滤镜配方 | 富士XT5直出](https://www.bilibili.com/video/BV1jV4y1y7g5)
 * [富士相机新手课堂 | NC滤镜到底应该怎么用？| 富士胶片模拟色彩分析](https://www.bilibili.com/video/BV14j411x7VX/)
 * [NC滤镜深度分析 | 最有富士味儿的雪景人像怎么调](https://www.bilibili.com/video/BV1Aj411W7j2/)
+* [富士CC+NC配方，两套雪天扫街万能滤镜参数，就等下雪了！](https://www.bilibili.com/video/BV1964y1p7UR/)
