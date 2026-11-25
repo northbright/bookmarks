@@ -184,6 +184,7 @@
 * [富士X-T30三代开箱，体验胶片模拟这一台就够了](https://www.chiphell.com/forum.php?mod=viewthread&tid=2754518)
 * [XE系列第一次的完全体-富士xe5+23饼首发开箱及使用感受分享](https://www.chiphell.com/forum.php?mod=viewthread&tid=2739032)
 * [我也来交税：富士X-Half](https://www.chiphell.com/forum.php?mod=viewthread&tid=2722891)
+* [买滤镜送相机？富士X-T50简单开箱及体验](https://www.chiphell.com/forum.php?mod=viewthread&tid=2692220)
 
 #### 胶片模拟
 * [Fuji X Weekly](https://fujixweekly.com/)
