@@ -174,3 +174,4 @@
 * [老相机新体验，11年前的富士X100T还能打吗？](https://www.bilibili.com/video/BV1jrWJz8EC5)
 * [2026最值得推荐的富士相机是什么？](https://www.zhihu.com/question/2073501029996258329/answer/2102166642214098239)
 * [2026年二手带CC滤镜的富士相机怎么选？曾经的老旗舰X-T1还值得买吗？](https://www.zhihu.com/pin/2060339930426037597)
+* [富士xt30 三代 和 尼康zfc 纠结选哪台呢？](https://www.zhihu.com/question/1965005773122807320)
