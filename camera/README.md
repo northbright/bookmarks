@@ -188,3 +188,4 @@
 * [一学就会！用富士XT30三代解锁小众秋日感NN别再只用NC了！看完这期你会发现真的没有比NN更适合秋天的胶片模拟了~](https://www.bilibili.com/video/BV1oFy4zAEve)
 * [XT5直出！富士新滤镜怀旧负片 | NN滤镜晴天超强滤镜参数](https://www.bilibili.com/video/BV12u411W7pP)
 * [富士直出参数解说 | 超好用夜景NN滤镜配方 | 富士XT5直出](https://www.bilibili.com/video/BV1jV4y1y7g5)
+* [富士相机新手课堂 | NC滤镜到底应该怎么用？| 富士胶片模拟色彩分析](https://www.bilibili.com/video/BV14j411x7VX/)
