@@ -182,6 +182,8 @@
 * [学生党3000元以内富士相机有推荐的吗?](https://www.zhihu.com/question/9666738136/answer/2106187452008485659)
 * [我的完美随身相机：从富士X70到XM5，再到XE5](https://www.chiphell.com/forum.php?mod=viewthread&tid=2742889)
 * [富士X-T30三代开箱，体验胶片模拟这一台就够了](https://www.chiphell.com/forum.php?mod=viewthread&tid=2754518)
+* [XE系列第一次的完全体-富士xe5+23饼首发开箱及使用感受分享](https://www.chiphell.com/forum.php?mod=viewthread&tid=2739032)
+
 #### 胶片模拟
 * [Fuji X Weekly](https://fujixweekly.com/)
 * [【御成富士】增田彩来的胶片美学：富士NN色彩设置分享](https://www.bilibili.com/video/BV1ofTF67EcD)
