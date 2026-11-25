@@ -157,6 +157,8 @@
   * [两款热度超高的钥匙挂链，居然还能拍照、视频、录音](https://www.bilibili.com/video/BV19V6bBqE1M)
   * [柯达盲盒相机真假对比！这玩意儿居然还有假货？](https://www.bilibili.com/video/BV1zEPgzRE6w)
   * [从夯到拉，锐评柯达Charmera迷你相机盲盒！200元钥匙扣大小的mini相机到底怎么样？](https://www.bilibili.com/video/BV1PMzQB7EW7)
+* SlideTag
+  * [柯达推出 Slide Tag 迷你数码相框盲盒：1.5 英寸彩色墨水屏，可当追踪器使用](https://www.ithome.com/1/030/806.htm)
 
 ## 曝光补偿
 * [一直没搞清，曝光补偿和ISO有什么区别](https://forum.xitek.com/forum-viewthread-tid-717223-extra-page%3D1-ordertype-2-t-1594102929.html)
