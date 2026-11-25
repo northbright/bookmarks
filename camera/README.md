@@ -191,3 +191,4 @@
 * [富士相机新手课堂 | NC滤镜到底应该怎么用？| 富士胶片模拟色彩分析](https://www.bilibili.com/video/BV14j411x7VX/)
 * [NC滤镜深度分析 | 最有富士味儿的雪景人像怎么调](https://www.bilibili.com/video/BV1Aj411W7j2/)
 * [富士CC+NC配方，两套雪天扫街万能滤镜参数，就等下雪了！](https://www.bilibili.com/video/BV1964y1p7UR/)
+* [富士直出参数解说 | 超强夜景滤镜配方，扫街+人像都拿下](https://www.bilibili.com/video/BV1Sj411g79e)
