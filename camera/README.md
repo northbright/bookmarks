@@ -179,3 +179,4 @@
 * [富士xt30 三代 和 尼康zfc 纠结选哪台呢？](https://www.zhihu.com/question/1965005773122807320)
 * [学生党3000元以内富士相机有推荐的吗?](https://www.zhihu.com/question/9666738136/answer/2106187452008485659)
 * [我的完美随身相机：从富士X70到XM5，再到XE5](https://www.chiphell.com/forum.php?mod=viewthread&tid=2742889)
+* [富士X-T30三代开箱，体验胶片模拟这一台就够了](https://www.chiphell.com/forum.php?mod=viewthread&tid=2754518)
