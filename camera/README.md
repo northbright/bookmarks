@@ -185,3 +185,4 @@
 #### 胶片模拟
 * [Fuji X Weekly](https://fujixweekly.com/)
 * [【御成富士】增田彩来的胶片美学：富士NN色彩设置分享](https://www.bilibili.com/video/BV1ofTF67EcD)
+* [一学就会！用富士XT30三代解锁小众秋日感NN别再只用NC了！看完这期你会发现真的没有比NN更适合秋天的胶片模拟了~](https://www.bilibili.com/video/BV1oFy4zAEve)
