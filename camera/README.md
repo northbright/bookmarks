@@ -188,6 +188,7 @@
 * [我也来交税：富士X-Half](https://www.chiphell.com/forum.php?mod=viewthread&tid=2722891)
 * [买滤镜送相机？富士X-T50简单开箱及体验](https://www.chiphell.com/forum.php?mod=viewthread&tid=2692220)
 * [【富士xt30 2代】香不香？全面解析优缺点、镜头搭配方案！](https://www.bilibili.com/video/BV1nP4y1H7T9/)
+* [【富士相机性价最高之一】XE3叨逼叨，翻车不可怕，机器香就行~](https://www.bilibili.com/video/BV1jJ411C7SN)
 
 #### 镜头
 * [【能猫测评】富士XF33 1.4 vs XF35 1.4 新时代的最佳挂机头？](https://www.bilibili.com/video/BV1944y1Y7vM/)
