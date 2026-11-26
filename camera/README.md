@@ -189,7 +189,6 @@
 * [买滤镜送相机？富士X-T50简单开箱及体验](https://www.chiphell.com/forum.php?mod=viewthread&tid=2692220)
 * [【富士xt30 2代】香不香？全面解析优缺点、镜头搭配方案！](https://www.bilibili.com/video/BV1nP4y1H7T9/)
 * [【富士相机性价最高之一】XE3叨逼叨，翻车不可怕，机器香就行~](https://www.bilibili.com/video/BV1jJ411C7SN)
-* [【镜头测评】哪个值得买？16-55 VS 18-55 富士xt30标变之战](https://www.bilibili.com/video/BV1yb411T7Ru)
 
 #### 镜头
 * [【能猫测评】富士XF33 1.4 vs XF35 1.4 新时代的最佳挂机头？](https://www.bilibili.com/video/BV1944y1Y7vM/)
@@ -198,6 +197,7 @@
 * [【能猫测评】富士XF 23 1.4 二代值不值得买？对焦还抽不抽？feat xt4](https://www.bilibili.com/video/BV1zU4y1X7Mw)
 * [【叙23mm F1.4详细测评】富士复古挂机头新选择](https://www.bilibili.com/video/BV1FoxQ6jEnw)
 * [【富士镜头PK】XF 35 f2 vs XC 35 f2 详细对比测评](https://www.bilibili.com/video/BV1RE411G72y/)
+* [【镜头测评】哪个值得买？16-55 VS 18-55 富士xt30标变之战](https://www.bilibili.com/video/BV1yb411T7Ru)
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
