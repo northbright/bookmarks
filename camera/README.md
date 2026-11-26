@@ -195,6 +195,7 @@
 * [【能猫】适马x卡口三剑客和富士原厂如何选？](https://www.bilibili.com/video/BV1sP4y1g77s)
 * [【能猫测评】富士XF 23 1.4 二代值不值得买？对焦还抽不抽？feat xt4](https://www.bilibili.com/video/BV1zU4y1X7Mw)
 * [【叙23mm F1.4详细测评】富士复古挂机头新选择](https://www.bilibili.com/video/BV1FoxQ6jEnw)
+* [【富士镜头PK】XF 35 f2 vs XC 35 f2 详细对比测评](https://www.bilibili.com/video/BV1RE411G72y/)
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
