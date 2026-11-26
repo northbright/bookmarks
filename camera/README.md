@@ -191,6 +191,7 @@
 
 #### 镜头
 * [【能猫测评】富士XF33 1.4 vs XF35 1.4 新时代的最佳挂机头？](https://www.bilibili.com/video/BV1944y1Y7vM/)
+* [【能猫】我把镜头机器摔了！唯卓仕XF13 F1.4测评外号“一生一世”](https://www.bilibili.com/video/BV1bm4y1Q7zJ/)
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
