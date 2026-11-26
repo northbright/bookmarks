@@ -171,6 +171,8 @@
 * [相机说明书中的动态范围是什么？](https://m.ithome.com/html/912255.htm)
 
 ## 富士
+
+#### 相机
 * [XT3富士最具性价比微单相机](https://www.bilibili.com/video/BV1Vt3QzLED9)
 * [富士十台高性价比微单推荐！富家子弟多多点赞收藏哦~](https://www.bilibili.com/video/BV13chw6uEtt)
 * [【穷玩摄影】二手相机终于崩盘！千元出头富士XT1真香](https://www.bilibili.com/video/BV1CqL46dEyi/)
@@ -185,7 +187,10 @@
 * [XE系列第一次的完全体-富士xe5+23饼首发开箱及使用感受分享](https://www.chiphell.com/forum.php?mod=viewthread&tid=2739032)
 * [我也来交税：富士X-Half](https://www.chiphell.com/forum.php?mod=viewthread&tid=2722891)
 * [买滤镜送相机？富士X-T50简单开箱及体验](https://www.chiphell.com/forum.php?mod=viewthread&tid=2692220)
+
+#### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
+* [新手拿到相机应该怎么设置，以及泛用的拍摄方法](https://tieba.baidu.com/p/9575799590)
 
 #### 胶片模拟
 * [Fuji X Weekly](https://fujixweekly.com/)
