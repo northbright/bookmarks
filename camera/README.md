@@ -201,6 +201,7 @@
 * [【镜头测评+样片】富士xf 35 1.4 缺点众多但必买的镜头！腹肌南波湾](https://www.bilibili.com/video/BV1Eb41147MG)
 * [富士镜头35 选择XF还是XC？](https://www.zhihu.com/question/429494976)
 * [富士镜头XF23mm f2.0 XF27mm f2.8 XF35mm f2.0如何选择？](https://www.zhihu.com/question/387227026)
+* [保姆级干货 | 富士人文扫街镜头怎么选？](https://www.zhihu.com/tardis/bd/art/561235477)
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
