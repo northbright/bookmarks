@@ -198,6 +198,7 @@
 * [【叙23mm F1.4详细测评】富士复古挂机头新选择](https://www.bilibili.com/video/BV1FoxQ6jEnw)
 * [【富士镜头PK】XF 35 f2 vs XC 35 f2 详细对比测评](https://www.bilibili.com/video/BV1RE411G72y/)
 * [【镜头测评】哪个值得买？16-55 VS 18-55 富士xt30标变之战](https://www.bilibili.com/video/BV1yb411T7Ru)
+* [【镜头测评+样片】富士xf 35 1.4 缺点众多但必买的镜头！腹肌南波湾](https://www.bilibili.com/video/BV1Eb41147MG)
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
