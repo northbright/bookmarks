@@ -185,6 +185,7 @@
 * [XE系列第一次的完全体-富士xe5+23饼首发开箱及使用感受分享](https://www.chiphell.com/forum.php?mod=viewthread&tid=2739032)
 * [我也来交税：富士X-Half](https://www.chiphell.com/forum.php?mod=viewthread&tid=2722891)
 * [买滤镜送相机？富士X-T50简单开箱及体验](https://www.chiphell.com/forum.php?mod=viewthread&tid=2692220)
+* [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
 
 #### 胶片模拟
 * [Fuji X Weekly](https://fujixweekly.com/)
