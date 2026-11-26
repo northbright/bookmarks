@@ -194,6 +194,7 @@
 * [【能猫】我把镜头机器摔了！唯卓仕XF13 F1.4测评外号“一生一世”](https://www.bilibili.com/video/BV1bm4y1Q7zJ/)
 * [【能猫】适马x卡口三剑客和富士原厂如何选？](https://www.bilibili.com/video/BV1sP4y1g77s)
 * [【能猫测评】富士XF 23 1.4 二代值不值得买？对焦还抽不抽？feat xt4](https://www.bilibili.com/video/BV1zU4y1X7Mw)
+* [【叙23mm F1.4详细测评】富士复古挂机头新选择](https://www.bilibili.com/video/BV1FoxQ6jEnw)
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
