@@ -189,6 +189,9 @@
 * [买滤镜送相机？富士X-T50简单开箱及体验](https://www.chiphell.com/forum.php?mod=viewthread&tid=2692220)
 * [【富士xt30 2代】香不香？全面解析优缺点、镜头搭配方案！](https://www.bilibili.com/video/BV1nP4y1H7T9/)
 
+#### 镜头
+* [【能猫测评】富士XF33 1.4 vs XF35 1.4 新时代的最佳挂机头？](https://www.bilibili.com/video/BV1944y1Y7vM/)
+
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
 * [新手拿到相机应该怎么设置，以及泛用的拍摄方法](https://tieba.baidu.com/p/9575799590)
