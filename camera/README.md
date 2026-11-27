@@ -206,6 +206,7 @@
 * [保姆级干货 | 富士人文扫街镜头怎么选？](https://www.zhihu.com/tardis/bd/art/561235477)
 * [如果只能选择一颗富士镜头，我...-XF35mm1.4](https://www.bilibili.com/video/BV1kR4q65EJY)
 * [【顾俊】这绝对是富士最经典的35mm定焦！！！](https://www.bilibili.com/video/BV1SpAbehE26/)
+* [富士美人镜头XF35F1.4自带玄学色彩氛围](https://www.bilibili.com/video/BV1nUYMztEDJ)
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
