@@ -208,6 +208,7 @@
 * [【顾俊】这绝对是富士最经典的35mm定焦！！！](https://www.bilibili.com/video/BV1SpAbehE26/)
 * [富士美人镜头XF35F1.4自带玄学色彩氛围](https://www.bilibili.com/video/BV1nUYMztEDJ)
 * [【御成富士】14年前的逸品：富士XF35 1.4 R买前必看！](https://www.bilibili.com/video/BV1Lz9DBTEgy)
+* [【ND的器材说】富士 35mm F1.4 使用分享、画质分析，它和F2镜头之间怎么选？](https://www.bilibili.com/video/BV1Ds411K7KC/)
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
