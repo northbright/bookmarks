@@ -190,6 +190,7 @@
 * [【富士xt30 2代】香不香？全面解析优缺点、镜头搭配方案！](https://www.bilibili.com/video/BV1nP4y1H7T9/)
 * [【富士相机性价最高之一】XE3叨逼叨，翻车不可怕，机器香就行~](https://www.bilibili.com/video/BV1jJ411C7SN)
 * [【顾俊】富士 X-T30，入门的价格和机身，顶级的画质和性能](https://www.bilibili.com/video/BV1ix411o7Gk)
+* [为何卖掉xpro3两次购买xpro2，十年前的富士老相机到底有什么魅力？富士xpro2体验分享](https://www.bilibili.com/video/BV119zcBkEqf/)
 
 #### 镜头
 * [【能猫测评】富士XF33 1.4 vs XF35 1.4 新时代的最佳挂机头？](https://www.bilibili.com/video/BV1944y1Y7vM/)
