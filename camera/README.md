@@ -211,6 +211,8 @@
 * [富士美人镜头XF35F1.4自带玄学色彩氛围](https://www.bilibili.com/video/BV1nUYMztEDJ)
 * [【御成富士】14年前的逸品：富士XF35 1.4 R买前必看！](https://www.bilibili.com/video/BV1Lz9DBTEgy)
 * [【ND的器材说】富士 35mm F1.4 使用分享、画质分析，它和F2镜头之间怎么选？](https://www.bilibili.com/video/BV1Ds411K7KC/)
+* [老而弥坚——富士XF 35mm F1.4 R](https://www.chiphell.com/forum.php?mod=viewthread&tid=2554530)
+  * ~TZT~的评论：原厂那个虽然是铝合金的，但是材质有些薄，而且边角的做工一般般，内部消光涂层稍微一碰就有印子。换了haoge家的，质感做工绝佳
 
 #### 操作
 * [给富士新手的10条小建议](https://tieba.baidu.com/p/6181262575)
