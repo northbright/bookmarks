@@ -221,3 +221,8 @@
 * [NC滤镜深度分析 | 最有富士味儿的雪景人像怎么调](https://www.bilibili.com/video/BV1Aj411W7j2/)
 * [富士CC+NC配方，两套雪天扫街万能滤镜参数，就等下雪了！](https://www.bilibili.com/video/BV1964y1p7UR/)
 * [富士直出参数解说 | 超强夜景滤镜配方，扫街+人像都拿下](https://www.bilibili.com/video/BV1Sj411g79e)
+* NC 滤镜
+  * [为何卖掉xpro3两次购买xpro2，十年前的富士老相机到底有什么魅力？富士xpro2体验分享](https://www.bilibili.com/video/BV119zcBkEqf) 
+    * UP 提到 X-PRO3 的 NC 滤镜容易拍腻
+    * 弹幕提到：这个滤镜适合光圈大一点的镜头
+    * 评论：有NC滤镜的机，不只是有NC滤镜。而是只要有NC滤镜的机，无不均有蓝色FX+彩色+D动态范围优先级。所以必须得有带NC滤镜的机。没有NC滤镜的机，对光影色彩产生重大变革影响的3个设置就无法体验了
