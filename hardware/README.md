@@ -59,6 +59,8 @@
     * [识别硬盘声音并确定其含义](https://www.seagate.com/cn/zh/support/kb/identifying-hard-drive-sounds-and-determining-what-they-mean/)
     * [SeaTools](https://www.seagate.com/cn/zh/support/downloads/seatools/)
     * [【数据恢复】听声辨故障！氦气盘异响的几种可能性](https://www.bilibili.com/video/BV1Q1596GEMm)
+  * 软件
+    * [我愿称之为最强数据恢复神器-Rstudio](https://www.bilibili.com/video/BV1FC4y1P795)
 
 ## SSD
 * [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
