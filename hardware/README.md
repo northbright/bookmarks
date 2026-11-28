@@ -59,6 +59,7 @@
     * [识别硬盘声音并确定其含义](https://www.seagate.com/cn/zh/support/kb/identifying-hard-drive-sounds-and-determining-what-they-mean/)
     * [SeaTools](https://www.seagate.com/cn/zh/support/downloads/seatools/)
     * [【数据恢复】听声辨故障！氦气盘异响的几种可能性](https://www.bilibili.com/video/BV1Q1596GEMm)
+  * [国行希捷银河18T 使用3个月后翻车](https://tieba.baidu.com/p/8475530129)
   * 软件
     * [我愿称之为最强数据恢复神器-Rstudio](https://www.bilibili.com/video/BV1FC4y1P795)
 
