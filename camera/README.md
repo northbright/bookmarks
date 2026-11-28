@@ -196,6 +196,7 @@
 * [为何卖掉xpro3两次购买xpro2，十年前的富士老相机到底有什么魅力？富士xpro2体验分享](https://www.bilibili.com/video/BV119zcBkEqf/)
 * [首发吃螃蟹-富士XT5使用感受分享](https://www.chiphell.com/forum.php?mod=viewthread&tid=2460401)
 * [2024时尚单品.富士.FUJIFILM.X100VI开箱](https://www.chiphell.com/forum.php?mod=viewthread&tid=2659664)
+* [富士XE4，可能是目前最适合你的口袋相机](https://www.bilibili.com/video/BV1bF411h7BU/)
 
 #### 镜头
 * [【能猫测评】富士XF33 1.4 vs XF35 1.4 新时代的最佳挂机头？](https://www.bilibili.com/video/BV1944y1Y7vM/)
