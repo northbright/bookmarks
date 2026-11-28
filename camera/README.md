@@ -200,6 +200,9 @@
 * [【顾俊】富士X-E4，能换镜头的X100V？！](https://www.bilibili.com/video/BV1H64y1S7EC)
 * [【富士xt30 3代详细测评】毛病众多，但推荐！](https://www.bilibili.com/video/BV17oHe6UECR)
   * 有很多富士相机通用的操作知识和摄影知识科普，推荐
+* [【能猫】富士XM5超详细测评！又是一款空气机！小机器表现如何呢？](https://www.bilibili.com/video/BV1h5BiY9EY3)
+  * 43:51 还有快门类型设置的介绍
+  * 建议设置混合类型: EF(电子前帘:1/2000) + MS（机械快门:1/2000-1/4000）+ ES（电子快门:1/4000+）
 
 #### 镜头
 * [【能猫测评】富士XF33 1.4 vs XF35 1.4 新时代的最佳挂机头？](https://www.bilibili.com/video/BV1944y1Y7vM/)
