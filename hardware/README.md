@@ -53,8 +53,12 @@
 * [目前最高性价比的两块大容量硬盘——希捷银河X18 18T和西数HC550 18T对比评测](https://www.bilibili.com/video/BV1U8411G7Es/)
 * SMART
   * [硬盘smart多项告警，还能继续使用吗?](https://www.zhihu.com/question/661579577)
-* [识别硬盘声音并确定其含义](https://www.seagate.com/cn/zh/support/kb/identifying-hard-drive-sounds-and-determining-what-they-mean/)
-* [SeaTools](https://www.seagate.com/cn/zh/support/downloads/seatools/)
+
+* 维修
+  * 希捷
+    * [识别硬盘声音并确定其含义](https://www.seagate.com/cn/zh/support/kb/identifying-hard-drive-sounds-and-determining-what-they-mean/)
+    * [SeaTools](https://www.seagate.com/cn/zh/support/downloads/seatools/)
+    * [【数据恢复】听声辨故障！氦气盘异响的几种可能性](https://www.bilibili.com/video/BV1Q1596GEMm)
 
 ## SSD
 * [NVMe比SATA接口的SSD究竟快在哪里？](https://zhuanlan.zhihu.com/p/40497397)
