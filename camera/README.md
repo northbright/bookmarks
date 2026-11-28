@@ -197,6 +197,7 @@
 * [首发吃螃蟹-富士XT5使用感受分享](https://www.chiphell.com/forum.php?mod=viewthread&tid=2460401)
 * [2024时尚单品.富士.FUJIFILM.X100VI开箱](https://www.chiphell.com/forum.php?mod=viewthread&tid=2659664)
 * [富士XE4，可能是目前最适合你的口袋相机](https://www.bilibili.com/video/BV1bF411h7BU/)
+* [【顾俊】富士X-E4，能换镜头的X100V？！](https://www.bilibili.com/video/BV1H64y1S7EC)
 
 #### 镜头
 * [【能猫测评】富士XF33 1.4 vs XF35 1.4 新时代的最佳挂机头？](https://www.bilibili.com/video/BV1944y1Y7vM/)
